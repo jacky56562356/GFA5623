@@ -1,21 +1,31 @@
 
 import React from 'react';
 import SectionHeading from '../components/ui/SectionHeading';
-import { MOCK_PROGRAMS } from '../constants';
+import { useLocale } from '../App';
+import { SUPPORT_PROGRAMS_DATA } from '../data';
 
 const Support: React.FC = () => {
+  const { t } = useLocale();
+
+  // Mapping dictionary keys to the static data
+  const programDetails = [
+    { key: 'p1', title: t.support.p1Title, bullets: t.support.p1Bullets },
+    { key: 'p2', title: t.support.p2Title, bullets: t.support.p2Bullets },
+    { key: 'p3', title: t.support.p3Title, bullets: t.support.p3Bullets },
+  ];
+
   return (
     <div className="py-24 max-w-7xl mx-auto px-4">
-      <SectionHeading title="Support Programs" subtitle="Investing in the Future of Cinema" />
+      <SectionHeading title={t.support.title} subtitle={t.support.subtitle} />
       
       <div className="mb-24 text-center max-w-3xl mx-auto">
         <p className="text-gfa-gray text-lg leading-relaxed italic">
-          "The greatest barrier to filmmaking is access. GFA provides the tools, the space, and the mentorship required to bring bold visions to life, regardless of financial background."
+          {t.support.intro}
         </p>
       </div>
 
       <div className="space-y-32">
-        {MOCK_PROGRAMS.map((prog, i) => (
+        {SUPPORT_PROGRAMS_DATA.map((prog, i) => (
           <div key={prog.id} className={`flex flex-col ${i % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-20 items-center`}>
             <div className="lg:w-1/2">
               <img 
@@ -26,16 +36,17 @@ const Support: React.FC = () => {
             </div>
             <div className="lg:w-1/2">
               <div className="inline-block px-3 py-1 border border-gfa-gold/30 text-gfa-gold text-[10px] uppercase font-bold tracking-widest mb-6">
-                Program Category: {prog.category}
+                {prog.category}
               </div>
-              <h3 className="text-4xl font-black mb-8 gold-gradient uppercase">{prog.title}</h3>
+              <h3 className="text-4xl font-black mb-8 gold-gradient uppercase">
+                {programDetails[i]?.title || prog.title}
+              </h3>
               <p className="text-gfa-gray text-sm mb-10 leading-relaxed">
-                Whether you are a recent film school graduate or an independent creator, our {prog.category.toLowerCase()} support initiative is designed to remove bottlenecks in your production workflow.
+                {prog.description}
               </p>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 mb-12">
-                 {/* Fix: Use prog.features instead of prog.details */}
-                 {prog.features.map((feature, idx) => (
+                 {(programDetails[i]?.bullets || prog.features).map((feature, idx) => (
                    <div key={idx} className="flex items-center gap-3">
                      <div className="w-1.5 h-1.5 bg-gfa-gold rounded-full"></div>
                      <span className="text-white text-sm font-medium">{feature}</span>
@@ -43,29 +54,23 @@ const Support: React.FC = () => {
                  ))}
               </div>
 
-              <div className="p-6 bg-gfa-darkGray border-l-4 border-gfa-gold mb-12">
-                 <h5 className="text-white text-xs font-bold uppercase mb-2">Eligibility</h5>
-                 <p className="text-gfa-gray text-xs">Available to GFA Pro Members and selected Graduate Foundation applicants.</p>
-              </div>
-
-              <button className="bg-gfa-gold text-gfa-black px-12 py-4 font-bold uppercase tracking-[0.2em] text-xs hover:bg-white hover:text-gfa-black transition-all">
-                Submit Application
+              <button className="bg-gfa-gold text-gfa-black px-12 py-4 font-black uppercase tracking-[0.2em] text-xs hover:bg-white transition-all">
+                {t.support.cta}
               </button>
             </div>
           </div>
         ))}
       </div>
 
-      <div className="mt-32 pt-24 border-t border-white/5">
-        <h3 className="text-2xl font-bold mb-12 text-center">Transparency: Supported Projects</h3>
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-           {[1,2,3,4,5].map(i => (
-             <div key={i} className="aspect-square bg-gfa-darkGray flex flex-col items-center justify-center p-4 text-center grayscale opacity-50 hover:opacity-100 hover:grayscale-0 transition-all border border-white/5">
-                <div className="w-12 h-12 mb-2 bg-gfa-gold/20 flex items-center justify-center text-xl">🎬</div>
-                <div className="text-[10px] font-bold text-white uppercase mb-1">Project Delta</div>
-                <div className="text-[8px] text-gfa-gold uppercase tracking-tighter">VFX SUPPORT 2024</div>
-             </div>
-           ))}
+      <div className="mt-40 border-t border-white/5 pt-24 text-center">
+        <h3 className="text-3xl font-black mb-12 uppercase tracking-widest">{t.support.howTitle}</h3>
+        <p className="text-gfa-gray mb-16 max-w-2xl mx-auto">{t.support.howBody}</p>
+        
+        <div className="bg-gfa-darkGray p-12 border border-gfa-gold/20">
+          <h4 className="text-xl font-bold mb-6 gold-gradient uppercase">{t.support.transparencyTitle}</h4>
+          <p className="text-gfa-gray text-sm max-w-3xl mx-auto leading-relaxed">
+            {t.support.transparencyBody}
+          </p>
         </div>
       </div>
     </div>

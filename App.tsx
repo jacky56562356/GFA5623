@@ -17,6 +17,14 @@ import Events from './pages/Events';
 import Contact from './pages/Contact';
 import PolicyPage from './pages/PolicyPage';
 
+// New Governance Pages
+import Governance from './pages/Governance';
+import Standards from './pages/Standards';
+import Transparency from './pages/Transparency';
+import Protection from './pages/Protection';
+import Directory from './pages/Directory';
+import Reporting from './pages/Reporting';
+
 const LanguageContext = createContext({
   locale: Locale.EN,
   setLocale: (l: Locale) => {},
@@ -28,6 +36,7 @@ export const useLocale = () => useContext(LanguageContext);
 const Navbar = () => {
   const { locale, setLocale, t } = useLocale();
   const [isOpen, setIsOpen] = useState(false);
+  const [isGovOpen, setIsGovOpen] = useState(false);
   const { pathname } = useLocation();
 
   const links = [
@@ -38,7 +47,15 @@ const Navbar = () => {
     { path: '/membership', label: t.nav.membership },
     { path: '/partners', label: t.nav.partners },
     { path: '/events', label: t.nav.events },
-    { path: '/contact', label: t.nav.contact },
+  ];
+
+  const govLinks = [
+    { path: '/governance', label: 'Governance' },
+    { path: '/standards', label: 'Standards' },
+    { path: '/transparency', label: 'Transparency' },
+    { path: '/protection', label: 'Protection' },
+    { path: '/directory', label: 'Authorized Directory' },
+    { path: '/reporting', label: 'Report Misconduct' },
   ];
 
   const languages = [
@@ -50,34 +67,48 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed w-full z-50 bg-gfa-black/90 backdrop-blur-lg border-b border-gfa-gold/20">
+    <nav className="fixed w-full z-50 bg-gfa-black/95 backdrop-blur-xl border-b border-gfa-gold/20">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center h-20">
           <Link to="/" className="flex items-center gap-3 group">
             <img 
               src="https://i.ibb.co/B582n2Dk/1755827874220993959.png" 
               alt="GFA Logo" 
-              className="h-12 w-auto object-contain transition-transform group-hover:scale-105"
+              className="h-10 w-auto object-contain transition-transform group-hover:scale-105"
             />
             <div className="flex flex-col">
-              <span className="text-xl font-black gold-gradient tracking-tighter leading-none">GFA</span>
-              <span className="text-[8px] tracking-[0.2em] text-gfa-gray uppercase font-bold">Global Film Alliance</span>
+              <span className="text-lg font-black gold-gradient tracking-tighter leading-none">GFA</span>
+              <span className="text-[7px] tracking-[0.2em] text-gfa-gray uppercase font-bold">Global Film Alliance</span>
             </div>
           </Link>
 
-          <div className="hidden lg:flex space-x-6">
+          <div className="hidden lg:flex items-center space-x-5">
             {links.map(l => (
-              <Link key={l.path} to={l.path} className={`text-xs font-bold uppercase tracking-wider transition-colors hover:text-gfa-gold ${pathname === l.path ? 'text-gfa-gold' : 'text-gfa-gray'}`}>
+              <Link key={l.path} to={l.path} className={`text-[10px] font-bold uppercase tracking-widest transition-colors hover:text-gfa-gold ${pathname === l.path ? 'text-gfa-gold' : 'text-gfa-gray'}`}>
                 {l.label}
               </Link>
             ))}
+            <div className="relative group" onMouseEnter={() => setIsGovOpen(true)} onMouseLeave={() => setIsGovOpen(false)}>
+              <button className="text-[10px] font-bold uppercase tracking-widest text-gfa-gray hover:text-gfa-gold flex items-center gap-1">
+                Governance <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              </button>
+              {isGovOpen && (
+                <div className="absolute top-full left-0 bg-gfa-darkGray border border-gfa-gold/20 py-4 w-56 shadow-2xl animate-fade-in">
+                  {govLinks.map(gl => (
+                    <Link key={gl.path} to={gl.path} className="block px-6 py-2 text-[10px] font-bold uppercase tracking-widest text-gfa-gray hover:text-gfa-gold hover:bg-white/5 transition-colors">
+                      {gl.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
 
           <div className="flex items-center space-x-4">
             <select 
               value={locale} 
               onChange={(e) => setLocale(e.target.value as Locale)}
-              className="bg-transparent border border-gfa-gold/30 text-[10px] text-gfa-gold font-bold px-2 py-1 focus:outline-none cursor-pointer"
+              className="bg-transparent border border-gfa-gold/30 text-[10px] text-gfa-gold font-bold px-2 py-1 focus:outline-none cursor-pointer rounded-sm"
             >
               {languages.map(lang => <option key={lang.code} value={lang.code} className="bg-gfa-black">{lang.label}</option>)}
             </select>
@@ -88,12 +119,22 @@ const Navbar = () => {
         </div>
       </div>
       {isOpen && (
-        <div className="lg:hidden bg-gfa-black border-b border-gfa-gold/20 pb-4">
+        <div className="lg:hidden bg-gfa-black border-b border-gfa-gold/20 pb-6 max-h-[80vh] overflow-y-auto">
           {links.map(l => (
-            <Link key={l.path} to={l.path} className="block px-6 py-3 text-sm font-bold uppercase tracking-widest text-gfa-gray" onClick={() => setIsOpen(false)}>
+            <Link key={l.path} to={l.path} className="block px-8 py-4 text-xs font-bold uppercase tracking-widest text-gfa-gray border-b border-white/5" onClick={() => setIsOpen(false)}>
               {l.label}
             </Link>
           ))}
+          <div className="px-8 py-4 bg-gfa-darkGray/50">
+            <div className="text-[10px] text-gfa-gold font-black uppercase tracking-widest mb-4">Governance</div>
+            <div className="grid grid-cols-1 gap-4">
+              {govLinks.map(gl => (
+                <Link key={gl.path} to={gl.path} className="text-[10px] font-bold uppercase tracking-widest text-gfa-gray" onClick={() => setIsOpen(false)}>
+                  {gl.label}
+                </Link>
+              ))}
+            </div>
+          </div>
         </div>
       )}
     </nav>
@@ -111,36 +152,38 @@ const Footer = () => {
             <img 
               src="https://i.ibb.co/B582n2Dk/1755827874220993959.png" 
               alt="GFA Logo" 
-              className="h-16 w-auto object-contain transition-transform group-hover:scale-105"
+              className="h-14 w-auto object-contain transition-transform group-hover:scale-105"
             />
             <div className="flex flex-col">
-              <span className="text-3xl font-black gold-gradient leading-none">GFA</span>
-              <span className="text-xs tracking-[0.4em] text-gfa-gray uppercase font-bold">Global Film Alliance</span>
+              <span className="text-2xl font-black gold-gradient leading-none tracking-tighter">GFA</span>
+              <span className="text-[10px] tracking-[0.4em] text-gfa-gray uppercase font-bold">Global Film Alliance</span>
             </div>
           </Link>
-          <p className="text-gfa-gray text-sm leading-relaxed max-w-sm">
-            Institutional authority for global film certification, talent protection, and creative foundation support.
+          <p className="text-gfa-gray text-xs leading-relaxed max-w-sm uppercase tracking-wider font-medium opacity-70">
+            Institutional authority for global film certification, talent protection, and creative foundation support. An independent standards body.
           </p>
         </div>
         <div>
-          <h4 className="text-white text-xs font-black uppercase tracking-widest mb-6">Alliance</h4>
-          <div className="space-y-4 text-xs font-bold uppercase tracking-widest text-gfa-gray">
-            <Link to="/about" className="block hover:text-gfa-gold">{t.nav.about}</Link>
-            <Link to="/certification" className="block hover:text-gfa-gold">{t.nav.certification}</Link>
-            <Link to="/verify" className="block hover:text-gfa-gold">{t.footer.verification}</Link>
+          <h4 className="text-white text-[10px] font-black uppercase tracking-widest mb-6 border-l-2 border-gfa-gold pl-3">Governance</h4>
+          <div className="space-y-4 text-[10px] font-bold uppercase tracking-widest text-gfa-gray">
+            <Link to="/governance" className="block hover:text-gfa-gold transition-colors">Role & Principles</Link>
+            <Link to="/standards" className="block hover:text-gfa-gold transition-colors">Authorization Standards</Link>
+            <Link to="/transparency" className="block hover:text-gfa-gold transition-colors">Pricing Transparency</Link>
+            <Link to="/protection" className="block hover:text-gfa-gold transition-colors">Youth Protection</Link>
+            <Link to="/directory" className="block hover:text-gfa-gold transition-colors">Authorized Programs</Link>
           </div>
         </div>
         <div>
-          <h4 className="text-white text-xs font-black uppercase tracking-widest mb-6">{t.nav.policies}</h4>
-          <div className="space-y-4 text-xs font-bold uppercase tracking-widest text-gfa-gray">
-            <Link to="/privacy" className="block hover:text-gfa-gold">{t.footer.privacy}</Link>
-            <Link to="/terms" className="block hover:text-gfa-gold">{t.footer.terms}</Link>
-            <Link to="/consent" className="block hover:text-gfa-gold">{t.footer.parental}</Link>
-            <Link to="/content-policy" className="block hover:text-gfa-gold">{t.footer.content}</Link>
+          <h4 className="text-white text-[10px] font-black uppercase tracking-widest mb-6 border-l-2 border-gfa-gold pl-3">Registry</h4>
+          <div className="space-y-4 text-[10px] font-bold uppercase tracking-widest text-gfa-gray">
+            <Link to="/verify" className="block hover:text-gfa-gold transition-colors">Verify Certificate</Link>
+            <Link to="/reporting" className="block hover:text-gfa-gold transition-colors">Report Misconduct</Link>
+            <Link to="/privacy" className="block hover:text-gfa-gold transition-colors">Privacy Policy</Link>
+            <Link to="/terms" className="block hover:text-gfa-gold transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto px-4 border-t border-white/5 pt-8 text-center text-[10px] text-gfa-gray uppercase tracking-widest font-medium">
+      <div className="max-w-7xl mx-auto px-4 border-t border-white/5 pt-8 text-center text-[8px] text-gfa-gray uppercase tracking-[0.3em] font-medium">
         {t.footer.copyright.replace('{year}', currentYear)}
       </div>
     </footer>
@@ -178,6 +221,14 @@ const App: React.FC = () => {
               <Route path="/partners" element={<Partners />} />
               <Route path="/events" element={<Events />} />
               <Route path="/contact" element={<Contact />} />
+              
+              <Route path="/governance" element={<Governance />} />
+              <Route path="/standards" element={<Standards />} />
+              <Route path="/transparency" element={<Transparency />} />
+              <Route path="/protection" element={<Protection />} />
+              <Route path="/directory" element={<Directory />} />
+              <Route path="/reporting" element={<Reporting />} />
+
               <Route path="/privacy" element={<PolicyPage type="privacy" />} />
               <Route path="/terms" element={<PolicyPage type="terms" />} />
               <Route path="/consent" element={<PolicyPage type="consent" />} />
