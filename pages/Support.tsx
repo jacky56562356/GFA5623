@@ -1,13 +1,12 @@
 
 import React from 'react';
-import SectionHeading from '../components/ui/SectionHeading';
-import { useLocale } from '../App';
-import { SUPPORT_PROGRAMS_DATA } from '../data';
+import SectionHeading from '../components/ui/SectionHeading.tsx';
+import { useLocale } from '../App.tsx';
+import { SUPPORT_PROGRAMS_DATA } from '../data.ts';
 
 const Support: React.FC = () => {
   const { t } = useLocale();
 
-  // Mapping dictionary keys to the static data
   const programDetails = [
     { key: 'p1', title: t.support.p1Title, bullets: t.support.p1Bullets },
     { key: 'p2', title: t.support.p2Title, bullets: t.support.p2Bullets },

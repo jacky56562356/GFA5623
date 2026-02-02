@@ -1,5 +1,3 @@
-
-// Fix: Import Locale instead of non-existent Language
 import { Locale, Certification, SupportProgram, MemberTier, Merchant, GFAEvent } from './types';
 
 export const TRANSLATIONS = {
@@ -22,7 +20,6 @@ export const TRANSLATIONS = {
       btnProject: 'Submit Project'
     }
   },
-  // Fix: Use Locale.ZH instead of Language.CN
   [Locale.ZH]: {
     nav: {
       about: '关于我们',
@@ -55,7 +52,6 @@ export const MOCK_PROGRAMS: SupportProgram[] = [
     id: 'grad-1',
     category: 'Graduate',
     title: 'Graduate Film Support',
-    // Fix: use features instead of details, add required description
     features: ['Script mentorship', 'Production consulting', 'Festival submission guidance'],
     description: 'Providing guidance and mentorship for recent film graduates.'
   },
@@ -63,7 +59,6 @@ export const MOCK_PROGRAMS: SupportProgram[] = [
     id: 'vfx-1',
     category: 'VFX',
     title: 'Post Production & VFX Support',
-    // Fix: use features instead of details, add required description
     features: ['Editing & Color Grading', 'High-end Compositing', 'Immersive Sound Design'],
     description: 'Specialized support for post-production workflows and visual effects.'
   },
@@ -71,7 +66,6 @@ export const MOCK_PROGRAMS: SupportProgram[] = [
     id: 'studio-1',
     category: 'Studio',
     title: 'Studio & Equipment Support',
-    // Fix: use features instead of details, add required description
     features: ['Stage access', 'Lighting & Grip kits', 'Production Vehicles'],
     description: 'Facilitating access to physical production infrastructure.'
   }
@@ -89,31 +83,16 @@ export const MOCK_MERCHANTS: Merchant[] = [
     name: 'Hollywood Lens Rental',
     category: 'Equipment',
     address: 'Sunset Blvd, CA',
-    // Fix: change discount to benefit to match Merchant interface
     benefit: '15% Off All Rentals',
     eligibility: 'Pro & Gold Members',
     country: 'USA',
     state: 'CA',
     city: 'Los Angeles',
     logo: 'https://picsum.photos/seed/lens/100/100'
-  },
-  {
-    id: 'm2',
-    name: 'Cinematic Suites',
-    category: 'Lodging',
-    address: 'Broadway, NY',
-    // Fix: change discount to benefit to match Merchant interface
-    benefit: '10% Discount on Bookings',
-    eligibility: 'All Members',
-    country: 'USA',
-    state: 'NY',
-    city: 'New York',
-    logo: 'https://picsum.photos/seed/hotel/100/100'
   }
 ];
 
 export const MOCK_EVENTS: GFAEvent[] = [
-  // Fix: add missing description field
   { id: 'e1', title: 'Global Debut Film Festival', date: 'Oct 2024', type: 'Screening', image: 'https://picsum.photos/seed/film1/600/400', description: 'Premiering debut features from global emerging creators.' },
   { id: 'e2', title: 'Cinematography Masterclass', date: 'Nov 2024', type: 'Workshop', image: 'https://picsum.photos/seed/film2/600/400', description: 'Intensive workshop led by industry-leading directors of photography.' }
 ];

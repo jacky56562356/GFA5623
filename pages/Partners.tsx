@@ -1,8 +1,7 @@
 
-
 import React, { useState } from 'react';
-import { useLocale } from '../App';
-import { PARTNERS_DATA } from '../data';
+import { useLocale } from '../App.tsx';
+import { PARTNERS_DATA } from '../data.ts';
 
 const Partners: React.FC = () => {
   const { t } = useLocale();
@@ -17,7 +16,6 @@ const Partners: React.FC = () => {
     <div className="py-32 max-w-7xl mx-auto px-4">
       <div className="mb-20 text-center">
         <h1 className="text-5xl font-black mb-6 gold-gradient uppercase tracking-tighter">{t.partners.title}</h1>
-        {/* Fix: Property 'desc' does not exist on type partners, use 'intro' instead */}
         <p className="text-gfa-gray text-lg max-w-2xl mx-auto uppercase tracking-widest">{t.partners.intro}</p>
       </div>
 

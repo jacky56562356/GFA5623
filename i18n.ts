@@ -1,4 +1,3 @@
-
 import { Locale, Translation } from './types';
 
 const EN_JSON: Translation = {
@@ -81,7 +80,6 @@ const EN_JSON: Translation = {
       "cta": "Join the Alliance"
     }
   },
-  // Other translation sections remain the same or are slightly updated to match the new professional tone
   "about": {
     "title": "GFA Governance",
     "missionTitle": "The Mandate",
@@ -332,7 +330,6 @@ const EN_JSON: Translation = {
 };
 
 const ZH_JSON: Translation = {
-  // Chinese translation stays largely the same but with the updated professional context
   "meta": {
     "siteName": "GFA 全球电影联盟",
     "tagline": "独立认证 • 全球治理 • 未成年人保护"
@@ -661,7 +658,7 @@ const ZH_JSON: Translation = {
   }
 };
 
-const ES_JSON: Translation = { ...EN_JSON }; // Logic for other languages omitted for brevity but they should be clones of EN_JSON with translated text
+const ES_JSON: Translation = { ...EN_JSON };
 const FR_JSON: Translation = { ...EN_JSON };
 const IT_JSON: Translation = { ...EN_JSON };
 

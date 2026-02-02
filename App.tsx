@@ -1,29 +1,28 @@
-
 import React, { useState, createContext, useContext, useEffect } from 'react';
 import { HashRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
-import { Locale } from './types.ts';
-import { DICTIONARIES } from './i18n.ts';
+import { Locale } from './types';
+import { DICTIONARIES } from './i18n';
 
 // Pages
-import Home from './pages/Home.tsx';
-import About from './pages/About.tsx';
-import CertificationPage from './pages/Certification.tsx';
-import Verify from './pages/Verify.tsx';
-import Support from './pages/Support.tsx';
-import Casting from './pages/Casting.tsx';
-import Membership from './pages/Membership.tsx';
-import Partners from './pages/Partners.tsx';
-import Events from './pages/Events.tsx';
-import Contact from './pages/Contact.tsx';
-import PolicyPage from './pages/PolicyPage.tsx';
+import Home from './pages/Home';
+import About from './pages/About';
+import CertificationPage from './pages/Certification';
+import Verify from './pages/Verify';
+import Support from './pages/Support';
+import Casting from './pages/Casting';
+import Membership from './pages/Membership';
+import Partners from './pages/Partners';
+import Events from './pages/Events';
+import Contact from './pages/Contact';
+import PolicyPage from './pages/PolicyPage';
 
 // Governance Pages
-import Governance from './pages/Governance.tsx';
-import Standards from './pages/Standards.tsx';
-import Transparency from './pages/Transparency.tsx';
-import Protection from './pages/Protection.tsx';
-import Directory from './pages/Directory.tsx';
-import Reporting from './pages/Reporting.tsx';
+import Governance from './pages/Governance';
+import Standards from './pages/Standards';
+import Transparency from './pages/Transparency';
+import Protection from './pages/Protection';
+import Directory from './pages/Directory';
+import Reporting from './pages/Reporting';
 
 const LanguageContext = createContext({
   locale: Locale.EN,
@@ -66,6 +65,11 @@ const Navbar = () => {
     { code: Locale.FR, label: t.language.fr },
     { code: Locale.IT, label: t.language.it },
   ];
+
+  // Close mobile menu on path change
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
 
   return (
     <nav className="fixed w-full z-50 bg-gfa-black/95 backdrop-blur-xl border-b border-gfa-gold/20">
@@ -118,32 +122,42 @@ const Navbar = () => {
             >
               {languages.map(lang => <option key={lang.code} value={lang.code} className="bg-gfa-black">{lang.label}</option>)}
             </select>
-            <button className="lg:hidden text-gfa-gray" onClick={() => setIsOpen(!isOpen)}>
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" /></svg>
+            <button className="lg:hidden text-gfa-gray p-2" onClick={() => setIsOpen(!isOpen)}>
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16m-7 6h7"} /></svg>
             </button>
           </div>
         </div>
       </div>
+      
+      {/* Mobile Menu */}
       {isOpen && (
-        <div className="lg:hidden bg-gfa-black border-b border-gfa-gold/20 pb-6 max-h-[80vh] overflow-y-auto">
-          <Link to="/about" className="block px-8 py-4 text-xs font-bold uppercase tracking-widest text-gfa-gray border-b border-white/5" onClick={() => setIsOpen(false)}>
-            {t.nav.about}
-          </Link>
-          <div className="px-8 py-4 bg-gfa-darkGray/50 border-b border-white/5">
-            <div className="text-[10px] text-gfa-gold font-black uppercase tracking-widest mb-4">{t.nav.certification}</div>
-            <div className="grid grid-cols-1 gap-4">
-              {certGovLinks.map(gl => (
-                <Link key={gl.path} to={gl.path} className="text-[10px] font-bold uppercase tracking-widest text-gfa-gray" onClick={() => setIsOpen(false)}>
-                  {gl.label}
-                </Link>
-              ))}
-            </div>
-          </div>
-          {links.slice(1).map(l => (
-            <Link key={l.path} to={l.path} className="block px-8 py-4 text-xs font-bold uppercase tracking-widest text-gfa-gray border-b border-white/5" onClick={() => setIsOpen(false)}>
-              {l.label}
+        <div className="lg:hidden fixed inset-0 top-20 bg-gfa-black z-40 overflow-y-auto animate-fade-in">
+          <div className="p-4 space-y-2">
+            <Link to="/about" className="block px-6 py-4 text-sm font-bold uppercase tracking-widest text-gfa-gray hover:text-gfa-gold border-b border-white/5">
+              {t.nav.about}
             </Link>
-          ))}
+            
+            <div className="px-6 py-4 bg-gfa-darkGray/30 rounded-lg">
+              <div className="text-[10px] text-gfa-gold font-black uppercase tracking-widest mb-4 border-l-2 border-gfa-gold pl-3">{t.nav.certification}</div>
+              <div className="grid grid-cols-1 gap-3">
+                {certGovLinks.map(gl => (
+                  <Link key={gl.path} to={gl.path} className="text-[10px] font-bold uppercase tracking-widest text-gfa-gray hover:text-white">
+                    {gl.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {links.slice(1).map(l => (
+              <Link key={l.path} to={l.path} className="block px-6 py-4 text-sm font-bold uppercase tracking-widest text-gfa-gray hover:text-gfa-gold border-b border-white/5">
+                {l.label}
+              </Link>
+            ))}
+            
+            <Link to="/contact" className="block px-6 py-6 text-center mt-8 bg-gfa-gold text-gfa-black font-black uppercase text-xs tracking-[0.3em]">
+              {t.nav.contact}
+            </Link>
+          </div>
         </div>
       )}
     </nav>
@@ -169,7 +183,7 @@ const Footer = () => {
             </div>
           </Link>
           <p className="text-gfa-gray text-xs leading-relaxed max-w-sm uppercase tracking-wider font-medium opacity-70">
-            Institutional authority for global film certification, talent protection, and creative foundation support. An independent standards body.
+            Institutional authority for global film certification, talent protection, and creative foundation support. Independent standard-setting body.
           </p>
         </div>
         <div>
@@ -185,70 +199,4 @@ const Footer = () => {
         <div>
           <h4 className="text-white text-[10px] font-black uppercase tracking-widest mb-6 border-l-2 border-gfa-gold pl-3">Registry</h4>
           <div className="space-y-4 text-[10px] font-bold uppercase tracking-widest text-gfa-gray">
-            <Link to="/verify" className="block hover:text-gfa-gold transition-colors">Verify Certificate</Link>
-            <Link to="/reporting" className="block hover:text-gfa-gold transition-colors">Report Misconduct</Link>
-            <Link to="/privacy" className="block hover:text-gfa-gold transition-colors">Privacy Policy</Link>
-            <Link to="/terms" className="block hover:text-gfa-gold transition-colors">Terms of Service</Link>
-          </div>
-        </div>
-      </div>
-      <div className="max-w-7xl mx-auto px-4 border-t border-white/5 pt-8 text-center text-[8px] text-gfa-gray uppercase tracking-[0.3em] font-medium">
-        {t.footer.copyright.replace('{year}', currentYear)}
-      </div>
-    </footer>
-  );
-};
-
-const ScrollToTop = () => {
-  const { pathname } = useLocation();
-  useEffect(() => window.scrollTo(0, 0), [pathname]);
-  return null;
-};
-
-const App: React.FC = () => {
-  const [locale, setLocale] = useState<Locale>(() => (localStorage.getItem('gfa_locale') as Locale) || Locale.EN);
-
-  useEffect(() => {
-    localStorage.setItem('gfa_locale', locale);
-  }, [locale]);
-
-  return (
-    <LanguageContext.Provider value={{ locale, setLocale, t: DICTIONARIES[locale] }}>
-      <HashRouter>
-        <ScrollToTop />
-        <div className="flex flex-col min-h-screen bg-gfa-black text-white selection:bg-gfa-gold selection:text-gfa-black">
-          <Navbar />
-          <main className="flex-grow">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/certification" element={<CertificationPage />} />
-              <Route path="/verify" element={<Verify />} />
-              <Route path="/support" element={<Support />} />
-              <Route path="/casting" element={<Casting />} />
-              <Route path="/membership" element={<Membership />} />
-              <Route path="/partners" element={<Partners />} />
-              <Route path="/events" element={<Events />} />
-              <Route path="/contact" element={<Contact />} />
-              
-              <Route path="/governance" element={<Governance />} />
-              <Route path="/standards" element={<Standards />} />
-              <Route path="/transparency" element={<Transparency />} />
-              <Route path="/protection" element={<Protection />} />
-              <Route path="/directory" element={<Directory />} />
-              <Route path="/reporting" element={<Reporting />} />
-
-              <Route path="/privacy" element={<PolicyPage type="privacy" />} />
-              <Route path="/terms" element={<PolicyPage type="terms" />} />
-              <Route path="/consent" element={<PolicyPage type="consent" />} />
-              <Route path="/content-policy" element={<PolicyPage type="content" />} />
-            </Routes>
-          </main>
-          <Footer />
-        </div>
-      </HashRouter>
-    </LanguageContext.Provider>
-  );
-};
-
-export default App;
+            <Link to="/verify" className
