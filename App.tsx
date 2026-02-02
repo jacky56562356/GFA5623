@@ -48,14 +48,14 @@ const Navbar = () => {
   ];
 
   const certGovLinks = [
-    { path: '/certification', label: 'Overview' },
-    { path: '/verify', label: 'Verify Certificate' },
-    { path: '/governance', label: 'Governance & Principles' },
-    { path: '/standards', label: 'Authorization Standards' },
-    { path: '/transparency', label: 'Pricing Transparency' },
-    { path: '/protection', label: 'Youth Protection' },
-    { path: '/directory', label: 'Authorized Directory' },
-    { path: '/reporting', label: 'Report Misconduct' },
+    { path: '/certification', label: t.nav.certGov.overview },
+    { path: '/verify', label: t.nav.certGov.verify },
+    { path: '/governance', label: t.nav.certGov.governance },
+    { path: '/standards', label: t.nav.certGov.standards },
+    { path: '/transparency', label: t.nav.certGov.transparency },
+    { path: '/protection', label: t.nav.certGov.protection },
+    { path: '/directory', label: t.nav.certGov.directory },
+    { path: '/reporting', label: t.nav.certGov.reporting },
   ];
 
   const languages = [
@@ -185,10 +185,10 @@ const Footer = () => {
         <div>
           <h4 className="text-white text-[10px] font-black uppercase tracking-widest mb-6 border-l-2 border-gfa-gold pl-3">Governance</h4>
           <div className="space-y-4 text-[10px] font-bold uppercase tracking-widest text-gfa-gray">
-            <Link to="/governance" className="block hover:text-gfa-gold transition-colors">Role & Principles</Link>
-            <Link to="/standards" className="block hover:text-gfa-gold transition-colors">Authorization Standards</Link>
-            <Link to="/transparency" className="block hover:text-gfa-gold transition-colors">Pricing Transparency</Link>
-            <Link to="/protection" className="block hover:text-gfa-gold transition-colors">Youth Protection</Link>
+            <Link to="/governance" className="block hover:text-gfa-gold transition-colors">{t.nav.certGov.governance}</Link>
+            <Link to="/standards" className="block hover:text-gfa-gold transition-colors">{t.nav.certGov.standards}</Link>
+            <Link to="/transparency" className="block hover:text-gfa-gold transition-colors">{t.nav.certGov.transparency}</Link>
+            <Link to="/protection" className="block hover:text-gfa-gold transition-colors">{t.nav.certGov.protection}</Link>
           </div>
         </div>
         <div>

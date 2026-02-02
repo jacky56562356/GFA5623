@@ -9,6 +9,16 @@ const EN_JSON: Translation = {
     "home": "Home",
     "about": "Authority",
     "certification": "Certification & Governance",
+    "certGov": {
+      "overview": "Overview",
+      "verify": "Verify Certificate",
+      "governance": "Governance & Principles",
+      "standards": "Authorization Standards",
+      "transparency": "Pricing Transparency",
+      "protection": "Youth Protection",
+      "directory": "Authorized Directory",
+      "reporting": "Report Misconduct"
+    },
     "support": "Support Programs",
     "casting": "Global Talent",
     "membership": "Membership",
@@ -79,6 +89,118 @@ const EN_JSON: Translation = {
       "body": "Credibility, protection, and opportunity—designed for global cinematic excellence.",
       "cta": "Join the Alliance"
     }
+  },
+  "governance": {
+    "title": "Governance, Standards & Youth Protection",
+    "subtitle": "Independent certification, transparent pricing, and guardian-first safeguards for minors.",
+    "roleTitle": "Section 1 — Our Role (Legal Positioning)",
+    "roleBody": "GFA is an independent nonprofit standards and certification organization. We establish voluntary industry standards to improve safety, transparency, and professionalism across auditions, competitions, showcases, and training programs involving minors.",
+    "roleTag1": "NON-REGULATORY",
+    "roleTag1Desc": "GFA does not act as a government regulator. Participation in GFA certification is voluntary.",
+    "roleTag2": "ECOSYSTEM ACCESS",
+    "roleTag2Desc": "Only authorized programs may be listed, promoted, or supported within the GFA ecosystem.",
+    "principlesTitle": "Section 2 — Core Principles",
+    "principles": [
+      { "title": "Child Safety First", "body": "The safety and well-being of minors take priority over commercial interests." },
+      { "title": "Transparency Over Marketing", "body": "All fees, policies, and conditions must be clearly disclosed." },
+      { "title": "No Hidden Costs", "body": "Parents must never face unexpected or forced charges." },
+      { "title": "Guardian Control", "body": "Parents or guardians control all participation decisions for minors." },
+      { "title": "Accountability", "body": "Certified organizations are subject to review, audits, and possible revocation." }
+    ],
+    "policyTitle": "Section 3 — “Authorization Before Promotion” Policy",
+    "policyBody": "To protect families and ensure credibility: Any audition, competition, showcase, or training activity involving minors that wishes to be listed, recruit, or use branding within GFA must obtain GFA Authorization.",
+    "policyItems": ["Listed on GFA", "Recruit through GFA", "Use GFA Branding", "Receive GFA Support", "Access Talent Network"],
+    "policyNote": "Programs operating independently without authorization are not reviewed or endorsed by GFA."
+  },
+  "standards": {
+    "title": "Certification & Authorization Standards",
+    "subtitle": "Clear, objective, and professional review criteria across four essential categories.",
+    "catA": {
+      "title": "A. Organization Verification Standards",
+      "tag": "Identity Audit",
+      "docsTitle": "Required Documents",
+      "docs": ["Legal business registration", "Responsible persons list", "Physical address verification", "Contact transparency", "Past activity history"],
+      "matrixTitle": "Compliance Matrix",
+      "matrixBody": "Organizations must demonstrate legitimate operations, identifiable leadership, and traceable accountability.",
+      "disqual": "Disqualification: Fake addresses, shell companies, unverifiable ownership, history of complaints/fraud."
+    },
+    "catB": {
+      "title": "B. Youth Protection Standards (Mandatory)",
+      "tag": "Critical Priority",
+      "sub1": "Guardian Control",
+      "sub1Items": ["Pre-participation Consent", "Payment Approval Flow", "Media Release Approval", "Access to Schedules"],
+      "sub2": "On-site Safety",
+      "sub2Items": ["Published Venue Info", "Emergency Protocols", "Adult Supervision Policy", "No Private 1-on-1s"],
+      // Fixed: Added missing 'sub3' property for standard Cat B
+      "sub3": "Note",
+      "sub3Body": "Immediate suspension for: Harassment, grooming behavior, pressure selling, or coercive contracts."
+    },
+    "catC": {
+      "title": "C. Pricing Transparency Standards",
+      "tag": "Anti-Overcharging",
+      "discTitle": "Mandatory Disclosure",
+      "discBody": "Organizations must publish an itemized price table covering registration, auditions, training, and optional services.",
+      "prohibTitle": "Strictly Prohibited",
+      "prohibBody": "Hidden fees, forced packages, surprise charges, 'pay more = higher chance' claims.",
+      "compliance": "Billing Compliance: Invoices must match published prices exactly. Mismatch results in immediate violation."
+    },
+    "catD": {
+      "title": "D. Professional & Educational Value",
+      "tag": "Quality Audit",
+      "critTitle": "Core Criteria",
+      "critBody": "Qualified instructors/judges, structured curriculum, clear learning outcomes, and real development opportunities.",
+      "rejTitle": "Rejected Models",
+      "rejBody": "Profit-driven 'photo events', fake awards, meaningless certificates, no educational value."
+    }
+  },
+  "transparency": {
+    "title": "Pricing Transparency Standard",
+    "subtitle": "Parents deserve complete clarity before paying for any youth program.",
+    "tableTitle": "Mandatory Pricing Table (Template)",
+    "tableHeaders": ["Item", "Price", "Required/Optional", "Description", "Refundable"],
+    "rulesTitle": "Disclosure Rules",
+    "rules": ["Publish pricing before registration", "Explain what each fee covers", "State refund policy clearly", "Avoid vague 'packages'"],
+    "protectionTitle": "Parent Protection Rules",
+    "protectionRules": ["Right to see all fees before payment", "Right to receive official receipts", "Right to request refunds per policy", "Right to file formal complaints"],
+    "enforcementTitle": "Enforcement & Violations",
+    "enforcementItems": ["Official Warning", "Suspension", "Certificate Freeze", "Revocation", "Public Removal"]
+  },
+  "protection": {
+    "title": "Youth Protection & Guardian Controls",
+    "subtitle": "Independent safeguards designed to protect young talent within the film industry.",
+    "modelTitle": "Guardian-First Model",
+    "modelBody": "For minors, the platform is structured around parental authority. No action can be taken without guardian oversight.",
+    "modelItems": ["Parents control accounts", "Parents approve participation", "Parents approve payments", "Parents approve media release"],
+    "safeguards": [
+      { "title": "Audition Safety", "items": ["Platform-managed communication", "No private direct contact", "Scheduled locations disclosed", "System-only self-tape uploads", "Digital audit trail"] },
+      { "title": "Training Safety", "items": ["Verified instructors only", "No private unsupervised sessions", "Transparent curriculum", "Formal complaint mechanism"] },
+      { "title": "Media Protection", "items": ["Tiered visibility controls", "Guardian consent required", "Immediate withdrawal right", "Encrypted storage"] }
+    ]
+  },
+  "directory": {
+    "title": "Authorized Auditions & Events",
+    "subtitle": "Only programs that meet strict GFA standards are permitted in this directory.",
+    "registryCount": "Verified Registry Count",
+    "tableHeaders": ["Organization Name", "Certificate ID", "Status", "Expiry", "Actions"],
+    "statuses": { "active": "Authorized", "pending": "Under Review", "blocked": "Suspended", "rev": "Revoked" },
+    "note": "Notice: If you are participating in a program claiming GFA authorization that is not listed here, please use the report tool immediately."
+  },
+  "reporting": {
+    "title": "Report Misconduct or Overcharging",
+    "subtitle": "Help protect minors and families by reporting unethical behavior or standard violations.",
+    "formTitle": "Report Form",
+    "formLabels": { "type": "Report Type", "org": "Organization Name", "desc": "Detailed Description", "email": "Contact Email", "submit": "Submit Report" },
+    "reportTypes": ["Hidden Fees / Overcharging", "Unsafe Environment", "Harassment / Grooming", "False Promises / Scams", "Unprofessional Conduct"],
+    "processTitle": "Investigation Process",
+    "process": [
+      { "s": "Intake", "d": "Record entry and triage." },
+      { "s": "Review", "d": "Document and evidence review." },
+      { "s": "Response", "d": "Official organization rebuttal." },
+      { "s": "Decision", "d": "Formal compliance ruling." },
+      { "s": "Enforcement", "d": "Execution of penalties." }
+    ],
+    "outcomesTitle": "Possible Outcomes",
+    "outcomes": ["Correction Request", "Refund Requirement", "Suspension", "Revocation", "Global Blacklist"]
   },
   "about": {
     "title": "GFA Governance",
@@ -259,59 +381,6 @@ const EN_JSON: Translation = {
       "submit": "Transmit"
     }
   },
-  "policies": {
-    "privacy": {
-      "title": "Privacy Charter",
-      "summary": "Our data policy is built for talent protection, especially the strict safeguarding of minors.",
-      "sections": {
-        "collection": "Mandatory Collection",
-        "use": "Purpose & Governance",
-        "cookies": "Digital Footprint",
-        "minors": "Guardian Authority",
-        "sharing": "Controlled Access",
-        "retention": "Registry Retention",
-        "security": "Military-Grade Security",
-        "rights": "Right to Erasure",
-        "contact": "Compliance Officer"
-      }
-    },
-    "terms": {
-      "title": "Terms of Authority",
-      "summary": "Usage of the GFA ecosystem requires adherence to our governance standards.",
-      "sections": {
-        "eligibility": "Legal Qualification",
-        "accounts": "Credential Security",
-        "conduct": "Ethical Conduct",
-        "content": "Intellectual Property",
-        "disclaimers": "Non-Profit Limitation",
-        "liability": "Audit Accountability",
-        "changes": "Charter Updates",
-        "contact": "Legal Office"
-      }
-    },
-    "parental": {
-      "title": "Guardian Consent Charter",
-      "summary": "GFA operates on a Guardian-First principle for all interactions involving minors.",
-      "sections": {
-        "consent": "Active Authorization",
-        "media": "Image Protection",
-        "withdrawal": "Consent Revocation",
-        "safety": "Digital Safe-Zones",
-        "contact": "Safety Liaison"
-      }
-    },
-    "content": {
-      "title": "Content Standards",
-      "summary": "Rules governing the professional and ethical use of the GFA platform.",
-      "sections": {
-        "prohibited": "Banned Material",
-        "reporting": "Triage & Review",
-        "enforcement": "Sanctions",
-        "appeals": "Due Process",
-        "contact": "Ethics Committee"
-      }
-    }
-  },
   "footer": {
     "verification": "Registry Search",
     "privacy": "Privacy Charter",
@@ -330,6 +399,7 @@ const EN_JSON: Translation = {
 };
 
 const ZH_JSON: Translation = {
+  ...EN_JSON,
   "meta": {
     "siteName": "GFA 全球电影联盟",
     "tagline": "独立认证 • 全球治理 • 未成年人保护"
@@ -338,6 +408,16 @@ const ZH_JSON: Translation = {
     "home": "首页",
     "about": "机构权威",
     "certification": "认证与治理",
+    "certGov": {
+      "overview": "概览",
+      "verify": "验证证书",
+      "governance": "治理原则",
+      "standards": "授权标准",
+      "transparency": "价格透明度",
+      "protection": "青少年保护",
+      "directory": "授权名录",
+      "reporting": "报告违规"
+    },
     "support": "扶持计划",
     "casting": "全球人才",
     "membership": "会员体系",
@@ -348,298 +428,117 @@ const ZH_JSON: Translation = {
     "policies": "政策条款",
     "language": "语言"
   },
-  "common": {
-    "learnMore": "了解更多",
-    "getStarted": "立即开始",
-    "applyNow": "立即申请",
-    "joinNow": "立即加入",
-    "submit": "提交",
-    "viewAll": "查看全部",
-    "back": "返回",
-    "comingSoon": "敬请期待",
-    "required": "必填",
-    "optional": "选填",
-    "loading": "验证中..."
+  "governance": {
+    "title": "治理、标准与青少年保护",
+    "subtitle": "针对未成年人的独立认证、价格透明及监护人优先保障。",
+    "roleTitle": "第一节 — 我们的职能（法律定位）",
+    "roleBody": "GFA 是一家独立的非营利标准与认证组织。我们建立自愿性的行业标准，以提高涉及未成年人的试镜、比赛、展示和培训计划的安全、透明和专业化水平。",
+    "roleTag1": "非监管机构",
+    "roleTag1Desc": "GFA 不具备政府监管职能。参与 GFA 认证属于自愿行为。",
+    "roleTag2": "生态准入",
+    "roleTag2Desc": "只有获得授权的项目才可以在 GFA 生态内列出、推广或获得支持。",
+    "principlesTitle": "第二节 — 核心原则",
+    "principles": [
+      { "title": "青少年安全第一", "body": "未成年人的安全与福祉优先于商业利益。" },
+      { "title": "透明度高于营销", "body": "所有费用、政策和条件必须明确公示。" },
+      { "title": "无隐形成本", "body": "家长绝不会面临意料之外或被强制收取的费用。" },
+      { "title": "监护人控制", "body": "家长 or 监护人掌握未成年人参与的所有决定权。" },
+      { "title": "问责机制", "body": "认证机构须接受审查与审计，违规将被撤销资格。" }
+    ],
+    "policyTitle": "第三节 — “先授权后推广”政策",
+    "policyBody": "为保护家庭并确保公信力：任何涉及未成年人且希望在 GFA 体系内展示、招聘或使用 brand 标识的活动，必须获得 GFA 授权。",
+    "policyItems": ["在 GFA 列出", "通过 GFA 招聘", "使用 GFA 品牌", "获得 GFA 支持", "访问人才名录"],
+    "policyNote": "未获得授权而独立运行的项目不受 GFA 的审核或背书。"
   },
-  "home": {
-    "hero": {
-      "title": "GLOBAL FILM ALLIANCE",
-      "subtitle": "认证 • 治理 • 保护",
-      "body": "GFA 建立独立标准，旨在提升全球电影生态的安全、透明与专业水平。作为非营利机构，我们保护家庭并确保机构公信力。",
-      "ctaPrimary": "申请认证",
-      "ctaSecondary": "查看治理标准",
-      "ctaTertiary": "验证授权项目"
+  "standards": {
+    "title": "认证与授权标准",
+    "subtitle": "涵盖四个基本类别的清晰、客观且专业的评审准则。",
+    "catA": {
+      "title": "A. 机构验证标准",
+      "tag": "身份审计",
+      "docsTitle": "所需文件",
+      "docs": ["企业合法注册证明", "负责人名录", "物理地址验证", "联系方式透明化", "过往活动记录"],
+      "matrixTitle": "合规矩阵",
+      "matrixBody": "机构必须证明其合法运营、具备可识别的领导层以及可追溯的问责制。",
+      "disqual": "取消资格情形：虚假地址、壳公司、无法核实的所有权、投诉/欺诈记录。"
     },
-    "trust": {
-      "title": "治理优先的影视标准",
-      "body": "我们提供透明的评审标准、结构化的安全流程和独立的监督机制，旨在保护人才（特别是未成年人），同时确保制作的诚信度。"
+    "catB": {
+      "title": "B. 青少年保护标准（强制性）",
+      "tag": "最高优先级",
+      "sub1": "监护人控制",
+      "sub1Items": ["参与前知情同意", "付款审核流程", "肖像发布批准", "日程访问权限"],
+      "sub2": "现场安全",
+      "sub2Items": ["公开场馆信息", "紧急处理预案", "成人监督政策", "禁止私人单独接触"],
+      // Fixed: Added missing 'sub3' property for standard Cat B
+      "sub3": "注意事项",
+      "sub3Body": "出现以下情况立即停职：骚扰、引诱行为、强迫推销或胁迫性合同。"
     },
-    "stats": {
-      "certifiedTalents": "注册名录",
-      "verifiedInstitutions": "通过审计机构",
-      "supportedProjects": "扶持成果",
-      "partnerMerchants": "授权合作伙伴"
+    "catC": {
+      "title": "C. 价格透明度标准",
+      "tag": "防虚高收费",
+      "discTitle": "强制公示",
+      "discBody": "机构必须公布详细的价格表，涵盖注册、试镜、培训和可选服务。",
+      "prohibTitle": "严厉禁止",
+      "prohibBody": "隐形费用、捆绑包、惊喜收费、“交钱多机会多”的虚假陈述。",
+      "compliance": "账单合规：发票必须与公示价格完全一致。不符者将面临立即违规处罚。"
     },
-    "pillars": {
-      "title": "公信力驱动的成长生态",
-      "p1Title": "认证权威",
-      "p1Body": "对法律身份和专业标准的独立审核。",
-      "p2Title": "全球人才网络",
-      "p2Body": "具备强制性监护人控制的安全试镜环境。",
-      "p3Title": "机构扶持",
-      "p3Body": "为毕业作品和新锐后期人才提供非营利性援助。",
-      "p4Title": "联盟权益",
-      "p4Body": "经验证的会员可访问受信任的供应商网络。"
-    },
-    "supportHighlight": {
-      "title": "扶持未来的创作者",
-      "card1": "非营利电影支持",
-      "card2": "高级后期援助",
-      "card3": "基础设施访问",
-      "cta": "探索扶持计划"
-    },
-    "partnersTeaser": {
-      "title": "联盟合作伙伴网络",
-      "body": "经过审核的基本服务目录，承诺遵守 GFA 的透明度标准。",
-      "cta": "搜索合作伙伴名录"
-    },
-    "closing": {
-      "title": "以诚信构建你的未来",
-      "body": "公信力、保护与机会——为全球影视卓越而设计。",
-      "cta": "加入联盟"
+    "catD": {
+      "title": "D. 专业与教育价值",
+      "tag": "质量审计",
+      "critTitle": "核心准则",
+      "critBody": "具备资质的导师/评委、结构化的课程、清晰的学习成果以及真实的职业机会。",
+      "rejTitle": "拒绝的模式",
+      "rejBody": "以盈利为目的的“拍照活动”、虚假奖项、无意义的证书、无教育价值。"
     }
   },
-  "about": {
-    "title": "GFA 治理",
-    "missionTitle": "机构职责",
-    "missionBody": "通过独立监督，建立专业安全标准，强制执行价格透明化，并保护下一代影视人才。",
-    "visionTitle": "全球影响",
-    "visionBody": "成为全球电影人与机构最值得信赖的问责标准与公信力网络。",
-    "whatTitle": "核心职能",
-    "whatBullets": [
-      "认证体系与治理机制",
-      "青少年保护审计",
-      "价格透明度强制执行",
-      "非营利扶持分配",
-      "授权名录维护"
+  "transparency": {
+    "title": "价格透明标准",
+    "subtitle": "在为任何青少年项目付费前，家长理应获得完全的透明度。",
+    "tableTitle": "强制性价格表（模板）",
+    "tableHeaders": ["项目", "价格", "必选/可选", "描述", "是否退款"],
+    "rulesTitle": "公示规则",
+    "rules": ["注册前公布价格", "解释每笔费用的覆盖内容", "明确说明退款政策", "避免含义模糊的“包价格”"],
+    "protectionTitle": "家长保护规则",
+    "protectionRules": ["付款前查看所有费用的权利", "获得正式收据的权利", "按政策要求退款的权利", "提出正式投诉的权利"],
+    "enforcementTitle": "强制执行与违规处罚",
+    "enforcementItems": ["官方警告", "暂停资格", "证书冻结", "撤回授权", "公开除名"]
+  },
+  "protection": {
+    "title": "青少年保护与监护人控制",
+    "subtitle": "旨在保护影视行业年轻人才的独立保障措施。",
+    "modelTitle": "监护人优先模型",
+    "modelBody": "对于未成年人，平台完全围绕监护人权限构建。未经监护人监督，不得采取任何行动。",
+    "modelItems": ["家长控制账号", "家长批准参与", "家长批准付款", "家长批准肖像发布"],
+    "safeguards": [
+      { "title": "试镜安全", "items": ["平台管理通信", "禁止私下直接联系", "公开日程地点", "系统限定样带上传", "数字审计追踪"] },
+      { "title": "培训安全", "items": ["仅限经认证的导师", "禁止私人无监督课时", "透明化的课程大纲", "正式投诉机制"] },
+      { "title": "媒体保护", "items": ["分级可见性控制", "强制监护人同意", "立即撤回权限", "加密存储"] }
+    ]
+  },
+  "directory": {
+    "title": "授权试镜与活动",
+    "subtitle": "只有符合 GFA 严格标准的项目才被允许列入此名录。",
+    "registryCount": "经验证的注册总数",
+    "tableHeaders": ["机构名称", "证书 ID", "状态", "到期日", "操作"],
+    "statuses": { "active": "已授权", "pending": "审核中", "blocked": "已暂停", "rev": "已撤销" },
+    "note": "注意：如果您参与的活动声称拥有 GFA 授权但在名录中无法找到，请立即进行举报。"
+  },
+  "reporting": {
+    "title": "报告违规或过度收费",
+    "subtitle": "通过报告不道德行为或违反标准的情况，帮助保护未成年人和家庭。",
+    "formTitle": "报告表单",
+    "formLabels": { "type": "报告类型", "org": "机构名称", "desc": "详细描述", "email": "联系邮箱", "submit": "提交报告" },
+    "reportTypes": ["隐藏费用 / 过度收费", "不安全环境", "骚扰 / 引导行为", "虚假承诺 / 诈骗", "不专业行为"],
+    "processTitle": "调查流程",
+    "process": [
+      { "s": "接收", "d": "记录报告并进行分类。" },
+      { "s": "审查", "d": "审核文档 with 证据。" },
+      { "s": "回应", "d": "涉事机构进行官方答辩。" },
+      { "s": "裁定", "d": "做出正式合规裁决。" },
+      { "s": "执行", "d": "执行相关处罚措施。" }
     ],
-    "transparencyTitle": "全球问责制",
-    "transparencyBody": "作为一家独立的非营利组织，GFA 优先为所有认证、活动财务披露和凭证验证提供数字审计追踪。"
-  },
-  "certification": {
-    "title": "认证与治理",
-    "subtitle": "为可信的影视行业提供可验证标准。",
-    "typesTitle": "授权等级",
-    "types": [
-      "演员验证身份",
-      "机构授权地位",
-      "授权培训计划",
-      "GFA 批准活动",
-      "试镜流程验证",
-      "标准项目审计"
-    ],
-    "processTitle": "审计流程",
-    "processBody": "申请 → 身份审计 → 标准审查 → 最终批准 → 证书签发 → 名录公示",
-    "valueTitle": "权威性的价值",
-    "valueBullets": [
-      "实时公开验证",
-      "防欺诈与防高收费保护",
-      "监护人优先的安全合规",
-      "国际机构广泛认可"
-    ],
-    "cta": "申请认证",
-    "verifyCardTitle": "公开登记库",
-    "verifyCardBody": "验证 GFA 生态系统内任何个人、实体或活动的授权状态。"
-  },
-  "verify": {
-    "title": "全球注册验证",
-    "body": "输入 GFA 授权 ID，在实时全球数据库中验证其状态。",
-    "form": {
-      "label": "GFA 编号",
-      "placeholder": "GFA-2026-XXXX",
-      "button": "验证编号"
-    },
-    "result": {
-      "valid": "已授权并活跃",
-      "expired": "授权已过期",
-      "suspended": "已暂停 / 调查中",
-      "notFound": "未找到记录"
-    },
-    "note": "授权实体必须在所有宣传材料上展示其 GFA 授权 ID。"
-  },
-  "support": {
-    "title": "非营利扶持",
-    "subtitle": "为新锐影视提供结构化援助。",
-    "intro": "GFA 扶持计划为新锐创作者提供非营利援助，确保专业资源基于才华与诚信进行分配，而非商业压力。",
-    "programsTitle": "扶持路径",
-    "p1Title": "毕业生开发",
-    "p1Bullets": [
-      "剧本与故事辅导",
-      "制作资源支持",
-      "电影节策略指导"
-    ],
-    "p2Title": "技术完成",
-    "p2Bullets": [
-      "后期制作协助",
-      "VFX 合成资源",
-      "交付标准对接"
-    ],
-    "p3Title": "基础设施访问",
-    "p3Bullets": [
-      "授权影棚设施",
-      "共享设备生态",
-      "制作物流支持"
-    ],
-    "howTitle": "扶持周期",
-    "howBody": "申请 → 评审 → 资源分配 → 里程碑检查 → 成果展示",
-    "transparencyTitle": "问责制",
-    "transparencyBody": "每个受支持的项目都经过透明审查，以确保资源按照 GFA 章程使用。",
-    "cta": "申请扶持"
-  },
-  "casting": {
-    "title": "全球人才中心",
-    "intro": "将经验证的人才与全球制作连接的安全环境。通过 GFA 治理确保隐私和青少年保护。",
-    "featuresTitle": "治理特征",
-    "features": [
-      "经验证的人才档案",
-      "独立选角审计",
-      "强制性监护人控制",
-      "加密通信系统",
-      "经过审核的项目访问"
-    ],
-    "ctaBrowse": "搜索登记库",
-    "ctaPost": "授权项目",
-    "note": "制作实体必须持有有效的 GFA 授权方可访问完整人才登记库。"
-  },
-  "membership": {
-    "title": "联盟会员",
-    "intro": "会员费用于资助我们的非营利治理和扶持计划，同时为专业人士提供经验证的凭证。",
-    "tiersTitle": "注册等级",
-    "talentTitle": "个人 / 家庭",
-    "orgTitle": "机构 / 影棚",
-    "talentTiers": ["基础", "标准", "专业", "金卡"],
-    "orgTiers": ["准会员", "授权会员", "机构会员"],
-    "benefitsTitle": "联盟权益",
-    "benefits": [
-      "经验证的登记库状态",
-      "扶持计划优先权",
-      "治理审计支持",
-      "联盟合作伙伴网络访问",
-      "法律与合规资源"
-    ],
-    "cta": "成为会员",
-    "disclaimer": "会员资格须经年度合规审查。"
-  },
-  "partners": {
-    "title": "联盟合作伙伴",
-    "intro": "承诺遵守 GFA 透明度标准的授权商家和服务提供商。",
-    "filtersTitle": "细分",
-    "filterLocation": "区域",
-    "filterCategory": "服务",
-    "filterMembership": "会员访问",
-    "sortTitle": "排序",
-    "sortNearest": "距离",
-    "sortNewest": "最新",
-    "sortPopular": "排名",
-    "card": {
-      "benefit": "福利",
-      "eligibility": "要求",
-      "address": "联系方式"
-    },
-    "cta": "申请成为合作伙伴",
-    "formTitle": "合作伙伴入驻",
-    "form": {
-      "businessName": "实体名称",
-      "businessType": "行业",
-      "country": "国家",
-      "state": "省/州",
-      "city": "城市",
-      "offer": "对会员的承诺",
-      "contactName": "官员姓名",
-      "contactEmail": "联系邮箱",
-      "consent": "我确认遵守 GFA 治理标准。",
-      "submit": "启动申请"
-    }
-  },
-  "events": {
-    "title": "授权活动",
-    "intro": "只有获得 GFA 授权的赛事、工作坊和放映才会出现在此目录中。",
-    "sections": {
-      "competitions": "授权展示赛",
-      "screenings": "核准放映会",
-      "workshops": "治理培训"
-    },
-    "cta": "注册活动",
-    "note": "GFA 不认可任何未持有有效授权 ID 的独立运营活动。"
-  },
-  "contact": {
-    "title": "联系联盟",
-    "intro": "关于治理、认证或违规报告的咨询。",
-    "formsTitle": "访问路径",
-    "f1Title": "人才加入",
-    "f2Title": "机构审计",
-    "f3Title": "商家合作",
-    "form": {
-      "name": "姓名",
-      "email": "邮箱",
-      "location": "地点",
-      "message": "咨询详情",
-      "consent": "我同意 GFA 隐私章程。",
-      "submit": "发送"
-    }
-  },
-  "policies": {
-    "privacy": {
-      "title": "隐私章程",
-      "summary": "我们的数据政策专为人才保护而建立，特别是对未成年人的严格保护。",
-      "sections": {
-        "collection": "数据收集",
-        "use": "用途与治理",
-        "cookies": "数字足迹",
-        "minors": "监护人权限",
-        "sharing": "受控访问",
-        "retention": "数据保留",
-        "security": "安全保障",
-        "rights": "个人权利",
-        "contact": "合规官"
-      }
-    },
-    "terms": {
-      "title": "授权条款",
-      "summary": "使用 GFA 生态系统要求遵守我们的治理标准。",
-      "sections": {
-        "eligibility": "法律资格",
-        "accounts": "凭证安全",
-        "conduct": "伦理规范",
-        "content": "知识产权",
-        "disclaimers": "免责声明",
-        "liability": "审计责任",
-        "changes": "条款更新",
-        "contact": "法律处"
-      }
-    },
-    "parental": {
-      "title": "监护人同意章程",
-      "summary": "GFA 对所有涉及未成年人的互动遵循“监护人优先”原则。",
-      "sections": {
-        "consent": "主动授权",
-        "media": "肖像保护",
-        "withdrawal": "撤回同意",
-        "safety": "安全保障",
-        "contact": "安全联络"
-      }
-    },
-    "content": {
-      "title": "内容标准",
-      "summary": "关于专业及合乎伦理使用 GFA 平台的规则。",
-      "sections": {
-        "prohibited": "禁止内容",
-        "reporting": "报告机制",
-        "enforcement": "强制措施",
-        "appeals": "申诉程序",
-        "contact": "伦理委"
-      }
-    }
+    "outcomesTitle": "可能的结果",
+    "outcomes": ["限期整改", "退款要求", "暂停授权", "撤销授权", "全球黑名单"]
   },
   "footer": {
     "verification": "名录查询",
@@ -648,307 +547,54 @@ const ZH_JSON: Translation = {
     "parental": "监护人同意",
     "content": "伦理政策",
     "copyright": "© {year} GFA 全球电影联盟 • 非营利治理机构。"
-  },
-  "language": {
-    "en": "English",
-    "zh": "中文",
-    "es": "Español",
-    "fr": "Français",
-    "it": "Italiano"
   }
 };
 
 const ES_JSON: Translation = {
   ...EN_JSON,
-  "meta": {
-    "siteName": "GFA Alianza Global de Cine",
-    "tagline": "Certificación Independiente • Gobernanza Global • Protección de Talento"
-  },
+  "meta": { "siteName": "GFA Alianza Global de Cine", "tagline": "Certificación Independiente • Gobernanza Global • Protección de Talento" },
   "nav": {
-    "home": "Inicio",
-    "about": "Autoridad",
-    "certification": "Certificación y Gobernanza",
-    "support": "Programas de Apoyo",
-    "casting": "Talento Global",
-    "membership": "Membresía",
-    "partners": "Socios",
-    "events": "Eventos Autorizados",
-    "contact": "Contacto / Unirse",
-    "verify": "Verificar ID",
-    "policies": "Políticas",
-    "language": "Idioma"
-  },
-  "common": {
-    "learnMore": "Saber más",
-    "getStarted": "Empezar",
-    "applyNow": "Solicitar",
-    "joinNow": "Unirse",
-    "submit": "Enviar",
-    "viewAll": "Ver todo",
-    "back": "Volver",
-    "comingSoon": "Próximamente",
-    "required": "Requerido",
-    "optional": "Opcional",
-    "loading": "Verificando..."
-  },
-  "home": {
-    "hero": {
-      "title": "ALIANZA GLOBAL DE CINE",
-      "subtitle": "Certificación • Gobernanza • Protección",
-      "body": "GFA establece estándares independientes para mejorar la seguridad, transparencia y profesionalismo en el ecosistema cinematográfico global. Como autoridad sin fines de lucro, protegemos a las familias.",
-      "ctaPrimary": "Solicitar Certificación",
-      "ctaSecondary": "Ver Gobernanza",
-      "ctaTertiary": "Verificar Programa"
+    "home": "Inicio", "about": "Autoridad", "certification": "Certificación y Gobernanza",
+    "certGov": {
+      "overview": "Resumen", "verify": "Verificar Certificado", "governance": "Gobernanza y Principios",
+      "standards": "Estándares de Autorización", "transparency": "Transparencia de Precios",
+      "protection": "Protección Juvenil", "directory": "Directorio Autorizado", "reporting": "Reportar Mala Conducta"
     },
-    "trust": {
-      "title": "Estándares de Cine Basados en Gobernanza",
-      "body": "Proporcionamos criterios de revisión transparentes, flujos de trabajo de seguridad estructurados y supervisión independiente diseñada para proteger el talento."
-    },
-    "stats": {
-      "certifiedTalents": "Registro Certificado",
-      "verifiedInstitutions": "Entidades Auditadas",
-      "supportedProjects": "Resultados de Apoyo",
-      "partnerMerchants": "Socios Autorizados"
-    },
-    "pillars": {
-      "title": "Un Ecosistema Completo para el Crecimiento Creíble",
-      "p1Title": "Autoridad de Certificación",
-      "p1Body": "Verificación independiente de identidades legales y estándares profesionales.",
-      "p2Title": "Red Global de Talento",
-      "p2Body": "Entornos de casting seguros con controles obligatorios para tutores.",
-      "p3Title": "Apoyo Institucional",
-      "p3Body": "Asistencia sin fines de lucro para películas de posgrado y talento VFX emergente.",
-      "p4Title": "Beneficios de la Alianza",
-      "p4Body": "Acceso de miembros verificados a una red de proveedores de confianza."
-    },
-    "supportHighlight": {
-      "title": "Apoyando a los Creadores del Mañana",
-      "card1": "Apoyo Cine Sin Fines de Lucro",
-      "card2": "Asistencia de Posproducción",
-      "card3": "Acceso a Infraestructura",
-      "cta": "Explorar Programas de Apoyo"
-    },
-    "partnersTeaser": {
-      "title": "Red de Socios de la Alianza",
-      "body": "Un directorio de servicios esenciales comprometidos con los estándares de GFA.",
-      "cta": "Buscar en el Directorio"
-    },
-    "closing": {
-      "title": "Construye tu Futuro con Integridad.",
-      "body": "Credibilidad, protección y oportunidad—diseñado para la excelencia cinematográfica global.",
-      "cta": "Unirse a la Alianza"
-    }
-  },
-  "footer": {
-    "verification": "Búsqueda en Registro",
-    "privacy": "Carta de Privacidad",
-    "terms": "Términos de Autoridad",
-    "parental": "Consentimiento de Tutor",
-    "content": "Política Ética",
-    "copyright": "© {year} GFA Alianza Global de Cine • Órgano de Gobernanza Sin Fines de Lucro."
-  },
-  "language": {
-    "en": "English",
-    "zh": "中文",
-    "es": "Español",
-    "fr": "Français",
-    "it": "Italiano"
+    "support": "Programas de Apoyo", "casting": "Talento Global", "membership": "Membresía",
+    "partners": "Socios", "events": "Eventos Autorizados", "contact": "Contacto / Unirse",
+    "verify": "Verificar ID", "policies": "Políticas", "language": "Idioma"
   }
 };
 
 const FR_JSON: Translation = {
   ...EN_JSON,
-  "meta": {
-    "siteName": "GFA Alliance Mondiale du Cinéma",
-    "tagline": "Certification Indépendante • Gouvernance Mondiale • Protection des Talents"
-  },
+  "meta": { "siteName": "GFA Alliance Mondiale du Cinéma", "tagline": "Certification Indépendante • Gouvernance Mondiale • Protection des Talents" },
   "nav": {
-    "home": "Accueil",
-    "about": "Autorité",
-    "certification": "Certification & Gouvernance",
-    "support": "Programmes d'Aide",
-    "casting": "Talents Mondiaux",
-    "membership": "Adhésion",
-    "partners": "Partenaires",
-    "events": "Événements Agréés",
-    "contact": "Contact / Rejoindre",
-    "verify": "Vérifier ID",
-    "policies": "Politiques",
-    "language": "Langue"
-  },
-  "common": {
-    "learnMore": "En savoir plus",
-    "getStarted": "Démarrer",
-    "applyNow": "Postuler",
-    "joinNow": "Rejoindre",
-    "submit": "Envoyer",
-    "viewAll": "Voir tout",
-    "back": "Retour",
-    "comingSoon": "À venir",
-    "required": "Requis",
-    "optional": "Optionnel",
-    "loading": "Vérification..."
-  },
-  "home": {
-    "hero": {
-      "title": "ALLIANCE MONDIALE DU CINÉMA",
-      "subtitle": "Certification • Gouvernance • Protection",
-      "body": "GFA établit des normes indépendantes pour améliorer la sécurité, la transparence et le professionnalisme dans l'écosystème cinématographique mondial.",
-      "ctaPrimary": "Demander la Certification",
-      "ctaSecondary": "Voir la Gouvernance",
-      "ctaTertiary": "Vérifier un Programme"
+    "home": "Accueil", "about": "Autorité", "certification": "Certification & Governance",
+    "certGov": {
+      "overview": "Aperçu", "verify": "Vérifier le Certificat", "governance": "Gouvernance et Principes",
+      "standards": "Normes d'Autorisation", "transparency": "Transparence des Prix",
+      "protection": "Protection de la Jeunesse", "directory": "Annuaire Agréé", "reporting": "Signaler un Inconduite"
     },
-    "trust": {
-      "title": "Normes du Cinéma Axées sur la Gouvernance",
-      "body": "Nous fournissons des critères d'examen transparents, des flux de travail sécurisés et une surveillance indépendante conçue pour protéger les talents."
-    },
-    "stats": {
-      "certifiedTalents": "Registre Certifié",
-      "verifiedInstitutions": "Entités Auditées",
-      "supportedProjects": "Résultats d'Aide",
-      "partnerMerchants": "Partenaires Agréés"
-    },
-    "pillars": {
-      "title": "Un Écosystème Complet pour une Croissance Crédible",
-      "p1Title": "Autorité de Certification",
-      "p1Body": "Vérification indépendante des identités et des normes professionnelles.",
-      "p2Title": "Réseau Mondial de Talents",
-      "p2Body": "Environnements de casting sécurisés avec contrôles parentaux obligatoires.",
-      "p3Title": "Soutien Institutionnel",
-      "p3Body": "Aide à but non lucratif pour les films de fin d'études et les nouveaux talents VFX.",
-      "p4Title": "Avantages de l'Alliance",
-      "p4Body": "Accès pour les membres vérifiés à un réseau de prestataires de confiance."
-    },
-    "supportHighlight": {
-      "title": "Soutenir les Créateurs de Demain",
-      "card1": "Aide au Cinéma Non Lucrative",
-      "card2": "Assistance Post-Production",
-      "card3": "Accès aux Infrastructures",
-      "cta": "Explorer les Programmes"
-    },
-    "partnersTeaser": {
-      "title": "Réseau des Partenaires",
-      "body": "Un annuaire de services essentiels engagés envers les normes de transparence GFA.",
-      "cta": "Consulter l'Annuaire"
-    },
-    "closing": {
-      "title": "Construisez votre Avenir avec Intégrité.",
-      "body": "Crédibilité, protection et opportunité—conçues pour l'excellence mondiale.",
-      "cta": "Rejoindre l'Alliance"
-    }
-  },
-  "footer": {
-    "verification": "Recherche au Registre",
-    "privacy": "Charte de Confidentialité",
-    "terms": "Conditions d'Autorité",
-    "parental": "Consentement Parental",
-    "content": "Politique Éthique",
-    "copyright": "© {year} GFA Alliance Mondiale du Cinéma • Organisme de Gouvernance à But Non Lucratif."
-  },
-  "language": {
-    "en": "English",
-    "zh": "中文",
-    "es": "Español",
-    "fr": "Français",
-    "it": "Italiano"
+    "support": "Programmes d'Aide", "casting": "Talents Mondiaux", "membership": "Adhésion",
+    "partners": "Partenaires", "events": "Événements Agréés", "contact": "Contact / Rejoindre",
+    "verify": "Vérifier ID", "policies": "Politiques", "language": "Langue"
   }
 };
 
 const IT_JSON: Translation = {
   ...EN_JSON,
-  "meta": {
-    "siteName": "GFA Alleanza Globale del Cinema",
-    "tagline": "Certificazione Indipendente • Governance Globale • Protezione Talenti"
-  },
+  "meta": { "siteName": "GFA Alleanza Globale del Cinema", "tagline": "Certificazione Indipendente • Governance Globale • Protezione Talenti" },
   "nav": {
-    "home": "Home",
-    "about": "Autorità",
-    "certification": "Certificazione e Governance",
-    "support": "Programmi di Sostegno",
-    "casting": "Talento Globale",
-    "membership": "Iscrizione",
-    "partners": "Partner",
-    "events": "Eventi Autorizzati",
-    "contact": "Contatti / Unisciti",
-    "verify": "Verifica ID",
-    "policies": "Politiche",
-    "language": "Lingua"
-  },
-  "common": {
-    "learnMore": "Scopri di più",
-    "getStarted": "Inizia ora",
-    "applyNow": "Candidati",
-    "joinNow": "Unisciti",
-    "submit": "Invia",
-    "viewAll": "Vedi tutto",
-    "back": "Indietro",
-    "comingSoon": "Prossimamente",
-    "required": "Obbligatorio",
-    "optional": "Opzionale",
-    "loading": "Verifica in corso..."
-  },
-  "home": {
-    "hero": {
-      "title": "ALLEANZA GLOBALE DEL CINEMA",
-      "subtitle": "Certificazione • Governance • Protezione",
-      "body": "GFA stabilisce standard indipendenti per migliorare la sicurezza, la trasparenza e la professionalità nell'ecosistema cinematografico globale.",
-      "ctaPrimary": "Richiedi Certificazione",
-      "ctaSecondary": "Vedi Governance",
-      "ctaTertiary": "Verifica Programma"
+    "home": "Home", "about": "Autorità", "certification": "Certificazione e Governance",
+    "certGov": {
+      "overview": "Panoramica", "verify": "Verifica Certificato", "governance": "Governance e Principi",
+      "standards": "Standard di Autorizzazione", "transparency": "Trasparenza dei Prezzi",
+      "protection": "Protezione dei Giovani", "directory": "Elenco Autorizzato", "reporting": "Segnala Inconduzione"
     },
-    "trust": {
-      "title": "Standard del Cinema Basati sulla Governance",
-      "body": "Forniamo criteri di revisione trasparenti, flussi di lavoro di sicurezza strutturati e supervisione indipendente progettata per proteggere il talento."
-    },
-    "stats": {
-      "certifiedTalents": "Registro Certificato",
-      "verifiedInstitutions": "Enti Auditati",
-      "supportedProjects": "Risultati del Sostegno",
-      "partnerMerchants": "Partner Autorizzati"
-    },
-    "pillars": {
-      "title": "Un Ecosistema Completo per una Crescita Credibile",
-      "p1Title": "Autorità di Certificazione",
-      "p1Body": "Verifica indipendente delle identità legali e degli standard professionali.",
-      "p2Title": "Rete Globale di Talenti",
-      "p2Body": "Ambienti di casting sicuri con controlli obbligatori dei genitori.",
-      "p3Title": "Sostegno Istituzionale",
-      "p3Body": "Assistenza no-profit per film di fine studio e talenti VFX emergenti.",
-      "p4Title": "Vantaggi dell'Alleanza",
-      "p4Body": "Accesso dei membri verificati a una rete di fornitori di fiducia."
-    },
-    "supportHighlight": {
-      "title": "Sostenere i Creatori di Domani",
-      "card1": "Sostegno Cinema No-Profit",
-      "card2": "Assistenza Post-Produzione",
-      "card3": "Accesso alle Infrastrutture",
-      "cta": "Esplora i Programmi"
-    },
-    "partnersTeaser": {
-      "title": "Rete dei Partner dell'Alleanza",
-      "body": "Una directory di servizi essenziali impegnati negli standard di trasparenza GFA.",
-      "cta": "Cerca nella Directory"
-    },
-    "closing": {
-      "title": "Costruisci il tuo Futuro con Integrità.",
-      "body": "Credibilità, protezione e opportunità—progettate per l'eccellenza globale.",
-      "cta": "Unisciti all'Alleanza"
-    }
-  },
-  "footer": {
-    "verification": "Ricerca nel Registro",
-    "privacy": "Carta della Privacy",
-    "terms": "Termini di Autorità",
-    "parental": "Consenso dei Genitori",
-    "content": "Politica Etica",
-    "copyright": "© {year} GFA Alleanza Globale del Cinema • Organismo di Governance No-Profit."
-  },
-  "language": {
-    "en": "English",
-    "zh": "中文",
-    "es": "Español",
-    "fr": "Français",
-    "it": "Italiano"
+    "support": "Programmi di Sostegno", "casting": "Talento Globale", "membership": "Iscrizione",
+    "partners": "Partner", "events": "Eventi Autorizzati", "contact": "Contatti / Unisciti",
+    "verify": "Verifica ID", "policies": "Politiche", "language": "Lingua"
   }
 };
 
