@@ -1,4 +1,3 @@
-
 import { Locale, Translation } from './types';
 
 const EN_JSON: Translation = {
@@ -381,7 +380,6 @@ const EN_JSON: Translation = {
       "submit": "Transmit"
     }
   },
-  // Added policies object to satisfy the Translation interface and support PolicyPage component
   "policies": {
     "privacy": {
       "title": "Privacy Charter",
@@ -664,7 +662,7 @@ const IT_JSON: Translation = {
   "nav": {
     "home": "Home", "about": "Autorità", "certification": "Certificazione e Governance",
     "certGov": {
-      "overview": "Panoramica", "verify": "Verifica Certificato", "governance": "Governance e Principios",
+      "overview": "Panoramica", "verify": "Verifica Certificato", "governance": "Governance e Principi",
       "standards": "Standard di Autorizzazione", "transparency": "Trasparenza dei Prezzi",
       "protection": "Protezione dei Giovani", "directory": "Elenco Autorizzato", "reporting": "Segnala Inconduzione"
     },
