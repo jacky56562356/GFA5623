@@ -1,8 +1,8 @@
 
 import React from 'react';
-import SectionHeading from '../components/ui/SectionHeading.tsx';
-import { useLocale } from '../App.tsx';
-import { EVENTS_DATA } from '../data.ts';
+import SectionHeading from '../components/ui/SectionHeading';
+import { useLocale } from '../App';
+import { EVENTS_DATA } from '../data';
 
 const Events: React.FC = () => {
   const { t } = useLocale();

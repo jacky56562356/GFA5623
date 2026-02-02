@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
-import { useLocale } from '../App.tsx';
-import { PARTNERS_DATA } from '../data.ts';
+import { useLocale } from '../App';
+import { PARTNERS_DATA } from '../data';
 
 const Partners: React.FC = () => {
   const { t } = useLocale();

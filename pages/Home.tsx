@@ -23,16 +23,16 @@ const Home: React.FC = () => {
         <div className="max-w-7xl text-center z-10 animate-fade-up">
           <div className="inline-flex items-center gap-4 border border-gfa-gold/20 bg-gfa-gold/5 px-8 py-2.5 mb-12 rounded-full backdrop-blur-sm">
             <span className="flex h-2 w-2 rounded-full bg-gfa-gold animate-pulse"></span>
-            <span className="text-gfa-gold text-[9px] tracking-[0.5em] uppercase font-black">
+            <span className="text-gfa-gold text-[8px] tracking-[0.5em] uppercase font-black">
               Independent Global Standards • Est. 2024
             </span>
           </div>
           
-          <h1 className="text-6xl md:text-[8rem] font-black mb-10 gold-gradient tracking-tighter uppercase leading-[0.8] filter drop-shadow-2xl">
+          <h1 className="text-5xl md:text-[5.5rem] font-black mb-10 gold-gradient tracking-tighter uppercase leading-[0.9] filter drop-shadow-2xl">
             {t.home.hero.title}
           </h1>
           
-          <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-12 text-white/80 font-light tracking-[0.6em] uppercase text-xs md:text-lg">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-12 text-white/80 font-light tracking-[0.6em] uppercase text-xs md:text-sm">
             <span>Certification</span>
             <span className="hidden md:inline text-gfa-gold/40">/</span>
             <span>Governance</span>
@@ -40,7 +40,7 @@ const Home: React.FC = () => {
             <span>Talent Protection</span>
           </div>
 
-          <p className="text-gfa-gray text-lg md:text-xl mb-16 max-w-4xl mx-auto leading-relaxed font-medium opacity-90 px-4">
+          <p className="text-gfa-gray text-lg md:text-xl mb-16 max-w-3xl mx-auto leading-relaxed font-medium opacity-90 px-4">
             {t.home.hero.body}
           </p>
 
