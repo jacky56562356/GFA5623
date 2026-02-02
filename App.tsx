@@ -1,29 +1,29 @@
 
 import React, { useState, createContext, useContext, useEffect } from 'react';
 import { HashRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
-import { Locale } from './types';
-import { DICTIONARIES } from './i18n';
+import { Locale } from './types.ts';
+import { DICTIONARIES } from './i18n.ts';
 
 // Pages
-import Home from './pages/Home';
-import About from './pages/About';
-import CertificationPage from './pages/Certification';
-import Verify from './pages/Verify';
-import Support from './pages/Support';
-import Casting from './pages/Casting';
-import Membership from './pages/Membership';
-import Partners from './pages/Partners';
-import Events from './pages/Events';
-import Contact from './pages/Contact';
-import PolicyPage from './pages/PolicyPage';
+import Home from './pages/Home.tsx';
+import About from './pages/About.tsx';
+import CertificationPage from './pages/Certification.tsx';
+import Verify from './pages/Verify.tsx';
+import Support from './pages/Support.tsx';
+import Casting from './pages/Casting.tsx';
+import Membership from './pages/Membership.tsx';
+import Partners from './pages/Partners.tsx';
+import Events from './pages/Events.tsx';
+import Contact from './pages/Contact.tsx';
+import PolicyPage from './pages/PolicyPage.tsx';
 
-// New Governance Pages
-import Governance from './pages/Governance';
-import Standards from './pages/Standards';
-import Transparency from './pages/Transparency';
-import Protection from './pages/Protection';
-import Directory from './pages/Directory';
-import Reporting from './pages/Reporting';
+// Governance Pages
+import Governance from './pages/Governance.tsx';
+import Standards from './pages/Standards.tsx';
+import Transparency from './pages/Transparency.tsx';
+import Protection from './pages/Protection.tsx';
+import Directory from './pages/Directory.tsx';
+import Reporting from './pages/Reporting.tsx';
 
 const LanguageContext = createContext({
   locale: Locale.EN,
