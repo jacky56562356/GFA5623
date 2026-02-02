@@ -36,12 +36,11 @@ export const useLocale = () => useContext(LanguageContext);
 const Navbar = () => {
   const { locale, setLocale, t } = useLocale();
   const [isOpen, setIsOpen] = useState(false);
-  const [isGovOpen, setIsGovOpen] = useState(false);
+  const [isCertOpen, setIsCertOpen] = useState(false);
   const { pathname } = useLocation();
 
   const links = [
     { path: '/about', label: t.nav.about },
-    { path: '/certification', label: t.nav.certification },
     { path: '/support', label: t.nav.support },
     { path: '/casting', label: t.nav.casting },
     { path: '/membership', label: t.nav.membership },
@@ -49,11 +48,13 @@ const Navbar = () => {
     { path: '/events', label: t.nav.events },
   ];
 
-  const govLinks = [
-    { path: '/governance', label: 'Governance' },
-    { path: '/standards', label: 'Standards' },
-    { path: '/transparency', label: 'Transparency' },
-    { path: '/protection', label: 'Protection' },
+  const certGovLinks = [
+    { path: '/certification', label: 'Overview' },
+    { path: '/verify', label: 'Verify Certificate' },
+    { path: '/governance', label: 'Governance & Principles' },
+    { path: '/standards', label: 'Authorization Standards' },
+    { path: '/transparency', label: 'Pricing Transparency' },
+    { path: '/protection', label: 'Youth Protection' },
     { path: '/directory', label: 'Authorized Directory' },
     { path: '/reporting', label: 'Report Misconduct' },
   ];
@@ -83,18 +84,17 @@ const Navbar = () => {
           </Link>
 
           <div className="hidden lg:flex items-center space-x-5">
-            {links.map(l => (
-              <Link key={l.path} to={l.path} className={`text-[10px] font-bold uppercase tracking-widest transition-colors hover:text-gfa-gold ${pathname === l.path ? 'text-gfa-gold' : 'text-gfa-gray'}`}>
-                {l.label}
-              </Link>
-            ))}
-            <div className="relative group" onMouseEnter={() => setIsGovOpen(true)} onMouseLeave={() => setIsGovOpen(false)}>
-              <button className="text-[10px] font-bold uppercase tracking-widest text-gfa-gray hover:text-gfa-gold flex items-center gap-1">
-                Governance <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            <Link to="/about" className={`text-[10px] font-bold uppercase tracking-widest transition-colors hover:text-gfa-gold ${pathname === '/about' ? 'text-gfa-gold' : 'text-gfa-gray'}`}>
+              {t.nav.about}
+            </Link>
+            
+            <div className="relative group" onMouseEnter={() => setIsCertOpen(true)} onMouseLeave={() => setIsCertOpen(false)}>
+              <button className={`text-[10px] font-bold uppercase tracking-widest flex items-center gap-1 transition-colors ${certGovLinks.some(l => pathname === l.path) ? 'text-gfa-gold' : 'text-gfa-gray hover:text-gfa-gold'}`}>
+                {t.nav.certification} <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
               </button>
-              {isGovOpen && (
-                <div className="absolute top-full left-0 bg-gfa-darkGray border border-gfa-gold/20 py-4 w-56 shadow-2xl animate-fade-in">
-                  {govLinks.map(gl => (
+              {isCertOpen && (
+                <div className="absolute top-full left-0 bg-gfa-darkGray border border-gfa-gold/20 py-4 w-64 shadow-2xl animate-fade-in">
+                  {certGovLinks.map(gl => (
                     <Link key={gl.path} to={gl.path} className="block px-6 py-2 text-[10px] font-bold uppercase tracking-widest text-gfa-gray hover:text-gfa-gold hover:bg-white/5 transition-colors">
                       {gl.label}
                     </Link>
@@ -102,6 +102,12 @@ const Navbar = () => {
                 </div>
               )}
             </div>
+
+            {links.slice(1).map(l => (
+              <Link key={l.path} to={l.path} className={`text-[10px] font-bold uppercase tracking-widest transition-colors hover:text-gfa-gold ${pathname === l.path ? 'text-gfa-gold' : 'text-gfa-gray'}`}>
+                {l.label}
+              </Link>
+            ))}
           </div>
 
           <div className="flex items-center space-x-4">
@@ -120,21 +126,24 @@ const Navbar = () => {
       </div>
       {isOpen && (
         <div className="lg:hidden bg-gfa-black border-b border-gfa-gold/20 pb-6 max-h-[80vh] overflow-y-auto">
-          {links.map(l => (
-            <Link key={l.path} to={l.path} className="block px-8 py-4 text-xs font-bold uppercase tracking-widest text-gfa-gray border-b border-white/5" onClick={() => setIsOpen(false)}>
-              {l.label}
-            </Link>
-          ))}
-          <div className="px-8 py-4 bg-gfa-darkGray/50">
-            <div className="text-[10px] text-gfa-gold font-black uppercase tracking-widest mb-4">Governance</div>
+          <Link to="/about" className="block px-8 py-4 text-xs font-bold uppercase tracking-widest text-gfa-gray border-b border-white/5" onClick={() => setIsOpen(false)}>
+            {t.nav.about}
+          </Link>
+          <div className="px-8 py-4 bg-gfa-darkGray/50 border-b border-white/5">
+            <div className="text-[10px] text-gfa-gold font-black uppercase tracking-widest mb-4">{t.nav.certification}</div>
             <div className="grid grid-cols-1 gap-4">
-              {govLinks.map(gl => (
+              {certGovLinks.map(gl => (
                 <Link key={gl.path} to={gl.path} className="text-[10px] font-bold uppercase tracking-widest text-gfa-gray" onClick={() => setIsOpen(false)}>
                   {gl.label}
                 </Link>
               ))}
             </div>
           </div>
+          {links.slice(1).map(l => (
+            <Link key={l.path} to={l.path} className="block px-8 py-4 text-xs font-bold uppercase tracking-widest text-gfa-gray border-b border-white/5" onClick={() => setIsOpen(false)}>
+              {l.label}
+            </Link>
+          ))}
         </div>
       )}
     </nav>

@@ -1,6 +1,5 @@
 
-
-import React, { useState } from 'react';
+import React from 'react';
 import SectionHeading from '../components/ui/SectionHeading';
 import { useLocale } from '../App';
 import { Link } from 'react-router-dom';
@@ -17,6 +16,13 @@ const CertificationPage: React.FC = () => {
     'Project Verified'
   ];
 
+  const govStandards = [
+    { title: 'Governance Principles', path: '/governance', icon: '⚖️' },
+    { title: 'Auth Standards', path: '/standards', icon: '📋' },
+    { title: 'Pricing Transparency', path: '/transparency', icon: '💰' },
+    { title: 'Youth Protection', path: '/protection', icon: '🛡️' }
+  ];
+
   return (
     <div className="py-32 max-w-7xl mx-auto px-4">
       <SectionHeading 
@@ -29,7 +35,7 @@ const CertificationPage: React.FC = () => {
           <h3 className="text-2xl font-black mb-8 uppercase tracking-widest border-l-4 border-gfa-gold pl-6">
             {t.certification.typesTitle}
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-16">
             {certTypes.map((type, i) => (
               <div key={i} className="bg-gfa-darkGray p-6 border border-white/5 flex items-center justify-between group hover:border-gfa-gold/50 transition-all">
                 <span className="text-sm font-bold uppercase tracking-wider text-white">{type}</span>
@@ -37,8 +43,20 @@ const CertificationPage: React.FC = () => {
               </div>
             ))}
           </div>
+
+          <h3 className="text-2xl font-black mb-8 uppercase tracking-widest border-l-4 border-gfa-gold pl-6">
+            Governance Standards
+          </h3>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-16">
+            {govStandards.map((std, i) => (
+              <Link key={i} to={std.path} className="bg-gfa-darkGray p-6 border border-white/5 text-center group hover:border-gfa-gold transition-all">
+                <div className="text-3xl mb-4 grayscale group-hover:grayscale-0 transition-all">{std.icon}</div>
+                <div className="text-[10px] font-black uppercase tracking-widest text-white">{std.title}</div>
+              </Link>
+            ))}
+          </div>
           
-          <div className="mt-16 bg-gfa-gold/10 p-10 border border-gfa-gold/30">
+          <div className="bg-gfa-gold/10 p-10 border border-gfa-gold/30">
             <h4 className="text-xl font-black mb-6 uppercase tracking-widest text-white">The Value of GFA Certification</h4>
             <ul className="space-y-4">
               {[
@@ -58,7 +76,6 @@ const CertificationPage: React.FC = () => {
         <div className="bg-gfa-darkGray p-10 border border-gfa-gold flex flex-col items-center justify-center text-center shadow-2xl relative overflow-hidden">
           <div className="absolute top-0 right-0 w-24 h-24 bg-gfa-gold/20 -mr-12 -mt-12 rotate-45"></div>
           <div className="text-6xl mb-8">🛡️</div>
-          {/* Fix: Property 'verifyCta' does not exist on type certification, use verifyCardTitle instead */}
           <h3 className="text-2xl font-black mb-6 uppercase tracking-tight">{t.certification.verifyCardTitle}</h3>
           <p className="text-gfa-gray text-sm mb-10 leading-relaxed">
             Protect your production by verifying credentials through our real-time global database.
@@ -80,7 +97,6 @@ const CertificationPage: React.FC = () => {
                 {i + 1}
               </div>
               <span className="text-[10px] font-black uppercase tracking-widest text-white leading-tight px-2">{step}</span>
-              {i < 6 && <div className="hidden lg:block absolute left-[calc(14.2%*(i+1))] top-1/2 w-4 h-[1px] bg-gfa-gold/30"></div>}
             </div>
           ))}
         </div>
