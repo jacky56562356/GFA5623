@@ -1,3 +1,4 @@
+
 export enum Locale {
   EN = 'en',
   ZH = 'zh',
@@ -117,6 +118,126 @@ export interface Translation {
     outcomesTitle: string;
     outcomes: string[];
   };
+  // Added missing top-level keys required by i18n dictionaries and components
+  about: {
+    title: string;
+    missionTitle: string;
+    missionBody: string;
+    visionTitle: string;
+    visionBody: string;
+    whatTitle: string;
+    whatBullets: string[];
+    transparencyTitle: string;
+    transparencyBody: string;
+  };
+  certification: {
+    title: string;
+    subtitle: string;
+    typesTitle: string;
+    types: string[];
+    processTitle: string;
+    processBody: string;
+    valueTitle: string;
+    valueBullets: string[];
+    cta: string;
+    verifyCardTitle: string;
+    verifyCardBody: string;
+  };
+  verify: {
+    title: string;
+    body: string;
+    form: { label: string; placeholder: string; button: string };
+    result: { valid: string; expired: string; suspended: string; notFound: string };
+    note: string;
+  };
+  support: {
+    title: string;
+    subtitle: string;
+    intro: string;
+    programsTitle: string;
+    p1Title: string;
+    p1Bullets: string[];
+    p2Title: string;
+    p2Bullets: string[];
+    p3Title: string;
+    p3Bullets: string[];
+    howTitle: string;
+    howBody: string;
+    transparencyTitle: string;
+    transparencyBody: string;
+    cta: string;
+  };
+  casting: {
+    title: string;
+    intro: string;
+    featuresTitle: string;
+    features: string[];
+    ctaBrowse: string;
+    ctaPost: string;
+    note: string;
+  };
+  membership: {
+    title: string;
+    intro: string;
+    tiersTitle: string;
+    talentTitle: string;
+    orgTitle: string;
+    talentTiers: string[];
+    orgTiers: string[];
+    benefitsTitle: string;
+    benefits: string[];
+    cta: string;
+    disclaimer: string;
+  };
+  partners: {
+    title: string;
+    intro: string;
+    filtersTitle: string;
+    filterLocation: string;
+    filterCategory: string;
+    filterMembership: string;
+    sortTitle: string;
+    sortNearest: string;
+    sortNewest: string;
+    sortPopular: string;
+    card: { benefit: string; eligibility: string; address: string };
+    cta: string;
+    formTitle: string;
+    form: {
+      businessName: string;
+      businessType: string;
+      country: string;
+      state: string;
+      city: string;
+      offer: string;
+      contactName: string;
+      contactEmail: string;
+      consent: string;
+      submit: string;
+    };
+  };
+  events: {
+    title: string;
+    intro: string;
+    sections: { competitions: string; screenings: string; workshops: string };
+    cta: string;
+    note: string;
+  };
+  contact: {
+    title: string;
+    intro: string;
+    formsTitle: string;
+    f1Title: string;
+    f2Title: string;
+    f3Title: string;
+    form: { name: string; email: string; location: string; message: string; consent: string; submit: string };
+  };
+  policies: {
+    privacy: PolicySection;
+    terms: PolicySection;
+    parental: PolicySection;
+    content: PolicySection;
+  };
   footer: {
     verification: string;
     privacy: string;
@@ -126,6 +247,12 @@ export interface Translation {
     copyright: string;
   };
   language: { en: string; zh: string; es: string; fr: string; it: string };
+}
+
+export interface PolicySection {
+  title: string;
+  summary: string;
+  sections: Record<string, string>;
 }
 
 export interface Certification { id: string; type: string; title: string; description: string; }

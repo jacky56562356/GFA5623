@@ -1,3 +1,4 @@
+
 import { Locale, Translation } from './types';
 
 const EN_JSON: Translation = {
@@ -131,7 +132,6 @@ const EN_JSON: Translation = {
       "sub1Items": ["Pre-participation Consent", "Payment Approval Flow", "Media Release Approval", "Access to Schedules"],
       "sub2": "On-site Safety",
       "sub2Items": ["Published Venue Info", "Emergency Protocols", "Adult Supervision Policy", "No Private 1-on-1s"],
-      // Fixed: Added missing 'sub3' property for standard Cat B
       "sub3": "Note",
       "sub3Body": "Immediate suspension for: Harassment, grooming behavior, pressure selling, or coercive contracts."
     },
@@ -381,6 +381,45 @@ const EN_JSON: Translation = {
       "submit": "Transmit"
     }
   },
+  // Added policies object to satisfy the Translation interface and support PolicyPage component
+  "policies": {
+    "privacy": {
+      "title": "Privacy Charter",
+      "summary": "Our commitment to protecting your personal and professional data within the global film ecosystem.",
+      "sections": {
+        "Data Collection": "We only collect data necessary for identity verification and talent protection.",
+        "Security": "Industry-standard encryption is applied to all sensitive information.",
+        "Third Parties": "Your data is never sold. It is only shared with authorized partners upon your explicit consent."
+      }
+    },
+    "terms": {
+      "title": "Terms of Authority",
+      "summary": "The legal framework governing participation in the GFA ecosystem.",
+      "sections": {
+        "Authorization": "Organizations must maintain active authorization to use GFA branding.",
+        "Compliance": "All members agree to periodic standards audits.",
+        "Revocation": "GFA reserves the right to revoke certification for misconduct or policy violations."
+      }
+    },
+    "parental": {
+      "title": "Guardian Consent Framework",
+      "summary": "Special protections and control mechanisms for minors in the film industry.",
+      "sections": {
+        "Consent": "Direct guardian approval is required for all minor participation.",
+        "Communication": "All platform messaging involves oversight possibilities for parents.",
+        "On-set Safety": "Mandatory supervision protocols for all GFA-authorized productions."
+      }
+    },
+    "content": {
+      "title": "Ethics & Content Policy",
+      "summary": "Standards for professional conduct and content representation.",
+      "sections": {
+        "Integrity": "Honest representation in all talent profiles and project submissions.",
+        "Safety": "Prohibition of harmful or exploitative content involving minors.",
+        "Professionalism": "A commitment to respectful and safe production environments."
+      }
+    }
+  },
   "footer": {
     "verification": "Registry Search",
     "privacy": "Privacy Charter",
@@ -469,7 +508,6 @@ const ZH_JSON: Translation = {
       "sub1Items": ["参与前知情同意", "付款审核流程", "肖像发布批准", "日程访问权限"],
       "sub2": "现场安全",
       "sub2Items": ["公开场馆信息", "紧急处理预案", "成人监督政策", "禁止私人单独接触"],
-      // Fixed: Added missing 'sub3' property for standard Cat B
       "sub3": "注意事项",
       "sub3Body": "出现以下情况立即停职：骚扰、引诱行为、强迫推销或胁迫性合同。"
     },
@@ -547,6 +585,44 @@ const ZH_JSON: Translation = {
     "parental": "监护人同意",
     "content": "伦理政策",
     "copyright": "© {year} GFA 全球电影联盟 • 非营利治理机构。"
+  },
+  "policies": {
+    "privacy": {
+      "title": "隐私章程",
+      "summary": "我们致力于保护您在全球电影生态系统中的个人和专业数据。",
+      "sections": {
+        "数据收集": "我们仅收集身份验证和人才保护所必需的数据。",
+        "安全保障": "所有敏感信息均采用行业标准加密处理。",
+        "第三方共享": "您的数据绝不外售。仅在获得您明确同意的情况下，才会与授权合作伙伴共享。"
+      }
+    },
+    "terms": {
+      "title": "授权条款",
+      "summary": "管理参与 GFA 生态系统的法律框架。",
+      "sections": {
+        "授权资格": "机构必须保持有效的授权状态才能使用 GFA 品牌。",
+        "合规审计": "所有成员均同意接受定期的标准审计。",
+        "撤回授权": "GFA 保留因行为不当或违反政策而撤销认证的权利。"
+      }
+    },
+    "parental": {
+      "title": "监护人同意框架",
+      "summary": "电影行业针对未成年人的特殊保护和控制机制。",
+      "sections": {
+        "知情同意": "所有未成年人参与活动均需获得监护人的直接批准。",
+        "通信监管": "平台内的所有消息传递均包含家长监督的可能性。",
+        "现场安全": "所有经 GFA 授权的制作活动均需执行强制性的监督协议。"
+      }
+    },
+    "content": {
+      "title": "伦理与内容政策",
+      "summary": "职业操守和内容呈现的标准。",
+      "sections": {
+        "诚实信用": "在所有人才档案和项目提交中如实陈述。",
+        "安全底线": "严禁涉及未成年人的有害或剥削性内容。",
+        "专业化": "承诺建立尊重且安全的制作环境。"
+      }
+    }
   }
 };
 
@@ -588,7 +664,7 @@ const IT_JSON: Translation = {
   "nav": {
     "home": "Home", "about": "Autorità", "certification": "Certificazione e Governance",
     "certGov": {
-      "overview": "Panoramica", "verify": "Verifica Certificato", "governance": "Governance e Principi",
+      "overview": "Panoramica", "verify": "Verifica Certificato", "governance": "Governance e Principios",
       "standards": "Standard di Autorizzazione", "transparency": "Trasparenza dei Prezzi",
       "protection": "Protezione dei Giovani", "directory": "Elenco Autorizzato", "reporting": "Segnala Inconduzione"
     },
