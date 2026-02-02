@@ -165,15 +165,47 @@ const EN_JSON: Translation = {
     "enforcementItems": ["Official Warning", "Suspension", "Certificate Freeze", "Revocation", "Public Removal"]
   },
   "protection": {
-    "title": "Youth Protection & Guardian Controls",
-    "subtitle": "Independent safeguards designed to protect young talent within the film industry.",
-    "modelTitle": "Guardian-First Model",
-    "modelBody": "For minors, the platform is structured around parental authority. No action can be taken without guardian oversight.",
-    "modelItems": ["Parents control accounts", "Parents approve participation", "Parents approve payments", "Parents approve media release"],
+    "title": "Youth Protection Charter & Global Standards",
+    "subtitle": "Independent safeguards and institutional oversight designed to ensure the absolute safety of young talent in the global film ecosystem.",
+    "modelTitle": "The Guardian-Centric Model",
+    "modelBody": "GFA governance is built upon the principle that minors do not operate independently. All platform features for talent under 18 are filtered through a mandatory Guardian Dashboard.",
+    "modelItems": [
+      "Guardian-controlled identity verification",
+      "Pre-authorization for all audition invitations",
+      "Unified payment flow with parental override",
+      "Encrypted messaging with guardian 'cc' protocol"
+    ],
     "safeguards": [
-      { "title": "Audition Safety", "items": ["Platform-managed communication", "No private direct contact", "Scheduled locations disclosed", "System-only self-tape uploads", "Digital audit trail"] },
-      { "title": "Training Safety", "items": ["Verified instructors only", "No private unsupervised sessions", "Transparent curriculum", "Formal complaint mechanism"] },
-      { "title": "Media Protection", "items": ["Tiered visibility controls", "Guardian consent required", "Immediate withdrawal right", "Encrypted storage"] }
+      { 
+        "title": "Verified Audition Protocol", 
+        "items": [
+          "Mandatory GFA Authorization for casting entities",
+          "Verified physical venue disclosure for call-backs",
+          "Platform-only self-tape submission (no direct file sharing)",
+          "Audit trail for all digital communications",
+          "Prohibition of private one-on-one sessions"
+        ] 
+      },
+      { 
+        "title": "Training & Campus Security", 
+        "items": [
+          "Instructor criminal background check validation",
+          "Publicly listed curriculum with educational outcomes",
+          "No forced commercial 'up-selling' to students",
+          "Instant reporting tool for on-campus misconduct",
+          "Open-door observation policy for guardians"
+        ] 
+      },
+      { 
+        "title": "Digital Privacy & Rights", 
+        "items": [
+          "Guardian-managed media release permissions",
+          "The 'Right to be Forgotten' (Portfolio deletion)",
+          "AES-256 encryption for minor talent data",
+          "Restricted visibility (No public search for minors)",
+          "Compliance with COPPA and GDPR-K regulations"
+        ] 
+      }
     ]
   },
   "directory": {
@@ -362,7 +394,7 @@ const EN_JSON: Translation = {
       "workshops": "Governance Training"
     },
     "cta": "Register for Event",
-    "note": "GFA does not endorse independent events operating without a valid Authorization ID."
+    "note": "GFA does not endorsement independent events operating without a valid Authorization ID."
   },
   "contact": {
     "title": "Contact the Alliance",
@@ -451,7 +483,7 @@ const ZH_JSON: Translation = {
       "governance": "治理原则",
       "standards": "授权标准",
       "transparency": "价格透明度",
-      "protection": "青少年保护",
+      "protection": "青少年保护宪章",
       "directory": "授权名录",
       "reporting": "报告违规"
     },
@@ -540,15 +572,47 @@ const ZH_JSON: Translation = {
     "enforcementItems": ["官方警告", "暂停资格", "证书冻结", "撤回授权", "公开除名"]
   },
   "protection": {
-    "title": "青少年保护与监护人控制",
-    "subtitle": "旨在保护影视行业年轻人才的独立保障措施。",
-    "modelTitle": "监护人优先模型",
-    "modelBody": "对于未成年人，平台完全围绕监护人权限构建。未经监护人监督，不得采取任何行动。",
-    "modelItems": ["家长控制账号", "家长批准参与", "家长批准付款", "家长批准肖像发布"],
+    "title": "青少年保护宪章与全球标准",
+    "subtitle": "通过独立的制度化保障措施和严密的监护人控制，确保年轻人才在全球影视生态中的绝对安全。",
+    "modelTitle": "“监护人优先”治理模型",
+    "modelBody": "GFA 的治理逻辑基于一个核心原则：未成年人不得在没有监管的情况下独立活动。18岁以下人才的所有平台功能都必须通过“监护人控制台”进行过滤。",
+    "modelItems": [
+      "由监护人控制的身份实名验证",
+      "所有试镜邀请必须经监护人预授权",
+      "监护人掌握最终否决权的统一付款流",
+      "包含监护人抄送协议的加密通信系统"
+    ],
     "safeguards": [
-      { "title": "试镜安全", "items": ["平台管理通信", "禁止私下直接联系", "公开日程地点", "系统限定样带上传", "数字审计追踪"] },
-      { "title": "培训安全", "items": ["仅限经认证的导师", "禁止私人无监督课时", "透明化的课程大纲", "正式投诉机制"] },
-      { "title": "媒体保护", "items": ["分级可见性控制", "强制监护人同意", "立即撤回权限", "加密存储"] }
+      { 
+        "title": "试镜流程安全协议", 
+        "items": [
+          "选角机构必须持有有效的 GFA 授权证书",
+          "复试阶段必须强制公开物理办公场地的实景信息",
+          "仅允许通过平台提交自荐样带（禁止私下文件传输）",
+          "所有数字通信均保留可追溯的审计日志",
+          "严禁任何形式的私人“一对一”封闭式会面"
+        ] 
+      },
+      { 
+        "title": "培训与教学环境安全", 
+        "items": [
+          "导师必须通过无犯罪记录背景调查验证",
+          "强制要求公示教学大纲及预期的教育产出",
+          "严禁向学生强制推销额外的商业增值产品",
+          "内置针对校园不当行为的“一键直达”举报工具",
+          "实行针对监护人的开放式教学观察政策"
+        ] 
+      },
+      { 
+        "title": "数字隐私与肖像权保护", 
+        "items": [
+          "监护人拥有肖像发布权的动态开关控制",
+          "受保护的“被遗忘权”（一键注销并清除作品集）",
+          "采用 AES-256 标准加密存储未成年人才数据",
+          "受限可见性协议（未成年人才不参与公开搜索索引）",
+          "严格遵守 COPPA（美国）及 GDPR-K（欧盟）跨境合规标准"
+        ] 
+      }
     ]
   },
   "directory": {
@@ -583,44 +647,6 @@ const ZH_JSON: Translation = {
     "parental": "监护人同意",
     "content": "伦理政策",
     "copyright": "© {year} GFA 全球电影联盟 • 非营利治理机构。"
-  },
-  "policies": {
-    "privacy": {
-      "title": "隐私章程",
-      "summary": "我们致力于保护您在全球电影生态系统中的个人和专业数据。",
-      "sections": {
-        "数据收集": "我们仅收集身份验证和人才保护所必需的数据。",
-        "安全保障": "所有敏感信息均采用行业标准加密处理。",
-        "第三方共享": "您的数据绝不外售。仅在获得您明确同意的情况下，才会与授权合作伙伴共享。"
-      }
-    },
-    "terms": {
-      "title": "授权条款",
-      "summary": "管理参与 GFA 生态系统的法律框架。",
-      "sections": {
-        "授权资格": "机构必须保持有效的授权状态才能使用 GFA 品牌。",
-        "合规审计": "所有成员均同意接受定期的标准审计。",
-        "撤回授权": "GFA 保留因行为不当或违反政策而撤销认证的权利。"
-      }
-    },
-    "parental": {
-      "title": "监护人同意框架",
-      "summary": "电影行业针对未成年人的特殊保护和控制机制。",
-      "sections": {
-        "知情同意": "所有未成年人参与活动均需获得监护人的直接批准。",
-        "通信监管": "平台内的所有消息传递均包含家长监督的可能性。",
-        "现场安全": "所有经 GFA 授权的制作活动均需执行强制性的监督协议。"
-      }
-    },
-    "content": {
-      "title": "伦理与内容政策",
-      "summary": "职业操守和内容呈现的标准。",
-      "sections": {
-        "诚实信用": "在所有人才档案和项目提交中如实陈述。",
-        "安全底线": "严禁涉及未成年人的有害或剥削性内容。",
-        "专业化": "承诺建立尊重且安全的制作环境。"
-      }
-    }
   }
 };
 
