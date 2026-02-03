@@ -8,9 +8,22 @@ const CertificationPage: React.FC = () => {
   const { t } = useLocale();
 
   const tiers = [
-    { name: t.locale === 'zh' ? 'Verified (基础认证)' : 'Verified (Baseline)', desc: t.locale === 'zh' ? '材料审核 + 合规核验通过' : 'Identity vetting + compliance check.' },
-    { name: t.locale === 'zh' ? 'Certified (标准认证)' : 'Certified (Standard)', desc: t.locale === 'zh' ? '深度访谈 + 流程合规审计' : 'Interviews + workflow audit.', highlight: true },
-    { name: t.locale === 'zh' ? 'Accredited (高级认证)' : 'Accredited (Premium)', desc: t.locale === 'zh' ? '现场审计 + 风险评级 + 年度复审' : 'On-site audit + annual review.' },
+    { 
+      name: t.locale === 'zh' ? 'Verified (基础认证)' : 'Verified (Baseline)', 
+      desc: t.locale === 'zh' ? '材料审核 + 合规核验通过。适用于个人人才及初级项目。' : 'Identity vetting + baseline compliance check. For individuals and entry projects.',
+      status: 'Open'
+    },
+    { 
+      name: t.locale === 'zh' ? 'Certified (标准认证)' : 'Certified (Standard)', 
+      desc: t.locale === 'zh' ? '深度访谈 + 流程合规审计。适用于经纪公司与培训中心。' : 'Interviews + standard workflow audit. For agencies and training centers.', 
+      highlight: true,
+      status: 'Open'
+    },
+    { 
+      name: t.locale === 'zh' ? 'Accredited (高级认证)' : 'Accredited (Premium)', 
+      desc: t.locale === 'zh' ? '现场审计 + 风险评级 + 年度复审。适用于制片厂与大型赛事。' : 'On-site audit + risk rating + annual review. For studios and festivals.',
+      status: 'Invited'
+    },
   ];
 
   return (
@@ -71,13 +84,16 @@ const CertificationPage: React.FC = () => {
 
           {/* TIERS */}
           <h3 className="text-2xl font-black mb-8 uppercase tracking-widest border-l-4 border-gfa-gold pl-6">
-            {t.locale === 'zh' ? '认证等级' : 'Certification Tiers'}
+            {t.locale === 'zh' ? '认证等级 (Tiers)' : 'Certification Tiers'}
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
             {tiers.map((tier, i) => (
-              <div key={i} className={`p-8 border ${tier.highlight ? 'border-gfa-gold bg-gfa-gold/5' : 'border-white/5 bg-gfa-darkGray'} transition-all`}>
-                <h4 className="text-xs font-black uppercase tracking-widest text-white mb-4">{tier.name}</h4>
-                <p className="text-[10px] text-gfa-gray uppercase font-bold tracking-widest">{tier.desc}</p>
+              <div key={i} className={`p-8 border ${tier.highlight ? 'border-gfa-gold bg-gfa-gold/5' : 'border-white/5 bg-gfa-darkGray'} transition-all relative group overflow-hidden`}>
+                <div className="flex justify-between items-start mb-4">
+                   <h4 className="text-xs font-black uppercase tracking-widest text-white">{tier.name}</h4>
+                   <span className="text-[8px] font-black uppercase tracking-widest text-gfa-gold opacity-50">{tier.status}</span>
+                </div>
+                <p className="text-[10px] text-gfa-gray uppercase font-bold tracking-widest leading-relaxed">{tier.desc}</p>
               </div>
             ))}
           </div>
@@ -100,16 +116,16 @@ const CertificationPage: React.FC = () => {
         <h3 className="text-3xl font-black text-center mb-20 uppercase tracking-[0.2em]">{t.certification.processTitle}</h3>
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 text-center">
           {t.certification.steps.map((step, i) => (
-            <div key={i} className="flex flex-col items-center">
-              <div className="w-10 h-10 rounded-full border border-gfa-gold text-gfa-gold flex items-center justify-center font-bold text-xs mb-4">
+            <div key={i} className="flex flex-col items-center group">
+              <div className="w-12 h-12 rounded-full border border-gfa-gold/30 text-gfa-gold flex items-center justify-center font-black text-xs mb-4 group-hover:bg-gfa-gold group-hover:text-gfa-black transition-all">
                 {i + 1}
               </div>
-              <span className="text-[10px] font-black uppercase tracking-widest text-white leading-tight px-2">{step}</span>
+              <span className="text-[9px] font-black uppercase tracking-widest text-white leading-tight px-2">{step}</span>
             </div>
           ))}
         </div>
         <div className="mt-24 text-center">
-          <button className="bg-gfa-gold text-gfa-black px-12 py-5 font-black uppercase text-xs tracking-widest hover:bg-white transition-all">
+          <button className="bg-gfa-gold text-gfa-black px-16 py-6 font-black uppercase text-xs tracking-widest hover:bg-white transition-all shadow-[0_0_40px_rgba(212,175,55,0.2)]">
             {t.certification.cta}
           </button>
         </div>

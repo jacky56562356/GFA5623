@@ -79,7 +79,6 @@ const EN_JSON: Translation = {
       "p3Body": "Connecting verified talent to productions and agencies to parents.",
       "p4Title": "Global Governance",
       "p4Body": "Standardized pricing, whitepapers, and industry-wide data monitoring.",
-      // Fix: Added missing 5th pillar to EN dictionary to match updated Translation interface
       "p5Title": "Impact & Creative Support",
       "p5Body": "Support for independent film, graduate works, and the Golden Feather Awards.",
       "explore": "Explore Pillar"
@@ -124,19 +123,19 @@ const EN_JSON: Translation = {
       "Verified Talent Status"
     ],
     "govTitle": "Governance System",
-    "processTitle": "Audit Lifecycle",
-    "processBody": "Application → Verification → Standards Audit → Final Approval → ID Issuance → Public Registry",
+    "processTitle": "Audit SOP (Standard Operating Procedure)",
+    "processBody": "Application → Triage → Verification → Scoring → Approval → Registry",
     "valueTitle": "The Four Iron Rules",
     "valueBullets": [
-      "Absolute Transparency: Standards, fees, and expiry are public.",
-      "Protection First: Minor safety and guardian rights are mandatory.",
-      "Anti-Fraud: Zero-tolerance for hidden fees or deceptive promises.",
-      "Traceability: All certificates are verifiable and subject to review."
+      "Public Transparency: All standards, fees, and validity periods are fully disclosed.",
+      "Minor Protection: Mandatory compliance with youth safeguarding and guardian rights.",
+      "Anti-Fraud: Prohibition of hidden fees, bundled charges, or deceptive consumer practices.",
+      "Traceability: All authorized entities must be verifiable and subject to public review."
     ],
     "cta": "Apply for Authorization",
     "verifyCardTitle": "Public Registry",
     "verifyCardBody": "Validate the official GFA status of any audition, organization, or professional.",
-    "steps": ['Application', 'Identity Vetting', 'Project Proof', 'Fee Audit', 'Protection Check', 'Issuance', 'Annual Review']
+    "steps": ['Submit Application', 'Initial Compliance Check', 'Background Verification', 'Professional Scoring', 'Correction (If Needed)', 'Approval & Registry', 'Annual Review']
   },
   "governance": {
     "title": "Governance & Policy",
@@ -160,42 +159,42 @@ const EN_JSON: Translation = {
   },
   "standards": {
     "title": "Authorization Standards",
-    "subtitle": "Technical requirements for GFA recognition.",
+    "subtitle": "Detailed audit forms and technical criteria for GFA recognition.",
     "catA": {
       "title": "Certified Auditions",
-      "tag": "Official Seal",
-      "docsTitle": "Required Proof",
-      "docs": ["Authorized Project Letter", "Production Insurance", "Transparent Fee Schedule"],
-      "matrixTitle": "Authenticity Standards",
-      "matrixBody": "Auditions must be tied to specific, verified production needs. Rolling recruitment without projects is prohibited.",
-      "disqual": "Charging for 'promises of casting' results in permanent blacklisting."
+      "tag": "Audition SOP",
+      "docsTitle": "Audit Checklist",
+      "docs": ["Authorized Project Letter", "Physical Venue Safety Audit", "Fee Disclosure Statement", "Minor Protection Protocol"],
+      "matrixTitle": "Review SOP",
+      "matrixBody": "1. Phone verification of project leads. 2. Fee cap compliance check. 3. Mystery shopping audit of signup flow. 4. Guardian feedback sampling.",
+      "disqual": "Score ≥ 80 to pass. Fraudulent projects result in permanent blacklist."
     },
     "catB": {
       "title": "Certified Training Providers",
-      "tag": "Education Standard",
-      "sub1": "Faculty Quality",
-      "sub1Items": ["Verified Instructor Background", "Professional Portfolio Audit", "No Fake 'Hollywood' Branding"],
+      "tag": "Education SOP",
+      "sub1": "Faculty Audit",
+      "sub1Items": ["Resume Verifiability", "Professional Portfolio Review", "No False Celebrity Branding"],
       "sub2": "Contract Safety",
-      "sub2Items": ["Refund Policy Disclosure", "No Forced Upselling", "Guardian Access Rights"],
+      "sub2Items": ["Refund Policy Disclosure", "No Forced Equipment Sales", "Guardian Observer Access"],
       "sub3": "Instructional Integrity",
-      "sub3Body": "Programs must demonstrate measurable educational outcomes and transparent pricing."
+      "sub3Body": "Score ≥ 75 to pass. Requires curriculum audit and 3+ student guardian feedback samples."
     },
     "catC": {
       "title": "Certified Agencies & Agents",
-      "tag": "Agency Standard",
-      "discTitle": "Fair Contracting",
-      "discBody": "Commission caps (10-20%) and clear termination clauses are mandatory.",
-      "prohibTitle": "Exploitation Ban",
-      "prohibBody": "Prohibition of mandatory upfront 'registration fees' or bundled training requirements.",
-      "compliance": "Mandatory guardian CC protocol for all minor-talent communications."
+      "tag": "Agency SOP",
+      "discTitle": "Contract Audit",
+      "discBody": "Commission caps (max 20%) and fair termination clauses. No upfront 'sign-on' fees.",
+      "prohibTitle": "Risk Control",
+      "prohibBody": "Mandatory CC to guardians for minor talent. No private 1-on-1 sessions allowed.",
+      "compliance": "Legal review of 2+ active contracts required for approval."
     },
     "catD": {
       "title": "Certified Events & Competitions",
-      "tag": "Merit Standard",
-      "critTitle": "Jury & Process",
-      "critBody": "Juries must be disclosed and evaluation criteria must be public and consistent.",
-      "rejTitle": "Grounds for Rejection",
-      "rejBody": "Hidden 'promotion fees' or pay-to-win mechanics without independent review."
+      "tag": "Event SOP",
+      "critTitle": "Jury & Transparency",
+      "critBody": "Jury list and scoring rubrics must be public. No hidden 'progression fees' or 'pay-to-win' tiers.",
+      "rejTitle": "Financial Audit",
+      "rejBody": "Mandatory disclosure of all upsells (apparel, photography). Random receipt audit conducted."
     }
   },
   "transparency": {
@@ -547,7 +546,6 @@ const ZH_JSON: Translation = {
       "p4Title": "全球行业治理",
       "p4Body": "制定收费与流程标准，发布行业白皮书并实施数据监管。",
       "p5Title": "公益扶持与影响力",
-      // Fix: Corrected duplicate p1Body key to p5Body (lines 546-547 in the original file)
       "p5Body": "扶持独立电影与毕业生作品，设立“金羽奖”及奖学金。",
       "explore": "探索支柱模块"
     },
@@ -590,9 +588,9 @@ const ZH_JSON: Translation = {
       "认证制作单位 (Production)",
       "人才核验身份 (Talent ID)"
     ],
-    "govTitle": "治理体系总则",
-    "processTitle": "审计生命周期",
-    "processBody": "申请 → 材料核验 → 标准审计 → 最终批准 → 签发 ID → 名录公示",
+    "govTitle": "治理体系总则 (General Rules)",
+    "processTitle": "审计标准作业程序 (SOP)",
+    "processBody": "申请提交 → 合规初审 → 真实性核验 → 专业评估 → 批准认证",
     "valueTitle": "四大铁律 (The Iron Rules)",
     "valueBullets": [
       "公开透明：认证标准、流程、费用、有效期全部公开。",
@@ -602,14 +600,14 @@ const ZH_JSON: Translation = {
     ],
     "cta": "申请官方授权",
     "verifyCardTitle": "公共名录",
-    "verifyCardBody": "在 GFA 全球数据库中验证试镜、机构或专业人士的官方状态。",
-    "steps": ['提交申请', '身份审核', '项目真实性', '收费审计', '安全合规', '正式授权', '年度复审']
+    "verifyCardBody": "在 GFA 全球数据库中验证试镜项目、机构或专业人士的官方状态。",
+    "steps": ['提交申请', '合规初审', '真实性核验', '专业评估', '整改/补件', '批准认证', '年度复审']
   },
   "governance": {
     "title": "治理与政策",
     "subtitle": "机构公信力的基石。",
     "roleTitle": "作为治理机构的角色",
-    "roleBody": "GFA 作为一个独立的权威机构运营。我们制定收费上限，审计试镜流程，并发布行业白皮书，以监管和规范专业行为。",
+    "roleBody": "GFA 作为一个独立的权威机构运营。我们制定收费上限，审计试镜流程，bing发布行业白皮书，以监管和规范专业行为。",
     "roleTag1": "政策执行",
     "roleTag1Desc": "严格监管授权实体的费用清单。",
     "roleTag2": "数据监管",
@@ -627,42 +625,42 @@ const ZH_JSON: Translation = {
   },
   "standards": {
     "title": "行业授权标准",
-    "subtitle": "获得 GFA 官方认可的技术要求。",
+    "subtitle": "获得 GFA 官方认可的详细审计表与技术要求。",
     "catA": {
-      "title": "认证试镜标准",
-      "tag": "官方印记",
-      "docsTitle": "必要证明",
-      "docs": ["制作方授权函/立项证明", "片场保险证明", "透明的收费清单"],
-      "matrixTitle": "真实性标准",
-      "matrixBody": "试镜必须绑定具体的、经过核实的制作需求。禁止无项目支撑的“无限期滚动招募”。",
-      "disqual": "以“包进组/包出道”为名收取费用的行为将导致永久封禁。"
+      "title": "认证试镜标准 (Audition)",
+      "tag": "试镜 SOP",
+      "docsTitle": "审计核查项",
+      "docs": ["制作方授权函/立项证明", "物理场地安全审计", "费用全披露声明", "未成年人监护协议"],
+      "matrixTitle": "评审作业程序",
+      "matrixBody": "1. 项目负责人电话核实。2. 收费上限合规审查。3. 报名流程“暗访”测试。4. 随机家长回访抽查。",
+      "disqual": "评分 ≥ 80 方可通过。存在虚假项目将永久黑名单。"
     },
     "catB": {
-      "title": "认证培训机构标准",
-      "tag": "教育准则",
-      "sub1": "师资质量",
-      "sub1Items": ["教师履历真实性核验", "作品集审计", "禁止虚假“好莱坞”包装"],
+      "title": "认证培训机构标准 (Training)",
+      "tag": "教育 SOP",
+      "sub1": "师资审计",
+      "sub1Items": ["教师履历真实性核验", "专业作品集评审", "禁止虚假名师包装"],
       "sub2": "合同安全",
-      "sub2Items": ["退费政策完全披露", "禁止强制性加价销售", "监护人观察权"],
+      "sub2Items": ["退费政策完全披露", "禁止强制性器材推销", "监护人观察准入"],
       "sub3": "教学诚信",
-      "sub3Body": "项目必须展示可量化的教学成果及透明的学费结构。"
+      "sub3Body": "评分 ≥ 75 方可通过。需提交课程体系大纲并抽查 3 位以上学员反馈。"
     },
     "catC": {
-      "title": "认证经纪公司标准",
-      "tag": "经纪准则",
-      "discTitle": "公平合同",
-      "discBody": "必须执行佣金上限（10-20%）及清晰的解约条款。",
-      "prohibTitle": "禁止剥削",
-      "prohibBody": "严禁收取高额前端“注册费”或强制捆绑培训服务。",
-      "compliance": "针对未成年人才，必须执行强制性的监护人抄送协议。",
+      "title": "认证经纪公司标准 (Agency)",
+      "tag": "经纪 SOP",
+      "discTitle": "合同审计",
+      "discBody": "佣金上限（最高 20%）及公平解约条款。严禁收取前端“入场费”。",
+      "prohibTitle": "风险控制",
+      "prohibBody": "未成年人才通信强制抄送监护人。严禁私人一对一试镜。",
+      "compliance": "需提交至少 2 份真实结算记录用于合规性核查。"
     },
     "catD": {
-      "title": "认证赛事与放映标准",
-      "tag": "价值准则",
-      "critTitle": "评审与流程",
-      "critBody": "评委名单必须披露，评分机制必须公开且具备可复核性。",
-      "rejTitle": "拒绝理由",
-      "rejBody": "存在隐藏“晋级费”或无独立评审的“付费即赢”机制。"
+      "title": "认证赛事与放映标准 (Event)",
+      "tag": "赛事 SOP",
+      "critTitle": "评审透明度",
+      "critBody": "评委名单及评分细则必须公开。禁止“晋级加价”或“付费即赢”机制。",
+      "rejTitle": "财务审计",
+      "rejBody": "强制公示所有二阶收费（服装、摄影）。执行随机发票抽检。"
     }
   },
   "transparency": {
@@ -750,7 +748,7 @@ const ZH_JSON: Translation = {
   },
   "directory": {
     "title": "官方授权名录",
-    "subtitle": "只有通过 GFA 标准审计的项目 and 机构才允许列入此表。",
+    "subtitle": "只有通过 GFA 标准审计的项目和机构才允许列入此表。",
     "registryCount": "官方核实数量",
     "tableHeaders": ["机构/项目名称", "授权编号", "状态", "有效期", "审计报告"],
     "statuses": { "active": "官方授权", "pending": "审核中", "blocked": "已暂停", "rev": "已撤销" },
@@ -859,7 +857,7 @@ const ZH_JSON: Translation = {
       "screenings": "核准项目展映",
       "workshops": "治理与合规培训"
     },
-    "cta": "申请参赛报名",
+    "cta": "报名参加",
     "note": "只有获得 GFA 官方授权的活动才有资格进入“金羽奖”评选序列。",
     "eventStatus": ["金羽奖提名项目", "经核实的展映", "官方入选"]
   },
