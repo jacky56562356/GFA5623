@@ -66,24 +66,21 @@ export interface Translation {
       auditItems: string[];
     };
     stats: { certifiedTalents: string; verifiedInstitutions: string; supportedProjects: string; partnerMerchants: string; };
-    // Fix: Updated pillars to include p5Title and p5Body to support the 5-pillar structure used in the dictionaries and UI
     pillars: { title: string; subtitle: string; p1Title: string; p1Body: string; p2Title: string; p2Body: string; p3Title: string; p3Body: string; p4Title: string; p4Body: string; p5Title: string; p5Body: string; explore: string; };
     closing: { title: string; body: string; cta: string };
   };
   about: {
     title: string;
-    missionTitle: string;
-    missionBody: string;
-    visionTitle: string;
-    visionBody: string;
-    whatTitle: string;
-    whatBullets: string[];
-    transparencyTitle: string;
-    transparencyBody: string;
-    accTitle: string;
-    accDesc: string;
-    outTitle: string;
-    outDesc: string;
+    mandate: { title: string; body: string };
+    strategy: { title: string; body: string };
+    coreFunctions: { title: string; items: { title: string; body: string }[] };
+    youthProtection: { 
+      title: string; 
+      subtitle: string; 
+      intro: string;
+      pillars: { title: string; body: string }[];
+    };
+    accountability: { title: string; body: string; items: { title: string; label: string; icon: string }[] };
   };
   certification: {
     title: string;

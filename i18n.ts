@@ -90,25 +90,43 @@ const EN_JSON: Translation = {
     }
   },
   "about": {
-    "title": "GFA Governance",
-    "missionTitle": "The Mandate",
-    "missionBody": "To standardize global film workflows, protect vulnerable participants, and provide a verified ecosystem for cinematic excellence.",
-    "visionTitle": "Global Impact",
-    "visionBody": "To become the definitive standard of institutional trust for the next generation of global cinema.",
-    "whatTitle": "Primary Functions",
-    "whatBullets": [
-      "Certification & Industry Vetting",
-      "Minor Safeguarding & Rights",
-      "Connection & Resource Matching",
-      "Whitepaper & Standards Publishing",
-      "Global Registry Maintenance"
-    ],
-    "transparencyTitle": "Accountability Model",
-    "transparencyBody": "Our non-profit structure ensures that governance remains unbiased, with every audit trail publicly verifiable for institutions and individuals alike.",
-    "accTitle": "Public Verification",
-    "accDesc": "Real-time lookup for all authorized entities.",
-    "outTitle": "Support Impact",
-    "outDesc": "Tracking the growth of supported creators."
+    "title": "Institutional Authority",
+    "mandate": {
+      "title": "Sovereign Industry Mandate",
+      "body": "The Global Film Alliance (GFA) operates as a sovereign regulatory body for the cinematic arts. Our primary mandate is to consolidate fragmented local standards into a unified global framework for institutional vetting, identity verification, and professional ethics."
+    },
+    "strategy": {
+      "title": "Core Governance Strategy",
+      "body": "We envision a global film industry where institutional trust is the default. By 2030, GFA aims to become the world's primary validator, ensuring that every professional interaction is backed by an encrypted audit trail and a zero-tolerance policy against fraud."
+    },
+    "coreFunctions": {
+      "title": "The Three Pillars of GFA Authority",
+      "items": [
+        { "title": "Industry Authority", "body": "Official accreditation of production units and agencies. We establish the 'Gold Standard' for global project legitimacy and institutional vetting." },
+        { "title": "Governance System", "body": "Regulation of industry pricing models and workflow standards. We publish whitepapers to prevent exploitation and monitor global market ethics." },
+        { "title": "Talent Protection", "body": "Enforcement of safety protocols and legal safeguards. We provide a sovereign registry that protects talent identity and creative rights." }
+      ]
+    },
+    "youthProtection": {
+      "title": "Youth Arts Training Institutional Certification",
+      "subtitle": "Safeguarding the Future of Global Cinema",
+      "intro": "The protection of minor rights is the most sacred protocol within the GFA ecosystem. We implement a multi-layered certification process for all Youth Arts Training Institutions to ensure that every young artist receives full legal and safety protection.",
+      "pillars": [
+        { "title": "Legal Compliance & Safety Audit", "body": "Mandatory vetting of business legitimacy, venue physical security, and adherence to international minor safety laws." },
+        { "title": "Faculty Vetting & Ethics", "body": "Compulsory criminal record checks and credential verification for all instructors to prevent predatory behavior and false branding." },
+        { "title": "Anti-Exploitation Protocols", "body": "Prohibition of 'pay-to-debut' schemes. Enforcement of age-appropriate curriculum standards and non-harmful content creation." },
+        { "title": "Guardian Transparency Rights", "body": "Ensuring mandatory guardian observation access and transparent, GFA-audited refund policies for all training programs." }
+      ]
+    },
+    "accountability": {
+      "title": "Global Accountability Ledger",
+      "body": "As a non-profit authority, GFA is governed by an independent board of legal and cinematic experts. Every audit and certification is recorded on our public integrity ledger for global verification.",
+      "items": [
+        { "title": "Registry Verification", "label": "Real-time compliance lookups.", "icon": "📋" },
+        { "title": "Regulatory Arbitration", "label": "Direct path for dispute resolution.", "icon": "⚖️" },
+        { "title": "Transparency Index", "label": "Public auditing of institutional fees.", "icon": "📊" }
+      ]
+    }
   },
   "certification": {
     "title": "Certification & Authority",
@@ -391,7 +409,7 @@ const EN_JSON: Translation = {
       "screenings": "Certified Showcases",
       "workshops": "Governance Training"
     },
-    "cta": "Apply for Entry",
+    "cta": "报名参加",
     "note": "Only GFA Authorized events are eligible for the Golden Feather Awards circuit.",
     "eventStatus": ["Golden Feather Nominee", "Verified Showcase", "Official Selection"]
   },
@@ -556,25 +574,43 @@ const ZH_JSON: Translation = {
     }
   },
   "about": {
-    "title": "GFA 治理机构",
-    "missionTitle": "机构使命",
-    "missionBody": "规范全球电影工作流，保护弱势群体，并为卓越电影创作提供核实过的生态环境。",
-    "visionTitle": "全球愿景",
-    "visionBody": "成为全球下一代电影工业中机构信任的决定性标准。",
-    "whatTitle": "核心职能",
-    "whatBullets": [
-      "行业认证与资质审查",
-      "未成年人权益保障",
-      "资源对接与人才匹配",
-      "白皮书与行业标准发布",
-      "全球权威名录维护"
-    ],
-    "transparencyTitle": "问责模式",
-    "transparencyBody": "我们的非营利结构确保了治理的公正性，每项审计追踪对于机构和个人而言都是公开可核实的。",
-    "accTitle": "公众验证",
-    "accDesc": "所有授权实体的实时查询通道。",
-    "outTitle": "扶持影响力",
-    "outDesc": "追踪受扶持创作者的成长历程。"
+    "title": "官方机构权威",
+    "mandate": {
+      "title": "核心机构使命",
+      "body": "全球电影联盟 (GFA) 作为电影艺术的最高监管机构运营。我们的核心使命是将碎片化的区域标准统一为全球认证、机构审查和人才保护的综合性框架。"
+    },
+    "strategy": {
+      "title": "全球治理战略",
+      "body": "我们愿景建立一个“机构信任”成为默认标准的全球电影工业。到 2030 年，GFA 旨在成为全球电影专业人士的首要核验平台，确保每一次专业互动都具备可审计的追溯链，并对诈骗行为实施零容忍政策。"
+    },
+    "coreFunctions": {
+      "title": "GFA 官方治理三大支柱",
+      "items": [
+        { "title": "行业权威 (Industry Authority)", "body": "对制作单位和经纪公司进行官方资质审查。我们为全球项目的真实性和机构诚信设立“黄金标准”。" },
+        { "title": "治理体系 (Governance System)", "body": "监管行业定价模型和工作流标准。我们发布白皮书以防止恶意剥削，并监控全球市场道德基准。" },
+        { "title": "权益保护 (Talent Protection)", "body": "强制执行安全协议和法律保护措施。我们维护一个主权名录，全方位保护人才身份及创意版权。" }
+      ]
+    },
+    "youthProtection": {
+      "title": "青少年艺术培训机构官方认证",
+      "subtitle": "守护全球电影工业的未来",
+      "intro": "保护未成年人的合法权益是 GFA 生态系统中最神圣的协议。我们对所有青少年艺术培训机构执行多维度的认证流程，确保每一位青少年艺术家在追梦道路上都能得到全方位的法律与安全保障。",
+      "pillars": [
+        { "title": "法律合规与场地安全审计", "body": "强制审核营业执照、办学许可、物理场地安全（消防、监控、医疗应急预案）及国际未成年人安全法案的执行情况。" },
+        { "title": "师资背景核验与职业伦理", "body": "对所有教职员工执行强制性的无犯罪记录调查及专业资质核实，杜绝虚假包装和危害青少年成长的行为。" },
+        { "title": "反剥削与内容守则", "body": "严禁任何形式的“付费出道”骗局。强制执行符合青少年年龄发展的教学大纲，杜绝一切有害内容创作。" },
+        { "title": "监护人透明权益保障", "body": "确保监护人对教学活动的强制性观察准入权。执行经 GFA 审计的透明退费政策，禁止任何隐形收费。" }
+      ]
+    },
+    "accountability": {
+      "title": "全球问责账本",
+      "body": "作为非营利权威机构，GFA 由法律和电影专家组成的独立理事会管理。所有的审计和认证结果均记录在公众诚信账本中，供全球实时核验。",
+      "items": [
+        { "title": "名录核验", "label": "机构合规状态的实时查询。", "icon": "📋" },
+        { "title": "监管仲裁", "label": "针对成员违规行为的直接申诉通道。", "icon": "⚖️" },
+        { "title": "透明度索引", "label": "对机构收费标准的公开审计报告。", "icon": "📊" }
+      ]
+    }
   },
   "certification": {
     "title": "认证体系与权威",
@@ -614,7 +650,7 @@ const ZH_JSON: Translation = {
     "roleTag2Desc": "追踪行业趋势与合规率。",
     "principlesTitle": "治理标准",
     "principles": [
-      { "title": "标准化工作流", "body": "所有招募和培训活动必须具备强制审计追踪。" },
+      { "title": "标准化工作流", "body": "所有招募 and 培训活动必须具备强制审计追踪。" },
       { "title": "价格治理", "body": "强制执行合理的费用区间，防止剥削行为。" },
       { "title": "德才核验", "body": "基于认证质量和伦理标准的行业认可。" }
     ],
@@ -651,7 +687,7 @@ const ZH_JSON: Translation = {
       "discTitle": "合同审计",
       "discBody": "佣金上限（最高 20%）及公平解约条款。严禁收取前端“入场费”。",
       "prohibTitle": "风险控制",
-      "prohibBody": "未成年人才通信强制抄送监护人。严禁私人一对一试镜。",
+      "prohibBody": "未成年人才通信强制抄送监护人. 严禁私人一对一试镜。",
       "compliance": "需提交至少 2 份真实结算记录用于合规性核查。"
     },
     "catD": {
@@ -685,7 +721,7 @@ const ZH_JSON: Translation = {
   },
   "verify": {
     "title": "权威身份核验",
-    "body": "输入 GFA 编号，核查试镜项目、机构或专业人士的官方授权状态。",
+    "body": "输入 GFA 编号，核查试镜项目、机构 or 专业人士的官方授权状态。",
     "form": {
       "label": "官方编号",
       "placeholder": "GFA-AUTH-XXXX",
@@ -748,7 +784,7 @@ const ZH_JSON: Translation = {
   },
   "directory": {
     "title": "官方授权名录",
-    "subtitle": "只有通过 GFA 标准审计的项目和机构才允许列入此表。",
+    "subtitle": "只有通过 GFA 标准审计的项目 and 机构才允许列入此表。",
     "registryCount": "官方核实数量",
     "tableHeaders": ["机构/项目名称", "授权编号", "状态", "有效期", "审计报告"],
     "statuses": { "active": "官方授权", "pending": "审核中", "blocked": "已暂停", "rev": "已撤销" },
@@ -765,7 +801,7 @@ const ZH_JSON: Translation = {
       { "s": "受理", "d": "报告录入与初步分流。" },
       { "s": "审计", "d": "证据链与证人核查。" },
       { "s": "调解", "d": "直接调解或官方裁定。" },
-      { "s": "处罚", "d": "罚金或身份撤回。" },
+      { "s": "处罚", "d": "罚金 or 身份撤回。" },
       { "s": "封禁", "d": "永久黑名单列入。" }
     ],
     "outcomesTitle": "合规行动",
