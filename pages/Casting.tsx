@@ -27,9 +27,9 @@ const Casting: React.FC = () => {
         </div>
         <div className="bg-gfa-darkGray p-8 text-center border border-gfa-gold/30">
            <div className="text-5xl mb-4">🛡️</div>
-           <h4 className="font-bold text-white mb-2 uppercase tracking-tighter">Minor Protection</h4>
+           <h4 className="font-bold text-white mb-2 uppercase tracking-tighter">{t.casting.protectionTitle}</h4>
            <p className="text-gfa-gray text-xs leading-relaxed">
-             Strict guardian controls and vetted audition environments for all child performers. Compliance is our top priority.
+             {t.casting.protectionDesc}
            </p>
         </div>
       </div>

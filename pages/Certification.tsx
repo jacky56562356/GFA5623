@@ -7,20 +7,10 @@ import { Link } from 'react-router-dom';
 const CertificationPage: React.FC = () => {
   const { t } = useLocale();
 
-  const certTypes = [
-    'Talent Verified',
-    'Agency Verified',
-    'Training Institution Verified',
-    'Event Verified',
-    'Audition Process Verified',
-    'Project Verified'
-  ];
-
-  const govStandards = [
-    { title: 'Governance Principles', path: '/governance', icon: '⚖️' },
-    { title: 'Auth Standards', path: '/standards', icon: '📋' },
-    { title: 'Pricing Transparency', path: '/transparency', icon: '💰' },
-    { title: 'Youth Protection', path: '/protection', icon: '🛡️' }
+  const tiers = [
+    { name: t.locale === 'zh' ? 'Verified (基础认证)' : 'Verified (Baseline)', desc: t.locale === 'zh' ? '材料审核 + 合规核验通过' : 'Identity vetting + compliance check.' },
+    { name: t.locale === 'zh' ? 'Certified (标准认证)' : 'Certified (Standard)', desc: t.locale === 'zh' ? '深度访谈 + 流程合规审计' : 'Interviews + workflow audit.', highlight: true },
+    { name: t.locale === 'zh' ? 'Accredited (高级认证)' : 'Accredited (Premium)', desc: t.locale === 'zh' ? '现场审计 + 风险评级 + 年度复审' : 'On-site audit + annual review.' },
   ];
 
   return (
@@ -30,14 +20,32 @@ const CertificationPage: React.FC = () => {
         subtitle={t.certification.subtitle} 
       />
       
+      {/* THE IRON RULES SECTION */}
+      <div className="mb-32">
+        <h3 className="text-3xl font-black text-center mb-16 uppercase tracking-[0.2em] gold-gradient">
+          {t.certification.valueTitle}
+        </h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {t.certification.valueBullets.map((v, i) => (
+            <div key={i} className="bg-gfa-darkGray p-10 border border-gfa-gold/20 flex flex-col h-full group hover:border-gfa-gold transition-all">
+              <div className="text-gfa-gold font-black text-xs mb-6 opacity-40">RULE 0{i+1}</div>
+              <h4 className="text-white font-black uppercase text-sm tracking-widest mb-4 border-b border-white/5 pb-2">
+                {v.split('：')[0] || v.split(':')[0]}
+              </h4>
+              <p className="text-gfa-gray text-xs leading-relaxed">{v.split('：')[1] || v.split(':')[1]}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-32">
         <div className="lg:col-span-2">
           <h3 className="text-2xl font-black mb-8 uppercase tracking-widest border-l-4 border-gfa-gold pl-6">
             {t.certification.typesTitle}
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-16">
-            {certTypes.map((type, i) => (
-              <div key={i} className="bg-gfa-darkGray p-6 border border-white/5 flex items-center justify-between group hover:border-gfa-gold/50 transition-all">
+            {t.certification.types.map((type, i) => (
+              <div key={i} className="bg-gfa-darkGray p-8 border border-white/5 flex items-center justify-between group hover:border-gfa-gold/50 transition-all">
                 <span className="text-sm font-bold uppercase tracking-wider text-white">{type}</span>
                 <span className="text-gfa-gold opacity-0 group-hover:opacity-100 transition-opacity">→</span>
               </div>
@@ -45,53 +53,53 @@ const CertificationPage: React.FC = () => {
           </div>
 
           <h3 className="text-2xl font-black mb-8 uppercase tracking-widest border-l-4 border-gfa-gold pl-6">
-            Governance Standards
+            {t.certification.govTitle}
           </h3>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-16">
-            {govStandards.map((std, i) => (
-              <Link key={i} to={std.path} className="bg-gfa-darkGray p-6 border border-white/5 text-center group hover:border-gfa-gold transition-all">
+             {[
+              { title: t.nav.certGov.governance, path: '/governance', icon: '⚖️' },
+              { title: t.nav.certGov.standards, path: '/standards', icon: '📋' },
+              { title: t.nav.certGov.transparency, path: '/transparency', icon: '💰' },
+              { title: t.nav.certGov.protection, path: '/protection', icon: '🛡️' }
+            ].map((std, i) => (
+              <Link key={i} to={std.path} className="bg-gfa-darkGray p-6 border border-white/5 text-center group hover:border-gfa-gold transition-all h-full flex flex-col items-center justify-center">
                 <div className="text-3xl mb-4 grayscale group-hover:grayscale-0 transition-all">{std.icon}</div>
                 <div className="text-[10px] font-black uppercase tracking-widest text-white">{std.title}</div>
               </Link>
             ))}
           </div>
-          
-          <div className="bg-gfa-gold/10 p-10 border border-gfa-gold/30">
-            <h4 className="text-xl font-black mb-6 uppercase tracking-widest text-white">The Value of GFA Certification</h4>
-            <ul className="space-y-4">
-              {[
-                'Public certificate verification',
-                'Fraud prevention & credential security',
-                'Higher hiring confidence for global productions',
-                'Institutional credibility for international partners'
-              ].map((v, i) => (
-                <li key={i} className="flex items-start gap-4 text-gfa-gray text-sm">
-                  <span className="text-gfa-gold">✦</span> {v}
-                </li>
-              ))}
-            </ul>
+
+          {/* TIERS */}
+          <h3 className="text-2xl font-black mb-8 uppercase tracking-widest border-l-4 border-gfa-gold pl-6">
+            {t.locale === 'zh' ? '认证等级' : 'Certification Tiers'}
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+            {tiers.map((tier, i) => (
+              <div key={i} className={`p-8 border ${tier.highlight ? 'border-gfa-gold bg-gfa-gold/5' : 'border-white/5 bg-gfa-darkGray'} transition-all`}>
+                <h4 className="text-xs font-black uppercase tracking-widest text-white mb-4">{tier.name}</h4>
+                <p className="text-[10px] text-gfa-gray uppercase font-bold tracking-widest">{tier.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
 
-        <div className="bg-gfa-darkGray p-10 border border-gfa-gold flex flex-col items-center justify-center text-center shadow-2xl relative overflow-hidden">
+        <div className="bg-gfa-darkGray p-10 border border-gfa-gold flex flex-col items-center justify-center text-center shadow-2xl relative overflow-hidden h-fit lg:sticky lg:top-32">
           <div className="absolute top-0 right-0 w-24 h-24 bg-gfa-gold/20 -mr-12 -mt-12 rotate-45"></div>
           <div className="text-6xl mb-8">🛡️</div>
           <h3 className="text-2xl font-black mb-6 uppercase tracking-tight">{t.certification.verifyCardTitle}</h3>
           <p className="text-gfa-gray text-sm mb-10 leading-relaxed">
-            Protect your production by verifying credentials through our real-time global database.
+            {t.certification.verifyCardBody}
           </p>
           <Link to="/verify" className="w-full bg-gfa-gold text-gfa-black py-4 font-black uppercase text-xs tracking-widest hover:bg-white transition-all">
-            Verify Now
+            {t.nav.verify}
           </Link>
         </div>
       </div>
 
       <div className="border-t border-white/5 pt-32">
         <h3 className="text-3xl font-black text-center mb-20 uppercase tracking-[0.2em]">{t.certification.processTitle}</h3>
-        <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-7 gap-4 text-center">
-          {[
-            'Apply', 'Submit Documents', 'Review', 'Approval', 'Certificate Issued', 'Public Verification', 'Annual Renewal'
-          ].map((step, i) => (
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 text-center">
+          {t.certification.steps.map((step, i) => (
             <div key={i} className="flex flex-col items-center">
               <div className="w-10 h-10 rounded-full border border-gfa-gold text-gfa-gold flex items-center justify-center font-bold text-xs mb-4">
                 {i + 1}
@@ -102,7 +110,7 @@ const CertificationPage: React.FC = () => {
         </div>
         <div className="mt-24 text-center">
           <button className="bg-gfa-gold text-gfa-black px-12 py-5 font-black uppercase text-xs tracking-widest hover:bg-white transition-all">
-            Start Certification Application
+            {t.certification.cta}
           </button>
         </div>
       </div>

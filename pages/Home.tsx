@@ -9,7 +9,7 @@ const Home: React.FC = () => {
   return (
     <div className="overflow-hidden">
       {/* Hero Section - Institutional Cinematic Majesty */}
-      <section className="relative min-h-screen flex items-center justify-center hero-mesh pt-20 px-4">
+      <section className="relative min-h-screen flex items-center justify-center hero-mesh pt-32 px-4 pb-20">
         {/* Background Grid Pattern */}
         <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
           <svg className="w-full h-full" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
@@ -23,26 +23,42 @@ const Home: React.FC = () => {
         </div>
 
         <div className="max-w-7xl text-center z-10 animate-fade-up relative">
+          
+          {/* THE LOGO - HIGH PROMINENCE */}
+          <div className="mb-12 flex justify-center animate-fade-in">
+             <div className="relative group cursor-default">
+                <img 
+                  src="https://i.ibb.co/B582n2Dk/1755827874220993959.png" 
+                  alt={t.meta.siteName} 
+                  className="w-48 md:w-64 lg:w-80 h-auto object-contain drop-shadow-[0_0_35px_rgba(212,175,55,0.6)] group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute -inset-8 bg-gfa-gold/10 blur-[50px] rounded-full -z-10 group-hover:bg-gfa-gold/20 transition-all"></div>
+             </div>
+          </div>
+
           {/* Title Background Effects */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full -z-10 pointer-events-none">
-            {/* The Halo Glow */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[150%] bg-gfa-gold/5 blur-[120px] rounded-full animate-pulse-gold"></div>
-            
-            {/* Cinematic Lens Flare 1 */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full -z-10 pointer-events-none flex items-center justify-center">
+            {/* The Official Logo Watermark Background (Larger and more subtle) */}
+            <div className="relative w-[400px] md:w-[800px] lg:w-[1200px] opacity-[0.05] scale-125">
+              <img 
+                src="https://i.ibb.co/B582n2Dk/1755827874220993959.png" 
+                alt="" 
+                className="w-full h-auto animate-pulse-gold blur-[4px]"
+              />
+              <div className="absolute inset-0 bg-gfa-gold/30 blur-[150px] rounded-full"></div>
+            </div>
+
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[150%] bg-gfa-gold/5 blur-[120px] rounded-full"></div>
             <div className="absolute top-[20%] -left-[20%] w-[150%] h-[1px] bg-gradient-to-r from-transparent via-gfa-gold/20 to-transparent rotate-[15deg]"></div>
-            
-            {/* Cinematic Lens Flare 2 */}
             <div className="absolute bottom-[30%] -right-[10%] w-[150%] h-[1px] bg-gradient-to-r from-transparent via-gfa-gold/10 to-transparent -rotate-[10deg]"></div>
-            
-            {/* Geometric Structure Line */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80%] h-[1px] bg-gradient-to-r from-transparent via-gfa-gold/30 to-transparent"></div>
             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[80%] h-[1px] bg-gradient-to-r from-transparent via-gfa-gold/30 to-transparent"></div>
           </div>
 
-          <div className="inline-flex items-center gap-4 border border-gfa-gold/20 bg-gfa-gold/5 px-8 py-2.5 mb-12 rounded-full backdrop-blur-sm">
+          <div className="inline-flex items-center gap-4 border border-gfa-gold/20 bg-gfa-gold/5 px-8 py-2.5 mb-10 rounded-full backdrop-blur-sm">
             <span className="flex h-2 w-2 rounded-full bg-gfa-gold animate-pulse"></span>
             <span className="text-gfa-gold text-[8px] tracking-[0.5em] uppercase font-black">
-              Independent Global Standards • Est. 2024
+              {t.home.hero.badge}
             </span>
           </div>
           
@@ -51,11 +67,11 @@ const Home: React.FC = () => {
           </h1>
           
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-12 text-white/80 font-light tracking-[0.6em] uppercase text-xs md:text-sm">
-            <span>Certification</span>
+            <span>{t.home.hero.tags.cert}</span>
             <span className="hidden md:inline text-gfa-gold/40">/</span>
-            <span>Governance</span>
+            <span>{t.home.hero.tags.gov}</span>
             <span className="hidden md:inline text-gfa-gold/40">/</span>
-            <span>Talent Protection</span>
+            <span>{t.home.hero.tags.prot}</span>
           </div>
 
           <p className="text-gfa-gray text-lg md:text-xl mb-16 max-w-3xl mx-auto leading-relaxed font-medium opacity-90 px-4">
@@ -63,7 +79,7 @@ const Home: React.FC = () => {
           </p>
 
           <div className="flex flex-wrap justify-center gap-8">
-            <Link to="/certification" className="group relative bg-gfa-gold text-gfa-black px-16 py-6 font-black uppercase text-xs tracking-[0.3em] hover:bg-white transition-all shadow-[0_0_50px_rgba(212,175,55,0.2)]">
+            <Link to="/certification" className="group relative bg-gfa-gold text-gfa-black px-16 py-6 font-black uppercase text-xs tracking-[0.3em] hover:bg-white transition-all shadow-[0_0_50px_rgba(212,175,55,0.3)]">
               {t.home.hero.ctaPrimary}
               <span className="absolute -bottom-1 -right-1 w-4 h-4 bg-white opacity-0 group-hover:opacity-100 transition-all"></span>
             </Link>
@@ -76,7 +92,7 @@ const Home: React.FC = () => {
         {/* Global Registry Preview Pill */}
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
           <Link to="/verify" className="flex flex-col items-center gap-2 opacity-40 hover:opacity-100 transition-opacity">
-            <span className="text-[8px] font-black uppercase tracking-[0.4em] text-gfa-gold">Access Registry</span>
+            <span className="text-[8px] font-black uppercase tracking-[0.4em] text-gfa-gold">{t.common.searchRegistry}</span>
             <div className="w-[1px] h-12 bg-gradient-to-b from-gfa-gold to-transparent"></div>
           </Link>
         </div>
@@ -87,9 +103,9 @@ const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-32 items-center">
             <div className="animate-fade-in">
-              <div className="text-gfa-gold font-black text-xs tracking-[0.4em] uppercase mb-6">Non-Profit Mandate</div>
+              <div className="text-gfa-gold font-black text-xs tracking-[0.4em] uppercase mb-6">{t.home.trust.badge}</div>
               <h2 className="text-5xl md:text-7xl font-black mb-10 leading-[1] tracking-tighter uppercase">
-                Building a <span className="text-gfa-gold">Verified</span> Ecosystem.
+                {t.home.trust.title}
               </h2>
               <p className="text-gfa-gray text-lg mb-12 leading-relaxed max-w-xl">
                 {t.home.trust.body}
@@ -116,12 +132,12 @@ const Home: React.FC = () => {
                     <span className="text-gfa-gold text-2xl">ID</span>
                   </div>
                   <div>
-                    <h3 className="text-white font-black uppercase tracking-[0.2em] text-sm">GFA Digital Passport</h3>
-                    <p className="text-[9px] text-gfa-gray uppercase tracking-widest mt-1">Institutional Credential Standard</p>
+                    <h3 className="text-white font-black uppercase tracking-[0.2em] text-sm">{t.home.trust.passportTitle}</h3>
+                    <p className="text-[9px] text-gfa-gray uppercase tracking-widest mt-1">{t.home.trust.passportSubtitle}</p>
                   </div>
                 </div>
                 <div className="space-y-6">
-                  {['Institutional Review', 'Financial Disclosure', 'Minor Protection Audit', 'Ethics Verification'].map(check => (
+                  {t.home.trust.auditItems.map(check => (
                     <div key={check} className="flex justify-between items-center border-b border-white/5 pb-5">
                       <span className="text-[11px] text-gfa-gray uppercase font-bold tracking-widest">{check}</span>
                       <div className="flex items-center gap-2">
@@ -132,7 +148,7 @@ const Home: React.FC = () => {
                   ))}
                 </div>
                 <Link to="/verify" className="mt-12 block text-center py-5 bg-gfa-gold text-gfa-black text-[10px] font-black uppercase tracking-[0.3em] hover:bg-white transition-all">
-                  Search Registry
+                  {t.common.searchRegistry}
                 </Link>
               </div>
             </div>
@@ -147,23 +163,26 @@ const Home: React.FC = () => {
             <h2 className="text-5xl md:text-7xl font-black mb-8 uppercase tracking-tighter">{t.home.pillars.title}</h2>
             <div className="h-1 w-24 bg-gfa-gold mx-auto mb-10"></div>
             <p className="text-gfa-gray text-lg max-w-2xl mx-auto uppercase tracking-[0.2em] text-[10px] font-bold">
-              Global Standards in Certification, Protection, and Support.
+              {t.home.pillars.subtitle}
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Fix: Updated grid cols to lg:grid-cols-5 to accommodate all 5 pillars */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
             {[
               { title: t.home.pillars.p1Title, body: t.home.pillars.p1Body, path: '/certification' },
               { title: t.home.pillars.p2Title, body: t.home.pillars.p2Body, path: '/protection' },
               { title: t.home.pillars.p3Title, body: t.home.pillars.p3Body, path: '/support' },
-              { title: t.home.pillars.p4Title, body: t.home.pillars.p4Body, path: '/membership' }
+              { title: t.home.pillars.p4Title, body: t.home.pillars.p4Body, path: '/membership' },
+              // Fix: Added the 5th pillar (Impact & Support) which was previously missing from the array and UI
+              { title: t.home.pillars.p5Title, body: t.home.pillars.p5Body, path: '/support' }
             ].map((p, i) => (
               <Link key={i} to={p.path} className="glass-panel p-12 hover:border-gfa-gold transition-all flex flex-col h-full relative group">
                 <div className="text-gfa-gold font-black text-2xl mb-10 opacity-30 group-hover:opacity-100 transition-opacity">0{i+1}</div>
                 <h3 className="text-xs font-black uppercase tracking-[0.3em] text-white mb-8 border-b border-gfa-gold/20 pb-4">{p.title}</h3>
                 <p className="text-xs text-gfa-gray leading-loose mb-12 flex-grow opacity-80">{p.body}</p>
                 <div className="flex items-center gap-3 text-gfa-gold text-[9px] font-black uppercase tracking-widest">
-                  Explore Module <span className="group-hover:translate-x-2 transition-transform">→</span>
+                  {t.home.pillars.explore} <span className="group-hover:translate-x-2 transition-transform">→</span>
                 </div>
               </Link>
             ))}
@@ -176,7 +195,7 @@ const Home: React.FC = () => {
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="relative z-10 max-w-5xl mx-auto px-4 animate-fade-in">
           <h2 className="text-6xl md:text-[9rem] font-black text-gfa-black mb-10 tracking-tighter uppercase leading-[0.8]">
-            Built For <span className="opacity-40">Integrity.</span>
+            {t.home.closing.title}
           </h2>
           <p className="text-gfa-black/80 font-black uppercase tracking-[0.4em] text-xs md:text-lg mb-20 max-w-3xl mx-auto">
             {t.home.closing.body}

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import SectionHeading from '../components/ui/SectionHeading';
 import { useLocale } from '../App';

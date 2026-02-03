@@ -45,15 +45,60 @@ export interface Translation {
     required: string;
     optional: string;
     loading: string;
+    searchRegistry: string;
   };
   home: {
-    hero: { title: string; subtitle: string; body: string; ctaPrimary: string; ctaSecondary: string; ctaTertiary: string; };
-    trust: { title: string; body: string };
+    hero: { 
+      title: string; 
+      subtitle: string; 
+      body: string; 
+      ctaPrimary: string; 
+      ctaSecondary: string; 
+      badge: string;
+      tags: { cert: string; gov: string; prot: string; }
+    };
+    trust: { 
+      badge: string;
+      title: string; 
+      body: string; 
+      passportTitle: string;
+      passportSubtitle: string;
+      auditItems: string[];
+    };
     stats: { certifiedTalents: string; verifiedInstitutions: string; supportedProjects: string; partnerMerchants: string; };
-    pillars: { title: string; p1Title: string; p1Body: string; p2Title: string; p2Body: string; p3Title: string; p3Body: string; p4Title: string; p4Body: string; };
-    supportHighlight: { title: string; card1: string; card2: string; card3: string; cta: string; };
-    partnersTeaser: { title: string; body: string; cta: string };
+    // Fix: Updated pillars to include p5Title and p5Body to support the 5-pillar structure used in the dictionaries and UI
+    pillars: { title: string; subtitle: string; p1Title: string; p1Body: string; p2Title: string; p2Body: string; p3Title: string; p3Body: string; p4Title: string; p4Body: string; p5Title: string; p5Body: string; explore: string; };
     closing: { title: string; body: string; cta: string };
+  };
+  about: {
+    title: string;
+    missionTitle: string;
+    missionBody: string;
+    visionTitle: string;
+    visionBody: string;
+    whatTitle: string;
+    whatBullets: string[];
+    transparencyTitle: string;
+    transparencyBody: string;
+    accTitle: string;
+    accDesc: string;
+    outTitle: string;
+    outDesc: string;
+  };
+  certification: {
+    title: string;
+    subtitle: string;
+    typesTitle: string;
+    types: string[];
+    govTitle: string;
+    processTitle: string;
+    processBody: string;
+    valueTitle: string;
+    valueBullets: string[];
+    cta: string;
+    verifyCardTitle: string;
+    verifyCardBody: string;
+    steps: string[];
   };
   governance: {
     title: string;
@@ -91,6 +136,13 @@ export interface Translation {
     enforcementTitle: string;
     enforcementItems: string[];
   };
+  verify: {
+    title: string;
+    body: string;
+    form: { label: string; placeholder: string; button: string };
+    result: { valid: string; expired: string; suspended: string; notFound: string; details: string; };
+    note: string;
+  };
   protection: {
     title: string;
     subtitle: string;
@@ -98,6 +150,11 @@ export interface Translation {
     modelBody: string;
     modelItems: string[];
     safeguards: { title: string; items: string[] }[];
+    zeroTitle: string;
+    zeroDesc: string;
+    reportTitle: string;
+    reportDesc: string;
+    reportCta: string;
   };
   directory: {
     title: string;
@@ -117,38 +174,6 @@ export interface Translation {
     process: { s: string; d: string }[];
     outcomesTitle: string;
     outcomes: string[];
-  };
-  // Added missing top-level keys required by i18n dictionaries and components
-  about: {
-    title: string;
-    missionTitle: string;
-    missionBody: string;
-    visionTitle: string;
-    visionBody: string;
-    whatTitle: string;
-    whatBullets: string[];
-    transparencyTitle: string;
-    transparencyBody: string;
-  };
-  certification: {
-    title: string;
-    subtitle: string;
-    typesTitle: string;
-    types: string[];
-    processTitle: string;
-    processBody: string;
-    valueTitle: string;
-    valueBullets: string[];
-    cta: string;
-    verifyCardTitle: string;
-    verifyCardBody: string;
-  };
-  verify: {
-    title: string;
-    body: string;
-    form: { label: string; placeholder: string; button: string };
-    result: { valid: string; expired: string; suspended: string; notFound: string };
-    note: string;
   };
   support: {
     title: string;
@@ -175,46 +200,27 @@ export interface Translation {
     ctaBrowse: string;
     ctaPost: string;
     note: string;
+    protectionTitle: string;
+    protectionDesc: string;
   };
   membership: {
     title: string;
     intro: string;
-    tiersTitle: string;
     talentTitle: string;
     orgTitle: string;
-    talentTiers: string[];
-    orgTiers: string[];
-    benefitsTitle: string;
-    benefits: string[];
-    cta: string;
-    disclaimer: string;
+    talentTiers: any[];
+    orgTiers: any[];
+    entTitle: string;
+    entDesc: string;
+    entCta: string;
   };
   partners: {
     title: string;
     intro: string;
-    filtersTitle: string;
-    filterLocation: string;
-    filterCategory: string;
-    filterMembership: string;
-    sortTitle: string;
-    sortNearest: string;
-    sortNewest: string;
-    sortPopular: string;
+    catLabel: string;
+    countryLabel: string;
+    found: string;
     card: { benefit: string; eligibility: string; address: string };
-    cta: string;
-    formTitle: string;
-    form: {
-      businessName: string;
-      businessType: string;
-      country: string;
-      state: string;
-      city: string;
-      offer: string;
-      contactName: string;
-      contactEmail: string;
-      consent: string;
-      submit: string;
-    };
   };
   events: {
     title: string;
@@ -222,15 +228,23 @@ export interface Translation {
     sections: { competitions: string; screenings: string; workshops: string };
     cta: string;
     note: string;
+    eventStatus: string[];
   };
   contact: {
     title: string;
     intro: string;
-    formsTitle: string;
-    f1Title: string;
-    f2Title: string;
-    f3Title: string;
-    form: { name: string; email: string; location: string; message: string; consent: string; submit: string };
+    labels: { individual: string; organization: string; merchant: string; join: string; inquiries: string; press: string; };
+    form: { 
+      name: string; 
+      email: string; 
+      location: string; 
+      cat: string;
+      orgType: string;
+      message: string; 
+      consent: string; 
+      submit: string; 
+      header: string;
+    };
   };
   policies: {
     privacy: PolicySection;
@@ -245,6 +259,7 @@ export interface Translation {
     parental: string;
     content: string;
     copyright: string;
+    desc: string;
   };
   language: { en: string; zh: string; es: string; fr: string; it: string };
 }

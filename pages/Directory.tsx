@@ -1,3 +1,4 @@
+
 import React from 'react';
 import SectionHeading from '../components/ui/SectionHeading';
 import { useLocale } from '../App';
@@ -7,10 +8,10 @@ const Directory: React.FC = () => {
   const d = t.directory;
 
   const mockPrograms = [
-    { name: "Beijing Youth Cinema Academy", id: "GFA-2026-0001", status: 'active', expiry: "2026-12-31" },
-    { name: "London Global Talent Showcase", id: "GFA-2026-0042", status: 'active', expiry: "2026-06-30" },
-    { name: "LA Emerging Actors Workshop", id: "GFA-2025-0112", status: 'pending', expiry: "--" },
-    { name: "NYC Digital Audition Hub", id: "GFA-2024-0088", status: 'blocked', expiry: "2024-11-20" },
+    { name: t.locale === 'zh' ? "北京青少年电影学院" : "Beijing Youth Cinema Academy", id: "GFA-2026-0001", status: 'active', expiry: "2026-12-31" },
+    { name: t.locale === 'zh' ? "伦敦全球人才展示会" : "London Global Talent Showcase", id: "GFA-2026-0042", status: 'active', expiry: "2026-06-30" },
+    { name: t.locale === 'zh' ? "洛杉矶新兴演员研讨会" : "LA Emerging Actors Workshop", id: "GFA-2025-0112", status: 'pending', expiry: "--" },
+    { name: t.locale === 'zh' ? "纽约数字试镜中心" : "NYC Digital Audition Hub", id: "GFA-2024-0088", status: 'blocked', expiry: "2024-11-20" },
   ];
 
   const getStatusBadge = (status: string) => {
@@ -45,7 +46,7 @@ const Directory: React.FC = () => {
               {d.tableHeaders.map((header, i) => (
                 <th key={i} className="p-6">{header}</th>
               ))}
-              <th className="p-6 text-right">Actions</th>
+              <th className="p-6 text-right">{t.nav.certGov.reporting}</th>
             </tr>
           </thead>
           <tbody className="text-[10px] font-black uppercase tracking-widest text-white">
@@ -56,8 +57,8 @@ const Directory: React.FC = () => {
                 <td className="p-6">{getStatusBadge(prog.status)}</td>
                 <td className="p-6 text-gfa-gray">{prog.expiry}</td>
                 <td className="p-6 text-right space-x-4">
-                  <button className="text-gfa-gold hover:underline">Info</button>
-                  <button className="text-red-500/50 hover:text-red-500">Report</button>
+                  <button className="text-gfa-gold hover:underline">{t.common.learnMore}</button>
+                  <button className="text-red-500/50 hover:text-red-500">{t.nav.certGov.reporting}</button>
                 </td>
               </tr>
             ))}

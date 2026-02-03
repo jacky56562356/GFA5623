@@ -1,3 +1,4 @@
+
 import React, { useState, createContext, useContext, useEffect } from 'react';
 import { HashRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
 import { Locale } from './types';
@@ -74,16 +75,16 @@ const Navbar = () => {
   return (
     <nav className="fixed w-full z-50 bg-gfa-black/95 backdrop-blur-xl border-b border-gfa-gold/20">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="flex justify-between items-center h-20">
-          <Link to="/" className="flex items-center gap-3 group">
+        <div className="flex justify-between items-center h-24">
+          <Link to="/" className="flex items-center gap-4 group">
             <img 
               src="https://i.ibb.co/B582n2Dk/1755827874220993959.png" 
-              alt="GFA Logo" 
-              className="h-10 w-auto object-contain transition-transform group-hover:scale-105"
+              alt={t.meta.siteName} 
+              className="h-14 w-auto object-contain transition-transform group-hover:scale-110 drop-shadow-[0_0_15px_rgba(212,175,55,0.3)]"
             />
             <div className="flex flex-col">
-              <span className="text-lg font-black gold-gradient tracking-tighter leading-none">GFA</span>
-              <span className="text-[5.5px] tracking-[0.4em] text-gfa-gray uppercase font-bold">Global Film Alliance</span>
+              <span className="text-xl font-black gold-gradient tracking-tighter leading-none">GFA</span>
+              <span className="text-[6px] tracking-[0.5em] text-gfa-gray uppercase font-bold">{t.meta.siteName}</span>
             </div>
           </Link>
 
@@ -130,7 +131,7 @@ const Navbar = () => {
       </div>
       
       {isOpen && (
-        <div className="lg:hidden fixed inset-0 top-20 bg-gfa-black z-40 overflow-y-auto animate-fade-in">
+        <div className="lg:hidden fixed inset-0 top-24 bg-gfa-black z-40 overflow-y-auto animate-fade-in">
           <div className="p-4 space-y-2">
             <Link to="/about" className="block px-6 py-4 text-sm font-bold uppercase tracking-widest text-gfa-gray hover:text-gfa-gold border-b border-white/5">
               {t.nav.about}
@@ -164,26 +165,26 @@ const Footer = () => {
   const { t } = useLocale();
   const currentYear = new Date().getFullYear().toString();
   return (
-    <footer className="bg-gfa-black border-t border-gfa-gold/10 pt-20 pb-10">
+    <footer className="bg-gfa-black border-t border-gfa-gold/10 pt-24 pb-12">
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
         <div className="md:col-span-2">
-          <Link to="/" className="flex items-center gap-4 mb-6 group">
+          <Link to="/" className="flex items-center gap-6 mb-8 group">
             <img 
               src="https://i.ibb.co/B582n2Dk/1755827874220993959.png" 
-              alt="GFA Logo" 
-              className="h-14 w-auto object-contain transition-transform group-hover:scale-105"
+              alt={t.meta.siteName} 
+              className="h-24 w-auto object-contain transition-transform group-hover:scale-105 drop-shadow-[0_0_20px_rgba(212,175,55,0.4)]"
             />
             <div className="flex flex-col">
-              <span className="text-2xl font-black gold-gradient leading-none tracking-tighter">GFA</span>
-              <span className="text-[7px] tracking-[0.6em] text-gfa-gray uppercase font-bold">Global Film Alliance</span>
+              <span className="text-3xl font-black gold-gradient leading-none tracking-tighter">GFA</span>
+              <span className="text-[8px] tracking-[0.7em] text-gfa-gray uppercase font-bold">{t.meta.siteName}</span>
             </div>
           </Link>
           <p className="text-gfa-gray text-xs leading-relaxed max-w-sm uppercase tracking-wider font-medium opacity-70">
-            Institutional authority for global film certification, talent protection, and creative foundation support.
+            {t.footer.desc}
           </p>
         </div>
         <div>
-          <h4 className="text-white text-[10px] font-black uppercase tracking-widest mb-6 border-l-2 border-gfa-gold pl-3">Governance</h4>
+          <h4 className="text-white text-[10px] font-black uppercase tracking-widest mb-6 border-l-2 border-gfa-gold pl-3">{t.nav.certGov.governance}</h4>
           <div className="space-y-4 text-[10px] font-bold uppercase tracking-widest text-gfa-gray">
             <Link to="/governance" className="block hover:text-gfa-gold transition-colors">{t.nav.certGov.governance}</Link>
             <Link to="/standards" className="block hover:text-gfa-gold transition-colors">{t.nav.certGov.standards}</Link>
@@ -192,7 +193,7 @@ const Footer = () => {
           </div>
         </div>
         <div>
-          <h4 className="text-white text-[10px] font-black uppercase tracking-widest mb-6 border-l-2 border-gfa-gold pl-3">Registry</h4>
+          <h4 className="text-white text-[10px] font-black uppercase tracking-widest mb-6 border-l-2 border-gfa-gold pl-3">{t.footer.verification}</h4>
           <div className="space-y-4 text-[10px] font-bold uppercase tracking-widest text-gfa-gray">
             <Link to="/verify" className="block hover:text-gfa-gold transition-colors">{t.footer.verification}</Link>
             <Link to="/privacy" className="block hover:text-gfa-gold transition-colors">{t.footer.privacy}</Link>
@@ -218,7 +219,7 @@ const App = () => {
       <HashRouter>
         <div className="min-h-screen bg-gfa-black text-white selection:bg-gfa-gold selection:text-gfa-black">
           <Navbar />
-          <main className="pt-20">
+          <main className="pt-24">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />

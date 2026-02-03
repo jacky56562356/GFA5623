@@ -1,3 +1,4 @@
+
 import React from 'react';
 import SectionHeading from '../components/ui/SectionHeading';
 import { useLocale } from '../App';
@@ -6,11 +7,9 @@ const Transparency: React.FC = () => {
   const { t } = useLocale();
   const tr = t.transparency;
 
-  // 模拟数据配合翻译
-  const mockTableRows = [
-    { key: 'reg', type: 'required', refund: 'no' },
-    { key: 'audition', type: 'required', refund: 'yes' },
-    { key: 'training', type: 'optional', refund: 'partial' }
+  const tableData = [
+    { type: t.locale === 'zh' ? '会员注册' : 'Member Registration', fee: '$0.00 / ¥0', req: t.common.required, note: t.locale === 'zh' ? '基础身份核验' : 'Baseline identity verification.', ref: 'No' },
+    { type: t.locale === 'zh' ? '试镜授权费' : 'Authorized Audition Fee', fee: 'Capped / 受限', req: t.common.optional, note: t.locale === 'zh' ? '受 GFA 标准约束' : 'Capped by GFA Standards.', ref: 'Yes' }
   ];
 
   return (
@@ -32,14 +31,15 @@ const Transparency: React.FC = () => {
               </tr>
             </thead>
             <tbody className="text-[10px] font-black uppercase tracking-widest text-gfa-gray">
-              {/* 这里由于表格内容较多，保持结构但关键标签使用翻译 */}
-              <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
-                <td className="p-6 text-white border-r border-white/5">Example Item</td>
-                <td className="p-6 border-r border-white/5">$XX.XX</td>
-                <td className="p-6 border-r border-white/5">{t.common.required}</td>
-                <td className="p-6 border-r border-white/5">Description text</td>
-                <td className="p-6">No</td>
-              </tr>
+              {tableData.map((row, idx) => (
+                <tr key={idx} className="border-b border-white/5 hover:bg-white/5 transition-colors">
+                  <td className="p-6 text-white border-r border-white/5">{row.type}</td>
+                  <td className="p-6 border-r border-white/5">{row.fee}</td>
+                  <td className="p-6 border-r border-white/5">{row.req}</td>
+                  <td className="p-6 border-r border-white/5">{row.note}</td>
+                  <td className="p-6">{row.ref}</td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>

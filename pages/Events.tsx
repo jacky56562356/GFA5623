@@ -42,8 +42,8 @@ const Events: React.FC = () => {
             <div className="space-y-4">
                {[1, 2].map(i => (
                  <div key={i} className="bg-gfa-darkGray p-6 border-l-2 border-gfa-gold">
-                    <div className="text-[10px] text-gfa-gold font-black uppercase tracking-widest mb-1">Coming Soon</div>
-                    <div className="text-white font-bold text-sm uppercase">Competition Showcase {i}</div>
+                    <div className="text-[10px] text-gfa-gold font-black uppercase tracking-widest mb-1">{t.events.eventStatus[0]}</div>
+                    <div className="text-white font-bold text-sm uppercase">{t.events.sections.competitions} {i}</div>
                  </div>
                ))}
             </div>
@@ -53,8 +53,8 @@ const Events: React.FC = () => {
             <div className="space-y-4">
                {[1, 2].map(i => (
                  <div key={i} className="bg-gfa-darkGray p-6 border-l-2 border-gfa-gold">
-                    <div className="text-[10px] text-gfa-gold font-black uppercase tracking-widest mb-1">Regional Event</div>
-                    <div className="text-white font-bold text-sm uppercase">Community Screening {i}</div>
+                    <div className="text-[10px] text-gfa-gold font-black uppercase tracking-widest mb-1">{t.events.eventStatus[1]}</div>
+                    <div className="text-white font-bold text-sm uppercase">{t.events.sections.screenings} {i}</div>
                  </div>
                ))}
             </div>
@@ -64,8 +64,8 @@ const Events: React.FC = () => {
             <div className="space-y-4">
                {[1, 2].map(i => (
                  <div key={i} className="bg-gfa-darkGray p-6 border-l-2 border-gfa-gold">
-                    <div className="text-[10px] text-gfa-gold font-black uppercase tracking-widest mb-1">Member Exclusive</div>
-                    <div className="text-white font-bold text-sm uppercase">Masterclass Session {i}</div>
+                    <div className="text-[10px] text-gfa-gold font-black uppercase tracking-widest mb-1">{t.events.eventStatus[2]}</div>
+                    <div className="text-white font-bold text-sm uppercase">{t.events.sections.workshops} {i}</div>
                  </div>
                ))}
             </div>

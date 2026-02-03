@@ -1,3 +1,4 @@
+
 import React from 'react';
 import SectionHeading from '../components/ui/SectionHeading';
 import { useLocale } from '../App';
@@ -17,7 +18,7 @@ const Protection: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 mb-32 items-center">
         <div className="animate-fade-in">
           <div className="inline-block px-4 py-1 border border-gfa-gold/30 text-gfa-gold text-[10px] uppercase font-black tracking-[0.4em] mb-8 bg-gfa-gold/5">
-            Core Philosophy
+            {t.home.trust.badge}
           </div>
           <h3 className="text-4xl font-black mb-8 gold-gradient uppercase tracking-tighter leading-none">{pr.modelTitle}</h3>
           <p className="text-gfa-gray text-lg mb-10 leading-relaxed uppercase font-medium tracking-wider border-l-2 border-gfa-gold/30 pl-6">
@@ -37,9 +38,9 @@ const Protection: React.FC = () => {
            <div className="absolute -inset-4 bg-gfa-gold/5 blur-2xl group-hover:bg-gfa-gold/10 transition-all"></div>
            <div className="relative aspect-square bg-gfa-darkGray border border-gfa-gold/20 flex flex-col items-center justify-center p-12 shadow-3xl">
              <div className="text-9xl mb-8 grayscale group-hover:grayscale-0 transition-all duration-700">🛡️</div>
-             <h4 className="text-xl font-black text-gfa-gold uppercase tracking-[0.3em] text-center mb-4">Institutional Guard</h4>
+             <h4 className="text-xl font-black text-gfa-gold uppercase tracking-[0.3em] text-center mb-4">{t.home.trust.passportTitle}</h4>
              <p className="text-[9px] text-gfa-gray uppercase tracking-widest text-center leading-loose">
-               Mandatory compliance for all certified auditions, competitions, and training programs within the GFA ecosystem.
+               {t.home.trust.passportSubtitle}
              </p>
            </div>
         </div>
@@ -47,7 +48,7 @@ const Protection: React.FC = () => {
 
       {/* Safeguards Grid */}
       <div className="mb-32">
-        <h3 className="text-2xl font-black text-center mb-16 uppercase tracking-[0.2em] gold-gradient">Safe Environment Standards</h3>
+        <h3 className="text-2xl font-black text-center mb-16 uppercase tracking-[0.2em] gold-gradient">{t.home.pillars.p2Title}</h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {pr.safeguards.map((group, idx) => (
             <div key={idx} className="bg-gfa-darkGray/30 p-10 border border-white/5 flex flex-col h-full hover:bg-gfa-darkGray transition-colors group">
@@ -68,18 +69,18 @@ const Protection: React.FC = () => {
 
       {/* Enforcement Warning */}
       <div className="bg-red-500/10 border border-red-500/20 p-16 text-center">
-        <h4 className="text-2xl font-black text-red-500 uppercase tracking-tighter mb-6">Zero Tolerance Policy</h4>
+        <h4 className="text-2xl font-black text-red-500 uppercase tracking-tighter mb-6">{pr.zeroTitle}</h4>
         <p className="text-red-400/70 text-sm font-black uppercase tracking-widest max-w-3xl mx-auto leading-relaxed">
-          GFA maintains a global blacklist for individuals and organizations found in violation of our Youth Protection Charter. Misconduct results in immediate certificate revocation, public removal from the directory, and formal referral to relevant local law enforcement authorities.
+          {pr.zeroDesc}
         </p>
       </div>
 
       {/* Parent CTA */}
       <div className="mt-32 text-center p-20 border border-white/5 bg-gfa-darkGray/20">
-         <h4 className="text-xl font-black mb-8 uppercase tracking-widest text-white">Need to report a safety concern?</h4>
-         <p className="text-gfa-gray text-xs mb-10 uppercase tracking-widest font-bold">Confidential reporting is available 24/7 through our compliance portal.</p>
+         <h4 className="text-xl font-black mb-8 uppercase tracking-widest text-white">{pr.reportTitle}</h4>
+         <p className="text-gfa-gray text-xs mb-10 uppercase tracking-widest font-bold">{pr.reportDesc}</p>
          <button className="bg-white text-gfa-black px-16 py-6 font-black uppercase text-xs tracking-widest hover:bg-gfa-gold transition-all shadow-2xl">
-           Access Reporting Portal
+           {pr.reportCta}
          </button>
       </div>
     </div>

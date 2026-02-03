@@ -13,7 +13,7 @@ const About: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center mb-32">
         <div className="relative">
           <div className="absolute -top-10 -left-10 w-full h-full border-4 border-gfa-gold -z-10 opacity-20"></div>
-          <img src="https://picsum.photos/seed/about1/800/1000" alt="GFA Alliance" className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700" />
+          <img src="https://picsum.photos/seed/about1/800/1000" alt={t.meta.siteName} className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700" />
         </div>
         <div>
           <h3 className="text-3xl font-bold mb-8 gold-gradient">{t.about.missionTitle}</h3>
@@ -49,12 +49,12 @@ const About: React.FC = () => {
          </p>
          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-center mt-16">
            <div className="border border-white/5 p-8 bg-gfa-darkGray/30">
-             <h4 className="font-bold text-white mb-2 uppercase tracking-widest text-xs">Public Accountability</h4>
-             <p className="text-gfa-gray text-[10px]">Open verification for all issued certificates.</p>
+             <h4 className="font-bold text-white mb-2 uppercase tracking-widest text-xs">{t.about.accTitle}</h4>
+             <p className="text-gfa-gray text-[10px]">{t.about.accDesc}</p>
            </div>
            <div className="border border-white/5 p-8 bg-gfa-darkGray/30">
-             <h4 className="font-bold text-white mb-2 uppercase tracking-widest text-xs">Outcome Tracking</h4>
-             <p className="text-gfa-gray text-[10px]">Documented progress of all supported filmmakers.</p>
+             <h4 className="font-bold text-white mb-2 uppercase tracking-widest text-xs">{t.about.outTitle}</h4>
+             <p className="text-gfa-gray text-[10px]">{t.about.outDesc}</p>
            </div>
          </div>
       </div>

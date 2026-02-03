@@ -1,3 +1,4 @@
+
 import React from 'react';
 import SectionHeading from '../components/ui/SectionHeading';
 import { useLocale } from '../App';
@@ -54,7 +55,6 @@ const Standards: React.FC = () => {
               </ul>
             </div>
             <div className="space-y-6">
-              {/* Fixed: Replaced hardcoded 'Note' with translated 'sub3' key */}
               <h4 className="text-[10px] text-white font-black uppercase tracking-widest mb-4 opacity-50">{s.catB.sub3}</h4>
               <p className="text-[10px] text-red-400 font-black uppercase leading-relaxed tracking-widest">
                 {s.catB.sub3Body}
