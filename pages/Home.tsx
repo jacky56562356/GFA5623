@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useLocale } from '../App';
 import { Link } from 'react-router-dom';
@@ -9,6 +10,7 @@ const Home: React.FC = () => {
     <div className="overflow-hidden">
       {/* Hero Section - Institutional Cinematic Majesty */}
       <section className="relative min-h-screen flex items-center justify-center hero-mesh pt-20 px-4">
+        {/* Background Grid Pattern */}
         <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
           <svg className="w-full h-full" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
             <defs>
@@ -20,7 +22,23 @@ const Home: React.FC = () => {
           </svg>
         </div>
 
-        <div className="max-w-7xl text-center z-10 animate-fade-up">
+        <div className="max-w-7xl text-center z-10 animate-fade-up relative">
+          {/* Title Background Effects */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full -z-10 pointer-events-none">
+            {/* The Halo Glow */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[150%] bg-gfa-gold/5 blur-[120px] rounded-full animate-pulse-gold"></div>
+            
+            {/* Cinematic Lens Flare 1 */}
+            <div className="absolute top-[20%] -left-[20%] w-[150%] h-[1px] bg-gradient-to-r from-transparent via-gfa-gold/20 to-transparent rotate-[15deg]"></div>
+            
+            {/* Cinematic Lens Flare 2 */}
+            <div className="absolute bottom-[30%] -right-[10%] w-[150%] h-[1px] bg-gradient-to-r from-transparent via-gfa-gold/10 to-transparent -rotate-[10deg]"></div>
+            
+            {/* Geometric Structure Line */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80%] h-[1px] bg-gradient-to-r from-transparent via-gfa-gold/30 to-transparent"></div>
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[80%] h-[1px] bg-gradient-to-r from-transparent via-gfa-gold/30 to-transparent"></div>
+          </div>
+
           <div className="inline-flex items-center gap-4 border border-gfa-gold/20 bg-gfa-gold/5 px-8 py-2.5 mb-12 rounded-full backdrop-blur-sm">
             <span className="flex h-2 w-2 rounded-full bg-gfa-gold animate-pulse"></span>
             <span className="text-gfa-gold text-[8px] tracking-[0.5em] uppercase font-black">
@@ -28,7 +46,7 @@ const Home: React.FC = () => {
             </span>
           </div>
           
-          <h1 className="text-5xl md:text-[5.5rem] font-black mb-10 gold-gradient tracking-tighter uppercase leading-[0.9] filter drop-shadow-2xl">
+          <h1 className="text-5xl md:text-[5.5rem] font-black mb-10 gold-gradient tracking-tighter uppercase leading-[0.9] filter drop-shadow-2xl relative">
             {t.home.hero.title}
           </h1>
           
