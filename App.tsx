@@ -1,29 +1,31 @@
-import React, { useState, createContext, useContext, useEffect } from 'react';
+
+import React, { useState, createContext, useContext, useEffect, Suspense, lazy } from 'react';
 import { HashRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
 import { Locale } from './types';
 import { DICTIONARIES } from './i18n';
 
-// Pages
-import Home from './pages/Home';
-import About from './pages/About';
-import CertificationPage from './pages/Certification';
-import Verify from './pages/Verify';
-import Support from './pages/Support';
-import Casting from './pages/Casting';
-import Membership from './pages/Membership';
-import Partners from './pages/Partners';
-import Events from './pages/Events';
-import Contact from './pages/Contact';
-import PolicyPage from './pages/PolicyPage';
-import Safeguarding from './pages/Safeguarding';
+// Core layout components load immediately
+const Navbar = lazy(() => import('./components/Navbar'));
+const Footer = lazy(() => import('./components/Footer'));
 
-// Governance Pages
-import Governance from './pages/Governance';
-import Standards from './pages/Standards';
-import Transparency from './pages/Transparency';
-import Protection from './pages/Protection';
-import Directory from './pages/Directory';
-import Reporting from './pages/Reporting';
+// Lazy load all pages for faster initial load
+const Home = lazy(() => import('./pages/Home'));
+const About = lazy(() => import('./pages/About'));
+const CertificationPage = lazy(() => import('./pages/Certification'));
+const Verify = lazy(() => import('./pages/Verify'));
+const Support = lazy(() => import('./pages/Support'));
+const Casting = lazy(() => import('./pages/Casting'));
+const Membership = lazy(() => import('./pages/Membership'));
+const Partners = lazy(() => import('./pages/Partners'));
+const Events = lazy(() => import('./pages/Events'));
+const Contact = lazy(() => import('./pages/Contact'));
+const PolicyPage = lazy(() => import('./pages/PolicyPage'));
+const Safeguarding = lazy(() => import('./pages/Safeguarding'));
+const Governance = lazy(() => import('./pages/Governance'));
+const Standards = lazy(() => import('./pages/Standards'));
+const Transparency = lazy(() => import('./pages/Transparency'));
+const Directory = lazy(() => import('./pages/Directory'));
+const Reporting = lazy(() => import('./pages/Reporting'));
 
 const LanguageContext = createContext({
   locale: Locale.EN,
@@ -33,15 +35,32 @@ const LanguageContext = createContext({
 
 export const useLocale = () => useContext(LanguageContext);
 
-const Navbar = () => {
+// Optimized Loading Spinner
+const PageLoader = () => (
+  <div className="flex items-center justify-center min-h-[60vh] animate-fade-in">
+    <div className="w-8 h-8 border-2 border-gfa-gold border-t-transparent rounded-full animate-spin"></div>
+  </div>
+);
+
+// Performance: Navbar is now integrated into App to avoid multiple renders
+const AppNavbar = () => {
   const { locale, setLocale, t } = useLocale();
   const [isOpen, setIsOpen] = useState(false);
-  const [isCertOpen, setIsCertOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const { pathname } = useLocation();
 
-  // Consolidated Navigation Menu
-  const mainNavLinks = [
-    { path: '/', label: t.nav.home },
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 30);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    setIsOpen(false);
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  const navItems = [
     { path: '/about', label: t.nav.about },
     { path: '/support', label: t.nav.support },
     { path: '/casting', label: t.nav.casting },
@@ -50,207 +69,63 @@ const Navbar = () => {
     { path: '/events', label: t.nav.events },
   ];
 
-  const certGovLinks = [
-    { path: '/certification', label: t.nav.certGov.overview },
-    { path: '/verify', label: t.nav.certGov.verify },
-    { path: '/safeguarding', label: t.nav.certGov.safeguarding },
-    { path: '/governance', label: t.nav.certGov.governance },
-    { path: '/standards', label: t.nav.certGov.standards },
-    { path: '/transparency', label: t.nav.certGov.transparency },
-    { path: '/directory', label: t.nav.certGov.directory },
-    { path: '/reporting', label: t.nav.certGov.reporting },
-  ];
-
-  const languages = [
-    { code: Locale.EN, label: t.language.en },
-    { code: Locale.ZH, label: t.language.zh },
-    { code: Locale.ES, label: t.language.es },
-    { code: Locale.FR, label: t.language.fr },
-    { code: Locale.IT, label: t.language.it },
-  ];
-
-  useEffect(() => {
-    setIsOpen(false);
-    setIsCertOpen(false);
-    window.scrollTo(0, 0);
-  }, [pathname]);
-
-  // Lock body scroll when mobile menu is open
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
-  }, [isOpen]);
-
-  const toggleMenu = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    setIsOpen(!isOpen);
-  };
-
-  const closeMenu = () => {
-    setIsOpen(false);
-    setIsCertOpen(false);
-  };
-
   return (
-    <nav className="fixed w-full z-50 bg-gfa-black/95 backdrop-blur-xl border-b border-gfa-gold/20 select-none">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="flex justify-between items-center h-24">
-          <Link to="/" onClick={closeMenu} className="flex items-center gap-4 group">
-            <img 
-              src="https://i.ibb.co/B582n2Dk/1755827874220993959.png" 
-              alt={t.meta.siteName} 
-              className="h-16 w-auto object-contain transition-transform group-hover:scale-110 drop-shadow-[0_0_15px_rgba(212,175,55,0.3)]"
-            />
+    <>
+      <nav className={`fixed top-0 left-0 right-0 z-[110] nav-float ${scrolled ? 'scrolled py-3' : 'bg-gfa-black/50 backdrop-blur-md border-b border-white/5 py-5'}`}>
+        <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+          <Link to="/" className="flex items-center gap-2">
+            <img src="https://i.ibb.co/B582n2Dk/1755827874220993959.png" className="h-8 md:h-10" alt="GFA" />
             <div className="flex flex-col">
-              <span className="text-3xl font-black gold gold-shimmer tracking-tighter leading-none">GFA</span>
-              <span className="text-[10px] tracking-[0.2em] text-gfa-gray uppercase font-bold mt-1 opacity-80">{t.meta.siteName}</span>
+              <span className="text-xl md:text-2xl font-black gold tracking-tighter leading-none">GFA</span>
+              <span className="text-[7px] tracking-[0.4em] text-gfa-gray uppercase font-black opacity-60">Alliance</span>
             </div>
           </Link>
 
-          {/* Desktop Links */}
-          <div className="hidden lg:flex items-center space-x-6">
-            <Link to="/" className={`text-xs font-bold uppercase tracking-widest transition-colors hover:text-gfa-gold ${pathname === '/' ? 'text-gfa-gold' : 'text-gfa-gray'}`}>
-              {t.nav.home}
-            </Link>
-
-            <div className="relative group" onMouseEnter={() => setIsCertOpen(true)} onMouseLeave={() => setIsCertOpen(false)}>
-              <button className={`text-xs font-bold uppercase tracking-widest flex items-center gap-1 transition-colors ${certGovLinks.some(l => pathname === l.path) ? 'text-gfa-gold' : 'text-gfa-gray hover:text-gfa-gold'}`}>
-                {t.nav.certification} <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-              </button>
-              {isCertOpen && (
-                <div className="absolute top-full left-0 bg-gfa-darkGray border border-gfa-gold/20 py-4 w-64 shadow-2xl animate-fade-in">
-                  {certGovLinks.map(gl => (
-                    <Link key={gl.path} to={gl.path} className={`block px-6 py-2 text-xs font-bold uppercase tracking-widest hover:text-gfa-gold hover:bg-white/5 transition-colors ${pathname === gl.path ? 'text-gfa-gold bg-white/5' : 'text-gfa-gray'}`}>
-                      {gl.label}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            {mainNavLinks.slice(1).map(l => (
-              <Link key={l.path} to={l.path} className={`text-xs font-bold uppercase tracking-widest transition-colors hover:text-gfa-gold ${pathname === l.path ? 'text-gfa-gold' : 'text-gfa-gray'}`}>
-                {l.label}
+          <div className="hidden lg:flex items-center space-x-8">
+            {navItems.map(item => (
+              <Link 
+                key={item.path} 
+                to={item.path} 
+                className={`text-[10px] font-black uppercase tracking-[0.2em] transition-colors ${pathname === item.path ? 'text-gfa-gold' : 'text-gfa-gray hover:text-white'}`}
+              >
+                {item.label}
               </Link>
             ))}
-          </div>
-
-          <div className="flex items-center space-x-4">
             <select 
               value={locale} 
               onChange={(e) => setLocale(e.target.value as Locale)}
-              className="bg-transparent border border-gfa-gold/30 text-xs text-gfa-gold font-bold px-2 py-1 focus:outline-none cursor-pointer rounded-sm"
+              className="bg-transparent text-[10px] text-gfa-gold font-black border-none cursor-pointer focus:outline-none"
             >
-              {languages.map(lang => <option key={lang.code} value={lang.code} className="bg-gfa-black">{lang.label}</option>)}
+              {Object.values(Locale).map(l => <option key={l} value={l} className="bg-gfa-black">{l.toUpperCase()}</option>)}
             </select>
-            
-            {/* Improved Mobile Menu Toggle Button */}
-            <button 
-              className="lg:hidden text-gfa-gold p-2 relative z-[60]" 
-              onClick={toggleMenu}
-              aria-label="Toggle Menu"
-            >
-              <svg className="w-10 h-10 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
-              </svg>
-            </button>
           </div>
-        </div>
-      </div>
-      
-      {/* Mobile Navigation Menu Overlay */}
-      {isOpen && (
-        <div className="lg:hidden fixed inset-0 bg-gfa-black z-50 overflow-y-auto pt-24 pb-32 animate-fade-in">
-          <div className="p-8 space-y-6">
-            {mainNavLinks.map(l => (
-              <Link 
-                key={l.path} 
-                to={l.path} 
-                onClick={closeMenu}
-                className={`block text-2xl font-black uppercase tracking-[0.2em] border-b border-white/5 pb-5 ${pathname === l.path ? 'text-gfa-gold' : 'text-white/80'}`}
-              >
-                {l.label}
-              </Link>
-            ))}
-            
-            <div className="mt-12 bg-gfa-darkGray/60 p-8 rounded-xl border border-gfa-gold/15 shadow-2xl">
-              <div className="text-[10px] text-gfa-gold font-black uppercase tracking-[0.4em] mb-8 border-l-4 border-gfa-gold pl-4">
-                {t.nav.certification}
-              </div>
-              <div className="grid grid-cols-1 gap-6">
-                {certGovLinks.map(gl => (
-                  <Link 
-                    key={gl.path} 
-                    to={gl.path} 
-                    onClick={closeMenu}
-                    className={`text-sm font-black uppercase tracking-widest transition-colors ${pathname === gl.path ? 'text-gfa-gold' : 'text-white/50 hover:text-white'}`}
-                  >
-                    {gl.label}
-                  </Link>
-                ))}
-              </div>
-            </div>
-            
-            <div className="pt-10">
-              <Link to="/contact" onClick={closeMenu} className="block w-full py-6 text-center bg-gfa-gold text-gfa-black font-black uppercase text-sm tracking-[0.4em] rounded-md shadow-2xl transition-transform active:scale-95">
-                {t.nav.contact}
-              </Link>
-            </div>
-          </div>
-        </div>
-      )}
-    </nav>
-  );
-};
 
-const Footer = () => {
-  const { t } = useLocale();
-  const currentYear = new Date().getFullYear().toString();
-  return (
-    <footer className="bg-gfa-black border-t border-gfa-gold/10 pt-24 pb-12">
-      <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
-        <div className="md:col-span-2">
-          <Link to="/" className="flex items-center gap-6 mb-8 group">
-            <img 
-              src="https://i.ibb.co/B582n2Dk/1755827874220993959.png" 
-              alt={t.meta.siteName} 
-              className="h-24 w-auto object-contain transition-transform group-hover:scale-105 drop-shadow-[0_0_20px_rgba(212,175,55,0.4)]"
-            />
-            <div className="flex flex-col">
-              <span className="text-3xl font-black gold leading-none tracking-tighter">GFA</span>
-              <span className="text-[10px] tracking-[0.2em] text-gfa-gray uppercase font-bold mt-1 opacity-60">{t.meta.siteName}</span>
-            </div>
-          </Link>
-          <p className="text-gfa-gray text-xs leading-relaxed max-w-sm uppercase tracking-wider font-medium opacity-70">
-            {t.footer.desc}
-          </p>
+          <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden w-8 h-8 flex flex-col justify-center items-center gap-1.5 z-[120]">
+            <span className={`w-6 h-0.5 bg-gfa-gold transition-all ${isOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
+            <span className={`w-6 h-0.5 bg-gfa-gold transition-all ${isOpen ? 'opacity-0' : ''}`}></span>
+            <span className={`w-6 h-0.5 bg-gfa-gold transition-all ${isOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+          </button>
         </div>
-        <div>
-          <h4 className="text-white text-xs font-black uppercase tracking-widest mb-6 border-l-2 border-gfa-gold pl-3">{t.nav.certGov.governance}</h4>
-          <div className="space-y-4 text-xs font-bold uppercase tracking-widest text-gfa-gray">
-            <Link to="/governance" className="block hover:text-gfa-gold transition-colors">{t.nav.certGov.governance}</Link>
-            <Link to="/standards" className="block hover:text-gfa-gold transition-colors">{t.nav.certGov.standards}</Link>
-            <Link to="/safeguarding" className="block hover:text-gfa-gold transition-colors">{t.nav.certGov.safeguarding}</Link>
-          </div>
+      </nav>
+
+      {/* Optimized Mobile Dashboard */}
+      <div className={`fixed inset-0 z-[100] bg-gfa-black pt-24 px-6 mobile-overlay ${isOpen ? 'open' : ''} lg:hidden`}>
+        <div className="grid grid-cols-2 gap-3 mb-10">
+          {navItems.map(item => (
+            <Link key={item.path} to={item.path} onClick={() => setIsOpen(false)} className="bg-white/5 p-6 rounded-xl flex flex-col items-center gap-2 border border-white/5 active:scale-95 transition-transform">
+               <span className="text-[9px] font-black uppercase tracking-widest text-center text-white/80">{item.label}</span>
+            </Link>
+          ))}
         </div>
-        <div>
-          <h4 className="text-white text-xs font-black uppercase tracking-widest mb-6 border-l-2 border-gfa-gold pl-3">{t.footer.verification}</h4>
-          <div className="space-y-4 text-xs font-bold uppercase tracking-widest text-gfa-gray">
-            <Link to="/verify" className="block hover:text-gfa-gold transition-colors">{t.footer.verification}</Link>
-            <Link to="/privacy" className="block hover:text-gfa-gold transition-colors">{t.footer.privacy}</Link>
-            <Link to="/terms" className="block hover:text-gfa-gold transition-colors">{t.footer.terms}</Link>
-          </div>
+        <div className="space-y-3">
+          {['/verify', '/directory', '/reporting'].map(path => (
+            <Link key={path} to={path} onClick={() => setIsOpen(false)} className="block w-full p-4 bg-gfa-gold/10 border border-gfa-gold/20 rounded-xl text-center text-xs font-black uppercase tracking-widest text-gfa-gold">
+              {path.replace('/', '')} Portal
+            </Link>
+          ))}
         </div>
       </div>
-      <div className="max-w-7xl mx-auto px-4 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
-        <span className="text-xs font-bold uppercase tracking-widest text-gfa-gray/50">
-          {t.footer.copyright.replace('{year}', currentYear)}
-        </span>
-      </div>
-    </footer>
+    </>
   );
 };
 
@@ -261,32 +136,40 @@ const App = () => {
   return (
     <LanguageContext.Provider value={{ locale, setLocale, t }}>
       <HashRouter>
-        <div className="min-h-screen bg-gfa-black text-white selection:bg-gfa-gold selection:text-gfa-black">
-          <Navbar />
-          <main className="pt-24 min-h-[calc(100vh-24rem)]">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/certification" element={<CertificationPage />} />
-              <Route path="/verify" element={<Verify />} />
-              <Route path="/safeguarding" element={<Safeguarding />} />
-              <Route path="/support" element={<Support />} />
-              <Route path="/casting" element={<Casting />} />
-              <Route path="/membership" element={<Membership />} />
-              <Route path="/partners" element={<Partners />} />
-              <Route path="/events" element={<Events />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/governance" element={<Governance />} />
-              <Route path="/standards" element={<Standards />} />
-              <Route path="/transparency" element={<Transparency />} />
-              <Route path="/protection" element={<Protection />} />
-              <Route path="/directory" element={<Directory />} />
-              <Route path="/reporting" element={<Reporting />} />
-              <Route path="/privacy" element={<PolicyPage type="privacy" />} />
-              <Route path="/terms" element={<PolicyPage type="terms" />} />
-            </Routes>
+        <div className="min-h-screen bg-gfa-black text-white selection:bg-gfa-gold selection:text-gfa-black flex flex-col">
+          <Suspense fallback={null}><AppNavbar /></Suspense>
+          <main className="flex-grow">
+            <Suspense fallback={<PageLoader />}>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/certification" element={<CertificationPage />} />
+                <Route path="/verify" element={<Verify />} />
+                <Route path="/safeguarding" element={<Safeguarding />} />
+                <Route path="/support" element={<Support />} />
+                <Route path="/casting" element={<Casting />} />
+                <Route path="/membership" element={<Membership />} />
+                <Route path="/partners" element={<Partners />} />
+                <Route path="/events" element={<Events />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/governance" element={<Governance />} />
+                <Route path="/standards" element={<Standards />} />
+                <Route path="/transparency" element={<Transparency />} />
+                <Route path="/directory" element={<Directory />} />
+                <Route path="/reporting" element={<Reporting />} />
+                <Route path="/privacy" element={<PolicyPage type="privacy" />} />
+                <Route path="/terms" element={<PolicyPage type="terms" />} />
+              </Routes>
+            </Suspense>
           </main>
-          <Footer />
+          <Suspense fallback={null}>
+            <footer className="bg-gfa-black border-t border-white/5 py-12 px-6">
+              <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 opacity-40">
+                <span className="text-[10px] font-black uppercase tracking-[0.4em]">GFA Alliance Institutional Portal</span>
+                <span className="text-[10px] font-black uppercase tracking-[0.4em]">&copy; 2024 Global Film Alliance</span>
+              </div>
+            </footer>
+          </Suspense>
         </div>
       </HashRouter>
     </LanguageContext.Provider>
