@@ -19,12 +19,12 @@ const Safeguarding: React.FC = () => {
       // Header - Institutional Branding
       doc.setFontSize(22);
       doc.setTextColor(212, 175, 55); // GFA Gold
-      doc.text("GFA GLOBAL FILM ALLIANCE", margin, cursorY);
+      doc.text(t.meta.siteName.toUpperCase(), margin, cursorY);
       cursorY += 10;
       
       doc.setFontSize(10);
       doc.setTextColor(100, 100, 100);
-      doc.text("OFFICIAL MINOR SAFEGUARDING CHECKLIST | VERSION 2024.1", margin, cursorY);
+      doc.text(`${sg.title.toUpperCase()} | VERSION 2024.1`, margin, cursorY);
       cursorY += 15;
 
       // Divider
@@ -35,7 +35,7 @@ const Safeguarding: React.FC = () => {
       // Section 1: Institutional Mission
       doc.setFontSize(14);
       doc.setTextColor(0, 0, 0);
-      doc.text("1. INSTITUTIONAL MISSION", margin, cursorY);
+      doc.text(`1. ${t.nav.about.toUpperCase()}`, margin, cursorY);
       cursorY += 10;
       doc.setFontSize(10);
       const missionText = doc.splitTextToSize(sg.mission, 170);
@@ -94,36 +94,13 @@ const Safeguarding: React.FC = () => {
       });
       cursorY += 10;
 
-      // Section 6: Investigation & Remedy
-      if (cursorY > 230) { doc.addPage(); cursorY = 20; }
-      doc.setFontSize(14);
-      doc.text(`6. ${sg.pillars.p4.title.toUpperCase()}`, margin, cursorY);
-      cursorY += 10;
-      doc.setFontSize(9);
-      doc.text(`Response Commitment: ${sg.pillars.p4.response}`, margin + 5, cursorY);
-      cursorY += 10;
-      doc.text(sg.pillars.p4.levelsTitle, margin + 5, cursorY);
-      cursorY += 7;
-      sg.pillars.p4.levels.forEach((lvl, i) => {
-        doc.text(`Level ${i+1}: ${lvl}`, margin + 10, cursorY);
-        cursorY += 7;
-      });
-      cursorY += 5;
-      doc.text(sg.pillars.p4.outcomesTitle, margin + 5, cursorY);
-      cursorY += 7;
-      sg.pillars.p4.outcomes.forEach((out) => {
-        doc.text(`- ${out}`, margin + 10, cursorY);
-        cursorY += 7;
-      });
-
       // Footer
       cursorY = 285;
       doc.setFontSize(8);
       doc.setTextColor(150, 150, 150);
-      doc.text("ANY VIOLATION MUST BE REPORTED IMMEDIATELY AT GFA-ALLIANCE.ORG/REPORTING", margin, cursorY);
-      doc.text("GOVERNING INDUSTRY EXCELLENCE THROUGH STATUTORY COMPLIANCE.", 130, cursorY);
+      doc.text(`REPORT VIOLATIONS: GFA-ALLIANCE.ORG/${t.nav.certGov.reporting.toUpperCase()}`, margin, cursorY);
 
-      doc.save(`GFA_Safeguarding_Full_Content_${t.locale.toUpperCase()}.pdf`);
+      doc.save(`GFA_Safeguarding_${t.locale.toUpperCase()}.pdf`);
     } catch (error) {
       console.error("PDF Generation failed:", error);
     } finally {
@@ -206,10 +183,10 @@ const Safeguarding: React.FC = () => {
                 disabled={isGenerating}
                 className="bg-white text-gfa-black px-10 py-5 font-black uppercase text-xs tracking-[0.2em] hover:bg-gfa-gold transition-all rounded shadow-2xl flex items-center gap-3 group disabled:opacity-50"
                >
-                 <span>{isGenerating ? '⏳' : '📥'}</span> {isGenerating ? 'Generating Full PDF...' : sg.pillars.p3.cta.split('/')[0]}
+                 <span>{isGenerating ? '⏳' : '📥'}</span> {isGenerating ? 'Generating...' : sg.pillars.p3.cta}
                </button>
                <Link to="/reporting" className="bg-red-600 text-white px-10 py-5 font-black uppercase text-xs tracking-[0.2em] hover:bg-red-700 transition-all rounded shadow-2xl">
-                 🚩 {sg.pillars.p3.cta.split('/')[1]}
+                 🚩 {t.nav.certGov.reporting}
                </Link>
             </div>
           </div>
@@ -256,7 +233,7 @@ const Safeguarding: React.FC = () => {
               </p>
            </div>
            <Link to="/reporting" className="btn-gold bg-red-600 text-white border-none hover:bg-red-700 font-black uppercase text-xs tracking-[0.3em] py-5">
-             🚩 {sg.pillars.p4.cta.split('/')[0]}
+             🚩 {t.nav.certGov.reporting}
            </Link>
         </div>
         
@@ -286,7 +263,7 @@ const Safeguarding: React.FC = () => {
            </div>
            <div className="mt-12 pt-8 border-t border-white/5">
              <Link to="/reporting" className="text-xs text-gfa-gold font-black uppercase tracking-[0.3em] hover:underline">
-               {sg.pillars.p4.cta.split('/')[1]} →
+               {sg.pillars.p4.cta} →
              </Link>
            </div>
         </div>
