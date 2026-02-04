@@ -45,9 +45,13 @@
                         'grid-2': '16px',
                         'grid-3': '24px',
                         'grid-4': '32px',
+                        'grid-5': '40px',
                         'grid-6': '48px',
+                        'grid-8': '64px',
                         'grid-10': '80px',
+                        'grid-12': '96px',
                         'grid-16': '128px',
+                        'grid-20': '160px',
                     }
                 }
             }
@@ -55,6 +59,7 @@
     </script>
     <style>
         :root {
+          /* Colors */
           --bg: #07090c;
           --text: #e9eef5;
           --muted: #a9b3c1;
@@ -62,18 +67,48 @@
           --gold-3: #D4AF37;
           --gold-4: #F5E6A8;
           
-          --h1-size: clamp(40px, 6vw, 64px);
-          --h2-size: clamp(28px, 4vw, 40px);
+          /* Typography Rules */
+          --h1-size: clamp(48px, 6vw, 64px);
+          --h1-lh: 1.1;
+          --h1-weight: 700;
+          --h1-ls: 0.06em;
+          
+          --h2-size: clamp(32px, 4vw, 40px);
+          --h2-lh: 1.2;
+          --h2-weight: 650;
+          --h2-ls: 0.04em;
+          
+          --h3-size: clamp(22px, 3vw, 28px);
+          --h3-lh: 1.3;
+          --h3-weight: 600;
+          --h3-ls: 0.02em;
+          
+          --h4-size: 20px;
+          --h4-lh: 1.35;
+          --h4-weight: 600;
+          
           --body-size: 16px;
+          --body-lh: 1.7;
+          --body-weight: 400;
+          
+          --small-size: 14px;
+          --small-lh: 1.6;
+          
+          --micro-size: 12px;
+          --micro-lh: 1.4;
         }
 
         body {
             background-color: var(--bg);
             color: var(--text);
             font-family: 'Inter', 'Noto Sans SC', sans-serif;
+            font-size: var(--body-size);
+            line-height: var(--body-lh);
+            font-weight: var(--body-weight);
             -webkit-font-smoothing: antialiased;
         }
 
+        /* Institutional Luxury Styles */
         .gold {
           background: linear-gradient(90deg, var(--gold-2), var(--gold-3), var(--gold-4), var(--gold-3), var(--gold-2));
           -webkit-background-clip: text;
@@ -82,70 +117,59 @@
           text-shadow: 0 0 18px rgba(212,175,55,0.08);
         }
 
+        @keyframes goldShimmer {
+          0% { background-position: 0% 50%; }
+          100% { background-position: 200% 50%; }
+        }
         .gold-shimmer {
           background-size: 200% 200%;
           animation: goldShimmer 8s ease-in-out infinite;
         }
-        @keyframes goldShimmer { 0% { background-position: 0% 50%; } 100% { background-position: 200% 50%; } }
 
         .btn-gold {
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          height: 48px;
-          padding: 0 28px;
-          font-weight: 800;
-          font-size: 11px;
-          letter-spacing: 0.2em;
-          text-transform: uppercase;
+          height: 52px;
+          padding: 0 32px;
+          font-weight: 700;
+          letter-spacing: 0.04em;
           background: linear-gradient(135deg, var(--gold-2), var(--gold-3), var(--gold-4));
           color: #07090c;
-          border-radius: 2px;
-          transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+          border-radius: 4px;
+          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .btn-gold:hover {
           transform: translateY(-2px);
-          box-shadow: 0 10px 30px rgba(212,175,55,0.3);
+          box-shadow: 0 12px 32px rgba(212,175,55,0.25);
           filter: brightness(1.1);
         }
 
-        h1 { font-family: 'Cinzel', serif; font-size: var(--h1-size); font-weight: 900; letter-spacing: 0.08em; }
-        h2 { font-family: 'Cinzel', serif; font-size: var(--h2-size); font-weight: 700; letter-spacing: 0.06em; }
+        h1 { font-family: 'Cinzel', serif; font-size: var(--h1-size); line-height: var(--h1-lh); font-weight: var(--h1-weight); letter-spacing: var(--h1-ls); }
+        h2 { font-family: 'Cinzel', serif; font-size: var(--h2-size); line-height: var(--h2-lh); font-weight: var(--h2-weight); letter-spacing: var(--h2-ls); }
+        h3 { font-family: 'Montserrat', sans-serif; font-size: var(--h3-size); line-height: var(--h3-lh); font-weight: var(--h3-weight); letter-spacing: var(--h3-ls); }
+        h4 { font-family: 'Montserrat', sans-serif; font-size: var(--h4-size); line-height: var(--h4-lh); font-weight: var(--h4-weight); }
+        
+        .small-text { font-size: var(--small-size); line-height: var(--small-lh); }
+        .micro-text { font-size: var(--micro-size); line-height: var(--micro-lh); }
 
         .glass-panel {
-            background: rgba(21, 24, 29, 0.7);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(212, 175, 55, 0.12);
+            background: rgba(21, 24, 29, 0.8);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            padding: 32px;
+            border-radius: 8px;
         }
 
         .hero-mesh {
             background-image: 
-                radial-gradient(circle at 10% 20%, rgba(212,175,55,0.04) 0%, transparent 40%),
-                radial-gradient(circle at 90% 80%, rgba(212,175,55,0.03) 0%, transparent 40%);
+                radial-gradient(circle at 15% 20%, rgba(212,175,55,0.06) 0%, transparent 40%),
+                radial-gradient(circle at 85% 80%, rgba(212,175,55,0.04) 0%, transparent 40%);
         }
-
-        /* Smooth Nav Transitions */
-        .nav-float {
-            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .nav-float.scrolled {
-            transform: translateY(12px);
-            max-width: 95%;
-            border-radius: 999px;
-            margin: 0 auto;
-            border: 1px solid rgba(212, 175, 55, 0.2);
-            box-shadow: 0 10px 40px rgba(0,0,0,0.4);
-        }
-
-        /* Mobile Menu Dashboard Entrance */
-        .mobile-item-enter {
-            animation: slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-            opacity: 0;
-        }
-        @keyframes slideUp {
-            from { transform: translateY(30px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
+        
+        /* Grid Spacing Utility Classes */
+        .section-gap { padding-top: 120px; padding-bottom: 120px; }
+        .module-gap { margin-bottom: 80px; }
     </style>
 <script type="importmap">
 {
