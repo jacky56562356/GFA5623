@@ -1,3 +1,4 @@
+
 import React, { useState, createContext, useContext, useEffect } from 'react';
 import { HashRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
 import { Locale } from './types';
@@ -36,173 +37,171 @@ export const useLocale = () => useContext(LanguageContext);
 const Navbar = () => {
   const { locale, setLocale, t } = useLocale();
   const [isOpen, setIsOpen] = useState(false);
-  const [isCertOpen, setIsCertOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const { pathname } = useLocation();
 
-  // Consolidated Navigation Menu
-  const mainNavLinks = [
-    { path: '/', label: t.nav.home },
-    { path: '/about', label: t.nav.about },
-    { path: '/support', label: t.nav.support },
-    { path: '/casting', label: t.nav.casting },
-    { path: '/membership', label: t.nav.membership },
-    { path: '/partners', label: t.nav.partners },
-    { path: '/events', label: t.nav.events },
+  const navItems = [
+    { path: '/about', label: t.nav.about, icon: '🏛️' },
+    { path: '/support', label: t.nav.support, icon: '🌱' },
+    { path: '/casting', label: t.nav.casting, icon: '🎬' },
+    { path: '/membership', label: t.nav.membership, icon: '🎫' },
+    { path: '/partners', label: t.nav.partners, icon: '🤝' },
+    { path: '/events', label: t.nav.events, icon: '🏆' },
   ];
 
-  const certGovLinks = [
-    { path: '/certification', label: t.nav.certGov.overview },
-    { path: '/verify', label: t.nav.certGov.verify },
-    { path: '/safeguarding', label: t.nav.certGov.safeguarding },
-    { path: '/governance', label: t.nav.certGov.governance },
-    { path: '/standards', label: t.nav.certGov.standards },
-    { path: '/transparency', label: t.nav.certGov.transparency },
-    { path: '/directory', label: t.nav.certGov.directory },
-    { path: '/reporting', label: t.nav.certGov.reporting },
-  ];
-
-  const languages = [
-    { code: Locale.EN, label: t.language.en },
-    { code: Locale.ZH, label: t.language.zh },
-    { code: Locale.ES, label: t.language.es },
-    { code: Locale.FR, label: t.language.fr },
-    { code: Locale.IT, label: t.language.it },
+  const quickTools = [
+    { path: '/verify', label: t.nav.certGov.verify, icon: '🛡️' },
+    { path: '/directory', label: t.nav.certGov.directory, icon: '📂' },
+    { path: '/reporting', label: t.nav.certGov.reporting, icon: '🚩' },
   ];
 
   useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 40);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
     setIsOpen(false);
-    setIsCertOpen(false);
     window.scrollTo(0, 0);
   }, [pathname]);
 
-  // Lock body scroll when mobile menu is open
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
+    document.body.style.overflow = isOpen ? 'hidden' : 'unset';
   }, [isOpen]);
 
-  const toggleMenu = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    setIsOpen(!isOpen);
-  };
-
-  const closeMenu = () => {
-    setIsOpen(false);
-    setIsCertOpen(false);
-  };
+  const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <nav className="fixed w-full z-50 bg-gfa-black/95 backdrop-blur-xl border-b border-gfa-gold/20 select-none">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="flex justify-between items-center h-24">
-          <Link to="/" onClick={closeMenu} className="flex items-center gap-4 group">
+    <>
+      {/* Floating Navbar */}
+      <nav className={`fixed top-0 left-0 right-0 z-[110] nav-float ${scrolled ? 'scrolled' : 'bg-gfa-black/60 backdrop-blur-md border-b border-white/5'}`}>
+        <div className={`max-w-7xl mx-auto px-6 h-16 md:h-20 flex items-center justify-between`}>
+          {/* Logo */}
+          <Link to="/" onClick={() => setIsOpen(false)} className="flex items-center gap-3">
             <img 
               src="https://i.ibb.co/B582n2Dk/1755827874220993959.png" 
-              alt={t.meta.siteName} 
-              className="h-16 w-auto object-contain transition-transform group-hover:scale-110 drop-shadow-[0_0_15px_rgba(212,175,55,0.3)]"
+              alt="GFA" 
+              className="h-8 md:h-10 w-auto drop-shadow-lg"
             />
             <div className="flex flex-col">
-              <span className="text-3xl font-black gold gold-shimmer tracking-tighter leading-none">GFA</span>
-              <span className="text-[10px] tracking-[0.2em] text-gfa-gray uppercase font-bold mt-1 opacity-80">{t.meta.siteName}</span>
+              <span className="text-xl md:text-2xl font-black gold tracking-tighter leading-none">GFA</span>
+              <span className="text-[7px] tracking-[0.4em] text-gfa-gray uppercase font-black opacity-60">Alliance</span>
             </div>
           </Link>
 
-          {/* Desktop Links */}
-          <div className="hidden lg:flex items-center space-x-6">
-            <Link to="/" className={`text-xs font-bold uppercase tracking-widest transition-colors hover:text-gfa-gold ${pathname === '/' ? 'text-gfa-gold' : 'text-gfa-gray'}`}>
-              {t.nav.home}
-            </Link>
-
-            <div className="relative group" onMouseEnter={() => setIsCertOpen(true)} onMouseLeave={() => setIsCertOpen(false)}>
-              <button className={`text-xs font-bold uppercase tracking-widest flex items-center gap-1 transition-colors ${certGovLinks.some(l => pathname === l.path) ? 'text-gfa-gold' : 'text-gfa-gray hover:text-gfa-gold'}`}>
-                {t.nav.certification} <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-              </button>
-              {isCertOpen && (
-                <div className="absolute top-full left-0 bg-gfa-darkGray border border-gfa-gold/20 py-4 w-64 shadow-2xl animate-fade-in">
-                  {certGovLinks.map(gl => (
-                    <Link key={gl.path} to={gl.path} className={`block px-6 py-2 text-xs font-bold uppercase tracking-widest hover:text-gfa-gold hover:bg-white/5 transition-colors ${pathname === gl.path ? 'text-gfa-gold bg-white/5' : 'text-gfa-gray'}`}>
-                      {gl.label}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            {mainNavLinks.slice(1).map(l => (
-              <Link key={l.path} to={l.path} className={`text-xs font-bold uppercase tracking-widest transition-colors hover:text-gfa-gold ${pathname === l.path ? 'text-gfa-gold' : 'text-gfa-gray'}`}>
-                {l.label}
+          {/* Desktop Nav */}
+          <div className="hidden lg:flex items-center space-x-10">
+            {navItems.map(item => (
+              <Link 
+                key={item.path} 
+                to={item.path} 
+                className={`text-[10px] font-black uppercase tracking-[0.25em] transition-all hover:text-gfa-gold ${pathname === item.path ? 'text-gfa-gold' : 'text-gfa-gray'}`}
+              >
+                {item.label}
               </Link>
             ))}
-          </div>
-
-          <div className="flex items-center space-x-4">
+            <div className="h-4 w-px bg-white/10 mx-2"></div>
             <select 
               value={locale} 
               onChange={(e) => setLocale(e.target.value as Locale)}
-              className="bg-transparent border border-gfa-gold/30 text-xs text-gfa-gold font-bold px-2 py-1 focus:outline-none cursor-pointer rounded-sm"
+              className="bg-transparent text-[10px] text-gfa-gold font-black uppercase tracking-widest focus:outline-none cursor-pointer"
             >
-              {languages.map(lang => <option key={lang.code} value={lang.code} className="bg-gfa-black">{lang.label}</option>)}
+              <option value={Locale.EN}>EN</option>
+              <option value={Locale.ZH}>ZH</option>
+              <option value={Locale.ES}>ES</option>
+              <option value={Locale.FR}>FR</option>
+              <option value={Locale.IT}>IT</option>
             </select>
-            
-            {/* Improved Mobile Menu Toggle Button */}
-            <button 
-              className="lg:hidden text-gfa-gold p-2 relative z-[60]" 
-              onClick={toggleMenu}
-              aria-label="Toggle Menu"
-            >
-              <svg className="w-10 h-10 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
-              </svg>
+          </div>
+
+          {/* Mobile Right Controls - Fixed Visibility */}
+          <div className="flex lg:hidden items-center gap-4">
+            <button onClick={toggleMenu} className="w-10 h-10 flex flex-col justify-center items-center relative z-[120] text-gfa-gold">
+               <span className={`block w-6 h-0.5 bg-current transition-all duration-300 ${isOpen ? 'rotate-45 translate-y-0.5' : '-translate-y-1.5'}`}></span>
+               <span className={`block w-6 h-0.5 bg-current transition-all duration-300 ${isOpen ? 'opacity-0' : 'opacity-100'}`}></span>
+               <span className={`block w-6 h-0.5 bg-current transition-all duration-300 ${isOpen ? '-rotate-45 -translate-y-0.5' : 'translate-y-1.5'}`}></span>
             </button>
           </div>
         </div>
-      </div>
-      
-      {/* Mobile Navigation Menu Overlay */}
+      </nav>
+
+      {/* Mobile Dashboard Menu */}
       {isOpen && (
-        <div className="lg:hidden fixed inset-0 bg-gfa-black z-50 overflow-y-auto pt-24 pb-32 animate-fade-in">
-          <div className="p-8 space-y-6">
-            {mainNavLinks.map(l => (
-              <Link 
-                key={l.path} 
-                to={l.path} 
-                onClick={closeMenu}
-                className={`block text-2xl font-black uppercase tracking-[0.2em] border-b border-white/5 pb-5 ${pathname === l.path ? 'text-gfa-gold' : 'text-white/80'}`}
-              >
-                {l.label}
-              </Link>
-            ))}
+        <div className="fixed inset-0 z-[100] bg-gfa-black/98 backdrop-blur-3xl pt-24 pb-32 px-6 overflow-y-auto animate-fade-in lg:hidden">
+          <div className="max-w-md mx-auto space-y-12">
             
-            <div className="mt-12 bg-gfa-darkGray/60 p-8 rounded-xl border border-gfa-gold/15 shadow-2xl">
-              <div className="text-[10px] text-gfa-gold font-black uppercase tracking-[0.4em] mb-8 border-l-4 border-gfa-gold pl-4">
-                {t.nav.certification}
-              </div>
-              <div className="grid grid-cols-1 gap-6">
-                {certGovLinks.map(gl => (
-                  <Link 
-                    key={gl.path} 
-                    to={gl.path} 
-                    onClick={closeMenu}
-                    className={`text-sm font-black uppercase tracking-widest transition-colors ${pathname === gl.path ? 'text-gfa-gold' : 'text-white/50 hover:text-white'}`}
-                  >
-                    {gl.label}
-                  </Link>
-                ))}
-              </div>
+            {/* Header / Brand */}
+            <div className="mobile-item-enter text-center" style={{ animationDelay: '0.1s' }}>
+              <div className="text-[10px] text-gfa-gold font-black uppercase tracking-[0.6em] mb-2">Institutional Portal</div>
+              <div className="h-px w-20 bg-gfa-gold/30 mx-auto"></div>
             </div>
-            
-            <div className="pt-10">
-              <Link to="/contact" onClick={closeMenu} className="block w-full py-6 text-center bg-gfa-gold text-gfa-black font-black uppercase text-sm tracking-[0.4em] rounded-md shadow-2xl transition-transform active:scale-95">
-                {t.nav.contact}
-              </Link>
+
+            {/* Main Navigation Grid */}
+            <div className="grid grid-cols-2 gap-3 mobile-item-enter" style={{ animationDelay: '0.2s' }}>
+              {navItems.map((item, i) => (
+                <Link 
+                  key={item.path} 
+                  to={item.path} 
+                  onClick={() => setIsOpen(false)}
+                  className="glass-card p-6 rounded-xl flex flex-col items-center gap-3"
+                >
+                  <span className="text-2xl grayscale">{item.icon}</span>
+                  <span className="text-[9px] font-black uppercase tracking-[0.2em] text-white/70 text-center leading-tight">
+                    {item.label}
+                  </span>
+                </Link>
+              ))}
+            </div>
+
+            {/* Quick Tools Dashboard */}
+            <div className="mobile-item-enter space-y-4" style={{ animationDelay: '0.4s' }}>
+               <h4 className="text-[9px] text-white/40 font-black uppercase tracking-[0.5em] pl-2 mb-4">Registry & Compliance</h4>
+               <div className="grid grid-cols-1 gap-2">
+                 {quickTools.map(tool => (
+                   <Link 
+                    key={tool.path} 
+                    to={tool.path} 
+                    onClick={() => setIsOpen(false)}
+                    className="flex items-center justify-between p-5 bg-white/5 border border-white/5 rounded-xl active:bg-gfa-gold/10 transition-colors"
+                   >
+                     <div className="flex items-center gap-4">
+                       <span className="text-xl">{tool.icon}</span>
+                       <span className="text-xs font-bold uppercase tracking-widest text-white/80">{tool.label}</span>
+                     </div>
+                     <span className="text-gfa-gold text-lg">›</span>
+                   </Link>
+                 ))}
+               </div>
+            </div>
+
+            {/* Language Selector */}
+            <div className="mobile-item-enter pt-6 flex justify-center gap-8 border-t border-white/5" style={{ animationDelay: '0.6s' }}>
+              {[Locale.EN, Locale.ZH, Locale.ES, Locale.FR, Locale.IT].map(lang => (
+                <button 
+                  key={lang}
+                  onClick={() => setLocale(lang)}
+                  className={`text-[10px] font-black uppercase tracking-widest p-2 transition-colors ${locale === lang ? 'text-gfa-gold' : 'text-white/20'}`}
+                >
+                  {lang}
+                </button>
+              ))}
+            </div>
+
+            {/* Primary Action */}
+            <div className="mobile-item-enter pt-4" style={{ animationDelay: '0.7s' }}>
+               <Link 
+                to="/contact" 
+                onClick={() => setIsOpen(false)}
+                className="btn-gold w-full flex items-center justify-center gap-3 rounded-full shadow-2xl"
+               >
+                 <span>✉️</span> {t.nav.contact}
+               </Link>
             </div>
           </div>
         </div>
       )}
-    </nav>
+    </>
   );
 };
 
@@ -211,42 +210,38 @@ const Footer = () => {
   const currentYear = new Date().getFullYear().toString();
   return (
     <footer className="bg-gfa-black border-t border-gfa-gold/10 pt-24 pb-12">
-      <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
         <div className="md:col-span-2">
-          <Link to="/" className="flex items-center gap-6 mb-8 group">
-            <img 
-              src="https://i.ibb.co/B582n2Dk/1755827874220993959.png" 
-              alt={t.meta.siteName} 
-              className="h-24 w-auto object-contain transition-transform group-hover:scale-105 drop-shadow-[0_0_20px_rgba(212,175,55,0.4)]"
-            />
+          <Link to="/" className="flex items-center gap-6 mb-8">
+            <img src="https://i.ibb.co/B582n2Dk/1755827874220993959.png" alt="GFA" className="h-16 w-auto" />
             <div className="flex flex-col">
               <span className="text-3xl font-black gold leading-none tracking-tighter">GFA</span>
-              <span className="text-[10px] tracking-[0.2em] text-gfa-gray uppercase font-bold mt-1 opacity-60">{t.meta.siteName}</span>
+              <span className="text-[8px] tracking-[0.3em] text-gfa-gray uppercase font-bold mt-1 opacity-60">Alliance</span>
             </div>
           </Link>
-          <p className="text-gfa-gray text-xs leading-relaxed max-w-sm uppercase tracking-wider font-medium opacity-70">
+          <p className="text-gfa-gray text-[10px] leading-relaxed max-w-xs uppercase tracking-widest font-bold opacity-40">
             {t.footer.desc}
           </p>
         </div>
         <div>
-          <h4 className="text-white text-xs font-black uppercase tracking-widest mb-6 border-l-2 border-gfa-gold pl-3">{t.nav.certGov.governance}</h4>
-          <div className="space-y-4 text-xs font-bold uppercase tracking-widest text-gfa-gray">
+          <h4 className="text-white text-[10px] font-black uppercase tracking-widest mb-8">{t.nav.certGov.governance}</h4>
+          <div className="space-y-4 text-[10px] font-bold uppercase tracking-widest text-gfa-gray">
             <Link to="/governance" className="block hover:text-gfa-gold transition-colors">{t.nav.certGov.governance}</Link>
             <Link to="/standards" className="block hover:text-gfa-gold transition-colors">{t.nav.certGov.standards}</Link>
             <Link to="/safeguarding" className="block hover:text-gfa-gold transition-colors">{t.nav.certGov.safeguarding}</Link>
           </div>
         </div>
         <div>
-          <h4 className="text-white text-xs font-black uppercase tracking-widest mb-6 border-l-2 border-gfa-gold pl-3">{t.footer.verification}</h4>
-          <div className="space-y-4 text-xs font-bold uppercase tracking-widest text-gfa-gray">
+          <h4 className="text-white text-[10px] font-black uppercase tracking-widest mb-8">Resources</h4>
+          <div className="space-y-4 text-[10px] font-bold uppercase tracking-widest text-gfa-gray">
             <Link to="/verify" className="block hover:text-gfa-gold transition-colors">{t.footer.verification}</Link>
             <Link to="/privacy" className="block hover:text-gfa-gold transition-colors">{t.footer.privacy}</Link>
             <Link to="/terms" className="block hover:text-gfa-gold transition-colors">{t.footer.terms}</Link>
           </div>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto px-4 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
-        <span className="text-xs font-bold uppercase tracking-widest text-gfa-gray/50">
+      <div className="max-w-7xl mx-auto px-6 pt-10 border-t border-white/5 text-center md:text-left">
+        <span className="text-[8px] font-black uppercase tracking-[0.5em] text-gfa-gray/30">
           {t.footer.copyright.replace('{year}', currentYear)}
         </span>
       </div>
@@ -263,7 +258,7 @@ const App = () => {
       <HashRouter>
         <div className="min-h-screen bg-gfa-black text-white selection:bg-gfa-gold selection:text-gfa-black">
           <Navbar />
-          <main className="pt-24 min-h-[calc(100vh-24rem)]">
+          <main className="min-h-[calc(100vh-24rem)]">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
