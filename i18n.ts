@@ -1,32 +1,31 @@
-
 import { Locale, Translation } from './types';
 
 const EN_JSON: Translation = {
   "meta": {
     "siteName": "GFA Global Film Alliance",
-    "tagline": "Independent Certification • Global Governance • Talent Protection"
+    "tagline": "California Youth Protection • DLSE Bond Verification • Industry Oversight"
   },
   "nav": {
     "home": "Home",
-    "about": "Authority",
-    "certification": "Certification & Governance",
+    "about": "Supervision",
+    "certification": "Compliance & Bond",
     "certGov": {
       "overview": "Overview",
-      "verify": "Verify Certificate",
-      "governance": "Governance & Principles",
-      "standards": "Authorization Standards",
-      "transparency": "Pricing Transparency",
+      "verify": "Bond Verification",
+      "governance": "Oversight Principles",
+      "standards": "Vetting Standards",
+      "transparency": "Bond Transparency",
       "protection": "Youth Protection",
-      "directory": "Authorized Directory",
-      "reporting": "Report Misconduct"
+      "directory": "Bonded Directory",
+      "reporting": "Report Violation"
     },
     "support": "Support Programs",
     "casting": "Global Talent",
     "membership": "Membership",
     "partners": "Partners",
-    "events": "Authorized Events",
-    "contact": "Contact / Join",
-    "verify": "Verify ID",
+    "events": "Events",
+    "contact": "Contact",
+    "verify": "Verify Bond",
     "policies": "Policies",
     "language": "Language"
   },
@@ -41,287 +40,286 @@ const EN_JSON: Translation = {
     "comingSoon": "Coming soon",
     "required": "Required",
     "optional": "Optional",
-    "loading": "Verifying...",
-    "searchRegistry": "Search Registry"
+    "loading": "Checking Official Records...",
+    "searchRegistry": "Official Bond Lookup"
   },
   "home": {
     "hero": {
       "title": "GLOBAL FILM ALLIANCE",
-      "subtitle": "Official • Certified • Trusted",
-      "body": "GFA establishes the global benchmark for safety, transparency, and professional ethics in the film industry. We protect talent and certify institutional integrity.",
-      "ctaPrimary": "Apply for Certification",
-      "ctaSecondary": "View Governance",
-      "badge": "Independent Global Standards • Est. 2024",
-      "tags": { "cert": "Industry Authority", "gov": "Governance", "prot": "Protection" }
+      "subtitle": "California Standards • Youth Protection",
+      "body": "GFA assists parents and creators in verifying legal compliance. We enforce the California $50,000 bond requirement and audit agency authenticity to eliminate shadow operations.",
+      "ctaPrimary": "Verify Bond Voucher",
+      "ctaSecondary": "Legal Framework",
+      "badge": "Statutory Oversight • California DLSE Standards",
+      "tags": { "cert": "Bond Oversight", "gov": "Compliance", "prot": "Youth Safety" }
     },
     "trust": {
-      "badge": "Institutional Mandate",
-      "title": "The Four Iron Rules of GFA.",
-      "body": "Absolute transparency, youth protection first, anti-fraud enforcement, and full traceability. These principles define every certification we issue.",
-      "passportTitle": "GFA Trust Profile",
-      "passportSubtitle": "Credential Verification Standard",
-      "auditItems": ["Transparency Audit", "Safety Compliance", "Ethical Pricing", "Identity Verification"]
+      "badge": "Regulatory Liaison",
+      "title": "The $50,000 Statutory Requirement.",
+      "body": "In California, Talent Agencies and Fee-Related Schools must maintain a $50,000 bond with the Labor Commissioner (DLSE). GFA provides the portal to verify these credentials instantly.",
+      "passportTitle": "Parental Toolkit",
+      "passportSubtitle": "Verify Institutional Legitimacy",
+      "auditItems": ["DIR/DLSE Bond Verified", "Agency License Active", "Work Permit Compliance", "Physical Office Audited"]
     },
     "stats": {
       "certifiedTalents": "Certified Registry",
-      "verifiedInstitutions": "Audit-Passed Entities",
+      "verifiedInstitutions": "Bonded Entities",
       "supportedProjects": "Impact Outcomes",
       "partnerMerchants": "Authorized Partners"
     },
     "pillars": {
-      "title": "Five Pillars of Global Cinematic Integrity",
-      "subtitle": "Establishing the standards for connection, protection, and growth.",
-      "p1Title": "Certification Authority",
-      "p1Body": "Official vetting of auditions, training programs, agencies, and productions.",
-      "p2Title": "Talent Protection",
-      "p2Body": "Safety protocols, anti-fraud tools, and mandatory minor protection mechanisms.",
-      "p3Title": "Industry Matching",
-      "p3Body": "Connecting verified talent to productions and agencies to parents.",
+      "title": "California Compliance Pillars",
+      "subtitle": "Connecting the film industry to State Government safety and financial standards.",
+      "p1Title": "Krekorian Act Vetting",
+      "p1Body": "Ensuring training schools and agencies comply with the Krekorian Talent Services Prevention Act.",
+      "p2Title": "DLSE Bond Supervision",
+      "p2Body": "Monitoring the mandatory $50,000 state guarantee fund status for all agencies and schools.",
+      "p3Title": "Parental Resource Hub",
+      "p3Body": "Providing a transparent system for parents to verify talent managers, agents, and teachers.",
       "p4Title": "Global Governance",
       "p4Body": "Standardized pricing, whitepapers, and industry-wide data monitoring.",
       "p5Title": "Impact & Creative Support",
       "p5Body": "Support for independent film, graduate works, and the Golden Feather Awards.",
-      "explore": "Explore Pillar"
+      "explore": "Explore System"
     },
     "closing": {
-      "title": "Built For Integrity.",
-      "body": "Official authority. Verified protection. Professional access.",
-      "cta": "Join the Alliance"
+      "title": "Protecting Minors.",
+      "body": "Verifying $50,000 Bond Compliance. Auditing Operational Authenticity.",
+      "cta": "Official DIR Search"
     }
   },
   "about": {
-    "title": "Institutional Authority",
+    "title": "California Supervision",
     "mandate": {
-      "title": "Sovereign Industry Mandate",
-      "body": "The Global Film Alliance (GFA) operates as a sovereign regulatory body for the cinematic arts. Our primary mandate is to consolidate fragmented local standards into a unified global framework for institutional vetting, identity verification, and professional ethics."
+      "title": "Assisting the State of California",
+      "body": "GFA acts as an independent liaison assisting the CA Labor Commissioner in monitoring industry compliance. Our core focus is the mandatory $50,000 guarantee fund requirement (Krekorian Act)."
     },
     "strategy": {
-      "title": "Core Governance Strategy",
-      "body": "We envision a global film industry where institutional trust is the default. By 2030, GFA aims to become the world's primary validator, ensuring that every professional interaction is backed by an encrypted audit trail and a zero-tolerance policy against fraud."
+      "title": "Bond Verification & Safety",
+      "body": "We provide technical auditing services to verify the authenticity of institutional premises and manage the lookup system for state-mandated guarantee fund vouchers."
     },
     "coreFunctions": {
-      "title": "The Three Pillars of GFA Authority",
+      "title": "GFA Supervisory Scope",
       "items": [
-        { "title": "Industry Authority", "body": "Official accreditation of production units and agencies. We establish the 'Gold Standard' for global project legitimacy and institutional vetting." },
-        { "title": "Governance System", "body": "Regulation of industry pricing models and workflow standards. We publish whitepapers to prevent exploitation and monitor global market ethics." },
-        { "title": "Talent Protection", "body": "Enforcement of safety protocols and legal safeguards. We provide a sovereign registry that protects talent identity and creative rights." }
+        { "title": "DLSE Compliance", "body": "Acting as the technical bridge to verify California Labor Commissioner (DLSE) licensing and bonding." },
+        { "title": "Physical Site Vetting", "body": "Performing on-site audits to ensure agencies are authentic operations and not shadow companies." },
+        { "title": "Voucher Management", "body": "Supervising unique Bond IDs to confirm that the $50,000 state requirement is fulfilled." }
       ]
     },
     "youthProtection": {
-      "title": "Youth Arts Training Institutional Certification",
-      "subtitle": "Safeguarding the Future of Global Cinema",
-      "intro": "The protection of minor rights is the most sacred protocol within the GFA ecosystem. We implement a multi-layered certification process for all Youth Arts Training Institutions to ensure that every young artist receives full legal and safety protection.",
+      "title": "California Youth Protection",
+      "subtitle": "State-Aligned Compliance for Minor Safety",
+      "intro": "Protecting minors is our absolute priority. California law requires any school or agency charging a fee to have a verified $50,000 bond.",
       "pillars": [
-        { "title": "Legal Compliance & Safety Audit", "body": "Mandatory vetting of business legitimacy, venue physical security, and adherence to international minor safety laws." },
-        { "title": "Faculty Vetting & Ethics", "body": "Compulsory criminal record checks and credential verification for all instructors to prevent predatory behavior and false branding." },
-        { "title": "Anti-Exploitation Protocols", "body": "Prohibition of 'pay-to-debut' schemes. Enforcement of age-appropriate curriculum standards and non-harmful content creation." },
-        { "title": "Guardian Transparency Rights", "body": "Ensuring mandatory guardian observation access and transparent, GFA-audited refund policies for all training programs." }
+        { "title": "$50,000 DLSE Bond", "body": "Verification of the mandatory state guarantee fund as the primary financial protection for talent and parents." },
+        { "title": "Krekorian Act Audit", "body": "Ensuring no illegal fees are charged for auditions or basic agency representation." },
+        { "title": "Background Vetting", "body": "Assisting the state in background checks for faculty to ensure safe environments for minors." },
+        { "title": "Work Permit Support", "body": "Ensuring all child actors hold a valid California Entertainment Work Permit." }
       ]
     },
     "accountability": {
-      "title": "Global Accountability Ledger",
-      "body": "As a non-profit authority, GFA is governed by an independent board of legal and cinematic experts. Every audit and certification is recorded on our public integrity ledger for global verification.",
+      "title": "Transparency & Verification",
+      "body": "GFA maintains a ledger of bond statuses to assist parents in avoiding fraud. Every bond voucher can be independently verified.",
       "items": [
-        { "title": "Registry Verification", "label": "Real-time compliance lookups.", "icon": "📋" },
-        { "title": "Regulatory Arbitration", "label": "Direct path for dispute resolution.", "icon": "⚖️" },
-        { "title": "Transparency Index", "label": "Public auditing of institutional fees.", "icon": "📊" }
+        { "title": "Agency Lookup", "label": "Verify DLSE Licenses.", "icon": "📜" },
+        { "title": "Bond Search", "label": "Search $50k Bond Pool.", "icon": "💰" },
+        { "title": "Permit Check", "label": "Verify Work Permits.", "icon": "🎭" }
       ]
     }
   },
-  "certification": {
-    "title": "Certification & Authority",
-    "subtitle": "Official. Certified. Trusted.",
-    "typesTitle": "Authorization Categories",
-    "types": [
-      "Certified Audition",
-      "Certified Training Provider",
-      "Certified Agency / Agent",
-      "Certified Event / Competition",
-      "Certified Production Unit",
-      "Verified Talent Status"
-    ],
-    "govTitle": "Governance System",
-    "processTitle": "Audit SOP (Standard Operating Procedure)",
-    "processBody": "Application → Triage → Verification → Scoring → Approval → Registry",
-    "valueTitle": "The Four Iron Rules",
-    "valueBullets": [
-      "Public Transparency: All standards, fees, and validity periods are fully disclosed.",
-      "Minor Protection: Mandatory compliance with youth safeguarding and guardian rights.",
-      "Anti-Fraud: Prohibition of hidden fees, bundled charges, or deceptive consumer practices.",
-      "Traceability: All authorized entities must be verifiable and subject to public review."
-    ],
-    "cta": "Apply for Authorization",
-    "verifyCardTitle": "Public Registry",
-    "verifyCardBody": "Validate the official GFA status of any audition, organization, or professional.",
-    "steps": ['Submit Application', 'Initial Compliance Check', 'Background Verification', 'Professional Scoring', 'Correction (If Needed)', 'Approval & Registry', 'Annual Review']
-  },
-  "governance": {
-    "title": "Governance & Policy",
-    "subtitle": "The foundation of institutional trust.",
-    "roleTitle": "Our Role as Governing Body",
-    "roleBody": "GFA acts as an independent authority. We establish pricing caps, audit audition workflows, and publish industry whitepapers to monitor and regulate professional conduct.",
-    "roleTag1": "Policy Enforcement",
-    "roleTag1Desc": "Strict monitoring of authorized fee schedules.",
-    "roleTag2": "Data Supervision",
-    "roleTag2Desc": "Tracking industry trends and compliance rates.",
-    "principlesTitle": "Governing Standards",
-    "principles": [
-      { "title": "Standardized Workflows", "body": "Mandatory audit trails for all recruitment and training activities." },
-      { "title": "Price Governance", "body": "Enforcement of reasonable fee ranges to prevent exploitation." },
-      { "title": "Verified Merit", "body": "Recognition based on certified quality and ethical standards." }
-    ],
-    "policyTitle": "Governance Deliverables",
-    "policyBody": "We provide the industry with technical frameworks to ensure fair operations.",
-    "policyItems": ["Industry Whitepapers", "Standard Pricing Matrix", "Audition Workflow Blueprints"],
-    "policyNote": "Failure to meet governance standards results in immediate status revocation."
-  },
-  "standards": {
-    "title": "Authorization Standards",
-    "subtitle": "Detailed audit forms and technical criteria for GFA recognition.",
-    "catA": {
-      "title": "Certified Auditions",
-      "tag": "Audition SOP",
-      "docsTitle": "Audit Checklist",
-      "docs": ["Authorized Project Letter", "Physical Venue Safety Audit", "Fee Disclosure Statement", "Minor Protection Protocol"],
-      "matrixTitle": "Review SOP",
-      "matrixBody": "1. Phone verification of project leads. 2. Fee cap compliance check. 3. Mystery shopping audit of signup flow. 4. Guardian feedback sampling.",
-      "disqual": "Score ≥ 80 to pass. Fraudulent projects result in permanent blacklist."
-    },
-    "catB": {
-      "title": "Certified Training Providers",
-      "tag": "Education SOP",
-      "sub1": "Faculty Audit",
-      "sub1Items": ["Resume Verifiability", "Professional Portfolio Review", "No False Celebrity Branding"],
-      "sub2": "Contract Safety",
-      "sub2Items": ["Refund Policy Disclosure", "No Forced Equipment Sales", "Guardian Observer Access"],
-      "sub3": "Instructional Integrity",
-      "sub3Body": "Score ≥ 75 to pass. Requires curriculum audit and 3+ student guardian feedback samples."
-    },
-    "catC": {
-      "title": "Certified Agencies & Agents",
-      "tag": "Agency SOP",
-      "discTitle": "Contract Audit",
-      "discBody": "Commission caps (max 20%) and fair termination clauses. No upfront 'sign-on' fees.",
-      "prohibTitle": "Risk Control",
-      "prohibBody": "Mandatory CC to guardians for minor talent. No private 1-on-1 sessions allowed.",
-      "compliance": "Legal review of 2+ active contracts required for approval."
-    },
-    "catD": {
-      "title": "Certified Events & Competitions",
-      "tag": "Event SOP",
-      "critTitle": "Jury & Transparency",
-      "critBody": "Jury list and scoring rubrics must be public. No hidden 'progression fees' or 'pay-to-win' tiers.",
-      "rejTitle": "Financial Audit",
-      "rejBody": "Mandatory disclosure of all upsells (apparel, photography). Random receipt audit conducted."
-    }
-  },
-  "transparency": {
-    "title": "Pricing Transparency",
-    "subtitle": "Fair costs. Anti-overcharging. Global accountability.",
-    "tableTitle": "Authorized Fee Caps (Global Reference)",
-    "tableHeaders": ["Service Type", "Authorized Range", "Tier", "Mandatory Refund", "Audit Status"],
-    "rulesTitle": "Anti-Fraud Standards",
-    "rules": [
-      "Total itemization of all participant costs.",
-      "Prohibition of 'casting-for-fee' schemes.",
-      "Mandatory escrow for deposits over $500."
-    ],
-    "protectionTitle": "Overcharging Protection",
-    "protectionRules": [
-      "Public reporting for price gouging.",
-      "GFA-imposed fine for hidden fees.",
-      "Automatic suspension for billing fraud."
-    ],
-    "enforcementTitle": "Financial Governance",
-    "enforcementItems": ["Receipt Audit", "Escrow Monitoring", "Member Sanctions", "ID Revocation"]
-  },
-  "verify": {
-    "title": "Authority ID Verification",
-    "body": "Enter a GFA ID to verify the status of an audition, institution, or professional.",
-    "form": {
-      "label": "Authority ID",
-      "placeholder": "GFA-AUTH-XXXX",
-      "button": "Verify Registry"
-    },
-    "result": {
-      "valid": "Certified & Official",
-      "expired": "Certification Expired",
-      "suspended": "Suspended for Investigation",
-      "notFound": "Unverified / No Record",
-      "details": "Status: Official • Tier: Certified • Verified: Global Alliance"
-    },
-    "note": "Keywords: Official • Certified • Trusted"
-  },
   "protection": {
-    "title": "Talent Protection & Compliance",
-    "subtitle": "Safety. Protection. Compliance.",
-    "modelTitle": "Guardian Protection Model",
-    "modelBody": "GFA enforces a 'Guardian-First' protocol for all minors. No interaction between minors and production occurs without encrypted, traceable oversight.",
+    "title": "California Protection Hub",
+    "subtitle": "Verifying the $50,000 Bond & Legal Licensing.",
+    "modelTitle": "The California Safety Model",
+    "modelBody": "California law (Krekorian Act) provides strict protections for child actors. GFA assists parents in navigating these regulations to ensure their children are safe, bonded, and legally represented.",
     "modelItems": [
-      "Anti-fraud verification tools",
-      "Legal contract templates",
-      "Parental protection dashboards",
-      "Minor rights safeguards"
+      "DLSE Bond Verification",
+      "Krekorian Act Auditing",
+      "Verified School Directory",
+      "Statutory Audit Filing"
     ],
     "safeguards": [
       { 
-        "title": "Safety Standards", 
+        "title": "Parental Tools", 
         "items": [
-          "No private 1-on-1 auditions",
-          "Verified venue physical safety audit",
-          "Traceable digital communication",
-          "On-set safety compliance monitors"
+          "Check Agency License (DLSE)",
+          "Verify $50k School Bond",
+          "Search Talent Manager IDs",
+          "Entertainment Work Permits"
         ] 
       },
       { 
-        "title": "Protection from Scams", 
+        "title": "Fraud Prevention", 
         "items": [
-          "Anti-overcharging pricing audits",
-          "No 'guaranteed debut' scams",
-          "Mandatory refund policies",
-          "Verified agency credentials"
+          "Audit Audition Legitimacy",
+          "Shadow Agency Warnings",
+          "GFA Transparency Ledger",
+          "Verified Office Tagging"
         ] 
       },
       { 
-        "title": "Legal Compliance", 
+        "title": "Legal Safety", 
         "items": [
-          "Standardized GFA Fair Contracts",
-          "Guardian consent frameworks",
-          "GDPR-K data protection",
-          "IP rights protection for talent"
+          "State-Approved Contracts",
+          "Bond-Guaranteed Refunds",
+          "On-Set Guardian Rights",
+          "Sexual Harassment Audits"
         ] 
       }
     ],
-    "zeroTitle": "Safety Enforcement",
-    "zeroDesc": "GFA maintains a global blacklist. Any breach of safety or protection standards results in immediate revocation and referral to international authorities.",
-    "reportTitle": "Report a Violation",
-    "reportDesc": "Anonymously report unsafe environments or hidden fees.",
-    "reportCta": "Submit Safety Report"
+    "zeroTitle": "California Zero-Tolerance",
+    "zeroDesc": "Any institution failing the $50,000 bond requirement or unlicensed operation is immediately reported to the California Labor Commissioner.",
+    "reportTitle": "Is your Agent/School Legal?",
+    "reportDesc": "Use the official California DIR databases to confirm your agency is licensed and bonded.",
+    "reportCta": "Open CA Gov Registry"
+  },
+  "verify": {
+    "title": "Statutory Verification",
+    "body": "Assisting Parents: Verify California DLSE Bonds and Agency Licenses. Search for registered entities below.",
+    "form": {
+      "label": "GFA Bond ID / State License",
+      "placeholder": "GFA-BOND-XXXX or CA-LICENSE-XXXX",
+      "button": "Verify Status"
+    },
+    "result": {
+      "valid": "Legally Bonded • License Active",
+      "expired": "Status Expired • Action Required",
+      "suspended": "Violation Reported • Bond Frozen",
+      "notFound": "Unverified • Illegal Operation Risk",
+      "details": "Status: Compliant Entity • Bond: $50,000 (DLSE Met) • Audited: GFA/DIR"
+    },
+    "note": "Law Warning: Do not pay for auditions. California law prohibits agencies from charging talent to audition."
+  },
+  "certification": {
+    "title": "California Vetting & Certification",
+    "subtitle": "Assisting the State: Verifying $50,000 Bonds and Entity Authenticity.",
+    "typesTitle": "California Compliance Categories",
+    "types": [
+      "Licensed Talent Agency (DLSE)",
+      "Bonded Talent Manager ($50k)",
+      "Fee-Related School (Bonded)",
+      "Youth Arts Provider",
+      "Audited Production Unit",
+      "Verified Child Talent"
+    ],
+    "govTitle": "Supervisory Oversight",
+    "processTitle": "Admission SOP",
+    "processBody": "Application → $50,000 Bond Audit → DLSE License Vetting → Registry Recording",
+    "valueTitle": "California Statutory Standards",
+    "valueBullets": [
+      "Krekorian Act: Every school must maintain a $50,000 bond for services.",
+      "DLSE Licensing: Agencies must be licensed by the Labor Commissioner.",
+      "Assisting Supervision: GFA audits are submitted for state compliance recording."
+    ],
+    "cta": "Start California Vetting",
+    "verifyCardTitle": "Verify Bond Status",
+    "verifyCardBody": "Search an agency's Bond Voucher to confirm they have met the $50,000 statutory requirement.",
+    "steps": ['DLSE Protocol Submission', 'Bond Deposit Verification', 'Site/Office Audit', 'Authenticity Scoring', 'State Records Filing', 'Official Admission', 'Annual Compliance Review']
+  },
+  "governance": {
+    "title": "Supervisory Governance",
+    "subtitle": "Assisting the state in managing the $50,000 guarantee fund system.",
+    "roleTitle": "GFA Supervisory Mandate",
+    "roleBody": "GFA operates as an independent liaison assisting the state. Our mandate is to supervise the collection and verification of the $50,000 bond for all cinematic organizations.",
+    "roleTag1": "Bond Oversight",
+    "roleTag1Desc": "Supervising the $50k statutory guarantee fund.",
+    "roleTag2": "Entity Vetting",
+    "roleTag2Desc": "Auditing organizational authenticity for state compliance.",
+    "principlesTitle": "Oversight Principles",
+    "principles": [
+      { "title": "State Bond Compliance", "body": "Ensuring the mandatory $50,000 deposit is maintained by all profit-seeking entities." },
+      { "title": "Anti-Fraud Verification", "body": "Assisting the state in identifying and blacklisting 'shadow' agencies without physical premises." },
+      { "title": "Transparent Registry", "body": "Providing a public portal for the verification of bond voucher numbers." }
+    ],
+    "policyTitle": "Governance Deliverables",
+    "policyBody": "Frameworks for transparent industry auditing and bond verification.",
+    "policyItems": ["Bond Voucher Registry", "Entity Authenticity Database", "Statutory Fee Guidelines"],
+    "policyNote": "Non-compliant entities are immediately reported to State Government authorities."
+  },
+  "standards": {
+    "title": "Vetting & Audit Standards",
+    "subtitle": "Technical criteria for $50,000 bond verification and entity authenticity.",
+    "catA": {
+      "title": "Bonded Agencies",
+      "tag": "Statutory SOP",
+      "docsTitle": "Audit Checklist",
+      "docs": ["$50k Bond Deposit Proof", "State Business License", "Physical Premise Lease", "Fair Contract Filing"],
+      "matrixTitle": "Review Protocol",
+      "matrixBody": "1. Confirm bond deposit. 2. Verify physical office. 3. Legal entity authenticity check. 4. State database filing.",
+      "disqual": "Lack of verified bond number results in immediate denial of status."
+    },
+    "catB": {
+      "title": "Bonded Schools",
+      "tag": "Education SOP",
+      "sub1": "Authenticity Vetting",
+      "sub1Items": ["Facility Site Audit", "Faculty Credential Check", "Address Authenticity Search"],
+      "sub2": "Financial Compliance",
+      "sub2Items": ["$50,000 Bond Status", "State Refund Policy Alignment", "Fee Transparency Audit"],
+      "sub3": "Admission Score",
+      "sub3Body": "Score ≥ 85. Requires verified bond ID and active physical location."
+    },
+    "catC": {
+      "title": "Management Agencies",
+      "tag": "Management SOP",
+      "discTitle": "Bond Supervision",
+      "discBody": "Mandatory $50k deposit. Commission caps. Professional ethics vetting.",
+      "prohibTitle": "Minor Protection",
+      "prohibBody": "State-linked recourse for youth talent. Mandatory guardian oversight protocols.",
+      "compliance": "Annual bond status filing required for continued registration."
+    },
+    "catD": {
+      "title": "Events & Screenings",
+      "tag": "Event SOP",
+      "critTitle": "Financial Disclosure",
+      "critBody": "Registry of all fees. Transparency of judging. GFA auditor oversight.",
+      "rejTitle": "Risk Control",
+      "rejBody": "Mandatory temporary bond required for events with public registration fees."
+    }
+  },
+  "transparency": {
+    "title": "Bond Transparency",
+    "subtitle": "Verifying the $50,000 State Government requirement.",
+    "tableTitle": "Bond Registry (State Requirement Audit)",
+    "tableHeaders": ["Institution", "Bond ID", "Authenticity", "Compliance", "Last Audit"],
+    "rulesTitle": "Oversight Protocols",
+    "rules": [
+      "Every contract must include a verified Bond Voucher Number.",
+      "The $50,000 bond is a mandatory prerequisite for state-aligned operation.",
+      "Real-time lookup is required to confirm active bond status."
+    ],
+    "protectionTitle": "State-Linked Protection",
+    "protectionRules": [
+      "The $50,000 fund is dedicated to victim recourse.",
+      "Assisting the state in managing bond claims.",
+      "Immediate suspension for unbonded 'shadow' operations."
+    ],
+    "enforcementTitle": "Oversight Actions",
+    "enforcementItems": ["Bond Freezing", "Entity Blacklisting", "State Legal Referral", "Voucher Revocation"]
   },
   "directory": {
-    "title": "Authorized Industry Registry",
-    "subtitle": "Only certified programs and audited auditions are permitted here.",
-    "registryCount": "Official Registry Count",
-    "tableHeaders": ["Organization", "Auth ID", "Status", "Expiry", "Audit"],
-    "statuses": { "active": "Official", "pending": "Reviewing", "blocked": "Suspended", "rev": "Revoked" },
-    "note": "Verify and Trust: Use this registry to ensure your career safety."
+    "title": "Bonded Industry Registry",
+    "subtitle": "Assisting the state: Only entities with verified $50,000 bonds and authentic physical offices are listed.",
+    "registryCount": "State-Audited Entities",
+    "tableHeaders": ["Entity Name", "Bond Voucher", "Authenticity", "Admission ID", "Risk"],
+    "statuses": { "active": "Bonded", "pending": "Auditing", "blocked": "Frozen", "rev": "Revoked" },
+    "note": "Supervision Notice: Engaging with institutions without a verified Bond ID is high-risk."
   },
   "reporting": {
-    "title": "Report Fraud & Misconduct",
-    "subtitle": "Protecting the integrity of the film ecosystem.",
-    "formTitle": "Conflict Report",
-    "formLabels": { "type": "Violation Type", "org": "Entity Name", "desc": "Statement", "email": "Contact Email", "submit": "Transmit Report" },
-    "reportTypes": ["Overcharging / Hidden Fees", "Unsafe Environment", "Scam / False Promise", "Minor Safety Breach", "Unprofessional Conduct"],
-    "processTitle": "Resolution Path",
+    "title": "Reporting & Bond Claims",
+    "subtitle": "Protecting the ecosystem through State-aligned arbitration.",
+    "formTitle": "Statutory Violation Filing",
+    "formLabels": { "type": "Violation Category", "org": "Institution Name", "desc": "Statement", "email": "Contact", "submit": "File Statutory Report" },
+    "reportTypes": ["Bond/Refund Fraud", "Fake Identity / Shadow Office", "Unsafe Environment", "Minor Safety Breach", "Statutory Fee Violation"],
+    "processTitle": "Recourse Lifecycle",
     "process": [
-      { "s": "Intake", "d": "Report logging and triage." },
-      { "s": "Investigation", "d": "Evidence and witness audit." },
-      { "s": "Arbitration", "d": "Direct mediation or ruling." },
-      { "s": "Penalty", "d": "Fines or Status removal." },
-      { "s": "Blacklist", "d": "Permanent removal." }
+      { "s": "Filing", "d": "Report logged with GFA Supervisory Liaison." },
+      { "s": "Audit", "d": "Verification of bond and office authenticity." },
+      { "s": "Ruling", "d": "Arbitration using State-aligned standards." },
+      { "s": "Payout", "d": "Recourse from the $50k bond pool." },
+      { "s": "Sanction", "d": "Permanent blacklist and state referral." }
     ],
-    "outcomesTitle": "Compliance Actions",
-    "outcomes": ["Corrective Action", "Refund Order", "Authority Suspension", "ID Revocation", "Law Enforcement Referral"]
+    "outcomesTitle": "Regulatory Outcomes",
+    "outcomes": ["Bond Payout Order", "ID Revocation", "State Legal Referral", "Permanent Blacklisting", "Public Voucher Voiding"]
   },
   "support": {
     "title": "Impact & Creative Support",
@@ -496,20 +494,20 @@ const ZH_JSON: Translation = {
   ...EN_JSON,
   "meta": {
     "siteName": "GFA 全球电影联盟",
-    "tagline": "独立认证 • 全球治理 • 未成年人保护"
+    "tagline": "加州青少年保护 • DLSE 保证金核查 • 行业监管权威"
   },
   "nav": {
     "home": "首页",
-    "about": "机构权威",
-    "certification": "认证与治理",
+    "about": "协助监督",
+    "certification": "合规与保证金",
     "certGov": {
       "overview": "概览",
-      "verify": "验证证书",
-      "governance": "治理原则",
-      "standards": "授权标准",
-      "transparency": "价格透明度",
-      "protection": "青少年保护宪章",
-      "directory": "授权名录",
+      "verify": "保证金查验",
+      "governance": "监督准则",
+      "standards": "审查标准",
+      "transparency": "保证金透明度",
+      "protection": "青少年保护",
+      "directory": "已缴纳名录",
       "reporting": "报告违规"
     },
     "support": "扶持计划",
@@ -525,287 +523,286 @@ const ZH_JSON: Translation = {
   "common": {
     ...EN_JSON.common,
     "submit": "提交",
-    "loading": "验证中...",
-    "searchRegistry": "名录查询"
+    "loading": "正在核对官方记录...",
+    "searchRegistry": "官方保证金查询"
   },
   "home": {
     "hero": {
       "title": "全球电影联盟",
-      "subtitle": "权威认证 • 官方背书 • 行业互信",
-      "body": "GFA 制定电影行业的全球安全性、透明度和职业道德基准。我们保护行业人才，并核验机构的诚信资质。",
-      "ctaPrimary": "申请官方认证",
-      "ctaSecondary": "查看治理准则",
-      "badge": "独立全球标准 • 始于 2024",
-      "tags": { "cert": "行业权威", "gov": "治理体系", "prot": "权益保护" }
+      "subtitle": "加州标准 • 青少年保护",
+      "body": "GFA 协助家长与创作者核实行业合规性。我们强制执行加州法定的 5 万美金保证金要求，审计经纪机构真实性，取缔一切影子机构。",
+      "ctaPrimary": "查验保证金凭证",
+      "ctaSecondary": "查看法律框架",
+      "badge": "法定监管职能 • 加州 DLSE 标准",
+      "tags": { "cert": "保证金监管", "gov": "合规性审计", "prot": "青少年安全" }
     },
     "trust": {
-      "badge": "机构授权",
-      "title": "GFA 认证体系四大铁律",
-      "body": "公开透明、青少年保护优先、反诈骗与反乱收费、可追溯与可复核。这些准则定义了我们签发的每一份认证。",
-      "passportTitle": "GFA 信任档案",
-      "passportSubtitle": "机构凭证核验标准",
-      "auditItems": ["透明度审计", "安全合规性", "定价伦理", "身份真伪核验"]
+      "badge": "协助监管职能",
+      "title": "5 万美金法定保证金制度",
+      "body": "在加州，所有经纪公司及收费培训机构必须在劳工委员会 (DLSE) 缴纳 5 万美金保证金。GFA 提供一站式入口，协助家长即时核查这些资质。",
+      "passportTitle": "家长确认工具包",
+      "passportSubtitle": "核实机构合法性",
+      "auditItems": ["DIR/DLSE 保证金已核实", "经纪执照状态激活", "未成年人工作许可合规", "办公场地实地审计"]
     },
     "stats": {
       "certifiedTalents": "已认证名录",
-      "verifiedInstitutions": "通过审计机构",
+      "verifiedInstitutions": "已缴纳机构",
       "supportedProjects": "影响力成果",
       "partnerMerchants": "授权合作伙伴"
     },
     "pillars": {
-      "title": "全球电影诚信体系五大支柱",
-      "subtitle": "建立资源连接、安全保护与可持续增长的标准。",
-      "p1Title": "行业认证权威",
-      "p1Body": "对试镜、培训、经纪及制作单位进行官方资质审查。",
-      "p2Title": "人才安全保护",
-      "p2Body": "反诈骗工具、法律合同模板及强制性未成年人保护机制。",
-      "p3Title": "行业资源对接",
-      "p3Body": "将核实的人才推荐至剧组，将经认证的机构推荐给家长。",
+      "title": "加州合规三大职能",
+      "subtitle": "将电影行业连接至州政府的安全与财务合规标准。",
+      "p1Title": "Krekorian 法案审查",
+      "p1Body": "确保所有培训学校与经纪机构严格遵守《加州人才服务预防欺诈法案》。",
+      "p2Title": "DLSE 保证金监管",
+      "p2Body": "监督加州法定的 5 万美金保障金缴纳状态，确保机构具备赔付能力。",
+      "p3Title": "家长资源中心",
+      "p3Body": "为家长提供透明的查验系统，用于核实人才经理人、经纪人与导师的合法身份。",
       "p4Title": "全球行业治理",
-      "p4Body": "制定收费与流程标准，发布行业白皮书并实施数据监管。",
+      "p4Body": "制定收费标准，发布行业白皮书并实施数据监管。",
       "p5Title": "公益扶持与影响力",
       "p5Body": "扶持独立电影与毕业生作品，设立“金羽奖”及奖学金。",
-      "explore": "探索支柱模块"
+      "explore": "探索监管体系"
     },
     "closing": {
-      "title": "以诚信铸就未来。",
-      "body": "官方权威认证。全方位安全保护。专业资源准入。",
-      "cta": "加入全球联盟"
+      "title": "守护未成年人。",
+      "body": "5万美金保证金核实。实体经营真伪审计。",
+      "cta": "前往 DIR 官方查询"
     }
   },
   "about": {
-    "title": "官方机构权威",
+    "title": "协助加州政府监督",
     "mandate": {
-      "title": "核心机构使命",
-      "body": "全球电影联盟 (GFA) 作为电影艺术的最高监管机构运营。我们的核心使命是将碎片化的区域标准统一为全球认证、机构审查和人才保护的综合性框架。"
+      "title": "协助加州政府行使监督权",
+      "body": "GFA 作为独立的行业监督机构，专门协助加州劳工委员会 (DLSE)。我们的职责是监督所有经纪、管理及培训机构，确保其遵守《加州人才服务预防欺诈法案》要求的 5 万美金法定保证金。"
     },
     "strategy": {
-      "title": "全球治理战略",
-      "body": "我们愿景建立一个“机构信任”成为默认标准的全球电影工业。到 2030 年，GFA 旨在成为全球电影专业人士的首要核验平台，确保每一次专业互动都具备可审计的追溯链，并对诈骗行为实施零容忍政策。"
+      "title": "保证金核查与安全审计",
+      "body": "我们为加州家长提供技术支持。我们审计机构的办公场地真伪，并管理加州政府强制性保证金凭证的公众查验系统。"
     },
     "coreFunctions": {
-      "title": "GFA 官方治理三大支柱",
+      "title": "GFA 协助监督范畴",
       "items": [
-        { "title": "行业权威 (Industry Authority)", "body": "对制作单位和经纪公司进行官方资质审查。我们为全球项目的真实性和机构诚信设立“黄金标准”。" },
-        { "title": "治理体系 (Governance System)", "body": "监管行业定价模型和工作流标准。我们发布白皮书以防止恶意剥削，并监控全球市场道德基准。" },
-        { "title": "权益保护 (Talent Protection)", "body": "强制执行安全协议和法律保护措施。我们维护一个主权名录，全方位保护人才身份及创意版权。" }
+        { "title": "DLSE 合规对接", "body": "作为技术桥梁，协助家长核实加州劳工委员会 (DLSE) 的执照与保证金缴纳状态。" },
+        { "title": "机构真伪实地核查", "body": "通过实地走访，协助政府核实注册机构是否为真实运营实体，而非虚构的影子机构。" },
+        { "title": "凭证查验管理", "body": "监管用于核实 5 万美金要求是否达标的唯一保证金编号系统。" }
       ]
     },
     "youthProtection": {
-      "title": "青少年艺术培训机构官方认证",
-      "subtitle": "守护全球电影工业的未来",
-      "intro": "保护未成年人的合法权益是 GFA 生态系统中最神圣的协议。我们对所有青少年艺术培训机构执行多维度的认证流程，确保每一位青少年艺术家在追梦道路上都能得到全方位的法律与安全保障。",
+      "title": "加州青少年保护",
+      "subtitle": "协助政府：以法定合规性守护未成年人",
+      "intro": "保护未成年人是我们的最高宗旨。加州法律规定，任何涉及收费的培训学校或经纪公司必须拥有经核实的 5 万美金保证金。",
       "pillars": [
-        { "title": "法律合规与场地安全审计", "body": "强制审核营业执照、办学许可、物理场地安全（消防、监控、医疗应急预案）及国际未成年人安全法案的执行情况。" },
-        { "title": "师资背景核验与职业伦理", "body": "对所有教职员工执行强制性的无犯罪记录调查及专业资质核实，杜绝虚假包装和危害青少年成长的行为。" },
-        { "title": "反剥削与内容守则", "body": "严禁任何形式的“付费出道”骗局。强制执行符合青少年年龄发展的教学大纲，杜绝一切有害内容创作。" },
-        { "title": "监护人透明权益保障", "body": "确保监护人对教学活动的强制性观察准入权。执行经 GFA 审计的透明退费政策，禁止任何隐形收费。" }
+        { "title": "5万美金 DLSE 保证金", "body": "核实法定的保证金缴纳状态，作为未成年人才及家长的首要财务屏障。" },
+        { "title": "Krekorian 法案审计", "body": "强制执行“禁止收取试镜费”等反欺诈条款，确保机构不以任何非法名义剥削家长。" },
+        { "title": "师资背景核查协助", "body": "协助家长与政府机构执行教职员工背景核对，确保青少年成长环境绝对安全。" },
+        { "title": "工作许可支持", "body": "确保所有童星均持有有效的《加州未成年人娱乐行业工作许可证》(Work Permit)。" }
       ]
     },
     "accountability": {
-      "title": "全球问责账本",
-      "body": "作为非营利权威机构，GFA 由法律和电影专家组成的独立理事会管理。所有的审计和认证结果均记录在公众诚信账本中，供全球实时核验。",
+      "title": "透明度与凭证核对",
+      "body": "GFA 记录保证金状态以协助家长识别欺诈风险。每一个凭证编号都可独立查验其有效性。",
       "items": [
-        { "title": "名录核验", "label": "机构合规状态的实时查询。", "icon": "📋" },
-        { "title": "监管仲裁", "label": "针对成员违规行为的直接申诉通道。", "icon": "⚖️" },
-        { "title": "透明度索引", "label": "对机构收费标准的公开审计报告。", "icon": "📊" }
+        { "title": "经纪执照查询", "label": "核实 DLSE 执照详情。", "icon": "📜" },
+        { "title": "保证金池搜索", "label": "搜索 5 万美金缴纳记录。", "icon": "💰" },
+        { "title": "许可有效期检查", "label": "验证工作许可证状态。", "icon": "🎭" }
       ]
     }
   },
-  "certification": {
-    "title": "认证体系与权威",
-    "subtitle": "官方认证 • 权威背书 • 值得信赖",
-    "typesTitle": "授权类别",
-    "types": [
-      "认证试镜 (Official Audition)",
-      "认证培训机构 (Training Provider)",
-      "认证经纪公司/经纪人 (Agency)",
-      "认证赛事/比赛 (Event)",
-      "认证制作单位 (Production)",
-      "人才核验身份 (Talent ID)"
-    ],
-    "govTitle": "治理体系总则 (General Rules)",
-    "processTitle": "审计标准作业程序 (SOP)",
-    "processBody": "申请提交 → 合规初审 → 真实性核验 → 专业评估 → 批准认证",
-    "valueTitle": "四大铁律 (The Iron Rules)",
-    "valueBullets": [
-      "公开透明：认证标准、流程、费用、有效期全部公开。",
-      "青少年保护优先：任何项目必须满足未成年人保护与监护要求。",
-      "反诈骗与反乱收费：严禁隐形收费、强制捆绑、诱导消费。",
-      "可追溯与可复核：所有授权实体必须可核实、可投诉、可复核。"
-    ],
-    "cta": "申请官方授权",
-    "verifyCardTitle": "公共名录",
-    "verifyCardBody": "在 GFA 全球数据库中验证试镜项目、机构或专业人士的官方状态。",
-    "steps": ['提交申请', '合规初审', '真实性核验', '专业评估', '整改/补件', '批准认证', '年度复审']
-  },
-  "governance": {
-    "title": "治理与政策",
-    "subtitle": "机构公信力的基石。",
-    "roleTitle": "作为治理机构的角色",
-    "roleBody": "GFA 作为一个独立的权威机构运营。我们制定收费上限，审计试镜流程，bing发布行业白皮书，以监管和规范专业行为。",
-    "roleTag1": "政策执行",
-    "roleTag1Desc": "严格监管授权实体的费用清单。",
-    "roleTag2": "数据监管",
-    "roleTag2Desc": "追踪行业趋势与合规率。",
-    "principlesTitle": "治理标准",
-    "principles": [
-      { "title": "标准化工作流", "body": "所有招募 and 培训活动必须具备强制审计追踪。" },
-      { "title": "价格治理", "body": "强制执行合理的费用区间，防止剥削行为。" },
-      { "title": "德才核验", "body": "基于认证质量和伦理标准的行业认可。" }
-    ],
-    "policyTitle": "治理成果",
-    "policyBody": "我们向行业提供技术框架，以确保公平运营。",
-    "policyItems": ["行业白皮书", "标准定价矩阵", "试镜工作流蓝图"],
-    "policyNote": "未达到治理标准的实体将被立即撤销官方状态。"
-  },
-  "standards": {
-    "title": "行业授权标准",
-    "subtitle": "获得 GFA 官方认可的详细审计表与技术要求。",
-    "catA": {
-      "title": "认证试镜标准 (Audition)",
-      "tag": "试镜 SOP",
-      "docsTitle": "审计核查项",
-      "docs": ["制作方授权函/立项证明", "物理场地安全审计", "费用全披露声明", "未成年人监护协议"],
-      "matrixTitle": "评审作业程序",
-      "matrixBody": "1. 项目负责人电话核实。2. 收费上限合规审查。3. 报名流程“暗访”测试。4. 随机家长回访抽查。",
-      "disqual": "评分 ≥ 80 方可通过。存在虚假项目将永久黑名单。"
-    },
-    "catB": {
-      "title": "认证培训机构标准 (Training)",
-      "tag": "教育 SOP",
-      "sub1": "师资审计",
-      "sub1Items": ["教师履历真实性核验", "专业作品集评审", "禁止虚假名师包装"],
-      "sub2": "合同安全",
-      "sub2Items": ["退费政策完全披露", "禁止强制性器材推销", "监护人观察准入"],
-      "sub3": "教学诚信",
-      "sub3Body": "评分 ≥ 75 方可通过。需提交课程体系大纲并抽查 3 位以上学员反馈。"
-    },
-    "catC": {
-      "title": "认证经纪公司标准 (Agency)",
-      "tag": "经纪 SOP",
-      "discTitle": "合同审计",
-      "discBody": "佣金上限（最高 20%）及公平解约条款。严禁收取前端“入场费”。",
-      "prohibTitle": "风险控制",
-      "prohibBody": "未成年人才通信强制抄送监护人. 严禁私人一对一试镜。",
-      "compliance": "需提交至少 2 份真实结算记录用于合规性核查。"
-    },
-    "catD": {
-      "title": "认证赛事与放映标准 (Event)",
-      "tag": "赛事 SOP",
-      "critTitle": "评审透明度",
-      "critBody": "评委名单及评分细则必须公开。禁止“晋级加价”或“付费即赢”机制。",
-      "rejTitle": "财务审计",
-      "rejBody": "强制公示所有二阶收费（服装、摄影）。执行随机发票抽检。"
-    }
-  },
-  "transparency": {
-    "title": "价格透明度标准",
-    "subtitle": "公平定价。反乱收费。全程问责。",
-    "tableTitle": "授权费用区间（全球参考）",
-    "tableHeaders": ["服务类型", "授权费用区间", "级别", "退款保障", "审计状态"],
-    "rulesTitle": "反诈骗标准",
-    "rules": [
-      "所有参与成本必须全额明细化。",
-      "严禁“付费换角”等不正当收费模式。",
-      "超过 $500/¥3500 的定金必须进行强制托管。"
-    ],
-    "protectionTitle": "防过度收费保护",
-    "protectionRules": [
-      "对价格欺诈设立公开举报渠道。",
-      "对隐藏费用处以 GFA 官方罚款。",
-      "财务欺诈行为将导致授权自动暂停。"
-    ],
-    "enforcementTitle": "财务治理",
-    "enforcementItems": ["发票审计", "托管金监管", "会员制裁", "身份撤销"]
-  },
-  "verify": {
-    "title": "权威身份核验",
-    "body": "输入 GFA 编号，核查试镜项目、机构 or 专业人士的官方授权状态。",
-    "form": {
-      "label": "官方编号",
-      "placeholder": "GFA-AUTH-XXXX",
-      "button": "查询数据库"
-    },
-    "result": {
-      "valid": "官方认证 • 活跃",
-      "expired": "认证已过期",
-      "suspended": "由于违规正在接受调查",
-      "notFound": "未核实 / 无记录",
-      "details": "状态: 官方授权 • 级别: 已认证 • 核验机构: GFA 全球联盟"
-    },
-    "note": "关键词：官方 (Official) • 认证 (Certified) • 互信 (Trusted)"
-  },
   "protection": {
-    "title": "人才保护与合规",
-    "subtitle": "安全。保护。合规。",
-    "modelTitle": "监护人保障模型",
-    "modelBody": "GFA 对未成年人强制执行“监护人优先”协议。任何未成年人与制作方的互动必须在加密且可追溯的监管下进行。",
+    "title": "加州青少年保护中心",
+    "subtitle": "核实 5 万美金保证金与法定执照。",
+    "modelTitle": "加州安全监管模型",
+    "modelBody": "加州《人才服务预防欺诈法案》(Krekorian Act) 为童星提供了严格的法律保护。GFA 协助家长识别这些合规项，确保孩子在安全、受法律保障的环境中成长。",
     "modelItems": [
-      "防诈骗核验工具",
-      "合法合同标准模板",
-      "家长保护控制面板",
-      "未成年人权益保障法"
+      "DLSE 保证金实时核查",
+      "Krekorian 法案合规审计",
+      "已核实培训机构名录",
+      "法定审计备案"
     ],
     "safeguards": [
       { 
-        "title": "安全标准", 
+        "title": "家长确认工具", 
         "items": [
-          "严禁私人一对一试镜",
-          "物理场地安全强制审计",
-          "可追溯的数字通信记录",
-          "片场安全合规监督员"
+          "查询经纪执照 (DLSE)",
+          "核实学校 5万美金保证金",
+          "搜索人才经理人身份",
+          "核验未成年人工作许可"
         ] 
       },
       { 
-        "title": "防范陷阱", 
+        "title": "反欺诈工具", 
         "items": [
-          "反乱收费定价审计",
-          "禁止“保送出道”虚假承诺",
-          "强制性的退费保障政策",
-          "核实过的经纪公司资质"
+          "审计试镜真实性",
+          "影子机构黑名单警告",
+          "GFA 透明监管账本",
+          "认证办公室标签系统"
         ] 
       },
       { 
-        "title": "法律合规", 
+        "title": "法律合规保障", 
         "items": [
-          "标准化 GFA 公平合同模板",
-          "监护人同意权利框架",
-          "符合 GDPR-K 的数据保护",
-          "人才肖像权与知识产权保护"
+          "州政府核准合同范本",
+          "保证金担保的退费权利",
+          "监护人片场陪同权",
+          "反职场性骚扰审计"
         ] 
       }
     ],
-    "zeroTitle": "安全强制执行",
-    "zeroDesc": "GFA 维护一份全球黑名单。任何违反安全或保护标准的行为将导致立即撤销证书，并移交国际执法部门。",
-    "reportTitle": "报告安全违规？",
-    "reportDesc": "匿名举报不安全的环境、过度收费或骚扰行为。",
-    "reportCta": "提交安全报告"
+    "zeroTitle": "加州零容忍政策",
+    "zeroDesc": "任何未足额缴纳 5 万美金保证金或无照经营的机构，将被立即列入黑名单并移交加州劳工委员会处理。",
+    "reportTitle": "您的经纪人/学校合法吗？",
+    "reportDesc": "使用加州劳工部 (DIR) 官方数据库确认您的代理机构已注册并缴纳保证金。",
+    "reportCta": "打开加州官方名录"
+  },
+  "verify": {
+    "title": "法定资质查验",
+    "body": "协助家长：请输入加州 DLSE 保证金编号、执照号或 GFA ID 核实其合规状态。",
+    "form": {
+      "label": "GFA 保证金 / 州政府执照号",
+      "placeholder": "GFA-BOND-XXXX 或 CA-LICENSE-XXXX",
+      "button": "核实合规身份"
+    },
+    "result": {
+      "valid": "法定保证金已缴纳 • 执照激活",
+      "expired": "认证已过期 • 需立即行动",
+      "suspended": "违规记录 • 保证金已冻结",
+      "notFound": "未核实机构 • 存在无照经营风险",
+      "details": "状态: 已缴纳保证金机构 • 保证金: $50,000 (符合加州 DLSE 要求) • 核验方: GFA/DIR"
+    },
+    "note": "加州法律警告：严禁收取任何试镜费。根据加州法律，经纪公司不得向人才收取任何试镜费用。"
+  },
+  "certification": {
+    "title": "加州合规审计与认证",
+    "subtitle": "协助加州政府：核实保证金缴纳与机构真伪。",
+    "typesTitle": "加州合规准入类别",
+    "types": [
+      "已缴纳保证金经纪公司 (DLSE)",
+      "已缴纳保证金管理公司 ($50,000)",
+      "已核实艺术培训学校 (已缴纳)",
+      "青少年机构 (加州合规)",
+      "经审计制作单位",
+      "个人人才身份核验"
+    ],
+    "govTitle": "监督协议",
+    "processTitle": "准入 SOP",
+    "processBody": "申请提交 → 5万美金保证金审计 → 执照核对 → 上报州政府备案",
+    "valueTitle": "加州法定标准",
+    "valueBullets": [
+      "Krekorian 法案：所有培训机构必须维持 5 万美金法定保证金。",
+      "DLSE 执照：经纪公司必须持有加州劳工委员会颁发的有效执照。",
+      "协助监督：GFA 审计结果将上报，作为加州合规性备案依据。"
+    ],
+    "cta": "开启加州合规审计",
+    "verifyCardTitle": "保证金号码查验",
+    "verifyCardBody": "请输入保证金凭证编号，核实其是否符合加州法定的 5 万美金缴纳要求。",
+    "steps": ['提交 DLSE 协议', '保证金到账审计', '办公场地实地核实', '真实性风险评估', '上报加州政府备案', '准入证书发放', '年度保证金复审']
+  },
+  "governance": {
+    "title": "协助监督治理",
+    "subtitle": "协助州政府管理 5 万美金保证金系统。",
+    "roleTitle": "GFA 协助监督职责",
+    "roleBody": "GFA 作为独立协助单位，专门负责监督行业信誉保证金的落实情况，并核实所有相关实体的办公场地真伪。",
+    "roleTag1": "保证金监管",
+    "roleTag1Desc": "核查 5 万美金法定保障金状态。",
+    "roleTag2": "真实性辨识",
+    "roleTag2Desc": "协助政府核实实体身份与办公地点的真实性。",
+    "principlesTitle": "监督原则",
+    "principles": [
+      { "title": "保证金合规性", "body": "确保所有盈利性电影机构均维持 5 万美金法定存款。" },
+      { "title": "反欺诈核查", "body": "协助政府取缔未按要求缴纳保证金或办公场所虚假的影子机构。" },
+      { "title": "透明凭证系统", "body": "提供公开的保证金凭证号码查验入口。" }
+    ],
+    "policyTitle": "治理成果",
+    "policyBody": "我们向州政府提供已缴纳保证金且真实有效的电影机构名录。",
+    "policyItems": ["保证金凭证注册处", "机构真伪档案库", "法定费用上限标准"],
+    "policyNote": "未按要求提供保证金凭证的机构将被直接上报州政府。"
+  },
+  "standards": {
+    "title": "核验与审计标准",
+    "subtitle": "协助州政府：关于 5 万美金保证金与机构真伪的技术指标。",
+    "catA": {
+      "title": "已缴纳保证金经纪公司",
+      "tag": "法定 SOP",
+      "docsTitle": "审计必填项",
+      "docs": ["5万美金保证金缴纳回执", "州政府营业执照", "办公场地租赁实核", "公平合同备案"],
+      "matrixTitle": "核验作业程序",
+      "matrixBody": "1. 保证金核查. 2. 办公地址实地审计. 3. 实体真伪核实. 4. 州政府备案。",
+      "disqual": "无法查验有效保证金号码将立即驳回准入申请。"
+    },
+    "catB": {
+      "title": "已缴纳保证金学校",
+      "tag": "教育监督 SOP",
+      "sub1": "真伪实地核验",
+      "sub1Items": ["场地实地走访", "师资原件复核", "地址真实性查证"],
+      "sub2": "合规性查验",
+      "sub2Items": ["5万美金保证金状态", "退费政策州政府备案", "收费上限审计"],
+      "sub3": "通过标准",
+      "sub3Body": "评分 ≥ 85。必须拥有经核实的保证金凭证号及真实的办公场地。"
+    },
+    "catC": {
+      "title": "管理与代理公司",
+      "tag": "代理监督 SOP",
+      "discTitle": "保证金监管",
+      "discBody": "强制 5 万美金抵押。禁止乱收费。职业伦理审计。",
+      "prohibTitle": "人才保护",
+      "prohibBody": "受保证金担保的维权机制. 强制监护人陪同协议。",
+      "compliance": "需提交至少 3 份保证金存续证明方可更新授权状态。"
+    },
+    "catD": {
+      "title": "赛事与颁奖活动",
+      "tag": "赛事监督 SOP",
+      "critTitle": "财务透明度",
+      "critBody": "所有收费项目备案。GFA 派驻审计观察员。评审透明。",
+      "rejTitle": "风险管控",
+      "rejBody": "对于涉及公众报名的活动，强制要求其缴纳短期临时保证金。"
+    }
+  },
+  "transparency": {
+    "title": "保证金透明度",
+    "subtitle": "核实州政府法定的 5 万美金要求。",
+    "tableTitle": "保证金名录 (协助政府审计)",
+    "tableHeaders": ["机构名称", "保证金编号", "真伪核实", "合规状态", "最后审计日期"],
+    "rulesTitle": "监督细则",
+    "rules": [
+      "所有合同必须标注有效的保证金凭证编号。",
+      "5 万美金保证金是协助州政府行使行业准入的前置条件。",
+      "必须提供实时查验入口以确认保证金状态。"
+    ],
+    "protectionTitle": "州政府联动保护",
+    "protectionRules": [
+      "5 万美金保证金池专项用于受害者违规赔付。",
+      "协助政府处理针对保证金的求偿申请。",
+      "对未缴纳保证金的影子机构实施自动停权。"
+    ],
+    "enforcementTitle": "监督行动",
+    "enforcementItems": ["保证金冻结", "机构黑名单", "上报州政府", "撤销保证金凭证"]
   },
   "directory": {
-    "title": "官方授权名录",
-    "subtitle": "只有通过 GFA 标准审计的项目 and 机构才允许列入此表。",
-    "registryCount": "官方核实数量",
-    "tableHeaders": ["机构/项目名称", "授权编号", "状态", "有效期", "审计报告"],
-    "statuses": { "active": "官方授权", "pending": "审核中", "blocked": "已暂停", "rev": "已撤销" },
-    "note": "核实与信任：利用此名录确保您的职业安全。"
+    "title": "已缴纳保证金机构名录",
+    "subtitle": "协助政府公布：只有已完成 5 万美金缴纳并完成真伪核验的合法机构方可列入。",
+    "registryCount": "州政府已核实实体",
+    "tableHeaders": ["机构全称", "保证金凭证号", "真伪状态", "注册 ID", "风险等级"],
+    "statuses": { "active": "已缴纳", "pending": "核验中", "blocked": "已冻结", "rev": "已吊销" },
+    "note": "协助监督声明：未查到有效保证金编号的机构不具备合法的从业资质。"
   },
   "reporting": {
-    "title": "举报欺诈与违规",
-    "subtitle": "维护电影行业生态的公信力。",
-    "formTitle": "违规申报",
-    "formLabels": { "type": "违规类型", "org": "实体名称", "desc": "陈述内容", "email": "联系邮箱", "submit": "提交报告" },
-    "reportTypes": ["过度收费 / 隐形费用", "不安全的环境", "诈骗 / 虚假承诺", "未成年人安全违规", "不专业行为"],
-    "processTitle": "解决路径",
+    "title": "报告违规与保证金赔付",
+    "subtitle": "通过协助州政府备案通道维护行业诚信。",
+    "formTitle": "违规与欺诈申报 (法定通道)",
+    "formLabels": { "type": "投诉类别", "org": "涉事机构全称", "desc": "事实陈述", "email": "联系方式", "submit": "发起保证金查验申请" },
+    "reportTypes": ["保证金/退款纠纷", "身份虚构 / 影子办公室", "非法招募 / 选角骗局", "违反未成年人保护铁律", "收费严重超标"],
+    "processTitle": "求偿与解决流程",
     "process": [
-      { "s": "受理", "d": "报告录入与初步分流。" },
-      { "s": "审计", "d": "证据链与证人核查。" },
-      { "s": "调解", "d": "直接调解或官方裁定。" },
-      { "s": "处罚", "d": "罚金 or 身份撤回。" },
-      { "s": "封禁", "d": "永久黑名单列入。" }
+      { "s": "立案", "d": "提交申请，GFA 启动合规核查。" },
+      { "s": "审计", "d": "核实保证金状态与机构真伪。" },
+      { "s": "判定", "d": "依据州政府标准进行仲裁。" },
+      { "s": "赔付", "d": "从 5 万美金池中划拨至受害者。" },
+      { "s": "惩戒", "d": "列入黑名单并移交州政府。" }
     ],
-    "outcomesTitle": "合规行动",
-    "outcomes": ["限期整改令", "强制退款要求", "官方权限暂停", "ID 永久吊销", "移交司法机关"]
+    "outcomesTitle": "监管决定",
+    "outcomes": ["保证金先行赔付", "吊销准入资格", "上报州政府处理", "永久封禁法人", "注销保证金凭证"]
   },
   "support": {
     "title": "行业扶持与金羽奖",
@@ -838,7 +835,7 @@ const ZH_JSON: Translation = {
   },
   "casting": {
     "title": "行业资源连接枢纽",
-    "intro": "将经核实的人才与全球制作需求连接。这是一个受治理的环境，基于“连接、安置、行业准入”的核心理念。",
+    "intro": "将经核实的人才与全球制作需求连接. 这是一个受治理的环境，基于“连接、安置、行业准入”的核心理念。",
     "featuresTitle": "连接标准",
     "features": [
       "演员-剧组推荐对接",

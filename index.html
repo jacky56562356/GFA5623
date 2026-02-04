@@ -15,17 +15,11 @@
     <meta property="og:description" content="Independent film certification and talent governance.">
     <meta property="og:image" content="https://i.ibb.co/B582n2Dk/1755827874220993959.png">
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.gfaalliance.org/">
-    <meta property="twitter:title" content="GFA Global Film Alliance">
-    <meta property="twitter:description" content="Independent film certification and talent governance.">
-
     <script src="https://cdn.tailwindcss.com"></script>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Montserrat:wght@300;400;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     
     <script>
         tailwind.config = {
@@ -33,71 +27,117 @@
                 extend: {
                     colors: {
                         gfa: {
-                            black: '#0B0B0F',
+                            black: '#07090c',
                             gold: '#D4AF37',
-                            goldLight: '#F1D592',
-                            gray: '#CCCCCC',
-                            darkGray: '#1A1A1F'
+                            goldLight: '#F5E6A8',
+                            gray: '#a9b3c1',
+                            darkGray: '#15181d'
                         }
                     },
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    animation: {
-                        'fade-up': 'fadeUp 1s ease-out forwards',
-                        'fade-in': 'fadeIn 0.5s ease-out forwards',
-                        'pulse-gold': 'pulseGold 4s infinite',
-                    },
-                    keyframes: {
-                        fadeUp: {
-                            '0%': { opacity: '0', transform: 'translateY(20px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' },
-                        },
-                        fadeIn: {
-                            '0%': { opacity: '0' },
-                            '100%': { opacity: '1' },
-                        },
-                        pulseGold: {
-                            '0%, 100%': { opacity: '0.1' },
-                            '50%': { opacity: '0.3' },
-                        }
+                        sans: ['Inter', 'Noto Sans SC', 'sans-serif'],
+                        montserrat: ['Montserrat', 'sans-serif'],
+                        cinzel: ['Cinzel', 'serif'],
                     }
                 }
             }
         }
     </script>
     <style>
+        :root {
+          --font-serif: "Cinzel", "serif";
+          --font-sans: "Inter", "Noto Sans SC", sans-serif;
+          --bg: #07090c;
+          --text: #e9eef5;
+          --muted: #a9b3c1;
+
+          --gold-1: #7A5A00;
+          --gold-2: #A67C00;
+          --gold-3: #D4AF37;
+          --gold-4: #F5E6A8;
+          
+          /* Refined smaller Type Scale */
+          --h1: clamp(28px, 3vw, 44px);
+          --h2: clamp(22px, 1.8vw, 30px);
+          --h3: clamp(16px, 1.4vw, 20px);
+          --h4: clamp(14px, 1.2vw, 16px);
+        }
+
         body {
-            background-color: #0B0B0F;
-            color: #FFFFFF;
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            overflow-x: hidden;
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: var(--font-sans);
+            line-height: 1.5; /* Condensed body leading */
+            text-rendering: optimizeLegibility;
             -webkit-font-smoothing: antialiased;
         }
+
+        /* Luxury Gold Typography */
+        .gold {
+          background: linear-gradient(90deg, var(--gold-2), var(--gold-3), var(--gold-4), var(--gold-3), var(--gold-2));
+          -webkit-background-clip: text;
+          background-clip: text;
+          color: transparent;
+          text-shadow: 0 0 18px rgba(212,175,55,0.08);
+        }
+
+        @keyframes goldShimmer {
+          0%   { background-position: 0% 50%; }
+          100% { background-position: 200% 50%; }
+        }
+        .gold-shimmer {
+          background-size: 200% 200%;
+          animation: goldShimmer 6s ease-in-out infinite;
+        }
+
+        @keyframes goldGlow {
+          0%, 100% { filter: drop-shadow(0 0 6px rgba(212,175,55,0.15)); }
+          50%     { filter: drop-shadow(0 0 12px rgba(245,230,168,0.25)); }
+        }
+        .gold-glow {
+          animation: goldGlow 3.2s ease-in-out infinite;
+        }
+
+        .btn-gold {
+          font-family: var(--font-sans);
+          font-weight: 700;
+          letter-spacing: 0.04em;
+          background: linear-gradient(135deg, var(--gold-2), var(--gold-3), var(--gold-4));
+          color: #151515;
+          border: 1px solid rgba(245,230,168,0.2);
+          box-shadow: 0 8px 24px rgba(212,175,55,0.1);
+          transition: all 0.3s ease;
+        }
+        .btn-gold:hover {
+          transform: translateY(-1px);
+          box-shadow: 0 12px 30px rgba(212,175,55,0.15);
+        }
+
         .gold-gradient {
-            background: linear-gradient(to right, #D4AF37, #F1D592, #D4AF37);
-            background-size: 200% auto;
+            background: linear-gradient(135deg, #D4AF37 0%, #F5E6A8 50%, #A67C00 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            animation: shine 5s linear infinite;
         }
-        @keyframes shine {
-            to { background-position: 200% center; }
-        }
+
         .hero-mesh {
             background-image: 
-                radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
-                radial-gradient(circle at 80% 70%, rgba(212, 175, 55, 0.05) 0%, transparent 50%);
+                radial-gradient(circle at 20% 30%, rgba(212,175,55,0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(212,175,55,0.03) 0%, transparent 50%);
         }
+
         .glass-panel {
-            background: rgba(26, 26, 31, 0.6);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(212, 175, 55, 0.1);
+            background: rgba(21, 24, 29, 0.7);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(212, 175, 55, 0.08);
         }
-        ::selection {
-            background: #D4AF37;
-            color: #0B0B0F;
+
+        h1 { font-family: var(--font-serif); font-size: var(--h1); letter-spacing: 0.04em; line-height: 1.1; }
+        h2 { font-family: var(--font-serif); font-size: var(--h2); letter-spacing: 0.03em; line-height: 1.15; }
+        h3 { font-family: var(--font-sans); font-size: var(--h3); letter-spacing: 0.02em; line-height: 1.2; font-weight: 700; }
+        h4 { font-family: var(--font-sans); font-size: var(--h4); letter-spacing: 0.01em; line-height: 1.25; font-weight: 600; }
+
+        @media (prefers-reduced-motion: reduce){
+          .gold-shimmer, .gold-glow { animation: none; }
         }
     </style>
 <script type="importmap">
