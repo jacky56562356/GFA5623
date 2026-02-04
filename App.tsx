@@ -83,29 +83,27 @@ const Navbar = () => {
             <img 
               src="https://i.ibb.co/B582n2Dk/1755827874220993959.png" 
               alt={t.meta.siteName} 
-              className="h-14 w-auto object-contain transition-transform group-hover:scale-110 drop-shadow-[0_0_15px_rgba(212,175,55,0.3)]"
+              className="h-16 w-auto object-contain transition-transform group-hover:scale-110 drop-shadow-[0_0_15px_rgba(212,175,55,0.3)]"
             />
             <div className="flex flex-col">
-              <span className="text-xl font-black gold-gradient tracking-tighter leading-none">GFA</span>
-              <span className="text-[6px] tracking-[0.5em] text-gfa-gray uppercase font-bold">{t.meta.siteName}</span>
+              <span className="text-3xl font-black gold gold-shimmer tracking-tighter leading-none">GFA</span>
+              <span className="text-[10px] tracking-[0.2em] text-gfa-gray uppercase font-bold mt-1 opacity-80">{t.meta.siteName}</span>
             </div>
           </Link>
 
           <div className="hidden lg:flex items-center space-x-6">
-            {/* Direct Home Link */}
-            <Link to="/" className={`text-[10px] font-bold uppercase tracking-widest transition-colors hover:text-gfa-gold ${pathname === '/' ? 'text-gfa-gold' : 'text-gfa-gray'}`}>
+            <Link to="/" className={`text-xs font-bold uppercase tracking-widest transition-colors hover:text-gfa-gold ${pathname === '/' ? 'text-gfa-gold' : 'text-gfa-gray'}`}>
               {t.nav.home}
             </Link>
 
-            {/* Certification Dropdown */}
             <div className="relative group" onMouseEnter={() => setIsCertOpen(true)} onMouseLeave={() => setIsCertOpen(false)}>
-              <button className={`text-[10px] font-bold uppercase tracking-widest flex items-center gap-1 transition-colors ${certGovLinks.some(l => pathname === l.path) ? 'text-gfa-gold' : 'text-gfa-gray hover:text-gfa-gold'}`}>
+              <button className={`text-xs font-bold uppercase tracking-widest flex items-center gap-1 transition-colors ${certGovLinks.some(l => pathname === l.path) ? 'text-gfa-gold' : 'text-gfa-gray hover:text-gfa-gold'}`}>
                 {t.nav.certification} <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
               </button>
               {isCertOpen && (
                 <div className="absolute top-full left-0 bg-gfa-darkGray border border-gfa-gold/20 py-4 w-64 shadow-2xl animate-fade-in">
                   {certGovLinks.map(gl => (
-                    <Link key={gl.path} to={gl.path} className={`block px-6 py-2 text-[10px] font-bold uppercase tracking-widest hover:text-gfa-gold hover:bg-white/5 transition-colors ${pathname === gl.path ? 'text-gfa-gold bg-white/5' : 'text-gfa-gray'}`}>
+                    <Link key={gl.path} to={gl.path} className={`block px-6 py-2 text-xs font-bold uppercase tracking-widest hover:text-gfa-gold hover:bg-white/5 transition-colors ${pathname === gl.path ? 'text-gfa-gold bg-white/5' : 'text-gfa-gray'}`}>
                       {gl.label}
                     </Link>
                   ))}
@@ -113,9 +111,8 @@ const Navbar = () => {
               )}
             </div>
 
-            {/* Other Main Links */}
             {mainNavLinks.slice(1).map(l => (
-              <Link key={l.path} to={l.path} className={`text-[10px] font-bold uppercase tracking-widest transition-colors hover:text-gfa-gold ${pathname === l.path ? 'text-gfa-gold' : 'text-gfa-gray'}`}>
+              <Link key={l.path} to={l.path} className={`text-xs font-bold uppercase tracking-widest transition-colors hover:text-gfa-gold ${pathname === l.path ? 'text-gfa-gold' : 'text-gfa-gray'}`}>
                 {l.label}
               </Link>
             ))}
@@ -125,7 +122,7 @@ const Navbar = () => {
             <select 
               value={locale} 
               onChange={(e) => setLocale(e.target.value as Locale)}
-              className="bg-transparent border border-gfa-gold/30 text-[10px] text-gfa-gold font-bold px-2 py-1 focus:outline-none cursor-pointer rounded-sm"
+              className="bg-transparent border border-gfa-gold/30 text-xs text-gfa-gold font-bold px-2 py-1 focus:outline-none cursor-pointer rounded-sm"
             >
               {languages.map(lang => <option key={lang.code} value={lang.code} className="bg-gfa-black">{lang.label}</option>)}
             </select>
@@ -136,21 +133,20 @@ const Navbar = () => {
         </div>
       </div>
       
-      {/* Mobile Menu */}
       {isOpen && (
         <div className="lg:hidden fixed inset-0 top-24 bg-gfa-black z-40 overflow-y-auto animate-fade-in">
           <div className="p-6 space-y-6">
             {mainNavLinks.map(l => (
-              <Link key={l.path} to={l.path} className={`block text-sm font-black uppercase tracking-[0.2em] border-b border-white/5 pb-4 ${pathname === l.path ? 'text-gfa-gold' : 'text-gfa-gray'}`}>
+              <Link key={l.path} to={l.path} className={`block text-base font-black uppercase tracking-[0.2em] border-b border-white/5 pb-4 ${pathname === l.path ? 'text-gfa-gold' : 'text-gfa-gray'}`}>
                 {l.label}
               </Link>
             ))}
             
             <div className="bg-gfa-darkGray/50 p-6 rounded-lg border border-white/5">
-              <div className="text-[10px] text-gfa-gold font-black uppercase tracking-[0.3em] mb-6 border-l-4 border-gfa-gold pl-4">{t.nav.certification}</div>
+              <div className="text-xs text-gfa-gold font-black uppercase tracking-[0.3em] mb-6 border-l-4 border-gfa-gold pl-4">{t.nav.certification}</div>
               <div className="grid grid-cols-1 gap-4">
                 {certGovLinks.map(gl => (
-                  <Link key={gl.path} to={gl.path} className={`text-[10px] font-black uppercase tracking-widest ${pathname === gl.path ? 'text-white' : 'text-gfa-gray opacity-60'}`}>
+                  <Link key={gl.path} to={gl.path} className={`text-xs font-black uppercase tracking-widest ${pathname === gl.path ? 'text-white' : 'text-gfa-gray opacity-60'}`}>
                     {gl.label}
                   </Link>
                 ))}
@@ -182,7 +178,7 @@ const Footer = () => {
             />
             <div className="flex flex-col">
               <span className="text-3xl font-black gold-gradient leading-none tracking-tighter">GFA</span>
-              <span className="text-[8px] tracking-[0.7em] text-gfa-gray uppercase font-bold">{t.meta.siteName}</span>
+              <span className="text-[10px] tracking-[0.2em] text-gfa-gray uppercase font-bold mt-1 opacity-60">{t.meta.siteName}</span>
             </div>
           </Link>
           <p className="text-gfa-gray text-xs leading-relaxed max-w-sm uppercase tracking-wider font-medium opacity-70">
@@ -190,16 +186,16 @@ const Footer = () => {
           </p>
         </div>
         <div>
-          <h4 className="text-white text-[10px] font-black uppercase tracking-widest mb-6 border-l-2 border-gfa-gold pl-3">{t.nav.certGov.governance}</h4>
-          <div className="space-y-4 text-[10px] font-bold uppercase tracking-widest text-gfa-gray">
+          <h4 className="text-white text-xs font-black uppercase tracking-widest mb-6 border-l-2 border-gfa-gold pl-3">{t.nav.certGov.governance}</h4>
+          <div className="space-y-4 text-xs font-bold uppercase tracking-widest text-gfa-gray">
             <Link to="/governance" className="block hover:text-gfa-gold transition-colors">{t.nav.certGov.governance}</Link>
             <Link to="/standards" className="block hover:text-gfa-gold transition-colors">{t.nav.certGov.standards}</Link>
             <Link to="/safeguarding" className="block hover:text-gfa-gold transition-colors">{t.nav.certGov.safeguarding}</Link>
           </div>
         </div>
         <div>
-          <h4 className="text-white text-[10px] font-black uppercase tracking-widest mb-6 border-l-2 border-gfa-gold pl-3">{t.footer.verification}</h4>
-          <div className="space-y-4 text-[10px] font-bold uppercase tracking-widest text-gfa-gray">
+          <h4 className="text-white text-xs font-black uppercase tracking-widest mb-6 border-l-2 border-gfa-gold pl-3">{t.footer.verification}</h4>
+          <div className="space-y-4 text-xs font-bold uppercase tracking-widest text-gfa-gray">
             <Link to="/verify" className="block hover:text-gfa-gold transition-colors">{t.footer.verification}</Link>
             <Link to="/privacy" className="block hover:text-gfa-gold transition-colors">{t.footer.privacy}</Link>
             <Link to="/terms" className="block hover:text-gfa-gold transition-colors">{t.footer.terms}</Link>
@@ -207,7 +203,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="max-w-7xl mx-auto px-4 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
-        <span className="text-[10px] font-bold uppercase tracking-widest text-gfa-gray/50">
+        <span className="text-xs font-bold uppercase tracking-widest text-gfa-gray/50">
           {t.footer.copyright.replace('{year}', currentYear)}
         </span>
       </div>
