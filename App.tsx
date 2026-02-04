@@ -1,4 +1,3 @@
-
 import React, { useState, createContext, useContext, useEffect } from 'react';
 import { HashRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
 import { Locale } from './types';
@@ -16,6 +15,7 @@ import Partners from './pages/Partners';
 import Events from './pages/Events';
 import Contact from './pages/Contact';
 import PolicyPage from './pages/PolicyPage';
+import Safeguarding from './pages/Safeguarding';
 
 // Governance Pages
 import Governance from './pages/Governance';
@@ -39,7 +39,9 @@ const Navbar = () => {
   const [isCertOpen, setIsCertOpen] = useState(false);
   const { pathname } = useLocation();
 
-  const links = [
+  // Consolidated Navigation Menu
+  const mainNavLinks = [
+    { path: '/', label: t.nav.home },
     { path: '/about', label: t.nav.about },
     { path: '/support', label: t.nav.support },
     { path: '/casting', label: t.nav.casting },
@@ -51,10 +53,10 @@ const Navbar = () => {
   const certGovLinks = [
     { path: '/certification', label: t.nav.certGov.overview },
     { path: '/verify', label: t.nav.certGov.verify },
+    { path: '/safeguarding', label: t.nav.certGov.safeguarding },
     { path: '/governance', label: t.nav.certGov.governance },
     { path: '/standards', label: t.nav.certGov.standards },
     { path: '/transparency', label: t.nav.certGov.transparency },
-    { path: '/protection', label: t.nav.certGov.protection },
     { path: '/directory', label: t.nav.certGov.directory },
     { path: '/reporting', label: t.nav.certGov.reporting },
   ];
@@ -69,6 +71,7 @@ const Navbar = () => {
 
   useEffect(() => {
     setIsOpen(false);
+    setIsCertOpen(false);
     window.scrollTo(0, 0);
   }, [pathname]);
 
@@ -88,11 +91,13 @@ const Navbar = () => {
             </div>
           </Link>
 
-          <div className="hidden lg:flex items-center space-x-5">
-            <Link to="/about" className={`text-[10px] font-bold uppercase tracking-widest transition-colors hover:text-gfa-gold ${pathname === '/about' ? 'text-gfa-gold' : 'text-gfa-gray'}`}>
-              {t.nav.about}
+          <div className="hidden lg:flex items-center space-x-6">
+            {/* Direct Home Link */}
+            <Link to="/" className={`text-[10px] font-bold uppercase tracking-widest transition-colors hover:text-gfa-gold ${pathname === '/' ? 'text-gfa-gold' : 'text-gfa-gray'}`}>
+              {t.nav.home}
             </Link>
-            
+
+            {/* Certification Dropdown */}
             <div className="relative group" onMouseEnter={() => setIsCertOpen(true)} onMouseLeave={() => setIsCertOpen(false)}>
               <button className={`text-[10px] font-bold uppercase tracking-widest flex items-center gap-1 transition-colors ${certGovLinks.some(l => pathname === l.path) ? 'text-gfa-gold' : 'text-gfa-gray hover:text-gfa-gold'}`}>
                 {t.nav.certification} <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
@@ -100,7 +105,7 @@ const Navbar = () => {
               {isCertOpen && (
                 <div className="absolute top-full left-0 bg-gfa-darkGray border border-gfa-gold/20 py-4 w-64 shadow-2xl animate-fade-in">
                   {certGovLinks.map(gl => (
-                    <Link key={gl.path} to={gl.path} className="block px-6 py-2 text-[10px] font-bold uppercase tracking-widest text-gfa-gray hover:text-gfa-gold hover:bg-white/5 transition-colors">
+                    <Link key={gl.path} to={gl.path} className={`block px-6 py-2 text-[10px] font-bold uppercase tracking-widest hover:text-gfa-gold hover:bg-white/5 transition-colors ${pathname === gl.path ? 'text-gfa-gold bg-white/5' : 'text-gfa-gray'}`}>
                       {gl.label}
                     </Link>
                   ))}
@@ -108,7 +113,8 @@ const Navbar = () => {
               )}
             </div>
 
-            {links.slice(1).map(l => (
+            {/* Other Main Links */}
+            {mainNavLinks.slice(1).map(l => (
               <Link key={l.path} to={l.path} className={`text-[10px] font-bold uppercase tracking-widest transition-colors hover:text-gfa-gold ${pathname === l.path ? 'text-gfa-gold' : 'text-gfa-gray'}`}>
                 {l.label}
               </Link>
@@ -130,28 +136,28 @@ const Navbar = () => {
         </div>
       </div>
       
+      {/* Mobile Menu */}
       {isOpen && (
         <div className="lg:hidden fixed inset-0 top-24 bg-gfa-black z-40 overflow-y-auto animate-fade-in">
-          <div className="p-4 space-y-2">
-            <Link to="/about" className="block px-6 py-4 text-sm font-bold uppercase tracking-widest text-gfa-gray hover:text-gfa-gold border-b border-white/5">
-              {t.nav.about}
-            </Link>
-            <div className="px-6 py-4 bg-gfa-darkGray/30 rounded-lg">
-              <div className="text-[10px] text-gfa-gold font-black uppercase tracking-widest mb-4 border-l-2 border-gfa-gold pl-3">{t.nav.certification}</div>
-              <div className="grid grid-cols-1 gap-3">
+          <div className="p-6 space-y-6">
+            {mainNavLinks.map(l => (
+              <Link key={l.path} to={l.path} className={`block text-sm font-black uppercase tracking-[0.2em] border-b border-white/5 pb-4 ${pathname === l.path ? 'text-gfa-gold' : 'text-gfa-gray'}`}>
+                {l.label}
+              </Link>
+            ))}
+            
+            <div className="bg-gfa-darkGray/50 p-6 rounded-lg border border-white/5">
+              <div className="text-[10px] text-gfa-gold font-black uppercase tracking-[0.3em] mb-6 border-l-4 border-gfa-gold pl-4">{t.nav.certification}</div>
+              <div className="grid grid-cols-1 gap-4">
                 {certGovLinks.map(gl => (
-                  <Link key={gl.path} to={gl.path} className="text-[10px] font-bold uppercase tracking-widest text-gfa-gray hover:text-white">
+                  <Link key={gl.path} to={gl.path} className={`text-[10px] font-black uppercase tracking-widest ${pathname === gl.path ? 'text-white' : 'text-gfa-gray opacity-60'}`}>
                     {gl.label}
                   </Link>
                 ))}
               </div>
             </div>
-            {links.slice(1).map(l => (
-              <Link key={l.path} to={l.path} className="block px-6 py-4 text-sm font-bold uppercase tracking-widest text-gfa-gray hover:text-gfa-gold border-b border-white/5">
-                {l.label}
-              </Link>
-            ))}
-            <Link to="/contact" className="block px-6 py-6 text-center mt-8 bg-gfa-gold text-gfa-black font-black uppercase text-xs tracking-[0.3em]">
+            
+            <Link to="/contact" className="block w-full py-6 text-center bg-gfa-gold text-gfa-black font-black uppercase text-xs tracking-[0.4em] rounded-md shadow-2xl">
               {t.nav.contact}
             </Link>
           </div>
@@ -188,8 +194,7 @@ const Footer = () => {
           <div className="space-y-4 text-[10px] font-bold uppercase tracking-widest text-gfa-gray">
             <Link to="/governance" className="block hover:text-gfa-gold transition-colors">{t.nav.certGov.governance}</Link>
             <Link to="/standards" className="block hover:text-gfa-gold transition-colors">{t.nav.certGov.standards}</Link>
-            <Link to="/transparency" className="block hover:text-gfa-gold transition-colors">{t.nav.certGov.transparency}</Link>
-            <Link to="/protection" className="block hover:text-gfa-gold transition-colors">{t.nav.certGov.protection}</Link>
+            <Link to="/safeguarding" className="block hover:text-gfa-gold transition-colors">{t.nav.certGov.safeguarding}</Link>
           </div>
         </div>
         <div>
@@ -225,6 +230,7 @@ const App = () => {
               <Route path="/about" element={<About />} />
               <Route path="/certification" element={<CertificationPage />} />
               <Route path="/verify" element={<Verify />} />
+              <Route path="/safeguarding" element={<Safeguarding />} />
               <Route path="/support" element={<Support />} />
               <Route path="/casting" element={<Casting />} />
               <Route path="/membership" element={<Membership />} />

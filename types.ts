@@ -1,4 +1,3 @@
-
 export enum Locale {
   EN = 'en',
   ZH = 'zh',
@@ -22,6 +21,7 @@ export interface Translation {
       protection: string;
       directory: string;
       reporting: string;
+      safeguarding: string;
     };
     support: string;
     casting: string;
@@ -82,6 +82,21 @@ export interface Translation {
     };
     accountability: { title: string; body: string; items: { title: string; label: string; icon: string }[] };
   };
+  safeguarding: {
+    title: string;
+    subtitle: string;
+    mission: string;
+    pillars: {
+      p1: { title: string; items: string[]; cta: string };
+      p2: { title: string; items: string[]; cta: string };
+      p3: { title: string; redLinesTitle: string; redLines: string[]; onsiteTitle: string; onsite: string[]; cta: string };
+      p4: { title: string; response: string; levelsTitle: string; levels: string[]; outcomesTitle: string; outcomes: string[]; cta: string };
+    };
+    resources: {
+      title: string;
+      items: { title: string; desc: string }[];
+    };
+  };
   certification: {
     title: string;
     subtitle: string;
@@ -116,10 +131,11 @@ export interface Translation {
   standards: {
     title: string;
     subtitle: string;
-    catA: { title: string; tag: string; docsTitle: string; docs: string[]; matrixTitle: string; matrixBody: string; disqual: string; };
-    catB: { title: string; tag: string; sub1: string; sub1Items: string[]; sub2: string; sub2Items: string[]; sub3: string; sub3Body: string; };
-    catC: { title: string; tag: string; discTitle: string; discBody: string; prohibTitle: string; prohibBody: string; compliance: string; };
-    catD: { title: string; tag: string; critTitle: string; critBody: string; rejTitle: string; rejBody: string; };
+    catA: StandardSection; 
+    catB: StandardSection; 
+    catC: StandardSection; 
+    catD: StandardSection; 
+    catE: StandardSection; 
   };
   transparency: {
     title: string;
@@ -259,6 +275,17 @@ export interface Translation {
     desc: string;
   };
   language: { en: string; zh: string; es: string; fr: string; it: string };
+}
+
+export interface StandardSection {
+  title: string;
+  tag: string;
+  scope?: string;
+  docsTitle: string;
+  docs: string[];
+  matrixTitle: string;
+  matrixBody: string;
+  disqual: string;
 }
 
 export interface PolicySection {

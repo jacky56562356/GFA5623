@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,6 +39,19 @@
                         sans: ['Inter', 'Noto Sans SC', 'sans-serif'],
                         montserrat: ['Montserrat', 'sans-serif'],
                         cinzel: ['Cinzel', 'serif'],
+                    },
+                    spacing: {
+                        'grid-1': '8px',
+                        'grid-2': '16px',
+                        'grid-3': '24px',
+                        'grid-4': '32px',
+                        'grid-5': '40px',
+                        'grid-6': '48px',
+                        'grid-8': '64px',
+                        'grid-10': '80px',
+                        'grid-12': '96px',
+                        'grid-16': '128px',
+                        'grid-20': '160px',
                     }
                 }
             }
@@ -45,34 +59,56 @@
     </script>
     <style>
         :root {
-          --font-serif: "Cinzel", "serif";
-          --font-sans: "Inter", "Noto Sans SC", sans-serif;
+          /* Colors */
           --bg: #07090c;
           --text: #e9eef5;
           --muted: #a9b3c1;
-
-          --gold-1: #7A5A00;
           --gold-2: #A67C00;
           --gold-3: #D4AF37;
           --gold-4: #F5E6A8;
           
-          /* Refined smaller Type Scale */
-          --h1: clamp(28px, 3vw, 44px);
-          --h2: clamp(22px, 1.8vw, 30px);
-          --h3: clamp(16px, 1.4vw, 20px);
-          --h4: clamp(14px, 1.2vw, 16px);
+          /* Typography Rules */
+          --h1-size: clamp(48px, 6vw, 64px);
+          --h1-lh: 1.1;
+          --h1-weight: 700;
+          --h1-ls: 0.06em;
+          
+          --h2-size: clamp(32px, 4vw, 40px);
+          --h2-lh: 1.2;
+          --h2-weight: 650;
+          --h2-ls: 0.04em;
+          
+          --h3-size: clamp(22px, 3vw, 28px);
+          --h3-lh: 1.3;
+          --h3-weight: 600;
+          --h3-ls: 0.02em;
+          
+          --h4-size: 20px;
+          --h4-lh: 1.35;
+          --h4-weight: 600;
+          
+          --body-size: 16px;
+          --body-lh: 1.7;
+          --body-weight: 400;
+          
+          --small-size: 14px;
+          --small-lh: 1.6;
+          
+          --micro-size: 12px;
+          --micro-lh: 1.4;
         }
 
         body {
             background-color: var(--bg);
             color: var(--text);
-            font-family: var(--font-sans);
-            line-height: 1.5; /* Condensed body leading */
-            text-rendering: optimizeLegibility;
+            font-family: 'Inter', 'Noto Sans SC', sans-serif;
+            font-size: var(--body-size);
+            line-height: var(--body-lh);
+            font-weight: var(--body-weight);
             -webkit-font-smoothing: antialiased;
         }
 
-        /* Luxury Gold Typography */
+        /* Institutional Luxury Styles */
         .gold {
           background: linear-gradient(90deg, var(--gold-2), var(--gold-3), var(--gold-4), var(--gold-3), var(--gold-2));
           -webkit-background-clip: text;
@@ -82,63 +118,58 @@
         }
 
         @keyframes goldShimmer {
-          0%   { background-position: 0% 50%; }
+          0% { background-position: 0% 50%; }
           100% { background-position: 200% 50%; }
         }
         .gold-shimmer {
           background-size: 200% 200%;
-          animation: goldShimmer 6s ease-in-out infinite;
-        }
-
-        @keyframes goldGlow {
-          0%, 100% { filter: drop-shadow(0 0 6px rgba(212,175,55,0.15)); }
-          50%     { filter: drop-shadow(0 0 12px rgba(245,230,168,0.25)); }
-        }
-        .gold-glow {
-          animation: goldGlow 3.2s ease-in-out infinite;
+          animation: goldShimmer 8s ease-in-out infinite;
         }
 
         .btn-gold {
-          font-family: var(--font-sans);
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          height: 52px;
+          padding: 0 32px;
           font-weight: 700;
           letter-spacing: 0.04em;
           background: linear-gradient(135deg, var(--gold-2), var(--gold-3), var(--gold-4));
-          color: #151515;
-          border: 1px solid rgba(245,230,168,0.2);
-          box-shadow: 0 8px 24px rgba(212,175,55,0.1);
-          transition: all 0.3s ease;
+          color: #07090c;
+          border-radius: 4px;
+          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .btn-gold:hover {
-          transform: translateY(-1px);
-          box-shadow: 0 12px 30px rgba(212,175,55,0.15);
+          transform: translateY(-2px);
+          box-shadow: 0 12px 32px rgba(212,175,55,0.25);
+          filter: brightness(1.1);
         }
 
-        .gold-gradient {
-            background: linear-gradient(135deg, #D4AF37 0%, #F5E6A8 50%, #A67C00 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        h1 { font-family: 'Cinzel', serif; font-size: var(--h1-size); line-height: var(--h1-lh); font-weight: var(--h1-weight); letter-spacing: var(--h1-ls); }
+        h2 { font-family: 'Cinzel', serif; font-size: var(--h2-size); line-height: var(--h2-lh); font-weight: var(--h2-weight); letter-spacing: var(--h2-ls); }
+        h3 { font-family: 'Montserrat', sans-serif; font-size: var(--h3-size); line-height: var(--h3-lh); font-weight: var(--h3-weight); letter-spacing: var(--h3-ls); }
+        h4 { font-family: 'Montserrat', sans-serif; font-size: var(--h4-size); line-height: var(--h4-lh); font-weight: var(--h4-weight); }
+        
+        .small-text { font-size: var(--small-size); line-height: var(--small-lh); }
+        .micro-text { font-size: var(--micro-size); line-height: var(--micro-lh); }
+
+        .glass-panel {
+            background: rgba(21, 24, 29, 0.8);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            padding: 32px;
+            border-radius: 8px;
         }
 
         .hero-mesh {
             background-image: 
-                radial-gradient(circle at 20% 30%, rgba(212,175,55,0.05) 0%, transparent 50%),
-                radial-gradient(circle at 80% 70%, rgba(212,175,55,0.03) 0%, transparent 50%);
+                radial-gradient(circle at 15% 20%, rgba(212,175,55,0.06) 0%, transparent 40%),
+                radial-gradient(circle at 85% 80%, rgba(212,175,55,0.04) 0%, transparent 40%);
         }
-
-        .glass-panel {
-            background: rgba(21, 24, 29, 0.7);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(212, 175, 55, 0.08);
-        }
-
-        h1 { font-family: var(--font-serif); font-size: var(--h1); letter-spacing: 0.04em; line-height: 1.1; }
-        h2 { font-family: var(--font-serif); font-size: var(--h2); letter-spacing: 0.03em; line-height: 1.15; }
-        h3 { font-family: var(--font-sans); font-size: var(--h3); letter-spacing: 0.02em; line-height: 1.2; font-weight: 700; }
-        h4 { font-family: var(--font-sans); font-size: var(--h4); letter-spacing: 0.01em; line-height: 1.25; font-weight: 600; }
-
-        @media (prefers-reduced-motion: reduce){
-          .gold-shimmer, .gold-glow { animation: none; }
-        }
+        
+        /* Grid Spacing Utility Classes */
+        .section-gap { padding-top: 120px; padding-bottom: 120px; }
+        .module-gap { margin-bottom: 80px; }
     </style>
 <script type="importmap">
 {
@@ -148,7 +179,8 @@
     "react/": "https://esm.sh/react@^19.2.4/",
     "react": "https://esm.sh/react@^19.2.4",
     "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.3",
-    "react-router-dom": "https://esm.sh/react-router-dom@^7.13.0"
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.13.0",
+    "jspdf": "https://esm.sh/jspdf@^2.5.1"
   }
 }
 </script>
