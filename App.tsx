@@ -75,30 +75,11 @@ const Navbar = () => {
     window.scrollTo(0, 0);
   }, [pathname]);
 
-  // Lock body scroll when mobile menu is open
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
-  }, [isOpen]);
-
-  const toggleMenu = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    setIsOpen(!isOpen);
-  };
-
-  const closeMenu = () => {
-    setIsOpen(false);
-    setIsCertOpen(false);
-  };
-
   return (
-    <nav className="fixed w-full z-50 bg-gfa-black/95 backdrop-blur-xl border-b border-gfa-gold/20 select-none">
+    <nav className="fixed w-full z-50 bg-gfa-black/95 backdrop-blur-xl border-b border-gfa-gold/20">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center h-24">
-          <Link to="/" onClick={closeMenu} className="flex items-center gap-4 group">
+          <Link to="/" className="flex items-center gap-4 group">
             <img 
               src="https://i.ibb.co/B582n2Dk/1755827874220993959.png" 
               alt={t.meta.siteName} 
@@ -110,7 +91,6 @@ const Navbar = () => {
             </div>
           </Link>
 
-          {/* Desktop Links */}
           <div className="hidden lg:flex items-center space-x-6">
             <Link to="/" className={`text-xs font-bold uppercase tracking-widest transition-colors hover:text-gfa-gold ${pathname === '/' ? 'text-gfa-gold' : 'text-gfa-gray'}`}>
               {t.nav.home}
@@ -146,59 +126,36 @@ const Navbar = () => {
             >
               {languages.map(lang => <option key={lang.code} value={lang.code} className="bg-gfa-black">{lang.label}</option>)}
             </select>
-            
-            {/* Improved Mobile Menu Toggle Button */}
-            <button 
-              className="lg:hidden text-gfa-gold p-2 relative z-[60]" 
-              onClick={toggleMenu}
-              aria-label="Toggle Menu"
-            >
-              <svg className="w-10 h-10 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
-              </svg>
+            <button className="lg:hidden text-gfa-gray p-2" onClick={() => setIsOpen(!isOpen)}>
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16m-7 6h7"} /></svg>
             </button>
           </div>
         </div>
       </div>
       
-      {/* Mobile Navigation Menu Overlay */}
       {isOpen && (
-        <div className="lg:hidden fixed inset-0 bg-gfa-black z-50 overflow-y-auto pt-24 pb-32 animate-fade-in">
-          <div className="p-8 space-y-6">
+        <div className="lg:hidden fixed inset-0 top-24 bg-gfa-black z-40 overflow-y-auto animate-fade-in">
+          <div className="p-6 space-y-6">
             {mainNavLinks.map(l => (
-              <Link 
-                key={l.path} 
-                to={l.path} 
-                onClick={closeMenu}
-                className={`block text-2xl font-black uppercase tracking-[0.2em] border-b border-white/5 pb-5 ${pathname === l.path ? 'text-gfa-gold' : 'text-white/80'}`}
-              >
+              <Link key={l.path} to={l.path} className={`block text-base font-black uppercase tracking-[0.2em] border-b border-white/5 pb-4 ${pathname === l.path ? 'text-gfa-gold' : 'text-gfa-gray'}`}>
                 {l.label}
               </Link>
             ))}
             
-            <div className="mt-12 bg-gfa-darkGray/60 p-8 rounded-xl border border-gfa-gold/15 shadow-2xl">
-              <div className="text-[10px] text-gfa-gold font-black uppercase tracking-[0.4em] mb-8 border-l-4 border-gfa-gold pl-4">
-                {t.nav.certification}
-              </div>
-              <div className="grid grid-cols-1 gap-6">
+            <div className="bg-gfa-darkGray/50 p-6 rounded-lg border border-white/5">
+              <div className="text-xs text-gfa-gold font-black uppercase tracking-[0.3em] mb-6 border-l-4 border-gfa-gold pl-4">{t.nav.certification}</div>
+              <div className="grid grid-cols-1 gap-4">
                 {certGovLinks.map(gl => (
-                  <Link 
-                    key={gl.path} 
-                    to={gl.path} 
-                    onClick={closeMenu}
-                    className={`text-sm font-black uppercase tracking-widest transition-colors ${pathname === gl.path ? 'text-gfa-gold' : 'text-white/50 hover:text-white'}`}
-                  >
+                  <Link key={gl.path} to={gl.path} className={`text-xs font-black uppercase tracking-widest ${pathname === gl.path ? 'text-white' : 'text-gfa-gray opacity-60'}`}>
                     {gl.label}
                   </Link>
                 ))}
               </div>
             </div>
             
-            <div className="pt-10">
-              <Link to="/contact" onClick={closeMenu} className="block w-full py-6 text-center bg-gfa-gold text-gfa-black font-black uppercase text-sm tracking-[0.4em] rounded-md shadow-2xl transition-transform active:scale-95">
-                {t.nav.contact}
-              </Link>
-            </div>
+            <Link to="/contact" className="block w-full py-6 text-center bg-gfa-gold text-gfa-black font-black uppercase text-xs tracking-[0.4em] rounded-md shadow-2xl">
+              {t.nav.contact}
+            </Link>
           </div>
         </div>
       )}
@@ -220,7 +177,7 @@ const Footer = () => {
               className="h-24 w-auto object-contain transition-transform group-hover:scale-105 drop-shadow-[0_0_20px_rgba(212,175,55,0.4)]"
             />
             <div className="flex flex-col">
-              <span className="text-3xl font-black gold leading-none tracking-tighter">GFA</span>
+              <span className="text-3xl font-black gold-gradient leading-none tracking-tighter">GFA</span>
               <span className="text-[10px] tracking-[0.2em] text-gfa-gray uppercase font-bold mt-1 opacity-60">{t.meta.siteName}</span>
             </div>
           </Link>
@@ -263,7 +220,7 @@ const App = () => {
       <HashRouter>
         <div className="min-h-screen bg-gfa-black text-white selection:bg-gfa-gold selection:text-gfa-black">
           <Navbar />
-          <main className="pt-24 min-h-[calc(100vh-24rem)]">
+          <main className="pt-24">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />

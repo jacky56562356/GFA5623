@@ -146,7 +146,7 @@ const EN_JSON: Translation = {
           "Mandatory disclosure of all fees: amount, purpose, optional status, and refund conditions.",
           "Zero-tolerance for forced bundling: Casting opportunities cannot be conditioned on paid training, photography, or portfolios.",
           "Risk audits for fees exceeding reasonable industry benchmarks with mandatory cost-of-service disclosure.",
-          "Direct reporting portal for hidden fees or pay-to-play recruitment schemes.",
+          "Direct reporting portal for hidden fees or pay-to-play recruitment schemes."
         ],
         cta: "View Fee Rules"
       },
@@ -511,7 +511,7 @@ const ZH_JSON: Translation = {
   meta: { siteName: "GFA 全球电影联盟", tagline: "认证 • 合规 • 保护" },
   nav: {
     home: "首页",
-    about: "监管监督",
+    about: "协助监督",
     certification: "合规与保证金",
     certGov: {
       overview: "概览",
@@ -585,39 +585,78 @@ const ZH_JSON: Translation = {
       cta: "搜索名录"
     }
   },
-  about: {
-    ...EN_JSON.about,
-    title: "协助监督",
-    mandate: { title: "行业伦理治理", body: "GFA 作为一个独立联络机构，协助州政府监控行业合规情况，重点关注 5 万美元保证金的要求。" }
-  },
-  support: {
-    ...EN_JSON.support,
-    title: "扶持下一代电影人",
-    programsTitle: "项目",
-    cta: "申请项目"
-  },
-  casting: {
-    ...EN_JSON.casting,
-    title: "经核实的机会",
-    intro: "在受监管的环境中，将经过认证的人才与经过审查的制作机会联系起来。"
-  },
-  membership: {
-    ...EN_JSON.membership,
-    title: "GFA 会员",
-    intro: "为全球电影界提供专业保护和认证身份。"
-  },
-  partners: {
-    ...EN_JSON.partners,
-    title: "受信任的合作伙伴",
-    found: "找到 {n} 位合作伙伴"
-  },
-  events: {
-    ...EN_JSON.events,
-    title: "授权活动",
-    cta: "提交申请"
+  safeguarding: {
+    title: "青少年保护权威 (Safeguarding)",
+    subtitle: "确保未成年人在创意产业中享有透明、可追溯且负责任的环境。",
+    mission: "我们建立面向未成年演艺活动的行业安全标准，减少诈骗与伤害，确保试镜、培训、经纪与赛事活动在透明、可追溯、可申诉的框架下运行。",
+    pillars: {
+      p1: {
+        title: "机会验证",
+        items: [
+          "试镜/招募必须绑定可核验项目（制片/选角联系人可验证）。",
+          "发布前必须完成：身份核验、项目证明核验、招募流程核验。",
+          "所有“Verified Audition”均带有独立验证编号与官方查询页面。",
+          "严禁发布匿名招募或无具体项目的虚构招聘。"
+        ],
+        cta: "核实一个试镜"
+      },
+      p2: {
+        title: "收费透明与反捆绑",
+        items: [
+          "任何收费必须公开：明确金额、用途、是否可选及退款条件。",
+          "严禁强制捆绑：严禁以“必须买课/摄影包/作品集”作为给予试镜机会的前提。",
+          "对“超出行业合理范围收费”启动风险审查与强制成本披露制度。",
+          "建立针对隐藏费用与“付费试镜”骗局的专项举报通道。"
+        ],
+        cta: "查看收费准则"
+      },
+      p3: {
+        title: "未成年人安全规则",
+        redLinesTitle: "强制规则 (法律红线)",
+        redLines: [
+          "监护人知情权：未成年人试镜与沟通，监护人必须全程知情并拥有陪同权。",
+          "禁止私下会面：严禁未成年人与陌生成年人进行无监管的单独线下见面。",
+          "隐私保护红线：禁止索取住址、家庭财务、敏感影像等非必要隐私信息。",
+          "沟通可追溯：所有专业沟通必须通过官方邮件或平台记录，确保有据可查。"
+        ],
+        onsiteTitle: "现场活动安全要求 (试镜/拍摄/赛事)",
+        onsite: [
+          "严格的签到/签退制度，必须由监护人实名确认。",
+          "所有现场工作人员必须持有并佩戴统一的身份标识。",
+          "必须具备应急预案：包含紧急联系人、医疗点及安全疏散方案。",
+          "影像使用授权：明确影像存储期限（建议 90 天或 180 天）及使用范围声明。"
+        ],
+        cta: "下载安全清单"
+      },
+      p4: {
+        title: "投诉、调查与救济",
+        response: "统一投诉入口，GFA 承诺在 24–72 小时内响应受理。",
+        levelsTitle: "分级调查机制",
+        levels: [
+          "Level 1: 信息纠错与解释说明请求。",
+          "Level 2: 费用纠纷调解与强制退款复核。",
+          "Level 3: 涉嫌欺诈或未成年人安全风险（立即暂停名录公示）。"
+        ],
+        outcomesTitle: "监管处理决定",
+        outcomes: [
+          "警告 (Warning): 强制纠正及合规约谈。",
+          "暂停 (Suspended): 暂时移出公共认证名录，进入观察期。",
+          "吊销 (Revoked): 永久黑名单，并移交州政府司法渠道。"
+        ],
+        cta: "查询进度/举报"
+      }
+    },
+    resources: {
+      title: "安全资源中心",
+      items: [
+        { title: "家长安全指南", desc: "报名、试镜与合同时的关键风险点避坑指南。" },
+        { title: "标准合规合同模板", desc: "防止“付费入组”等霸王条款的权威模板。" },
+        { title: "常见诈骗手法库", desc: "实时更新的行业陷阱预警与真实案例拆解。" },
+        { title: "违规吊销名单", desc: "被永久封禁并移交法办的违规机构公开公示。" }
+      ]
+    }
   },
   footer: {
-    ...EN_JSON.footer,
     verification: "搜索名录",
     privacy: "隐私",
     terms: "条款",
@@ -650,7 +689,7 @@ const ES_JSON: Translation = {
     support: "Programas de Apoyo",
     casting: "Talento Global",
     membership: "Membresía",
-    partners: "Aliados",
+    partners: "Socios",
     events: "Eventos",
     contact: "Contacto",
     verify: "Verificar Fianza",
