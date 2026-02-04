@@ -5,66 +5,172 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GFA Global Film Alliance | Official Institutional Website</title>
+    <meta name="description" content="The official portal for the Global Film Alliance (GFA). Independent film certification, talent governance, and non-profit creative support.">
     
-    <!-- Speed: Preconnect to external CDNs -->
-    <link rel="preconnect" href="https://esm.sh" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://i.ibb.co">
+    <link rel="canonical" href="https://www.gfaalliance.org/" />
 
-    <!-- Critical Styles for Instant Paint -->
-    <style>
-        body { background: #07090c; margin: 0; color: #e9eef5; font-family: sans-serif; }
-        #root { min-height: 100vh; }
-        .loading-screen { 
-            position: fixed; inset: 0; display: flex; items-center: center; justify-content: center; 
-            background: #07090c; z-index: 9999; flex-direction: column; gap: 20px;
-        }
-        .loading-logo { height: 60px; filter: drop-shadow(0 0 10px #D4AF37); animation: pulse 2s infinite; }
-        @keyframes pulse { 0%, 100% { opacity: 0.5; transform: scale(0.95); } 50% { opacity: 1; transform: scale(1.05); } }
-    </style>
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.gfaalliance.org/">
+    <meta property="og:title" content="GFA Global Film Alliance">
+    <meta property="og:description" content="Independent film certification and talent governance.">
+    <meta property="og:image" content="https://i.ibb.co/B582n2Dk/1755827874220993959.png">
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Montserrat:wght@400;700;900&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Montserrat:wght@300;400;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        gfa: { black: '#07090c', gold: '#D4AF37', gray: '#a9b3c1', darkGray: '#15181d' }
+                        gfa: {
+                            black: '#07090c',
+                            gold: '#D4AF37',
+                            goldLight: '#F5E6A8',
+                            gray: '#a9b3c1',
+                            darkGray: '#15181d'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans SC', 'sans-serif'],
+                        montserrat: ['Montserrat', 'sans-serif'],
+                        cinzel: ['Cinzel', 'serif'],
+                    },
+                    spacing: {
+                        'grid-1': '8px',
+                        'grid-2': '16px',
+                        'grid-3': '24px',
+                        'grid-4': '32px',
+                        'grid-5': '40px',
+                        'grid-6': '48px',
+                        'grid-8': '64px',
+                        'grid-10': '80px',
+                        'grid-12': '96px',
+                        'grid-16': '128px',
+                        'grid-20': '160px',
                     }
                 }
             }
         }
     </script>
     <style>
+        :root {
+          /* Colors */
+          --bg: #07090c;
+          --text: #e9eef5;
+          --muted: #a9b3c1;
+          --gold-2: #A67C00;
+          --gold-3: #D4AF37;
+          --gold-4: #F5E6A8;
+          
+          /* Typography Rules */
+          --h1-size: clamp(48px, 6vw, 64px);
+          --h1-lh: 1.1;
+          --h1-weight: 700;
+          --h1-ls: 0.06em;
+          
+          --h2-size: clamp(32px, 4vw, 40px);
+          --h2-lh: 1.2;
+          --h2-weight: 650;
+          --h2-ls: 0.04em;
+          
+          --h3-size: clamp(22px, 3vw, 28px);
+          --h3-lh: 1.3;
+          --h3-weight: 600;
+          --h3-ls: 0.02em;
+          
+          --h4-size: 20px;
+          --h4-lh: 1.35;
+          --h4-weight: 600;
+          
+          --body-size: 16px;
+          --body-lh: 1.7;
+          --body-weight: 400;
+          
+          --small-size: 14px;
+          --small-lh: 1.6;
+          
+          --micro-size: 12px;
+          --micro-lh: 1.4;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', 'Noto Sans SC', sans-serif;
+            font-size: var(--body-size);
+            line-height: var(--body-lh);
+            font-weight: var(--body-weight);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Institutional Luxury Styles */
         .gold {
-          background: linear-gradient(90deg, #A67C00, #D4AF37, #F5E6A8, #D4AF37, #A67C00);
+          background: linear-gradient(90deg, var(--gold-2), var(--gold-3), var(--gold-4), var(--gold-3), var(--gold-2));
           -webkit-background-clip: text;
           background-clip: text;
           color: transparent;
-          background-size: 200% auto;
+          text-shadow: 0 0 18px rgba(212,175,55,0.08);
         }
-        .nav-float { transition: all 0.4s cubic-bezier(0.2, 0, 0, 1); will-change: transform, background; }
-        .nav-float.scrolled {
-            transform: translateY(12px);
-            max-width: 92%;
-            margin: 0 auto;
-            border-radius: 50px;
-            background: rgba(7, 9, 12, 0.9);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(212, 175, 55, 0.3);
-        }
-        /* GPU Accelerated Menu */
-        .mobile-overlay {
-            transform: translate3d(0, 100%, 0);
-            transition: transform 0.4s cubic-bezier(0.2, 0, 0, 1);
-            will-change: transform;
-        }
-        .mobile-overlay.open { transform: translate3d(0, 0, 0); }
-    </style>
 
+        @keyframes goldShimmer {
+          0% { background-position: 0% 50%; }
+          100% { background-position: 200% 50%; }
+        }
+        .gold-shimmer {
+          background-size: 200% 200%;
+          animation: goldShimmer 8s ease-in-out infinite;
+        }
+
+        .btn-gold {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          height: 52px;
+          padding: 0 32px;
+          font-weight: 700;
+          letter-spacing: 0.04em;
+          background: linear-gradient(135deg, var(--gold-2), var(--gold-3), var(--gold-4));
+          color: #07090c;
+          border-radius: 4px;
+          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .btn-gold:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 12px 32px rgba(212,175,55,0.25);
+          filter: brightness(1.1);
+        }
+
+        h1 { font-family: 'Cinzel', serif; font-size: var(--h1-size); line-height: var(--h1-lh); font-weight: var(--h1-weight); letter-spacing: var(--h1-ls); }
+        h2 { font-family: 'Cinzel', serif; font-size: var(--h2-size); line-height: var(--h2-lh); font-weight: var(--h2-weight); letter-spacing: var(--h2-ls); }
+        h3 { font-family: 'Montserrat', sans-serif; font-size: var(--h3-size); line-height: var(--h3-lh); font-weight: var(--h3-weight); letter-spacing: var(--h3-ls); }
+        h4 { font-family: 'Montserrat', sans-serif; font-size: var(--h4-size); line-height: var(--h4-lh); font-weight: var(--h4-weight); }
+        
+        .small-text { font-size: var(--small-size); line-height: var(--small-lh); }
+        .micro-text { font-size: var(--micro-size); line-height: var(--micro-lh); }
+
+        .glass-panel {
+            background: rgba(21, 24, 29, 0.8);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            padding: 32px;
+            border-radius: 8px;
+        }
+
+        .hero-mesh {
+            background-image: 
+                radial-gradient(circle at 15% 20%, rgba(212,175,55,0.06) 0%, transparent 40%),
+                radial-gradient(circle at 85% 80%, rgba(212,175,55,0.04) 0%, transparent 40%);
+        }
+        
+        /* Grid Spacing Utility Classes */
+        .section-gap { padding-top: 120px; padding-bottom: 120px; }
+        .module-gap { margin-bottom: 80px; }
+    </style>
 <script type="importmap">
 {
   "imports": {
@@ -72,20 +178,15 @@
     "vite": "https://esm.sh/vite@^7.3.1",
     "react/": "https://esm.sh/react@^19.2.4/",
     "react": "https://esm.sh/react@^19.2.4",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.3",
     "react-router-dom": "https://esm.sh/react-router-dom@^7.13.0",
-    "jspdf": "https://esm.sh/jspdf@^2.5.1",
-    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.3"
+    "jspdf": "https://esm.sh/jspdf@^2.5.1"
   }
 }
 </script>
 </head>
 <body>
-    <div id="root">
-        <!-- Static Loading State for fast perceived performance -->
-        <div class="loading-screen">
-            <img src="https://i.ibb.co/B582n2Dk/1755827874220993959.png" class="loading-logo" alt="GFA">
-        </div>
-    </div>
+    <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
 </body>
 </html>
