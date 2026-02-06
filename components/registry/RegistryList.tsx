@@ -19,6 +19,12 @@ function statusClass(status: string) {
   }
 }
 
+function scoreColorClass(score: number) {
+  if (score >= 90) return 'text-gfa-gold drop-shadow-[0_0_10px_rgba(212,175,55,0.3)]';
+  if (score >= 70) return 'text-white/80';
+  return 'text-red-500/70';
+}
+
 export default function RegistryList({
   items,
   loading,
@@ -114,7 +120,7 @@ export default function RegistryList({
               <div className="text-center md:text-right">
                 <div className="flex items-center gap-4 md:justify-end">
                   <span className="text-[10px] text-gfa-gray/40 uppercase font-black tracking-[0.4em] font-montserrat">{t.registry.trustScore}</span>
-                  <span className={`text-4xl font-black font-serif tracking-tighter transition-colors duration-500 ${o.trustScore > 80 ? 'text-gfa-gold' : 'text-red-500/60'}`}>
+                  <span className={`text-4xl font-black font-serif tracking-tighter transition-all duration-500 ${scoreColorClass(o.trustScore)}`}>
                     {o.trustScore}
                   </span>
                   <span className="text-sm font-serif opacity-30">({calculateTrustGrade(o.trustScore)})</span>

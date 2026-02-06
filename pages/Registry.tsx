@@ -80,9 +80,16 @@ const Registry = () => {
     <div className="bg-gfa-black pt-48 pb-40 px-6 min-h-screen">
       <div className="max-w-7xl mx-auto">
         <header className="mb-32 text-center max-w-5xl mx-auto animate-fade-in">
-          <div className="inline-block px-8 py-2.5 border border-gfa-gold/30 text-gfa-gold text-[10px] font-black uppercase tracking-[0.6em] mb-12 bg-gfa-gold/5 rounded-sm backdrop-blur-md shadow-2xl">
-            OFFICIAL SUPERVISORY DATA PORTAL
+          <div className="flex flex-col items-center gap-8 mb-12">
+            <div className="inline-block px-8 py-2.5 border border-gfa-gold/30 text-gfa-gold text-[10px] font-black uppercase tracking-[0.6em] bg-gfa-gold/5 rounded-sm backdrop-blur-md shadow-2xl">
+              OFFICIAL SUPERVISORY DATA PORTAL
+            </div>
+            <div className="flex items-center gap-3 text-[9px] font-black text-green-500 uppercase tracking-widest">
+              <span className="w-2 h-2 rounded-full bg-green-500 animate-ping"></span>
+              Live Audit Database Connected
+            </div>
           </div>
+          
           <h1 className="mb-12 gold uppercase text-6xl md:text-9xl tracking-tighter font-cinzel leading-none font-black">
             {t.registry.title}
           </h1>
@@ -125,7 +132,11 @@ const Registry = () => {
           </div>
         </div>
 
-        <div className="animate-fade-in" style={{ animationDelay: '0.4s' }}>
+        <div className="animate-fade-in relative" style={{ animationDelay: '0.4s' }}>
+          {/* Audit Scanning Overlay Effect */}
+          {loading && (
+             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gfa-gold to-transparent animate-[shimmer_2s_infinite] z-20 opacity-30 pointer-events-none"></div>
+          )}
           <RegistryList 
             items={filteredOrgs} 
             loading={loading} 
