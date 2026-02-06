@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { RegistryOrg } from '../../lib/registry/types';
 import { useLocale } from '../../LocaleContext.tsx';
@@ -53,6 +54,14 @@ export default function RegistryList({
     );
   }
 
+  const indicatorLabels: Record<string, string> = {
+    documentationVerified: "Docs Verified",
+    feeTransparency: "Fee Transparency",
+    contractClarity: "Contract Clarity",
+    safeguardingPolicy: "Safeguarding",
+    complaintResponsiveness: "Responsiveness"
+  };
+
   return (
     <div className="grid gap-6">
       {items.map((o) => (
@@ -66,7 +75,7 @@ export default function RegistryList({
           
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-10">
             <div className="flex flex-col md:flex-row items-center md:items-start gap-10">
-              {/* Logo / Placeholder */}
+              {/* Logo / Initial */}
               <div className="h-24 w-24 rounded-sm bg-gfa-black/80 border border-white/10 flex items-center justify-center font-black text-4xl gold shrink-0 group-hover:border-gfa-gold/40 transition-all duration-500 shadow-inner">
                 {o.name.slice(0, 1).toUpperCase()}
               </div>
@@ -96,7 +105,7 @@ export default function RegistryList({
                 <div className="text-[10px] text-gfa-gray/40 uppercase font-black tracking-widest flex flex-wrap items-center justify-center md:justify-start gap-4 font-montserrat">
                   <span className="flex items-center gap-2">📍 {o.city}, {o.country}</span>
                   <span className="w-1.5 h-1.5 bg-white/10 rounded-full hidden md:block"></span>
-                  <span className="flex items-center gap-2">🆔 AUDIT: <span className="text-white/30 font-mono">{o.orgId}</span></span>
+                  <span className="flex items-center gap-2">🆔 CERT: <span className="text-white/30 font-mono">{o.certification.certificationId}</span></span>
                 </div>
               </div>
             </div>
@@ -111,6 +120,7 @@ export default function RegistryList({
                   <span className="text-sm font-serif opacity-30">({calculateTrustGrade(o.trustScore)})</span>
                 </div>
 
+                {/* 5-point Transparency Indicators */}
                 <div className="flex flex-wrap gap-2.5 mt-5 md:justify-end">
                   {Object.entries(o.indicators).map(([k, v]) => (
                     <div
@@ -118,7 +128,7 @@ export default function RegistryList({
                       className={`w-6 h-6 rounded-full border flex items-center justify-center text-[10px] transition-all duration-700 ${
                         v ? "border-green-600/20 text-green-500 bg-green-600/5 shadow-[0_0_10px_rgba(34,197,94,0.05)]" : "border-white/5 text-white/10"
                       }`}
-                      title={k.replace(/([A-Z])/g, " $1")}
+                      title={indicatorLabels[k] || k.replace(/([A-Z])/g, " $1")}
                     >
                       {v ? '✓' : '×'}
                     </div>
