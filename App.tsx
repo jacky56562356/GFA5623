@@ -63,10 +63,10 @@ const Navbar = () => {
       <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ${scrolled ? 'bg-gfa-black/95 backdrop-blur-2xl py-3 border-b border-gfa-gold/10 shadow-2xl' : 'bg-transparent py-6'}`}>
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-4 group">
-            <img src="https://i.ibb.co/B582n2Dk/1755827874220993959.png" alt="GFA" className="h-10 w-auto group-hover:scale-110 transition-transform duration-500" />
+            <img src="https://i.ibb.co/B582n2Dk/1755827874220993959.png" alt="GFA" className="h-12 w-auto group-hover:scale-110 transition-transform duration-500" />
             <div className="flex flex-col">
-              <span className="text-2xl font-black gold leading-none tracking-tighter">GFA</span>
-              <span className="text-[7px] tracking-[0.4em] uppercase opacity-40 font-black">Global Film Alliance</span>
+              <span className="text-3xl font-black gold leading-none tracking-tighter">GFA</span>
+              <span className="text-[9px] tracking-[0.4em] uppercase opacity-40 font-black mt-1">Global Film Alliance</span>
             </div>
           </Link>
 
@@ -75,19 +75,19 @@ const Navbar = () => {
               <Link 
                 key={link.path} 
                 to={link.path} 
-                className={`text-[9px] font-black uppercase tracking-[0.2em] transition-all duration-300 hover:text-gfa-gold border-b-2 ${pathname === link.path ? 'border-gfa-gold text-gfa-gold' : 'border-transparent text-gfa-gray'}`}
+                className={`text-xs font-black uppercase tracking-[0.2em] transition-all duration-300 hover:text-gfa-gold border-b-2 ${pathname === link.path ? 'border-gfa-gold text-gfa-gold' : 'border-transparent text-gfa-gray'}`}
               >
                 {link.name}
               </Link>
             ))}
             <div className="h-4 w-px bg-white/10 mx-2"></div>
-            <Link to="/member" className="bg-gfa-gold/10 border border-gfa-gold/40 text-gfa-gold text-[9px] font-black uppercase tracking-widest px-4 py-2 hover:bg-gfa-gold hover:text-gfa-black transition-all duration-300">
+            <Link to="/member" className="bg-gfa-gold/10 border border-gfa-gold/40 text-gfa-gold text-xs font-black uppercase tracking-widest px-5 py-2.5 hover:bg-gfa-gold hover:text-gfa-black transition-all duration-300">
               {t.nav.memberPortal}
             </Link>
             <select 
               value={locale} 
               onChange={(e) => setLocale(e.target.value as Locale)}
-              className="bg-gfa-black/40 text-[9px] text-gfa-gold font-black uppercase tracking-widest focus:outline-none cursor-pointer border border-gfa-gold/20 rounded px-2 py-1 hover:border-gfa-gold"
+              className="bg-gfa-black/40 text-xs text-gfa-gold font-black uppercase tracking-widest focus:outline-none cursor-pointer border border-gfa-gold/20 rounded px-2 py-1.5 hover:border-gfa-gold"
             >
               <option value={Locale.EN} className="bg-gfa-black">EN</option>
               <option value={Locale.ZH} className="bg-gfa-black">ZH</option>

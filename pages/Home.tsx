@@ -12,7 +12,7 @@ const Home = () => {
     return (
       <Link 
         to={path} 
-        className="group bg-gfa-darkGray/40 p-10 border border-white/10 hover:border-gfa-gold transition-all duration-500 relative overflow-hidden shadow-2xl flex flex-col h-full rounded-sm"
+        className="group bg-gfa-darkGray/40 p-10 border border-white/10 hover:border-gfa-gold transition-all duration-500 relative overflow-hidden shadow-2xl flex flex-col h-full rounded-sm backdrop-blur-md"
       >
         <div className="text-gfa-gold mb-8 text-4xl opacity-30 group-hover:opacity-100 transition-opacity transform group-hover:scale-110 duration-500">
           {icon}
@@ -24,7 +24,6 @@ const Home = () => {
           {hub.body}
         </p>
         
-        {/* Specific Verification Features */}
         <div className="space-y-3 mb-10 pt-6 border-t border-white/5">
           {hub.features.map((feature: string, idx: number) => (
             <div key={idx} className="flex items-center gap-3">
@@ -40,7 +39,6 @@ const Home = () => {
           {t.locale === 'zh' ? '进入中心' : 'ACCESS HUB'} <span className="text-xs">→</span>
         </div>
         
-        {/* Decorative corner accent */}
         <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-gfa-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
       </Link>
     );
@@ -48,36 +46,93 @@ const Home = () => {
 
   return (
     <div className="bg-gfa-black">
-      {/* 1. Hero Section */}
-      <section className="relative min-h-[85vh] flex items-center justify-center px-6 pt-24 overflow-hidden border-b border-white/5">
-        <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_50%_40%,rgba(212,175,55,0.08),transparent_70%)] opacity-60"></div>
-        <div className="max-w-6xl text-center z-10 animate-fade-in relative">
-          <div className="inline-block px-5 py-1.5 border border-gfa-gold/40 text-gfa-gold text-[10px] font-black uppercase tracking-[0.6em] mb-12 bg-gfa-gold/5 rounded-sm backdrop-blur-md">
-            Independent Nonprofit • Industry Standards
+      {/* 1. Hero Section with Background Image */}
+      <section className="relative min-h-screen flex items-center justify-center px-6 pt-24 overflow-hidden border-b border-white/5">
+        <div 
+          className="absolute inset-0 z-0 bg-cover bg-center bg-fixed transition-transform duration-1000 scale-105"
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=2000')" }}
+        ></div>
+        <div className="absolute inset-0 z-1 hero-overlay"></div>
+        
+        <div className="max-w-6xl text-center z-10 animate-fade-in relative px-4">
+          <div className="inline-block px-5 py-2 border border-gfa-gold/40 text-gfa-gold text-[10px] font-black uppercase tracking-[0.6em] mb-12 bg-gfa-gold/5 rounded-sm backdrop-blur-md">
+            Nonprofit • Independent • Transparency
           </div>
-          <h1 className="mb-10 gold uppercase text-4xl md:text-7xl tracking-[0.1em] leading-[1.1] font-black font-cinzel">
+          <h1 className="mb-10 gold-shimmer gold uppercase text-5xl md:text-8xl tracking-tighter leading-[0.9] font-black font-cinzel">
             {h.hero.title}
           </h1>
-          <p className="text-lg md:text-xl text-gfa-gray font-light uppercase tracking-[0.3em] mb-14 max-w-4xl mx-auto leading-loose border-y border-white/10 py-10">
+          <p className="text-lg md:text-xl text-white/70 font-light uppercase tracking-[0.3em] mb-14 max-w-4xl mx-auto leading-loose border-y border-white/10 py-12 backdrop-blur-[2px]">
             {h.hero.subtitle}
           </p>
-          <p className="text-gfa-gray/60 text-xs md:text-sm max-w-2xl mx-auto mb-16 leading-relaxed uppercase tracking-[0.15em] font-medium opacity-80">
-            {h.hero.body}
-          </p>
           
-          <div className="flex flex-col sm:flex-row justify-center gap-8">
-            <Link to="/certification" className="btn-gold px-12 py-5 shadow-2xl text-[11px]">{h.hero.ctaPrimary}</Link>
-            <Link to="/registry" className="px-12 py-5 border border-gfa-gold/40 text-gfa-gold text-[10px] font-black uppercase tracking-[0.3em] hover:bg-gfa-gold hover:text-gfa-black transition-all rounded-sm backdrop-blur-sm shadow-xl">{h.hero.ctaSecondary}</Link>
+          <div className="flex flex-col sm:flex-row justify-center gap-10">
+            <Link to="/certification" className="btn-gold px-14 py-6 shadow-2xl">{h.hero.ctaPrimary}</Link>
+            <Link to="/registry" className="px-14 py-6 border border-white/20 text-white text-[10px] font-black uppercase tracking-[0.4em] hover:bg-white hover:text-gfa-black transition-all rounded-sm backdrop-blur-sm shadow-xl">{h.hero.ctaSecondary}</Link>
           </div>
-          <p className="mt-12 text-[9px] text-gfa-gray/40 uppercase tracking-[0.4em] italic">
+          <p className="mt-14 text-[9px] text-gfa-gold/60 uppercase tracking-[0.5em] italic font-bold">
             {h.hero.note}
           </p>
         </div>
       </section>
 
-      {/* 2. Platform Hubs (Expanded) */}
-      <section className="py-40 px-6 border-b border-white/5 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]">
+      {/* 2. Stats Marquee Bar */}
+      <div className="bg-gfa-gold text-gfa-black overflow-hidden py-6 border-y border-gfa-gold/50 shadow-[0_0_50px_rgba(212,175,55,0.2)]">
+        <div className="flex whitespace-nowrap animate-marquee">
+          {[...Array(2)].map((_, i) => (
+            <div key={i} className="flex gap-20 items-center px-10">
+              <span className="text-[12px] font-black uppercase tracking-[0.3em] flex items-center gap-4">
+                <span className="text-xl">📊</span> {h.stats.audited}
+              </span>
+              <span className="text-xl opacity-20">|</span>
+              <span className="text-[12px] font-black uppercase tracking-[0.3em] flex items-center gap-4">
+                <span className="text-xl">👤</span> {h.stats.verified}
+              </span>
+              <span className="text-xl opacity-20">|</span>
+              <span className="text-[12px] font-black uppercase tracking-[0.3em] flex items-center gap-4">
+                <span className="text-xl">🌍</span> {h.stats.countries}
+              </span>
+              <span className="text-xl opacity-20">|</span>
+              <span className="text-[12px] font-black uppercase tracking-[0.3em] flex items-center gap-4">
+                <span className="text-xl">🛡️</span> {h.stats.safeguarding}
+              </span>
+              <span className="text-xl opacity-20">|</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* 3. Core Pillars Section */}
+      <section className="py-40 px-6 bg-gfa-black relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gfa-gold/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2"></div>
         <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-32">
+            <h2 className="text-4xl md:text-5xl font-black uppercase tracking-[0.3em] gold mb-10">{h.pillars.title}</h2>
+            <p className="text-gfa-gray text-xs md:text-sm uppercase tracking-[0.2em] max-w-3xl mx-auto leading-loose opacity-60 italic">
+              {h.pillars.subtitle}
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            {[1, 2, 3].map(i => (
+              <div key={i} className="p-12 glass-panel border border-white/5 hover:border-gfa-gold/30 transition-all duration-700 group">
+                <div className="text-gfa-gold text-5xl mb-10 opacity-30 group-hover:opacity-100 transition-opacity">0{i}</div>
+                <h3 className="text-2xl font-black uppercase tracking-widest text-white mb-6 group-hover:text-gfa-gold transition-colors">
+                  {h.pillars[`p${i}`].title}
+                </h3>
+                <p className="text-[11px] text-gfa-gray uppercase tracking-widest leading-relaxed opacity-60">
+                  {h.pillars[`p${i}`].body}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 4. Platform Hubs Section with Texture Background */}
+      <section className="py-40 px-6 relative border-y border-white/5">
+        <div className="absolute inset-0 z-0 bg-[url('https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&q=80&w=2000')] bg-fixed bg-cover opacity-10 grayscale"></div>
+        <div className="absolute inset-0 bg-gfa-black/90 z-1"></div>
+        
+        <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-32">
             <div className="inline-block px-4 py-1 border border-gfa-gold/20 text-gfa-gold text-[8px] font-black uppercase tracking-[0.5em] mb-6 bg-gfa-gold/5 font-montserrat rounded-sm">
               SUPERVISORY OVERSIGHT
@@ -98,7 +153,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 3. Certification Framework */}
+      {/* 5. Certification Framework */}
       <section className="py-40 px-6 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-24 items-center">
@@ -128,8 +183,8 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 4. Bulletin News */}
-      <section className="py-40 px-6 border-y border-white/5">
+      {/* 6. Bulletin News & Charter */}
+      <section className="py-40 px-6 border-t border-white/5 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24">
           <div>
             <h2 className="text-3xl font-black uppercase tracking-[0.3em] gold mb-16">{h.news.title}</h2>
@@ -145,7 +200,7 @@ const Home = () => {
               ))}
             </div>
           </div>
-          <div className="bg-gfa-darkGray/60 p-16 border border-white/10 relative shadow-3xl flex flex-col justify-center rounded-sm">
+          <div className="bg-gfa-darkGray/60 p-16 border border-white/10 relative shadow-3xl flex flex-col justify-center rounded-sm backdrop-blur-md">
             <h2 className="text-2xl font-black uppercase tracking-[0.2em] gold mb-10">{h.governance.title}</h2>
             <p className="text-xs text-gfa-gray leading-loose uppercase tracking-widest mb-16 opacity-70 italic border-l-4 border-gfa-gold/30 pl-10">
               {h.governance.body}

@@ -54,6 +54,19 @@ const EN_JSON: any = {
       ctaSecondary: "Search Registry",
       note: "Institutional Status Verified for 2025"
     },
+    stats: {
+      audited: "500+ Audited Orgs",
+      verified: "12k+ Verified Talents",
+      countries: "42 Countries Covered",
+      safeguarding: "Zero Tolerance Active"
+    },
+    pillars: {
+      title: "The Pillars of Industry Trust",
+      subtitle: "GFA maintains the integrity of the cinematic ecosystem through three core operational mandates.",
+      p1: { title: "Verification", body: "Rigorous document audits and physical site inspections to ensure institutional legitimacy." },
+      p2: { title: "Safeguarding", body: "Zero-tolerance frameworks and background checks to protect minors and vulnerable talent." },
+      p3: { title: "Transparency", body: "Standardized fee caps and public disclosure logs to eliminate predatory practices." }
+    },
     hubs: {
       title: "Information & Verification Center",
       subtitle: "Real-time verification of institutional certification status, validity, and trust metrics. The GFA database is a critical resource for safe industry decisions.",
@@ -316,6 +329,19 @@ const ZH_JSON: any = {
   },
   home: {
     ...EN_JSON.home,
+    stats: {
+      audited: "500+ 已审计机构",
+      verified: "1.2万+ 已核实人才",
+      countries: "42个 国家与地区覆盖",
+      safeguarding: "零容忍政策 全面执行"
+    },
+    pillars: {
+      title: "行业信任的核心支柱",
+      subtitle: "GFA 通过三项核心职能维护电影生态系统的公正性与安全性。",
+      p1: { title: "真实性核验", body: "严格的文件审计与实地考察，确保公示机构的合法经营地位。" },
+      p2: { title: "青少年保护", body: "零容忍框架与背景审查机制，全方位保护未成年人与弱势创作人才。" },
+      p3: { title: "收费透明化", body: "标准化的收费上限公示与公开披露日志，根除行业中的掠夺性行为。" }
+    },
     hubs: {
       title: "信息公示与核查中心",
       subtitle: "实时核实行业机构的认证状态、有效期限及信誉评分。GFA 数据库是家庭做出安全选择的重要保障。",
