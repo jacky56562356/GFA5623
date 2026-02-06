@@ -67,9 +67,9 @@ const Reporting: React.FC = () => {
             </div>
           </div>
 
-          <div className="p-8 bg-red-500/10 border border-red-500/20">
-            <h4 className="text-[10px] text-red-500 font-black uppercase tracking-widest mb-4">{r.outcomesTitle}</h4>
-            <ul className="text-[10px] text-red-400 font-bold space-y-2 uppercase tracking-widest">
+          <div className="p-8 bg-white/5 border border-white/10">
+            <h4 className="text-[10px] text-white font-black uppercase tracking-widest mb-4">Possible Administrative Actions</h4>
+            <ul className="text-[10px] text-gfa-gray font-bold space-y-2 uppercase tracking-widest">
               {r.outcomes.map(outcome => (
                 <li key={outcome}>• {outcome}</li>
               ))}

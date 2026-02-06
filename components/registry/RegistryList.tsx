@@ -8,12 +8,12 @@ import { Link } from 'react-router-dom';
 function statusClass(status: string) {
   switch (status) {
     case "Active":
-      return "border-green-600/30 text-green-500 bg-green-500/5 shadow-[0_0_15px_rgba(34,197,94,0.1)]";
+      return "border-gfa-gold/30 text-gfa-gold bg-gfa-gold/5 shadow-[0_0_15px_rgba(212,175,55,0.1)]";
     case "Suspended":
-      return "border-orange-500/30 text-orange-500 bg-orange-500/5 shadow-[0_0_15px_rgba(249,115,22,0.1)]";
+      return "border-white/20 text-white/60 bg-white/5";
     case "Revoked":
     case "Expired":
-      return "border-red-600/30 text-red-500 bg-red-500/5 shadow-[0_0_15px_rgba(239,68,68,0.1)]";
+      return "border-white/10 text-white/30 bg-white/2 opacity-60";
     default:
       return "border-white/10 text-white/40 bg-white/5";
   }
@@ -22,7 +22,7 @@ function statusClass(status: string) {
 function scoreColorClass(score: number) {
   if (score >= 90) return 'text-gfa-gold drop-shadow-[0_0_10px_rgba(212,175,55,0.3)]';
   if (score >= 70) return 'text-white/80';
-  return 'text-red-500/70';
+  return 'text-white/40';
 }
 
 export default function RegistryList({
@@ -132,7 +132,7 @@ export default function RegistryList({
                     <div
                       key={k}
                       className={`w-6 h-6 rounded-full border flex items-center justify-center text-[10px] transition-all duration-700 ${
-                        v ? "border-green-600/20 text-green-500 bg-green-600/5 shadow-[0_0_10px_rgba(34,197,94,0.05)]" : "border-white/5 text-white/10"
+                        v ? "border-gfa-gold/40 text-gfa-gold bg-gfa-gold/5 shadow-[0_0_10px_rgba(212,175,55,0.1)]" : "border-white/5 text-white/10"
                       }`}
                       title={indicatorLabels[k] || k.replace(/([A-Z])/g, " $1")}
                     >
@@ -155,7 +155,7 @@ export default function RegistryList({
                 <Link
                   to={`/complaints?orgId=${encodeURIComponent(o.orgId)}&orgName=${encodeURIComponent(o.name)}`}
                   onClick={(e) => e.stopPropagation()}
-                  className="flex-grow md:flex-grow-0 text-[10px] px-8 py-4 font-black uppercase tracking-[0.2em] border border-red-900/40 text-red-500/70 hover:text-red-500 hover:bg-red-950/20 transition-all duration-300 rounded-sm text-center shadow-lg"
+                  className="flex-grow md:flex-grow-0 text-[10px] px-8 py-4 font-black uppercase tracking-[0.2em] border border-white/10 text-white/60 hover:text-white hover:bg-white/5 transition-all duration-300 rounded-sm text-center shadow-lg"
                 >
                   {t.registry.reportConcern}
                 </Link>

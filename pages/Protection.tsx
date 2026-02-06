@@ -123,9 +123,9 @@ const Protection: React.FC = () => {
 
       {/* 3. CALIFORNIA IRONCLAD RULES (Zero Tolerance) */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20 items-center">
-        <div className="bg-red-500/5 border border-red-500/20 p-10 rounded-lg">
-          <h4 className="text-lg font-black text-red-500 uppercase tracking-widest mb-6 font-montserrat">
-            {t.locale === 'zh' ? '加州“零容忍”法律红线' : 'California Zero-Tolerance Red Lines'}
+        <div className="bg-white/5 border border-white/10 p-10 rounded-lg">
+          <h4 className="text-lg font-black text-white uppercase tracking-widest mb-6 font-montserrat">
+            {t.locale === 'zh' ? '加州法律合规红线' : 'California Legal Compliance Rules'}
           </h4>
           <ul className="space-y-4">
             {[
@@ -135,8 +135,8 @@ const Protection: React.FC = () => {
               t.locale === 'zh' ? '未缴保证金：收费却无法提供 5 万美金保证金凭证的机构将被上报取缔。' : 'Unbonded Services: Charging fees without a $50k bond is an illegal act.'
             ].map((rule, i) => (
               <li key={i} className="flex gap-4 items-start">
-                <span className="text-red-500 font-bold">✕</span>
-                <span className="text-[10px] text-red-200/60 uppercase font-black tracking-widest leading-relaxed">{rule}</span>
+                <span className="text-gfa-gold font-bold">✓</span>
+                <span className="text-[10px] text-gfa-gray uppercase font-black tracking-widest leading-relaxed opacity-80">{rule}</span>
               </li>
             ))}
           </ul>
@@ -179,7 +179,7 @@ const Protection: React.FC = () => {
               to="/reporting" 
               className="border border-white/20 text-white px-12 py-5 font-black uppercase text-[10px] tracking-widest hover:bg-white/10 transition-all rounded-md"
             >
-              {t.locale === 'zh' ? '向 GFA 举报违规机构' : 'Report Violation to GFA'}
+              {t.locale === 'zh' ? '向 GFA 反馈违规机构' : 'Provide Feedback to GFA'}
             </Link>
          </div>
       </div>

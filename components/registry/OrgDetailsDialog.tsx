@@ -42,7 +42,7 @@ const OrgDetailsDialog: React.FC<Props> = ({ org, onClose }) => {
             </div>
             <div className="text-center md:text-left flex-grow">
               <div className="flex flex-wrap items-center gap-4 mb-6 justify-center md:justify-start">
-                <span className={`px-5 py-2 text-[10px] font-black uppercase tracking-[0.3em] border shadow-lg ${org.certification.status === 'Active' ? 'bg-green-600/10 border-green-600 text-green-500' : 'bg-red-600/10 border-red-600 text-red-500'}`}>
+                <span className={`px-5 py-2 text-[10px] font-black uppercase tracking-[0.3em] border shadow-lg ${org.certification.status === 'Active' ? 'bg-gfa-gold/10 border-gfa-gold text-gfa-gold' : 'bg-white/5 border-white/20 text-white/40'}`}>
                   {org.certification.status}
                 </span>
                 <span className="px-5 py-2 text-[10px] font-black uppercase tracking-[0.3em] bg-gfa-gold text-gfa-black shadow-lg">
@@ -71,8 +71,8 @@ const OrgDetailsDialog: React.FC<Props> = ({ org, onClose }) => {
                     <span className="text-[12px] font-black uppercase tracking-[0.2em] text-gfa-gray/80">
                       {indicatorLabels[key as keyof RegistryOrg['indicators']]}
                     </span>
-                    <span className={`text-[11px] font-black uppercase tracking-widest px-3 py-1 rounded-sm ${val ? 'text-green-500 bg-green-500/5' : 'text-red-500/50 bg-red-500/5'}`}>
-                      {val ? 'PASSED ✓' : 'FAILED ✕'}
+                    <span className={`text-[11px] font-black uppercase tracking-widest px-3 py-1 rounded-sm ${val ? 'text-gfa-gold bg-gfa-gold/5' : 'text-white/20 bg-white/5'}`}>
+                      {val ? 'PASSED ✓' : 'UNVERIFIED'}
                     </span>
                   </div>
                 ))}
@@ -137,8 +137,8 @@ const OrgDetailsDialog: React.FC<Props> = ({ org, onClose }) => {
           </div>
           
           <div className="mt-32 pt-16 border-t border-white/10 text-center flex flex-col md:flex-row justify-center gap-8">
-            <button className="bg-red-600/10 border border-red-600 text-red-500 px-16 py-5 text-[11px] font-black uppercase tracking-[0.4em] hover:bg-red-600 hover:text-white transition-all duration-500 rounded-sm">
-              Initiate Complaint
+            <button className="bg-white/5 border border-white/20 text-white px-16 py-5 text-[11px] font-black uppercase tracking-[0.4em] hover:bg-white hover:text-gfa-black transition-all duration-500 rounded-sm">
+              Initiate Inquiry
             </button>
             <button 
               onClick={onClose}

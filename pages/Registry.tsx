@@ -76,8 +76,8 @@ const Registry = () => {
             <div className="inline-block px-6 py-2 border border-gfa-gold/30 text-gfa-gold text-[9px] font-black uppercase tracking-[0.5em] bg-gfa-gold/5 rounded-sm backdrop-blur-md shadow-2xl">
               OFFICIAL SUPERVISORY DATA PORTAL
             </div>
-            <div className="flex items-center gap-2 text-[8px] font-black text-green-500 uppercase tracking-widest opacity-60">
-              <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-ping"></span>
+            <div className="flex items-center gap-2 text-[8px] font-black text-gfa-gold/60 uppercase tracking-widest opacity-60">
+              <span className="w-1.5 h-1.5 rounded-full bg-gfa-gold animate-ping"></span>
               Live Audit Database Connected
             </div>
           </div>
@@ -113,11 +113,11 @@ const Registry = () => {
           </span>
           <div className="flex flex-wrap justify-center gap-10 font-montserrat">
             <span className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-green-500 shadow-[0_0_10px_rgba(34,197,94,0.4)]"></span> 
+              <span className="w-2 h-2 rounded-full bg-gfa-gold shadow-[0_0_10px_rgba(212,175,55,0.4)]"></span> 
               INSTITUTIONAL ACTIVE
             </span>
             <span className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-red-500 shadow-[0_0_10px_rgba(239,68,68,0.4)]"></span> 
+              <span className="w-2 h-2 rounded-full bg-white/20 shadow-[0_0_10px_rgba(255,255,255,0.1)]"></span> 
               SUSPENDED / REVOKED
             </span>
           </div>

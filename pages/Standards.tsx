@@ -62,8 +62,8 @@ const Standards: React.FC = () => {
                 <p className="micro-text text-gfa-gray leading-loose mb-grid-6 font-medium uppercase tracking-widest bg-white/5 p-grid-4 border border-white/5 rounded">
                   {cat.matrixBody}
                 </p>
-                <div className="mt-auto p-grid-4 bg-red-500/5 border border-red-500/20 micro-text font-black text-red-400 uppercase tracking-widest leading-relaxed rounded">
-                  <span className="text-red-500 block mb-2">⚠ REVOCATION GROUNDS</span>
+                <div className="mt-auto p-grid-4 bg-white/5 border border-white/10 micro-text font-black text-white/60 uppercase tracking-widest leading-relaxed rounded">
+                  <span className="text-white block mb-2 opacity-80">⚠ REVOCATION GROUNDS</span>
                   {cat.disqual}
                 </div>
               </div>

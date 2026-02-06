@@ -49,16 +49,16 @@ const Verify: React.FC = () => {
         </form>
 
         {result === 'valid' && (
-          <div className="mt-10 p-8 bg-green-500/10 border border-green-500/20 animate-fade-up">
-            <div className="text-green-500 font-black text-[9px] uppercase tracking-[0.4em] mb-2">Statutory Status: Verified</div>
+          <div className="mt-10 p-8 bg-gfa-gold/10 border border-gfa-gold/20 animate-fade-up">
+            <div className="text-gfa-gold font-black text-[9px] uppercase tracking-[0.4em] mb-2">Statutory Status: Verified</div>
             <div className="text-white text-base font-black uppercase tracking-widest leading-tight">Bond Active & Audited for 2024-2025</div>
           </div>
         )}
         
         {result === 'notFound' && (
-          <div className="mt-10 p-8 bg-red-500/10 border border-red-500/20 animate-fade-up">
-            <div className="text-red-500 font-black text-[9px] uppercase tracking-[0.4em] mb-2">Statutory Status: Not Found</div>
-            <div className="text-white text-base font-black uppercase tracking-widest leading-tight">No Active Bond Record in GFA Database</div>
+          <div className="mt-10 p-8 bg-white/5 border border-white/10 animate-fade-up">
+            <div className="text-white font-black text-[9px] uppercase tracking-[0.4em] mb-2">Statutory Status: Not Found</div>
+            <div className="text-white text-base font-black uppercase tracking-widest leading-tight opacity-60">No Active Bond Record in GFA Database</div>
           </div>
         )}
       </div>

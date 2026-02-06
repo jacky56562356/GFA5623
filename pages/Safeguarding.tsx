@@ -27,8 +27,8 @@ const Safeguarding: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         {/* 1. Header Section */}
         <header className="mb-20 text-center max-w-5xl mx-auto">
-          <div className="inline-flex items-center gap-3 px-4 py-1.5 border border-red-500/30 text-red-500 text-[9px] font-black uppercase tracking-[0.5em] mb-8 bg-red-500/5 rounded-sm">
-            <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse"></span>
+          <div className="inline-flex items-center gap-3 px-4 py-1.5 border border-gfa-gold/30 text-gfa-gold text-[9px] font-black uppercase tracking-[0.5em] mb-8 bg-gfa-gold/5 rounded-sm">
+            <span className="w-1.5 h-1.5 rounded-full bg-gfa-gold animate-pulse"></span>
             Global Safeguarding Standard
           </div>
           <h1 className="mb-10 gold uppercase text-2xl md:text-4xl tracking-tighter leading-none font-black font-cinzel">
@@ -42,7 +42,7 @@ const Safeguarding: React.FC = () => {
         {/* 2. Real-time Verification Tool */}
         <section className="mb-32">
           <div className="bg-gfa-darkGray/60 border border-white/10 p-10 md:p-14 shadow-3xl relative overflow-hidden rounded-sm backdrop-blur-md">
-            <div className="absolute top-0 left-0 w-1.5 h-full bg-red-600"></div>
+            <div className="absolute top-0 left-0 w-1.5 h-full bg-gfa-gold"></div>
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-xl font-black uppercase tracking-[0.3em] text-white mb-6">
                 {sg.verificationTool.title}
@@ -64,15 +64,15 @@ const Safeguarding: React.FC = () => {
               </p>
 
               {verifyResult === 'valid' && (
-                <div className="mt-8 p-6 bg-green-500/10 border border-green-500/30 animate-fade-up">
-                  <div className="text-green-500 font-black text-[10px] uppercase tracking-widest mb-1">Status: GFA Authenticated</div>
+                <div className="mt-8 p-6 bg-gfa-gold/10 border border-gfa-gold/30 animate-fade-up">
+                  <div className="text-gfa-gold font-black text-[10px] uppercase tracking-widest mb-1">Status: GFA Authenticated</div>
                   <div className="text-white text-xs uppercase tracking-widest">The project or event is officially registered and audited.</div>
                 </div>
               )}
               {verifyResult === 'invalid' && (
-                <div className="mt-8 p-6 bg-red-500/10 border border-red-500/30 animate-fade-up">
-                  <div className="text-red-500 font-black text-[10px] uppercase tracking-widest mb-1">Status: Unverified / Alert</div>
-                  <div className="text-white text-xs uppercase tracking-widest">No matching record found. Exercise extreme caution.</div>
+                <div className="mt-8 p-6 bg-white/5 border border-white/10 animate-fade-up">
+                  <div className="text-white font-black text-[10px] uppercase tracking-widest mb-1">Status: Unverified / Alert</div>
+                  <div className="text-white text-xs uppercase tracking-widest opacity-60">No matching record found. Exercise extreme caution.</div>
                 </div>
               )}
             </div>
@@ -103,22 +103,22 @@ const Safeguarding: React.FC = () => {
 
         {/* 4. Red Flags & Prohibited Procedures */}
         <section className="mb-32">
-          <div className="bg-red-950/20 border border-red-500/20 p-12 md:p-20 rounded-sm">
+          <div className="bg-white/2 border border-white/5 p-12 md:p-20 rounded-sm">
             <div className="text-center mb-16">
-              <h2 className="text-2xl font-black uppercase tracking-[0.3em] text-red-500 mb-6">
+              <h2 className="text-2xl font-black uppercase tracking-[0.3em] text-white mb-6">
                 {sg.redFlags.title}
               </h2>
-              <p className="text-xs text-red-100/40 uppercase tracking-widest font-bold max-w-3xl mx-auto leading-loose">
+              <p className="text-xs text-gfa-gray uppercase tracking-widest font-bold max-w-3xl mx-auto leading-loose opacity-50">
                 {sg.redFlags.subtitle}
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
               {sg.redFlags.list.map((flag: any, i: number) => (
                 <div key={i} className="flex gap-6 group">
-                  <div className="text-2xl pt-1 opacity-40 group-hover:opacity-100 transition-opacity">🚫</div>
+                  <div className="text-2xl pt-1 opacity-20 group-hover:opacity-100 transition-opacity">✦</div>
                   <div>
-                    <h4 className="text-[11px] font-black uppercase tracking-widest text-red-400 mb-3 leading-tight">{flag.t}</h4>
-                    <p className="text-[10px] text-red-100/40 leading-relaxed uppercase tracking-widest font-medium group-hover:text-red-100/60 transition-colors">
+                    <h4 className="text-[11px] font-black uppercase tracking-widest text-white/80 mb-3 leading-tight group-hover:text-gfa-gold transition-colors">{flag.t}</h4>
+                    <p className="text-[10px] text-gfa-gray leading-relaxed uppercase tracking-widest font-medium opacity-60 group-hover:opacity-90 transition-colors">
                       {flag.d}
                     </p>
                   </div>
@@ -136,7 +136,7 @@ const Safeguarding: React.FC = () => {
               If you have witnessed or been subjected to illegal fee mandates or predatory behavior, please report it immediately.
            </p>
            <div className="flex flex-col sm:flex-row justify-center gap-6">
-              <Link to="/complaints" className="bg-red-600 text-white px-12 py-5 font-black uppercase text-[11px] tracking-widest hover:bg-red-700 transition-all shadow-xl">
+              <Link to="/complaints" className="bg-white text-gfa-black px-12 py-5 font-black uppercase text-[11px] tracking-widest hover:bg-gfa-gold transition-all shadow-xl">
                 Lodge Formal Report
               </Link>
               <Link to="/reporting" className="border border-white/20 text-white px-12 py-5 font-black uppercase text-[11px] tracking-widest hover:bg-white/5 transition-all">
