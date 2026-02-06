@@ -39,6 +39,46 @@ const EN_JSON: any = {
     sort: "Sort By",
     results: "Institutional Records Found"
   },
+  safeguarding: {
+    title: "Youth Protection & Audition Verification Center",
+    subtitle: "Protecting minors through strict institutional auditing and audition transparency.",
+    mission: "GFA maintains a zero-tolerance policy for predatory behavior. Our safeguarding framework provides families with the tools to verify the legitimacy of auditions, training programs, and talent competitions.",
+    verificationTool: {
+      title: "Real-time Audition & Event Verification",
+      placeholder: "Enter Audition ID or Event Name...",
+      btn: "Verify Status",
+      note: "Search for GFA-verified film, commercial, or model casting calls."
+    },
+    categories: {
+      title: "Vertical Protection Domains",
+      film: { title: "Film & TV Casting", d: "Verification of project financing and physical studio legitimacy for long-form content." },
+      commercial: { title: "Commercial Auditions", d: "Auditing of production agencies and fee-related transparency for advertising." },
+      model: { title: "Modeling & Fashion", d: "Strict monitoring of portfolio fee mandates and agency background checks." },
+      events: { title: "Youth Competitions", d: "Accreditation of talent competitions and award ceremonies for children." }
+    },
+    redFlags: {
+      title: "Unreasonable Procedures & Red Flags",
+      subtitle: "Avoid any entity or audition that engages in the following prohibited practices:",
+      list: [
+        { t: "Upfront Photo Fees", d: "Mandatory 'portfolio' or 'photo card' fees as a prerequisite for auditions." },
+        { t: "Work Guarantees", d: "Promises that a minor is '100% guaranteed' to be cast or get work." },
+        { t: "Private Settings", d: "Auditions held in hotels, private residences, or non-commercial spaces." },
+        { t: "Unsupervised Sessions", d: "Requirement for minors to be interviewed or auditioned without a guardian present." },
+        { t: "Immediate 'Bonds'", d: "Demanding immediate cash 'enrollment fees' or 'security deposits' at the audition site." },
+        { t: "Opaque Contracts", d: "Pressure to sign complex documents without 48-hour legal review time." }
+      ]
+    },
+    redLinesTitle: "Zero-Tolerance Red Lines",
+    redLines: [
+      "Fees for auditions or talent discovery.",
+      "Unsupervised contact with minors.",
+      "Guarantees of work or casting.",
+      "Pressure for upfront professional photography fees."
+    ],
+    guideTitle: "Parental Toolkit",
+    guide: "Always verify the GFA ID of any person or agency claiming to represent your child.",
+    cta: "Download Safety Toolkit"
+  },
   disclaimer: {
     title: "Institutional Disclaimer",
     legal: "Global Film Alliance (GFA) is an independent nonprofit industry standards and transparency organization. We do not regulate or license government authorities. GFA provides voluntary third-party certification and public verification to support safer industry decisions.",
@@ -234,21 +274,6 @@ const EN_JSON: any = {
       { s: "Decision", d: "Final board review and registry update." }
     ]
   },
-  safeguarding: {
-    title: "Safeguarding Minors",
-    intro: "Comprehensive protection framework for children in the film industry.",
-    mission: "GFA maintains a zero-tolerance policy for predatory behavior. Our safeguarding framework provides parents with the tools to verify professional legitimacy.",
-    redLinesTitle: "Zero-Tolerance Red Lines",
-    redLines: [
-      "Fees for auditions or talent discovery.",
-      "Unsupervised contact with minors.",
-      "Guarantees of work or casting.",
-      "Pressure for upfront professional photography fees."
-    ],
-    guideTitle: "Parental Guidance",
-    guide: "Always verify the GFA ID of any person or agency claiming to represent your child.",
-    cta: "Download Safety Toolkit"
-  },
   registry: {
     title: "Public Certification Registry",
     subtitle: "Search organizations and verify certification status. Our database serves as a transparency hub for families and professionals.",
@@ -308,163 +333,35 @@ const ZH_JSON: any = {
     events: "活动与公告",
     casting: "选角中心"
   },
-  common: {
-    ...EN_JSON.common,
-    loading: "正在访问官方名录...",
-    searchPlaceholder: "搜索：机构名称 / 认证编号 / 关键词",
-    reset: "清空",
-    filters: "筛选",
-    category: "类别",
-    level: "等级",
-    status: "状态",
-    city: "城市",
-    country: "国家",
-    sort: "排序",
-    results: "结果"
-  },
-  disclaimer: {
-    ...EN_JSON.disclaimer,
-    title: "免责声明",
-    body: "公示库基于自愿参与与公开披露信息，提供透明度参考。请用户自行核验政府许可/法律义务等要求。"
-  },
-  home: {
-    ...EN_JSON.home,
-    stats: {
-      audited: "500+ 已审计机构",
-      verified: "1.2万+ 已核实人才",
-      countries: "42个 国家与地区覆盖",
-      safeguarding: "零容忍政策 全面执行"
+  safeguarding: {
+    title: "青少年保护与试镜核查中心",
+    subtitle: "通过严格的机构审计与试镜透明度保护未成年人。",
+    mission: "GFA 对任何形式的掠夺性行为持零容忍态度。我们的保护框架为家长提供核实试镜、培训计划和人才大赛真实性的工具。",
+    verificationTool: {
+      title: "实时试镜与赛事核查",
+      placeholder: "输入试镜编号、赛事名称或机构名称...",
+      btn: "核实状态",
+      note: "查询经 GFA 核证的电影、广告或模特选角通知。"
     },
-    pillars: {
-      title: "行业信任的核心支柱",
-      subtitle: "GFA 通过三项核心职能维护电影生态系统的公正性与安全性。",
-      p1: { title: "真实性核验", body: "严格的文件审计与实地考察，确保公示机构的合法经营地位。" },
-      p2: { title: "青少年保护", body: "零容忍框架与背景审查机制，全方位保护未成年人与弱势创作人才。" },
-      p3: { title: "收费透明化", body: "标准化的收费上限公示与公开披露日志，根除行业中的掠夺性行为。" }
+    categories: {
+      title: "垂直保护领域",
+      film: { title: "影视演员试镜", d: "对影视项目融资真实性、制片方资质及实地办公状态的综合核验。" },
+      commercial: { title: "广告试镜 (TVC)", d: "对广告制作机构的审计，重点在于收费透明度及拍摄环境的安全核查。" },
+      model: { title: "平面模特试镜", d: "严格监控‘模卡照片费’强制摊派行为，并对模特经纪人进行背景核实。" },
+      events: { title: "青少年赛事认证", d: "对各类才艺大赛、模特大赛及颁奖典礼的组织资质与奖项含金量进行认证。" }
     },
-    hubs: {
-      title: "信息公示与核查中心",
-      subtitle: "实时核实行业机构的认证状态、有效期限及信誉评分。GFA 数据库是家庭做出安全选择的重要保障。",
-      registry: { 
-        title: "公示名录", 
-        body: "全面收录经 GFA 认证的全球电影机构及教育提供商数据库。",
-        features: ["GFA-ID 核验", "审计历史查询", "认证有效期验证"]
-      },
-      bond: { 
-        title: "保证金核验", 
-        body: "针对人才服务机构及工作坊的 5 万美金法定保证金公示核查。",
-        features: ["保证金状态追踪", "法律备案查询", "合规性审计"]
-      },
-      safety: { 
-        title: "青少年保护", 
-        body: "在专业电影环境中保护儿童安全的红线政策及合规操作指南。",
-        features: ["红线政策解读", "家长核实工具包", "安全保障审计"]
-      },
-      transparency: { 
-        title: "收费透明化", 
-        body: "对行业机构收费结构的公众监控及强制性透明披露标准。",
-        features: ["收费上限公示表", "披露日志查询", "退款协议核查"]
-      }
+    redFlags: {
+      title: "不合理程序与违规预警",
+      subtitle: "若试镜或培训机构存在以下行为，请务必保持高度警惕并拒绝参与：",
+      list: [
+        { t: "捆绑收费", d: "以试镜为前提，强制要求缴纳‘模特卡照片费’、‘资料费’或‘存档费’。" },
+        { t: "承诺就业/角色", d: "向家长承诺‘100% 进组’、‘保底出演’或‘必拿奖项’的虚假宣传。" },
+        { t: "私人场所面试", d: "在酒店房间、私人住宅或其他非公开商业场所进行的单独面试。" },
+        { t: "排斥监护人", d: "要求未成年人在没有监护人陪同的情况下进行单独试镜或单独交谈。" },
+        { t: "当场强迫交费", d: "在试镜现场以‘名额有限’为由，强迫家长立即缴纳数千元的高额培训费或报名费。" },
+        { t: "合同信息隐瞒", d: "强迫家长立即签署复杂合同，且拒绝给予 48 小时的法律顾问审阅期。" }
+      ]
     }
-  },
-  verify: {
-    title: "官方保证金核验",
-    body: "针对人才服务提供商的 50,000 美金法定保证金核查。使用此工具核实任何培训中心或机构的法律备案状态。",
-    form: {
-      placeholder: "输入保证金编号或机构名称...",
-      button: "核实法律状态"
-    }
-  },
-  directory: {
-    title: "认证名录",
-    subtitle: "所有经核实及认证实体的公开列表。",
-    registryCount: "已认证实体",
-    tableHeaders: ["机构名称", "有效期", "类别", "状态", "审计参考"]
-  },
-  reporting: {
-    title: "机构报告",
-    subtitle: "提交正式投诉或向 GFA 举报违反职业道德的行为。",
-    formTitle: "合规报告受理",
-    formLabels: {
-      type: "违规类别",
-      org: "被举报实体名称",
-      desc: "事件详细描述",
-      email: "联系邮箱",
-      submit: "提交至 GFA 合规部"
-    },
-    reportTypes: ["收费透明度违规", "青少年保护顾虑", "无照经营", "合同违约行为"],
-    processTitle: "审核流程",
-    process: [
-      { s: "受理", d: "报告已记录并分配给合规专员。" },
-      { s: "审计", d: "内部审查实体的认证历史。" },
-      { s: "解决", d: "强制整改或撤销认证。" }
-    ],
-    outcomesTitle: "可能的结果",
-    outcomes: ["公开警告", "信用减分", "立即撤销认证", "移交相关部门"]
-  },
-  protection: {
-    title: "机构保护",
-    subtitle: "守护下一代创作人才。",
-    modelItems: ["零容忍审计", "实地验证", "背景调查要求", "收费上限监控"]
-  },
-  contact: {
-    title: "联系 GFA",
-    intro: "联系我们的全球行政及合规部门。",
-    labels: {
-      individual: "专业人士",
-      organization: "机构实体",
-      merchant: "合作伙伴",
-      join: "咨询",
-      inquiries: "常规咨询",
-      press: "媒体与新闻"
-    },
-    form: {
-      header: "{type} 咨询",
-      name: "全名",
-      email: "官方邮箱",
-      location: "主要地区",
-      cat: "伙伴类别",
-      orgType: "实体类型",
-      message: "消息内容",
-      consent: "我了解 GFA 的数据隐私条款。",
-      submit: "发送消息"
-    }
-  },
-  governance: {
-    title: "治理章程",
-    subtitle: "结构独立性与监管职能",
-    roleTitle: "我们的组织角色",
-    roleBody: "全球电影联盟作为一个独立的非营利标准制定机构运作。我们的治理旨在确保在人才中介、制片厂和教育机构认证中的公正性。",
-    roleTag1: "非营利地位",
-    roleTag1Desc: "专门为行业安全和透明度利益而运营。",
-    roleTag2: "监管联络",
-    roleTag2Desc: "协助地方政府执行人才服务法规。",
-    principlesTitle: "核心治理原则",
-    principles: [
-      { title: "完全独立", body: "在制片、选角或人才代理中没有经济利益。" },
-      { title: "审计诚信", body: "所有认证均需实地核查和文件审计。" },
-      { title: "公众问责", body: "所有纪律处分和撤销记录均在公示库中列出。" }
-    ],
-    policyTitle: "授权政策",
-    policyBody: "GFA 授权是一项自愿标准。使用 GFA 印章的实体必须持续遵守所有当地和国际劳工法。",
-    policyItems: ["反欺诈合规", "青少年保护", "收费透明度"],
-    policyNote: "违规将导致立即暂停授权并向公众披露。"
-  },
-  registry: {
-    ...EN_JSON.registry,
-    title: "可验证公示库",
-    subtitle: "可通过名称、认证编号、类别或地区查询机构信息。公示内容提供透明度与核验参考，不替代任何政府许可或法律义务核查。",
-    viewDetails: "查看详情",
-    reportConcern: "投诉与举报",
-    trustScore: "透明度评分指数",
-    lastReviewed: "最近审查",
-    nextReview: "下次复审",
-    disclosure: "公开披露",
-    transparencyIndicators: "透明度指标",
-    disclaimerBody: "机构数据由 GFA 审计核实。此记录为实时快照，不构成法律保证。",
-    validity: "审计有效期",
-    resultsFound: "发现机构记录",
-    scoreLabel: "透明度指数",
   }
 };
 
