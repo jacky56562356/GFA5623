@@ -1,7 +1,8 @@
 
 import React from 'react';
 import SectionHeading from '../components/ui/SectionHeading';
-import { useLocale } from '../App';
+// Fix: Import useLocale from LocaleContext.tsx instead of App.tsx
+import { useLocale } from '../LocaleContext.tsx';
 
 const Transparency: React.FC = () => {
   const { t } = useLocale();

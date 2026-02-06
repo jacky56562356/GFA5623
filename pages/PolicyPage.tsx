@@ -1,6 +1,7 @@
 
 import React from 'react';
-import { useLocale } from '../App';
+// Fix: Import useLocale from LocaleContext.tsx instead of App.tsx
+import { useLocale } from '../LocaleContext.tsx';
 
 interface Props {
   type: 'privacy' | 'terms' | 'consent' | 'content';
@@ -9,11 +10,12 @@ interface Props {
 const PolicyPage: React.FC<Props> = ({ type }) => {
   const { t } = useLocale();
   
+  // Use optional chaining and provide defaults to avoid crashes if i18n data is missing from the dictionary
   const policyData = {
-    privacy: t.policies.privacy,
-    terms: t.policies.terms,
-    consent: t.policies.parental,
-    content: t.policies.content
+    privacy: t.policies?.privacy || { title: 'Privacy Policy', summary: '', sections: {} },
+    terms: t.policies?.terms || { title: 'Terms of Service', summary: '', sections: {} },
+    consent: t.policies?.parental || { title: 'Parental Consent', summary: '', sections: {} },
+    content: t.policies?.content || { title: 'Content Guidelines', summary: '', sections: {} }
   };
 
   const currentPolicy = policyData[type];
@@ -26,10 +28,11 @@ const PolicyPage: React.FC<Props> = ({ type }) => {
       </p>
 
       <div className="space-y-12">
-        {Object.entries(currentPolicy.sections).map(([key, value]) => (
+        {/* Fix: Added check for currentPolicy.sections and used String(value) to resolve the 'unknown' to 'ReactNode' assignment error */}
+        {currentPolicy.sections && Object.entries(currentPolicy.sections).map(([key, value]) => (
           <div key={key} className="bg-gfa-darkGray p-10 border border-white/5 shadow-xl">
             <h3 className="text-xl font-black mb-6 text-gfa-gold uppercase tracking-widest border-b border-white/5 pb-4">
-              {key.toUpperCase()}: {value}
+              {key.toUpperCase()}: {String(value)}
             </h3>
             <div className="text-gfa-gray leading-loose text-sm md:text-base">
               {/* Note: In a real app, you would have detailed body text for each section. 

@@ -1,5 +1,7 @@
+
 import React, { useState } from 'react';
-import { useLocale } from '../App';
+// Fix: Import useLocale from LocaleContext.tsx instead of App.tsx
+import { useLocale } from '../LocaleContext.tsx';
 
 const Directory: React.FC = () => {
   const { t } = useLocale();
