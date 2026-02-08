@@ -4,7 +4,10 @@ export enum Locale {
   ZH = 'zh',
   ES = 'es',
   FR = 'fr',
-  IT = 'it'
+  IT = 'it',
+  KO = 'ko',
+  JA = 'ja',
+  DE = 'de'
 }
 
 export type OrgStatus = 'Active' | 'Suspended' | 'Expired' | 'Pending';
@@ -90,17 +93,162 @@ export interface Translation {
     about: string;
     memberPortal: string;
     admin: string;
+    login: string;
+    join: string;
+    contact: string;
   };
   disclaimer: {
+    title: string;
+    statutory: string;
     legal: string;
-    zhLegal: string;
+    heroWarning: string;
   };
-  home: any;
-  registry: any;
+  home: {
+    hero: any;
+    trust: any;
+    searchRegistry: any;
+    whatWeDo: any;
+    globalPresence: any;
+    safeguardingSection: {
+      title: string;
+      subtitle: string;
+      cards: { title: string; text: string }[];
+      whyExists: { title: string; p1: string; p2: string };
+      howHelps: { title: string; list: string[] };
+      requirements: { title: string; list: { l: string; t: string }[] };
+      benefits: { title: string; list: string[] };
+    };
+  };
+  registry: {
+    title: string;
+    subtitle: string;
+    registryCount: string;
+    viewDetails: string;
+    reportConcern: string;
+    trustScore: string;
+    tableHeaders: string[];
+    disclaimerBody: string;
+    ui: {
+      portalLabel: string;
+      active: string;
+      pending: string;
+      revoked: string;
+      noResults: string;
+    };
+  };
   certification: any;
-  safeguarding: any;
-  about: any;
+  certificationDetails: {
+    levels: { t: string; d: string }[];
+    protocols: { t: string; d: string }[];
+    cycle: { s: string; d: string }[];
+    cta: { title: string; body: string; inquire: string; download: string };
+    ui: {
+      mainTitle: string;
+      protocolsTitle: string;
+      cycleTitle: string;
+      levelPrefix: string;
+    };
+  };
+  safeguarding: {
+    title: string;
+    subtitle: string;
+    intro: string;
+    policyLink: string;
+    verificationTool: any;
+    categories: any;
+    redFlags: any;
+    reportingCta: string;
+    ui: {
+      oversightBadge: string;
+      reportingTitle: string;
+      reportingBody: string;
+      audit: { valid: string; invalid: string; validDesc: string; invalidDesc: string };
+      ethicsBtn: string;
+      standardsActive: string;
+    }
+  };
+  about: {
+    hero: any;
+    mission: any;
+    vision: any;
+    whoWeAre: any;
+    whatWeDo: any;
+    certification: any;
+    youthProtection: any;
+    support: any;
+    collaboration: any;
+    resourceExchange: any;
+    network: any;
+    governance: any;
+    impact: any;
+    cta: any;
+    ui: {
+      mapPlaceholder: string;
+      buttons: {
+        viewStandards: string;
+        readPolicy: string;
+        explore: string;
+        readCharter: string;
+        apply: string;
+        readMission: string;
+      };
+      kickers: {
+        profile: string;
+        zeroTolerance: string;
+      };
+      badges: {
+        certified: string;
+        standard: string;
+      };
+    };
+  };
   complaints: any;
-  support: any;
+  careerAccess: any;
+  graduatePathways: { id: string; t: string; d: string }[];
+  membership: {
+    title: string;
+    intro: string;
+    talentTitle: string;
+    orgTitle: string;
+    entTitle: string;
+    entDesc: string;
+    entCta: string;
+    talentTiers: MemberTier[];
+    orgTiers: MemberTier[];
+    ui: {
+      networkBadge: string;
+      orgSubtitle: string;
+      joinAs: string;
+      select: string;
+    };
+  };
+  partners: any;
+  partnersList: Merchant[];
+  events: any;
+  eventsList: GFAEvent[];
+  contact: {
+    title: string;
+    intro: string;
+    labels: any;
+    form: any;
+    dropdowns: any;
+    ui: {
+      secretariatBadge: string;
+      alertMessage: string;
+    };
+  };
+  transparency: any;
+  youthSafetyPolicy: any;
   footer: any;
+  common: any;
+  support: any;
+  supportPrograms: SupportProgram[];
+  adminDashboard: any;
+  memberPortal: any;
+  policies: any;
+  casting: any;
+  standards: any;
+  protection: any;
+  directory: any;
+  verify: any;
 }

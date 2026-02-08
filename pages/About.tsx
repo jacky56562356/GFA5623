@@ -1,137 +1,303 @@
 
 import React from 'react';
-import SectionHeading from '../components/ui/SectionHeading';
-// Fix: Import useLocale from LocaleContext.tsx instead of App.tsx
 import { useLocale } from '../LocaleContext.tsx';
+import { Link } from 'react-router-dom';
 
 const About: React.FC = () => {
   const { t } = useLocale();
   const a = t.about;
+  const ui = a.ui || {
+    mapPlaceholder: "[ Interactive Global Map Visualization ]",
+    buttons: {
+      viewStandards: "View Standards",
+      readPolicy: "Read Safeguarding Policy →",
+      explore: "Explore Programs",
+      readCharter: "Read Charter & Bylaws",
+      apply: "Apply for Recognition",
+      readMission: "Read Mission Statement"
+    },
+    kickers: {
+      profile: "Institutional Profile",
+      zeroTolerance: "Zero Tolerance"
+    },
+    badges: {
+      certified: "GFA CERTIFIED",
+      standard: "Global Standard"
+    }
+  };
 
   return (
-    <div className="py-24 max-w-7xl mx-auto px-6">
-      {/* 1. HERO HEADER */}
-      <div className="text-center mb-24">
-        <div className="inline-block px-6 py-2 border border-gfa-gold/30 text-gfa-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-10 bg-gfa-gold/5 animate-fade-in font-montserrat rounded-sm">
-          Supervisory Assistance & Oversight
+    <div className="bg-gfa-warmWhite min-h-screen">
+      {/* 1. HERO */}
+      <section className="bg-gfa-inkBlack text-white pt-40 pb-32 px-6 text-center relative overflow-hidden">
+        {/* Abstract Background Element */}
+        <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-white/20 rounded-full"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-white/20 rounded-full"></div>
         </div>
-        <h1 className="mb-8 gold gold-shimmer uppercase font-serif tracking-widest">
-          {a.title}
-        </h1>
-        <div className="h-1 w-24 bg-gfa-gold mx-auto mb-10 opacity-60 rounded-full"></div>
-        <p className="text-gfa-gray text-base md:text-lg font-semibold uppercase tracking-[0.3em] opacity-60 max-w-4xl mx-auto font-montserrat leading-relaxed">
-          {t.locale === 'zh' ? '协助政府监督 • 保证金凭证核查 • 机构真实性审计' : 'Assisting State Supervision • Enforcing Statutory Bonds'}
-        </p>
-      </div>
 
-      {/* 2. CORE MANDATE */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-32">
-        <div className="bg-gfa-darkGray/60 p-12 border-l-4 border-gfa-gold shadow-2xl flex flex-col justify-center relative group rounded-r-xl">
-          <div className="absolute top-6 right-8 text-gfa-gold/10 font-bold text-7xl font-serif">01</div>
-          <h2 className="text-2xl font-bold mb-6 uppercase tracking-tight text-white border-b border-white/10 pb-4 font-serif">{a.mandate.title}</h2>
-          <p className="text-gfa-gray text-base leading-relaxed font-medium uppercase tracking-wider opacity-80">
-            {a.mandate.body}
-          </p>
-        </div>
-        <div className="bg-gfa-black border border-white/10 p-12 flex flex-col justify-center relative group rounded-xl">
-          <div className="absolute top-6 right-8 text-gfa-gold/10 font-bold text-7xl font-serif">02</div>
-          <h2 className="text-2xl font-bold mb-6 gold uppercase tracking-tight border-b border-white/10 pb-4 font-serif">{a.strategy.title}</h2>
-          <p className="text-gfa-gray text-base leading-relaxed font-medium uppercase tracking-wider opacity-80">
-            {a.strategy.body}
-          </p>
-        </div>
-      </div>
-
-      {/* 3. SUPERVISORY SCOPE */}
-      <div className="mb-32">
-        <h3 className="mb-16 text-center gold font-serif uppercase tracking-widest">{a.coreFunctions.title}</h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {a.coreFunctions.items.map((item, i) => (
-            <div key={i} className="glass-panel p-10 relative group hover:border-gfa-gold/40 transition-all flex flex-col h-full overflow-hidden shadow-xl rounded-xl">
-              <div className="text-gfa-gold font-bold text-2xl mb-8 opacity-20 group-hover:opacity-100 transition-opacity font-serif">ASSIST-0{i + 1}</div>
-              <h4 className="text-white font-bold text-sm uppercase tracking-[0.2em] mb-6 border-b border-white/10 pb-4 font-montserrat leading-relaxed">
-                {item.title}
-              </h4>
-              <p className="text-gfa-gray text-xs leading-loose font-bold uppercase tracking-[0.15em] opacity-60 group-hover:opacity-90 transition-opacity">
-                {item.body}
-              </p>
-              <div className="mt-auto pt-8">
-                 <div className="h-0.5 w-12 bg-gfa-gold/40 group-hover:w-full transition-all duration-1000"></div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* 4. PROTECTIONS SECTION */}
-      <div className="bg-gfa-black border border-gfa-gold/20 p-12 md:p-24 relative overflow-hidden shadow-3xl mb-32 rounded-2xl">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gfa-gold/5 blur-[140px] rounded-full translate-x-1/2 -translate-y-1/2"></div>
-        
-        <div className="max-w-5xl mx-auto relative z-10">
-          <div className="inline-block px-4 py-1 border border-gfa-gold/40 text-gfa-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-10 bg-gfa-gold/5 font-montserrat rounded-sm">
-            {t.locale === 'zh' ? '协助政府监督 - 净化行业环境' : 'ASSISTING STATE SUPERVISION'}
+        <div className="container-gfa relative z-10">
+          <div className="inline-block px-4 py-1.5 border border-gfa-gold/30 text-gfa-gold text-[10px] font-black uppercase tracking-[0.5em] mb-8 bg-gfa-gold/5 rounded-sm">
+            {a.hero.kicker}
           </div>
-          <h2 className="mb-8 gold uppercase font-serif leading-[1.1] tracking-widest">
-            {a.youthProtection.title}
-          </h2>
-          <p className="text-white font-bold text-xs uppercase tracking-[0.3em] mb-12 border-b border-white/10 pb-8 opacity-60 font-montserrat">
-            {a.youthProtection.subtitle}
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-serif text-white mb-8 leading-tight">
+            {a.hero.title}
+          </h1>
+          <p className="text-lg md:text-2xl text-white/60 font-light leading-relaxed max-w-4xl mx-auto italic font-serif">
+            {a.hero.subtitle}
           </p>
-          <div className="bg-gfa-darkGray/40 p-10 border-l-4 border-gfa-gold mb-16 shadow-inner rounded-r-lg">
-            <p className="text-gfa-gray text-lg md:text-xl leading-relaxed font-medium uppercase tracking-widest italic opacity-90">
-              "{a.youthProtection.intro}"
+        </div>
+      </section>
+
+      {/* 2. MISSION & VISION */}
+      <section className="py-24 px-6">
+        <div className="container-gfa grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="bg-white p-12 border border-gfa-border rounded-sm shadow-sm hover:border-gfa-gold transition-colors group">
+            <h3 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-6 group-hover:text-gfa-gold transition-colors">{a.mission.title}</h3>
+            <p className="text-gfa-slate leading-loose text-lg font-medium opacity-80">
+              {a.mission.body}
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            {a.youthProtection.pillars.map((pillar, i) => (
-              <div key={i} className="bg-gfa-darkGray/50 p-10 border border-white/10 group hover:border-gfa-gold/30 transition-all flex flex-col h-full shadow-lg rounded-xl">
-                <div className="w-12 h-12 border-2 border-gfa-gold/30 text-gfa-gold flex items-center justify-center font-bold text-lg mb-8 group-hover:bg-gfa-gold group-hover:text-gfa-black transition-all font-serif rounded-lg">
-                  {i + 1}
-                </div>
-                <h4 className="text-white font-bold text-sm uppercase tracking-[0.15em] mb-6 border-b border-white/10 pb-3 group-hover:text-gfa-gold transition-colors font-montserrat">
-                  {pillar.title}
-                </h4>
-                <p className="text-gfa-gray text-xs leading-loose font-bold uppercase tracking-[0.2em] opacity-60 group-hover:opacity-90 transition-opacity">
-                  {pillar.body}
+          <div className="bg-gfa-inkBlack p-12 border border-gfa-inkBlack rounded-sm shadow-xl text-white">
+            <h3 className="text-2xl font-bold font-serif text-gfa-gold mb-6">{a.vision.title}</h3>
+            <p className="text-white/80 leading-loose text-lg font-medium italic">
+              "{a.vision.body}"
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. WHO WE ARE */}
+      <section className="py-24 bg-white border-y border-gfa-border">
+        <div className="container-gfa flex flex-col md:flex-row gap-16 items-center">
+          <div className="md:w-3/12 lg:w-2/12">
+             <div className="w-full aspect-[4/5] bg-gfa-inkBlack relative overflow-hidden rounded-sm shadow-2xl group">
+                <img 
+                  src="https://i.ibb.co/pvjT9QV9/1346.png"
+                  alt="GFA Institutional Profile"
+                  className="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" 
+                />
+                <div className="absolute inset-0 border border-white/10"></div>
+             </div>
+          </div>
+          <div className="md:w-9/12 lg:w-10/12">
+             <span className="text-gfa-gold font-black uppercase tracking-[0.3em] text-xs mb-4 block">{ui.kickers.profile}</span>
+             <h2 className="text-3xl md:text-4xl font-bold font-serif text-gfa-inkBlack mb-8">{a.whoWeAre.title}</h2>
+             <p className="text-gfa-slate leading-loose text-lg font-medium opacity-80">
+               {a.whoWeAre.body}
+             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. WHAT WE DO (6 Modules) */}
+      <section className="py-32 px-6 bg-gfa-warmWhite">
+        <div className="container-gfa">
+          <div className="text-center mb-20">
+            <h2 className="text-3xl md:text-5xl font-bold font-serif text-gfa-inkBlack mb-6">{a.whatWeDo.title}</h2>
+            <div className="h-1 w-24 bg-gfa-gold mx-auto rounded-full"></div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {a.whatWeDo.items.map((item: any, i: number) => (
+              <div key={i} className="bg-white p-10 border border-gfa-border hover:border-gfa-gold hover:shadow-xl transition-all duration-300 rounded-sm group flex flex-col items-start">
+                <div className="text-4xl mb-6 grayscale group-hover:grayscale-0 transition-all">{item.icon}</div>
+                <h3 className="text-xl font-bold text-gfa-inkBlack mb-3 font-serif">{item.title}</h3>
+                <p className="text-sm text-gfa-slate leading-relaxed font-bold uppercase tracking-wide opacity-60">
+                  {item.desc}
                 </p>
               </div>
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* 5. ACCOUNTABILITY LEDGER */}
-      <div className="max-w-5xl mx-auto">
-        <h3 className="mb-16 text-center gold font-serif uppercase tracking-widest">{a.accountability.title}</h3>
-        <p className="text-gfa-gray text-center text-lg md:text-xl mb-16 leading-relaxed font-medium uppercase tracking-widest opacity-80 px-10 border-x-2 border-gfa-gold/10">
-          {a.accountability.body}
-        </p>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {a.accountability.items.map((item, i) => (
-            <div key={i} className="p-12 glass-panel group hover:border-gfa-gold transition-all text-center flex flex-col items-center shadow-2xl rounded-2xl">
-              <div className="text-6xl mb-10 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700 ease-out">{item.icon}</div>
-              <h4 className="font-bold text-white mb-6 uppercase tracking-[0.2em] text-sm font-montserrat">{item.title}</h4>
-              <p className="text-gfa-gray text-[10px] font-bold uppercase tracking-[0.25em] leading-loose opacity-40 group-hover:opacity-90 transition-opacity font-montserrat">
-                {item.label}
-              </p>
-            </div>
-          ))}
+      {/* 5. CERTIFICATION SYSTEM */}
+      <section className="py-24 bg-gfa-inkBlack text-white relative overflow-hidden">
+        <div className="container-gfa relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+          <div>
+             <h2 className="text-3xl md:text-4xl font-bold font-serif text-gfa-gold mb-8">{a.certification.title}</h2>
+             <p className="text-lg text-white/70 leading-loose mb-10 font-light">
+               {a.certification.body}
+             </p>
+             <Link to="/certification" className="btn-secondary !border-white/20 !text-white hover:!bg-white hover:!text-gfa-inkBlack">
+               {ui.buttons.viewStandards}
+             </Link>
+          </div>
+          <div className="relative">
+             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-gfa-gold/10 blur-[80px] rounded-full"></div>
+             <div className="border border-white/10 p-12 bg-white/5 backdrop-blur-sm rounded-sm text-center">
+                <div className="text-6xl mb-6">🎖️</div>
+                <div className="text-2xl font-serif font-bold text-white mb-2">{ui.badges.certified}</div>
+                <div className="text-[10px] uppercase tracking-[0.4em] text-gfa-gold">{ui.badges.standard}</div>
+             </div>
+          </div>
         </div>
-      </div>
+      </section>
 
-      {/* 6. FINAL SEAL */}
-      <div className="mt-40 text-center border-t-2 border-white/5 pt-20 relative">
-         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-64 bg-gfa-gold/5 blur-[100px] -z-10"></div>
-         <p className="text-gfa-gold font-bold text-[10px] tracking-[0.8em] uppercase mb-12 animate-pulse font-montserrat">Official Supervision Registry • Est. 2024</p>
-         <h3 className="text-lg md:text-2xl font-bold text-white uppercase tracking-[0.2em] max-w-3xl mx-auto leading-loose opacity-60 font-serif">
-           {t.locale === 'zh' ? '协助政府监督 • 保证金凭证核验中心 • 机构真实性审计' : 'Government Liaison • Supervisory Assistance & Compliance Auditing'}
-         </h3>
-         <div className="mt-16 flex justify-center opacity-[0.15] hover:opacity-40 transition-opacity duration-1000">
-            <img src="https://i.ibb.co/B582n2Dk/1755827874220993959.png" alt="GFA Official Seal" className="h-32 w-auto grayscale" />
-         </div>
-      </div>
+      {/* 6. YOUTH PROTECTION */}
+      <section className="py-24 px-6 bg-red-50/50 border-b border-red-100">
+        <div className="container-gfa text-center max-w-4xl mx-auto">
+          <div className="inline-block px-4 py-1 bg-red-100 text-red-600 text-[9px] font-black uppercase tracking-[0.3em] rounded-sm mb-6">{ui.kickers.zeroTolerance}</div>
+          <h2 className="text-3xl md:text-4xl font-bold font-serif text-gfa-inkBlack mb-8">{a.youthProtection.title}</h2>
+          <p className="text-lg text-gfa-slate leading-loose mb-10">
+            {a.youthProtection.body}
+          </p>
+          <Link to="/safeguarding" className="text-red-600 font-black uppercase text-[11px] tracking-[0.2em] border-b-2 border-red-200 hover:border-red-600 pb-1 transition-all">
+            {ui.buttons.readPolicy}
+          </Link>
+        </div>
+      </section>
+
+      {/* 7. INDUSTRY SUPPORT */}
+      <section className="py-24 bg-white">
+        <div className="container-gfa grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+          <div className="order-2 md:order-1">
+             <div className="grid grid-cols-2 gap-4">
+                <div className="bg-gfa-warmWhite h-40 rounded-sm border border-gfa-border"></div>
+                <div className="bg-gfa-warmWhite h-40 rounded-sm border border-gfa-border translate-y-8"></div>
+             </div>
+          </div>
+          <div className="order-1 md:order-2">
+             <h2 className="text-3xl md:text-4xl font-bold font-serif text-gfa-inkBlack mb-8">{a.support.title}</h2>
+             <p className="text-lg text-gfa-slate leading-loose mb-10 opacity-80">
+               {a.support.body}
+             </p>
+             <Link to="/career-access" className="btn-primary !h-12 !text-[12px]">{ui.buttons.explore}</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* 8. MEMBER COLLABORATION NETWORK */}
+      {a.collaboration && (
+        <section className="py-24 bg-gfa-warmWhite border-t border-gfa-border">
+           <div className="container-gfa">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                 <div>
+                    <span className="text-gfa-gold font-black uppercase tracking-[0.3em] text-xs mb-4 block">{a.collaboration.subtitle}</span>
+                    <h2 className="text-3xl md:text-4xl font-bold font-serif text-gfa-inkBlack mb-8">{a.collaboration.title}</h2>
+                    <p className="text-lg text-gfa-slate leading-loose mb-8 font-medium opacity-80">
+                      {a.collaboration.body}
+                    </p>
+                    <div className="bg-white border border-gfa-border p-8 border-l-4 border-l-gfa-gold shadow-sm rounded-sm">
+                       <p className="text-lg italic font-serif text-gfa-inkBlack opacity-90">
+                         "{a.collaboration.quote}"
+                       </p>
+                    </div>
+                 </div>
+                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    {a.collaboration.features.map((feat: string, i: number) => (
+                       <div key={i} className="bg-white p-6 border border-gfa-border flex items-center gap-4 shadow-sm rounded-sm hover:border-gfa-gold transition-colors">
+                          <div className="w-2 h-2 bg-gfa-gold rounded-full shrink-0"></div>
+                          <span className="text-sm font-bold uppercase tracking-wide text-gfa-inkBlack">{feat}</span>
+                       </div>
+                    ))}
+                 </div>
+              </div>
+           </div>
+        </section>
+      )}
+
+      {/* 9. FILM RESOURCE EXCHANGE */}
+      {a.resourceExchange && (
+        <section className="py-24 bg-white border-t border-gfa-border">
+           <div className="container-gfa">
+              <div className="text-center mb-16 max-w-4xl mx-auto">
+                 <span className="text-gfa-gold font-black uppercase tracking-[0.3em] text-xs mb-4 block">
+                   {a.resourceExchange.subtitle}
+                 </span>
+                 <h2 className="text-3xl md:text-4xl font-bold font-serif text-gfa-inkBlack mb-6">
+                   {a.resourceExchange.title}
+                 </h2>
+                 <p className="text-lg text-gfa-slate leading-loose font-medium opacity-80">
+                   {a.resourceExchange.body}
+                 </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                 {a.resourceExchange.categories.map((cat: any, i: number) => (
+                    <div key={i} className="bg-gfa-warmWhite p-8 border border-gfa-border rounded-sm hover:border-gfa-gold transition-all group">
+                       <div className="text-4xl mb-6 grayscale group-hover:grayscale-0 transition-all">{cat.icon}</div>
+                       <h3 className="text-lg font-bold font-serif text-gfa-inkBlack mb-6 border-b border-gfa-border pb-4">
+                         {cat.title}
+                       </h3>
+                       <ul className="space-y-3">
+                          {cat.items.map((item: string, idx: number) => (
+                             <li key={idx} className="text-sm text-gfa-slate font-medium flex items-center gap-3">
+                                <span className="w-1.5 h-1.5 bg-gfa-gold rounded-full"></span>
+                                {item}
+                             </li>
+                          ))}
+                       </ul>
+                    </div>
+                 ))}
+              </div>
+           </div>
+        </section>
+      )}
+
+      {/* 10. GLOBAL NETWORK */}
+      <section className="py-32 bg-white border-t border-gfa-border text-center">
+        <div className="container-gfa">
+           <h2 className="text-3xl md:text-4xl font-bold font-serif text-gfa-inkBlack mb-8">{a.network.title}</h2>
+           <p className="text-lg text-gfa-slate max-w-3xl mx-auto leading-loose mb-16 opacity-80">
+             {a.network.body}
+           </p>
+           {/* Placeholder Map Visual */}
+           <div className="w-full max-w-4xl mx-auto aspect-[2/1] bg-gfa-warmWhite border border-gfa-border rounded-sm flex items-center justify-center relative opacity-60 hover:opacity-100 transition-opacity">
+              <span className="text-gfa-slate text-[10px] uppercase tracking-widest font-bold">{ui.mapPlaceholder}</span>
+              {/* Dots indicating hubs */}
+              <div className="absolute top-1/4 left-1/4 w-3 h-3 bg-gfa-gold rounded-full shadow-lg"></div>
+              <div className="absolute top-1/3 right-1/4 w-3 h-3 bg-gfa-gold rounded-full shadow-lg"></div>
+              <div className="absolute bottom-1/3 left-1/2 w-3 h-3 bg-gfa-gold rounded-full shadow-lg"></div>
+           </div>
+        </div>
+      </section>
+
+      {/* 11. GOVERNANCE */}
+      <section className="py-24 bg-white border-y border-gfa-border">
+        <div className="container-gfa flex flex-col md:flex-row gap-12 items-start">
+           <div className="md:w-1/3">
+              <h2 className="text-3xl font-bold font-serif text-gfa-inkBlack mb-6">{a.governance.title}</h2>
+              <Link to="/governance" className="text-gfa-gold font-bold uppercase text-[11px] tracking-widest hover:underline">{ui.buttons.readCharter}</Link>
+           </div>
+           <div className="md:w-2/3">
+              <p className="text-lg text-gfa-slate leading-loose font-medium opacity-80">
+                {a.governance.body}
+              </p>
+           </div>
+        </div>
+      </section>
+
+      {/* 12. IMPACT */}
+      <section className="py-24 bg-gfa-inkBlack text-white">
+        <div className="container-gfa">
+           <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold font-serif text-white">{a.impact.title}</h2>
+           </div>
+           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+              {a.impact.stats.map((stat: any, i: number) => (
+                <div key={i} className="p-6 border border-white/10 rounded-sm">
+                   <div className="text-4xl md:text-5xl font-black text-gfa-gold mb-2 font-serif">{stat.value}</div>
+                   <div className="text-[10px] uppercase tracking-[0.2em] text-white/50">{stat.label}</div>
+                </div>
+              ))}
+           </div>
+        </div>
+      </section>
+
+      {/* 13. CTA */}
+      <section className="py-32 bg-gfa-gold text-gfa-inkBlack text-center">
+        <div className="container-gfa max-w-3xl mx-auto">
+           <h2 className="text-4xl md:text-5xl font-bold font-serif mb-8">{a.cta.title}</h2>
+           <p className="text-xl font-medium leading-relaxed mb-12 opacity-90">
+             {a.cta.body}
+           </p>
+           <Link to="/membership" className="inline-block bg-gfa-inkBlack text-white px-12 py-5 text-[12px] font-black uppercase tracking-[0.2em] hover:scale-105 transition-transform shadow-2xl rounded-sm">
+             {a.cta.button}
+           </Link>
+        </div>
+      </section>
     </div>
   );
 };

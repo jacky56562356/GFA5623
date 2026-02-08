@@ -1,12 +1,12 @@
 
 import React from 'react';
 import SectionHeading from '../components/ui/SectionHeading';
-// Fix: Import useLocale from LocaleContext.tsx instead of App.tsx
 import { useLocale } from '../LocaleContext.tsx';
-import { SUPPORT_PROGRAMS_DATA } from '../data';
+import { SupportProgram } from '../types.ts';
 
 const Support: React.FC = () => {
   const { t } = useLocale();
+  const programs: SupportProgram[] = t.supportPrograms || [];
 
   const impactPathways = [
     { title: t.support.p1Title, bullets: t.support.p1Bullets, icon: '🏆' },
@@ -30,7 +30,7 @@ const Support: React.FC = () => {
             <div className="text-3xl mb-8 grayscale group-hover:grayscale-0 transition-all">{path.icon}</div>
             <h3 className="text-lg font-black mb-8 gold-gradient uppercase tracking-tight font-montserrat">{path.title}</h3>
             <ul className="space-y-4 flex-grow">
-              {path.bullets.map((b, idx) => (
+              {path.bullets.map((b: string, idx: number) => (
                 <li key={idx} className="text-[10px] font-black uppercase tracking-widest text-gfa-gray/80 flex items-center gap-3">
                   <span className="text-gfa-gold/60 text-base">✦</span> {b}
                 </li>
@@ -41,7 +41,7 @@ const Support: React.FC = () => {
       </div>
 
       <div className="space-y-24">
-        {SUPPORT_PROGRAMS_DATA.map((prog, i) => (
+        {programs.map((prog, i) => (
           <div key={prog.id} className={`flex flex-col ${i % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-12 items-center`}>
             <div className="lg:w-1/2 group">
               <div className="overflow-hidden shadow-2xl rounded-md">

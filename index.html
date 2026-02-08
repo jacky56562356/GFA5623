@@ -1,26 +1,18 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GFA Global Film Alliance | Official Institutional Website</title>
-    <meta name="description" content="The official portal for the Global Film Alliance (GFA). Independent film certification, talent governance, and non-profit creative support.">
+    <title>GFA Global Film Alliance | Professional Industry Support</title>
+    <meta name="description" content="The Global Film Alliance (GFA) provides voluntary industry standards, youth safeguarding guidelines, and professional support networks.">
     
     <link rel="canonical" href="https://www.gfaalliance.org/" />
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.gfaalliance.org/">
-    <meta property="og:title" content="GFA Global Film Alliance">
-    <meta property="og:description" content="Independent film certification and talent governance.">
-    <meta property="og:image" content="https://i.ibb.co/B582n2Dk/1755827874220993959.png">
 
     <script src="https://cdn.tailwindcss.com"></script>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Montserrat:wght@300;400;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     
     <script>
         tailwind.config = {
@@ -28,17 +20,36 @@
                 extend: {
                     colors: {
                         gfa: {
-                            black: '#07090c',
-                            gold: '#D4AF37',
-                            goldLight: '#F5E6A8',
-                            gray: '#a9b3c1',
-                            darkGray: '#15181d'
+                            warmWhite: '#FAFAF8',
+                            inkBlack: '#0B0B0C',
+                            gold: '#C9A24D',
+                            goldDark: '#B88A2A',
+                            slate: '#6B7280',
+                            border: '#E6E7EA',
+                            grayLight: '#D1D5DB'
                         }
                     },
                     fontFamily: {
                         sans: ['Inter', 'Noto Sans SC', 'sans-serif'],
-                        montserrat: ['Montserrat', 'sans-serif'],
-                        cinzel: ['Cinzel', 'serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    borderRadius: {
+                        'card': '16px',
+                        'btn': '12px'
+                    },
+                    animation: {
+                        'fade-up': 'fadeUp 0.8s ease-out forwards',
+                        'shimmer': 'shimmer 3s linear infinite',
+                    },
+                    keyframes: {
+                        fadeUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        shimmer: {
+                            '0%': { backgroundPosition: '200% center' },
+                            '100%': { backgroundPosition: '-200% center' },
+                        }
                     }
                 }
             }
@@ -46,103 +57,187 @@
     </script>
     <style>
         :root {
-          --bg: #07090c;
-          --text: #e9eef5;
-          --muted: #a9b3c1;
-          --gold-2: #A67C00;
-          --gold-3: #D4AF37;
-          --gold-4: #F5E6A8;
+          --warm-white: #FAFAF8;
+          --ink-black: #0B0B0C;
+          --gold: #C9A24D;
+          --border: #E6E7EA;
         }
 
         body {
-            background-color: var(--bg);
-            color: var(--text);
-            font-family: 'Inter', 'Noto Sans SC', sans-serif;
+            background-color: var(--warm-white);
+            color: var(--ink-black);
+            font-family: 'Inter', sans-serif;
             -webkit-font-smoothing: antialiased;
-            overflow-x: hidden;
+            line-height: 1.6;
+        }
+        
+        ::selection {
+            background: rgba(201, 162, 77, 0.2);
+            color: var(--ink-black);
         }
 
-        /* Film Grain Effect */
-        body::before {
-            content: "";
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Section Spacing - Mandatory 96px */
+        section {
+            padding-top: 96px;
+            padding-bottom: 96px;
+        }
+
+        /* Fixed Container 1200px */
+        .container-gfa {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Institutional Buttons */
+        .btn-primary {
+            background-color: var(--gold);
+            color: var(--ink-black);
+            font-weight: 600;
+            height: 48px;
+            padding: 0 2rem;
+            font-size: 16px;
+            border-radius: 12px;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            white-space: nowrap;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-primary:hover {
+            background-color: #B88A2A;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px -10px rgba(201, 162, 77, 0.4);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--ink-black);
+            font-weight: 600;
+            height: 48px;
+            padding: 0 2rem;
+            font-size: 16px;
+            border-radius: 12px;
+            border: 1px solid var(--ink-black);
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            white-space: nowrap;
+        }
+        .btn-secondary:hover {
+            background-color: var(--ink-black);
+            color: white;
+        }
+
+        .btn-secondary-white {
+            background-color: transparent;
+            color: white;
+            font-weight: 600;
+            height: 48px;
+            padding: 0 2rem;
+            font-size: 16px;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.3);
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn-secondary-white:hover {
+            border-color: white;
+            background-color: rgba(255,255,255,0.05);
+        }
+
+        .btn-tertiary {
+            color: var(--ink-black);
+            font-weight: 600;
+            font-size: 15px;
+            text-decoration: none;
+            position: relative;
+            padding-bottom: 2px;
+            transition: color 0.3s ease;
+        }
+        .btn-tertiary::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--ink-black);
+            transition: width 0.3s ease;
+        }
+        .btn-tertiary:hover::after {
+            width: 100%;
+        }
+
+        .nav-link {
+            font-size: 15px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .gold-badge {
+            display: inline-block;
+            background: rgba(201, 162, 77, 0.1);
+            color: var(--gold);
+            border: 1px solid rgba(201, 162, 77, 0.2);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .card-standard {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 32px;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        .card-standard:hover {
+            border-color: var(--gold);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px -15px rgba(0,0,0,0.05);
+        }
+
+        /* Subtle Noise Texture */
+        .bg-noise {
             position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
-            opacity: 0.05;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             pointer-events: none;
-            z-index: 9999;
+            z-index: 50;
+            opacity: 0.035;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
         }
 
-        .gold {
-          background: linear-gradient(90deg, var(--gold-2), var(--gold-3), var(--gold-4), var(--gold-3), var(--gold-2));
-          -webkit-background-clip: text;
-          background-clip: text;
-          color: transparent;
-          text-shadow: 0 0 18px rgba(212,175,55,0.08);
-        }
-
-        @keyframes goldShimmer {
-          0% { background-position: 0% 50%; }
-          100% { background-position: 200% 50%; }
-        }
-        .gold-shimmer {
-          background-size: 200% 200%;
-          animation: goldShimmer 8s ease-in-out infinite;
-        }
-
-        .btn-gold {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          height: 56px;
-          padding: 0 40px;
-          font-weight: 800;
-          letter-spacing: 0.1em;
-          background: linear-gradient(135deg, var(--gold-2), var(--gold-3), var(--gold-4));
-          color: #07090c;
-          border-radius: 2px;
-          transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-          text-transform: uppercase;
-        }
-        .btn-gold:hover {
-          transform: translateY(-3px);
-          box-shadow: 0 15px 40px rgba(212,175,55,0.3);
-          filter: brightness(1.1);
-        }
-
-        .hero-overlay {
-            background: linear-gradient(to bottom, rgba(7,9,12,0.4) 0%, rgba(7,9,12,0.8) 50%, rgba(7,9,12,1) 100%);
-        }
-
-        .glass-panel {
-            background: rgba(21, 24, 29, 0.7);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        @keyframes marquee {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-        .animate-marquee {
-          animation: marquee 30s linear infinite;
-        }
-
-        /* Custom Scrollbar */
         ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: var(--bg); }
-        ::-webkit-scrollbar-thumb { background: var(--gold-2); border-radius: 10px; }
+        ::-webkit-scrollbar-track { background: var(--warm-white); }
+        ::-webkit-scrollbar-thumb { background: #D1D5DB; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--gold); }
     </style>
 <script type="importmap">
 {
   "imports": {
-    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.3",
     "vite": "https://esm.sh/vite@^7.3.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
     "react/": "https://esm.sh/react@^19.2.4/",
     "react": "https://esm.sh/react@^19.2.4",
-    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.3",
-    "react-router-dom": "https://esm.sh/react-router-dom@^7.13.0",
-    "jspdf": "https://esm.sh/jspdf@^2.5.1"
+    "jspdf": "https://esm.sh/jspdf@^4.1.0",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.13.0"
   }
 }
 </script>

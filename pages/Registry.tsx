@@ -4,7 +4,6 @@ import { useLocale } from '../LocaleContext.tsx';
 import { RegistryOrg, RegistryQuery, OrgCategory } from '../lib/registry/types';
 import { MOCK_REGISTRY } from '../lib/registry/mockData.ts';
 import RegistryFilters from '../components/registry/RegistryFilters.tsx';
-import RegistryList from '../components/registry/RegistryList.tsx';
 import OrgDetailsDialog from '../components/registry/OrgDetailsDialog.tsx';
 
 const Registry = () => {
@@ -20,6 +19,13 @@ const Registry = () => {
   });
   const [selectedOrg, setSelectedOrg] = useState<RegistryOrg | null>(null);
   const [loading, setLoading] = useState(true);
+  const ui = t.registry.ui || {
+    portalLabel: "Official Certification Portal",
+    active: "INSTITUTIONAL ACTIVE",
+    pending: "PENDING / UNDER REVIEW",
+    revoked: "REVOKED / SUSPENDED",
+    noResults: "No institutional records match your criteria."
+  };
 
   const options = useMemo(() => {
     const cats = new Set<OrgCategory>();
@@ -69,33 +75,29 @@ const Registry = () => {
   }, [query]);
 
   return (
-    <div className="bg-gfa-black pt-40 pb-40 px-6 min-h-screen">
-      <div className="max-w-7xl mx-auto">
-        <header className="mb-20 text-center max-w-5xl mx-auto animate-fade-in">
-          <div className="flex flex-col items-center gap-6 mb-10">
-            <div className="inline-block px-6 py-2 border border-gfa-gold/30 text-gfa-gold text-[9px] font-black uppercase tracking-[0.5em] bg-gfa-gold/5 rounded-sm backdrop-blur-md shadow-2xl">
-              OFFICIAL SUPERVISORY DATA PORTAL
-            </div>
-            <div className="flex items-center gap-2 text-[8px] font-black text-gfa-gold/60 uppercase tracking-widest opacity-60">
-              <span className="w-1.5 h-1.5 rounded-full bg-gfa-gold animate-ping"></span>
-              Live Audit Database Connected
-            </div>
+    <div className="bg-gfa-warmWhite pt-48 pb-40 px-6 min-h-screen">
+      <div className="container-gfa">
+        {/* Institutional Header */}
+        <header className="mb-24 text-center max-w-4xl mx-auto">
+          <div className="inline-block px-4 py-1.5 border border-gfa-border text-gfa-slate text-[9px] font-black uppercase tracking-[0.4em] bg-white mb-10 rounded-sm">
+            {ui.portalLabel}
           </div>
           
-          <h1 className="mb-8 gold uppercase text-2xl md:text-4xl tracking-tighter font-cinzel leading-none font-black">
+          <h2 className="text-[36px] font-bold text-gfa-inkBlack mb-6 font-serif">
             {t.registry.title}
-          </h1>
-          <p className="text-sm md:text-base text-gfa-gray uppercase tracking-[0.2em] font-light max-w-3xl mx-auto leading-loose opacity-60 font-montserrat">
+          </h2>
+          <p className="text-[18px] text-gfa-slate leading-relaxed font-normal opacity-90 mb-12">
             {t.registry.subtitle}
           </p>
-          
-          <div className="mt-12 p-8 bg-white/2 border border-white/5 rounded-sm inline-block text-left max-w-2xl relative overflow-hidden group">
-            <div className="absolute top-0 left-0 w-1 h-full bg-gfa-gold opacity-30 group-hover:opacity-100 transition-opacity"></div>
-            <div className="text-[10px] font-black uppercase tracking-[0.4em] text-gfa-gold mb-4 font-montserrat">
+
+          {/* Mandatory Legal Notice */}
+          <div className="bg-white border border-gfa-border p-8 text-left relative overflow-hidden group shadow-sm rounded-sm">
+            <div className="absolute top-0 left-0 w-1.5 h-full bg-gfa-gold/30 group-hover:bg-gfa-gold transition-colors"></div>
+            <div className="text-[10px] font-black uppercase tracking-[0.4em] text-gfa-gold mb-6">
               {t.disclaimer.title}
             </div>
-            <div className="text-[10px] text-white/40 leading-loose uppercase tracking-[0.1em] font-bold font-montserrat">
-              {t.disclaimer.legal}
+            <div className="text-[13px] text-gfa-slate leading-loose font-bold italic">
+              {t.disclaimer.statutory}
             </div>
           </div>
         </header>
@@ -107,28 +109,90 @@ const Registry = () => {
           loading={loading}
         />
 
-        <div className="mb-10 flex flex-col md:flex-row justify-between items-center text-[9px] font-black uppercase tracking-[0.3em] text-gfa-gray/40 border-b border-white/10 pb-8 gap-6 animate-fade-in">
-          <span className="font-montserrat">
-            {t.common.results}: <span className="text-white/70 font-mono text-sm ml-2">{filteredOrgs.length}</span>
+        <div className="mb-12 flex flex-col md:flex-row justify-between items-center text-[11px] font-black uppercase tracking-widest text-gfa-slate/60 border-b border-gfa-border pb-10 gap-10">
+          <span>
+            {t.registry.registryCount}: <span className="text-gfa-inkBlack ml-2 font-mono text-base">{filteredOrgs.length}</span>
           </span>
-          <div className="flex flex-wrap justify-center gap-10 font-montserrat">
-            <span className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-gfa-gold shadow-[0_0_10px_rgba(212,175,55,0.4)]"></span> 
-              INSTITUTIONAL ACTIVE
+          <div className="flex flex-wrap justify-center gap-10">
+            <span className="flex items-center gap-3">
+              <span className="w-2.5 h-2.5 rounded-full bg-green-600"></span> 
+              {ui.active}
             </span>
-            <span className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-white/20 shadow-[0_0_10px_rgba(255,255,255,0.1)]"></span> 
-              SUSPENDED / REVOKED
+            <span className="flex items-center gap-3">
+              <span className="w-2.5 h-2.5 rounded-full bg-gfa-grayLight"></span> 
+              {ui.pending}
+            </span>
+            <span className="flex items-center gap-3">
+              <span className="w-2.5 h-2.5 rounded-full bg-red-600"></span> 
+              {ui.revoked}
             </span>
           </div>
         </div>
 
-        <div className="animate-fade-in relative">
-          <RegistryList 
-            items={filteredOrgs} 
-            loading={loading} 
-            onOpen={setSelectedOrg} 
-          />
+        {/* Directory Table Layout */}
+        <div className="overflow-x-auto border border-gfa-border rounded-sm shadow-sm bg-white min-h-[400px]">
+          <table className="w-full text-left border-collapse">
+            <thead>
+              <tr className="bg-gfa-warmWhite border-b border-gfa-border text-gfa-slate font-black uppercase text-[10px] tracking-[0.2em]">
+                {t.registry.tableHeaders.map((h: string, i: number) => (
+                  <th key={i} className="p-6">{h}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody className="text-[11px] font-bold uppercase tracking-wide text-gfa-inkBlack">
+              {loading ? (
+                 <tr>
+                    <td colSpan={5} className="p-20 text-center text-gfa-slate opacity-50 uppercase tracking-widest">
+                       {t.common.loading}
+                    </td>
+                 </tr>
+              ) : filteredOrgs.length === 0 ? (
+                 <tr>
+                    <td colSpan={5} className="p-20 text-center text-gfa-slate opacity-50 uppercase tracking-widest">
+                       {ui.noResults}
+                    </td>
+                 </tr>
+              ) : filteredOrgs.map((org) => (
+                <tr 
+                  key={org.orgId} 
+                  onClick={() => setSelectedOrg(org)}
+                  className="border-b border-gfa-border hover:bg-gfa-warmWhite transition-colors cursor-pointer group last:border-0"
+                >
+                  <td className="p-6">
+                    <div className="text-[13px] font-black font-serif text-gfa-inkBlack group-hover:text-gfa-gold transition-colors">{org.name}</div>
+                    <div className="text-[9px] text-gfa-slate opacity-60 mt-1 font-mono">ID: {org.orgId}</div>
+                  </td>
+                  <td className="p-6 text-gfa-slate font-medium">
+                    {org.certification.validFrom} — {org.certification.validTo}
+                  </td>
+                  <td className="p-6">
+                    <span className="bg-gfa-warmWhite border border-gfa-border px-3 py-1 rounded-sm text-[9px] font-black text-gfa-slate">
+                      {org.categories[0]}
+                    </span>
+                  </td>
+                  <td className="p-6">
+                    <div className="flex items-center gap-2">
+                       <span className={`w-2 h-2 rounded-full ${org.certification.status === 'Active' ? 'bg-green-500' : 'bg-red-500'}`}></span>
+                       {org.certification.status}
+                    </div>
+                  </td>
+                  <td className="p-6">
+                    <div className="flex items-center gap-2">
+                       <span className={`text-lg font-black font-serif ${org.trustScore >= 90 ? 'text-gfa-gold' : 'text-gfa-slate'}`}>{org.trustScore}</span>
+                       <span className="text-[9px] text-gfa-slate opacity-50">/100</span>
+                    </div>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        
+        {/* Pagination/Bottom Callout */}
+        <div className="mt-32 pt-16 border-t border-gfa-border text-center">
+          <p className="text-[11px] text-gfa-slate uppercase tracking-[0.5em] font-bold opacity-30 italic">
+            {t.registry.disclaimerBody}
+          </p>
         </div>
       </div>
 

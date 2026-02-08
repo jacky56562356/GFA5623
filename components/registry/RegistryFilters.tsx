@@ -22,15 +22,15 @@ export default function RegistryFilters({
   const { t } = useLocale();
 
   return (
-    <div className="rounded-sm border border-white/10 bg-gfa-darkGray/40 p-8 mb-12 shadow-2xl backdrop-blur-xl relative overflow-hidden group">
+    <div className="rounded-sm border border-gfa-border bg-white p-10 mb-12 shadow-sm relative overflow-hidden group">
       <div className="absolute top-0 left-0 w-1.5 h-full bg-gfa-gold/40 group-hover:bg-gfa-gold transition-colors duration-700"></div>
-      <div className="flex flex-col gap-6">
-        <div className="flex items-center justify-between border-b border-white/10 pb-4">
-          <div className="text-[10px] font-black uppercase tracking-[0.4em] text-gfa-gold font-montserrat">
+      <div className="flex flex-col gap-8">
+        <div className="flex items-center justify-between border-b border-gfa-border pb-6">
+          <div className="text-[11px] font-black uppercase tracking-[0.4em] text-gfa-gold font-sans">
             {t.common.filters}
           </div>
           <button
-            className="text-[9px] font-black uppercase tracking-widest px-4 py-1.5 rounded-sm border border-white/10 text-white/70 hover:text-white hover:border-gfa-gold transition-all"
+            className="text-[10px] font-black uppercase tracking-widest px-5 py-2 rounded-sm border border-gfa-border text-gfa-slate hover:text-gfa-inkBlack hover:border-gfa-inkBlack transition-all"
             onClick={() =>
               setQuery({
                 q: "",
@@ -47,25 +47,25 @@ export default function RegistryFilters({
           </button>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
           <div className="md:col-span-12 lg:col-span-5">
-            <div className="text-[9px] text-white/30 uppercase font-black tracking-widest mb-2 px-1">Keywords / Org ID</div>
+            <div className="text-[10px] text-gfa-slate font-black uppercase tracking-widest mb-3 px-1">Keywords / Institutional ID</div>
             <input
               value={query.q || ""}
               onChange={(e) => setQuery((p) => ({ ...p, q: e.target.value }))}
               placeholder={t.common.searchPlaceholder}
-              className="w-full rounded-sm bg-gfa-black/60 border border-white/10 px-5 py-3.5 text-xs font-bold uppercase tracking-widest text-white outline-none focus:border-gfa-gold transition-colors font-montserrat"
+              className="w-full rounded-sm bg-gfa-warmWhite border border-gfa-border px-5 py-4 text-sm font-bold uppercase tracking-widest text-gfa-inkBlack outline-none focus:border-gfa-gold transition-colors"
             />
           </div>
 
-          <div className="md:col-span-6 lg:col-span-2">
-            <div className="text-[9px] text-white/30 uppercase font-black tracking-widest mb-2 px-1">{t.common.category}</div>
+          <div className="md:col-span-6 lg:col-span-3">
+            <div className="text-[10px] text-gfa-slate font-black uppercase tracking-widest mb-3 px-1">{t.common.category}</div>
             <select
               value={query.category || "All"}
               onChange={(e) =>
                 setQuery((p) => ({ ...p, category: e.target.value as any }))
               }
-              className="w-full rounded-sm bg-gfa-black/60 border border-white/10 px-4 py-3.5 text-[10px] font-black uppercase tracking-widest text-white outline-none focus:border-gfa-gold transition-colors cursor-pointer"
+              className="w-full rounded-sm bg-gfa-warmWhite border border-gfa-border px-4 py-4 text-[11px] font-black uppercase tracking-widest text-gfa-inkBlack outline-none focus:border-gfa-gold transition-colors cursor-pointer"
             >
               <option value="All">All Categories</option>
               {options.categories.map((c) => (
@@ -75,13 +75,13 @@ export default function RegistryFilters({
           </div>
 
           <div className="md:col-span-6 lg:col-span-2">
-            <div className="text-[9px] text-white/30 uppercase font-black tracking-widest mb-2 px-1">{t.common.level}</div>
+            <div className="text-[10px] text-gfa-slate font-black uppercase tracking-widest mb-3 px-1">{t.common.level}</div>
             <select
               value={query.level || "All"}
               onChange={(e) =>
                 setQuery((p) => ({ ...p, level: e.target.value as any }))
               }
-              className="w-full rounded-sm bg-gfa-black/60 border border-white/10 px-4 py-3.5 text-[10px] font-black uppercase tracking-widest text-white outline-none focus:border-gfa-gold transition-colors cursor-pointer"
+              className="w-full rounded-sm bg-gfa-warmWhite border border-gfa-border px-4 py-4 text-[11px] font-black uppercase tracking-widest text-gfa-inkBlack outline-none focus:border-gfa-gold transition-colors cursor-pointer"
             >
               <option value="All">All Levels</option>
               <option value="Verified">Verified</option>
@@ -90,14 +90,14 @@ export default function RegistryFilters({
             </select>
           </div>
 
-          <div className="md:col-span-12 lg:col-span-3">
-            <div className="text-[9px] text-white/30 uppercase font-black tracking-widest mb-2 px-1">{t.common.status}</div>
+          <div className="md:col-span-12 lg:col-span-2">
+            <div className="text-[10px] text-gfa-slate font-black uppercase tracking-widest mb-3 px-1">{t.common.status}</div>
             <select
               value={query.status || "All"}
               onChange={(e) =>
                 setQuery((p) => ({ ...p, status: e.target.value as any }))
               }
-              className="w-full rounded-sm bg-gfa-black/60 border border-white/10 px-4 py-3.5 text-[10px] font-black uppercase tracking-widest text-white outline-none focus:border-gfa-gold transition-colors cursor-pointer"
+              className="w-full rounded-sm bg-gfa-warmWhite border border-gfa-border px-4 py-4 text-[11px] font-black uppercase tracking-widest text-gfa-inkBlack outline-none focus:border-gfa-gold transition-colors cursor-pointer"
             >
               <option value="All">All Statuses</option>
               <option value="Active">Active</option>
@@ -106,57 +106,10 @@ export default function RegistryFilters({
               <option value="Revoked">Revoked</option>
             </select>
           </div>
-
-          <div className="md:col-span-6 lg:col-span-4">
-            <div className="text-[9px] text-white/30 uppercase font-black tracking-widest mb-2 px-1">{t.common.country}</div>
-            <select
-              value={query.country || "All"}
-              onChange={(e) =>
-                setQuery((p) => ({ ...p, country: e.target.value as any }))
-              }
-              className="w-full rounded-sm bg-gfa-black/60 border border-white/10 px-4 py-3.5 text-[10px] font-black uppercase tracking-widest text-white outline-none focus:border-gfa-gold transition-colors cursor-pointer"
-            >
-              <option value="All">Global (All)</option>
-              {options.countries.map((c) => (
-                <option value={c} key={c}>{c}</option>
-              ))}
-            </select>
-          </div>
-
-          <div className="md:col-span-6 lg:col-span-4">
-            <div className="text-[9px] text-white/30 uppercase font-black tracking-widest mb-2 px-1">{t.common.city}</div>
-            <select
-              value={query.city || "All"}
-              onChange={(e) =>
-                setQuery((p) => ({ ...p, city: e.target.value as any }))
-              }
-              className="w-full rounded-sm bg-gfa-black/60 border border-white/10 px-4 py-3.5 text-[10px] font-black uppercase tracking-widest text-white outline-none focus:border-gfa-gold transition-colors cursor-pointer"
-            >
-              <option value="All">All Cities</option>
-              {options.cities.map((c) => (
-                <option value={c} key={c}>{c}</option>
-              ))}
-            </select>
-          </div>
-
-          <div className="md:col-span-12 lg:col-span-4">
-            <div className="text-[9px] text-white/30 uppercase font-black tracking-widest mb-2 px-1">{t.common.sort}</div>
-            <select
-              value={query.sort || "score_desc"}
-              onChange={(e) =>
-                setQuery((p) => ({ ...p, sort: e.target.value as any }))
-              }
-              className="w-full rounded-sm bg-gfa-black/60 border border-white/10 px-4 py-3.5 text-[10px] font-black uppercase tracking-widest text-white outline-none focus:border-gfa-gold transition-colors cursor-pointer"
-            >
-              <option value="score_desc">Trust Index ↓</option>
-              <option value="review_desc">Recently Audited</option>
-              <option value="name_asc">Name A–Z</option>
-            </select>
-          </div>
         </div>
 
         {loading ? (
-          <div className="text-[9px] text-gfa-gold font-black uppercase tracking-[0.4em] animate-pulse mt-4 text-center">
+          <div className="text-[10px] text-gfa-gold font-black uppercase tracking-[0.4em] animate-pulse mt-4 text-center">
             {t.common.loading}
           </div>
         ) : null}

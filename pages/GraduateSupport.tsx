@@ -1,88 +1,107 @@
 
 import React from 'react';
-// Fix: Import useLocale from LocaleContext.tsx instead of App.tsx
 import { useLocale } from '../LocaleContext.tsx';
 
 const GraduateSupport = () => {
   const { t } = useLocale();
-  const support = t.support;
+  const cap = t.careerAccess;
+  const pathways = t.graduatePathways || [];
 
   return (
-    <div className="bg-gfa-black pt-40 pb-32 px-6">
-      <div className="max-w-7xl mx-auto">
-        <header className="mb-32 text-center max-w-5xl mx-auto">
-          <span className="text-gfa-gold font-black uppercase tracking-[0.6em] text-[10px] mb-10 block opacity-60">Emerging Talent Infrastructure</span>
-          <h1 className="mb-12 gold uppercase text-6xl md:text-8xl leading-tight tracking-tighter">{support.title}</h1>
-          <p className="text-xl md:text-2xl text-gfa-gray uppercase tracking-[0.3em] font-light leading-loose border-y border-white/10 py-12">
-            {support.body}
+    <div className="bg-gfa-warmWhite pt-48 pb-32 px-6 min-h-screen">
+      <div className="container-gfa">
+        {/* Header */}
+        <header className="mb-24 text-center">
+          <span className="gold-badge mb-8">Professional Industry Program</span>
+          <h1 className="text-4xl md:text-6xl font-bold font-serif text-gfa-inkBlack mb-8">{cap.title}</h1>
+          <p className="text-lg text-gfa-slate max-w-3xl mx-auto leading-loose italic opacity-70 border-y border-gfa-border py-12 font-medium">
+            {cap.subtitle}
           </p>
         </header>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-40">
-          {support.programs.map((prog: any, i: number) => (
-            <div key={i} className="bg-gfa-darkGray/40 p-16 border border-white/10 hover:border-gfa-gold/40 transition-all group flex flex-col h-full relative overflow-hidden text-center rounded-sm">
-               <div className="text-5xl mb-12 grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110">
-                 {i === 0 ? '📽️' : i === 1 ? '🤝' : '🏢'}
-               </div>
-               <h3 className="text-2xl font-black text-white uppercase tracking-tight mb-8 border-b border-white/5 pb-6 group-hover:text-gfa-gold transition-colors">{prog.title}</h3>
-               <p className="text-xs text-gfa-gray leading-loose uppercase tracking-[0.2em] opacity-60 flex-grow">{prog.d}</p>
+        {/* Intro Block */}
+        <section className="mb-32 max-w-4xl mx-auto py-0">
+          <div className="bg-white border border-gfa-border p-12 md:p-16 rounded-card shadow-sm relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-2 h-full bg-gfa-inkBlack"></div>
+            <p className="text-[17px] text-gfa-inkBlack leading-relaxed font-bold italic opacity-80 uppercase tracking-wide">
+              "{cap.intro}"
+            </p>
+          </div>
+        </section>
+
+        {/* Program Pillars */}
+        <section className="mb-32 py-0">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {Object.entries(cap.pillars).map(([key, pillar]: [string, any]) => (
+              <div key={key} className="card-gfa group">
+                <div className="text-4xl mb-8 grayscale group-hover:grayscale-0 transition-all opacity-30 group-hover:opacity-100">
+                  {pillar.icon}
+                </div>
+                <h3 className="text-lg font-bold text-gfa-inkBlack mb-5 font-serif border-l-4 border-gfa-gold pl-5">
+                  {pillar.title}
+                </h3>
+                <p className="text-[15px] text-gfa-slate leading-relaxed font-medium opacity-80">
+                  {pillar.body}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Form Section */}
+        <section className="bg-white border border-gfa-border rounded-card p-12 md:p-24 shadow-sm py-24">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
+            <div className="space-y-12">
+              <h2 className="text-3xl font-bold font-serif text-gfa-inkBlack">Supported Pathways</h2>
+              <div className="space-y-10">
+                {pathways.map((item: any) => (
+                  <div key={item.id} className="group">
+                    <span className="text-[10px] font-black text-gfa-gold uppercase tracking-[0.4em] mb-3 block opacity-50">Step {item.id}</span>
+                    <h4 className="text-lg font-bold text-gfa-inkBlack mb-3 font-serif">{item.t}</h4>
+                    <p className="text-sm text-gfa-slate opacity-70 leading-relaxed font-medium">{item.d}</p>
+                  </div>
+                ))}
+              </div>
             </div>
-          ))}
-        </div>
 
-        {/* Support Pathways Detail */}
-        <section className="bg-white/5 p-24 border border-white/10 mb-40">
-           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-              <div>
-                 <h2 className="text-4xl font-black uppercase tracking-[0.3em] gold mb-10 leading-tight">Professional Support Pathways</h2>
-                 <p className="text-sm text-gfa-gray leading-loose uppercase tracking-widest mb-16 opacity-80">
-                    GFA facilitates connections between verified industry partners and emerging creators to reduce risk and foster responsible professional growth. We focus on "Support Pathways" rather than production guarantees to ensure talent development remains grounded in ethical standards.
-                 </p>
-                 <ul className="space-y-8">
-                    <li className="flex gap-6 items-start group">
-                       <span className="text-gfa-gold font-serif text-2xl group-hover:scale-125 transition-transform">✦</span>
-                       <p className="text-xs text-white uppercase tracking-widest font-black leading-relaxed">Direct Referral to GFA Certified Agencies</p>
-                    </li>
-                    <li className="flex gap-6 items-start group">
-                       <span className="text-gfa-gold font-serif text-2xl group-hover:scale-125 transition-transform">✦</span>
-                       <p className="text-xs text-white uppercase tracking-widest font-black leading-relaxed">Safety & Contractual Readiness Audits</p>
-                    </li>
-                    <li className="flex gap-6 items-start group">
-                       <span className="text-gfa-gold font-serif text-2xl group-hover:scale-125 transition-transform">✦</span>
-                       <p className="text-xs text-white uppercase tracking-widest font-black leading-relaxed">Mentor-Guided Project Development</p>
-                    </li>
-                 </ul>
-              </div>
-              <div className="bg-gfa-black/60 p-12 border border-white/5 shadow-3xl">
-                 <h3 className="text-xl font-black uppercase tracking-widest text-gfa-gold mb-10 italic">Inquiry for Support</h3>
-                 <form className="space-y-10" onSubmit={e => { e.preventDefault(); alert("Inquiry received. The support office will review your project eligibility."); }}>
-                    <div>
-                       <label className="text-[10px] font-black uppercase tracking-widest text-white/40 block mb-3 italic">Applicant Name</label>
-                       <input type="text" required className="w-full bg-gfa-black border border-white/10 p-5 text-[11px] font-bold uppercase tracking-widest text-white focus:border-gfa-gold outline-none transition-all" />
-                    </div>
-                    <div>
-                       <label className="text-[10px] font-black uppercase tracking-widest text-white/40 block mb-3 italic">Pathway Category</label>
-                       <select className="w-full bg-gfa-black border border-white/10 p-5 text-[11px] font-bold uppercase tracking-widest text-white focus:border-gfa-gold outline-none transition-all">
-                          <option>Film Incubator</option>
-                          <option>Industry Bridge</option>
-                          <option>Resource Access</option>
-                       </select>
-                    </div>
-                    <div>
-                       <label className="text-[10px] font-black uppercase tracking-widest text-white/40 block mb-3 italic">Statement of Need</label>
-                       <textarea rows={5} required className="w-full bg-gfa-black border border-white/10 p-5 text-[11px] font-bold uppercase tracking-widest text-white focus:border-gfa-gold outline-none transition-all"></textarea>
-                    </div>
-                    <button className="w-full py-6 bg-gfa-gold text-gfa-black font-black uppercase text-[11px] tracking-widest hover:bg-white transition-all shadow-xl">Submit Pathway Inquiry</button>
-                 </form>
-              </div>
-           </div>
+            <div className="bg-gfa-warmWhite p-12 md:p-16 border border-gfa-border rounded-card shadow-inner">
+              <h3 className="text-xl font-bold font-serif text-gfa-inkBlack mb-12 border-b border-gfa-border pb-6">
+                {cap.inquiryTitle}
+              </h3>
+              <form className="space-y-8" onSubmit={e => { e.preventDefault(); alert("Inquiry Received. Our team will support your request within 48 hours."); }}>
+                <div className="space-y-2">
+                  <label className="text-[11px] font-bold uppercase tracking-widest text-gfa-slate block">Full Identity</label>
+                  <input type="text" required className="w-full bg-white border border-gfa-border p-4 rounded-btn text-sm font-medium focus:border-gfa-gold outline-none transition-all" />
+                </div>
+                <div className="space-y-2">
+                  <label className="text-[11px] font-bold uppercase tracking-widest text-gfa-slate block">Institution</label>
+                  <input type="text" required className="w-full bg-white border border-gfa-border p-4 rounded-btn text-sm font-medium focus:border-gfa-gold outline-none transition-all" />
+                </div>
+                <div className="space-y-2">
+                  <label className="text-[11px] font-bold uppercase tracking-widest text-gfa-slate block">Program Pathway</label>
+                  <select className="w-full bg-white border border-gfa-border p-4 rounded-btn text-sm font-medium focus:border-gfa-gold outline-none transition-all cursor-pointer">
+                    <option>Director Support Fund</option>
+                    <option>Project Matchmaking</option>
+                    <option>IMDb Verification</option>
+                    <option>Network Access</option>
+                  </select>
+                </div>
+                <button className="btn-primary w-full shadow-lg">
+                  {cap.cta}
+                </button>
+              </form>
+              <p className="mt-8 text-[11px] text-gfa-slate font-bold uppercase tracking-widest text-center italic opacity-40">
+                {cap.inquiryNote}
+              </p>
+            </div>
+          </div>
         </section>
 
-        <section className="text-center py-20 border-t border-white/10">
-           <p className="text-[10px] text-gfa-gray/40 uppercase tracking-[0.5em] italic font-medium">
-              Empowering responsible creation through standards and support.
+        <div className="mt-32 pt-16 border-t border-gfa-border text-center">
+           <p className="text-[11px] text-gfa-slate uppercase tracking-[0.5em] font-bold opacity-30 italic">
+              Non-Profit Industry Service • Est. 2024 • Supportive Excellence
            </p>
-        </section>
+        </div>
       </div>
     </div>
   );
