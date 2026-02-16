@@ -13,7 +13,8 @@ const LocaleContext = createContext<LocaleContextType | undefined>(undefined);
 
 export const LocaleProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [locale, setLocale] = useState<Locale>(Locale.EN);
-  const t = DICTIONARIES[locale];
+  // Safely fallback to EN if locale is missing in DICTIONARIES
+  const t = DICTIONARIES[locale] || DICTIONARIES[Locale.EN] || {};
 
   return (
     <LocaleContext.Provider value={{ locale, setLocale, t }}>

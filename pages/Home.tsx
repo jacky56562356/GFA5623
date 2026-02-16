@@ -6,21 +6,17 @@ import { useLocale } from '../LocaleContext.tsx';
 const Home = () => {
   const { t } = useLocale();
   const navigate = useNavigate();
-  const hero = t.home.hero;
-  const what = t.home.whatWeDo;
-  const searchReg = t.home.searchRegistry;
-  const global = t.home.globalPresence || { title: 'Global Strategic Presence', subtitle: 'Institutional hubs in key production markets.', stats: [{ val: '14', label: 'Regional Hubs' }, { val: '86', label: 'Partner Agencies' }], locations: [{ city: 'London', role: 'European HQ' }, { city: 'Los Angeles', role: 'Legal Compliance' }, { city: 'Beijing', role: 'Asia-Pacific Center' }, { city: 'Paris', role: 'Cultural Liaison' }] };
-  const safe = t.home.safeguardingSection;
+  const home = t.home;
+  const hero = home.hero;
+  const what = home.whatWeDo;
+  const searchReg = home.searchRegistry;
+  const global = home.globalPresence;
+  const safe = home.safeguardingSection;
+  const charter = home.charter;
+  const trust = home.trust;
 
   // Helper for search UI translations
-  const s = searchReg.ui || {
-    tabs: { org: "Organization Search", bond: "Verify Bond / License", project: "Project Status" },
-    labels: { name: "Entity Name / ID", category: "Category", phone: "Phone Check", license: "License / Tax ID", country: "Country", state: "State / Prov", city: "City", address: "Street Address" },
-    placeholders: { name: "Name, ID, or Reg No.", phone: "+1 (000) 000-0000", license: "Official License No.", state: "State", city: "City", address: "Registered Address Search..." },
-    options: { allTypes: "All Types", agency: "Agency", production: "Production", school: "School", casting: "Casting", global: "Global" },
-    filters: { verified: "Verified Active", bonded: "Bonded Services Only", affiliates: "Includes Affiliates" },
-    trending: { label: "Trending:", la: "Los Angeles Agencies", uk: "Safe Sets UK", casting: "Casting Directors" }
-  };
+  const s = searchReg.ui;
 
   return (
     <div className="bg-gfa-warmWhite min-h-screen overflow-x-hidden font-sans">
@@ -258,15 +254,15 @@ const Home = () => {
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
                  </div>
                  <div>
-                    <span className="block text-[10px] font-black uppercase tracking-[0.2em] text-gfa-slate opacity-70">{t.home.trust.label || "Official Recognition"}</span>
-                    <span className="block text-[12px] font-bold text-gfa-inkBlack font-serif">{t.home.trust.badge || "Voluntary • Transparent • Professional"}</span>
+                    <span className="block text-[10px] font-black uppercase tracking-[0.2em] text-gfa-slate opacity-70">{trust.label}</span>
+                    <span className="block text-[12px] font-bold text-gfa-inkBlack font-serif">{trust.badge}</span>
                  </div>
               </div>
               <div className="flex-grow border-t md:border-t-0 md:border-l border-gfa-border h-px md:h-12 w-full md:w-px mx-4"></div>
               <div className="flex items-center gap-12 grayscale opacity-40 hover:opacity-100 transition-opacity duration-500">
-                <span className="text-[11px] font-black uppercase tracking-[0.2em]">Global Production Guild</span>
-                <span className="text-[11px] font-black uppercase tracking-[0.2em]">Cinematic Arts Council</span>
-                <span className="text-[11px] font-black uppercase tracking-[0.2em] hidden md:inline">Independent Film Bureau</span>
+                {trust.guilds.map((guild: string) => (
+                  <span key={guild} className="text-[11px] font-black uppercase tracking-[0.2em]">{guild}</span>
+                ))}
               </div>
            </div>
         </div>
@@ -344,19 +340,15 @@ const Home = () => {
                {/* Abstract decorative shapes */}
                <div className="absolute -top-10 -left-10 w-40 h-40 bg-gfa-gold/20 rounded-full blur-3xl"></div>
                <div className="bg-gfa-inkBlack p-14 rounded-card shadow-2xl relative z-10 text-white bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]">
-                  <h3 className="text-2xl font-bold font-serif mb-8 border-b border-white/10 pb-6 text-gfa-gold">GFA Charter Status</h3>
+                  <h3 className="text-2xl font-bold font-serif mb-8 border-b border-white/10 pb-6 text-gfa-gold">{charter.title}</h3>
                   <p className="text-[14px] text-white/80 leading-relaxed uppercase tracking-widest font-bold italic mb-10">
                     {t.disclaimer.legal}
                   </p>
                   <div className="space-y-6">
-                    {[
-                      { id: '01', t: t.locale === 'zh' ? '独立机构支持' : 'Independent Institutional Support' },
-                      { id: '02', t: t.locale === 'zh' ? '全球行业最佳实践' : 'Global Industry Best Practices' },
-                      { id: '03', t: t.locale === 'zh' ? '非商业服务使命' : 'Non-Commercial Service Mandate' }
-                    ].map((item) => (
-                      <div key={item.id} className="flex gap-5 items-center group">
-                        <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center font-bold text-xs shrink-0 group-hover:bg-gfa-gold group-hover:text-black group-hover:border-gfa-gold transition-all duration-500 font-mono">{item.id}</div>
-                        <p className="text-xs text-white font-bold uppercase tracking-widest group-hover:text-gfa-gold transition-colors">{item.t}</p>
+                    {charter.points.map((pt: string, idx: number) => (
+                      <div key={pt} className="flex gap-5 items-center group">
+                        <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center font-bold text-xs shrink-0 group-hover:bg-gfa-gold group-hover:text-black group-hover:border-gfa-gold transition-all duration-500 font-mono">0{idx + 1}</div>
+                        <p className="text-xs text-white font-bold uppercase tracking-widest group-hover:text-gfa-gold transition-colors">{pt}</p>
                       </div>
                     ))}
                   </div>
@@ -364,10 +356,10 @@ const Home = () => {
             </div>
 
             <div className="space-y-10">
-              <span className="gold-badge shadow-sm">{t.locale === 'zh' ? '行业诚信' : 'Industry Integrity'}</span>
-              <h2 className="text-4xl md:text-5xl font-bold font-serif leading-[1.15] text-gfa-inkBlack">{t.locale === 'zh' ? '维护行业专业性' : 'Upholding Industry Professionalism'}</h2>
+              <span className="gold-badge shadow-sm">{trust.integrity}</span>
+              <h2 className="text-4xl md:text-5xl font-bold font-serif leading-[1.15] text-gfa-inkBlack">{trust.upholding}</h2>
               <p className="text-gfa-slate leading-relaxed text-[17px] opacity-90 font-medium italic border-l-2 border-gfa-gold pl-6">
-                {t.locale === 'zh' ? '电影行业的专业性依赖于集体的行业承诺。我们为专业支持提供中立渠道，并协助规范全球影视工作场所的指导方针。' : 'Professionalism in film relies on collective industry commitment. We provide a neutral channel for professional support and help standardized guidelines for cinematic workplaces worldwide.'}
+                {trust.professionalismBody}
               </p>
               <div className="flex flex-wrap gap-6 pt-4">
                 <Link to="/reporting" className="btn-primary shadow-lg" aria-label="Lodge feedback regarding a certified entity">{t.nav.complaints}</Link>
@@ -458,7 +450,7 @@ const Home = () => {
             {/* CTA */}
             <div className="mt-20 text-center flex flex-col sm:flex-row justify-center gap-6">
                 <Link to="/certification" className="btn-primary shadow-xl hover:shadow-2xl">
-                    {t.home.hero.btnCertify || (t.locale === 'zh' ? '申请认证' : 'Apply for Certification')}
+                    {hero.btnCertify}
                 </Link>
                 <Link to="/registry" className="btn-secondary !border-gfa-gold !text-gfa-gold hover:!bg-gfa-gold hover:!text-black">
                     {searchReg.cta}
@@ -476,7 +468,7 @@ const Home = () => {
         <div className="container-gfa relative z-10">
           <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
             <div>
-              <span className="text-gfa-gold font-bold uppercase tracking-[0.3em] text-[12px] mb-4 block">Institutional Network</span>
+              <span className="text-gfa-gold font-bold uppercase tracking-[0.3em] text-[12px] mb-4 block">{global.networkKicker}</span>
               <h2 className="text-4xl md:text-5xl font-bold font-serif leading-tight">{global.title}</h2>
               <p className="text-white/60 mt-4 text-lg italic">{global.subtitle}</p>
             </div>
@@ -495,7 +487,7 @@ const Home = () => {
               <div key={i} className="bg-white/5 border border-white/10 p-8 rounded-sm hover:border-gfa-gold/50 transition-all group backdrop-blur-sm hover:bg-white/10 shadow-lg">
                 <div className="flex justify-between items-start mb-6">
                   <div className="w-2 h-2 rounded-full bg-green-500 shadow-[0_0_10px_rgba(34,197,94,0.5)]"></div>
-                  <span className="text-[10px] font-black uppercase tracking-widest text-white/20 group-hover:text-gfa-gold transition-colors">{t.locale === 'zh' ? '运营中' : 'Operational'}</span>
+                  <span className="text-[10px] font-black uppercase tracking-widest text-white/20 group-hover:text-gfa-gold transition-colors">{trust.operational}</span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2 font-serif">{loc.city}</h3>
                 <p className="text-[11px] text-gfa-slate uppercase tracking-widest opacity-60">{loc.role}</p>
