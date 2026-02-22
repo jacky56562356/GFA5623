@@ -3,14 +3,30 @@
   --ink-black: #0B0B0C;
   --gold: #C9A24D;
   --border: #E6E7EA;
+  --container: 1200px;
+
+  /* spacing scale */
+  --s-1: 8px;
+  --s-2: 12px;
+  --s-3: 16px;
+  --s-4: 24px;
+  --s-5: 32px;
+  --s-6: 48px;
+  --s-7: 64px;
+
+  /* typography */
+  --font: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
 }
+
+html { font-size: 16px; }
 
 body {
     background-color: var(--warm-white);
     color: var(--ink-black);
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font);
     -webkit-font-smoothing: antialiased;
     line-height: 1.6;
+    letter-spacing: 0;
 }
 
 ::selection {
@@ -18,22 +34,57 @@ body {
     color: var(--ink-black);
 }
 
-h1, h2, h3, h4 {
+h1 {
+  font-size: clamp(2.25rem, 3vw, 3.25rem); /* 36–52 */
+  line-height: 1.15;
+  margin: 0 0 var(--s-3);
+  font-family: 'Playfair Display', serif;
+}
+h2 {
+  font-size: clamp(1.75rem, 2.2vw, 2.5rem); /* 28–40 */
+  line-height: 1.2;
+  margin: 0 0 var(--s-2);
+  font-family: 'Playfair Display', serif;
+}
+h3 {
+  font-size: clamp(1.25rem, 1.6vw, 1.75rem); /* 20–28 */
+  line-height: 1.25;
+  margin: 0 0 var(--s-2);
+  font-family: 'Playfair Display', serif;
+}
+h4 {
     font-family: 'Playfair Display', serif;
 }
 
-/* Section Spacing - Mandatory 96px */
+/* Text blocks */
+p {
+  margin: 0 0 var(--s-3); /* 16px */
+  max-width: 72ch;
+}
+ul, ol { margin: 0 0 var(--s-3); padding-left: 1.2em; }
+li { margin: 0 0 var(--s-1); }
+
+/* Section Spacing */
 section {
-    padding-top: 96px;
-    padding-bottom: 96px;
+    padding: var(--s-7) 0; /* 64px */
+}
+
+@media (max-width: 768px) {
+  section { padding: var(--s-6) 0; } /* 48px */
+  .container, .container-gfa { padding: 0 var(--s-3); }
 }
 
 /* Fixed Container 1200px */
-.container-gfa {
-    max-width: 1200px;
+.container, .container-gfa {
+    max-width: var(--container);
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 var(--s-4);
 }
+
+/* Kill excessive default spacing */
+* { scroll-margin-top: 90px; }
+.section-title { margin-bottom: var(--s-4); } /* 24px */
+.stack > * + * { margin-top: var(--s-3); } /* vertical rhythm helper */
 
 /* Institutional Buttons */
 .btn-primary {
