@@ -45,23 +45,23 @@ const About: React.FC = () => {
              className="w-full h-full object-cover"
            />
            <div className="absolute inset-0 bg-gfa-inkBlack/90 mix-blend-multiply"></div>
-           <div className="absolute inset-0 bg-gradient-to-t from-gfa-inkBlack to-transparent"></div>
+           <div className="absolute inset-0 bg-gradient-to-t from-gfa-inkBlack via-gfa-inkBlack/50 to-transparent"></div>
         </div>
 
         {/* Abstract Background Element */}
-        <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none z-0">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-white/20 rounded-full animate-[spin_60s_linear_infinite]"></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-white/20 rounded-full"></div>
+        <div className="absolute top-0 left-0 w-full h-full opacity-20 pointer-events-none z-0">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-gfa-gold/20 rounded-full animate-[spin_60s_linear_infinite]"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-white/10 rounded-full"></div>
         </div>
 
         <div className="container-gfa relative z-10">
-          <div className="inline-block px-4 py-1.5 border border-gfa-gold/30 text-gfa-gold text-[10px] font-black uppercase tracking-[0.5em] mb-8 bg-black/40 backdrop-blur-sm rounded-sm shadow-lg">
+          <div className="inline-block px-4 py-1.5 border border-gfa-gold/30 text-gfa-gold text-[10px] font-black uppercase tracking-[0.5em] mb-8 bg-black/40 backdrop-blur-md rounded-sm shadow-lg animate-fade-in">
             {hero.kicker}
           </div>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-serif text-white mb-8 leading-tight drop-shadow-xl">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-serif text-gradient-gold mb-8 leading-tight drop-shadow-xl animate-fade-up">
             {hero.title}
           </h1>
-          <p className="text-lg md:text-2xl text-white/70 font-light leading-relaxed max-w-4xl mx-auto italic font-serif">
+          <p className="text-lg md:text-2xl text-white/70 font-light leading-relaxed max-w-4xl mx-auto italic font-serif animate-fade-up delay-200">
             {hero.subtitle}
           </p>
         </div>
@@ -228,17 +228,18 @@ const About: React.FC = () => {
       </section>
 
       {/* 12. IMPACT */}
-      <section className="py-24 bg-gfa-inkBlack text-white relative">
-        <div className="absolute inset-0 bg-gfa-gold/5 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
+      <section className="py-24 bg-gfa-inkBlack text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-gfa-gold/10 via-transparent to-blue-500/5 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gfa-gold/30 to-transparent"></div>
         <div className="container-gfa relative z-10">
            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold font-serif text-white">{impact.title}</h2>
+              <h2 className="text-3xl font-bold font-serif text-gradient-gold">{impact.title}</h2>
            </div>
            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               {(impact.stats || []).map((stat: any, i: number) => (
-                <div key={i} className="p-6 border border-white/10 rounded-sm bg-white/5 backdrop-blur-sm">
-                   <div className="text-4xl md:text-5xl font-black text-gfa-gold mb-2 font-serif">{stat.value}</div>
-                   <div className="text-[10px] uppercase tracking-[0.2em] text-white/50">{stat.label}</div>
+                <div key={i} className="p-8 border border-white/10 rounded-xl glass-panel-dark hover:border-gfa-gold/50 transition-all duration-500 group">
+                   <div className="text-4xl md:text-5xl font-black text-gfa-gold mb-2 font-serif group-hover:scale-110 transition-transform">{stat.value}</div>
+                   <div className="text-[10px] uppercase tracking-[0.2em] text-white/50 group-hover:text-white transition-colors">{stat.label}</div>
                 </div>
               ))}
            </div>

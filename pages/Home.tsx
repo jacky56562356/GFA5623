@@ -36,7 +36,7 @@ const Home = () => {
         {/* Background Image with heavy overlay */}
         <div className="absolute inset-0 z-0">
             <img 
-              src="/images/hero-bg.png" 
+              src="https://i.ibb.co/1YLw1rqg/image.png" 
               onError={(e) => {
                 e.currentTarget.src = "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=2071&auto=format&fit=crop";
               }}
@@ -94,10 +94,11 @@ const Home = () => {
       {/* Registry Search Section - Floating Card with Pattern */}
       <section className="relative z-20 -mt-24 pb-24">
         <div className="container-gfa">
-          <div className="bg-white/95 backdrop-blur-xl border border-white/40 shadow-2xl rounded-card p-10 md:p-14 relative overflow-hidden">
+          <div className="bg-white/95 backdrop-blur-xl border border-white/40 shadow-2xl rounded-card p-10 md:p-14 relative overflow-hidden group">
             {/* Background Pattern */}
             <div className="absolute inset-0 opacity-[0.03] bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
-            <div className="absolute top-0 right-0 w-96 h-96 bg-gfa-gold/10 rounded-full blur-3xl -mr-32 -mt-32 pointer-events-none"></div>
+            <div className="absolute top-0 right-0 w-96 h-96 bg-gfa-gold/20 rounded-full blur-3xl -mr-32 -mt-32 pointer-events-none group-hover:bg-gfa-gold/30 transition-colors duration-700"></div>
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl -ml-32 -mb-32 pointer-events-none"></div>
 
             <div className="text-center mb-10 max-w-3xl mx-auto relative z-10">
               <div className="inline-flex items-center gap-2 mb-4 px-3 py-1 bg-green-50 rounded-full border border-green-200 shadow-sm">
@@ -256,7 +257,8 @@ const Home = () => {
       </section>
 
       {/* Trust Endorsement Bar */}
-      <div className="bg-white border-y border-gfa-border py-6 overflow-hidden relative">
+      <div className="bg-white border-y border-gfa-border py-8 overflow-hidden relative">
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1478720568477-152d9b164e26?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-[0.03] grayscale"></div>
         <div className="absolute inset-0 bg-gfa-warmWhite opacity-50"></div>
         <div className="container-gfa relative z-10">
            <div className="flex flex-col md:flex-row items-center justify-between gap-8">
@@ -280,8 +282,9 @@ const Home = () => {
       </div>
 
       {/* Core Service Pillars */}
-      <section className="bg-gfa-warmWhite relative py-24" aria-labelledby="what-we-do-title">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-gray-100 to-transparent opacity-50"></div>
+      <section className="bg-gfa-warmWhite relative py-24 overflow-hidden" aria-labelledby="what-we-do-title">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-gfa-gold/10 via-transparent to-transparent opacity-50"></div>
+        <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-blue-500/5 rounded-full blur-[100px]"></div>
         <div className="container-gfa relative z-10">
           <div className="text-center mb-20 max-w-3xl mx-auto">
             <span className="text-gfa-gold font-bold uppercase tracking-[0.3em] text-[11px] mb-4 block">{t.about?.whatWeDo?.title}</span>
@@ -296,27 +299,40 @@ const Home = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {(what.cards || []).map((card: any, i: number) => (
-              <div key={i} className="card-standard flex flex-col h-full group bg-white relative overflow-hidden shadow-sm hover:shadow-xl border-t-4 border-t-transparent hover:border-t-gfa-gold transition-all duration-300 p-8 rounded-card">
-                {/* Hover Gradient Background */}
-                <div className="absolute inset-0 bg-gradient-to-br from-gfa-gold/0 via-gfa-gold/0 to-gfa-gold/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div key={i} className="card-standard flex flex-col h-full group bg-white relative overflow-hidden shadow-sm hover:shadow-xl border-t-4 border-t-transparent hover:border-t-gfa-gold transition-all duration-300 p-0 rounded-card">
+                {/* Card Image */}
+                <div className="h-48 overflow-hidden relative">
+                  <img 
+                    src={`https://picsum.photos/seed/gfa-service-${i}/600/400`} 
+                    alt={card.title} 
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-110"
+                    referrerPolicy="no-referrer"
+                  />
+                  <div className="absolute inset-0 bg-gfa-inkBlack/20 group-hover:bg-transparent transition-colors"></div>
+                </div>
                 
-                <div className="relative z-10">
-                  <div className="w-14 h-14 rounded-full bg-gfa-warmWhite border border-gfa-border flex items-center justify-center text-2xl mb-8 group-hover:scale-110 group-hover:border-gfa-gold group-hover:bg-white transition-all duration-300 shadow-sm">
-                    {i === 0 ? '⚖️' : i === 1 ? '🛡️' : '🎓'}
-                  </div>
-                  <h3 className="text-[22px] font-bold mb-5 font-serif text-gfa-inkBlack group-hover:text-gfa-gold transition-colors">
-                    {card.title}
-                  </h3>
-                  <p className="text-[15px] text-gfa-slate leading-relaxed mb-10 flex-grow opacity-85">
-                    {card.body}
-                  </p>
-                  <div className="mt-auto border-t border-gfa-border pt-6 group-hover:border-gfa-gold/30 transition-colors">
-                    <Link 
-                      to={i === 0 ? "/certification" : i === 1 ? "/safeguarding" : "/career-access"} 
-                      className="text-[11px] font-black uppercase tracking-widest text-gfa-inkBlack group-hover:text-gfa-gold flex items-center gap-2"
-                    >
-                      {card.link} <span className="group-hover:translate-x-1 transition-transform">→</span>
-                    </Link>
+                <div className="p-8 flex flex-col flex-grow relative z-10">
+                  {/* Hover Gradient Background */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-gfa-gold/0 via-gfa-gold/0 to-gfa-gold/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  
+                  <div className="relative z-10">
+                    <div className="w-12 h-12 rounded-full bg-gfa-warmWhite border border-gfa-border flex items-center justify-center text-xl mb-6 group-hover:scale-110 group-hover:border-gfa-gold group-hover:bg-white transition-all duration-300 shadow-sm -mt-14 relative z-20">
+                      {i === 0 ? '⚖️' : i === 1 ? '🛡️' : '🎓'}
+                    </div>
+                    <h3 className="text-[22px] font-bold mb-4 font-serif text-gfa-inkBlack group-hover:text-gfa-gold transition-colors">
+                      {card.title}
+                    </h3>
+                    <p className="text-[15px] text-gfa-slate leading-relaxed mb-8 flex-grow opacity-85">
+                      {card.body}
+                    </p>
+                    <div className="mt-auto border-t border-gfa-border pt-6 group-hover:border-gfa-gold/30 transition-colors">
+                      <Link 
+                        to={i === 0 ? "/certification" : i === 1 ? "/safeguarding" : "/career-access"} 
+                        className="text-[11px] font-black uppercase tracking-widest text-gfa-inkBlack group-hover:text-gfa-gold flex items-center gap-2"
+                      >
+                        {card.link} <span className="group-hover:translate-x-1 transition-transform">→</span>
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -347,9 +363,20 @@ const Home = () => {
         <div className="absolute top-0 right-0 w-1/2 h-full bg-gfa-warmWhite/50 skew-x-12 transform origin-top-right pointer-events-none"></div>
         <div className="container-gfa relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-            <div className="relative">
+            <div className="relative group">
                {/* Abstract decorative shapes */}
                <div className="absolute -top-10 -left-10 w-40 h-40 bg-gfa-gold/20 rounded-full blur-3xl"></div>
+               
+               {/* Image Overlay for Document Section */}
+               <div className="absolute -right-12 -bottom-12 w-64 h-80 rounded-xl overflow-hidden shadow-2xl z-20 border border-white/10 hidden lg:block animate-float">
+                  <img 
+                    src="https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=2059&auto=format&fit=crop" 
+                    alt="Institutional Document" 
+                    className="w-full h-full object-cover grayscale"
+                  />
+                  <div className="absolute inset-0 bg-gfa-gold/10 mix-blend-overlay"></div>
+               </div>
+
                <div className="bg-gfa-inkBlack p-14 rounded-card shadow-2xl relative z-10 text-white bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]">
                   <h3 className="text-2xl font-bold font-serif mb-8 border-b border-white/10 pb-6 text-gfa-gold">{charter.title}</h3>
                   <p className="text-[14px] text-white/80 leading-relaxed uppercase tracking-widest font-bold italic mb-10">
@@ -382,10 +409,11 @@ const Home = () => {
       </section>
 
       {/* Youth Safeguarding & Trusted Industry Standards Section */}
-      <section className="py-24 px-6 bg-[#0d0f12] text-white border-t border-white/5 relative overflow-hidden">
+      <section className="py-32 px-6 bg-[#0d0f12] text-white border-t border-white/5 relative overflow-hidden">
         {/* Abstract Background */}
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=2525&auto=format&fit=crop')] bg-cover bg-center opacity-10 grayscale mix-blend-overlay"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0d0f12] via-transparent to-[#0d0f12]"></div>
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=2059&auto=format&fit=crop')] bg-cover bg-center opacity-20 grayscale mix-blend-overlay"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0d0f12] via-[#0d0f12]/80 to-[#0d0f12]"></div>
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gfa-gold/50 to-transparent"></div>
         
         <div className="container-gfa relative z-10">
             {/* Header */}
@@ -404,9 +432,9 @@ const Home = () => {
             {/* Trust Highlights */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mb-16">
                 {(safe.cards || []).map((item: any, index: number) => (
-                    <div key={index} className="bg-white/5 backdrop-blur-sm rounded-lg p-6 text-center border border-white/10 hover:border-gfa-gold/50 transition-colors shadow-lg hover:bg-white/10 group">
+                    <div key={index} className="card-standard text-center group">
                         <h4 className="text-gfa-gold font-bold mb-2 text-lg font-serif group-hover:scale-105 transition-transform">{item.title}</h4>
-                        <p className="text-sm opacity-90 text-gfa-grayLight">{item.text}</p>
+                        <p className="text-sm opacity-90 text-gfa-slate">{item.text}</p>
                     </div>
                 ))}
             </div>

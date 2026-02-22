@@ -36,31 +36,42 @@ const Safeguarding: React.FC = () => {
 
       <div className="container-gfa relative z-10">
         
-        {/* HERO SECTION - Compact */}
-        <header className="text-center max-w-4xl mx-auto mb-16 animate-fade-up relative">
-          <div className="inline-flex items-center gap-2 mb-4 px-3 py-1 rounded-full bg-white/5 border border-white/10 backdrop-blur-md shadow-sm">
-            <Shield className="w-3 h-3 text-gfa-gold" />
-            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-gfa-gold">{sg.kicker}</span>
+      {/* HERO SECTION - Immersive */}
+      <header className="relative py-32 mb-16 overflow-hidden rounded-3xl">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=2071&auto=format&fit=crop" 
+            alt="Safeguarding Background" 
+            className="w-full h-full object-cover opacity-30 grayscale"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-gfa-inkBlack via-gfa-inkBlack/80 to-gfa-inkBlack"></div>
+        </div>
+        
+        <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
+          <div className="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md shadow-sm animate-fade-in">
+            <Shield className="w-4 h-4 text-gfa-gold" />
+            <span className="text-[11px] font-black uppercase tracking-[0.3em] text-gfa-gold">{sg.kicker}</span>
           </div>
           
-          <h1 className="text-4xl md:text-6xl font-black mb-4 font-serif leading-tight tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-white to-white/70">
+          <h1 className="text-5xl md:text-7xl font-black mb-6 font-serif leading-tight tracking-tight text-gradient-gold animate-fade-up">
             {sg.title}
           </h1>
           
-          <p className="text-lg text-gfa-slate max-w-2xl mx-auto leading-relaxed mb-8 font-light">
+          <p className="text-xl text-gfa-slate max-w-2xl mx-auto leading-relaxed mb-10 font-light animate-fade-up delay-200">
             {sg.subtitle}
           </p>
 
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link to="/reporting" className="btn-primary shadow-[0_0_20px_rgba(201,162,77,0.2)] !px-6 !py-3 !text-sm">
+          <div className="flex flex-wrap justify-center gap-6 animate-fade-up delay-300">
+            <Link to="/reporting" className="btn-primary shadow-[0_0_30px_rgba(201,162,77,0.3)] !px-8 !py-4">
               {sg.reportingCta}
             </Link>
-            <Link to="/resources" className="btn-secondary-white hover:bg-white hover:text-gfa-inkBlack !px-6 !py-3 !text-sm flex items-center gap-2">
-              <Download className="w-4 h-4" />
+            <Link to="/resources" className="btn-secondary-white hover:bg-white hover:text-gfa-inkBlack !px-8 !py-4 flex items-center gap-3">
+              <Download className="w-5 h-5" />
               {sg.guideTitle}
             </Link>
           </div>
-        </header>
+        </div>
+      </header>
 
         {/* MAIN CONTENT GRID */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
@@ -69,21 +80,35 @@ const Safeguarding: React.FC = () => {
           <div className="lg:col-span-8 space-y-12">
             
             {/* Intro Section */}
-            <section className="bg-white/5 border border-white/10 rounded-2xl p-8">
-              <div className="flex flex-col md:flex-row gap-8 items-start">
-                <img 
-                  src="https://picsum.photos/seed/filmset/400/300" 
-                  alt={sg.intro?.imageAlt || "Film set safety"} 
-                  className="rounded-xl shadow-lg border border-white/10 w-full md:w-1/3 object-cover aspect-[4/3] grayscale hover:grayscale-0 transition-all duration-500"
-                  referrerPolicy="no-referrer"
-                />
+            <section className="bg-white/5 border border-white/10 rounded-2xl p-10 relative overflow-hidden group">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-gfa-gold/5 rounded-full blur-3xl -mr-32 -mt-32"></div>
+              <div className="flex flex-col md:flex-row gap-10 items-start relative z-10">
+                <div className="w-full md:w-2/5 shrink-0">
+                  <img 
+                    src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=2525&auto=format&fit=crop" 
+                    alt={sg.intro?.imageAlt || "Film set safety"} 
+                    className="rounded-xl shadow-2xl border border-white/10 w-full object-cover aspect-[3/4] grayscale group-hover:grayscale-0 transition-all duration-700 hover:scale-[1.02]"
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
                 <div className="flex-1">
-                  <h2 className="text-2xl font-bold font-serif mb-4 text-white">{sg.intro?.title}</h2>
-                  <p className="text-base text-gfa-slate leading-relaxed mb-6">
+                  <h2 className="text-3xl font-bold font-serif mb-6 text-white leading-tight">{sg.intro?.title}</h2>
+                  <p className="text-lg text-gfa-slate leading-relaxed mb-8 font-light">
                     {sg.intro?.body}
                   </p>
-                  <div className="p-4 bg-black/20 rounded-lg border-l-2 border-gfa-gold">
-                    <p className="text-sm text-white/80 italic">"{sg.why?.body}"</p>
+                  <div className="p-6 bg-black/40 rounded-xl border-l-4 border-gfa-gold shadow-inner">
+                    <p className="text-base text-white/90 italic font-serif leading-relaxed">"{sg.why?.body}"</p>
+                  </div>
+                  
+                  {/* Content Prompt / Callout */}
+                  <div className="mt-10 p-6 bg-gfa-gold/10 border border-gfa-gold/20 rounded-xl flex items-start gap-4">
+                    <AlertCircle className="w-6 h-6 text-gfa-gold shrink-0 mt-1" />
+                    <div>
+                      <h4 className="text-sm font-bold text-white uppercase tracking-widest mb-2">Institutional Responsibility</h4>
+                      <p className="text-xs text-gfa-slate leading-relaxed">
+                        Every production certified by the GFA must appoint a dedicated Safeguarding Officer. This is not just a guideline, but a mandatory requirement for maintaining professional standing.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -97,7 +122,7 @@ const Safeguarding: React.FC = () => {
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {principlesList.map((p: any, i: number) => (
-                  <div key={i} className="bg-white/5 border border-white/10 rounded-xl p-5 hover:bg-white/10 transition-colors">
+                  <div key={i} className="card-standard !bg-white/5 !p-5 hover:!bg-white/10 transition-colors">
                     <div className="flex items-center gap-3 mb-2">
                       <span className="text-xl">{p.icon}</span>
                       <h4 className="font-bold text-white text-sm">{p.t}</h4>
@@ -109,20 +134,21 @@ const Safeguarding: React.FC = () => {
             </section>
 
             {/* Safety Standards */}
-            <section>
-              <h3 className="text-xl font-bold font-serif mb-6 flex items-center gap-2">
-                <BookOpen className="w-5 h-5 text-gfa-gold" />
+            <section className="relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-gfa-gold/5 to-transparent rounded-3xl -m-6 pointer-events-none"></div>
+              <h3 className="text-2xl font-bold font-serif mb-8 flex items-center gap-3 relative z-10">
+                <BookOpen className="w-6 h-6 text-gfa-gold" />
                 {sg.standards?.title}
               </h3>
-              <div className="space-y-3">
+              <div className="space-y-4 relative z-10">
                 {standardsList.map((s: any, i: number) => (
-                  <div key={i} className="flex gap-4 p-4 bg-white/5 border border-white/10 rounded-lg">
-                    <div className="w-6 h-6 rounded-full bg-gfa-gold/20 flex-shrink-0 flex items-center justify-center text-gfa-gold text-xs font-bold">
+                  <div key={i} className="flex gap-6 p-6 bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 transition-all group">
+                    <div className="w-10 h-10 rounded-full bg-gfa-gold/20 flex-shrink-0 flex items-center justify-center text-gfa-gold text-sm font-black group-hover:bg-gfa-gold group-hover:text-black transition-colors">
                       {i + 1}
                     </div>
                     <div>
-                      <h4 className="font-bold text-white text-sm mb-1">{s.t}</h4>
-                      <p className="text-xs text-gfa-slate">{s.d}</p>
+                      <h4 className="font-bold text-white text-lg mb-2 group-hover:text-gfa-gold transition-colors">{s.t}</h4>
+                      <p className="text-sm text-gfa-slate leading-relaxed">{s.d}</p>
                     </div>
                   </div>
                 ))}
@@ -257,8 +283,9 @@ const Safeguarding: React.FC = () => {
         </div>
 
         {/* BOTTOM: Regulated Domains (Full Width) */}
-        <section className="mb-16 border-t border-white/10 pt-12">
-          <h2 className="text-2xl font-bold font-serif mb-8 text-center">{sg.categories?.title}</h2>
+        <section className="mb-16 border-t border-white/10 pt-12 relative overflow-hidden">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-gfa-gold/30 to-transparent"></div>
+          <h2 className="text-2xl font-bold font-serif mb-8 text-center text-gradient-gold">{sg.categories?.title}</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
             {[
               { ...sg.categories?.film, icon: <Users className="w-5 h-5" /> },
@@ -284,7 +311,9 @@ const Safeguarding: React.FC = () => {
         </section>
 
         {/* REPORTING CTA - Compact */}
-        <section className="bg-gradient-to-r from-gfa-gold to-yellow-600 rounded-2xl p-8 md:p-12 text-center relative overflow-hidden shadow-2xl">
+        <section className="bg-gradient-to-br from-gfa-gold via-yellow-600 to-gfa-goldDark rounded-2xl p-8 md:p-12 text-center relative overflow-hidden shadow-2xl group">
+          <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/diagonal-stripes.png')] opacity-10"></div>
+          <div className="absolute -top-24 -right-24 w-64 h-64 bg-white/20 rounded-full blur-3xl group-hover:bg-white/30 transition-colors duration-700"></div>
           <div className="relative z-10 max-w-3xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="text-left">
               <h2 className="text-2xl md:text-3xl font-black text-gfa-inkBlack mb-2 font-serif">

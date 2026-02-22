@@ -152,6 +152,45 @@ section {
     box-shadow: 0 20px 40px -15px rgba(0,0,0,0.05);
 }
 
+/* Glassmorphism */
+.glass-panel {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-panel-dark {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Gradients */
+.bg-gradient-gold {
+    background: linear-gradient(135deg, #C9A24D 0%, #B88A2A 100%);
+}
+
+.bg-gradient-dark {
+    background: linear-gradient(180deg, #0B0B0C 0%, #1a1c23 100%);
+}
+
+.text-gradient-gold {
+    background: linear-gradient(to bottom, #F3E7AD 0%, #C9A24D 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Animations */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
 /* Subtle Noise Texture */
 .bg-noise {
     position: fixed;

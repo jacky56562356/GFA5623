@@ -36,21 +36,22 @@ const Certification = () => {
            </p>
         </div>
 
-        {/* Document Header */}
-        <header className="mb-24 text-center max-w-4xl mx-auto">
-          <span className="gold-badge mb-8 bg-white/50 backdrop-blur-sm shadow-sm">{t.certification.title}</span>
-          <h1 className="text-4xl md:text-6xl font-bold font-serif text-gfa-inkBlack mb-10 leading-tight">
-            {ui.mainTitle}
-          </h1>
-          <p className="text-lg text-gfa-slate leading-loose italic opacity-80 border-y border-gfa-border py-12 font-medium">
-            {cert.intro}
-          </p>
-        </header>
+      {/* Document Header */}
+      <header className="mb-24 text-center max-w-4xl mx-auto">
+        <span className="gold-badge mb-8 bg-white/50 backdrop-blur-sm shadow-sm animate-fade-in">{t.certification.title}</span>
+        <h1 className="text-4xl md:text-6xl font-bold font-serif text-gradient-gold mb-10 leading-tight animate-fade-up">
+          {ui.mainTitle}
+        </h1>
+        <p className="text-lg text-gfa-slate leading-loose italic opacity-80 border-y border-gfa-border py-12 font-medium animate-fade-up delay-200">
+          {cert.intro}
+        </p>
+      </header>
 
-        {/* Level Grid Section */}
-        <section className="bg-white border border-gfa-border rounded-card shadow-lg p-12 md:p-20 mb-32 relative">
-          <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] opacity-30"></div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-16 relative z-10">
+      {/* Level Grid Section */}
+      <section className="bg-white border border-gfa-border rounded-card shadow-lg p-12 md:p-20 mb-32 relative overflow-hidden group">
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] opacity-30"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-gfa-gold/5 rounded-full blur-[100px] -mr-48 -mt-48 group-hover:bg-gfa-gold/10 transition-colors duration-700"></div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-16 relative z-10">
             {details.levels.map((lvl: any, i: number) => (
               <div key={i} className="group p-6 rounded-lg hover:bg-gfa-warmWhite transition-colors">
                 <div className="text-[10px] font-black text-gfa-gold mb-8 uppercase tracking-[0.4em]">{ui.levelPrefix} 0{i+1}</div>
@@ -81,12 +82,12 @@ const Certification = () => {
             </div>
           </div>
           
-          {/* Institutional Process Callout */}
-          <div className="bg-gfa-inkBlack text-white p-16 rounded-card shadow-2xl relative overflow-hidden">
-             <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/dark-leather.png')] opacity-20"></div>
-             <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 blur-3xl -mr-16 -mt-16"></div>
-             <h3 className="text-2xl font-bold font-serif mb-12 text-gfa-gold relative z-10">{ui.cycleTitle}</h3>
-             <div className="space-y-12 border-l border-white/10 pl-10 relative z-10">
+      {/* Institutional Process Callout */}
+      <div className="bg-gfa-inkBlack text-white p-16 rounded-card shadow-2xl relative overflow-hidden group">
+         <div className="absolute inset-0 bg-gradient-to-br from-gfa-gold/10 via-transparent to-blue-500/5 bg-[url('https://www.transparenttextures.com/patterns/dark-leather.png')] opacity-20"></div>
+         <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 blur-3xl -mr-16 -mt-16 group-hover:bg-gfa-gold/20 transition-colors duration-700"></div>
+         <h3 className="text-2xl font-bold font-serif mb-12 text-gradient-gold relative z-10">{ui.cycleTitle}</h3>
+         <div className="space-y-12 border-l border-white/10 pl-10 relative z-10">
                 {details.cycle.map((step: any, i: number) => (
                   <div key={i} className="relative">
                     <div className="absolute -left-[53px] top-1.5 w-6 h-6 rounded-full bg-gfa-inkBlack border-2 border-gfa-gold"></div>

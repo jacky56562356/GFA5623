@@ -31,7 +31,7 @@ const Events: React.FC = () => {
       
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-32">
           {eventsList.map(event => (
-            <div key={event.id} className="group cursor-pointer bg-white border border-gfa-border p-6 flex flex-col rounded-card shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+            <div key={event.id} className="card-standard group cursor-pointer flex flex-col">
               <div className="relative overflow-hidden aspect-video mb-8 rounded-sm">
                  <div className="absolute inset-0 bg-gfa-gold/20 opacity-0 group-hover:opacity-100 transition-opacity z-10 mix-blend-overlay"></div>
                  <img 
