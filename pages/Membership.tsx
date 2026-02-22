@@ -35,9 +35,19 @@ const Membership: React.FC = () => {
   }, [partnersList, searchTerm, selectedCategory, m.merchantBenefits]);
 
   return (
-    <div className="bg-gfa-warmWhite min-h-screen relative">
+    <div className="bg-gfa-warmWhite min-h-screen relative overflow-hidden">
+      {/* Global Background Image */}
+      <div className="fixed inset-0 z-0 opacity-15 pointer-events-none">
+        <img 
+          src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=2070&auto=format&fit=crop" 
+          alt="Film Background" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gfa-warmWhite/70"></div>
+      </div>
+
       {/* Global Cinematic Texture Overlay */}
-      <div className="fixed inset-0 pointer-events-none z-50 opacity-[0.03] mix-blend-overlay bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]"></div>
+      <div className="fixed inset-0 pointer-events-none z-50 opacity-[0.06] mix-blend-overlay bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]"></div>
       
       <SEO 
         title={m.title || "Membership"} 
@@ -49,66 +59,80 @@ const Membership: React.FC = () => {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
            <img 
-             src="https://images.unsplash.com/photo-1574267432553-4b4628081c31?q=80&w=2031&auto=format&fit=crop" 
+             src="https://images.unsplash.com/photo-1440404653325-ab127d49abc1?q=80&w=2070&auto=format&fit=crop" 
              alt="Film Premiere Red Carpet" 
-             className="w-full h-full object-cover opacity-40"
+             className="w-full h-full object-cover opacity-80"
            />
-           <div className="absolute inset-0 bg-gradient-to-b from-gfa-inkBlack/90 via-gfa-inkBlack/70 to-gfa-warmWhite"></div>
+           <div className="absolute inset-0 bg-gradient-to-b from-gfa-inkBlack/80 via-gfa-inkBlack/20 to-gfa-warmWhite/10"></div>
         </div>
 
         <div className="container-gfa relative z-10">
-          <span className="inline-block px-4 py-1.5 border border-gfa-gold/30 text-gfa-gold text-[10px] font-black uppercase tracking-[0.5em] mb-8 bg-black/40 backdrop-blur-sm rounded-full">{ui.networkBadge}</span>
-          <h1 className="text-4xl md:text-6xl font-bold font-serif text-white mb-10 leading-tight drop-shadow-2xl">
+          <span className="inline-block px-6 py-2 border-2 border-gfa-gold/50 text-gfa-gold text-[11px] font-black uppercase tracking-[0.6em] mb-10 bg-black/60 backdrop-blur-md rounded-full shadow-2xl">{ui.networkBadge}</span>
+          <h1 className="text-5xl md:text-7xl font-bold font-serif text-white mb-12 leading-tight drop-shadow-[0_10px_10px_rgba(0,0,0,0.5)]">
             {m.title}
           </h1>
-          <p className="text-lg text-white/70 leading-loose font-medium opacity-90 max-w-2xl mx-auto italic">
+          <p className="text-xl text-white/90 leading-loose font-medium max-w-3xl mx-auto italic drop-shadow-lg">
             {m.intro}
           </p>
         </div>
       </header>
       
-      <div className="container-gfa px-6 pb-32 -mt-10 relative z-20">
+      <div className="container-gfa px-6 pb-32 -mt-16 relative z-20">
         
         {/* Membership Pillars - Graduate Support & Financing */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-32">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-32">
           {(m.pillars || []).map((pillar: any, i: number) => (
-            <div key={i} className="card-standard bg-white/80 backdrop-blur-md group hover:border-gfa-gold transition-all">
-              <div className="w-14 h-14 rounded-2xl bg-gfa-gold/10 flex items-center justify-center text-2xl mb-8 group-hover:bg-gfa-gold group-hover:text-white transition-colors">
-                {pillar.icon === '🎓' ? <GraduationCap /> : pillar.icon === '🎬' ? <Film /> : <DollarSign />}
+            <div key={i} className="card-standard bg-white/95 backdrop-blur-xl group hover:border-gfa-gold transition-all overflow-hidden p-0 flex flex-col shadow-2xl border-white">
+              <div className="h-56 overflow-hidden relative">
+                <img 
+                  src={
+                    i === 0 ? "https://images.unsplash.com/photo-1523240715634-d1c651110e5a?q=80&w=2070&auto=format&fit=crop" :
+                    i === 1 ? "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=2071&auto=format&fit=crop" :
+                    "https://images.unsplash.com/photo-1454165833767-02754a40326b?q=80&w=2070&auto=format&fit=crop"
+                  } 
+                  alt={pillar.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-black/20"></div>
+                <div className="absolute bottom-6 left-8 w-14 h-14 rounded-2xl bg-gfa-gold flex items-center justify-center text-white text-2xl shadow-[0_10px_20px_rgba(201,162,77,0.4)] border-2 border-white/20">
+                  {pillar.icon === '🎓' ? <GraduationCap /> : pillar.icon === '🎬' ? <Film /> : <DollarSign />}
+                </div>
               </div>
-              <h3 className="text-xl font-bold mb-4 font-serif text-gfa-inkBlack">{pillar.title}</h3>
-              <p className="text-sm text-gfa-slate leading-relaxed opacity-80">{pillar.desc}</p>
+              <div className="p-10 pt-6 flex-grow">
+                <h3 className="text-2xl font-bold mb-4 font-serif text-gfa-inkBlack group-hover:text-gfa-gold transition-colors">{pillar.title}</h3>
+                <p className="text-base text-gfa-slate leading-relaxed opacity-90 font-medium">{pillar.desc}</p>
+              </div>
             </div>
           ))}
         </div>
 
         {/* Why Join Section */}
-        <div className="mb-32 relative py-20 px-10 rounded-card overflow-hidden">
+        <div className="mb-32 relative py-24 px-12 rounded-[40px] overflow-hidden shadow-2xl border border-white">
           {/* Background Image for this section */}
           <div className="absolute inset-0 z-0">
             <img 
               src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?q=80&w=2070&auto=format&fit=crop" 
               alt="Cinema Background" 
-              className="w-full h-full object-cover opacity-10"
+              className="w-full h-full object-cover opacity-60"
             />
-            <div className="absolute inset-0 bg-gradient-to-br from-gfa-warmWhite via-transparent to-gfa-warmWhite"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-gfa-warmWhite/70 via-transparent to-gfa-warmWhite/70"></div>
           </div>
 
           <div className="relative z-10">
-            <div className="text-center mb-16">
-              <span className="gold-badge mb-4">Value Proposition</span>
-              <h2 className="text-3xl md:text-4xl font-bold font-serif text-gfa-inkBlack mb-6">{m.whyJoin?.title}</h2>
-              <p className="text-gfa-slate max-w-2xl mx-auto opacity-70">{m.whyJoin?.subtitle}</p>
+            <div className="text-center mb-20">
+              <span className="gold-badge mb-6 shadow-lg">Value Proposition</span>
+              <h2 className="text-4xl md:text-6xl font-bold font-serif text-gfa-inkBlack mb-8 drop-shadow-sm">{m.whyJoin?.title}</h2>
+              <p className="text-xl text-gfa-slate max-w-3xl mx-auto opacity-90 font-bold leading-relaxed">{m.whyJoin?.subtitle}</p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
               {(m.whyJoin?.items || []).map((item: any, i: number) => (
-                <div key={i} className="text-center group bg-white/40 backdrop-blur-md p-8 rounded-2xl border border-white/40 hover:border-gfa-gold/30 transition-all">
-                  <div className="w-16 h-16 rounded-full bg-white shadow-lg flex items-center justify-center text-3xl mx-auto mb-8 group-hover:scale-110 transition-transform">
-                    {item.icon === '🌍' ? <Globe className="text-gfa-gold" /> : item.icon === '🛡️' ? <ShieldCheck className="text-gfa-gold" /> : <Users className="text-gfa-gold" />}
+                <div key={i} className="text-center group bg-white/80 backdrop-blur-2xl p-12 rounded-[32px] border border-white shadow-xl hover:border-gfa-gold/50 transition-all hover:-translate-y-2">
+                  <div className="w-24 h-24 rounded-full bg-white shadow-2xl flex items-center justify-center text-5xl mx-auto mb-10 group-hover:scale-110 transition-transform border-4 border-gfa-warmWhite">
+                    {item.icon === '🌍' ? <Globe className="text-gfa-gold w-12 h-12" /> : item.icon === '🛡️' ? <ShieldCheck className="text-gfa-gold w-12 h-12" /> : <Users className="text-gfa-gold w-12 h-12" />}
                   </div>
-                  <h3 className="text-xl font-bold mb-4 text-gfa-inkBlack font-serif">{item.title}</h3>
-                  <p className="text-sm text-gfa-slate leading-relaxed opacity-80">{item.desc}</p>
+                  <h3 className="text-2xl font-bold mb-6 text-gfa-inkBlack font-serif">{item.title}</h3>
+                  <p className="text-base text-gfa-slate leading-relaxed opacity-90 font-bold">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -116,53 +140,53 @@ const Membership: React.FC = () => {
         </div>
 
         {/* Talent Section */}
-        <div className="mb-32 relative py-20 px-10 rounded-card overflow-hidden">
+        <div className="mb-32 relative py-24 px-12 rounded-[40px] overflow-hidden shadow-2xl border border-white">
           {/* Background Image for this section */}
           <div className="absolute inset-0 z-0">
             <img 
               src="https://images.unsplash.com/photo-1524712245354-2c4e5e7121c0?q=80&w=1932&auto=format&fit=crop" 
               alt="Global Film Network" 
-              className="w-full h-full object-cover opacity-[0.05]"
+              className="w-full h-full object-cover opacity-60"
             />
-            <div className="absolute inset-0 bg-gradient-to-tr from-gfa-warmWhite via-transparent to-gfa-warmWhite"></div>
+            <div className="absolute inset-0 bg-gradient-to-tr from-gfa-warmWhite/70 via-transparent to-gfa-warmWhite/70"></div>
           </div>
 
           <div className="relative z-10">
-            <div className="text-center mb-16">
-              <h3 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-4">{m.talentTitle}</h3>
-              <div className="h-1 w-20 bg-gfa-gold mx-auto opacity-50 rounded-full"></div>
+            <div className="text-center mb-20">
+              <h3 className="text-3xl md:text-5xl font-bold font-serif text-gfa-inkBlack mb-6">{m.talentTitle}</h3>
+              <div className="h-2 w-32 bg-gfa-gold mx-auto opacity-80 rounded-full shadow-lg"></div>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
               {(m.talentTiers || []).map((tier: any, i: number) => (
                 <div 
                   key={i} 
-                  className={`p-8 border rounded-card transition-all flex flex-col relative group ${
+                  className={`p-12 border rounded-[32px] transition-all flex flex-col relative group ${
                     tier.recommended 
-                      ? 'border-gfa-gold bg-gradient-to-br from-white via-gfa-gold/5 to-white shadow-2xl scale-105 z-10' 
-                      : 'border-gfa-border bg-white shadow-sm hover:shadow-xl hover:-translate-y-1'
+                      ? 'border-gfa-gold bg-white shadow-[0_30px_60px_rgba(201,162,77,0.2)] scale-105 z-10' 
+                      : 'border-white bg-white/80 backdrop-blur-md shadow-xl hover:shadow-2xl hover:-translate-y-3'
                   }`}
                 >
                   {tier.recommended && (
-                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gfa-gold via-yellow-300 to-gfa-gold"></div>
+                    <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-gfa-gold via-yellow-300 to-gfa-gold rounded-t-[32px]"></div>
                   )}
                   
-                  <h4 className="text-lg font-bold uppercase tracking-tight mb-2 text-gfa-inkBlack font-serif">{tier.name}</h4>
-                  <div className="text-3xl font-black text-gfa-gold mb-4 font-serif">{tier.price}</div>
+                  <h4 className="text-2xl font-bold uppercase tracking-tight mb-3 text-gfa-inkBlack font-serif group-hover:text-gfa-gold transition-colors">{tier.name}</h4>
+                  <div className="text-5xl font-black text-gfa-gold mb-8 font-serif drop-shadow-sm">{tier.price}</div>
                   
-                  <p className="text-[11px] text-gfa-slate leading-relaxed mb-8 opacity-70 font-medium">
+                  <p className="text-sm text-gfa-slate leading-relaxed mb-10 opacity-90 font-bold">
                     {tier.desc}
                   </p>
                   
-                  <ul className="space-y-4 mb-12 flex-grow">
+                  <ul className="space-y-6 mb-12 flex-grow">
                     {(tier.perks || []).map((p: string, idx: number) => (
-                      <li key={idx} className="text-[11px] text-gfa-slate uppercase font-bold tracking-wide flex items-start gap-3">
-                        <span className="text-gfa-gold text-sm">✓</span> {p}
+                      <li key={idx} className="text-xs text-gfa-slate uppercase font-black tracking-widest flex items-start gap-4">
+                        <span className="text-gfa-gold text-xl">✓</span> {p}
                       </li>
                     ))}
                   </ul>
                   
-                  <button className={`w-full py-4 text-[11px] font-black uppercase tracking-widest rounded-btn transition-all ${tier.recommended ? 'bg-gfa-gold text-gfa-black shadow-lg hover:brightness-105' : 'border border-gfa-border text-gfa-slate hover:border-gfa-gold hover:text-gfa-gold hover:bg-gfa-gold/5'}`}>
+                  <button className={`w-full py-6 text-xs font-black uppercase tracking-[0.3em] rounded-full transition-all shadow-xl ${tier.recommended ? 'bg-gfa-gold text-gfa-black hover:brightness-110 hover:scale-105' : 'border-2 border-gfa-gold text-gfa-gold hover:bg-gfa-gold hover:text-white'}`}>
                     {ui.select?.replace('{tier}', tier.name)}
                   </button>
                 </div>
@@ -172,33 +196,34 @@ const Membership: React.FC = () => {
         </div>
 
         {/* Process Section */}
-        <div className="mb-32 bg-white p-12 md:p-20 rounded-card border border-gfa-border shadow-sm relative overflow-hidden">
+        <div className="mb-32 bg-white/95 backdrop-blur-2xl p-20 md:p-32 rounded-[40px] border border-white shadow-2xl relative overflow-hidden group">
           {/* Background Image for this section */}
-          <div className="absolute inset-0 z-0 opacity-[0.03]">
+          <div className="absolute inset-0 z-0 opacity-50 group-hover:scale-105 transition-transform duration-1000">
              <img 
                src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=2025&auto=format&fit=crop" 
                alt="Film Reel" 
                className="w-full h-full object-cover"
              />
+             <div className="absolute inset-0 bg-gradient-to-r from-white via-transparent to-white"></div>
           </div>
 
           <div className="relative z-10">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold font-serif text-gfa-inkBlack mb-4">{m.process?.title}</h2>
-              <p className="text-gfa-slate opacity-70">{m.process?.subtitle}</p>
+            <div className="text-center mb-24">
+              <h2 className="text-4xl md:text-6xl font-bold font-serif text-gfa-inkBlack mb-8">{m.process?.title}</h2>
+              <p className="text-gfa-slate opacity-90 font-bold text-xl max-w-3xl mx-auto leading-relaxed">{m.process?.subtitle}</p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-20 relative">
               {/* Connecting Line */}
-              <div className="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-gfa-border z-0"></div>
+              <div className="hidden md:block absolute top-20 left-0 w-full h-2 bg-gfa-gold/10 z-0 rounded-full"></div>
               
               {(m.process?.steps || []).map((step: any, i: number) => (
-                <div key={i} className="relative z-10 text-center">
-                  <div className="w-24 h-24 rounded-full bg-gfa-warmWhite border-4 border-white shadow-xl flex items-center justify-center text-2xl font-black text-gfa-gold mx-auto mb-8">
+                <div key={i} className="relative z-10 text-center group/step">
+                  <div className="w-40 h-40 rounded-full bg-white border-[12px] border-gfa-warmWhite shadow-2xl flex items-center justify-center text-5xl font-black text-gfa-gold mx-auto mb-12 group-hover/step:scale-110 transition-transform group-hover/step:border-gfa-gold/20">
                     0{i + 1}
                   </div>
-                  <h3 className="text-xl font-bold mb-4 text-gfa-inkBlack font-serif">{step.title}</h3>
-                  <p className="text-sm text-gfa-slate leading-relaxed opacity-80">{step.desc}</p>
+                  <h3 className="text-3xl font-bold mb-6 text-gfa-inkBlack font-serif group-hover/step:text-gfa-gold transition-colors">{step.title}</h3>
+                  <p className="text-base text-gfa-slate leading-relaxed opacity-90 font-bold">{step.desc}</p>
                 </div>
               ))}
             </div>
@@ -206,40 +231,40 @@ const Membership: React.FC = () => {
         </div>
 
         {/* Merchant Benefits Section */}
-        <div className="mb-32 relative py-20 px-10 rounded-card overflow-hidden">
+        <div className="mb-32 relative py-24 px-12 rounded-[40px] overflow-hidden shadow-2xl border border-white">
           {/* Background Image for this section */}
           <div className="absolute inset-0 z-0">
             <img 
               src="https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=2059&auto=format&fit=crop" 
               alt="Film Production" 
-              className="w-full h-full object-cover opacity-[0.05]"
+              className="w-full h-full object-cover opacity-60"
             />
-            <div className="absolute inset-0 bg-gradient-to-tr from-gfa-warmWhite via-transparent to-gfa-warmWhite"></div>
+            <div className="absolute inset-0 bg-gradient-to-tr from-gfa-warmWhite/70 via-transparent to-gfa-warmWhite/70"></div>
           </div>
 
           <div className="relative z-10">
-            <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-8">
-              <div className="max-w-xl">
-                <span className="gold-badge mb-4">{ui.benefitsTitle}</span>
-                <h3 className="text-3xl font-bold font-serif text-gfa-inkBlack mb-4">{m.merchantBenefits?.title}</h3>
-                <p className="text-gfa-slate opacity-70">{m.merchantBenefits?.subtitle}</p>
+            <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-10">
+              <div className="max-w-2xl">
+                <span className="gold-badge mb-8 shadow-lg">Exclusive Perks</span>
+                <h3 className="text-4xl md:text-6xl font-bold font-serif text-gfa-inkBlack mb-8 leading-tight">{m.merchantBenefits?.title}</h3>
+                <p className="text-xl text-gfa-slate opacity-90 font-bold leading-relaxed">{m.merchantBenefits?.subtitle}</p>
               </div>
               
-              <div className="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
+              <div className="flex flex-col sm:flex-row gap-8 w-full md:w-auto">
                 <div className="relative">
-                  <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gfa-slate opacity-40" />
+                  <Search className="absolute left-6 top-1/2 -translate-y-1/2 w-6 h-6 text-gfa-slate opacity-70" />
                   <input 
                     type="text"
                     placeholder={ui.searchPlaceholder}
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="pl-12 pr-6 py-3 bg-white border border-gfa-border rounded-full text-sm focus:outline-none focus:border-gfa-gold w-full sm:w-64"
+                    className="pl-16 pr-10 py-5 bg-white border-2 border-white rounded-full text-base font-bold focus:outline-none focus:border-gfa-gold w-full sm:w-96 shadow-2xl"
                   />
                 </div>
                 <select 
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="px-6 py-3 bg-white border border-gfa-border rounded-full text-sm focus:outline-none focus:border-gfa-gold"
+                  className="px-10 py-5 bg-white border-2 border-white rounded-full text-base font-black focus:outline-none focus:border-gfa-gold shadow-2xl appearance-none cursor-pointer"
                 >
                   {(m.merchantBenefits?.categories || []).map((cat: string) => (
                     <option key={cat} value={cat}>{cat}</option>
@@ -248,22 +273,22 @@ const Membership: React.FC = () => {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
               {filteredMerchants.map((merchant: any) => (
-                <div key={merchant.id} className="bg-white/80 backdrop-blur-sm p-6 rounded-xl border border-gfa-border hover:border-gfa-gold/50 transition-all group flex items-center gap-6 shadow-sm hover:shadow-md">
-                  <div className="w-16 h-16 rounded-xl bg-gfa-warmWhite flex items-center justify-center border border-gfa-border group-hover:border-gfa-gold/20 transition-colors shrink-0">
-                    <img src={merchant.logo} alt={merchant.name} className="w-10 h-10 object-cover grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all" />
+                <div key={merchant.id} className="bg-white/90 backdrop-blur-xl p-10 rounded-[32px] border border-white hover:border-gfa-gold transition-all group flex items-center gap-10 shadow-2xl hover:-translate-y-2">
+                  <div className="w-24 h-24 rounded-3xl bg-gfa-warmWhite flex items-center justify-center border-2 border-gfa-border group-hover:border-gfa-gold/50 transition-colors shrink-0 overflow-hidden shadow-inner">
+                    <img src={merchant.logo} alt={merchant.name} className="w-14 h-14 object-cover grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500" />
                   </div>
                   <div className="flex-grow">
-                    <div className="text-[10px] font-black text-gfa-gold uppercase tracking-widest mb-1">{merchant.category}</div>
-                    <h4 className="font-bold text-gfa-inkBlack mb-1">{merchant.name}</h4>
-                    <p className="text-xs text-gfa-slate font-bold">{merchant.benefit}</p>
+                    <div className="text-[11px] font-black text-gfa-gold uppercase tracking-[0.3em] mb-3">{merchant.category}</div>
+                    <h4 className="font-bold text-gfa-inkBlack text-xl mb-2">{merchant.name}</h4>
+                    <p className="text-base text-gfa-gold font-black drop-shadow-sm">{merchant.benefit}</p>
                   </div>
-                  <ChevronRight className="w-5 h-5 text-gfa-border group-hover:text-gfa-gold transition-colors" />
+                  <ChevronRight className="w-8 h-8 text-gfa-border group-hover:text-gfa-gold transition-colors" />
                 </div>
               ))}
               {filteredMerchants.length === 0 && (
-                <div className="col-span-full py-20 text-center text-gfa-slate italic opacity-50">
+                <div className="col-span-full py-40 text-center text-gfa-slate italic opacity-70 text-2xl font-black">
                   No benefits found matching your criteria.
                 </div>
               )}
@@ -272,34 +297,35 @@ const Membership: React.FC = () => {
         </div>
 
         {/* Organization Section */}
-        <div className="mb-32 bg-gfa-inkBlack text-white p-12 md:p-20 rounded-card shadow-2xl relative overflow-hidden">
+        <div className="mb-32 bg-gfa-inkBlack text-white p-20 md:p-32 rounded-[40px] shadow-[0_50px_100px_rgba(0,0,0,0.3)] relative overflow-hidden group">
           {/* Subtle Abstract Background */}
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=2071&auto=format&fit=crop')] bg-cover bg-center opacity-10 mix-blend-overlay"></div>
-          <div className="absolute top-0 right-0 w-64 h-64 bg-gfa-gold/10 blur-3xl rounded-full"></div>
+          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=2071&auto=format&fit=crop')] bg-cover bg-center opacity-60 mix-blend-overlay group-hover:scale-110 transition-transform duration-[2000ms]"></div>
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gfa-gold/20 blur-[150px] rounded-full"></div>
+          <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gfa-gold/10 blur-[150px] rounded-full"></div>
           
-          <div className="text-center mb-16 relative z-10">
-            <h3 className="text-2xl font-bold font-serif text-white mb-4">{m.orgTitle}</h3>
-            <p className="text-white/60 text-sm font-medium uppercase tracking-widest">{ui.orgSubtitle}</p>
+          <div className="text-center mb-24 relative z-10">
+            <h3 className="text-4xl md:text-7xl font-bold font-serif text-white mb-8 drop-shadow-2xl">{m.orgTitle}</h3>
+            <p className="text-gfa-gold text-base font-black uppercase tracking-[0.5em] drop-shadow-lg">{ui.orgSubtitle}</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-7xl mx-auto relative z-10">
             {(m.orgTiers || []).map((tier: any, i: number) => (
-              <div key={i} className="p-10 border border-white/10 bg-white/5 flex flex-col text-center rounded-sm hover:border-gfa-gold/30 transition-all hover:bg-white/10 backdrop-blur-sm group">
-                <h4 className="text-xl font-bold uppercase tracking-tight mb-2 font-serif text-white group-hover:text-gfa-gold transition-colors">{tier.name}</h4>
-                <div className="text-4xl font-black text-gfa-gold mb-4 font-serif">{tier.price}</div>
+              <div key={i} className="p-16 border border-white/10 bg-white/5 flex flex-col text-center rounded-[40px] hover:border-gfa-gold/70 transition-all hover:bg-white/10 backdrop-blur-2xl group/card shadow-2xl hover:-translate-y-4 duration-500">
+                <h4 className="text-3xl font-bold uppercase tracking-tight mb-4 font-serif text-white group-hover/card:text-gfa-gold transition-colors">{tier.name}</h4>
+                <div className="text-6xl font-black text-gfa-gold mb-10 font-serif drop-shadow-lg">{tier.price}</div>
                 
-                <p className="text-[11px] text-white/50 leading-relaxed mb-8 font-medium">
+                <p className="text-sm text-white/70 leading-relaxed mb-12 font-bold italic">
                   {tier.desc}
                 </p>
                 
-                <ul className="space-y-4 mb-12 flex-grow text-left">
+                <ul className="space-y-6 mb-16 flex-grow text-left">
                   {(tier.perks || []).map((p: string, idx: number) => (
-                    <li key={idx} className="text-xs text-white/60 font-medium flex items-start gap-4">
-                      <span className="text-gfa-gold mt-0.5">✦</span> {p}
+                    <li key={idx} className="text-sm text-white/90 font-black flex items-start gap-5">
+                      <span className="text-gfa-gold mt-0.5 text-2xl">✦</span> {p}
                     </li>
                   ))}
                 </ul>
-                <button className="w-full py-5 text-[10px] font-black uppercase tracking-widest border border-gfa-gold/50 text-gfa-gold hover:bg-gfa-gold hover:text-gfa-black transition-all rounded-sm">
+                <button className="w-full py-7 text-xs font-black uppercase tracking-[0.4em] border-2 border-gfa-gold/50 text-gfa-gold hover:bg-gfa-gold hover:text-gfa-black transition-all rounded-full shadow-[0_15px_30px_rgba(201,162,77,0.3)] hover:scale-105">
                   {ui.joinAs?.replace('{tier}', tier.name)}
                 </button>
               </div>
@@ -308,34 +334,37 @@ const Membership: React.FC = () => {
         </div>
 
         {/* FAQ Section */}
-        <div className="mb-32 max-w-3xl mx-auto relative py-20">
+        <div className="mb-32 max-w-5xl mx-auto relative py-32 px-12 rounded-[40px] overflow-hidden shadow-2xl border border-white">
           {/* Background Image for this section */}
-          <div className="absolute inset-0 z-0 opacity-[0.02] pointer-events-none">
+          <div className="absolute inset-0 z-0 opacity-60 pointer-events-none">
              <img 
                src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=2070&auto=format&fit=crop" 
                alt="Cinema Hall" 
                className="w-full h-full object-cover"
              />
+             <div className="absolute inset-0 bg-gradient-to-b from-gfa-warmWhite/90 via-transparent to-gfa-warmWhite/90"></div>
           </div>
 
           <div className="relative z-10">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold font-serif text-gfa-inkBlack mb-4">{m.faq?.title}</h2>
-              <div className="h-1 w-20 bg-gfa-gold mx-auto opacity-50 rounded-full"></div>
+            <div className="text-center mb-24">
+              <h2 className="text-4xl md:text-7xl font-bold font-serif text-gfa-inkBlack mb-8">{m.faq?.title}</h2>
+              <div className="h-2 w-32 bg-gfa-gold mx-auto opacity-80 rounded-full shadow-lg"></div>
             </div>
             
-            <div className="space-y-4">
+            <div className="space-y-8">
               {(m.faq?.items || []).map((item: any, i: number) => (
-                <div key={i} className="bg-white/90 backdrop-blur-sm border border-gfa-border rounded-xl overflow-hidden shadow-sm">
+                <div key={i} className="bg-white/95 backdrop-blur-2xl border border-white rounded-[32px] overflow-hidden shadow-2xl">
                   <button 
                     onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                    className="w-full px-8 py-6 flex justify-between items-center text-left hover:bg-gfa-warmWhite transition-colors"
+                    className="w-full px-12 py-10 flex justify-between items-center text-left hover:bg-gfa-warmWhite/50 transition-colors"
                   >
-                    <span className="font-bold text-gfa-inkBlack font-serif">{item.q}</span>
-                    {openFaq === i ? <Minus className="w-5 h-5 text-gfa-gold" /> : <Plus className="w-5 h-5 text-gfa-gold" />}
+                    <span className="text-2xl font-bold text-gfa-inkBlack font-serif">{item.q}</span>
+                    <div className={`w-14 h-14 rounded-full flex items-center justify-center transition-all shadow-lg ${openFaq === i ? 'bg-gfa-gold text-white rotate-180' : 'bg-gfa-warmWhite text-gfa-gold'}`}>
+                      {openFaq === i ? <Minus className="w-8 h-8" /> : <Plus className="w-8 h-8" />}
+                    </div>
                   </button>
                   {openFaq === i && (
-                    <div className="px-8 pb-8 text-sm text-gfa-slate leading-relaxed opacity-80 animate-in fade-in slide-in-from-top-2 duration-300">
+                    <div className="px-12 pb-12 text-lg text-gfa-slate leading-relaxed font-bold opacity-90 animate-in fade-in slide-in-from-top-6 duration-700">
                       {item.a}
                     </div>
                   )}
