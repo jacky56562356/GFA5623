@@ -2,6 +2,7 @@
 import React from 'react';
 import { useLocale } from '../LocaleContext.tsx';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO.tsx';
 
 const Certification = () => {
   const { t } = useLocale();
@@ -16,6 +17,11 @@ const Certification = () => {
 
   return (
     <div className="bg-gfa-warmWhite pt-48 pb-32 px-6 min-h-screen relative overflow-hidden">
+      <SEO 
+        title={cert.title || "Certification Standards"} 
+        description={cert.intro || "The GFA provides an objective framework for industry entities to signal their commitment to professional standards."} 
+      />
+
       {/* Background Texture */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gfa-gold/5 rounded-full blur-[150px] -mr-32 -mt-32 pointer-events-none"></div>
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gfa-inkBlack/5 rounded-full blur-[100px] -ml-20 -mb-20 pointer-events-none"></div>

@@ -1,6 +1,8 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useLocale } from '../LocaleContext.tsx';
+import SEO from '../components/SEO.tsx';
 
 const Governance: React.FC = () => {
   const { t } = useLocale();
@@ -8,6 +10,11 @@ const Governance: React.FC = () => {
 
   return (
     <div className="bg-gfa-warmWhite pt-40 pb-32 px-6 min-h-screen">
+      <SEO 
+        title={gov.title || "Governance Charter"} 
+        description={gov.subtitle || "Guided by a multi-national board dedicated to cinematic ethics."} 
+      />
+
       <div className="container-gfa">
         {/* Header */}
         <header className="mb-24 text-center max-w-4xl mx-auto">

@@ -1,5 +1,5 @@
 
-import { RegistryOrg } from './types';
+import { RegistryOrg } from './types.ts';
 
 export const MOCK_REGISTRY: RegistryOrg[] = [
   {

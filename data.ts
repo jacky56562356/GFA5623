@@ -1,5 +1,5 @@
 
-import { Merchant, GFAEvent, SupportProgram } from './types';
+import { Merchant, GFAEvent, SupportProgram } from './types.ts';
 
 export const PARTNERS_DATA: Merchant[] = [
   { id: 'p1', name: 'Elite Legal Group', category: 'Legal', country: 'USA', state: 'California', city: 'Los Angeles', address: 'Wilshire Blvd', benefit: '20% off contract review', eligibility: 'Pro Members', logo: 'https://picsum.photos/seed/legal/100' },

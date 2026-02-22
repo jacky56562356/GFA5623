@@ -26,7 +26,7 @@ const Transparency: React.FC = () => {
           <table className="w-full text-left border-collapse bg-gfa-darkGray">
             <thead>
               <tr className="bg-gfa-gold text-gfa-black font-black uppercase text-[10px] tracking-widest">
-                {tr.tableHeaders.map((header, i) => (
+                {tr.tableHeaders.map((header: string, i: number) => (
                   <th key={i} className="p-6 border-r border-gfa-black/10">{header}</th>
                 ))}
               </tr>
@@ -50,7 +50,7 @@ const Transparency: React.FC = () => {
         <div className="bg-gfa-darkGray p-12 border border-white/5">
           <h4 className="text-sm font-black uppercase tracking-widest text-gfa-gold mb-8 border-b border-gfa-gold/30 pb-4">{tr.rulesTitle}</h4>
           <ul className="space-y-6 text-xs text-gfa-gray font-bold uppercase tracking-wider">
-            {tr.rules.map((rule, i) => (
+            {tr.rules.map((rule: string, i: number) => (
               <li key={i} className="flex gap-4"><span>0{i+1}</span> {rule}</li>
             ))}
           </ul>
@@ -58,7 +58,7 @@ const Transparency: React.FC = () => {
         <div className="bg-gfa-darkGray p-12 border border-white/5">
           <h4 className="text-sm font-black uppercase tracking-widest text-gfa-gold mb-8 border-b border-gfa-gold/30 pb-4">{tr.protectionTitle}</h4>
           <ul className="space-y-6 text-xs text-gfa-gray font-bold uppercase tracking-wider">
-            {tr.protectionRules.map((pRule, i) => (
+            {tr.protectionRules.map((pRule: string, i: number) => (
               <li key={i} className="flex gap-4"><span>🛡️</span> {pRule}</li>
             ))}
           </ul>
@@ -68,7 +68,7 @@ const Transparency: React.FC = () => {
       <div className="p-12 bg-red-500/5 border border-red-500/20 text-center">
         <h4 className="text-xl font-black text-red-500 uppercase tracking-widest mb-6">{tr.enforcementTitle}</h4>
         <div className="flex flex-wrap justify-center gap-8">
-          {tr.enforcementItems.map(v => (
+          {tr.enforcementItems.map((v: string) => (
             <div key={v} className="text-[10px] font-black uppercase tracking-[0.2em] text-red-400 opacity-60">
               • {v}
             </div>

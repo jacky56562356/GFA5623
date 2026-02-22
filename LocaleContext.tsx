@@ -1,5 +1,5 @@
 
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState, useMemo } from 'react';
 import { Locale } from './types.ts';
 import { DICTIONARIES } from './i18n.ts';
 
@@ -13,8 +13,12 @@ const LocaleContext = createContext<LocaleContextType | undefined>(undefined);
 
 export const LocaleProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [locale, setLocale] = useState<Locale>(Locale.EN);
-  // Safely fallback to EN if locale is missing in DICTIONARIES
-  const t = DICTIONARIES[locale] || DICTIONARIES[Locale.EN] || {};
+  
+  const t = useMemo(() => {
+    // Default to EN if specific locale is missing, fallback to empty object if EVERYTHING is missing (prevents crash)
+    const dict = DICTIONARIES[locale] || DICTIONARIES[Locale.EN] || {};
+    return dict;
+  }, [locale]);
 
   return (
     <LocaleContext.Provider value={{ locale, setLocale, t }}>

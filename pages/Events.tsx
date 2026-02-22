@@ -2,6 +2,7 @@
 import React from 'react';
 import { useLocale } from '../LocaleContext.tsx';
 import { GFAEvent } from '../types.ts';
+import SEO from '../components/SEO.tsx';
 
 const Events: React.FC = () => {
   const { t } = useLocale();
@@ -9,6 +10,11 @@ const Events: React.FC = () => {
 
   return (
     <div className="bg-gfa-warmWhite pt-48 pb-32 px-6 min-h-screen relative">
+      <SEO 
+        title={t.events.title || "Industry Events"} 
+        description={t.events.intro || "Explore upcoming film industry events, competitions, screenings, and workshops endorsed by GFA."} 
+      />
+
       {/* Background Lights */}
       <div className="absolute top-0 left-0 w-full h-[600px] bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-gfa-inkBlack/5 to-transparent pointer-events-none"></div>
       

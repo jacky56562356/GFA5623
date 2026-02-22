@@ -1,6 +1,7 @@
+
 import React, { Dispatch, SetStateAction } from "react";
 import { useLocale } from "../../LocaleContext.tsx";
-import { RegistryQuery, OrgCategory } from "../../lib/registry/types";
+import { RegistryQuery, OrgCategory } from "../../lib/registry/types.ts";
 
 type Options = {
   countries: string[];

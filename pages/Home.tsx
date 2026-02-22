@@ -2,24 +2,32 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useLocale } from '../LocaleContext.tsx';
+import SEO from '../components/SEO.tsx';
 
 const Home = () => {
   const { t } = useLocale();
   const navigate = useNavigate();
-  const home = t.home;
-  const hero = home.hero;
-  const what = home.whatWeDo;
-  const searchReg = home.searchRegistry;
-  const global = home.globalPresence;
-  const safe = home.safeguardingSection;
-  const charter = home.charter;
-  const trust = home.trust;
-
+  
+  // Robustly access nested properties to prevent crashes
+  const home = t.home || {};
+  const hero = home.hero || {};
+  const what = home.whatWeDo || {};
+  const searchReg = home.searchRegistry || {};
+  const global = home.globalPresence || {};
+  const safe = home.safeguardingSection || {};
+  const charter = home.charter || {};
+  const trust = home.trust || {};
+  
   // Helper for search UI translations
-  const s = searchReg.ui;
+  const s = searchReg.ui || {};
 
   return (
     <div className="bg-gfa-warmWhite min-h-screen overflow-x-hidden font-sans">
+      <SEO 
+        title={hero.title || "Global Film Alliance"} 
+        description={hero.body || "The Global Film Alliance (GFA) provides voluntary industry standards, youth safeguarding guidelines, and professional support networks."} 
+      />
+
       {/* Hero Section - Cinematic Background */}
       <section 
         className="relative min-h-[850px] flex items-center pt-[72px] overflow-hidden"
@@ -28,7 +36,10 @@ const Home = () => {
         {/* Background Image with heavy overlay */}
         <div className="absolute inset-0 z-0">
             <img 
-              src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=2071&auto=format&fit=crop" 
+              src="/images/hero-bg.png" 
+              onError={(e) => {
+                e.currentTarget.src = "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=2071&auto=format&fit=crop";
+              }}
               alt="Film Set Background" 
               className="w-full h-full object-cover"
             />
@@ -65,7 +76,7 @@ const Home = () => {
             <Link to="/membership" className="btn-primary shadow-[0_0_40px_rgba(201,162,77,0.4)] hover:shadow-[0_0_60px_rgba(201,162,77,0.6)] hover:scale-105 transition-all" aria-label="Learn how to become a member">
               {hero.ctaPrimary}
             </Link>
-            <Link to="/career-access" className="btn-secondary-white backdrop-blur-md hover:bg-white/10" aria-label="View our professional programs">
+            <Link to="/career-access" className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-3 rounded-xl font-bold hover:bg-white/20 transition-all flex items-center justify-center" aria-label="View our professional programs">
               {hero.ctaSecondary}
             </Link>
           </div>
@@ -74,7 +85,7 @@ const Home = () => {
           <div className="inline-flex items-center gap-3 opacity-60 hover:opacity-100 transition-opacity bg-black/20 px-4 py-2 rounded-full backdrop-blur-sm">
             <span className="w-1.5 h-1.5 bg-red-500 rounded-full animate-pulse"></span>
             <p className="text-[10px] text-white uppercase tracking-widest font-bold">
-              {t.disclaimer.heroWarning}
+              {t.disclaimer?.heroWarning}
             </p>
           </div>
         </div>
@@ -105,9 +116,9 @@ const Home = () => {
             <div className="max-w-6xl mx-auto relative z-10">
               {/* Tab Switcher */}
               <div className="flex justify-center mb-6 border-b border-gfa-border overflow-x-auto">
-                 <button className="px-6 py-3 text-[12px] font-bold uppercase tracking-widest text-gfa-inkBlack border-b-2 border-gfa-gold transition-colors whitespace-nowrap bg-gradient-to-t from-gfa-gold/10 to-transparent">{s.tabs.org}</button>
-                 <button className="px-6 py-3 text-[12px] font-bold uppercase tracking-widest text-gfa-slate hover:text-gfa-inkBlack border-b-2 border-transparent hover:border-gfa-border transition-colors whitespace-nowrap">{s.tabs.bond}</button>
-                 <button className="px-6 py-3 text-[12px] font-bold uppercase tracking-widest text-gfa-slate hover:text-gfa-inkBlack border-b-2 border-transparent hover:border-gfa-border transition-colors whitespace-nowrap">{s.tabs.project}</button>
+                 <button className="px-6 py-3 text-[12px] font-bold uppercase tracking-widest text-gfa-inkBlack border-b-2 border-gfa-gold transition-colors whitespace-nowrap bg-gradient-to-t from-gfa-gold/10 to-transparent">{s.tabs?.org}</button>
+                 <button className="px-6 py-3 text-[12px] font-bold uppercase tracking-widest text-gfa-slate hover:text-gfa-inkBlack border-b-2 border-transparent hover:border-gfa-border transition-colors whitespace-nowrap">{s.tabs?.bond}</button>
+                 <button className="px-6 py-3 text-[12px] font-bold uppercase tracking-widest text-gfa-slate hover:text-gfa-inkBlack border-b-2 border-transparent hover:border-gfa-border transition-colors whitespace-nowrap">{s.tabs?.project}</button>
               </div>
 
               <div className="bg-gfa-warmWhite p-8 border border-gfa-border rounded-xl shadow-inner relative">
@@ -116,57 +127,57 @@ const Home = () => {
                   
                   {/* Row 1 */}
                   <div className="md:col-span-4">
-                     <label className="text-[10px] font-bold uppercase tracking-widest text-gfa-slate mb-1 ml-1 block">{s.labels.name}</label>
+                     <label className="text-[10px] font-bold uppercase tracking-widest text-gfa-slate mb-1 ml-1 block">{s.labels?.name}</label>
                      <div className="relative group">
                         <div className="absolute inset-y-0 left-3 flex items-center pointer-events-none">
                             <svg className="w-4 h-4 text-gfa-slate/50 group-focus-within:text-gfa-gold transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
                         </div>
                         <input 
                           type="text" 
-                          placeholder={s.placeholders.name}
+                          placeholder={s.placeholders?.name}
                           className="w-full h-12 bg-white border border-gfa-border rounded-md pl-10 pr-4 text-xs focus:outline-none focus:border-gfa-gold text-gfa-inkBlack placeholder-gfa-slate/40 font-medium transition-all shadow-sm focus:shadow-md"
                         />
                      </div>
                   </div>
 
                   <div className="md:col-span-2">
-                     <label className="text-[10px] font-bold uppercase tracking-widest text-gfa-slate mb-1 ml-1 block">{s.labels.category}</label>
+                     <label className="text-[10px] font-bold uppercase tracking-widest text-gfa-slate mb-1 ml-1 block">{s.labels?.category}</label>
                      <div className="relative">
                         <select className="w-full h-12 bg-white border border-gfa-border rounded-md px-3 text-xs focus:outline-none focus:border-gfa-gold text-gfa-inkBlack font-medium appearance-none cursor-pointer shadow-sm focus:shadow-md">
-                          <option value="">{s.options.allTypes}</option>
-                          <option value="agency">{s.options.agency}</option>
-                          <option value="production">{s.options.production}</option>
-                          <option value="school">{s.options.school}</option>
-                          <option value="casting">{s.options.casting}</option>
+                          <option value="">{s.options?.allTypes}</option>
+                          <option value="agency">{s.options?.agency}</option>
+                          <option value="production">{s.options?.production}</option>
+                          <option value="school">{s.options?.school}</option>
+                          <option value="casting">{s.options?.casting}</option>
                         </select>
                         <div className="absolute inset-y-0 right-3 flex items-center pointer-events-none text-gfa-slate/50 text-[8px]">▼</div>
                      </div>
                   </div>
 
                   <div className="md:col-span-3">
-                     <label className="text-[10px] font-bold uppercase tracking-widest text-gfa-slate mb-1 ml-1 block">{s.labels.phone}</label>
+                     <label className="text-[10px] font-bold uppercase tracking-widest text-gfa-slate mb-1 ml-1 block">{s.labels?.phone}</label>
                      <input 
                        type="text" 
-                       placeholder={s.placeholders.phone}
+                       placeholder={s.placeholders?.phone}
                        className="w-full h-12 bg-white border border-gfa-border rounded-md px-3 text-xs focus:outline-none focus:border-gfa-gold text-gfa-inkBlack placeholder-gfa-slate/40 font-medium transition-all shadow-sm focus:shadow-md"
                      />
                   </div>
 
                   <div className="md:col-span-3">
-                     <label className="text-[10px] font-bold uppercase tracking-widest text-gfa-slate mb-1 ml-1 block">{s.labels.license}</label>
+                     <label className="text-[10px] font-bold uppercase tracking-widest text-gfa-slate mb-1 ml-1 block">{s.labels?.license}</label>
                      <input 
                        type="text" 
-                       placeholder={s.placeholders.license}
+                       placeholder={s.placeholders?.license}
                        className="w-full h-12 bg-white border border-gfa-border rounded-md px-3 text-xs focus:outline-none focus:border-gfa-gold text-gfa-inkBlack placeholder-gfa-slate/40 font-medium transition-all shadow-sm focus:shadow-md"
                      />
                   </div>
 
                   {/* Row 2 */}
                   <div className="md:col-span-2">
-                     <label className="text-[10px] font-bold uppercase tracking-widest text-gfa-slate mb-1 ml-1 block">{s.labels.country}</label>
+                     <label className="text-[10px] font-bold uppercase tracking-widest text-gfa-slate mb-1 ml-1 block">{s.labels?.country}</label>
                      <div className="relative">
                         <select className="w-full h-12 bg-white border border-gfa-border rounded-md px-3 text-xs focus:outline-none focus:border-gfa-gold text-gfa-inkBlack font-medium appearance-none cursor-pointer shadow-sm focus:shadow-md">
-                          <option value="">{s.options.global}</option>
+                          <option value="">{s.options?.global}</option>
                           <option value="usa">USA</option>
                           <option value="uk">UK</option>
                           <option value="cn">China</option>
@@ -177,28 +188,28 @@ const Home = () => {
                   </div>
 
                   <div className="md:col-span-2">
-                     <label className="text-[10px] font-bold uppercase tracking-widest text-gfa-slate mb-1 ml-1 block">{s.labels.state}</label>
+                     <label className="text-[10px] font-bold uppercase tracking-widest text-gfa-slate mb-1 ml-1 block">{s.labels?.state}</label>
                      <input 
                        type="text" 
-                       placeholder={s.placeholders.state}
+                       placeholder={s.placeholders?.state}
                        className="w-full h-12 bg-white border border-gfa-border rounded-md px-3 text-xs focus:outline-none focus:border-gfa-gold text-gfa-inkBlack placeholder-gfa-slate/40 font-medium transition-all shadow-sm focus:shadow-md"
                      />
                   </div>
 
                   <div className="md:col-span-2">
-                     <label className="text-[10px] font-bold uppercase tracking-widest text-gfa-slate mb-1 ml-1 block">{s.labels.city}</label>
+                     <label className="text-[10px] font-bold uppercase tracking-widest text-gfa-slate mb-1 ml-1 block">{s.labels?.city}</label>
                      <input 
                        type="text" 
-                       placeholder={s.placeholders.city}
+                       placeholder={s.placeholders?.city}
                        className="w-full h-12 bg-white border border-gfa-border rounded-md px-3 text-xs focus:outline-none focus:border-gfa-gold text-gfa-inkBlack placeholder-gfa-slate/40 font-medium transition-all shadow-sm focus:shadow-md"
                      />
                   </div>
 
                   <div className="md:col-span-4">
-                     <label className="text-[10px] font-bold uppercase tracking-widest text-gfa-slate mb-1 ml-1 block">{s.labels.address}</label>
+                     <label className="text-[10px] font-bold uppercase tracking-widest text-gfa-slate mb-1 ml-1 block">{s.labels?.address}</label>
                      <input 
                        type="text" 
-                       placeholder={s.placeholders.address}
+                       placeholder={s.placeholders?.address}
                        className="w-full h-12 bg-white border border-gfa-border rounded-md px-3 text-xs focus:outline-none focus:border-gfa-gold text-gfa-inkBlack placeholder-gfa-slate/40 font-medium transition-all shadow-sm focus:shadow-md"
                      />
                   </div>
@@ -219,24 +230,24 @@ const Home = () => {
                  <div className="flex gap-6">
                     <label className="flex items-center gap-2 cursor-pointer hover:text-gfa-inkBlack transition-colors">
                       <input type="checkbox" className="w-3 h-3 accent-gfa-gold rounded-sm" defaultChecked />
-                      <span>{s.filters.verified}</span>
+                      <span>{s.filters?.verified}</span>
                     </label>
                     <label className="flex items-center gap-2 cursor-pointer hover:text-gfa-inkBlack transition-colors">
                       <input type="checkbox" className="w-3 h-3 accent-gfa-gold rounded-sm" />
-                      <span>{s.filters.bonded}</span>
+                      <span>{s.filters?.bonded}</span>
                     </label>
                     <label className="flex items-center gap-2 cursor-pointer hover:text-gfa-inkBlack transition-colors">
                       <input type="checkbox" className="w-3 h-3 accent-gfa-gold rounded-sm" />
-                      <span>{s.filters.affiliates}</span>
+                      <span>{s.filters?.affiliates}</span>
                     </label>
                  </div>
                  <div className="flex gap-4 items-center">
-                    <span className="text-gfa-gold">{s.trending.label}</span>
-                    <button className="hover:text-gfa-inkBlack border-b border-transparent hover:border-gfa-inkBlack transition-all">{s.trending.la}</button>
+                    <span className="text-gfa-gold">{s.trending?.label}</span>
+                    <button className="hover:text-gfa-inkBlack border-b border-transparent hover:border-gfa-inkBlack transition-all">{s.trending?.la}</button>
                     <span className="opacity-30">•</span>
-                    <button className="hover:text-gfa-inkBlack border-b border-transparent hover:border-gfa-inkBlack transition-all">{s.trending.uk}</button>
+                    <button className="hover:text-gfa-inkBlack border-b border-transparent hover:border-gfa-inkBlack transition-all">{s.trending?.uk}</button>
                     <span className="opacity-30">•</span>
-                    <button className="hover:text-gfa-inkBlack border-b border-transparent hover:border-gfa-inkBlack transition-all">{s.trending.casting}</button>
+                    <button className="hover:text-gfa-inkBlack border-b border-transparent hover:border-gfa-inkBlack transition-all">{s.trending?.casting}</button>
                  </div>
               </div>
             </div>
@@ -244,7 +255,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Trust Endorsement Bar - Refined */}
+      {/* Trust Endorsement Bar */}
       <div className="bg-white border-y border-gfa-border py-6 overflow-hidden relative">
         <div className="absolute inset-0 bg-gfa-warmWhite opacity-50"></div>
         <div className="container-gfa relative z-10">
@@ -260,7 +271,7 @@ const Home = () => {
               </div>
               <div className="flex-grow border-t md:border-t-0 md:border-l border-gfa-border h-px md:h-12 w-full md:w-px mx-4"></div>
               <div className="flex items-center gap-12 grayscale opacity-40 hover:opacity-100 transition-opacity duration-500">
-                {trust.guilds.map((guild: string) => (
+                {(trust.guilds || []).map((guild: string) => (
                   <span key={guild} className="text-[11px] font-black uppercase tracking-[0.2em]">{guild}</span>
                 ))}
               </div>
@@ -268,12 +279,12 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Section 1 - What We Do - Card Enhancements */}
-      <section className="bg-gfa-warmWhite relative" aria-labelledby="what-we-do-title">
+      {/* Core Service Pillars */}
+      <section className="bg-gfa-warmWhite relative py-24" aria-labelledby="what-we-do-title">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-gray-100 to-transparent opacity-50"></div>
         <div className="container-gfa relative z-10">
           <div className="text-center mb-20 max-w-3xl mx-auto">
-            <span className="text-gfa-gold font-bold uppercase tracking-[0.3em] text-[11px] mb-4 block">{t.about.whatWeDo.title}</span>
+            <span className="text-gfa-gold font-bold uppercase tracking-[0.3em] text-[11px] mb-4 block">{t.about?.whatWeDo?.title}</span>
             <h2 id="what-we-do-title" className="text-[42px] font-bold text-gfa-inkBlack mb-6 font-serif">
               {what.title}
             </h2>
@@ -284,8 +295,8 @@ const Home = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {what.cards.map((card: any, i: number) => (
-              <div key={i} className="card-standard flex flex-col h-full group bg-white relative overflow-hidden shadow-sm hover:shadow-xl border-t-4 border-t-transparent hover:border-t-gfa-gold transition-all duration-300">
+            {(what.cards || []).map((card: any, i: number) => (
+              <div key={i} className="card-standard flex flex-col h-full group bg-white relative overflow-hidden shadow-sm hover:shadow-xl border-t-4 border-t-transparent hover:border-t-gfa-gold transition-all duration-300 p-8 rounded-card">
                 {/* Hover Gradient Background */}
                 <div className="absolute inset-0 bg-gradient-to-br from-gfa-gold/0 via-gfa-gold/0 to-gfa-gold/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 
@@ -314,14 +325,14 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Mandatory Statutory Disclaimer Strip - Cleaned Up */}
+      {/* Mandatory Statutory Disclaimer Strip */}
       <div className="bg-white py-16 border-y border-gfa-border" role="complementary">
         <div className="container-gfa">
           <div className="bg-gradient-to-r from-gfa-warmWhite to-white border-l-4 border-gfa-gold p-8 shadow-sm flex flex-col md:flex-row gap-8 items-start md:items-center">
             <div className="flex-grow">
-               <h4 className="text-[11px] font-black uppercase tracking-widest text-gfa-gold mb-2">{t.disclaimer.title}</h4>
+               <h4 className="text-[11px] font-black uppercase tracking-widest text-gfa-gold mb-2">{t.disclaimer?.title}</h4>
                <p className="text-[14px] text-gfa-inkBlack font-medium leading-relaxed italic max-w-4xl">
-                 "{t.disclaimer.statutory}"
+                 "{t.disclaimer?.statutory}"
                </p>
             </div>
             <Link to="/governance" className="shrink-0 px-6 py-3 border border-gfa-border text-[10px] font-black uppercase tracking-widest hover:bg-white transition-colors rounded-sm bg-white shadow-sm">
@@ -331,7 +342,7 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Institutional Document Section - Authority Refinement */}
+      {/* Institutional Document Section */}
       <section className="bg-white border-b border-gfa-border py-24 relative">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-gfa-warmWhite/50 skew-x-12 transform origin-top-right pointer-events-none"></div>
         <div className="container-gfa relative z-10">
@@ -342,10 +353,10 @@ const Home = () => {
                <div className="bg-gfa-inkBlack p-14 rounded-card shadow-2xl relative z-10 text-white bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]">
                   <h3 className="text-2xl font-bold font-serif mb-8 border-b border-white/10 pb-6 text-gfa-gold">{charter.title}</h3>
                   <p className="text-[14px] text-white/80 leading-relaxed uppercase tracking-widest font-bold italic mb-10">
-                    {t.disclaimer.legal}
+                    {t.disclaimer?.legal}
                   </p>
                   <div className="space-y-6">
-                    {charter.points.map((pt: string, idx: number) => (
+                    {(charter.points || []).map((pt: string, idx: number) => (
                       <div key={pt} className="flex gap-5 items-center group">
                         <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center font-bold text-xs shrink-0 group-hover:bg-gfa-gold group-hover:text-black group-hover:border-gfa-gold transition-all duration-500 font-mono">0{idx + 1}</div>
                         <p className="text-xs text-white font-bold uppercase tracking-widest group-hover:text-gfa-gold transition-colors">{pt}</p>
@@ -392,7 +403,7 @@ const Home = () => {
 
             {/* Trust Highlights */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mb-16">
-                {safe.cards.map((item: any, index: number) => (
+                {(safe.cards || []).map((item: any, index: number) => (
                     <div key={index} className="bg-white/5 backdrop-blur-sm rounded-lg p-6 text-center border border-white/10 hover:border-gfa-gold/50 transition-colors shadow-lg hover:bg-white/10 group">
                         <h4 className="text-gfa-gold font-bold mb-2 text-lg font-serif group-hover:scale-105 transition-transform">{item.title}</h4>
                         <p className="text-sm opacity-90 text-gfa-grayLight">{item.text}</p>
@@ -404,17 +415,17 @@ const Home = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mt-12 bg-white/5 p-12 rounded-xl border border-white/5">
                 {/* Left side */}
                 <div>
-                    <h3 className="text-gfa-gold text-2xl font-bold mb-6 mt-2 font-serif">{safe.whyExists.title}</h3>
+                    <h3 className="text-gfa-gold text-2xl font-bold mb-6 mt-2 font-serif">{safe.whyExists?.title}</h3>
                     <p className="leading-relaxed opacity-90 mb-6 text-lg text-gray-300">
-                        {safe.whyExists.p1}
+                        {safe.whyExists?.p1}
                     </p>
                     <p className="leading-relaxed opacity-90 mb-6 text-lg text-gray-300">
-                        {safe.whyExists.p2}
+                        {safe.whyExists?.p2}
                     </p>
 
-                    <h3 className="text-gfa-gold text-2xl font-bold mb-6 mt-10 font-serif">{safe.howHelps.title}</h3>
+                    <h3 className="text-gfa-gold text-2xl font-bold mb-6 mt-10 font-serif">{safe.howHelps?.title}</h3>
                     <ul className="space-y-3">
-                        {safe.howHelps.list.map((item: string, i: number) => (
+                        {(safe.howHelps?.list || []).map((item: string, i: number) => (
                             <li key={i} className="flex items-start gap-3 opacity-90">
                                 <span className="text-gfa-gold mt-1.5 text-xs">●</span>
                                 <span className="text-gray-300 text-lg">{item}</span>
@@ -425,9 +436,9 @@ const Home = () => {
 
                 {/* Right side */}
                 <div>
-                    <h3 className="text-gfa-gold text-2xl font-bold mb-6 mt-2 font-serif">{safe.requirements.title}</h3>
+                    <h3 className="text-gfa-gold text-2xl font-bold mb-6 mt-2 font-serif">{safe.requirements?.title}</h3>
                     <ul className="space-y-4 mb-10">
-                         {safe.requirements.list.map((item: any, i: number) => (
+                         {(safe.requirements?.list || []).map((item: any, i: number) => (
                             <li key={i} className="flex items-start gap-3 text-lg">
                                 <span className="text-gfa-gold mt-1.5 text-xs shrink-0">●</span>
                                 <span className="text-gray-300"><strong className="text-white font-semibold">{item.l}</strong> {item.t}</span>
@@ -435,9 +446,9 @@ const Home = () => {
                          ))}
                     </ul>
 
-                    <h3 className="text-gfa-gold text-2xl font-bold mb-6 font-serif">{safe.benefits.title}</h3>
+                    <h3 className="text-gfa-gold text-2xl font-bold mb-6 font-serif">{safe.benefits?.title}</h3>
                      <ul className="space-y-3">
-                        {safe.benefits.list.map((item: string, i: number) => (
+                        {(safe.benefits?.list || []).map((item: string, i: number) => (
                             <li key={i} className="flex items-start gap-3 opacity-90">
                                 <span className="text-gfa-gold mt-1.5 text-xs">●</span>
                                 <span className="text-gray-300 text-lg">{item}</span>
@@ -473,7 +484,7 @@ const Home = () => {
               <p className="text-white/60 mt-4 text-lg italic">{global.subtitle}</p>
             </div>
             <div className="flex gap-4">
-              {global.stats.map((stat: any, i: number) => (
+              {(global.stats || []).map((stat: any, i: number) => (
                 <div key={i} className="bg-white/5 border border-white/10 px-8 py-5 rounded-sm text-center backdrop-blur-sm hover:bg-white/10 transition-colors">
                   <div className="text-3xl font-bold text-gfa-gold font-serif">{stat.val}</div>
                   <div className="text-[10px] text-white/60 uppercase tracking-widest mt-1">{stat.label}</div>
@@ -483,7 +494,7 @@ const Home = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {global.locations.map((loc: any, i: number) => (
+            {(global.locations || []).map((loc: any, i: number) => (
               <div key={i} className="bg-white/5 border border-white/10 p-8 rounded-sm hover:border-gfa-gold/50 transition-all group backdrop-blur-sm hover:bg-white/10 shadow-lg">
                 <div className="flex justify-between items-start mb-6">
                   <div className="w-2 h-2 rounded-full bg-green-500 shadow-[0_0_10px_rgba(34,197,94,0.5)]"></div>

@@ -1,5 +1,5 @@
 
-import { TransparencyIndicators } from './types';
+import { TransparencyIndicators } from './types.ts';
 
 export function calculateTrustGrade(score: number): string {
   if (score >= 95) return 'A+';

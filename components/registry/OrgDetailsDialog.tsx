@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { RegistryOrg } from '../../lib/registry/types';
+import { RegistryOrg } from '../../lib/registry/types.ts';
 import { useLocale } from '../../LocaleContext.tsx';
 import { calculateTrustGrade } from '../../lib/registry/scoring.ts';
 

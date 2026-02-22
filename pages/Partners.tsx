@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { useLocale } from '../LocaleContext.tsx';
 import { Merchant } from '../types.ts';
+import SEO from '../components/SEO.tsx';
 
 const Partners: React.FC = () => {
   const { t } = useLocale();
@@ -28,6 +29,11 @@ const Partners: React.FC = () => {
 
   return (
     <div className="bg-gfa-warmWhite pt-48 pb-32 px-6 min-h-screen">
+      <SEO 
+        title={t.partners.title || "Partners"} 
+        description={t.partners.intro || "Find verified service providers including legal, insurance, and production vendors for your film projects."} 
+      />
+
       <div className="container-gfa">
         {/* Header */}
         <header className="mb-24 text-center max-w-4xl mx-auto">
