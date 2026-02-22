@@ -57,7 +57,7 @@ const Home = () => {
           </span>
           
           {/* H1 */}
-          <h1 id="hero-title" className="text-5xl md:text-[72px] font-bold text-white uppercase tracking-tight mb-8 leading-[1.05] font-serif max-w-6xl mx-auto drop-shadow-2xl">
+          <h1 id="hero-title" className="text-5xl md:text-[72px] font-bold text-gfa-gold uppercase tracking-tight mb-8 leading-[1.05] font-serif max-w-6xl mx-auto drop-shadow-2xl animate-fade-in">
             {hero.title}
           </h1>
           

@@ -6,6 +6,7 @@ import {
   CheckCircle, HelpCircle, Eye, Download, ChevronDown, ChevronUp, BookOpen, Scale
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import DomainVisuals from '../components/DomainVisuals.tsx';
 
 const Safeguarding: React.FC = () => {
   const { t } = useLocale();
@@ -258,7 +259,7 @@ const Safeguarding: React.FC = () => {
         {/* BOTTOM: Regulated Domains (Full Width) */}
         <section className="mb-16 border-t border-white/10 pt-12">
           <h2 className="text-2xl font-bold font-serif mb-8 text-center">{sg.categories?.title}</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
             {[
               { ...sg.categories?.film, icon: <Users className="w-5 h-5" /> },
               { ...sg.categories?.commercial, icon: <FileText className="w-5 h-5" /> },
@@ -273,6 +274,12 @@ const Safeguarding: React.FC = () => {
                 <p className="text-xs text-gfa-slate leading-relaxed">{cat.d}</p>
               </div>
             ))}
+          </div>
+
+          <div className="max-w-5xl mx-auto">
+            <h3 className="text-lg font-bold font-serif mb-4 text-center text-gfa-gold uppercase tracking-widest">AI Generated Domain Visuals</h3>
+            <p className="text-center text-xs text-gfa-slate mb-8 italic">Visualizing our regulated domains through artificial intelligence.</p>
+            <DomainVisuals />
           </div>
         </section>
 
