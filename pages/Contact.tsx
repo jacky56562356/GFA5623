@@ -23,7 +23,7 @@ const Contact: React.FC = () => {
   const orgTypes = dropdowns.orgTypes || ['Production Agency', 'Film School / Institution', 'Festival / Event Body', 'Government / NGO'];
 
   return (
-    <div className="bg-gfa-warmWhite min-h-screen relative">
+    <div className="bg-gfa-warmWhite min-h-screen relative overflow-hidden">
       <SEO 
         title={contact.title || "Contact Us"} 
         description={contact.intro || "Get in touch with the Global Film Alliance secretariat for inquiries, press, and institutional support."} 
@@ -32,98 +32,103 @@ const Contact: React.FC = () => {
       {/* Map Background */}
       <div className="absolute inset-0 z-0 opacity-10 bg-[url('https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg')] bg-cover bg-center grayscale pointer-events-none"></div>
       
+      {/* Background Decoration */}
+      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gfa-gold/5 rounded-full blur-[120px] -mr-64 -mt-64 pointer-events-none"></div>
+
       <div className="pt-48 pb-32 px-6 container-gfa relative z-10">
-        <header className="mb-24 text-center max-w-4xl mx-auto">
-          <span className="gold-badge mb-8 bg-white/80 backdrop-blur-sm">{ui.secretariatBadge}</span>
-          <h1 className="text-4xl md:text-5xl font-bold font-serif text-gfa-inkBlack mb-10 leading-tight">
+        <header className="mb-32 text-center max-w-4xl mx-auto animate-fade-in">
+          <div className="gold-badge mb-10 animate-fade-up">{ui.secretariatBadge}</div>
+          <h1 className="text-5xl md:text-8xl font-bold font-serif text-gfa-inkBlack mb-12 leading-tight drop-shadow-sm">
             {contact.title}
           </h1>
-          <p className="text-lg text-gfa-slate leading-loose font-medium opacity-80 border-y border-gfa-border py-12 italic bg-white/50 backdrop-blur-sm rounded-sm">
+          <p className="text-xl md:text-2xl text-gfa-slate leading-relaxed font-light italic font-serif opacity-90 border-y border-gfa-border/50 py-16">
             {contact.intro}
           </p>
         </header>
       
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
-          <div className="lg:col-span-1 space-y-12">
-            <div className="flex flex-col gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-20">
+          <div className="lg:col-span-4 space-y-12">
+            <div className="flex flex-col gap-6 animate-fade-up">
               {types.map((type) => (
                 <button 
                   key={type.id}
                   onClick={() => setFormType(type.id as any)}
-                  className={`text-left p-6 border-l-4 transition-all uppercase text-[11px] font-black tracking-widest shadow-sm ${formType === type.id ? 'bg-white border-gfa-gold text-gfa-inkBlack shadow-md translate-x-2' : 'bg-white/50 border-gfa-border text-gfa-slate hover:bg-white hover:text-gfa-inkBlack'}`}
+                  className={`text-left p-8 rounded-3xl border transition-all uppercase text-[10px] font-bold tracking-[0.3em] shadow-xl ${formType === type.id ? 'bg-gfa-inkBlack border-gfa-gold text-white translate-x-4' : 'bg-white border-gfa-border text-gfa-slate hover:border-gfa-gold hover:text-gfa-gold'}`}
                 >
                   {type.label} {labels.join}
                 </button>
               ))}
             </div>
             
-            <div className="pt-12 border-t border-gfa-border space-y-8 bg-white/50 p-6 rounded-sm backdrop-blur-sm">
+            <div className="pt-16 border-t border-gfa-border space-y-10 bg-white/50 p-10 rounded-[40px] backdrop-blur-xl shadow-2xl animate-fade-up delay-200">
               <div>
-                <h4 className="text-gfa-slate font-black uppercase text-[10px] tracking-widest mb-2">{labels.inquiries}</h4>
-                <p className="text-gfa-gold font-bold text-sm">general@gfa-alliance.org</p>
+                <h4 className="text-gfa-slate font-bold uppercase text-[10px] tracking-[0.4em] mb-4 opacity-50">{labels.inquiries}</h4>
+                <p className="text-gfa-inkBlack font-bold text-lg font-serif italic">general@gfa-alliance.org</p>
               </div>
               <div>
-                <h4 className="text-gfa-slate font-black uppercase text-[10px] tracking-widest mb-2">{labels.press}</h4>
-                <p className="text-gfa-gold font-bold text-sm">media@gfa-alliance.org</p>
+                <h4 className="text-gfa-slate font-bold uppercase text-[10px] tracking-[0.4em] mb-4 opacity-50">{labels.press}</h4>
+                <p className="text-gfa-inkBlack font-bold text-lg font-serif italic">media@gfa-alliance.org</p>
               </div>
             </div>
           </div>
 
-          <div className="lg:col-span-3 bg-white p-10 md:p-16 border border-gfa-border shadow-2xl rounded-card relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-gfa-gold/5 rounded-bl-full pointer-events-none"></div>
+          <div className="lg:col-span-8 bg-white p-12 md:p-20 rounded-[48px] border border-gfa-border shadow-2xl relative overflow-hidden animate-fade-up delay-300">
+            <div className="absolute top-0 right-0 w-48 h-48 bg-gfa-gold/5 rounded-bl-full pointer-events-none"></div>
             
-            <h3 className="text-2xl font-bold mb-12 uppercase tracking-tight font-serif text-gfa-inkBlack relative z-10">
+            <h3 className="text-3xl font-bold mb-16 font-serif text-gfa-inkBlack relative z-10 leading-tight">
               {(form.header || "Contact Form: {type}").replace('{type}', types.find(it => it.id === formType)?.label || '')}
             </h3>
             
-            <form className="space-y-8 relative z-10" onSubmit={(e) => { e.preventDefault(); alert(ui.alertMessage); }}>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="space-y-3">
-                  <label className="text-[11px] text-gfa-slate uppercase font-bold tracking-widest">{form.name}</label>
-                  <input required type="text" className="w-full bg-gfa-warmWhite border border-gfa-border p-4 text-gfa-inkBlack focus:outline-none focus:border-gfa-gold transition-colors rounded-btn text-sm font-medium" />
+            <form className="space-y-10 relative z-10" onSubmit={(e) => { e.preventDefault(); alert(ui.alertMessage); }}>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div className="space-y-4">
+                  <label className="text-[10px] text-gfa-slate uppercase font-bold tracking-[0.3em] opacity-60">{form.name}</label>
+                  <input required type="text" className="w-full h-16 px-6 bg-gfa-warmWhite border border-gfa-border rounded-2xl text-base font-serif italic focus:border-gfa-gold focus:ring-4 focus:ring-gfa-gold/5 transition-all outline-none" />
                 </div>
-                <div className="space-y-3">
-                  <label className="text-[11px] text-gfa-slate uppercase font-bold tracking-widest">{form.email}</label>
-                  <input required type="email" className="w-full bg-gfa-warmWhite border border-gfa-border p-4 text-gfa-inkBlack focus:outline-none focus:border-gfa-gold transition-colors rounded-btn text-sm font-medium" />
+                <div className="space-y-4">
+                  <label className="text-[10px] text-gfa-slate uppercase font-bold tracking-[0.3em] opacity-60">{form.email}</label>
+                  <input required type="email" className="w-full h-16 px-6 bg-gfa-warmWhite border border-gfa-border rounded-2xl text-base font-serif italic focus:border-gfa-gold focus:ring-4 focus:ring-gfa-gold/5 transition-all outline-none" />
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="space-y-3">
-                  <label className="text-[11px] text-gfa-slate uppercase font-bold tracking-widest">{form.location}</label>
-                  <input required type="text" className="w-full bg-gfa-warmWhite border border-gfa-border p-4 text-gfa-inkBlack focus:outline-none focus:border-gfa-gold transition-colors rounded-btn text-sm font-medium" />
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div className="space-y-4">
+                  <label className="text-[10px] text-gfa-slate uppercase font-bold tracking-[0.3em] opacity-60">{form.location}</label>
+                  <input required type="text" className="w-full h-16 px-6 bg-gfa-warmWhite border border-gfa-border rounded-2xl text-base font-serif italic focus:border-gfa-gold focus:ring-4 focus:ring-gfa-gold/5 transition-all outline-none" />
                 </div>
                 {formType === 'Merchant' && (
-                  <div className="space-y-3">
-                    <label className="text-[11px] text-gfa-slate uppercase font-bold tracking-widest">{form.cat}</label>
-                    <select className="w-full bg-gfa-warmWhite border border-gfa-border p-4 text-gfa-inkBlack focus:outline-none focus:border-gfa-gold rounded-btn text-sm font-medium cursor-pointer">
+                  <div className="space-y-4">
+                    <label className="text-[10px] text-gfa-slate uppercase font-bold tracking-[0.3em] opacity-60">{form.cat}</label>
+                    <select className="w-full h-16 px-6 bg-gfa-warmWhite border border-gfa-border rounded-2xl text-sm font-bold appearance-none focus:border-gfa-gold transition-all outline-none cursor-pointer">
                       {merchantCats.map((c: string) => <option key={c}>{c}</option>)}
                     </select>
                   </div>
                 )}
                 {formType === 'Organization' && (
-                  <div className="space-y-3">
-                    <label className="text-[11px] text-gfa-slate uppercase font-bold tracking-widest">{form.orgType}</label>
-                    <select className="w-full bg-gfa-warmWhite border border-gfa-border p-4 text-gfa-inkBlack focus:outline-none focus:border-gfa-gold rounded-btn text-sm font-medium cursor-pointer">
+                  <div className="space-y-4">
+                    <label className="text-[10px] text-gfa-slate uppercase font-bold tracking-[0.3em] opacity-60">{form.orgType}</label>
+                    <select className="w-full h-16 px-6 bg-gfa-warmWhite border border-gfa-border rounded-2xl text-sm font-bold appearance-none focus:border-gfa-gold transition-all outline-none cursor-pointer">
                       {orgTypes.map((o: string) => <option key={o}>{o}</option>)}
                     </select>
                   </div>
                 )}
               </div>
 
-              <div className="space-y-3">
-                <label className="text-[11px] text-gfa-slate uppercase font-bold tracking-widest">{form.message}</label>
-                <textarea required rows={5} className="w-full bg-gfa-warmWhite border border-gfa-border p-4 text-gfa-inkBlack focus:outline-none focus:border-gfa-gold transition-colors rounded-btn text-sm font-medium"></textarea>
+              <div className="space-y-4">
+                <label className="text-[10px] text-gfa-slate uppercase font-bold tracking-[0.3em] opacity-60">{form.message}</label>
+                <textarea required rows={6} className="w-full p-6 bg-gfa-warmWhite border border-gfa-border rounded-2xl text-base font-serif italic focus:border-gfa-gold focus:ring-4 focus:ring-gfa-gold/5 transition-all outline-none resize-none"></textarea>
               </div>
 
-              <div className="flex items-start gap-4 py-4">
-                <input required type="checkbox" className="mt-1 w-5 h-5 accent-gfa-gold" />
-                <p className="text-[11px] text-gfa-slate uppercase tracking-wider font-bold leading-relaxed opacity-70">
+              <div className="flex items-start gap-6 py-6">
+                <div className="relative flex items-center">
+                  <input required type="checkbox" className="w-6 h-6 rounded-lg border-gfa-border text-gfa-gold focus:ring-gfa-gold/20 cursor-pointer" />
+                </div>
+                <p className="text-[10px] text-gfa-slate uppercase tracking-[0.2em] font-bold leading-relaxed opacity-60">
                   {form.consent}
                 </p>
               </div>
 
-              <button type="submit" className="btn-primary w-full shadow-lg hover:shadow-xl">
+              <button type="submit" className="w-full h-20 bg-gfa-inkBlack text-white font-bold uppercase text-xs tracking-[0.4em] rounded-2xl hover:bg-slate-800 shadow-2xl transition-all active:scale-[0.98]">
                 {form.submit}
               </button>
             </form>

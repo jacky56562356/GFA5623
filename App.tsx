@@ -25,6 +25,7 @@ import Standards from './pages/Standards';
 import Transparency from './pages/Transparency';
 import Verify from './pages/Verify';
 import YouthSafetyPolicy from './pages/YouthSafetyPolicy';
+import Awards from './pages/Awards';
 
 function App() {
   return (
@@ -51,6 +52,7 @@ function App() {
             <Route path="/transparency" element={<Transparency />} />
             <Route path="/verify" element={<Verify />} />
             <Route path="/youth-safety-policy" element={<YouthSafetyPolicy />} />
+            <Route path="/awards" element={<Awards />} />
             
             {/* Policy Routes */}
             <Route path="/policy/privacy" element={<PolicyPage type="privacy" />} />

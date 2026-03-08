@@ -29,68 +29,76 @@ const Partners: React.FC = () => {
   });
 
   return (
-    <div className="bg-gfa-warmWhite pt-48 pb-32 px-6 min-h-screen">
+    <div className="bg-gfa-warmWhite pt-48 pb-32 px-6 min-h-screen relative overflow-hidden">
       <SEO 
         title={p.title || "Partners"} 
         description={p.intro || "Find verified service providers including legal, insurance, and production vendors for your film projects."} 
       />
 
-      <div className="container-gfa">
+      {/* Background Decoration */}
+      <div className="absolute top-0 left-0 w-[800px] h-[800px] bg-gfa-gold/5 rounded-full blur-[120px] -ml-64 -mt-64 pointer-events-none"></div>
+
+      <div className="container-gfa relative z-10">
         {/* Header */}
-        <header className="mb-24 text-center max-w-4xl mx-auto">
-          <span className="gold-badge mb-8">Verified Service Providers</span>
-          <h1 className="text-4xl md:text-5xl font-bold font-serif text-gfa-inkBlack mb-10 leading-tight">
+        <header className="mb-32 text-center max-w-4xl mx-auto animate-fade-in">
+          <div className="gold-badge mb-10 animate-fade-up">Verified Service Providers</div>
+          <h1 className="text-5xl md:text-8xl font-bold font-serif text-gfa-inkBlack mb-12 leading-tight drop-shadow-sm">
             {p.title}
           </h1>
-          <p className="text-lg text-gfa-slate leading-loose font-medium opacity-80 border-y border-gfa-border py-12 italic">
+          <p className="text-xl md:text-2xl text-gfa-slate leading-relaxed font-light italic font-serif opacity-90 border-y border-gfa-border/50 py-16">
             {p.intro}
           </p>
         </header>
 
         {/* Filters */}
-        <div className="bg-white p-8 mb-16 flex flex-wrap gap-8 border border-gfa-border items-end rounded-card shadow-sm">
-          <div>
-            <label className="block text-[11px] text-gfa-slate font-bold uppercase tracking-widest mb-3">{p.catLabel}</label>
+        <div className="bg-white p-10 md:p-16 mb-20 flex flex-wrap gap-12 border border-gfa-border items-end rounded-[40px] shadow-2xl animate-fade-up">
+          <div className="flex-grow min-w-[240px]">
+            <label className="block text-[10px] text-gfa-slate font-bold uppercase tracking-[0.3em] mb-6 opacity-60">{p.catLabel}</label>
             <select 
               onChange={e => setFilter({ ...filter, category: e.target.value })}
-              className="bg-gfa-warmWhite border border-gfa-border text-gfa-inkBlack px-4 py-3 text-sm font-medium focus:outline-none focus:border-gfa-gold rounded-btn min-w-[200px]"
+              className="w-full h-16 px-6 bg-gfa-warmWhite border border-gfa-border text-gfa-inkBlack text-sm font-bold appearance-none focus:border-gfa-gold rounded-2xl transition-all outline-none"
             >
               {categories.map((c: string) => <option key={c} value={c}>{c}</option>)}
             </select>
           </div>
-          <div>
-            <label className="block text-[11px] text-gfa-slate font-bold uppercase tracking-widest mb-3">{p.countryLabel}</label>
+          <div className="flex-grow min-w-[240px]">
+            <label className="block text-[10px] text-gfa-slate font-bold uppercase tracking-[0.3em] mb-6 opacity-60">{p.countryLabel}</label>
             <select 
               onChange={e => setFilter({ ...filter, country: e.target.value })}
-              className="bg-gfa-warmWhite border border-gfa-border text-gfa-inkBlack px-4 py-3 text-sm font-medium focus:outline-none focus:border-gfa-gold rounded-btn min-w-[200px]"
+              className="w-full h-16 px-6 bg-gfa-warmWhite border border-gfa-border text-gfa-inkBlack text-sm font-bold appearance-none focus:border-gfa-gold rounded-2xl transition-all outline-none"
             >
               {countries.map((c: string) => <option key={c} value={c}>{c}</option>)}
             </select>
           </div>
-          <div className="ml-auto text-[11px] text-gfa-gold font-black uppercase tracking-widest self-center pt-6">
+          <div className="ml-auto text-xs text-gfa-gold font-black uppercase tracking-[0.4em] self-center pt-8">
             {p.found?.replace('{n}', filtered.length.toString())}
           </div>
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {filtered.map(m => (
-            <div key={m.id} className="card-standard flex flex-col h-full group">
-              <div className="flex justify-between items-start mb-8">
-                <div className="w-16 h-16 bg-gfa-warmWhite rounded-btn flex items-center justify-center border border-gfa-border group-hover:border-gfa-gold/30 transition-colors">
-                  <img src={m.logo} alt={m.name} className="w-10 h-10 object-cover grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all" />
+            <div key={m.id} className="bg-white p-12 rounded-[40px] border border-gfa-border shadow-xl hover:shadow-2xl transition-all group relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gfa-gold/5 rounded-bl-full -mr-16 -mt-16 transition-all group-hover:bg-gfa-gold/10"></div>
+              
+              <div className="flex justify-between items-start mb-12 relative z-10">
+                <div className="w-20 h-20 bg-gfa-warmWhite rounded-2xl flex items-center justify-center border border-gfa-border group-hover:border-gfa-gold/30 transition-all duration-500 shadow-inner">
+                  <img src={m.logo} alt={m.name} className="w-12 h-12 object-cover grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700" />
                 </div>
-                <span className="text-[9px] font-black uppercase tracking-widest text-gfa-gold bg-gfa-gold/10 px-3 py-1 rounded-sm">
+                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-gfa-gold bg-gfa-gold/10 px-4 py-1.5 rounded-full border border-gfa-gold/20">
                    {m.category}
                 </span>
               </div>
-              <h3 className="text-xl font-bold mb-3 uppercase tracking-tight text-gfa-inkBlack font-serif">{m.name}</h3>
-              <p className="text-gfa-gold font-bold text-sm mb-6">{m.benefit}</p>
-              <p className="text-gfa-slate text-xs mb-8 flex-grow font-medium uppercase tracking-wide">
+              
+              <h3 className="text-2xl font-bold mb-4 text-gfa-inkBlack font-serif leading-tight group-hover:text-gfa-gold transition-colors">{m.name}</h3>
+              <p className="text-gfa-gold font-bold text-sm mb-8 font-serif italic">{m.benefit}</p>
+              
+              <p className="text-gfa-slate text-sm mb-10 font-light italic opacity-80">
                 {m.city}, {m.country}
               </p>
-              <div className="pt-6 border-t border-gfa-border text-[10px] font-black uppercase tracking-widest text-gfa-slate/60">
-                {p.card?.eligibility}: {m.eligibility}
+              
+              <div className="pt-8 border-t border-gfa-border/50 text-[10px] font-bold uppercase tracking-[0.3em] text-gfa-slate/40">
+                {p.card?.eligibility}: <span className="text-gfa-inkBlack opacity-100">{m.eligibility}</span>
               </div>
             </div>
           ))}
