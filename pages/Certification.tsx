@@ -1,12 +1,55 @@
 
-import React from 'react';
+import React, { useState, useMemo } from 'react';
 import { useLocale } from '../LocaleContext.tsx';
 import SEO from '../components/SEO.tsx';
-import { Shield, CheckCircle, FileText, Scale, BadgeCheck, Clock, Printer, Download, Info } from 'lucide-react';
+import { Shield, CheckCircle, FileText, Scale, BadgeCheck, Clock, Printer, Download, Info, Search, RotateCcw } from 'lucide-react';
+import { MOCK_REGISTRY } from '../lib/registry/mockData.ts';
+import { RegistryOrg, OrgCategory } from '../lib/registry/types.ts';
+import OrgDetailsDialog from '../components/registry/OrgDetailsDialog.tsx';
 
 const Certification: React.FC = () => {
   const { t } = useLocale();
   const cert = t.certification || {};
+  const reg = t.registry || {};
+
+  // Registry State
+  const [searchTerm, setSearchTerm] = useState('');
+  const [filters, setFilters] = useState({
+    category: 'All',
+    region: 'All',
+    status: 'All',
+    level: 'All'
+  });
+  const [selectedOrg, setSelectedOrg] = useState<RegistryOrg | null>(null);
+
+  const options = useMemo(() => {
+    const cats = new Set<string>();
+    const regions = new Set<string>();
+    MOCK_REGISTRY.forEach(o => {
+      o.categories.forEach(c => cats.add(c));
+      regions.add(o.country);
+    });
+    return {
+      categories: Array.from(cats).sort(),
+      regions: Array.from(regions).sort()
+    };
+  }, []);
+
+  const filteredData = useMemo(() => {
+    return MOCK_REGISTRY.filter(o => {
+      const matchesSearch = 
+        o.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
+        o.orgId.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        o.city.toLowerCase().includes(searchTerm.toLowerCase());
+      
+      const matchesCat = filters.category === 'All' || o.categories.includes(filters.category as OrgCategory);
+      const matchesRegion = filters.region === 'All' || o.country === filters.region;
+      const matchesStatus = filters.status === 'All' || o.certification.status === filters.status;
+      const matchesLevel = filters.level === 'All' || o.certification.level === filters.level;
+
+      return matchesSearch && matchesCat && matchesRegion && matchesStatus && matchesLevel;
+    });
+  }, [searchTerm, filters]);
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans pt-[80px] pb-24 relative">
@@ -67,6 +110,10 @@ const Certification: React.FC = () => {
                   <a href="#validity" className="flex items-center gap-3 text-sm font-bold text-gfa-slate hover:text-gfa-gold transition-all group">
                     <div className="w-2 h-2 bg-gfa-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     Accreditation Validity
+                  </a>
+                  <a href="#registry" className="flex items-center gap-3 text-sm font-bold text-gfa-slate hover:text-gfa-gold transition-all group">
+                    <div className="w-2 h-2 bg-gfa-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    Certification Registry
                   </a>
                 </nav>
               </div>
@@ -196,6 +243,119 @@ const Certification: React.FC = () => {
                   </div>
                 </section>
 
+                {/* Registry Section */}
+                <section id="registry" className="scroll-mt-24">
+                  <div className="flex items-start gap-8 mb-16">
+                    <div className="w-16 h-16 bg-gfa-warmWhite border border-gfa-border rounded-2xl flex items-center justify-center text-2xl font-serif text-gfa-gold shrink-0 shadow-inner">
+                      04
+                    </div>
+                    <div className="pt-2">
+                      <h2 className="text-4xl font-bold font-serif text-gfa-inkBlack mb-4 leading-tight">
+                        {reg.title}
+                      </h2>
+                      <div className="h-1 w-24 bg-gfa-gold rounded-full"></div>
+                    </div>
+                  </div>
+
+                  <div className="space-y-12">
+                    <p className="text-lg text-gfa-slate font-light italic font-serif leading-relaxed opacity-90">
+                      {reg.subtitle}
+                    </p>
+
+                    {/* Search & Filters */}
+                    <div className="bg-gfa-warmWhite p-8 rounded-3xl border border-gfa-border">
+                      <div className="grid grid-cols-12 gap-6">
+                        <div className="col-span-12 lg:col-span-6">
+                          <label className="text-[10px] font-bold uppercase tracking-[0.3em] text-gfa-slate mb-3 block opacity-60">Search (Name / ID / City)</label>
+                          <div className="relative">
+                            <input 
+                              type="text" 
+                              value={searchTerm}
+                              onChange={(e) => setSearchTerm(e.target.value)}
+                              placeholder={t.common.searchPlaceholder}
+                              className="w-full h-14 px-6 bg-white border border-gfa-border rounded-xl text-sm font-serif italic focus:border-gfa-gold transition-all outline-none"
+                            />
+                          </div>
+                        </div>
+                        
+                        <div className="col-span-6 lg:col-span-3">
+                          <label className="text-[10px] font-bold uppercase tracking-[0.3em] text-gfa-slate mb-3 block opacity-60">{t.common.category}</label>
+                          <select className="w-full h-14 px-6 bg-white border border-gfa-border rounded-xl text-xs font-bold appearance-none focus:border-gfa-gold transition-all outline-none" value={filters.category} onChange={(e) => setFilters({...filters, category: e.target.value})}>
+                            <option value="All">All Categories</option>
+                            {options.categories.map(c => <option key={c} value={c}>{c}</option>)}
+                          </select>
+                        </div>
+
+                        <div className="col-span-6 lg:col-span-3">
+                          <label className="text-[10px] font-bold uppercase tracking-[0.3em] text-gfa-slate mb-3 block opacity-60">{t.common.region}</label>
+                          <select className="w-full h-14 px-6 bg-white border border-gfa-border rounded-xl text-xs font-bold appearance-none focus:border-gfa-gold transition-all outline-none" value={filters.region} onChange={(e) => setFilters({...filters, region: e.target.value})}>
+                            <option value="All">All Regions</option>
+                            {options.regions.map(r => <option key={r} value={r}>{r}</option>)}
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Table */}
+                    <div className="border border-gfa-border rounded-3xl overflow-hidden shadow-sm">
+                      <div className="overflow-x-auto">
+                        <table className="w-full text-left border-collapse">
+                          <thead>
+                            <tr className="bg-gfa-warmWhite border-b border-gfa-border">
+                              {reg.tableHeaders.map((h: string, i: number) => (
+                                <th key={i} className="px-6 py-4 text-[9px] font-bold uppercase tracking-[0.2em] text-gfa-slate opacity-60">{h}</th>
+                              ))}
+                            </tr>
+                          </thead>
+                          <tbody className="divide-y divide-gfa-border/30">
+                            {filteredData.length === 0 ? (
+                              <tr>
+                                <td colSpan={6} className="text-center py-20 text-gfa-slate italic font-serif text-xl opacity-30">
+                                  {reg.ui.noResults}
+                                </td>
+                              </tr>
+                            ) : filteredData.map((o) => (
+                              <tr key={o.orgId} className="hover:bg-gfa-warmWhite/30 transition-all group">
+                                <td className="px-6 py-6">
+                                  <div className="text-base font-bold text-gfa-inkBlack font-serif leading-tight group-hover:text-gfa-gold transition-colors">{o.name}</div>
+                                  <div className="text-[9px] text-gfa-slate mt-1 font-mono uppercase tracking-widest opacity-60">GFA-ID: {o.orgId}</div>
+                                </td>
+                                <td className="px-6 py-6">
+                                  <span className="text-[10px] font-bold uppercase tracking-widest text-gfa-slate bg-gfa-warmWhite px-3 py-1 rounded-full border border-gfa-border">
+                                    {o.categories[0]}
+                                  </span>
+                                </td>
+                                <td className="px-6 py-6">
+                                  <div className="text-xs font-medium text-gfa-inkBlack font-serif italic">{o.city}, {o.country}</div>
+                                </td>
+                                <td className="px-6 py-6">
+                                  <div className="flex items-center gap-2">
+                                    <div className={`w-1.5 h-1.5 rounded-full ${o.certification.status === 'Active' ? 'bg-emerald-500' : 'bg-red-500'}`}></div>
+                                    <span className={`text-[9px] font-bold uppercase tracking-widest ${o.certification.status === 'Active' ? 'text-emerald-600' : 'text-red-500'}`}>
+                                      {o.certification.status}
+                                    </span>
+                                  </div>
+                                </td>
+                                <td className="px-6 py-6">
+                                  <span className="text-[10px] font-mono text-gfa-slate opacity-80">{o.certification.validTo}</span>
+                                </td>
+                                <td className="px-6 py-6">
+                                  <button 
+                                    onClick={() => setSelectedOrg(o)}
+                                    className="btn-primary h-8 px-4 text-[9px] rounded-full"
+                                  >
+                                    {t.common.view}
+                                  </button>
+                                </td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
               </div>
 
               {/* Document Footer */}
@@ -213,6 +373,11 @@ const Certification: React.FC = () => {
           </main>
         </div>
       </div>
+
+      {/* DETAIL DIALOG */}
+      {selectedOrg && (
+        <OrgDetailsDialog org={selectedOrg} onClose={() => setSelectedOrg(null)} />
+      )}
     </div>
   );
 };

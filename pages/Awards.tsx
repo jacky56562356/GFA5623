@@ -42,23 +42,34 @@ const Awards: React.FC = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.4 }}
-            className="mt-16 flex flex-col md:flex-row items-center justify-center gap-12"
+            className="mt-16 flex flex-col md:flex-row items-center justify-center gap-16"
           >
-            <div className="w-48 md:w-56 group">
-              <img 
-                src="https://i.ibb.co/mrT1n0Fw/Chat-GPT-Image-2026-3-8-11-04-43.png" 
-                alt="Golden Feather Trophy Logo" 
-                referrerPolicy="no-referrer"
-                className="w-full h-auto object-contain brightness-0 invert opacity-80 group-hover:opacity-100 transition-all duration-500"
-              />
+            <div className="flex flex-col items-center group">
+              <div className="w-48 md:w-56 mb-4">
+                <img 
+                  src="https://i.ibb.co/mrT1n0Fw/Chat-GPT-Image-2026-3-8-11-04-43.png" 
+                  alt="Golden Feather Trophy Logo" 
+                  referrerPolicy="no-referrer"
+                  className="w-full h-auto object-contain brightness-0 invert opacity-80 group-hover:opacity-100 transition-all duration-500"
+                />
+              </div>
+              <span className="text-gfa-gold text-sm uppercase tracking-[0.3em] font-medium opacity-60 group-hover:opacity-100 transition-opacity">
+                {awardsData.hero.trophyLabel}
+              </span>
             </div>
-            <div className="w-48 md:w-56 group">
-              <img 
-                src="https://i.ibb.co/8gHZ9bxG/Chat-GPT-Image-2026-3-8-11-02-27.png" 
-                alt="Golden Feather Festival Logo" 
-                referrerPolicy="no-referrer"
-                className="w-full h-auto object-contain brightness-0 invert opacity-80 group-hover:opacity-100 transition-all duration-500"
-              />
+            
+            <div className="flex flex-col items-center group">
+              <div className="w-48 md:w-56 mb-4">
+                <img 
+                  src="https://i.ibb.co/8gHZ9bxG/Chat-GPT-Image-2026-3-8-11-02-27.png" 
+                  alt="Golden Feather Festival Logo" 
+                  referrerPolicy="no-referrer"
+                  className="w-full h-auto object-contain brightness-0 invert opacity-80 group-hover:opacity-100 transition-all duration-500"
+                />
+              </div>
+              <span className="text-gfa-gold text-sm uppercase tracking-[0.3em] font-medium opacity-60 group-hover:opacity-100 transition-opacity">
+                {awardsData.hero.festivalLabel}
+              </span>
             </div>
           </motion.div>
         </div>

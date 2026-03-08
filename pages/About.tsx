@@ -148,12 +148,13 @@ const About: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[cert, youth, support, network, gov].map((item: any, i: number) => (
-              <div key={i} className="p-10 bg-gfa-warmWhite rounded-3xl border border-gfa-border hover:shadow-xl hover:-translate-y-1 transition-all duration-500">
-                <div className="w-12 h-12 bg-gfa-gold/10 rounded-xl flex items-center justify-center text-gfa-gold mb-8">
-                  <span className="font-serif font-bold text-xl">0{i + 1}</span>
+              <div key={i} className="p-10 bg-gradient-to-br from-white to-gfa-warmWhite rounded-3xl border border-gfa-border hover:border-gfa-gold/50 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gfa-gold/5 rounded-bl-full -mr-16 -mt-16 transition-all group-hover:bg-gfa-gold/10"></div>
+                <div className="w-14 h-14 bg-gfa-gold/10 rounded-2xl flex items-center justify-center text-gfa-gold mb-8 group-hover:bg-gfa-gold group-hover:text-white transition-all shadow-inner">
+                  <span className="font-serif font-bold text-2xl">0{i + 1}</span>
                 </div>
-                <h4 className="text-xl font-bold font-serif text-gfa-inkBlack mb-4">{item.title}</h4>
-                <p className="text-sm text-gfa-slate leading-relaxed font-light opacity-90">{item.body}</p>
+                <h4 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-6 group-hover:text-gfa-gold transition-colors">{item.title}</h4>
+                <p className="text-base text-gfa-slate leading-relaxed font-light opacity-90 group-hover:opacity-100 transition-opacity">{item.body}</p>
               </div>
             ))}
           </div>
@@ -164,13 +165,13 @@ const About: React.FC = () => {
       <section className="py-32 bg-gfa-warmWhite border-y border-gfa-border">
         <div className="container-gfa flex flex-col lg:flex-row gap-24 items-center">
           <div className="lg:w-5/12 relative">
-             <div className="w-full aspect-square bg-gfa-inkBlack relative overflow-hidden rounded-[40px] shadow-2xl border-[16px] border-white -rotate-3 group">
+             <div className="w-full">
                 <img 
-                  src="https://images.unsplash.com/photo-1521791136364-798a730bb361?q=80&w=2070&auto=format&fit=crop"
+                  src="https://i.ibb.co/FbV8K2JN/Chat-GPT-Image-2026-3-8-12-44-39.png"
                   alt="GFA Institutional Profile"
-                  className="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000" 
+                  className="w-full h-auto block"
+                  referrerPolicy="no-referrer"
                 />
-                <div className="absolute inset-0 bg-gfa-gold/10 group-hover:bg-transparent transition-colors"></div>
              </div>
              <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-gfa-gold rounded-full flex items-center justify-center text-white text-center p-6 shadow-2xl animate-float">
                 <div className="text-xs font-bold uppercase tracking-widest leading-tight">Global Regulatory Authority</div>

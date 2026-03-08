@@ -8,7 +8,9 @@ export const DICTIONARIES: Record<Locale, Translation> = {
     awardsPage: {
       hero: {
         title: "The Golden Feather Awards",
-        subtitle: "Celebrating Excellence in Independent & Youth Cinema"
+        subtitle: "Celebrating Excellence in Independent & Youth Cinema",
+        trophyLabel: "The Golden Feather Trophy",
+        festivalLabel: "Global Film Festival"
       },
       intro: {
         title: "Institutional Recognition",
@@ -136,11 +138,11 @@ export const DICTIONARIES: Record<Locale, Translation> = {
           }
         ] 
       }, 
-      certification: { title: "Accreditation Framework (GIA)", body: "The GFA Institutional Accreditation (GIA) utilizes a three-tier system—Standard, Professional, and Elite—to categorize organizations based on their verified compliance with 42 distinct operational markers, including financial solvency and governance transparency." }, 
-      youthProtection: { title: "Statutory Safeguarding Compliance", body: "GFA mandates strict adherence to the Youth Protection Act of 2024, requiring a 1:10 chaperone ratio, mandatory background vetting for all personnel, and the presence of certified medical staff on all sets involving minors." }, 
-      support: { title: "Institutional Support Infrastructure", body: "Accredited members receive access to the GFA Global Legal Database, standardized international contract templates, and specialized co-production insurance pools designed to mitigate cross-border operational risks." }, 
-      network: { title: "Global Regulatory Presence", body: "Operating from key cinematic hubs in Los Angeles, London, Beijing, and Paris, GFA ensures that localized industry practices are aligned with international regulatory benchmarks through continuous monitoring." }, 
-      governance: { title: "Institutional Accountability", body: "GFA's governance is rooted in a strict charter of ethics and transparency. All audit summaries and compliance reports are published annually to maintain the integrity of the Global Registry and ensure public trust." }, 
+      certification: { title: "Accreditation Framework (GIA)", body: "The GFA Institutional Accreditation (GIA) is a rigorous 42-point evaluation system covering financial solvency, operational transparency, and professional track records. Organizations are categorized into Standard, Professional, and Elite tiers based on verified compliance, ensuring a clear hierarchy of quality for the global film market." }, 
+      youthProtection: { title: "Statutory Safeguarding Compliance", body: "Our framework mandates strict adherence to the GFA Youth Protection Act of 2024, including a 1:10 chaperone ratio, mandatory background vetting for all personnel, and certified medical staff. We conduct unannounced set inspections to ensure the highest safety standards for minors in cinematic environments." }, 
+      support: { title: "Institutional Support Infrastructure", body: "GFA provides a comprehensive support ecosystem for accredited members, including access to the Global Legal Database, standardized international contract templates, and specialized co-production insurance pools. We help members mitigate cross-border risks and navigate complex international distribution." }, 
+      network: { title: "Global Regulatory Presence", body: "With a strategic presence in Los Angeles, London, Beijing, and Paris, GFA maintains a continuous monitoring network ensuring localized practices align with international regulatory benchmarks. Our global reach facilitates seamless co-productions and talent exchange across major hubs." }, 
+      governance: { title: "Institutional Accountability", body: "GFA's governance is built on absolute transparency and ethical conduct. We publish annual audit summaries and compliance reports for all accredited entities. Our multi-layered oversight structure, including an independent Compliance Panel, ensures the integrity of the Global Registry." }, 
       impact: { title: "Institutional Metrics", stats: [{ value: "1,200+", label: "Audited Entities" }, { value: "32", label: "Member Nations" }, { value: "98.4%", label: "Compliance Index" }, { value: "15k+", label: "Verified Talents" }] }, 
       framework: { title: "The GFA Regulatory Framework", subtitle: "Our operational model is built on five core pillars of institutional integrity and global compliance." },
       awards: { 
@@ -326,7 +328,9 @@ export const DICTIONARIES: Record<Locale, Translation> = {
     awardsPage: {
       hero: {
         title: "金羽奖 (GFA)",
-        subtitle: "表彰独立与青少年电影领域的卓越成就"
+        subtitle: "表彰独立与青少年电影领域的卓越成就",
+        trophyLabel: "金羽奖杯",
+        festivalLabel: "全球电影节"
       },
       intro: {
         title: "机构认可与行业基准",
@@ -454,11 +458,11 @@ export const DICTIONARIES: Record<Locale, Translation> = {
           }
         ] 
       }, 
-      certification: { title: "GFA 机构认证框架 (GIA)", body: "GIA 认证框架采用三级体系（标准级、专业级和精英级），根据组织对 42 个特定运营指标（包括财务偿付能力和治理透明度）的验证合规性进行分类。" }, 
-      youthProtection: { title: "法定青少年保护合规", body: "GFA 强制要求严格遵守《2024 年青少年保护法案》，规定在所有涉及未成年人的拍摄现场必须配备 1:10 的监护比例、全员背景审查以及认证医疗人员。" }, 
-      support: { title: "机构支持基础设施", body: "认证会员可获得 GFA 全球法律数据库、标准化国际合同模板以及专门设计的旨在降低跨境运营风险的合拍片保险池的使用权。" }, 
-      network: { title: "全球监管机构分布", body: "GFA 在洛杉矶、伦敦、北京和巴黎等核心电影中心设有办公室，通过持续监测确保本地行业实践与国际监管基准保持一致。" }, 
-      governance: { title: "机构问责与透明度", body: "GFA 的治理植根于严格的道德和透明度章程。所有审计摘要和合规报告每年公开发布，以维护全球登记库的诚信并确保公众信任。" }, 
+      certification: { title: "GFA 机构认证框架 (GIA)", body: "GFA 机构认证 (GIA) 是一个严谨的 42 项评估体系，涵盖了财务偿付能力、运营透明度和专业往绩。组织根据其经过验证的合规水平被分为标准级、专业级和精英级，确保为全球电影市场提供清晰的质量等级划分和行业信用背书。" }, 
+      youthProtection: { title: "法定青少年保护合规", body: "我们的保护框架强制要求严格遵守《2024 年 GFA 青少年保护法案》。这包括 1:10 的监护比例、对所有人员进行强制性背景审查以及配备认证医疗人员。我们进行不定期现场检查，确保电影环境中未成年人的最高安全标准和心理健康。" }, 
+      support: { title: "机构支持基础设施", body: "GFA 为认证会员提供全面的支持生态系统。这包括访问全球法律数据库、标准化国际合同模板以及专门的合拍片保险池。我们帮助会员降低跨境运营风险，并应对复杂的国际发行环境，提供从法律到财务的全方位保障。" }, 
+      network: { title: "全球监管机构分布", body: "GFA 在洛杉矶、伦敦、北京和巴黎设有战略办事处，维持着持续的监测网络。我们确保本地行业实践与国际监管基准保持一致。我们的全球影响力促进了主要电影中心之间无缝的合拍、技术共享和人才交流。" }, 
+      governance: { title: "机构问责与透明度", body: "GFA 的治理建立在绝对透明和道德行为的基础之上。我们每年发布所有认证实体的审计摘要和合规报告。我们的多层监督结构（包括独立的合规小组和外部审计专家）确保了全球登记库的诚信和公众信任。" }, 
       impact: { title: "机构指标", stats: [{ value: "1,200+", label: "审计实体" }, { value: "32", label: "成员国" }, { value: "98.4%", label: "合规指数" }, { value: "15k+", label: "验证人才" }] }, 
       framework: { title: "GFA 监管框架", subtitle: "我们的运营模式建立在机构诚信和全球合规的五个核心支柱之上。" },
       awards: { 

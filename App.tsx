@@ -9,7 +9,6 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Certification from './pages/Certification';
 import Safeguarding from './pages/Safeguarding';
-import Registry from './pages/Registry';
 import GraduateSupport from './pages/GraduateSupport';
 import Membership from './pages/Membership';
 import Contact from './pages/Contact';
@@ -37,7 +36,6 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/certification" element={<Certification />} />
             <Route path="/safeguarding" element={<Safeguarding />} />
-            <Route path="/registry" element={<Registry />} />
             <Route path="/career-access" element={<GraduateSupport />} />
             <Route path="/membership" element={<Membership />} />
             <Route path="/contact" element={<Contact />} />

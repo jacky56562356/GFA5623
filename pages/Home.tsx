@@ -45,7 +45,7 @@ const Home = () => {
             {hero.subhead}
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-6 mb-16 animate-fade-up">
-            <Link to="/registry" className="btn-primary group">
+            <Link to="/certification#registry" className="btn-primary group">
               <span className="relative z-10 flex items-center gap-2">
                 {hero.ctaPrimary}
                 <Search className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

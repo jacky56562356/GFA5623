@@ -43,7 +43,7 @@ const Footer: React.FC = () => {
           </h4>
           <div className="space-y-4 text-[13px] text-white/50 font-medium">
             <Link to="/safeguarding" className="block hover:text-white transition-colors hover:translate-x-1 duration-300">{t.nav.childSafety}</Link>
-            <Link to="/registry" className="block hover:text-white transition-colors hover:translate-x-1 duration-300">{t.nav.registry}</Link>
+            <Link to="/certification#registry" className="block hover:text-white transition-colors hover:translate-x-1 duration-300">{t.nav.registry}</Link>
             <Link to="/reporting" className="block hover:text-white transition-colors hover:translate-x-1 duration-300">{t.nav.complaints}</Link>
             <Link to="/career-access" className="block hover:text-white transition-colors hover:translate-x-1 duration-300">{t.nav.graduateSupport}</Link>
             <Link to="/partners" className="block hover:text-white transition-colors hover:translate-x-1 duration-300">{t.nav.partners}</Link>
