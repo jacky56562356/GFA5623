@@ -14,7 +14,33 @@ export const DICTIONARIES: Record<Locale, Translation> = {
       },
       intro: {
         title: "Institutional Recognition",
-        body: "The Golden Feather Awards (GFA) serve as the global benchmark for professional excellence in independent and youth cinema. Established under the Global Film Alliance regulatory framework, the awards recognize outstanding achievements in artistic vision, technical execution, and ethical production standards."
+        body: "The Golden Feather Awards (GFA) serve as the global benchmark for professional excellence in independent and youth cinema. Established under the Global Film Alliance regulatory framework, the awards recognize outstanding achievements in artistic vision, technical execution, and ethical production standards. Our rigorous selection process, overseen by a jury of international experts, ensures that every accolade is a true mark of cinematic excellence and professional integrity."
+      },
+      history: {
+        title: "Legacy of Excellence",
+        body: "Since its inception, the Golden Feather Awards have been dedicated to discovering and elevating voices that challenge conventions and push the boundaries of storytelling. The 'Golden Feather' symbolizes the lightness of inspiration combined with the enduring impact of a well-crafted narrative. It is a beacon for independent creators worldwide, signifying a commitment to artistic truth and technical mastery."
+      },
+      judgingCriteria: {
+        title: "Rigorous Evaluation Standards",
+        subtitle: "Our independent jury evaluates submissions based on a comprehensive matrix of artistic and technical criteria.",
+        items: [
+          { title: "Narrative Originality", desc: "The uniqueness of the story, the depth of character development, and the overall structural integrity of the screenplay." },
+          { title: "Directorial Vision", desc: "The director's ability to translate the script into a compelling visual and auditory experience, demonstrating a distinct authorial voice." },
+          { title: "Technical Execution", desc: "Excellence in cinematography, editing, sound design, and production design, ensuring the highest standards of craftsmanship." },
+          { title: "Social Impact & Relevance", desc: "The film's ability to address contemporary issues, provoke thought, and resonate with a global audience, particularly in youth-focused categories." }
+        ]
+      },
+      categoriesList: {
+        title: "Award Categories",
+        subtitle: "Recognizing excellence across all disciplines of filmmaking.",
+        items: [
+          { title: "Grand Jury Prize: Independent Feature", desc: "Awarded to the film that demonstrates the highest level of artistic achievement and technical innovation in independent production." },
+          { title: "Best Youth Performance (Under 18)", desc: "Recognizing exceptional acting talent in performers under the age of 18, evaluated by a specialized panel with backgrounds in child psychology and performance arts." },
+          { title: "Innovation in Animation", desc: "Honoring technical breakthroughs and narrative creativity in both feature-length and short independent animated films." },
+          { title: "The Global Bridge Award", desc: "Celebrating co-productions that successfully bridge cultural and market divides, fostering international understanding through cinema." },
+          { title: "Outstanding Emerging Director", desc: "Awarded to a first-time or second-time director whose work exhibits extraordinary promise and a unique cinematic perspective." },
+          { title: "Excellence in Cinematography", desc: "Recognizing the visual artistry and technical proficiency of the Director of Photography in creating the film's visual language." }
+        ]
       },
       winners2025: {
         title: "2025 Laureates",
@@ -145,6 +171,33 @@ export const DICTIONARIES: Record<Locale, Translation> = {
       governance: { title: "Institutional Accountability", body: "GFA's governance is built on absolute transparency and ethical conduct. We publish annual audit summaries and compliance reports for all accredited entities. Our multi-layered oversight structure, including an independent Compliance Panel, ensures the integrity of the Global Registry." }, 
       impact: { title: "Institutional Metrics", stats: [{ value: "1,200+", label: "Audited Entities" }, { value: "32", label: "Member Nations" }, { value: "98.4%", label: "Compliance Index" }, { value: "15k+", label: "Verified Talents" }] }, 
       framework: { title: "The GFA Regulatory Framework", subtitle: "Our operational model is built on five core pillars of institutional integrity and global compliance." },
+      coreMissions: {
+        title: "About Global Film Alliance",
+        intro: "The Global Film Alliance (GFA) is a non-profit film and television alliance registered in Los Angeles, USA. GFA integrates Hollywood professional production teams, international film festival resources, and the global film industry network to establish a complete operational system from talent discovery, professional training, and production to international distribution.",
+        subtitle: "GFA's core mission covers five levels:",
+        items: [
+          {
+            title: "Promote Youth Participation in Film",
+            desc: "The Global Film Alliance actively goes deep into cities and communities to promote the widespread participation of young people in film shooting and creation. We believe that film is one of the most influential forms of artistic expression today, and every child has the right to understand the world and express themselves through film. Through systematic project design, GFA brings professional Hollywood film production resources directly into communities, making film creation no longer a privilege for the few, but a growth path that every young person with a dream can truly touch. In this process, children not only learn film skills but also build confidence, stimulate potential, and gain the courage to face the future through creation."
+          },
+          {
+            title: "Support Children from Low-Income Families to Enter the Film Industry",
+            desc: "GFA firmly believes that a child's artistic future should not be determined by their family's economic conditions. The film industry has long suffered from unequal opportunities, and children from low-income families are often excluded from the industry due to a lack of resources. GFA provides real opportunities for children from economically disadvantaged families to participate in film production by establishing special scholarship programs and public welfare support projects. We not only provide tuition waivers but also establish professional industry identity certification for these children—including official IMDb profile pages and real work credits, helping them stand on the starting line of the film industry on an equal footing."
+          },
+          {
+            title: "Support Graduates to Complete Their First Commercial Work",
+            desc: "From the academy to the industry is a crucial threshold that every young filmmaker must cross. Many talented film graduates are unable to complete their first commercially valuable work after leaving campus due to a lack of production funds, industry resources, and professional guidance. GFA has established a systematic support mechanism specifically for this group, providing production funding support, professional team allocation, equipment and venue resources, and full guidance from senior Hollywood practitioners, helping graduates transform the creative concepts accumulated in the academy into truly market-oriented commercial works with distribution potential, achieving the critical leap from student to professional filmmaker."
+          },
+          {
+            title: "Support Emerging Filmmakers Towards Professionalism",
+            desc: "Completing the first work is just the starting point. GFA knows that the challenges young filmmakers face in their career development go far beyond creation itself. By establishing a talent delivery mechanism, connecting with international production companies and distribution platforms, and organizing industry exchanges and film festival exhibition activities, GFA provides continuous career development support for potential new directors, screenwriters, and producers, helping them establish a stable professional position and long-term career trajectory in the international film industry."
+          },
+          {
+            title: "Promote Employment in the Film Industry and Help Graduates Land Jobs",
+            desc: "Employment is the ultimate test of the talent training system. GFA actively establishes deep cooperative relationships with production companies, film production agencies, talent agencies, and related industries to build a truly effective film industry employment docking platform. We provide graduates with opportunities for direct contact with the industry, including internship recommendations, project cooperation docking, industry mentorship systems, and career planning guidance, truly realizing a complete closed loop from training to employment."
+          }
+        ]
+      },
       awards: { 
         title: "The Golden Feather Awards (GFA)", 
         subtitle: "The Global Benchmark for Independent & Youth Cinema", 
@@ -334,7 +387,33 @@ export const DICTIONARIES: Record<Locale, Translation> = {
       },
       intro: {
         title: "机构认可与行业基准",
-        body: "金羽奖 (Golden Feather Awards) 是全球独立电影和青少年电影专业卓越程度的基准。该奖项在全球电影联盟 (GFA) 监管框架下设立，旨在表彰在艺术远见、技术执行和道德生产标准方面取得杰出成就的作品。"
+        body: "金羽奖 (Golden Feather Awards) 是全球独立电影和青少年电影专业卓越程度的基准。该奖项在全球电影联盟 (GFA) 监管框架下设立，旨在表彰在艺术远见、技术执行和道德生产标准方面取得杰出成就的作品。我们严格的评选过程由国际专家组成的评审团监督，确保每一项荣誉都是电影卓越和专业诚信的真正标志。"
+      },
+      history: {
+        title: "卓越的传承",
+        body: "自成立以来，金羽奖一直致力于发现和提升那些挑战常规、突破叙事边界的声音。“金羽”象征着灵感的轻盈与精心打磨的叙事所带来的持久影响力的结合。它是全球独立创作者的灯塔，标志着对艺术真实性和技术精湛的承诺。"
+      },
+      judgingCriteria: {
+        title: "严格的评估标准",
+        subtitle: "我们的独立评审团根据艺术和技术标准的综合矩阵对提交的作品进行评估。",
+        items: [
+          { title: "叙事原创性", desc: "故事的独特性、角色发展的深度以及剧本整体结构的完整性。" },
+          { title: "导演视野", desc: "导演将剧本转化为引人入胜的视听体验的能力，展现出独特的作者声音。" },
+          { title: "技术执行", desc: "在摄影、剪辑、声音设计和制作设计方面的卓越表现，确保最高标准的工艺水平。" },
+          { title: "社会影响与相关性", desc: "电影探讨当代问题、引发思考并与全球观众产生共鸣的能力，特别是在以青少年为重点的类别中。" }
+        ]
+      },
+      categoriesList: {
+        title: "奖项类别",
+        subtitle: "表彰电影制作各个领域的卓越表现。",
+        items: [
+          { title: "评审团大奖：独立长片", desc: "授予在独立制作中展现出最高水平艺术和技术创新的电影。" },
+          { title: "最佳青少年表演 (18岁以下)", desc: "表彰 18 岁以下演员的卓越表演才华，由专门的儿童心理学和表演艺术背景小组进行评估。" },
+          { title: "动画创新奖", desc: "表彰独立动画长片和短片中的技术突破和叙事创意。" },
+          { title: "全球桥梁奖", desc: "表彰成功弥合文化和市场鸿沟的合拍片，通过电影促进国际理解。" },
+          { title: "杰出新锐导演", desc: "授予首次或第二次执导的导演，其作品展现出非凡的潜力和独特的电影视角。" },
+          { title: "卓越摄影奖", desc: "表彰摄影指导在创造电影视觉语言方面的视觉艺术性和技术熟练度。" }
+        ]
       },
       winners2025: {
         title: "2025年度获奖名单",
@@ -465,6 +544,33 @@ export const DICTIONARIES: Record<Locale, Translation> = {
       governance: { title: "机构问责与透明度", body: "GFA 的治理建立在绝对透明和道德行为的基础之上。我们每年发布所有认证实体的审计摘要和合规报告。我们的多层监督结构（包括独立的合规小组和外部审计专家）确保了全球登记库的诚信和公众信任。" }, 
       impact: { title: "机构指标", stats: [{ value: "1,200+", label: "审计实体" }, { value: "32", label: "成员国" }, { value: "98.4%", label: "合规指数" }, { value: "15k+", label: "验证人才" }] }, 
       framework: { title: "GFA 监管框架", subtitle: "我们的运营模式建立在机构诚信和全球合规的五个核心支柱之上。" },
+      coreMissions: {
+        title: "关于全球电影联盟",
+        intro: "全球电影联盟（Global Film Alliance，简称GFA）是一家在美国洛杉矶注册的非盈利影视联盟机构。GFA整合好莱坞专业制作团队、国际电影节资源与全球影视产业网络，建立了一套从人才发现、专业培训、作品制作到国际发行的完整运营体系。",
+        subtitle: "GFA的核心使命涵盖五个层面：",
+        items: [
+          {
+            title: "第一，推动青少年电影参与。",
+            desc: "全球电影联盟积极深入各城市与社区，推动青少年广泛参与电影拍摄与创作。我们相信，电影是当代最具影响力的艺术表达形式之一，每一个孩子都有权利通过电影认识世界、表达自我。GFA通过系统化的项目设计，将专业的好莱坞电影制作资源直接带入社区，让电影创作不再是少数人的特权，而是每一个有梦想的青少年都能真实触及的成长路径。在这个过程中，孩子们不仅学习电影技艺，更在创作中建立自信、激发潜能、收获面对未来的勇气。"
+          },
+          {
+            title: "第二，扶持低收入家庭儿童进入影视行业。",
+            desc: "GFA坚定相信，一个孩子的艺术未来不应由其家庭的经济条件来决定。影视行业长期存在机会不均等的问题，来自低收入家庭的儿童往往因缺乏资源而与这一行业无缘。GFA通过设立专项奖学金计划与公益扶持项目，为经济困难家庭的儿童提供真实的电影制作参与机会。我们不仅提供学费减免，更为这些孩子建立专业的行业身份认证——包括国际电影数据库（IMDb）官方个人资料页面与真实的作品署名，帮助他们以平等的姿态站在影视行业的起跑线上。"
+          },
+          {
+            title: "第三，扶持院校毕业生完成第一部商业作品。",
+            desc: "从学院到行业，是每一位青年电影人必须跨越的关键门槛。许多有才华的电影专业毕业生在走出校园后，因缺乏制作资金、行业资源与专业指导而无法完成第一部具有商业价值的作品。GFA专门为这一群体建立了系统化的扶持机制，提供制作资金支持、专业团队配置、设备与场地资源，以及来自好莱坞资深从业者的全程指导，帮助毕业生将学院积累的创作理念转化为真正面向市场、具备发行潜力的商业作品，实现从学生到职业电影人的关键跨越。"
+          },
+          {
+            title: "第四，扶持新兴电影人走向专业化道路。",
+            desc: "完成第一部作品只是起点。GFA深知，青年电影人在职业发展过程中面临的挑战远不止于创作本身。GFA通过建立人才输送机制、对接国际制片公司与发行平台、组织行业交流与电影节参展活动，为有潜力的新导演、编剧与制片人提供持续性的职业发展支持，帮助他们在国际影视产业中建立稳定的专业位置与长远的职业轨迹。"
+          },
+          {
+            title: "第五，推动影视行业就业，帮助毕业生实现职业落地。",
+            desc: "就业是人才培养体系的最终检验。GFA积极与制片公司、影视制作机构、经纪公司及相关产业建立深度合作关系，构建真实有效的影视行业就业对接平台。我们为院校毕业生提供与行业直接接触的机会，包括实习岗位推荐、项目合作对接、行业导师制度与职业规划指导，真正实现从培训到就业的完整闭环。"
+          }
+        ]
+      },
       awards: { 
         title: "金羽奖 (The Golden Feather Awards)", 
         subtitle: "独立与青少年电影的全球基准", 

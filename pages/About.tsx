@@ -21,6 +21,7 @@ const About: React.FC = () => {
   const gov = a.governance || {};
   const impact = a.impact || {};
   const framework = a.framework || {};
+  const coreMissions = a.coreMissions || {};
   const awards = a.awards || {};
   const distribution = a.distribution || {};
   const cta = a.cta || {};
@@ -60,6 +61,32 @@ const About: React.FC = () => {
           <p className="text-xl md:text-2xl text-gfa-gold font-light leading-relaxed max-w-4xl mx-auto italic font-serif animate-fade-up delay-200">
             {hero.subtitle}
           </p>
+        </div>
+      </section>
+
+      {/* 1.5 CORE MISSIONS */}
+      <section className="py-32 px-6 bg-white relative border-b border-gfa-border">
+        <div className="container-gfa relative z-10">
+          <div className="text-center mb-20">
+            <div className="gold-badge mb-4">Institutional Foundation</div>
+            <h2 className="text-4xl md:text-5xl font-bold font-serif text-gfa-inkBlack mb-8">{coreMissions.title}</h2>
+            <p className="text-gfa-slate max-w-4xl mx-auto text-lg font-light leading-relaxed mb-8">{coreMissions.intro}</p>
+            <p className="text-2xl font-serif italic text-gfa-gold">{coreMissions.subtitle}</p>
+          </div>
+          
+          <div className="space-y-8 max-w-5xl mx-auto">
+            {(coreMissions.items || []).map((item: any, i: number) => (
+              <div key={i} className="flex flex-col md:flex-row gap-8 items-start p-10 bg-gfa-warmWhite rounded-3xl border border-gfa-border hover:border-gfa-gold/30 hover:shadow-xl transition-all duration-500 group">
+                <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-gfa-gold shrink-0 shadow-sm group-hover:scale-110 group-hover:bg-gfa-gold group-hover:text-white transition-all duration-500">
+                  <span className="font-serif font-bold text-2xl">0{i + 1}</span>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-4 group-hover:text-gfa-gold transition-colors">{item.title}</h3>
+                  <p className="text-gfa-slate leading-relaxed font-light opacity-90">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

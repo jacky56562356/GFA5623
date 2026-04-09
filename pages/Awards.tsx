@@ -89,6 +89,61 @@ const Awards: React.FC = () => {
         </div>
       </section>
 
+      {/* History / Legacy Section */}
+      <section className="py-24 bg-gfa-warmWhite border-y border-gfa-border">
+        <div className="container-gfa">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="gold-badge mb-6 mx-auto">Heritage</div>
+            <h2 className="text-3xl md:text-4xl font-bold font-serif text-gfa-inkBlack mb-8">
+              {awardsData.history?.title}
+            </h2>
+            <p className="text-lg text-gfa-slate leading-relaxed font-light italic">
+              "{awardsData.history?.body}"
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Judging Criteria Section */}
+      <section className="py-24 bg-white">
+        <div className="container-gfa">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold font-serif text-gfa-inkBlack mb-4">{awardsData.judgingCriteria?.title}</h2>
+            <p className="text-gfa-slate font-light max-w-2xl mx-auto">{awardsData.judgingCriteria?.subtitle}</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {awardsData.judgingCriteria?.items?.map((item: any, i: number) => (
+              <div key={i} className="p-8 border border-gfa-border rounded-2xl hover:border-gfa-gold/50 transition-colors group">
+                <div className="w-12 h-12 bg-gfa-gold/10 rounded-full flex items-center justify-center text-gfa-gold mb-6 group-hover:bg-gfa-gold group-hover:text-white transition-colors">
+                  <span className="font-serif font-bold">{i + 1}</span>
+                </div>
+                <h3 className="text-xl font-bold font-serif text-gfa-inkBlack mb-3">{item.title}</h3>
+                <p className="text-gfa-slate font-light leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Categories List Section */}
+      <section className="py-24 bg-gfa-inkBlack text-white">
+        <div className="container-gfa">
+          <div className="text-center mb-16">
+            <div className="gold-badge mb-6 mx-auto">Disciplines</div>
+            <h2 className="text-4xl font-bold font-serif mb-4">{awardsData.categoriesList?.title}</h2>
+            <p className="text-white/70 font-light max-w-2xl mx-auto">{awardsData.categoriesList?.subtitle}</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {awardsData.categoriesList?.items?.map((item: any, i: number) => (
+              <div key={i} className="p-8 bg-white/5 rounded-2xl border border-white/10 hover:border-gfa-gold/50 transition-colors">
+                <h3 className="text-xl font-bold font-serif text-gfa-gold mb-3">{item.title}</h3>
+                <p className="text-white/70 font-light leading-relaxed text-sm">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* 2025 Winners Section */}
       <section className="py-24 bg-gfa-warmWhite">
         <div className="container-gfa">
