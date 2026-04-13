@@ -22,38 +22,56 @@ const GraduateSupport = () => {
   };
 
   return (
-    <div className="bg-gfa-warmWhite pt-32 pb-32 px-6 min-h-screen font-sans">
+    <div className="bg-gfa-warmWhite min-h-screen font-sans pt-[80px] pb-24 relative">
       <SEO 
         title={cap.title || "Career Access"} 
         description={cap.subtitle || "Supporting the next generation of film professionals through mentorship, funding, and project matchmaking."} 
       />
 
-      <div className="container-gfa max-w-7xl mx-auto">
-        {/* Header */}
-        <header className="mb-24 text-center max-w-4xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gfa-gold/10 border border-gfa-gold/20 mb-8">
-            <GraduationCap className="w-4 h-4 text-gfa-gold" />
-            <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-gfa-gold">Professional Industry Program</span>
-          </div>
-          
-          <h1 className="text-5xl md:text-7xl font-bold font-serif text-gfa-inkBlack mb-8 leading-tight">{cap.title}</h1>
-          
-          <div className="relative">
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-1 bg-gfa-gold rounded-full"></div>
-            <p className="text-xl text-gfa-slate leading-relaxed pt-12 font-serif italic opacity-80">
+      {/* Global Background Image */}
+      <div className="fixed inset-0 z-0 opacity-[0.03] pointer-events-none">
+        <img 
+          src="https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=2059&auto=format&fit=crop" 
+          alt="Film Background" 
+          className="w-full h-full object-cover"
+        />
+      </div>
+
+      {/* Document Header */}
+      <div className="relative bg-gfa-inkBlack py-32 mb-12 shadow-2xl overflow-hidden">
+        <div className="absolute inset-0 z-0 opacity-20 grayscale">
+          <img 
+            src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=2070&auto=format&fit=crop" 
+            alt="Header Background" 
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-gfa-inkBlack/60 via-gfa-inkBlack/80 to-gfa-inkBlack"></div>
+        
+        <div className="container-gfa relative z-10 text-center">
+          <div className="max-w-4xl mx-auto animate-fade-in">
+            <div className="gold-badge mb-8 animate-fade-up">
+              Professional Industry Program
+            </div>
+            <h1 className="text-5xl md:text-8xl font-bold font-serif text-white mb-8 leading-tight drop-shadow-2xl">
+              {cap.title}
+            </h1>
+            <p className="text-xl md:text-2xl text-gfa-gold font-light leading-relaxed max-w-2xl mx-auto italic font-serif animate-fade-up delay-200">
               {cap.subtitle}
             </p>
           </div>
-        </header>
+        </div>
+      </div>
 
+      <div className="container-gfa max-w-7xl mx-auto relative z-10">
         {/* Intro Block */}
         <section className="mb-32 max-w-5xl mx-auto">
-          <div className="bg-white border border-gfa-border p-12 md:p-16 rounded-2xl shadow-sm relative overflow-hidden group hover:border-gfa-gold/30 transition-colors">
-            <div className="absolute top-0 left-0 w-1 h-full bg-gfa-inkBlack group-hover:bg-gfa-gold transition-colors"></div>
-            <div className="absolute -right-10 -bottom-10 opacity-5">
+          <div className="bg-white border border-gfa-border p-12 md:p-16 rounded-[32px] shadow-xl relative overflow-hidden group hover:border-gfa-gold/30 transition-all duration-500">
+            <div className="absolute top-0 left-0 w-2 h-full bg-gfa-inkBlack group-hover:bg-gfa-gold transition-colors duration-500"></div>
+            <div className="absolute -right-10 -bottom-10 opacity-5 group-hover:scale-110 transition-transform duration-700">
               <Star className="w-64 h-64 text-gfa-inkBlack" />
             </div>
-            <p className="text-2xl text-gfa-inkBlack leading-relaxed font-serif italic relative z-10 text-center">
+            <p className="text-2xl md:text-3xl text-gfa-inkBlack leading-relaxed font-serif italic relative z-10 text-center">
               "{cap.intro}"
             </p>
           </div>
@@ -63,16 +81,27 @@ const GraduateSupport = () => {
         <section className="mb-32">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {Object.entries(cap.pillars || {}).map(([key, pillar]: [string, any], index) => (
-              <div key={key} className="bg-white border border-gfa-border p-8 rounded-xl hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">
-                <div className="w-16 h-16 rounded-full bg-gfa-warmWhite flex items-center justify-center text-gfa-slate mb-8 group-hover:bg-gfa-gold group-hover:text-gfa-inkBlack transition-colors">
-                  {index === 0 ? <Users className="w-8 h-8" /> : index === 1 ? <Award className="w-8 h-8" /> : <Briefcase className="w-8 h-8" />}
+              <div key={key} className="relative group rounded-[32px] overflow-hidden border border-gfa-border shadow-sm hover:shadow-2xl transition-all duration-500 h-[350px]">
+                <div className="absolute inset-0 z-0">
+                  <img 
+                    src={
+                      index === 0 ? "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop" :
+                      index === 1 ? "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2011&auto=format&fit=crop" :
+                      "https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=2070&auto=format&fit=crop"
+                    }
+                    alt={pillar.title}
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-gfa-inkBlack via-gfa-inkBlack/80 to-gfa-inkBlack/40 group-hover:from-gfa-inkBlack group-hover:via-gfa-inkBlack/60 group-hover:to-transparent transition-all duration-500"></div>
                 </div>
-                <h3 className="text-xl font-bold text-gfa-inkBlack mb-4 font-serif group-hover:text-gfa-gold transition-colors">
-                  {pillar.title}
-                </h3>
-                <p className="text-sm text-gfa-slate leading-relaxed font-medium opacity-80">
-                  {pillar.body}
-                </p>
+                
+                <div className="relative z-10 p-8 h-full flex flex-col justify-end">
+                  <div className="w-14 h-14 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center mb-6 border border-white/20 group-hover:bg-gfa-gold group-hover:border-gfa-gold transition-all duration-500">
+                    {index === 0 ? <Users className="w-6 h-6 text-white" /> : index === 1 ? <Award className="w-6 h-6 text-white" /> : <Briefcase className="w-6 h-6 text-white" />}
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-4 font-serif leading-tight">{pillar.title}</h3>
+                  <p className="text-white/70 leading-relaxed font-light text-sm">{pillar.body}</p>
+                </div>
               </div>
             ))}
           </div>

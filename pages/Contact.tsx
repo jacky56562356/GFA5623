@@ -32,13 +32,24 @@ const Contact: React.FC = () => {
       {/* Map Background */}
       <div className="absolute inset-0 z-0 opacity-10 bg-[url('https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg')] bg-cover bg-center grayscale pointer-events-none"></div>
       
+      {/* Cinematic Header Background */}
+      <div className="absolute top-0 left-0 w-full h-[500px] z-0 overflow-hidden">
+        <div className="absolute inset-0 bg-gfa-inkBlack/90 z-10"></div>
+        <img 
+          src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop" 
+          alt="Office Background" 
+          className="w-full h-full object-cover grayscale opacity-30"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gfa-warmWhite z-20"></div>
+      </div>
+
       {/* Background Decoration */}
-      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gfa-gold/5 rounded-full blur-[120px] -mr-64 -mt-64 pointer-events-none"></div>
+      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gfa-gold/5 rounded-full blur-[120px] -mr-64 -mt-64 pointer-events-none z-0"></div>
 
       <div className="pt-48 pb-32 px-6 container-gfa relative z-10">
         <header className="mb-32 text-center max-w-4xl mx-auto animate-fade-in">
           <div className="gold-badge mb-10 animate-fade-up">{ui.secretariatBadge}</div>
-          <h1 className="text-5xl md:text-8xl font-bold font-serif text-gfa-inkBlack mb-12 leading-tight drop-shadow-sm">
+          <h1 className="text-5xl md:text-8xl font-bold font-serif text-white mb-12 leading-tight drop-shadow-2xl">
             {contact.title}
           </h1>
           <p className="text-xl md:text-2xl text-gfa-slate leading-relaxed font-light italic font-serif opacity-90 border-y border-gfa-border/50 py-16">

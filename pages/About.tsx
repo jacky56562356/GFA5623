@@ -2,7 +2,7 @@
 import React from 'react';
 import { useLocale } from '../LocaleContext.tsx';
 import { Link } from 'react-router-dom';
-import { Shield, Globe, Award, Play } from 'lucide-react';
+import { Shield, Globe, Award, Play, ArrowRight } from 'lucide-react';
 import SEO from '../components/SEO.tsx';
 
 const About: React.FC = () => {
@@ -65,7 +65,10 @@ const About: React.FC = () => {
       </section>
 
       {/* 1.5 CORE MISSIONS */}
-      <section className="py-32 px-6 bg-white relative border-b border-gfa-border">
+      <section className="py-32 px-6 bg-white relative border-b border-gfa-border overflow-hidden">
+        <div className="absolute inset-0 z-0 opacity-[0.02] pointer-events-none">
+          <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=2059&auto=format&fit=crop" alt="Film Background" className="w-full h-full object-cover" />
+        </div>
         <div className="container-gfa relative z-10">
           <div className="text-center mb-20">
             <div className="gold-badge mb-4">Institutional Foundation</div>
@@ -76,11 +79,25 @@ const About: React.FC = () => {
           
           <div className="space-y-8 max-w-5xl mx-auto">
             {(coreMissions.items || []).map((item: any, i: number) => (
-              <div key={i} className="flex flex-col md:flex-row gap-8 items-start p-10 bg-gfa-warmWhite rounded-3xl border border-gfa-border hover:border-gfa-gold/30 hover:shadow-xl transition-all duration-500 group">
-                <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-gfa-gold shrink-0 shadow-sm group-hover:scale-110 group-hover:bg-gfa-gold group-hover:text-white transition-all duration-500">
-                  <span className="font-serif font-bold text-2xl">0{i + 1}</span>
+              <div key={i} className="flex flex-col md:flex-row gap-0 items-stretch bg-gfa-warmWhite rounded-[32px] border border-gfa-border hover:border-gfa-gold/30 hover:shadow-2xl transition-all duration-500 group overflow-hidden">
+                <div className="md:w-1/3 relative overflow-hidden min-h-[200px]">
+                  <img 
+                    src={
+                      i === 0 ? "https://images.unsplash.com/photo-1604928141064-207cea6f5722?q=80&w=2070&auto=format&fit=crop" :
+                      i === 1 ? "https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=2070&auto=format&fit=crop" :
+                      i === 2 ? "https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=2059&auto=format&fit=crop" :
+                      i === 3 ? "https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=2025&auto=format&fit=crop" :
+                      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop"
+                    }
+                    alt={item.title}
+                    className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gfa-inkBlack/40 group-hover:bg-gfa-inkBlack/10 transition-colors duration-500"></div>
+                  <div className="absolute top-6 left-6 w-12 h-12 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center text-white border border-white/30 shadow-lg">
+                    <span className="font-serif font-bold text-xl">0{i + 1}</span>
+                  </div>
                 </div>
-                <div>
+                <div className="md:w-2/3 p-10 md:p-12 flex flex-col justify-center bg-white">
                   <h3 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-4 group-hover:text-gfa-gold transition-colors">{item.title}</h3>
                   <p className="text-gfa-slate leading-relaxed font-light opacity-90">{item.desc}</p>
                 </div>
@@ -127,22 +144,39 @@ const About: React.FC = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {(what.items || []).map((item: any, i: number) => (
-              <div key={i} className="card-standard group flex flex-col items-start relative overflow-hidden p-12">
-                <div className="absolute top-0 right-0 w-24 h-24 bg-gfa-gold/5 rounded-bl-full -mr-12 -mt-12 transition-all group-hover:bg-gfa-gold/10"></div>
-                <div className="text-5xl mb-8 grayscale group-hover:grayscale-0 transition-all transform group-hover:scale-110 duration-500">{item.icon}</div>
-                <h3 className="text-2xl font-bold text-gfa-inkBlack mb-4 font-serif leading-tight">{item.title}</h3>
-                <p className="text-base text-gfa-slate leading-relaxed font-light mb-6 opacity-80">
-                  {item.desc}
-                </p>
-                <div className="mb-8 p-6 bg-gfa-warmWhite rounded-xl border-l-2 border-gfa-gold/30 text-sm text-gfa-slate italic font-light">
-                  {item.details}
+              <div key={i} className="relative group rounded-[32px] overflow-hidden border border-gfa-border shadow-sm hover:shadow-2xl transition-all duration-500 min-h-[500px] flex flex-col">
+                <div className="absolute inset-0 z-0">
+                  <img 
+                    src={
+                      i === 0 ? "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2011&auto=format&fit=crop" :
+                      i === 1 ? "https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=2070&auto=format&fit=crop" :
+                      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop"
+                    }
+                    alt={item.title}
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-gfa-inkBlack via-gfa-inkBlack/90 to-gfa-inkBlack/40 group-hover:from-gfa-inkBlack group-hover:via-gfa-inkBlack/70 group-hover:to-transparent transition-all duration-500"></div>
                 </div>
-                <Link 
-                  to={i === 0 ? "/certification" : i === 1 ? "/safeguarding" : "/career-access"} 
-                  className="mt-auto btn-tertiary"
-                >
-                  {item.linkText}
-                </Link>
+                
+                <div className="relative z-10 p-10 h-full flex flex-col">
+                  <div className="text-5xl mb-8 grayscale group-hover:grayscale-0 transition-all transform group-hover:scale-110 duration-500 drop-shadow-2xl">{item.icon}</div>
+                  <h3 className="text-3xl font-bold text-white mb-4 font-serif leading-tight">{item.title}</h3>
+                  <p className="text-base text-white/80 leading-relaxed font-light mb-8">
+                    {item.desc}
+                  </p>
+                  <div className="mt-auto">
+                    <div className="mb-8 p-6 bg-white/10 backdrop-blur-md rounded-xl border-l-2 border-gfa-gold text-sm text-white/90 italic font-light">
+                      {item.details}
+                    </div>
+                    <Link 
+                      to={i === 0 ? "/certification" : i === 1 ? "/safeguarding" : "/career-access"} 
+                      className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-gfa-gold hover:text-white transition-colors group/link"
+                    >
+                      {item.linkText}
+                      <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
+                    </Link>
+                  </div>
+                </div>
               </div>
             ))}
           </div>

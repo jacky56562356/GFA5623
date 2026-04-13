@@ -126,18 +126,38 @@ const Awards: React.FC = () => {
       </section>
 
       {/* Categories List Section */}
-      <section className="py-24 bg-gfa-inkBlack text-white">
-        <div className="container-gfa">
+      <section className="py-32 bg-gfa-inkBlack text-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10 pointer-events-none">
+          <img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=2070&auto=format&fit=crop" alt="Cinematic Background" className="w-full h-full object-cover grayscale" />
+        </div>
+        <div className="container-gfa relative z-10">
           <div className="text-center mb-16">
             <div className="gold-badge mb-6 mx-auto">Disciplines</div>
             <h2 className="text-4xl font-bold font-serif mb-4">{awardsData.categoriesList?.title}</h2>
             <p className="text-white/70 font-light max-w-2xl mx-auto">{awardsData.categoriesList?.subtitle}</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {awardsData.categoriesList?.items?.map((item: any, i: number) => (
-              <div key={i} className="p-8 bg-white/5 rounded-2xl border border-white/10 hover:border-gfa-gold/50 transition-colors">
-                <h3 className="text-xl font-bold font-serif text-gfa-gold mb-3">{item.title}</h3>
-                <p className="text-white/70 font-light leading-relaxed text-sm">{item.desc}</p>
+              <div key={i} className="relative group rounded-[24px] overflow-hidden border border-white/10 hover:border-gfa-gold/50 transition-all duration-500 h-[300px]">
+                <div className="absolute inset-0 z-0">
+                  <img 
+                    src={
+                      i === 0 ? "https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=2059&auto=format&fit=crop" :
+                      i === 1 ? "https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=2070&auto=format&fit=crop" :
+                      i === 2 ? "https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=2025&auto=format&fit=crop" :
+                      i === 3 ? "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop" :
+                      i === 4 ? "https://images.unsplash.com/photo-1604928141064-207cea6f5722?q=80&w=2070&auto=format&fit=crop" :
+                      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2011&auto=format&fit=crop"
+                    }
+                    alt={item.title}
+                    className="w-full h-full object-cover grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-gfa-inkBlack via-gfa-inkBlack/80 to-transparent group-hover:from-gfa-inkBlack/90 transition-colors duration-500"></div>
+                </div>
+                <div className="relative z-10 p-8 h-full flex flex-col justify-end">
+                  <h3 className="text-2xl font-bold font-serif text-gfa-gold mb-3">{item.title}</h3>
+                  <p className="text-white/80 font-light leading-relaxed text-sm">{item.desc}</p>
+                </div>
               </div>
             ))}
           </div>

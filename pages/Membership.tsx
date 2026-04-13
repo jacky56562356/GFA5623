@@ -122,32 +122,42 @@ const Membership: React.FC = () => {
 
                   <div className="grid grid-cols-1 gap-12">
                     {(m.tiers || []).map((tier: any, i: number) => (
-                      <div key={i} className="p-10 md:p-16 bg-gfa-warmWhite border border-gfa-border rounded-[32px] hover:border-gfa-gold/30 transition-all hover:shadow-2xl group relative overflow-hidden">
-                        <div className="absolute top-0 right-0 w-48 h-48 bg-gfa-gold/5 rounded-bl-full -mr-24 -mt-24 transition-all group-hover:bg-gfa-gold/10"></div>
-                        <div className="relative z-10">
-                          <div className="flex flex-col md:flex-row md:items-center justify-between gap-8 mb-12">
-                            <div className="flex items-center gap-8">
-                              <div className="w-20 h-20 bg-white rounded-[24px] shadow-sm flex items-center justify-center text-gfa-gold group-hover:scale-110 transition-transform duration-500">
-                                {i === 0 ? <Briefcase className="w-10 h-10" /> : i === 1 ? <GraduationCap className="w-10 h-10" /> : <Star className="w-10 h-10" />}
-                              </div>
-                              <div>
-                                <h3 className="text-3xl font-bold text-gfa-inkBlack font-serif leading-tight">{tier.name}</h3>
-                                <div className="text-[10px] font-bold text-gfa-gold uppercase tracking-[0.3em] mt-2">Institutional Tier Level {i + 1}</div>
-                              </div>
+                      <div key={i} className="flex flex-col md:flex-row gap-0 items-stretch bg-gfa-warmWhite rounded-[32px] border border-gfa-border hover:border-gfa-gold/30 hover:shadow-2xl transition-all duration-500 group overflow-hidden">
+                        <div className="md:w-1/3 relative overflow-hidden min-h-[250px]">
+                          <img 
+                            src={
+                              i === 0 ? "https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=1974&auto=format&fit=crop" :
+                              i === 1 ? "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2070&auto=format&fit=crop" :
+                              "https://images.unsplash.com/photo-1542204165-65bf26472b9b?q=80&w=1974&auto=format&fit=crop"
+                            }
+                            alt={tier.name}
+                            className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700"
+                          />
+                          <div className="absolute inset-0 bg-gfa-inkBlack/40 group-hover:bg-gfa-inkBlack/10 transition-colors duration-500"></div>
+                          <div className="absolute top-6 left-6 w-16 h-16 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center text-white border border-white/30 shadow-lg">
+                            {i === 0 ? <Briefcase className="w-8 h-8" /> : i === 1 ? <GraduationCap className="w-8 h-8" /> : <Star className="w-8 h-8" />}
+                          </div>
+                        </div>
+                        <div className="md:w-2/3 p-10 md:p-12 flex flex-col justify-center bg-white relative">
+                          <div className="absolute top-0 right-0 w-32 h-32 bg-gfa-gold/5 rounded-bl-full -mr-16 -mt-16 transition-all group-hover:bg-gfa-gold/10 pointer-events-none"></div>
+                          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8">
+                            <div>
+                              <h3 className="text-3xl font-bold text-gfa-inkBlack font-serif leading-tight">{tier.name}</h3>
+                              <div className="text-[10px] font-bold text-gfa-gold uppercase tracking-[0.3em] mt-2">Institutional Tier Level {i + 1}</div>
                             </div>
-                            <button className="btn-primary h-12 px-8 text-xs">
+                            <button className="btn-primary h-12 px-8 text-xs shrink-0">
                               Apply for Tier
                             </button>
                           </div>
                           
-                          <p className="text-xl text-gfa-slate leading-relaxed font-light mb-12 max-w-3xl opacity-90">
+                          <p className="text-lg text-gfa-slate leading-relaxed font-light mb-10 opacity-90">
                             {tier.desc}
                           </p>
 
                           {tier.detailedBenefits && (
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                               {tier.detailedBenefits.map((benefit: string, j: number) => (
-                                <div key={j} className="flex items-start gap-4 text-base text-gfa-inkBlack font-medium group/benefit">
+                                <div key={j} className="flex items-start gap-4 text-sm text-gfa-inkBlack font-medium group/benefit">
                                   <div className="w-6 h-6 bg-gfa-gold/10 text-gfa-gold rounded-full flex items-center justify-center shrink-0 group-hover/benefit:bg-gfa-gold group-hover/benefit:text-white transition-colors">
                                     <CheckCircle className="w-3.5 h-3.5" />
                                   </div>

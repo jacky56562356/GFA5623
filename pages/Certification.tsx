@@ -173,14 +173,27 @@ const Certification: React.FC = () => {
 
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {(cert.categories || []).map((cat: any, i: number) => (
-                      <div key={i} className="p-10 bg-gfa-warmWhite border border-gfa-border rounded-[32px] hover:border-gfa-gold/30 transition-all hover:shadow-2xl group">
-                        <div className="w-16 h-16 bg-white rounded-2xl shadow-sm flex items-center justify-center text-gfa-gold mb-8 group-hover:scale-110 transition-transform duration-500">
-                          {i === 0 ? <Shield className="w-8 h-8" /> : i === 1 ? <CheckCircle className="w-8 h-8" /> : <Scale className="w-8 h-8" />}
+                      <div key={i} className="relative group rounded-[32px] overflow-hidden border border-gfa-border shadow-sm hover:shadow-2xl transition-all duration-500 h-[400px]">
+                        <div className="absolute inset-0 z-0">
+                          <img 
+                            src={
+                              i === 0 ? "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop" :
+                              i === 1 ? "https://images.unsplash.com/photo-1521791136364-798a730bb361?q=80&w=2070&auto=format&fit=crop" :
+                              "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2011&auto=format&fit=crop"
+                            }
+                            alt={cat.title}
+                            className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-gfa-inkBlack via-gfa-inkBlack/80 to-gfa-inkBlack/40 group-hover:from-gfa-inkBlack group-hover:via-gfa-inkBlack/60 group-hover:to-transparent transition-all duration-500"></div>
                         </div>
-                        <h3 className="text-xl font-bold text-gfa-inkBlack mb-6 font-serif leading-tight">{cat.title}</h3>
-                        <p className="text-sm text-gfa-slate leading-relaxed font-light opacity-80">
-                          {cat.desc}
-                        </p>
+                        
+                        <div className="relative z-10 p-8 h-full flex flex-col justify-end">
+                          <div className="w-14 h-14 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center mb-6 border border-white/20 group-hover:bg-gfa-gold group-hover:border-gfa-gold transition-all duration-500">
+                            {i === 0 ? <Shield className="w-6 h-6 text-white" /> : i === 1 ? <CheckCircle className="w-6 h-6 text-white" /> : <Scale className="w-6 h-6 text-white" />}
+                          </div>
+                          <h3 className="text-2xl font-bold text-white mb-4 font-serif leading-tight">{cat.title}</h3>
+                          <p className="text-white/70 leading-relaxed font-light text-sm">{cat.desc}</p>
+                        </div>
                       </div>
                     ))}
                   </div>

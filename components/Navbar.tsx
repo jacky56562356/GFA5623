@@ -27,6 +27,7 @@ const Navbar: React.FC = () => {
     { name: t.nav.awards, path: '/awards' },
     { name: t.nav.certification, path: '/certification' },
     { name: t.nav.childSafety, path: '/safeguarding' },
+    { name: t.nav.graduateSupport, path: '/career-access' },
     { name: t.nav.membership, path: '/membership' },
     { name: t.nav.contact, path: '/contact' }
   ];

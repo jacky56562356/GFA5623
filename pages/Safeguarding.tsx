@@ -3,32 +3,35 @@ import { useLocale } from '../LocaleContext.tsx';
 import SEO from '../components/SEO.tsx';
 import { 
   Shield, FileText, CheckCircle, AlertCircle, 
-  Scale, BookOpen, Download, Printer, Share2, Info
+  Scale, BookOpen, Heart, Users, Eye, PhoneCall
 } from 'lucide-react';
 
 const Safeguarding: React.FC = () => {
   const { t } = useLocale();
   const sg = t.safeguarding || {};
   const sections = Array.isArray(sg.sections) ? sg.sections : [];
+  const commitment = sg.commitment || { title: "Our Commitment to Youth", desc: "The Global Film Alliance is fundamentally dedicated to ensuring that every young person entering the film industry does so in a safe, nurturing, and highly regulated environment." };
+  const principles = sg.principles || { title: "Core Principles", items: [] };
+  const reporting = sg.reporting || { title: "Report a Concern", desc: "If you have witnessed or experienced a violation of our youth protection standards by any GFA-certified entity, please contact our compliance team immediately. All reports are strictly confidential.", button: "Submit Confidential Report" };
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans pt-[80px] pb-24 relative">
       <SEO title={sg.title || "Youth Protection Framework"} description={sg.subtitle} />
 
       {/* Global Background Image */}
-      <div className="fixed inset-0 z-0 opacity-[0.03] pointer-events-none">
+      <div className="fixed inset-0 z-0 opacity-[0.02] pointer-events-none">
         <img 
-          src="https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=2059&auto=format&fit=crop" 
-          alt="Film Background" 
+          src="https://images.unsplash.com/photo-1529390079861-591de354faf5?q=80&w=2070&auto=format&fit=crop" 
+          alt="Youth Background" 
           className="w-full h-full object-cover"
         />
       </div>
 
       {/* Document Header */}
-      <div className="relative bg-gfa-inkBlack py-32 mb-12 shadow-2xl overflow-hidden">
-        <div className="absolute inset-0 z-0 opacity-20 grayscale">
+      <div className="relative bg-gfa-inkBlack py-32 mb-16 shadow-2xl overflow-hidden">
+        <div className="absolute inset-0 z-0 opacity-30 grayscale">
           <img 
-            src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?q=80&w=2070&auto=format&fit=crop" 
+            src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=2070&auto=format&fit=crop" 
             alt="Header Background" 
             className="w-full h-full object-cover"
           />
@@ -38,12 +41,12 @@ const Safeguarding: React.FC = () => {
         <div className="container-gfa relative z-10 text-center">
           <div className="max-w-4xl mx-auto animate-fade-in">
             <div className="gold-badge mb-8 animate-fade-up">
-              {sg.kicker}
+              {sg.kicker || "GFA Regulatory Standard"}
             </div>
-            <h1 className="text-5xl md:text-8xl font-bold font-serif text-white mb-8 leading-tight drop-shadow-2xl">
+            <h1 className="text-5xl md:text-7xl font-bold font-serif text-white mb-8 leading-tight drop-shadow-2xl">
               {sg.title}
             </h1>
-            <p className="text-xl md:text-2xl text-gfa-gold font-light leading-relaxed max-w-2xl mx-auto italic font-serif animate-fade-up delay-200">
+            <p className="text-xl md:text-2xl text-gfa-gold font-light leading-relaxed max-w-3xl mx-auto italic font-serif animate-fade-up delay-200">
               {sg.subtitle}
             </p>
           </div>
@@ -51,6 +54,51 @@ const Safeguarding: React.FC = () => {
       </div>
 
       <div className="container-gfa relative z-10">
+        
+        {/* Commitment Section (New) */}
+        <section className="mb-24 bg-white rounded-[40px] shadow-xl border border-gfa-border overflow-hidden">
+          <div className="grid grid-cols-1 lg:grid-cols-2">
+            <div className="p-12 md:p-20 flex flex-col justify-center">
+              <div className="w-16 h-16 bg-gfa-gold/10 rounded-2xl flex items-center justify-center text-gfa-gold mb-8">
+                <Heart className="w-8 h-8" />
+              </div>
+              <h2 className="text-4xl font-bold font-serif text-gfa-inkBlack mb-8">{commitment.title}</h2>
+              <p className="text-xl text-gfa-slate leading-relaxed font-light italic border-l-4 border-gfa-gold/30 pl-6">
+                "{commitment.desc}"
+              </p>
+            </div>
+            <div className="grid grid-cols-2 gap-4 p-8 bg-gfa-warmWhite">
+              <div className="space-y-4">
+                <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=2069&auto=format&fit=crop" alt="Youth" className="w-full h-48 object-cover rounded-2xl shadow-md" />
+                <img src="https://images.unsplash.com/photo-1604928141064-207cea6f5722?q=80&w=2070&auto=format&fit=crop" alt="Filming" className="w-full h-64 object-cover rounded-2xl shadow-md" />
+              </div>
+              <div className="space-y-4 pt-12">
+                <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=2070&auto=format&fit=crop" alt="Mentorship" className="w-full h-64 object-cover rounded-2xl shadow-md" />
+                <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=2070&auto=format&fit=crop" alt="Community" className="w-full h-48 object-cover rounded-2xl shadow-md" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Core Principles (New) */}
+        <section className="mb-24">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold font-serif text-gfa-inkBlack mb-4">{principles.title}</h2>
+            <div className="h-1 w-24 bg-gfa-gold mx-auto rounded-full"></div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {(principles.items || []).map((item: any, i: number) => (
+              <div key={i} className="bg-white p-10 rounded-[32px] border border-gfa-border shadow-sm hover:shadow-xl hover:border-gfa-gold/30 transition-all group text-center">
+                <div className="w-20 h-20 mx-auto bg-gfa-warmWhite rounded-full flex items-center justify-center text-gfa-gold mb-8 group-hover:bg-gfa-gold group-hover:text-white transition-colors">
+                  {i === 0 ? <Shield className="w-10 h-10" /> : i === 1 ? <BookOpen className="w-10 h-10" /> : <Scale className="w-10 h-10" />}
+                </div>
+                <h3 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-4">{item.title}</h3>
+                <p className="text-gfa-slate leading-relaxed font-light">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
           
           {/* Sidebar Navigation */}
@@ -89,7 +137,7 @@ const Safeguarding: React.FC = () => {
 
           {/* Main Document Content */}
           <main className="lg:col-span-9">
-            <div className="bg-white border border-gfa-border rounded-[40px] shadow-2xl overflow-hidden">
+            <div className="bg-white border border-gfa-border rounded-[40px] shadow-2xl overflow-hidden mb-16">
               
               {/* Document Metadata Strip */}
               <div className="bg-gfa-warmWhite border-b border-gfa-border px-10 py-6 flex flex-wrap gap-12 text-[10px] font-bold uppercase tracking-widest text-gfa-slate">
@@ -120,7 +168,7 @@ const Safeguarding: React.FC = () => {
                             0{i + 1}
                           </div>
                           <div className="pt-2">
-                            <h2 className="text-4xl font-bold font-serif text-gfa-inkBlack mb-4 leading-tight">
+                            <h2 className="text-3xl md:text-4xl font-bold font-serif text-gfa-inkBlack mb-4 leading-tight">
                               {section.title}
                             </h2>
                             <div className="h-1 w-24 bg-gfa-gold rounded-full"></div>
@@ -151,9 +199,15 @@ const Safeguarding: React.FC = () => {
                       <div className="w-full md:w-80 shrink-0">
                         <div className="aspect-[3/4] rounded-[32px] overflow-hidden shadow-2xl border-[12px] border-gfa-warmWhite group">
                           <img 
-                            src={`https://picsum.photos/seed/gfa-safeguard-${i}/600/800`} 
+                            src={
+                              i === 0 ? "https://images.unsplash.com/photo-1529390079861-591de354faf5?q=80&w=2070&auto=format&fit=crop" :
+                              i === 1 ? "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2022&auto=format&fit=crop" :
+                              i === 2 ? "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2011&auto=format&fit=crop" :
+                              i === 3 ? "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2070&auto=format&fit=crop" :
+                              "https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=2070&auto=format&fit=crop"
+                            } 
                             alt={section.title}
-                            className="w-full h-full object-cover grayscale opacity-80 group-hover:scale-110 transition-transform duration-1000"
+                            className="w-full h-full object-cover grayscale opacity-80 group-hover:scale-110 group-hover:grayscale-0 transition-all duration-1000"
                           />
                         </div>
                       </div>
@@ -190,27 +244,25 @@ const Safeguarding: React.FC = () => {
               </div>
             </div>
 
-            {/* Bottom Call to Action */}
-            <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white p-10 rounded-[32px] border border-gfa-border shadow-xl flex items-center gap-8 group hover:border-gfa-gold transition-all cursor-pointer">
-                <div className="w-16 h-16 bg-gfa-warmWhite rounded-2xl flex items-center justify-center text-gfa-slate group-hover:bg-gfa-gold group-hover:text-white transition-all duration-500">
-                  <Scale className="w-8 h-8" />
+            {/* Reporting Section (New) */}
+            <div className="bg-gfa-inkBlack text-white rounded-[40px] p-12 md:p-16 relative overflow-hidden shadow-2xl">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-red-500/10 rounded-full blur-[80px] pointer-events-none"></div>
+              <div className="relative z-10 flex flex-col md:flex-row items-center gap-12">
+                <div className="w-24 h-24 bg-red-500/20 rounded-full flex items-center justify-center text-red-400 shrink-0">
+                  <PhoneCall className="w-10 h-10" />
                 </div>
-                <div>
-                  <h4 className="text-xl font-bold text-gfa-inkBlack font-serif">Reporting Portal</h4>
-                  <p className="text-sm text-gfa-slate font-light">Lodge a confidential safeguarding report.</p>
-                </div>
-              </div>
-              <div className="bg-white p-10 rounded-[32px] border border-gfa-border shadow-xl flex items-center gap-8 group hover:border-gfa-gold transition-all cursor-pointer">
-                <div className="w-16 h-16 bg-gfa-warmWhite rounded-2xl flex items-center justify-center text-gfa-slate group-hover:bg-gfa-gold group-hover:text-white transition-all duration-500">
-                  <BookOpen className="w-8 h-8" />
-                </div>
-                <div>
-                  <h4 className="text-xl font-bold text-gfa-inkBlack font-serif">Resource Library</h4>
-                  <p className="text-sm text-gfa-slate font-light">Access implementation guides and templates.</p>
+                <div className="flex-grow">
+                  <h3 className="text-3xl font-bold font-serif mb-4">{reporting.title}</h3>
+                  <p className="text-white/70 leading-relaxed font-light mb-8 max-w-2xl">
+                    {reporting.desc}
+                  </p>
+                  <button className="bg-red-500 hover:bg-red-600 text-white font-bold uppercase text-xs tracking-[0.2em] py-4 px-8 rounded-xl transition-colors">
+                    {reporting.button}
+                  </button>
                 </div>
               </div>
             </div>
+
           </main>
         </div>
       </div>

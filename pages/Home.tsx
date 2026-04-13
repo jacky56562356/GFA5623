@@ -106,7 +106,7 @@ const Home = () => {
             </div>
             <div className="relative">
               <div className="aspect-[4/5] rounded-card overflow-hidden shadow-2xl border-[12px] border-white rotate-2 hover:rotate-0 transition-transform duration-700 group">
-                <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?q=80&w=2070&auto=format&fit=crop" alt="Industry Standards" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" />
+                <img src="https://i.ibb.co/S4QYV7vn/a.png" alt="Industry Standards" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" />
                 <div className="absolute inset-0 bg-gfa-gold/10 group-hover:bg-transparent transition-colors"></div>
               </div>
               <div className="absolute -bottom-12 -left-12 bg-gfa-inkBlack text-white p-10 rounded-card shadow-2xl hidden md:block max-w-xs animate-float">
@@ -186,15 +186,32 @@ const Home = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {(framework.items || []).map((item: any, i: number) => (
-              <div key={i} className="card-standard group">
-                <div className="w-16 h-16 bg-gfa-warmWhite rounded-2xl flex items-center justify-center mb-8 group-hover:bg-gfa-gold transition-all duration-500 shadow-inner">
-                  {i === 0 ? <Globe className="w-8 h-8 text-gfa-gold group-hover:text-white" /> : 
-                   i === 1 ? <Shield className="w-8 h-8 text-gfa-gold group-hover:text-white" /> : 
-                   i === 2 ? <Lock className="w-8 h-8 text-gfa-gold group-hover:text-white" /> : 
-                   <Search className="w-8 h-8 text-gfa-gold group-hover:text-white" />}
+              <div key={i} className="relative group rounded-[32px] overflow-hidden border border-gfa-border shadow-sm hover:shadow-2xl transition-all duration-500 h-[400px]">
+                {/* Background Image per card */}
+                <div className="absolute inset-0 z-0">
+                  <img 
+                    src={
+                      i === 0 ? "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop" :
+                      i === 1 ? "https://images.unsplash.com/photo-1521791136364-798a730bb361?q=80&w=2070&auto=format&fit=crop" :
+                      i === 2 ? "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2011&auto=format&fit=crop" :
+                      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop"
+                    } 
+                    alt={item.title}
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-gfa-inkBlack via-gfa-inkBlack/80 to-gfa-inkBlack/40 group-hover:from-gfa-inkBlack group-hover:via-gfa-inkBlack/60 group-hover:to-transparent transition-all duration-500"></div>
                 </div>
-                <h3 className="text-2xl font-bold text-gfa-inkBlack mb-4 font-serif leading-tight">{item.title}</h3>
-                <p className="text-gfa-slate leading-relaxed font-light">{item.desc}</p>
+                
+                <div className="relative z-10 p-8 h-full flex flex-col justify-end">
+                  <div className="w-14 h-14 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center mb-6 border border-white/20 group-hover:bg-gfa-gold group-hover:border-gfa-gold transition-all duration-500">
+                    {i === 0 ? <Globe className="w-6 h-6 text-white" /> : 
+                     i === 1 ? <Shield className="w-6 h-6 text-white" /> : 
+                     i === 2 ? <Lock className="w-6 h-6 text-white" /> : 
+                     <Search className="w-6 h-6 text-white" />}
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-4 font-serif leading-tight">{item.title}</h3>
+                  <p className="text-white/70 leading-relaxed font-light text-sm">{item.desc}</p>
+                </div>
               </div>
             ))}
           </div>

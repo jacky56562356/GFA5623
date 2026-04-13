@@ -222,10 +222,47 @@ export const DICTIONARIES: Record<Locale, Translation> = {
       },
       cta: { title: "Apply for Institutional Accreditation", body: "Begin the 90-day verification process to align your organization with global professional standards and gain access to the GFA ecosystem.", button: "Initiate Audit Process" } 
     },
+    careerAccess: {
+      title: "Professional Industry Program",
+      subtitle: "Supporting the next generation of film professionals through mentorship, funding, and project matchmaking.",
+      intro: "GFA is committed to bridging the gap between academic training and professional success. We provide tangible support for emerging filmmakers, ensuring that talent, not financial background, determines industry access.",
+      pillars: {
+        mentorship: { title: "Industry Mentorship", body: "Direct guidance from established Hollywood professionals and certified GFA members." },
+        funding: { title: "Production Funding", body: "Financial grants specifically designed to support first-time commercial projects and youth-led productions." },
+        placement: { title: "Career Placement", body: "Direct matchmaking with GFA-certified studios, agencies, and production companies." }
+      },
+      inquiryTitle: "Submit an Inquiry",
+      cta: "Submit Request",
+      inquiryNote: "All applications are reviewed by the GFA Professional Development Committee."
+    },
+    graduatePathways: [
+      { id: "01", t: "Youth Film Participation", d: "Community-based programs bringing professional Hollywood resources to young creators." },
+      { id: "02", t: "Low-Income Scholarship", d: "Tuition waivers and IMDb verification for children from economically disadvantaged families." },
+      { id: "03", t: "First Commercial Work", d: "Funding, equipment, and mentorship for graduates completing their debut commercial project." },
+      { id: "04", t: "Emerging Filmmaker Support", d: "Career development, festival exhibition, and distribution support for new directors and writers." },
+      { id: "05", t: "Employment Docking", d: "Internship recommendations and direct job placement with GFA-certified industry partners." }
+    ],
     safeguarding: {
       title: "Youth Protection Framework",
       kicker: "GFA Regulatory Standard",
       subtitle: "GFA establishes minimum compliance standards for organizations working with minors in the film industry.",
+      commitment: {
+        title: "Our Commitment to Youth",
+        desc: "The Global Film Alliance is fundamentally dedicated to ensuring that every young person entering the film industry does so in a safe, nurturing, and highly regulated environment. We believe that artistic expression should never come at the cost of a child's well-being or financial exploitation."
+      },
+      principles: {
+        title: "Core Principles",
+        items: [
+          { title: "Prevention", desc: "Proactive screening and strict compliance standards for all certified partners." },
+          { title: "Education", desc: "Empowering parents and youth with industry knowledge and legal rights." },
+          { title: "Accountability", desc: "Immediate investigation and revocation of certification for any violations." }
+        ]
+      },
+      reporting: {
+        title: "Report a Concern",
+        desc: "If you have witnessed or experienced a violation of our youth protection standards by any GFA-certified entity, please contact our compliance team immediately. All reports are strictly confidential.",
+        button: "Submit Confidential Report"
+      },
       sections: [
         {
           title: "1. Audition Transparency Requirements",
@@ -595,10 +632,47 @@ export const DICTIONARIES: Record<Locale, Translation> = {
       },
       cta: { title: "申请机构认证", body: "开始为期 90 天的验证过程，使您的组织与全球专业标准保持一致，并获得 GFA 生态系统的访问权限。", button: "启动审计流程" } 
     },
+    careerAccess: {
+      title: "行业专业扶持计划",
+      subtitle: "通过导师指导、资金支持和项目对接，扶持下一代电影专业人才。",
+      intro: "GFA 致力于弥合学院培训与职业成功之间的鸿沟。我们为新兴电影人提供切实的行业支持，确保决定行业准入的是才华，而不是经济背景。",
+      pillars: {
+        mentorship: { title: "行业导师制度", body: "由资深好莱坞专业人士和 GFA 认证会员提供直接的职业指导。" },
+        funding: { title: "制作资金支持", body: "专门为支持首次商业项目和青少年主导的制作而设立的资金补助。" },
+        placement: { title: "职业安置与对接", body: "与 GFA 认证的制片厂、经纪公司和制作公司进行直接的就业对接。" }
+      },
+      inquiryTitle: "提交申请意向",
+      cta: "提交申请",
+      inquiryNote: "所有申请均由 GFA 职业发展委员会进行审核。"
+    },
+    graduatePathways: [
+      { id: "01", t: "青少年电影参与", d: "深入社区的项目，将专业的好莱坞资源带给年轻创作者。" },
+      { id: "02", t: "低收入家庭奖学金", d: "为经济困难家庭的儿童提供学费减免和官方 IMDb 身份认证。" },
+      { id: "03", t: "首部商业作品扶持", d: "为毕业生完成首部商业作品提供资金、设备和导师支持。" },
+      { id: "04", t: "新兴电影人发展", d: "为新锐导演和编剧提供职业发展、电影节参展和发行支持。" },
+      { id: "05", t: "行业就业对接", d: "提供实习推荐，并与 GFA 认证的行业合作伙伴进行直接的职位对接。" }
+    ],
     safeguarding: {
       title: "青少年保护框架 (Youth Protection Framework)",
       kicker: "GFA 合规标准",
       subtitle: "GFA 为电影行业中涉及未成年人的组织制定了最低合规标准。",
+      commitment: {
+        title: "我们对青少年的承诺",
+        desc: "全球电影联盟 (GFA) 的根本宗旨是确保每一位进入电影行业的年轻人都处于一个安全、充满关爱且受到严格监管的环境中。我们坚信，艺术表达绝不能以牺牲儿童的福祉或进行财务剥削为代价。"
+      },
+      principles: {
+        title: "核心原则",
+        items: [
+          { title: "预防为主", desc: "对所有认证合作伙伴进行主动筛查和严格的合规标准约束。" },
+          { title: "教育赋能", desc: "向家长和青少年普及行业知识和合法权益。" },
+          { title: "问责机制", desc: "对任何违规行为进行立即调查，并撤销其认证资格。" }
+        ]
+      },
+      reporting: {
+        title: "报告违规行为",
+        desc: "如果您目睹或经历了任何 GFA 认证实体违反我们青少年保护标准的行为，请立即联系我们的合规团队。所有报告都将严格保密。",
+        button: "提交保密报告"
+      },
       sections: [
         {
           title: "1. 试镜透明度要求",
