@@ -9,7 +9,7 @@ const Membership: React.FC = () => {
   const m = t.membership || {};
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans pt-[80px] pb-24 relative">
+    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans pt-[80px] pb-16 relative">
       <SEO title={m.title || "Membership Structure"} description={m.subtitle} />
 
       {/* Global Background Image */}
@@ -22,7 +22,7 @@ const Membership: React.FC = () => {
       </div>
 
       {/* Document Header */}
-      <div className="relative bg-gfa-inkBlack py-32 mb-12 shadow-2xl overflow-hidden">
+      <div className="relative bg-gfa-inkBlack py-16 mb-12 shadow-2xl overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-20 grayscale">
           <img 
             src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop" 
@@ -48,7 +48,7 @@ const Membership: React.FC = () => {
       </div>
 
       <div className="container-gfa relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           
           {/* Sidebar Navigation */}
           <aside className="lg:col-span-3 hidden lg:block">
@@ -105,10 +105,10 @@ const Membership: React.FC = () => {
                 </div>
               </div>
 
-              <div className="p-10 md:p-20 space-y-32">
+              <div className="p-8 md:p-12 space-y-16">
                 {/* Structure */}
                 <section id="structure" className="scroll-mt-24">
-                  <div className="flex items-start gap-8 mb-16">
+                  <div className="flex items-start gap-8 mb-10">
                     <div className="w-16 h-16 bg-gfa-warmWhite border border-gfa-border rounded-2xl flex items-center justify-center text-2xl font-serif text-gfa-gold shrink-0 shadow-inner">
                       01
                     </div>
@@ -139,7 +139,7 @@ const Membership: React.FC = () => {
                           </div>
                         </div>
                         <div className="md:w-2/3 p-10 md:p-12 flex flex-col justify-center bg-white relative">
-                          <div className="absolute top-0 right-0 w-32 h-32 bg-gfa-gold/5 rounded-bl-full -mr-16 -mt-16 transition-all group-hover:bg-gfa-gold/10 pointer-events-none"></div>
+                          <div className="absolute top-0 right-0 w-32 h-32 bg-gfa-gold/5 rounded-bl-full -mr-16 -mt-10 transition-all group-hover:bg-gfa-gold/10 pointer-events-none"></div>
                           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8">
                             <div>
                               <h3 className="text-3xl font-bold text-gfa-inkBlack font-serif leading-tight">{tier.name}</h3>
@@ -174,7 +174,7 @@ const Membership: React.FC = () => {
 
                 {/* Benefits */}
                 <section id="benefits" className="scroll-mt-24">
-                  <div className="flex items-start gap-8 mb-16">
+                  <div className="flex items-start gap-8 mb-10">
                     <div className="w-16 h-16 bg-gfa-warmWhite border border-gfa-border rounded-2xl flex items-center justify-center text-2xl font-serif text-gfa-gold shrink-0 shadow-inner">
                       02
                     </div>

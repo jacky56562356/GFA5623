@@ -9,7 +9,7 @@ const Governance: React.FC = () => {
   const gov = t.governance;
 
   return (
-    <div className="bg-gfa-warmWhite pt-48 pb-32 px-6 min-h-screen relative overflow-hidden">
+    <div className="bg-gfa-warmWhite pt-32 pb-16 px-6 min-h-screen relative overflow-hidden">
       <SEO 
         title={gov.title || "Governance Charter"} 
         description={gov.subtitle || "Guided by a multi-national board dedicated to cinematic ethics."} 
@@ -20,7 +20,7 @@ const Governance: React.FC = () => {
 
       <div className="container-gfa relative z-10">
         {/* Header */}
-        <header className="mb-32 text-center max-w-4xl mx-auto animate-fade-in">
+        <header className="mb-10 text-center max-w-4xl mx-auto animate-fade-in">
           <div className="gold-badge mb-10 animate-fade-up">Institutional Transparency</div>
           <h1 className="text-5xl md:text-8xl font-bold font-serif text-gfa-inkBlack mb-12 leading-tight drop-shadow-sm">
             {gov.title}
@@ -31,7 +31,7 @@ const Governance: React.FC = () => {
         </header>
 
         {/* Main Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-20">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
           <aside className="lg:col-span-4 space-y-12">
             <div className="sticky top-32 bg-white p-12 rounded-[40px] shadow-2xl border border-gfa-border animate-fade-up">
               <h3 className="text-xl font-bold font-serif mb-10 border-b border-gfa-border pb-6 text-gfa-inkBlack">Official Documents</h3>
@@ -62,7 +62,7 @@ const Governance: React.FC = () => {
             </div>
           </aside>
 
-          <main className="lg:col-span-8 space-y-32">
+          <main className="lg:col-span-8 space-y-16">
             {/* Charter Summary */}
             <section className="animate-fade-up">
               <h2 className="text-4xl font-bold font-serif mb-12 text-gfa-inkBlack leading-tight">{gov.summaryTitle}</h2>
@@ -77,7 +77,7 @@ const Governance: React.FC = () => {
             {/* Board Structure */}
             <section className="animate-fade-up delay-200">
               <h2 className="text-4xl font-bold font-serif mb-12 text-gfa-inkBlack leading-tight">{gov.roleTitle}</h2>
-              <p className="text-xl text-gfa-slate mb-16 leading-relaxed font-light font-serif italic opacity-80">
+              <p className="text-xl text-gfa-slate mb-10 leading-relaxed font-light font-serif italic opacity-80">
                 {gov.roleBody}
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -95,7 +95,7 @@ const Governance: React.FC = () => {
             <section className="bg-gfa-inkBlack text-white p-16 md:p-24 rounded-[48px] relative overflow-hidden shadow-2xl animate-fade-up delay-300">
               <div className="absolute top-0 right-0 w-96 h-96 bg-gfa-gold/10 blur-[100px] -mr-48 -mt-48"></div>
               <h2 className="text-4xl font-bold font-serif mb-12 text-gfa-gold leading-tight">Supportive Framework</h2>
-              <p className="text-xl leading-relaxed mb-16 opacity-70 font-light italic font-serif">
+              <p className="text-xl leading-relaxed mb-10 opacity-70 font-light italic font-serif">
                 The GFA Charter is a voluntary commitment. Participation signals an organization's dedication to professional safety and structural transparency without replacing statutory legal obligations.
               </p>
               <div className="flex flex-col sm:flex-row gap-8">

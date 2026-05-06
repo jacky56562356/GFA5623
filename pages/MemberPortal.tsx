@@ -25,7 +25,7 @@ const MemberPortal = () => {
   const mp = t.memberPortal;
 
   return (
-    <div className="bg-gfa-warmWhite pt-32 pb-32 px-6 min-h-screen font-sans">
+    <div className="bg-gfa-warmWhite pt-32 pb-16 px-6 min-h-screen font-sans">
       <div className="container-gfa max-w-7xl mx-auto">
         
         {/* Header */}

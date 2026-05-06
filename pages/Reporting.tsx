@@ -6,9 +6,9 @@ const Reporting: React.FC = () => {
   const r = t.reporting;
 
   return (
-    <div className="bg-gfa-warmWhite pt-40 pb-32 px-6 min-h-screen">
+    <div className="bg-gfa-warmWhite pt-40 pb-16 px-6 min-h-screen">
       <div className="container-gfa">
-        <header className="mb-24 text-center max-w-4xl mx-auto">
+        <header className="mb-12 text-center max-w-4xl mx-auto">
           <span className="gold-badge mb-8">Statutory Ethics Channel</span>
           <h1 className="text-4xl md:text-5xl font-bold font-serif text-gfa-inkBlack mb-10 leading-tight">
             {r.title}
@@ -21,7 +21,7 @@ const Reporting: React.FC = () => {
           </div>
         </header>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-20">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
           <div className="lg:col-span-2">
             <form 
               className="bg-white p-12 border border-gfa-border shadow-sm rounded-card space-y-8" 

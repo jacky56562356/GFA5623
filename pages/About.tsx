@@ -1,357 +1,277 @@
-
 import React from 'react';
 import { useLocale } from '../LocaleContext.tsx';
-import { Link } from 'react-router-dom';
-import { Shield, Globe, Award, Play, ArrowRight } from 'lucide-react';
+import { Locale } from '../types.ts';
 import SEO from '../components/SEO.tsx';
+import { Quote, Heart, Users, Target } from 'lucide-react';
 
 const About: React.FC = () => {
-  const { t } = useLocale();
-  // Safe defaults
-  const a = t.about || {};
-  const hero = a.hero || {};
-  const mission = a.mission || {};
-  const vision = a.vision || {};
-  const who = a.whoWeAre || {};
-  const what = a.whatWeDo || {};
-  const cert = a.certification || {};
-  const youth = a.youthProtection || {};
-  const support = a.support || {};
-  const network = a.network || {};
-  const gov = a.governance || {};
-  const impact = a.impact || {};
-  const framework = a.framework || {};
-  const coreMissions = a.coreMissions || {};
-  const awards = a.awards || {};
-  const distribution = a.distribution || {};
-  const cta = a.cta || {};
-  const ui = a.ui || {
-    mapPlaceholder: "[ Map ]",
-    buttons: {},
-    kickers: {},
-    badges: {}
-  };
-  const btns = ui.buttons || {};
+  const { locale } = useLocale();
+  const isEn = locale === Locale.EN;
 
   return (
-    <div className="bg-gfa-warmWhite min-h-screen">
-      <SEO 
-        title={hero.title || "About GFA"} 
-        description={mission.body || "To provide an independent framework for professional recognition and youth protection in the film industry."} 
-      />
+    <div className="font-sans pb-16">
+      <SEO title="About | Global Film Alliance" />
 
-      {/* 1. HERO - Light Professional Background */}
-      <section className="relative pt-48 pb-40 px-6 text-center overflow-hidden bg-white border-b border-gfa-border">
-        {/* Subtle Pattern */}
-        <div className="absolute inset-0 z-0 opacity-5 bg-[url('https://www.transparenttextures.com/patterns/graphy.png')]"></div>
-        
-        {/* Abstract Background Element */}
-        <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none z-0">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-gfa-gold/40 rounded-full animate-[spin_60s_linear_infinite]"></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-gfa-inkBlack/10 rounded-full"></div>
+      {/* Banner */}
+      <section className="relative h-[40vh] min-h-[400px] flex items-center justify-center overflow-hidden bg-gfa-inkBlack mt-[90px] md:mt-[100px]">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://images.unsplash.com/photo-1542204165-65bf26472b9b?q=80&w=1974&auto=format&fit=crop" 
+            alt="Founders and Team" 
+            className="w-full h-full object-cover opacity-30 mix-blend-luminosity" 
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-gfa-inkBlack via-gfa-inkBlack/50 to-transparent"></div>
         </div>
 
-        <div className="container-gfa relative z-10">
-          <div className="gold-badge mb-8 animate-fade-in">
-            {hero.kicker}
-          </div>
-          <h1 className="text-5xl md:text-8xl font-bold font-serif text-gfa-inkBlack mb-8 leading-tight animate-fade-up">
-            {hero.title}
+        <div className="container-gfa relative z-10 text-center px-4">
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold font-serif text-white mb-6 leading-tight drop-shadow-2xl">
+            {isEn ? "Who We Are &" : "我们是谁，"}<br/>
+            <span className="text-[#C9A84C]">{isEn ? "Why We Exist" : "我们为什么存在"}</span>
           </h1>
-          <p className="text-xl md:text-2xl text-gfa-gold font-light leading-relaxed max-w-4xl mx-auto italic font-serif animate-fade-up delay-200">
-            {hero.subtitle}
+        </div>
+      </section>
+
+      {/* Founder's Statement */}
+      <section className="py-6 md:py-8 bg-white relative">
+        <div className="container-gfa max-w-4xl mx-auto px-4">
+          <div className="relative bg-[#F5F2EE] rounded-2xl p-5 md:p-6 shadow-sm border border-[#C9A84C]/20">
+            <Quote className="absolute top-4 left-4 w-8 h-8 text-[#C9A84C]/20 -rotate-6" />
+            <div className="relative z-10">
+              <h2 className="text-xs font-bold text-[#C9A84C] uppercase tracking-widest mb-4 border-b border-[#C9A84C]/20 pb-2 inline-block">
+                {isEn ? "A Message From Our Founder" : "创始人致辞"}
+              </h2>
+              
+              <div className="space-y-4 text-lg md:text-xl font-serif text-gfa-inkBlack leading-relaxed italic mb-8">
+                {isEn ? (
+                  <>
+                    <p>"Working in the film industry for years, I've seen too many talented filmmakers leave because of invisible barriers—not because they weren't good enough, but because they didn't have a camera, didn't have someone to open that door, didn't have a platform willing to believe in them."</p>
+                    <p>"GFA was born from a simple belief: talent is everywhere, but opportunity has never been equally distributed. We do not believe a closed door should be the end of anyone's cinematic dream. We want to be the place that helps them push that door open—providing the equipment, mentors, and resources they need to truly enter this industry."</p>
+                    <p>"Real change takes time, and it needs to start from the source. That is why we are simultaneously doing another thing: from the moment a child first picks up a camera, we are by their side. We accompany them through the entire journey—from the classroom to the set, from a dream to a career."</p>
+                  </>
+                ) : (
+                  <>
+                    <p>“在影视行业工作多年，我目睹了太多有才华的电影人因为一道道看不见的门槛而离开这个行业——不是因为他们不够好，而是因为他们没有一台摄影机，没有一个能推开那扇门的人，没有一个愿意相信他们的平台。”</p>
+                    <p>“GFA的诞生，源于一个简单的信念：才华无处不在，但机会从来不是均等分配的。我们不相信一扇关闭的门应该成为任何人电影梦的终点。我们要成为那个帮他们推开门的地方——提供他们需要的设备、导师和资源，让他们真正走进这个行业。”</p>
+                    <p>“真正的改变需要时间，也需要从源头开始。所以我们同时在做另一件事：从孩子第一次拿起摄影机的那一刻，我们就在他们身边。我们陪伴他们走过整个旅程——从教室到片场，从梦想到职业。”</p>
+                  </>
+                )}
+              </div>
+
+              <div className="flex items-center gap-4">
+                <div className="w-16 h-16 rounded-full bg-gray-300 overflow-hidden border-2 border-[#C9A84C]">
+                  {/* Image placeholder for Jack Liu */}
+                  <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=256&auto=format&fit=crop" alt="Jack Liu" className="w-full h-full object-cover" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold font-serif text-gfa-inkBlack">Jack Liu</h3>
+                  <p className="text-sm text-gfa-slate font-bold uppercase tracking-widest">{isEn ? "Founder & Program Director" : "创始人 & 项目总监"}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Organization Introduction */}
+      <section className="py-6 md:py-8 bg-white border-t border-gfa-border">
+        <div className="container-gfa max-w-5xl mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center">
+            <div className="space-y-4 text-sm md:text-base font-light text-gfa-slate leading-relaxed">
+              <div>
+                <h3 className="text-xl font-bold font-serif text-gfa-inkBlack mb-3">
+                  {isEn ? "About Global Film Alliance" : "关于全球电影联盟"}
+                </h3>
+                <p>
+                  {isEn 
+                    ? "Global Film Alliance (GFA) is a 501(c)(3) nonprofit organization headquartered in Los Angeles, California. We believe that barriers to the film industry should be determined by nothing beyond talent — not family background, not personal connections, and not financial resources." 
+                    : "全球电影联盟（Global Film Alliance，简称GFA）是一家总部位于加利福尼亚州洛杉矶的501(c)(3)认证非营利组织。我们相信，电影行业的壁垒不应该由才华之外的任何因素决定——不是家庭背景，不是人脉关系，也不是资金多寡。"}
+                </p>
+                <p className="mt-6">
+                  {isEn
+                    ? "Our work spans two core directions: providing systematic career support for film graduates and emerging directors, and nurturing the next generation of creators through youth film education."
+                    : "我们的工作覆盖两个核心方向：为电影专业毕业生和新晋导演提供系统性的就业扶持，以及通过青少年影视教育为下一代创作者播下梦想的种子。"}
+                </p>
+              </div>
+            </div>
+
+            <div className="flex justify-center items-center">
+              <div className="rounded-2xl overflow-hidden shadow-lg border border-gfa-border w-1/2">
+                 <img 
+                   src="https://i.ibb.co/prw8Q6Rh/converted-image.jpg" 
+                   alt="GFA Mission" 
+                   className="w-full h-auto object-cover" 
+                 />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Mission */}
+      <section className="py-6 md:py-8 bg-[#F5F2EE]">
+        <div className="container-gfa max-w-4xl mx-auto px-4 text-center">
+          <h2 className="text-xl md:text-2xl font-bold font-serif text-gfa-inkBlack mb-4">
+            {isEn ? "Our Mission" : "我们的使命"}
+          </h2>
+          <p className="text-sm md:text-base text-gfa-slate font-light leading-relaxed mx-auto">
+            {isEn
+              ? "Global Film Alliance is dedicated to dismantling the systemic barriers that prevent talented individuals from building careers in film. We provide film graduates and emerging directors with the equipment, mentorship, distribution access, and funding support they need to enter the professional industry. In parallel, our youth education programs create a structured pathway into film for young people from all backgrounds."
+              : "全球电影联盟致力于消除电影行业中系统性的就业壁垒，为电影专业毕业生和新晋导演提供进入好莱坞职业体系所需的设备、导师网络、发行渠道和资金支持。与此同时，我们通过系统性的青少年影视教育项目，为来自多元背景的年轻人开辟一条通往电影行业的成长路径。"}
           </p>
         </div>
       </section>
 
-      {/* 1.5 CORE MISSIONS */}
-      <section className="py-32 px-6 bg-white relative border-b border-gfa-border overflow-hidden">
-        <div className="absolute inset-0 z-0 opacity-[0.02] pointer-events-none">
-          <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=2059&auto=format&fit=crop" alt="Film Background" className="w-full h-full object-cover" />
-        </div>
-        <div className="container-gfa relative z-10">
-          <div className="text-center mb-20">
-            <div className="gold-badge mb-4">Institutional Foundation</div>
-            <h2 className="text-4xl md:text-5xl font-bold font-serif text-gfa-inkBlack mb-8">{coreMissions.title}</h2>
-            <p className="text-gfa-slate max-w-4xl mx-auto text-lg font-light leading-relaxed mb-8">{coreMissions.intro}</p>
-            <p className="text-2xl font-serif italic text-gfa-gold">{coreMissions.subtitle}</p>
+      {/* Who We Serve */}
+      <section className="py-6 md:py-8 bg-white">
+        <div className="container-gfa max-w-6xl mx-auto px-4">
+          <div className="text-center mb-6">
+            <h2 className="text-xl md:text-2xl font-bold font-serif text-gfa-inkBlack">
+              {isEn ? "Who We Serve" : "我们服务的人群"}
+            </h2>
           </div>
-          
-          <div className="space-y-8 max-w-5xl mx-auto">
-            {(coreMissions.items || []).map((item: any, i: number) => (
-              <div key={i} className="flex flex-col md:flex-row gap-0 items-stretch bg-gfa-warmWhite rounded-[32px] border border-gfa-border hover:border-gfa-gold/30 hover:shadow-2xl transition-all duration-500 group overflow-hidden">
-                <div className="md:w-1/3 relative overflow-hidden min-h-[200px]">
-                  <img 
-                    src={
-                      i === 0 ? "https://images.unsplash.com/photo-1604928141064-207cea6f5722?q=80&w=2070&auto=format&fit=crop" :
-                      i === 1 ? "https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=2070&auto=format&fit=crop" :
-                      i === 2 ? "https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=2059&auto=format&fit=crop" :
-                      i === 3 ? "https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=2025&auto=format&fit=crop" :
-                      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop"
-                    }
-                    alt={item.title}
-                    className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700"
-                  />
-                  <div className="absolute inset-0 bg-gfa-inkBlack/40 group-hover:bg-gfa-inkBlack/10 transition-colors duration-500"></div>
-                  <div className="absolute top-6 left-6 w-12 h-12 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center text-white border border-white/30 shadow-lg">
-                    <span className="font-serif font-bold text-xl">0{i + 1}</span>
-                  </div>
-                </div>
-                <div className="md:w-2/3 p-10 md:p-12 flex flex-col justify-center bg-white">
-                  <h3 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-4 group-hover:text-gfa-gold transition-colors">{item.title}</h3>
-                  <p className="text-gfa-slate leading-relaxed font-light opacity-90">{item.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 2. MISSION & VISION */}
-      <section className="py-32 px-6 relative bg-gfa-warmWhite">
-        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/graphy.png')] opacity-5"></div>
-        <div className="container-gfa grid grid-cols-1 md:grid-cols-2 gap-12 relative z-10">
-          <div className="bg-white p-12 md:p-16 rounded-[32px] shadow-xl border border-gfa-border hover:border-gfa-gold/30 transition-all group">
-            <div className="w-16 h-16 bg-gfa-gold/10 rounded-2xl flex items-center justify-center text-gfa-gold mb-8 group-hover:bg-gfa-gold group-hover:text-white transition-all">
-              <Shield className="w-8 h-8" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="bg-gray-50 rounded-xl p-5 border border-gray-100 hover:border-[#C9A84C]/30 transition-colors">
+              <h3 className="text-base md:text-lg font-bold font-serif text-gfa-inkBlack mb-2">
+                {isEn ? "Film School Graduates" : "电影专业毕业生"}
+              </h3>
+              <p className="text-sm text-gfa-slate font-light">
+                {isEn
+                  ? "Recent graduates seeking their first break in the industry, receiving equipment, mentorship, and career support."
+                  : "寻求进入行业第一步的毕业生，我们提供设备、导师和就业支持。"}
+              </p>
             </div>
-            <h3 className="text-3xl font-bold font-serif text-gfa-inkBlack mb-6 group-hover:text-gfa-gold transition-colors">{mission.title}</h3>
-            <p className="text-gfa-slate leading-loose text-lg font-light opacity-80">
-              {mission.body}
-            </p>
-          </div>
-          <div className="bg-gfa-inkBlack p-12 md:p-16 rounded-[32px] shadow-xl border border-gfa-inkBlack text-white relative overflow-hidden group">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-gfa-gold/10 blur-3xl rounded-full group-hover:scale-150 transition-transform duration-700"></div>
-            <div className="w-16 h-16 bg-gfa-gold/10 rounded-2xl flex items-center justify-center text-gfa-gold mb-8 group-hover:bg-gfa-gold group-hover:text-white transition-all">
-              <Globe className="w-8 h-8" />
+            <div className="bg-gray-50 rounded-xl p-6 border border-gray-100 hover:border-[#C9A84C]/30 transition-colors">
+              <h3 className="text-base md:text-lg font-bold font-serif text-gfa-inkBlack mb-2">
+                {isEn ? "Emerging Independent Directors" : "新晋独立导演"}
+              </h3>
+              <p className="text-sm text-gfa-slate font-light">
+                {isEn
+                  ? "Independent creators with projects who lack distribution channels and industry resources."
+                  : "有作品但缺乏发行渠道和行业资源的独立创作者。"}
+              </p>
             </div>
-            <h3 className="text-3xl font-bold font-serif text-gfa-gold mb-6 relative z-10">{vision.title}</h3>
-            <p className="text-white/80 leading-loose text-lg font-light italic relative z-10">
-              "{vision.body}"
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* 3. WHAT WE DO (Modules) */}
-      <section className="py-32 px-6 bg-white relative">
-        <div className="container-gfa relative z-10">
-          <div className="text-center mb-24">
-            <div className="gold-badge mb-4">Core Competencies</div>
-            <h2 className="text-4xl md:text-6xl font-bold font-serif text-gfa-inkBlack mb-8">{what.title}</h2>
-            <div className="h-1 w-24 bg-gfa-gold mx-auto rounded-full"></div>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            {(what.items || []).map((item: any, i: number) => (
-              <div key={i} className="relative group rounded-[32px] overflow-hidden border border-gfa-border shadow-sm hover:shadow-2xl transition-all duration-500 min-h-[500px] flex flex-col">
-                <div className="absolute inset-0 z-0">
-                  <img 
-                    src={
-                      i === 0 ? "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2011&auto=format&fit=crop" :
-                      i === 1 ? "https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=2070&auto=format&fit=crop" :
-                      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop"
-                    }
-                    alt={item.title}
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-gfa-inkBlack via-gfa-inkBlack/90 to-gfa-inkBlack/40 group-hover:from-gfa-inkBlack group-hover:via-gfa-inkBlack/70 group-hover:to-transparent transition-all duration-500"></div>
-                </div>
-                
-                <div className="relative z-10 p-10 h-full flex flex-col">
-                  <div className="text-5xl mb-8 grayscale group-hover:grayscale-0 transition-all transform group-hover:scale-110 duration-500 drop-shadow-2xl">{item.icon}</div>
-                  <h3 className="text-3xl font-bold text-white mb-4 font-serif leading-tight">{item.title}</h3>
-                  <p className="text-base text-white/80 leading-relaxed font-light mb-8">
-                    {item.desc}
-                  </p>
-                  <div className="mt-auto">
-                    <div className="mb-8 p-6 bg-white/10 backdrop-blur-md rounded-xl border-l-2 border-gfa-gold text-sm text-white/90 italic font-light">
-                      {item.details}
-                    </div>
-                    <Link 
-                      to={i === 0 ? "/certification" : i === 1 ? "/safeguarding" : "/career-access"} 
-                      className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-gfa-gold hover:text-white transition-colors group/link"
-                    >
-                      {item.linkText}
-                      <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 4. IMPACT STATS */}
-      <section className="py-32 bg-white text-gfa-inkBlack relative overflow-hidden border-y border-gfa-border">
-        <div className="absolute inset-0 bg-gfa-warmWhite/50"></div>
-        <div className="container-gfa relative z-10">
-           <div className="grid grid-cols-2 md:grid-cols-4 gap-16 text-center">
-              {(impact.stats || []).map((stat: any, i: number) => (
-                <div key={i} className="group">
-                   <div className="text-5xl md:text-7xl font-black text-gfa-gold mb-4 font-serif group-hover:scale-110 transition-transform duration-500">{stat.value}</div>
-                   <div className="text-[10px] uppercase tracking-[0.3em] text-gfa-slate group-hover:text-gfa-inkBlack transition-colors">{stat.label}</div>
-                </div>
-              ))}
-           </div>
-        </div>
-      </section>
-
-      {/* 4.5 REGULATORY FRAMEWORK - NEW SECTION */}
-      <section className="py-32 px-6 bg-white border-b border-gfa-border">
-        <div className="container-gfa">
-          <div className="text-center mb-20">
-            <div className="gold-badge mb-4">Institutional Standards</div>
-            <h2 className="text-4xl md:text-5xl font-bold font-serif text-gfa-inkBlack mb-6">{framework.title}</h2>
-            <p className="text-gfa-slate max-w-2xl mx-auto font-light">{framework.subtitle}</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[cert, youth, support, network, gov].map((item: any, i: number) => (
-              <div key={i} className="p-10 bg-gradient-to-br from-white to-gfa-warmWhite rounded-3xl border border-gfa-border hover:border-gfa-gold/50 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gfa-gold/5 rounded-bl-full -mr-16 -mt-16 transition-all group-hover:bg-gfa-gold/10"></div>
-                <div className="w-14 h-14 bg-gfa-gold/10 rounded-2xl flex items-center justify-center text-gfa-gold mb-8 group-hover:bg-gfa-gold group-hover:text-white transition-all shadow-inner">
-                  <span className="font-serif font-bold text-2xl">0{i + 1}</span>
-                </div>
-                <h4 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-6 group-hover:text-gfa-gold transition-colors">{item.title}</h4>
-                <p className="text-base text-gfa-slate leading-relaxed font-light opacity-90 group-hover:opacity-100 transition-opacity">{item.body}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 5. INSTITUTIONAL OVERSIGHT */}
-      <section className="py-32 bg-gfa-warmWhite border-y border-gfa-border">
-        <div className="container-gfa flex flex-col lg:flex-row gap-24 items-center">
-          <div className="lg:w-5/12 relative">
-             <div className="w-full">
-                <img 
-                  src="https://i.ibb.co/FbV8K2JN/Chat-GPT-Image-2026-3-8-12-44-39.png"
-                  alt="GFA Institutional Profile"
-                  className="w-full h-auto block"
-                  referrerPolicy="no-referrer"
-                />
-             </div>
-             <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-gfa-gold rounded-full flex items-center justify-center text-white text-center p-6 shadow-2xl animate-float">
-                <div className="text-xs font-bold uppercase tracking-widest leading-tight">Global Regulatory Authority</div>
-             </div>
-          </div>
-          <div className="lg:w-7/12">
-             <div className="gold-badge mb-6">Institutional Oversight</div>
-             <h2 className="text-4xl md:text-5xl font-bold font-serif text-gfa-inkBlack mb-8 leading-tight">{who.title}</h2>
-             <p className="text-xl text-gfa-slate leading-relaxed font-light mb-12 opacity-90">
-               {who.body}
-             </p>
-             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                {(who.pillars || []).map((pillar: any, i: number) => (
-                  <div key={i} className="p-8 bg-white rounded-2xl shadow-sm border border-gfa-border hover:border-gfa-gold/30 transition-all">
-                    <h4 className="font-serif text-xl mb-4 text-gfa-inkBlack">{pillar.title}</h4>
-                    <p className="text-sm text-gfa-slate font-light leading-relaxed">{pillar.desc}</p>
-                  </div>
-                ))}
-             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 6. GOLDEN FEATHER AWARDS */}
-      <section className="py-32 bg-white relative overflow-hidden">
-        <div className="container-gfa relative z-10 flex flex-col lg:flex-row-reverse gap-24 items-center">
-          <div className="lg:w-5/12 flex justify-center lg:justify-end">
-            <div className="relative w-64 md:w-72 flex flex-col gap-8">
-              <div className="w-full group">
-                <img 
-                  src="https://i.ibb.co/mrT1n0Fw/Chat-GPT-Image-2026-3-8-11-04-43.png" 
-                  alt="Golden Feather Awards Logo 1" 
-                  referrerPolicy="no-referrer"
-                  className="w-full h-auto object-contain transition-all duration-700"
-                />
-              </div>
-              <div className="w-full group">
-                <img 
-                  src="https://i.ibb.co/8gHZ9bxG/Chat-GPT-Image-2026-3-8-11-02-27.png" 
-                  alt="Golden Feather Awards Logo 2" 
-                  referrerPolicy="no-referrer"
-                  className="w-full h-auto object-contain transition-all duration-700"
-                />
-              </div>
-              <div className="absolute -top-6 -left-6 w-20 h-20 bg-gfa-gold rounded-full flex items-center justify-center text-white shadow-xl animate-float">
-                <Award className="w-10 h-10" />
-              </div>
+            <div className="bg-gray-50 rounded-xl p-6 border border-gray-100 hover:border-[#C9A84C]/30 transition-colors">
+              <h3 className="text-base md:text-lg font-bold font-serif text-gfa-inkBlack mb-2">
+                {isEn ? "Youth Ages 6–17" : "儿童与青少年"}
+              </h3>
+              <p className="text-sm text-gfa-slate font-light">
+                {isEn
+                  ? "Young people exploring their creative potential through summer camps and production projects."
+                  : "通过影视夏令营和制作项目探索创作潜能的年轻人。"}
+              </p>
             </div>
-          </div>
-          <div className="lg:w-7/12">
-            <div className="gold-badge mb-6">Flagship Annual Ceremony</div>
-            <h2 className="text-4xl md:text-6xl font-bold font-serif text-gfa-inkBlack mb-8 leading-tight">{awards.title}</h2>
-            <p className="text-2xl text-gfa-gold font-serif italic mb-8">{awards.subtitle}</p>
-            <p className="text-xl text-gfa-slate leading-relaxed font-light mb-8 opacity-90">
-              {awards.body}
-            </p>
-            <div className="p-8 bg-gfa-warmWhite rounded-2xl border-l-4 border-gfa-gold mb-12">
-               <p className="text-lg text-gfa-inkBlack font-serif italic opacity-80">
-                 {awards.focus}
-               </p>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-               {(awards.categories || []).map((cat: any, i: number) => (
-                 <div key={i} className="flex gap-4 items-start">
-                   <div className="w-2 h-2 rounded-full bg-gfa-gold mt-2 shrink-0"></div>
-                   <div>
-                     <h4 className="font-bold text-gfa-inkBlack text-sm uppercase tracking-wider mb-1">{cat.title}</h4>
-                     <p className="text-xs text-gfa-slate font-light leading-relaxed">{cat.desc}</p>
-                   </div>
-                 </div>
-               ))}
+            <div className="bg-gray-50 rounded-xl p-6 border border-gray-100 hover:border-[#C9A84C]/30 transition-colors">
+              <h3 className="text-base md:text-lg font-bold font-serif text-gfa-inkBlack mb-2">
+                {isEn ? "Special Needs Youth" : "特殊需求儿童"}
+              </h3>
+              <p className="text-sm text-gfa-slate font-light">
+                {isEn
+                  ? "Children and youth with special needs, like autism or depression, finding healing through cinematic arts therapy."
+                  : "自闭症、抑郁症等特殊需求儿童，通过电影创作进行艺术疗愈。"}
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 7. GLOBAL DISTRIBUTION & PLATFORM */}
-      <section className="py-32 bg-gfa-warmWhite text-gfa-inkBlack relative overflow-hidden">
-        <div className="container-gfa relative z-10">
-          <div className="text-center mb-24">
-            <div className="gold-badge mb-6">Market Expansion</div>
-            <h2 className="text-4xl md:text-6xl font-bold font-serif text-gfa-inkBlack mb-8">{distribution.title}</h2>
-            <p className="text-xl text-gfa-slate max-w-4xl mx-auto font-light leading-relaxed">
-              {distribution.body}
-            </p>
+      {/* Core Values */}
+      <section className="py-6 md:py-8 bg-gfa-inkBlack text-white">
+        <div className="container-gfa px-4">
+          <div className="text-center mb-6">
+            <h2 className="text-xl font-bold font-serif mb-2 text-[#C9A84C]">
+              {isEn ? "Our Core Values" : "核心价值观"}
+            </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {(distribution.features || []).map((feature: any, i: number) => (
-              <div key={i} className="p-10 bg-white border border-gfa-border rounded-3xl hover:shadow-lg transition-all group">
-                <div className="flex gap-6 items-start">
-                  <div className="w-14 h-14 bg-gfa-gold/10 rounded-2xl flex items-center justify-center text-gfa-gold shrink-0 group-hover:bg-gfa-gold group-hover:text-white transition-all">
-                    <Play className="w-7 h-7 fill-current" />
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-bold font-serif text-gfa-inkBlack mb-4">{feature.title}</h4>
-                    <p className="text-sm text-gfa-slate font-light leading-relaxed">{feature.desc}</p>
-                  </div>
-                </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 max-w-6xl mx-auto">
+            {/* Value 1 */}
+            <div className="text-center border border-white/10 p-5 rounded-xl hover:bg-white/5 transition-colors">
+              <div className="w-10 h-10 bg-[#C9A84C]/10 rounded-lg flex items-center justify-center mx-auto mb-3 text-[#C9A84C]">
+                <Target className="w-5 h-5" />
               </div>
-            ))}
+              <h3 className="text-lg font-bold font-serif mb-1 uppercase tracking-wider">{isEn ? "Access" : "可及性"}</h3>
+              <h4 className="text-sm font-medium text-[#C9A84C] mb-3">{isEn ? "Open Every Door" : "打开每一扇门"}</h4>
+              <p className="text-sm text-white/70 font-light leading-relaxed mx-auto">
+                {isEn 
+                  ? "Talent should never be constrained by resources. Every creator with a dream deserves access to the support they need, regardless of background or income." 
+                  : "我们相信，才华不应该受到资源的限制。无论背景、收入或人脉，每一位有梦想的创作者都应该获得他们需要的支持。"}
+              </p>
+            </div>
+
+            {/* Value 2 */}
+            <div className="text-center border border-white/10 p-5 rounded-xl hover:bg-white/5 transition-colors">
+              <div className="w-10 h-10 bg-[#C9A84C]/10 rounded-lg flex items-center justify-center mx-auto mb-3 text-[#C9A84C]">
+                <Users className="w-5 h-5" />
+              </div>
+              <h3 className="text-lg font-bold font-serif mb-1 uppercase tracking-wider">{isEn ? "Community" : "社区根基"}</h3>
+              <h4 className="text-sm font-medium text-[#C9A84C] mb-3">{isEn ? "Rooted & Diverse" : "扎根社区，服务多元"}</h4>
+              <p className="text-sm text-white/70 font-light leading-relaxed mx-auto">
+                {isEn 
+                  ? "Rooted in Los Angeles, we serve filmmakers and families from diverse cultural backgrounds, using film as a language that bridges communities." 
+                  : "我们深植于洛杉矶社区，服务来自多元文化背景的电影人和家庭。电影是连接不同文化的语言，我们用它来构建更紧密的社区纽带。"}
+              </p>
+            </div>
+
+            {/* Value 3 */}
+            <div className="text-center border border-white/10 p-5 rounded-xl hover:bg-white/5 transition-colors">
+              <div className="w-10 h-10 bg-[#C9A84C]/10 rounded-lg flex items-center justify-center mx-auto mb-3 text-[#C9A84C]">
+                <Heart className="w-5 h-5" />
+              </div>
+              <h3 className="text-lg font-bold font-serif mb-1 uppercase tracking-wider">{isEn ? "Impact" : "真实影响"}</h3>
+              <h4 className="text-sm font-medium text-[#C9A84C] mb-3">{isEn ? "Measuring Real Success" : "以结果衡量成功"}</h4>
+              <p className="text-sm text-white/70 font-light leading-relaxed mx-auto">
+                {isEn 
+                  ? "We measure our success not by events hosted, but by careers launched, barriers broken, and lives genuinely changed." 
+                  : "我们不以举办了多少活动来衡量成功，而是以真正帮助了多少人进入行业、改变了多少孩子的生命轨迹来衡量。"}
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* 6. CTA */}
-      <section className="py-40 bg-white text-gfa-inkBlack text-center relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gfa-gold/5 rounded-full blur-[120px] pointer-events-none"></div>
-        <div className="container-gfa max-w-3xl mx-auto relative z-10">
-           <h2 className="text-5xl md:text-7xl font-bold font-serif mb-8 leading-tight">{cta.title}</h2>
-           <p className="text-xl font-light leading-relaxed mb-16 opacity-80">
-             {cta.body}
-           </p>
-           <Link to="/membership" className="btn-primary h-16 px-16 text-lg">
-             {cta.button}
-           </Link>
+      {/* Partners section */}
+      <section className="py-6 md:py-8 bg-white">
+        <div className="container-gfa px-4 max-w-5xl mx-auto">
+          <div className="text-center mb-6">
+            <h2 className="text-xs font-bold text-[#C9A84C] uppercase tracking-widest mb-2">
+              {isEn ? "Partners" : "我们的合作伙伴"}
+            </h2>
+            <h3 className="text-xl md:text-2xl font-bold font-serif text-gfa-inkBlack">
+              {isEn ? "United by a Common Goal" : "为共同目标而联合"}
+            </h3>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+            <div className="bg-gray-50 rounded-xl p-5 text-center border border-gray-100 hover:shadow-sm transition-shadow">
+              <div className="h-10 flex items-center justify-center mb-3">
+                 <div className="text-xl md:text-2xl font-bold italic tracking-tighter text-gfa-inkBlack">Blackmagic Design</div>
+              </div>
+              <p className="text-xs md:text-sm font-light text-gfa-slate leading-relaxed mx-auto">
+                {isEn ? "Professional equipment partner, providing pro-level camera gear support for GFA projects." : "专业设备合作伙伴，为GFA项目提供专业级摄影器材支持"}
+              </p>
+            </div>
+
+            <div className="bg-gray-50 rounded-xl p-5 text-center border border-gray-100 hover:shadow-sm transition-shadow">
+              <div className="h-10 flex items-center justify-center mb-3">
+                 <div className="text-xl md:text-2xl font-serif text-gfa-inkBlack">Harmony Gold</div>
+              </div>
+              <p className="text-xs md:text-sm font-light text-gfa-slate leading-relaxed mx-auto">
+                {isEn ? "Content partner collaborating on distribution and youth production." : "内容合作伙伴，参与项目发行及合作体验。"}
+              </p>
+            </div>
+
+            <div className="bg-gray-50 rounded-xl p-5 text-center border border-gray-100 hover:shadow-sm transition-shadow">
+              <div className="h-10 flex items-center justify-center mb-3">
+                 <div className="text-base md:text-lg font-bold uppercase tracking-widest text-gfa-inkBlack">City of Pomona</div>
+              </div>
+              <p className="text-xs md:text-sm font-light text-gfa-slate leading-relaxed mx-auto">
+                {isEn ? "Government partner, proudly supporting GFA's local community outreach and youth initiatives." : "政府合作伙伴，支持GFA的社区服务项目"}
+              </p>
+            </div>
+          </div>
         </div>
       </section>
+
     </div>
   );
 };

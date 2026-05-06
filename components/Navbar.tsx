@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useLocale } from '../LocaleContext.tsx';
 import { Locale } from '../types.ts';
+import { Heart } from 'lucide-react';
 
 const Navbar: React.FC = () => {
-  const { t, locale, setLocale } = useLocale();
+  const { locale, setLocale } = useLocale();
   const location = useLocation();
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -22,66 +23,62 @@ const Navbar: React.FC = () => {
   }, [location.pathname]);
 
   const navLinks = [
-    { name: t.nav.home, path: '/' },
-    { name: t.nav.about, path: '/about' },
-    { name: t.nav.awards, path: '/awards' },
-    { name: t.nav.certification, path: '/certification' },
-    { name: t.nav.childSafety, path: '/safeguarding' },
-    { name: t.nav.graduateSupport, path: '/career-access' },
-    { name: t.nav.membership, path: '/membership' },
-    { name: t.nav.contact, path: '/contact' }
+    { name: locale === Locale.EN ? 'About' : '关于', path: '/about' },
+    { name: locale === Locale.EN ? 'Filmmakers' : '电影人', path: '/filmmaker-support' },
+    { name: locale === Locale.EN ? 'Youth' : '青少年', path: '/youth-programs' },
+    { name: locale === Locale.EN ? 'Guide' : '指南', path: '/family-guide' },
+    { name: locale === Locale.EN ? 'Awards' : '金羽奖', path: '/awards' },
+    { name: locale === Locale.EN ? 'Competition' : '大赛', path: '/competition' }
   ];
 
   const textColor = "text-gfa-inkBlack";
 
   return (
     <>
-      <nav className={`fixed top-0 left-0 right-0 z-[100] h-[100px] flex items-center transition-all duration-300 border-t-4 border-t-gfa-gold ${scrolled ? "bg-white/95 backdrop-blur-md shadow-md border-b border-gfa-border/50" : "bg-white border-b border-gfa-border"}`}>
+      <nav className={`fixed top-0 left-0 right-0 z-[100] h-[90px] md:h-[100px] flex items-center transition-all duration-300 border-t-4 border-t-gfa-gold ${scrolled ? "bg-white/95 backdrop-blur-md shadow-md border-b border-gfa-border/50" : "bg-white border-b border-gfa-border"}`}>
         <div className="container-gfa flex items-center justify-between w-full">
-          <Link to="/" className="flex items-center gap-4 shrink-0 -ml-36 hover:opacity-80 transition-opacity">
-            <img src="https://i.ibb.co/mFgDBtBp/1.png" alt="GFA" className="h-20 w-auto" />
-            <div className="flex flex-col">
-              <span className={`text-5xl font-bold leading-none tracking-tighter font-serif ${textColor}`}>GFA</span>
-              <span className="text-[8px] tracking-[0.3em] uppercase font-black mt-1 text-gfa-gold">Global Film Alliance</span>
+          <Link to="/" className="flex items-center gap-3 shrink-0 hover:opacity-80 transition-opacity">
+            <img src="https://i.ibb.co/mFgDBtBp/1.png" alt="GFA" className="h-12 md:h-16 w-auto" />
+            <div className="hidden lg:flex flex-col">
+              <span className={`text-3xl lg:text-4xl font-bold leading-none tracking-tighter font-serif ${textColor}`}>GFA</span>
+              <span className="text-[7px] tracking-[0.2em] font-black mt-1 text-gfa-gold whitespace-nowrap">Global Film Alliance</span>
             </div>
           </Link>
 
-          <div className="hidden xl:flex items-center space-x-10">
+          <div className="hidden xl:flex items-center justify-center gap-6 2xl:gap-8 flex-grow ml-8">
             {navLinks.map((link) => (
               <Link 
                 key={link.path} 
                 to={link.path} 
-                className={`nav-link text-[13px] font-bold uppercase tracking-widest transition-all duration-300 hover:text-gfa-gold relative group ${location.pathname === link.path ? "text-gfa-gold" : textColor}`}
+                className={`nav-link text-[12px] 2xl:text-[13px] font-bold uppercase tracking-widest transition-all duration-300 hover:text-gfa-gold relative group whitespace-nowrap ${location.pathname.startsWith(link.path) ? "text-gfa-gold" : textColor}`}
               >
                 {link.name}
-                <span className={`absolute -bottom-2 left-0 w-full h-0.5 bg-gfa-gold transform origin-left transition-transform duration-300 ${location.pathname === link.path ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`}></span>
+                <span className={`absolute -bottom-2 left-0 w-full h-0.5 bg-gfa-gold transform origin-left transition-transform duration-300 ${location.pathname.startsWith(link.path) ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`}></span>
               </Link>
             ))}
           </div>
 
-          <div className="hidden lg:flex items-center space-x-8">
-            <Link to="/login" className={`text-[11px] font-bold uppercase tracking-widest transition-colors hover:text-gfa-gold ${textColor}`}>
-              {t.nav.login}
-            </Link>
-            <Link to="/membership" className="btn-primary !h-[42px] !px-6 !text-[11px] !uppercase !tracking-widest shadow-md hover:shadow-lg">
-              {t.nav.join}
-            </Link>
-            <div className="relative group">
-              <select 
-                value={locale} 
-                onChange={(e) => setLocale(e.target.value as Locale)} 
-                className={`appearance-none bg-transparent text-[11px] font-bold uppercase tracking-widest focus:outline-none cursor-pointer border-b border-transparent hover:border-gfa-gold px-2 py-1 ${textColor} transition-colors`}
+          <div className="hidden xl:flex items-center space-x-6 shrink-0">
+            <div className="flex items-center space-x-2 text-[12px] font-bold tracking-widest">
+              <button 
+                onClick={() => setLocale(Locale.EN)}
+                className={`transition-colors hover:text-gfa-gold ${locale === Locale.EN ? 'text-gfa-gold' : 'text-gfa-slate'}`}
               >
-                <option value={Locale.EN} className="bg-white text-gfa-inkBlack">English</option>
-                <option value={Locale.ZH} className="bg-white text-gfa-inkBlack">中文</option>
-                <option value={Locale.ES} className="bg-white text-gfa-inkBlack">Español</option>
-                <option value={Locale.FR} className="bg-white text-gfa-inkBlack">Français</option>
-                <option value={Locale.IT} className="bg-white text-gfa-inkBlack">Italiano</option>
-                <option value={Locale.KO} className="bg-white text-gfa-inkBlack">한국어</option>
-                <option value={Locale.JA} className="bg-white text-gfa-inkBlack">日本語</option>
-                <option value={Locale.DE} className="bg-white text-gfa-inkBlack">Deutsch</option>
-              </select>
+                EN
+              </button>
+              <span className="text-gfa-slate/30">|</span>
+              <button 
+                onClick={() => setLocale(Locale.ZH)}
+                className={`transition-colors hover:text-gfa-gold ${locale === Locale.ZH ? 'text-gfa-gold' : 'text-gfa-slate'}`}
+              >
+                中文
+              </button>
             </div>
+            
+            <Link to="/donate" className="inline-flex items-center justify-center gap-2 bg-[#C9A84C] text-white px-8 py-3 rounded-full font-bold text-sm tracking-widest shadow-lg hover:bg-[#b09241] hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 uppercase">
+              <Heart className="w-4 h-4 fill-current" />
+              {locale === Locale.EN ? 'Donate' : '捐款'}
+            </Link>
           </div>
 
           <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="xl:hidden p-2 group" aria-label="Toggle Menu">
@@ -95,6 +92,23 @@ const Navbar: React.FC = () => {
       <div className={`fixed inset-0 bg-white z-[105] transition-transform duration-500 xl:hidden ${mobileMenuOpen ? "translate-x-0" : "translate-x-full"}`}>
         <div className="flex flex-col h-full pt-32 px-10">
           <button onClick={() => setMobileMenuOpen(false)} className="text-gfa-inkBlack text-5xl font-light self-end mb-12 hover:text-gfa-gold transition-colors" aria-label="Close Menu">×</button>
+          
+          <div className="flex items-center space-x-4 mb-12 border-b border-gfa-border pb-6">
+             <button 
+                onClick={() => { setLocale(Locale.EN); setMobileMenuOpen(false); }}
+                className={`text-lg font-bold tracking-widest ${locale === Locale.EN ? 'text-gfa-gold' : 'text-gfa-slate'}`}
+              >
+                EN
+              </button>
+              <span className="text-gfa-slate/30">|</span>
+              <button 
+                onClick={() => { setLocale(Locale.ZH); setMobileMenuOpen(false); }}
+                className={`text-lg font-bold tracking-widest ${locale === Locale.ZH ? 'text-gfa-gold' : 'text-gfa-slate'}`}
+              >
+                中文
+              </button>
+          </div>
+
           {navLinks.map((link) => (
             <Link 
               key={link.path} 
@@ -105,11 +119,13 @@ const Navbar: React.FC = () => {
               {link.name}
             </Link>
           ))}
-          <div className="h-px bg-gfa-border w-full my-6"></div>
-          <Link to="/governance" onClick={() => setMobileMenuOpen(false)} className="text-lg font-medium text-gfa-slate mb-4 hover:text-gfa-inkBlack">{t.nav.governance}</Link>
-          <Link to="/partners" onClick={() => setMobileMenuOpen(false)} className="text-lg font-medium text-gfa-slate mb-4 hover:text-gfa-inkBlack">{t.nav.partners}</Link>
-          <Link to="/career-access" onClick={() => setMobileMenuOpen(false)} className="text-lg font-medium text-gfa-slate mb-8 hover:text-gfa-inkBlack">{t.nav.graduateSupport}</Link>
-          <Link to="/membership" onClick={() => setMobileMenuOpen(false)} className="btn-primary mt-auto mb-10 w-full text-center shadow-xl">{t.nav.join}</Link>
+          
+          <div className="mt-auto mb-16">
+            <Link to="/donate" onClick={() => setMobileMenuOpen(false)} className="flex items-center justify-center gap-2 bg-[#C9A84C] text-white px-8 py-4 rounded-full font-bold text-sm tracking-widest shadow-lg uppercase w-full">
+              <Heart className="w-5 h-5 fill-current" />
+              {locale === Locale.EN ? 'Donate' : '捐款'}
+            </Link>
+          </div>
         </div>
       </div>
     </>

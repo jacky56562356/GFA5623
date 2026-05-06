@@ -7,24 +7,20 @@ import Layout from './components/Layout';
 // Pages
 import Home from './pages/Home';
 import About from './pages/About';
-import Certification from './pages/Certification';
-import Safeguarding from './pages/Safeguarding';
-import GraduateSupport from './pages/GraduateSupport';
-import Membership from './pages/Membership';
-import Contact from './pages/Contact';
-import AdminDashboard from './pages/AdminDashboard';
-import Complaints from './pages/Complaints';
-import Events from './pages/Events';
-import Governance from './pages/Governance';
-import MemberPortal from './pages/MemberPortal';
-import Partners from './pages/Partners';
-import PolicyPage from './pages/PolicyPage';
-import Reporting from './pages/Reporting';
-import Standards from './pages/Standards';
-import Transparency from './pages/Transparency';
-import Verify from './pages/Verify';
-import YouthSafetyPolicy from './pages/YouthSafetyPolicy';
+import FilmmakerSupport from './pages/FilmmakerSupport';
+import YouthPrograms from './pages/YouthPrograms';
+import FamilyGuide from './pages/FamilyGuide';
 import Awards from './pages/Awards';
+import Competition from './pages/Competition';
+import Impact from './pages/Impact';
+import News from './pages/News';
+import GetInvolved from './pages/GetInvolved';
+import Donate from './pages/Donate';
+import Contact from './pages/Contact';
+import YouthProtection from './pages/YouthProtection';
+
+// Policy Pages
+import PolicyPage from './pages/PolicyPage';
 
 function App() {
   return (
@@ -34,23 +30,17 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/certification" element={<Certification />} />
-            <Route path="/safeguarding" element={<Safeguarding />} />
-            <Route path="/career-access" element={<GraduateSupport />} />
-            <Route path="/membership" element={<Membership />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/admin" element={<AdminDashboard />} />
-            <Route path="/complaints" element={<Complaints />} />
-            <Route path="/events" element={<Events />} />
-            <Route path="/governance" element={<Governance />} />
-            <Route path="/login" element={<MemberPortal />} />
-            <Route path="/partners" element={<Partners />} />
-            <Route path="/reporting" element={<Reporting />} />
-            <Route path="/standards" element={<Standards />} />
-            <Route path="/transparency" element={<Transparency />} />
-            <Route path="/verify" element={<Verify />} />
-            <Route path="/youth-safety-policy" element={<YouthSafetyPolicy />} />
+            <Route path="/filmmaker-support" element={<FilmmakerSupport />} />
+            <Route path="/youth-programs" element={<YouthPrograms />} />
+            <Route path="/family-guide" element={<FamilyGuide />} />
             <Route path="/awards" element={<Awards />} />
+            <Route path="/competition" element={<Competition />} />
+            <Route path="/impact" element={<Impact />} />
+            <Route path="/news" element={<News />} />
+            <Route path="/get-involved" element={<GetInvolved />} />
+            <Route path="/donate" element={<Donate />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/youth-protection" element={<YouthProtection />} />
             
             {/* Policy Routes */}
             <Route path="/policy/privacy" element={<PolicyPage type="privacy" />} />

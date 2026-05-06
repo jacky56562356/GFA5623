@@ -29,7 +29,7 @@ const Partners: React.FC = () => {
   });
 
   return (
-    <div className="bg-gfa-warmWhite pt-48 pb-32 px-6 min-h-screen relative overflow-hidden">
+    <div className="bg-gfa-warmWhite pt-32 pb-16 px-6 min-h-screen relative overflow-hidden">
       <SEO 
         title={p.title || "Partners"} 
         description={p.intro || "Find verified service providers including legal, insurance, and production vendors for your film projects."} 
@@ -40,7 +40,7 @@ const Partners: React.FC = () => {
 
       <div className="container-gfa relative z-10">
         {/* Header */}
-        <header className="mb-32 text-center max-w-4xl mx-auto animate-fade-in">
+        <header className="mb-10 text-center max-w-4xl mx-auto animate-fade-in">
           <div className="gold-badge mb-10 animate-fade-up">Verified Service Providers</div>
           <h1 className="text-5xl md:text-8xl font-bold font-serif text-gfa-inkBlack mb-12 leading-tight drop-shadow-sm">
             {p.title}
@@ -51,7 +51,7 @@ const Partners: React.FC = () => {
         </header>
 
         {/* Filters */}
-        <div className="bg-white p-10 md:p-16 mb-20 flex flex-wrap gap-12 border border-gfa-border items-end rounded-[40px] shadow-2xl animate-fade-up">
+        <div className="bg-white p-8 md:p-12 mb-10 flex flex-wrap gap-12 border border-gfa-border items-end rounded-[40px] shadow-2xl animate-fade-up">
           <div className="flex-grow min-w-[240px]">
             <label className="block text-[10px] text-gfa-slate font-bold uppercase tracking-[0.3em] mb-6 opacity-60">{p.catLabel}</label>
             <select 
@@ -79,7 +79,7 @@ const Partners: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {filtered.map(m => (
             <div key={m.id} className="bg-white p-12 rounded-[40px] border border-gfa-border shadow-xl hover:shadow-2xl transition-all group relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gfa-gold/5 rounded-bl-full -mr-16 -mt-16 transition-all group-hover:bg-gfa-gold/10"></div>
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gfa-gold/5 rounded-bl-full -mr-16 -mt-10 transition-all group-hover:bg-gfa-gold/10"></div>
               
               <div className="flex justify-between items-start mb-12 relative z-10">
                 <div className="w-20 h-20 bg-gfa-warmWhite rounded-2xl flex items-center justify-center border border-gfa-border group-hover:border-gfa-gold/30 transition-all duration-500 shadow-inner">

@@ -21,20 +21,20 @@ const PolicyPage: React.FC<Props> = ({ type }) => {
   const currentPolicy = policyData[type];
 
   return (
-    <div className="py-32 max-w-4xl mx-auto px-4">
-      <h1 className="text-5xl font-black mb-6 gold-gradient uppercase tracking-tight">{currentPolicy.title}</h1>
-      <p className="text-gfa-gray text-lg mb-12 uppercase tracking-widest leading-relaxed">
+    <div className="py-24 max-w-4xl mx-auto px-4">
+      <h1 className="text-4xl md:text-5xl font-bold font-serif mb-6 text-gfa-inkBlack">{currentPolicy.title}</h1>
+      <p className="text-gfa-slate font-light text-lg mb-12 leading-relaxed">
         {currentPolicy.summary}
       </p>
 
       <div className="space-y-12">
         {/* Fix: Added check for currentPolicy.sections and used String(value) to resolve the 'unknown' to 'ReactNode' assignment error */}
         {currentPolicy.sections && Object.entries(currentPolicy.sections).map(([key, value]) => (
-          <div key={key} className="bg-gfa-darkGray p-10 border border-white/5 shadow-xl">
-            <h3 className="text-xl font-black mb-6 text-gfa-gold uppercase tracking-widest border-b border-white/5 pb-4">
-              {key.toUpperCase()}: {String(value)}
+          <div key={key} className="bg-white p-10 border border-gfa-border rounded-2xl shadow-sm">
+            <h3 className="text-xl font-bold font-serif mb-6 text-gfa-inkBlack pb-4 border-b border-gfa-border">
+              {key}: {String(value)}
             </h3>
-            <div className="text-gfa-gray leading-loose text-sm md:text-base">
+            <div className="text-gfa-slate font-light leading-relaxed text-sm md:text-base">
               {/* Note: In a real app, you would have detailed body text for each section. 
                   Currently, the translation JSON provides headers/summaries. */}
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
@@ -44,7 +44,7 @@ const PolicyPage: React.FC<Props> = ({ type }) => {
         ))}
       </div>
 
-      <div className="mt-20 pt-10 border-t border-white/5 text-center">
+      <div className="mt-12 pt-10 border-t border-white/5 text-center">
         <p className="text-gfa-gray text-xs font-bold uppercase tracking-widest">
           Last Updated: May 2024 • Global Compliance Office
         </p>

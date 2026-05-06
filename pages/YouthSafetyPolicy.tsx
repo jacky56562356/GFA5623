@@ -7,15 +7,15 @@ const YouthSafetyPolicy: React.FC = () => {
   const p = t.youthSafetyPolicy || { title: 'Youth Safety Act', subtitle: 'Safeguarding Framework', intro: 'GFA maintains zero tolerance for misconduct.', sections: {}, footer: 'GFA 2025' };
 
   return (
-    <div className="bg-gfa-warmWhite pt-40 pb-32 px-6 min-h-screen">
+    <div className="bg-gfa-warmWhite pt-40 pb-16 px-6 min-h-screen">
       <div className="container-gfa">
         {/* Header */}
-        <header className="mb-24 text-center max-w-4xl mx-auto">
+        <header className="mb-12 text-center max-w-4xl mx-auto">
           <span className="gold-badge mb-8">Statutory Safety Act</span>
           <h1 className="text-4xl md:text-5xl font-bold font-serif text-gfa-inkBlack mb-10 leading-tight">
             {p.title}
           </h1>
-          <p className="text-lg text-gfa-gold font-bold uppercase tracking-[0.2em] mb-12 border-b border-gfa-border pb-12">
+          <p className="text-lg text-gfa-gold font-bold uppercase tracking-[0.2em] mb-12 border-b border-gfa-border pb-8">
             {p.subtitle}
           </p>
           <p className="text-gfa-slate text-lg leading-loose italic opacity-80 font-medium">
@@ -38,7 +38,7 @@ const YouthSafetyPolicy: React.FC = () => {
           ))}
           
           {/* Dedicated Youth Privacy Section */}
-          <section className="bg-gfa-inkBlack text-white p-12 md:p-16 rounded-card relative overflow-hidden">
+          <section className="bg-gfa-inkBlack text-white p-8 md:p-12 rounded-card relative overflow-hidden">
              <div className="absolute top-0 right-0 w-32 h-32 bg-gfa-gold/10 blur-3xl"></div>
              <h3 className="text-2xl font-bold font-serif text-gfa-gold mb-8">Youth Privacy & Data Ethics</h3>
              <div className="space-y-6 text-sm leading-relaxed opacity-70 italic font-medium">

@@ -52,7 +52,7 @@ const Certification: React.FC = () => {
   }, [searchTerm, filters]);
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans pt-[80px] pb-24 relative">
+    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans pt-[80px] pb-16 relative">
       <SEO title={cert.title || "Accreditation Framework"} description={cert.subtitle} />
 
       {/* Global Background Image */}
@@ -65,7 +65,7 @@ const Certification: React.FC = () => {
       </div>
 
       {/* Document Header */}
-      <div className="relative bg-gfa-inkBlack py-32 mb-12 shadow-2xl overflow-hidden">
+      <div className="relative bg-gfa-inkBlack py-16 mb-12 shadow-2xl overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-20 grayscale">
           <img 
             src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=2070&auto=format&fit=crop" 
@@ -91,7 +91,7 @@ const Certification: React.FC = () => {
       </div>
 
       <div className="container-gfa relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           
           {/* Sidebar Navigation */}
           <aside className="lg:col-span-3 hidden lg:block">
@@ -156,10 +156,10 @@ const Certification: React.FC = () => {
                 </div>
               </div>
 
-              <div className="p-10 md:p-20 space-y-32">
+              <div className="p-8 md:p-12 space-y-16">
                 {/* Categories */}
                 <section id="categories" className="scroll-mt-24">
-                  <div className="flex items-start gap-8 mb-16">
+                  <div className="flex items-start gap-8 mb-10">
                     <div className="w-16 h-16 bg-gfa-warmWhite border border-gfa-border rounded-2xl flex items-center justify-center text-2xl font-serif text-gfa-gold shrink-0 shadow-inner">
                       01
                     </div>
@@ -201,7 +201,7 @@ const Certification: React.FC = () => {
 
                 {/* Criteria */}
                 <section id="criteria" className="scroll-mt-24">
-                  <div className="flex items-start gap-8 mb-16">
+                  <div className="flex items-start gap-8 mb-10">
                     <div className="w-16 h-16 bg-gfa-warmWhite border border-gfa-border rounded-2xl flex items-center justify-center text-2xl font-serif text-gfa-gold shrink-0 shadow-inner">
                       02
                     </div>
@@ -227,7 +227,7 @@ const Certification: React.FC = () => {
 
                 {/* Validity */}
                 <section id="validity" className="scroll-mt-24">
-                  <div className="flex items-start gap-8 mb-16">
+                  <div className="flex items-start gap-8 mb-10">
                     <div className="w-16 h-16 bg-gfa-warmWhite border border-gfa-border rounded-2xl flex items-center justify-center text-2xl font-serif text-gfa-gold shrink-0 shadow-inner">
                       03
                     </div>
@@ -239,7 +239,7 @@ const Certification: React.FC = () => {
                     </div>
                   </div>
 
-                  <div className="p-12 md:p-20 bg-gfa-inkBlack text-white rounded-[48px] relative overflow-hidden group shadow-2xl">
+                  <div className="p-8 md:p-12 bg-gfa-inkBlack text-white rounded-[48px] relative overflow-hidden group shadow-2xl">
                     <div className="absolute inset-0 opacity-10 group-hover:scale-110 transition-transform duration-1000">
                       <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=2069&auto=format&fit=crop" alt="Time" className="w-full h-full object-cover grayscale" />
                     </div>
@@ -258,7 +258,7 @@ const Certification: React.FC = () => {
 
                 {/* Registry Section */}
                 <section id="registry" className="scroll-mt-24">
-                  <div className="flex items-start gap-8 mb-16">
+                  <div className="flex items-start gap-8 mb-10">
                     <div className="w-16 h-16 bg-gfa-warmWhite border border-gfa-border rounded-2xl flex items-center justify-center text-2xl font-serif text-gfa-gold shrink-0 shadow-inner">
                       04
                     </div>

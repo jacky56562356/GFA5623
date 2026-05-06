@@ -46,8 +46,8 @@ const Contact: React.FC = () => {
       {/* Background Decoration */}
       <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gfa-gold/5 rounded-full blur-[120px] -mr-64 -mt-64 pointer-events-none z-0"></div>
 
-      <div className="pt-48 pb-32 px-6 container-gfa relative z-10">
-        <header className="mb-32 text-center max-w-4xl mx-auto animate-fade-in">
+      <div className="pt-32 pb-16 px-6 container-gfa relative z-10">
+        <header className="mb-10 text-center max-w-4xl mx-auto animate-fade-in">
           <div className="gold-badge mb-10 animate-fade-up">{ui.secretariatBadge}</div>
           <h1 className="text-5xl md:text-8xl font-bold font-serif text-white mb-12 leading-tight drop-shadow-2xl">
             {contact.title}
@@ -57,7 +57,7 @@ const Contact: React.FC = () => {
           </p>
         </header>
       
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-20">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
           <div className="lg:col-span-4 space-y-12">
             <div className="flex flex-col gap-6 animate-fade-up">
               {types.map((type) => (
@@ -83,64 +83,69 @@ const Contact: React.FC = () => {
             </div>
           </div>
 
-          <div className="lg:col-span-8 bg-white p-12 md:p-20 rounded-[48px] border border-gfa-border shadow-2xl relative overflow-hidden animate-fade-up delay-300">
+          <div className="lg:col-span-8 bg-white p-8 md:p-12 rounded-[48px] border border-gfa-border shadow-2xl relative overflow-hidden animate-fade-up delay-300">
             <div className="absolute top-0 right-0 w-48 h-48 bg-gfa-gold/5 rounded-bl-full pointer-events-none"></div>
             
-            <h3 className="text-3xl font-bold mb-16 font-serif text-gfa-inkBlack relative z-10 leading-tight">
+            <h3 className="text-3xl font-bold mb-10 font-serif text-gfa-inkBlack relative z-10 leading-tight">
               {(form.header || "Contact Form: {type}").replace('{type}', types.find(it => it.id === formType)?.label || '')}
             </h3>
             
-            <form className="space-y-10 relative z-10" onSubmit={(e) => { e.preventDefault(); alert(ui.alertMessage); }}>
+            <form action="https://formsubmit.co/jacky@gfafilm.org" method="POST" className="space-y-10 relative z-10">
+              {/* Optional: Add hidden fields for formsubmit.co configuration */}
+              <input type="hidden" name="_subject" value="New Contact Form Request from GFA Website!" />
+              <input type="hidden" name="_next" value="https://gfaalliance.org/contact" />
+              <input type="hidden" name="FormType" value={formType} />
+              
               <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                 <div className="space-y-4">
-                  <label className="text-[10px] text-gfa-slate uppercase font-bold tracking-[0.3em] opacity-60">{form.name}</label>
-                  <input required type="text" className="w-full h-16 px-6 bg-gfa-warmWhite border border-gfa-border rounded-2xl text-base font-serif italic focus:border-gfa-gold focus:ring-4 focus:ring-gfa-gold/5 transition-all outline-none" />
+                  <label className="text-[10px] text-gfa-slate uppercase font-bold tracking-[0.3em] opacity-60">{form.name || "Name"}</label>
+                  <input required type="text" name="name" className="w-full h-16 px-6 bg-gfa-warmWhite border border-gfa-border rounded-2xl text-base font-serif italic focus:border-gfa-gold focus:ring-4 focus:ring-gfa-gold/5 transition-all outline-none" />
                 </div>
                 <div className="space-y-4">
-                  <label className="text-[10px] text-gfa-slate uppercase font-bold tracking-[0.3em] opacity-60">{form.email}</label>
-                  <input required type="email" className="w-full h-16 px-6 bg-gfa-warmWhite border border-gfa-border rounded-2xl text-base font-serif italic focus:border-gfa-gold focus:ring-4 focus:ring-gfa-gold/5 transition-all outline-none" />
+                  <label className="text-[10px] text-gfa-slate uppercase font-bold tracking-[0.3em] opacity-60">{form.email || "Email"}</label>
+                  <input required type="email" name="_replyto" className="w-full h-16 px-6 bg-gfa-warmWhite border border-gfa-border rounded-2xl text-base font-serif italic focus:border-gfa-gold focus:ring-4 focus:ring-gfa-gold/5 transition-all outline-none" />
                 </div>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                 <div className="space-y-4">
-                  <label className="text-[10px] text-gfa-slate uppercase font-bold tracking-[0.3em] opacity-60">{form.location}</label>
-                  <input required type="text" className="w-full h-16 px-6 bg-gfa-warmWhite border border-gfa-border rounded-2xl text-base font-serif italic focus:border-gfa-gold focus:ring-4 focus:ring-gfa-gold/5 transition-all outline-none" />
+                  <label className="text-[10px] text-gfa-slate uppercase font-bold tracking-[0.3em] opacity-60">{form.location || "Location"}</label>
+                  <input required type="text" name="location" className="w-full h-16 px-6 bg-gfa-warmWhite border border-gfa-border rounded-2xl text-base font-serif italic focus:border-gfa-gold focus:ring-4 focus:ring-gfa-gold/5 transition-all outline-none" />
                 </div>
                 {formType === 'Merchant' && (
                   <div className="space-y-4">
-                    <label className="text-[10px] text-gfa-slate uppercase font-bold tracking-[0.3em] opacity-60">{form.cat}</label>
-                    <select className="w-full h-16 px-6 bg-gfa-warmWhite border border-gfa-border rounded-2xl text-sm font-bold appearance-none focus:border-gfa-gold transition-all outline-none cursor-pointer">
-                      {merchantCats.map((c: string) => <option key={c}>{c}</option>)}
+                    <label className="text-[10px] text-gfa-slate uppercase font-bold tracking-[0.3em] opacity-60">{form.cat || "Category"}</label>
+                    <select name="category" className="w-full h-16 px-6 bg-gfa-warmWhite border border-gfa-border rounded-2xl text-sm font-bold appearance-none focus:border-gfa-gold transition-all outline-none cursor-pointer">
+                      {merchantCats.map((c: string) => <option key={c} value={c}>{c}</option>)}
                     </select>
                   </div>
                 )}
                 {formType === 'Organization' && (
                   <div className="space-y-4">
-                    <label className="text-[10px] text-gfa-slate uppercase font-bold tracking-[0.3em] opacity-60">{form.orgType}</label>
-                    <select className="w-full h-16 px-6 bg-gfa-warmWhite border border-gfa-border rounded-2xl text-sm font-bold appearance-none focus:border-gfa-gold transition-all outline-none cursor-pointer">
-                      {orgTypes.map((o: string) => <option key={o}>{o}</option>)}
+                    <label className="text-[10px] text-gfa-slate uppercase font-bold tracking-[0.3em] opacity-60">{form.orgType || "Organization Type"}</label>
+                    <select name="orgType" className="w-full h-16 px-6 bg-gfa-warmWhite border border-gfa-border rounded-2xl text-sm font-bold appearance-none focus:border-gfa-gold transition-all outline-none cursor-pointer">
+                      {orgTypes.map((o: string) => <option key={o} value={o}>{o}</option>)}
                     </select>
                   </div>
                 )}
               </div>
 
               <div className="space-y-4">
-                <label className="text-[10px] text-gfa-slate uppercase font-bold tracking-[0.3em] opacity-60">{form.message}</label>
-                <textarea required rows={6} className="w-full p-6 bg-gfa-warmWhite border border-gfa-border rounded-2xl text-base font-serif italic focus:border-gfa-gold focus:ring-4 focus:ring-gfa-gold/5 transition-all outline-none resize-none"></textarea>
+                <label className="text-[10px] text-gfa-slate uppercase font-bold tracking-[0.3em] opacity-60">{form.message || "Message"}</label>
+                <textarea required name="message" rows={6} className="w-full p-6 bg-gfa-warmWhite border border-gfa-border rounded-2xl text-base font-serif italic focus:border-gfa-gold focus:ring-4 focus:ring-gfa-gold/5 transition-all outline-none resize-none"></textarea>
               </div>
 
               <div className="flex items-start gap-6 py-6">
                 <div className="relative flex items-center">
-                  <input required type="checkbox" className="w-6 h-6 rounded-lg border-gfa-border text-gfa-gold focus:ring-gfa-gold/20 cursor-pointer" />
+                  <input required type="checkbox" name="consent" value="given" className="w-6 h-6 rounded-lg border-gfa-border text-gfa-gold focus:ring-gfa-gold/20 cursor-pointer" />
                 </div>
                 <p className="text-[10px] text-gfa-slate uppercase tracking-[0.2em] font-bold leading-relaxed opacity-60">
-                  {form.consent}
+                  {form.consent || "I agree to the terms and privacy policy."}
                 </p>
               </div>
 
               <button type="submit" className="w-full h-20 bg-gfa-inkBlack text-white font-bold uppercase text-xs tracking-[0.4em] rounded-2xl hover:bg-slate-800 shadow-2xl transition-all active:scale-[0.98]">
-                {form.submit}
+                {form.submit || "Submit"}
               </button>
             </form>
           </div>

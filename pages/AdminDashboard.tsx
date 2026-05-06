@@ -7,9 +7,9 @@ const AdminDashboard = () => {
   const adm = t.adminDashboard;
 
   return (
-    <div className="bg-gfa-warmWhite pt-40 pb-32 px-6 min-h-screen">
+    <div className="bg-gfa-warmWhite pt-40 pb-16 px-6 min-h-screen">
       <div className="container-gfa">
-        <header className="mb-16 flex flex-col md:flex-row justify-between items-end gap-10 border-b border-gfa-border pb-10">
+        <header className="mb-10 flex flex-col md:flex-row justify-between items-end gap-10 border-b border-gfa-border pb-10">
           <div>
             <span className="text-gfa-gold font-black uppercase tracking-[0.5em] text-[10px] mb-4 block opacity-80 italic">{adm.header.subtitle}</span>
             <h1 className="text-gfa-inkBlack uppercase text-4xl md:text-5xl leading-tight tracking-tighter font-serif font-bold">{adm.header.title}</h1>

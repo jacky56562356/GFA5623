@@ -22,7 +22,7 @@ const GraduateSupport = () => {
   };
 
   return (
-    <div className="bg-gfa-warmWhite min-h-screen font-sans pt-[80px] pb-24 relative">
+    <div className="bg-gfa-warmWhite min-h-screen font-sans pt-[80px] pb-16 relative">
       <SEO 
         title={cap.title || "Career Access"} 
         description={cap.subtitle || "Supporting the next generation of film professionals through mentorship, funding, and project matchmaking."} 
@@ -38,7 +38,7 @@ const GraduateSupport = () => {
       </div>
 
       {/* Document Header */}
-      <div className="relative bg-gfa-inkBlack py-32 mb-12 shadow-2xl overflow-hidden">
+      <div className="relative bg-gfa-inkBlack py-16 mb-12 shadow-2xl overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-20 grayscale">
           <img 
             src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=2070&auto=format&fit=crop" 
@@ -65,8 +65,8 @@ const GraduateSupport = () => {
 
       <div className="container-gfa max-w-7xl mx-auto relative z-10">
         {/* Intro Block */}
-        <section className="mb-32 max-w-5xl mx-auto">
-          <div className="bg-white border border-gfa-border p-12 md:p-16 rounded-[32px] shadow-xl relative overflow-hidden group hover:border-gfa-gold/30 transition-all duration-500">
+        <section className="mb-10 max-w-5xl mx-auto">
+          <div className="bg-white border border-gfa-border p-8 md:p-12 rounded-[32px] shadow-xl relative overflow-hidden group hover:border-gfa-gold/30 transition-all duration-500">
             <div className="absolute top-0 left-0 w-2 h-full bg-gfa-inkBlack group-hover:bg-gfa-gold transition-colors duration-500"></div>
             <div className="absolute -right-10 -bottom-10 opacity-5 group-hover:scale-110 transition-transform duration-700">
               <Star className="w-64 h-64 text-gfa-inkBlack" />
@@ -78,7 +78,7 @@ const GraduateSupport = () => {
         </section>
 
         {/* Program Pillars */}
-        <section className="mb-32">
+        <section className="mb-10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {Object.entries(cap.pillars || {}).map(([key, pillar]: [string, any], index) => (
               <div key={key} className="relative group rounded-[32px] overflow-hidden border border-gfa-border shadow-sm hover:shadow-2xl transition-all duration-500 h-[350px]">
@@ -112,7 +112,7 @@ const GraduateSupport = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2">
             
             {/* Left Column: Pathways */}
-            <div className="p-12 md:p-16 bg-gfa-inkBlack text-white relative overflow-hidden">
+            <div className="p-8 md:p-12 bg-gfa-inkBlack text-white relative overflow-hidden">
               <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gfa-gold/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
               <div className="relative z-10">
                 <h2 className="text-3xl font-bold font-serif mb-12 flex items-center gap-3">
@@ -132,7 +132,7 @@ const GraduateSupport = () => {
             </div>
 
             {/* Right Column: Form */}
-            <div className="p-12 md:p-16 bg-white">
+            <div className="p-8 md:p-12 bg-white">
               <h3 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-8">
                 {cap.inquiryTitle}
               </h3>

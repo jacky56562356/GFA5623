@@ -14,13 +14,13 @@ const Transparency: React.FC = () => {
   ];
 
   return (
-    <div className="py-32 max-w-7xl mx-auto px-4">
+    <div className="py-16 max-w-7xl mx-auto px-4">
       <SectionHeading 
         title={tr.title} 
         subtitle={tr.subtitle} 
       />
 
-      <div className="mb-24">
+      <div className="mb-12">
         <h3 className="text-2xl font-black mb-12 uppercase tracking-widest gold-gradient">{tr.tableTitle}</h3>
         <div className="overflow-x-auto border border-white/10 shadow-2xl">
           <table className="w-full text-left border-collapse bg-gfa-darkGray">
@@ -46,7 +46,7 @@ const Transparency: React.FC = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-24">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
         <div className="bg-gfa-darkGray p-12 border border-white/5">
           <h4 className="text-sm font-black uppercase tracking-widest text-gfa-gold mb-8 border-b border-gfa-gold/30 pb-4">{tr.rulesTitle}</h4>
           <ul className="space-y-6 text-xs text-gfa-gray font-bold uppercase tracking-wider">

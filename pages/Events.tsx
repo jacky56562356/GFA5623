@@ -9,7 +9,7 @@ const Events: React.FC = () => {
   const eventsList: GFAEvent[] = t.eventsList || [];
 
   return (
-    <div className="bg-gfa-warmWhite pt-48 pb-32 px-6 min-h-screen relative">
+    <div className="bg-gfa-warmWhite pt-32 pb-16 px-6 min-h-screen relative">
       <SEO 
         title={t.events.title || "Industry Events"} 
         description={t.events.intro || "Explore upcoming film industry events, competitions, screenings, and workshops endorsed by GFA."} 
@@ -19,7 +19,7 @@ const Events: React.FC = () => {
       <div className="absolute top-0 left-0 w-full h-[600px] bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-gfa-inkBlack/5 to-transparent pointer-events-none"></div>
       
       <div className="container-gfa relative z-10">
-        <header className="mb-24 text-center max-w-4xl mx-auto">
+        <header className="mb-12 text-center max-w-4xl mx-auto">
           <span className="gold-badge mb-8 shadow-sm">Industry Calendar</span>
           <h1 className="text-4xl md:text-5xl font-bold font-serif text-gfa-inkBlack mb-10 leading-tight">
             {t.events.title}
@@ -29,7 +29,7 @@ const Events: React.FC = () => {
           </p>
         </header>
       
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-32">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-10">
           {eventsList.map(event => (
             <div key={event.id} className="card-standard group cursor-pointer flex flex-col">
               <div className="relative overflow-hidden aspect-video mb-8 rounded-sm">
@@ -55,7 +55,7 @@ const Events: React.FC = () => {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 border-t border-gfa-border pt-24">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 border-t border-gfa-border pt-16">
            <div>
               <h3 className="text-2xl font-bold mb-8 text-gfa-inkBlack uppercase tracking-tighter font-serif">{t.events.sections.competitions}</h3>
               <div className="space-y-4">

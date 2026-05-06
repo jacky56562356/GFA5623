@@ -9,7 +9,7 @@ const Complaints = () => {
   const comp = t.complaints;
 
   return (
-    <div className="bg-gfa-warmWhite pt-48 pb-32 px-6 min-h-screen relative overflow-hidden">
+    <div className="bg-gfa-warmWhite pt-32 pb-16 px-6 min-h-screen relative overflow-hidden">
       <SEO 
         title={comp.title || "Feedback & Complaints"} 
         description="Official channel for reporting concerns or providing feedback regarding GFA-accredited organizations." 
@@ -19,7 +19,7 @@ const Complaints = () => {
       <div className="absolute top-0 left-0 w-[800px] h-[800px] bg-red-500/5 rounded-full blur-[120px] -ml-64 -mt-64 pointer-events-none"></div>
 
       <div className="container-gfa relative z-10">
-        <header className="mb-32 text-center max-w-4xl mx-auto animate-fade-in">
+        <header className="mb-10 text-center max-w-4xl mx-auto animate-fade-in">
           <div className="gold-badge mb-10 bg-red-500/10 text-red-600 border-red-500/20 animate-fade-up">Official Reporting Channel</div>
           <h1 className="text-5xl md:text-8xl font-bold font-serif text-gfa-inkBlack mb-12 leading-tight drop-shadow-sm">
             {comp.title}
@@ -30,7 +30,7 @@ const Complaints = () => {
         </header>
 
         <div className="max-w-3xl mx-auto">
-          <div className="bg-white p-12 md:p-20 rounded-[48px] shadow-2xl border border-gfa-border relative overflow-hidden animate-fade-up">
+          <div className="bg-white p-8 md:p-12 rounded-[48px] shadow-2xl border border-gfa-border relative overflow-hidden animate-fade-up">
             <div className="absolute top-0 left-0 w-full h-2 bg-red-600"></div>
             
             {submitted ? (
