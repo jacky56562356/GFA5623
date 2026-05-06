@@ -2,11 +2,11 @@ import React from 'react';
 import { useLocale } from '../LocaleContext.tsx';
 import { Locale } from '../types.ts';
 import SEO from '../components/SEO.tsx';
-import { Shield, Eye, CheckCircle, Heart, Lock } from 'lucide-react';
+import { Shield, Eye, CircleCheck as CheckCircle, Heart, Lock } from 'lucide-react';
 
 const YouthProtection: React.FC = () => {
   const { locale } = useLocale();
-  const isEn = locale === Locale.EN;
+  const isEn = locale !== Locale.ZH;
 
   return (
     <div className="font-sans">

@@ -6,7 +6,7 @@ import { Trophy, Star, Medal, ArrowRight, Heart } from 'lucide-react';
 
 const Awards: React.FC = () => {
   const { locale } = useLocale();
-  const isEn = locale === Locale.EN;
+  const isEn = locale !== Locale.ZH;
 
   return (
     <div className="font-sans pb-24">

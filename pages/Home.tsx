@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 import { useLocale } from '../LocaleContext.tsx';
 import { Locale } from '../types.ts';
 import SEO from '../components/SEO.tsx';
-import { PlayCircle, ArrowRight, Heart, Star, Film, Award, MapPin, PenTool, MonitorPlay, Video, Users, UsersRound, ChevronDown } from 'lucide-react';
+import { CirclePlay as PlayCircle, ArrowRight, Heart, Star, Film, Award, MapPin, PenTool, MonitorPlay, Video, Users, UsersRound, ChevronDown } from 'lucide-react';
 
 const Home: React.FC = () => {
   const { locale } = useLocale();
-  const isEn = locale === Locale.EN;
+  const isEn = locale !== Locale.ZH;
 
   return (
     <div className="font-sans">

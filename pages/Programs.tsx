@@ -7,7 +7,7 @@ import { ArrowRight } from 'lucide-react';
 
 const Programs: React.FC = () => {
   const { locale } = useLocale();
-  const isEn = locale === Locale.EN;
+  const isEn = locale !== Locale.ZH;
 
   const title = isEn ? "Our Programs — Shaping Tomorrow's Storytellers" : "我们的项目 — 塑造未来的影像讲述者";
   const desc = isEn 

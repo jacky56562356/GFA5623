@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const CookieBanner: React.FC = () => {
   const { locale } = useLocale();
-  const isEn = locale === Locale.EN;
+  const isEn = locale !== Locale.ZH;
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {

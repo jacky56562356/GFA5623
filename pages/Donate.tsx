@@ -15,7 +15,7 @@ import {
 
 const Donate: React.FC = () => {
   const { locale } = useLocale();
-  const isEn = locale === Locale.EN;
+  const isEn = locale !== Locale.ZH;
 
   const [amount, setAmount] = useState<string>('250');
   const [customAmount, setCustomAmount] = useState<string>('');

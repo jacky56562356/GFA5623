@@ -6,7 +6,7 @@ import { ChevronDown, Map, Compass, BookOpen, GraduationCap, PhoneCall } from 'l
 
 const FamilyGuide: React.FC = () => {
   const { locale } = useLocale();
-  const isEn = locale === Locale.EN;
+  const isEn = locale !== Locale.ZH;
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const toggleFaq = (index: number) => {

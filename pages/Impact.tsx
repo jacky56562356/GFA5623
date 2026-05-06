@@ -2,11 +2,11 @@ import React from 'react';
 import { useLocale } from '../LocaleContext.tsx';
 import { Locale } from '../types.ts';
 import SEO from '../components/SEO.tsx';
-import { FileText, PlayCircle } from 'lucide-react';
+import { FileText, CirclePlay as PlayCircle } from 'lucide-react';
 
 const Impact: React.FC = () => {
   const { locale } = useLocale();
-  const isEn = locale === Locale.EN;
+  const isEn = locale !== Locale.ZH;
 
   return (
     <div className="font-sans pb-24">

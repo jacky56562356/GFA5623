@@ -2,11 +2,11 @@ import React from 'react';
 import { useLocale } from '../LocaleContext.tsx';
 import { Locale } from '../types.ts';
 import SEO from '../components/SEO.tsx';
-import { Camera, Users, PlaySquare, FileText, Clapperboard, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Camera, Users, SquarePlay as PlaySquare, FileText, Clapperboard, CircleCheck as CheckCircle2, ArrowRight } from 'lucide-react';
 
 const FilmmakerSupport: React.FC = () => {
   const { locale } = useLocale();
-  const isEn = locale === Locale.EN;
+  const isEn = locale !== Locale.ZH;
 
   return (
     <div className="font-sans pb-24">

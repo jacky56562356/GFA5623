@@ -9,7 +9,7 @@ import {
 
 const Safeguarding: React.FC = () => {
   const { locale } = useLocale();
-  const isEn = locale === Locale.EN;
+  const isEn = locale !== Locale.ZH;
 
   return (
     <div className="bg-gfa-warmWhite pt-[80px] font-sans pb-24">

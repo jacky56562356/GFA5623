@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import { useLocale } from '../LocaleContext.tsx';
 import { Locale } from '../types.ts';
 import SEO from '../components/SEO.tsx';
-import { ArrowRight, Trophy, Star, Medal, Clapperboard, Frame, PenTool, CheckCircle2, ChevronDown } from 'lucide-react';
+import { ArrowRight, Trophy, Star, Medal, Clapperboard, Frame, PenTool, CircleCheck as CheckCircle2, ChevronDown } from 'lucide-react';
 
 const Competition: React.FC = () => {
   const { locale } = useLocale();
-  const isEn = locale === Locale.EN;
+  const isEn = locale !== Locale.ZH;
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const toggleFaq = (index: number) => {
