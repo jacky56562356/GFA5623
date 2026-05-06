@@ -17,8 +17,8 @@ const Awards: React.FC = () => {
       <section className="relative h-screen min-h-[700px] flex items-end overflow-hidden bg-gfa-inkBlack pt-20">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg?auto=compress&cs=tinysrgb&w=1600"
-            alt="Hollywood awards ceremony stage with spotlight"
+            src="https://images.pexels.com/photos/2263436/pexels-photo-2263436.jpeg?auto=compress&cs=tinysrgb&w=1600"
+            alt="Awards ceremony"
             className="w-full h-full object-cover opacity-50"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-gfa-inkBlack via-gfa-inkBlack/40 to-transparent"></div>
@@ -79,18 +79,18 @@ const Awards: React.FC = () => {
             </div>
             <div className="grid grid-cols-2 gap-4">
               <img
-                src="https://images.pexels.com/photos/3379422/pexels-photo-3379422.jpeg?auto=compress&cs=tinysrgb&w=600"
-                alt="Proud young filmmaker receiving recognition and applause"
+                src="https://images.pexels.com/photos/2608517/pexels-photo-2608517.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="Filmmaker"
                 className="rounded-2xl w-full h-56 object-cover col-span-2"
               />
               <img
-                src="https://images.pexels.com/photos/3419592/pexels-photo-3419592.jpeg?auto=compress&cs=tinysrgb&w=400"
-                alt="Golden trophy award close-up on stage"
+                src="https://images.pexels.com/photos/3419557/pexels-photo-3419557.jpeg?auto=compress&cs=tinysrgb&w=400"
+                alt="Film awards"
                 className="rounded-2xl w-full h-44 object-cover"
               />
               <img
-                src="https://images.pexels.com/photos/2869396/pexels-photo-2869396.jpeg?auto=compress&cs=tinysrgb&w=400"
-                alt="Youth performer on stage under lights"
+                src="https://images.pexels.com/photos/1024960/pexels-photo-1024960.jpeg?auto=compress&cs=tinysrgb&w=400"
+                alt="Young filmmaker"
                 className="rounded-2xl w-full h-44 object-cover"
               />
             </div>
@@ -102,8 +102,8 @@ const Awards: React.FC = () => {
       <section className="py-24 bg-gfa-inkBlack text-white relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.pexels.com/photos/2263436/pexels-photo-2263436.jpeg?auto=compress&cs=tinysrgb&w=1600"
-            alt="Awards ceremony hall filled with audience and celebration"
+            src="https://images.pexels.com/photos/5827883/pexels-photo-5827883.jpeg?auto=compress&cs=tinysrgb&w=1600"
+            alt="Awards night"
             className="w-full h-full object-cover opacity-10"
           />
         </div>
@@ -221,7 +221,7 @@ const Awards: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             <div className="relative rounded-3xl overflow-hidden group">
               <img
-                src="https://images.pexels.com/photos/3379932/pexels-photo-3379932.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="https://images.pexels.com/photos/3184560/pexels-photo-3184560.jpeg?auto=compress&cs=tinysrgb&w=800"
                 alt="Press coverage"
                 className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-700"
               />
@@ -236,7 +236,7 @@ const Awards: React.FC = () => {
 
             <div className="relative rounded-3xl overflow-hidden group">
               <img
-                src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="https://images.pexels.com/photos/2489545/pexels-photo-2489545.jpeg?auto=compress&cs=tinysrgb&w=800"
                 alt="Corporate sponsors"
                 className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-700"
               />
@@ -253,8 +253,8 @@ const Awards: React.FC = () => {
           {/* Fund a Dream */}
           <div className="relative rounded-3xl overflow-hidden">
             <img
-              src="https://images.pexels.com/photos/1708936/pexels-photo-1708936.jpeg?auto=compress&cs=tinysrgb&w=1600"
-              alt="Youth standing in spotlight on stage, a dream fulfilled"
+              src="https://images.pexels.com/photos/1595385/pexels-photo-1595385.jpeg?auto=compress&cs=tinysrgb&w=1600"
+              alt="Dream ceremony"
               className="w-full h-80 object-cover"
             />
             <div className="absolute inset-0 bg-gfa-inkBlack/80 flex flex-col items-center justify-center text-center px-8">
