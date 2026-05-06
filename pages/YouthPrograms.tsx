@@ -17,8 +17,8 @@ const YouthPrograms: React.FC = () => {
       <section className="relative h-screen min-h-[700px] flex items-end overflow-hidden bg-gfa-inkBlack pt-20">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.pexels.com/photos/4350057/pexels-photo-4350057.jpeg?auto=compress&cs=tinysrgb&w=1600"
-            alt="Young filmmaker"
+            src="https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?auto=compress&cs=tinysrgb&w=1600"
+            alt="Child holding a camera for the first time"
             className="w-full h-full object-cover opacity-60"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-gfa-inkBlack via-gfa-inkBlack/40 to-transparent"></div>
@@ -104,18 +104,18 @@ const YouthPrograms: React.FC = () => {
             </div>
             <div className="grid grid-cols-2 gap-4">
               <img
-                src="https://images.pexels.com/photos/2510428/pexels-photo-2510428.jpeg?auto=compress&cs=tinysrgb&w=600"
-                alt="Youth filmmaking"
+                src="https://images.pexels.com/photos/8363831/pexels-photo-8363831.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="Kids in summer film workshop learning together"
                 className="rounded-2xl w-full h-56 object-cover col-span-2"
               />
               <img
-                src="https://images.pexels.com/photos/5149126/pexels-photo-5149126.jpeg?auto=compress&cs=tinysrgb&w=400"
-                alt="Film production"
+                src="https://images.pexels.com/photos/3844788/pexels-photo-3844788.jpeg?auto=compress&cs=tinysrgb&w=400"
+                alt="Close up of video camera cinematography"
                 className="rounded-2xl w-full h-44 object-cover"
               />
               <img
-                src="https://images.pexels.com/photos/3771807/pexels-photo-3771807.jpeg?auto=compress&cs=tinysrgb&w=400"
-                alt="Young director"
+                src="https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg?auto=compress&cs=tinysrgb&w=400"
+                alt="Young person looking through camera viewfinder"
                 className="rounded-2xl w-full h-44 object-cover"
               />
             </div>
@@ -144,8 +144,8 @@ const YouthPrograms: React.FC = () => {
           {/* Scholarship CTA */}
           <div className="relative rounded-3xl overflow-hidden">
             <img
-              src="https://images.pexels.com/photos/8424732/pexels-photo-8424732.jpeg?auto=compress&cs=tinysrgb&w=1600"
-              alt="Youth filmmaker"
+              src="https://images.pexels.com/photos/6146974/pexels-photo-6146974.jpeg?auto=compress&cs=tinysrgb&w=1600"
+              alt="Diverse children in a classroom showing equal opportunity for all"
               className="w-full h-80 object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-gfa-inkBlack/90 via-gfa-inkBlack/70 to-transparent"></div>
@@ -185,8 +185,8 @@ const YouthPrograms: React.FC = () => {
             <div className="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 flex flex-col">
               <div className="relative h-72 overflow-hidden">
                 <img
-                  src="https://images.pexels.com/photos/3755824/pexels-photo-3755824.jpeg?auto=compress&cs=tinysrgb&w=800"
-                  alt="Children's Film Project"
+                  src="https://images.pexels.com/photos/3473492/pexels-photo-3473492.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  alt="Children on a mini film set with clapperboard"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
@@ -224,8 +224,8 @@ const YouthPrograms: React.FC = () => {
             <div className="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 flex flex-col">
               <div className="relative h-72 overflow-hidden">
                 <img
-                  src="https://images.pexels.com/photos/8363793/pexels-photo-8363793.jpeg?auto=compress&cs=tinysrgb&w=800"
-                  alt="Film Therapy"
+                  src="https://images.pexels.com/photos/7551675/pexels-photo-7551675.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  alt="Adult instructor in nurturing creative session with special needs child"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
@@ -271,8 +271,8 @@ const YouthPrograms: React.FC = () => {
       <section className="py-24 bg-gfa-inkBlack relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.pexels.com/photos/4145153/pexels-photo-4145153.jpeg?auto=compress&cs=tinysrgb&w=1600"
-            alt="Technology"
+            src="https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=1600"
+            alt="AI technology screen glow digital innovation"
             className="w-full h-full object-cover opacity-10"
           />
         </div>
@@ -341,23 +341,23 @@ const YouthPrograms: React.FC = () => {
             </div>
             <div className="grid grid-cols-2 gap-4">
               <img
-                src="https://images.pexels.com/photos/8107827/pexels-photo-8107827.jpeg?auto=compress&cs=tinysrgb&w=400"
-                alt="Youth program"
+                src="https://images.pexels.com/photos/8424554/pexels-photo-8424554.jpeg?auto=compress&cs=tinysrgb&w=400"
+                alt="Child receiving a camera, symbolizing a donation in action"
                 className="rounded-2xl w-full h-48 object-cover"
               />
               <img
-                src="https://images.pexels.com/photos/2774571/pexels-photo-2774571.jpeg?auto=compress&cs=tinysrgb&w=400"
-                alt="Filmmaking"
+                src="https://images.pexels.com/photos/7983476/pexels-photo-7983476.jpeg?auto=compress&cs=tinysrgb&w=400"
+                alt="Youth watching their film screened for an audience"
                 className="rounded-2xl w-full h-48 object-cover mt-8"
               />
               <img
-                src="https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=400"
-                alt="Youth film"
+                src="https://images.pexels.com/photos/8424561/pexels-photo-8424561.jpeg?auto=compress&cs=tinysrgb&w=400"
+                alt="Diverse group of youth students in a film program"
                 className="rounded-2xl w-full h-48 object-cover"
               />
               <img
-                src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=400"
-                alt="Student filmmaker"
+                src="https://images.pexels.com/photos/5212364/pexels-photo-5212364.jpeg?auto=compress&cs=tinysrgb&w=400"
+                alt="Mentor working one-on-one with a young student filmmaker"
                 className="rounded-2xl w-full h-48 object-cover mt-8"
               />
             </div>

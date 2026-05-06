@@ -332,17 +332,17 @@ const Home: React.FC = () => {
             <div className="hidden lg:block absolute top-8 left-[10%] right-[10%] h-[2px] bg-gradient-to-r from-transparent via-[#C9A84C]/40 to-transparent"></div>
             <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-8 relative z-10">
               {(isEn ? [
-                { stage: '01', age: 'Ages 6–10', title: 'Discover Film', desc: 'Summer camps · Community screenings · First short films', img: 'https://images.pexels.com/photos/8942090/pexels-photo-8942090.jpeg?auto=compress&cs=tinysrgb&w=300' },
-                { stage: '02', age: 'Ages 11–14', title: 'Learn Creation', desc: 'Short film production · Talent competitions · Workshops', img: 'https://images.pexels.com/photos/7991579/pexels-photo-7991579.jpeg?auto=compress&cs=tinysrgb&w=300' },
-                { stage: '03', age: 'Ages 15–18', title: 'Professional Training', desc: 'Hollywood training · AI filmmaking · Advanced workshops', img: 'https://images.pexels.com/photos/3062541/pexels-photo-3062541.jpeg?auto=compress&cs=tinysrgb&w=300' },
-                { stage: '04', age: 'Graduate', title: 'Break Into Industry', desc: 'Career support · Free gear · Distribution deals', img: 'https://images.pexels.com/photos/7234266/pexels-photo-7234266.jpeg?auto=compress&cs=tinysrgb&w=300' },
-                { stage: '05', age: 'Professional', title: 'Give Back', desc: 'Become a mentor · Support next generation · Lead', img: 'https://images.pexels.com/photos/6893815/pexels-photo-6893815.jpeg?auto=compress&cs=tinysrgb&w=300' },
+                { stage: '01', age: 'Ages 6–10', title: 'Discover Film', desc: 'Summer camps · Community screenings · First short films', img: 'https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?auto=compress&cs=tinysrgb&w=300' },
+                { stage: '02', age: 'Ages 11–14', title: 'Learn Creation', desc: 'Short film production · Talent competitions · Workshops', img: 'https://images.pexels.com/photos/8363831/pexels-photo-8363831.jpeg?auto=compress&cs=tinysrgb&w=300' },
+                { stage: '03', age: 'Ages 15–18', title: 'Professional Training', desc: 'Hollywood training · AI filmmaking · Advanced workshops', img: 'https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=300' },
+                { stage: '04', age: 'Graduate', title: 'Break Into Industry', desc: 'Career support · Free gear · Distribution deals', img: 'https://images.pexels.com/photos/2566573/pexels-photo-2566573.jpeg?auto=compress&cs=tinysrgb&w=300' },
+                { stage: '05', age: 'Professional', title: 'Give Back', desc: 'Become a mentor · Support next generation · Lead', img: 'https://images.pexels.com/photos/5212364/pexels-photo-5212364.jpeg?auto=compress&cs=tinysrgb&w=300' },
               ] : [
-                { stage: '01', age: '6-10岁', title: '发现电影', desc: '夏令营 · 社区放映 · 第一部短片', img: 'https://images.pexels.com/photos/8942090/pexels-photo-8942090.jpeg?auto=compress&cs=tinysrgb&w=300' },
-                { stage: '02', age: '11-14岁', title: '学习创作', desc: '短片制作 · 才艺大赛 · 工作坊', img: 'https://images.pexels.com/photos/7991579/pexels-photo-7991579.jpeg?auto=compress&cs=tinysrgb&w=300' },
-                { stage: '03', age: '15-18岁', title: '专业训练', desc: '好莱坞培训 · AI影视 · 高级工作坊', img: 'https://images.pexels.com/photos/3062541/pexels-photo-3062541.jpeg?auto=compress&cs=tinysrgb&w=300' },
-                { stage: '04', age: '毕业阶段', title: '进入行业', desc: '就业扶持 · 免费设备 · 发行对接', img: 'https://images.pexels.com/photos/7234266/pexels-photo-7234266.jpeg?auto=compress&cs=tinysrgb&w=300' },
-                { stage: '05', age: '职业阶段', title: '反哺社区', desc: '成为导师 · 支持下一代 · 传递力量', img: 'https://images.pexels.com/photos/6893815/pexels-photo-6893815.jpeg?auto=compress&cs=tinysrgb&w=300' },
+                { stage: '01', age: '6-10岁', title: '发现电影', desc: '夏令营 · 社区放映 · 第一部短片', img: 'https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?auto=compress&cs=tinysrgb&w=300' },
+                { stage: '02', age: '11-14岁', title: '学习创作', desc: '短片制作 · 才艺大赛 · 工作坊', img: 'https://images.pexels.com/photos/8363831/pexels-photo-8363831.jpeg?auto=compress&cs=tinysrgb&w=300' },
+                { stage: '03', age: '15-18岁', title: '专业训练', desc: '好莱坞培训 · AI影视 · 高级工作坊', img: 'https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=300' },
+                { stage: '04', age: '毕业阶段', title: '进入行业', desc: '就业扶持 · 免费设备 · 发行对接', img: 'https://images.pexels.com/photos/2566573/pexels-photo-2566573.jpeg?auto=compress&cs=tinysrgb&w=300' },
+                { stage: '05', age: '职业阶段', title: '反哺社区', desc: '成为导师 · 支持下一代 · 传递力量', img: 'https://images.pexels.com/photos/5212364/pexels-photo-5212364.jpeg?auto=compress&cs=tinysrgb&w=300' },
               ]).map((step, i) => (
                 <div key={step.stage} className="flex flex-col items-center text-center group">
                   <div className="w-16 h-16 rounded-full overflow-hidden border-4 border-white shadow-md mb-4 group-hover:border-[#C9A84C] transition-colors relative z-10">
