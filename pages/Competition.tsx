@@ -38,7 +38,7 @@ const Competition: React.FC = () => {
       <section className="relative h-screen min-h-[800px] flex items-end overflow-hidden bg-gfa-inkBlack pt-20">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&w=1600"
+            src="https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=1600"
             alt="Grand stage competition"
             className="w-full h-full object-cover opacity-50"
           />
@@ -97,22 +97,22 @@ const Competition: React.FC = () => {
             </div>
             <div className="grid grid-cols-2 gap-4">
               <img
-                src="https://images.pexels.com/photos/7991579/pexels-photo-7991579.jpeg?auto=compress&cs=tinysrgb&w=600"
+                src="https://images.pexels.com/photos/2912596/pexels-photo-2912596.jpeg?auto=compress&cs=tinysrgb&w=600"
                 alt="Youth filmmaker"
                 className="rounded-2xl w-full h-52 object-cover"
               />
               <img
-                src="https://images.pexels.com/photos/8106613/pexels-photo-8106613.jpeg?auto=compress&cs=tinysrgb&w=600"
+                src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=600"
                 alt="Performance"
                 className="rounded-2xl w-full h-52 object-cover mt-8"
               />
               <img
-                src="https://images.pexels.com/photos/3807571/pexels-photo-3807571.jpeg?auto=compress&cs=tinysrgb&w=600"
+                src="https://images.pexels.com/photos/3379936/pexels-photo-3379936.jpeg?auto=compress&cs=tinysrgb&w=600"
                 alt="Film production"
                 className="rounded-2xl w-full h-52 object-cover"
               />
               <img
-                src="https://images.pexels.com/photos/7234266/pexels-photo-7234266.jpeg?auto=compress&cs=tinysrgb&w=600"
+                src="https://images.pexels.com/photos/4348404/pexels-photo-4348404.jpeg?auto=compress&cs=tinysrgb&w=600"
                 alt="Talent"
                 className="rounded-2xl w-full h-52 object-cover mt-8"
               />
@@ -179,7 +179,7 @@ const Competition: React.FC = () => {
       <section className="flex flex-col md:flex-row">
         <div className="md:w-1/2 relative overflow-hidden min-h-[360px]">
           <img
-            src="https://images.pexels.com/photos/8942090/pexels-photo-8942090.jpeg?auto=compress&cs=tinysrgb&w=800"
+            src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=800"
             alt="Chinese families"
             className="w-full h-full object-cover absolute inset-0"
           />
@@ -193,7 +193,7 @@ const Competition: React.FC = () => {
         </div>
         <div className="md:w-1/2 relative overflow-hidden min-h-[360px]">
           <img
-            src="https://images.pexels.com/photos/7234266/pexels-photo-7234266.jpeg?auto=compress&cs=tinysrgb&w=800"
+            src="https://images.pexels.com/photos/1181353/pexels-photo-1181353.jpeg?auto=compress&cs=tinysrgb&w=800"
             alt="American families"
             className="w-full h-full object-cover absolute inset-0"
           />
@@ -216,10 +216,10 @@ const Competition: React.FC = () => {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
             {[
-              { n: 1, zh: "在线报名", zhd: "填写基本信息和参赛类别", en: "Register Online", end: "Fill out info & categories", img: "https://images.pexels.com/photos/7991579/pexels-photo-7991579.jpeg?auto=compress&cs=tinysrgb&w=300" },
-              { n: 2, zh: "提交作品", zhd: "上传视频或作品文件", en: "Submit Work", end: "Upload video or file", img: "https://images.pexels.com/photos/3807571/pexels-photo-3807571.jpeg?auto=compress&cs=tinysrgb&w=300" },
-              { n: 3, zh: "评审入围", zhd: "专业评审委员会审核", en: "Jury Selection", end: "Industry panel review", img: "https://images.pexels.com/photos/3062541/pexels-photo-3062541.jpeg?auto=compress&cs=tinysrgb&w=300" },
-              { n: 4, zh: "决赛舞台", zhd: "Dolby Theatre，好莱坞", en: "Grand Finale", end: "Dolby Theatre, LA", img: "https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&w=300" },
+              { n: 1, zh: "在线报名", zhd: "填写基本信息和参赛类别", en: "Register Online", end: "Fill out info & categories", img: "https://images.pexels.com/photos/4050291/pexels-photo-4050291.jpeg?auto=compress&cs=tinysrgb&w=300" },
+              { n: 2, zh: "提交作品", zhd: "上传视频或作品文件", en: "Submit Work", end: "Upload video or file", img: "https://images.pexels.com/photos/2873486/pexels-photo-2873486.jpeg?auto=compress&cs=tinysrgb&w=300" },
+              { n: 3, zh: "评审入围", zhd: "专业评审委员会审核", en: "Jury Selection", end: "Industry panel review", img: "https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=300" },
+              { n: 4, zh: "决赛舞台", zhd: "Dolby Theatre，好莱坞", en: "Grand Finale", end: "Dolby Theatre, LA", img: "https://images.pexels.com/photos/2774600/pexels-photo-2774600.jpeg?auto=compress&cs=tinysrgb&w=300" },
             ].map((step) => (
               <div key={step.n} className="text-center">
                 <div className="relative rounded-2xl overflow-hidden mb-4">
@@ -242,7 +242,7 @@ const Competition: React.FC = () => {
       <section className="py-24 bg-gfa-inkBlack relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.pexels.com/photos/3137081/pexels-photo-3137081.jpeg?auto=compress&cs=tinysrgb&w=1600"
+            src="https://images.pexels.com/photos/1540406/pexels-photo-1540406.jpeg?auto=compress&cs=tinysrgb&w=1600"
             alt="Awards"
             className="w-full h-full object-cover opacity-10"
           />
@@ -300,7 +300,7 @@ const Competition: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2">
           <div className="relative overflow-hidden min-h-[320px]">
             <img
-              src="https://images.pexels.com/photos/8044196/pexels-photo-8044196.jpeg?auto=compress&cs=tinysrgb&w=800"
+              src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=800"
               alt="Sponsor"
               className="w-full h-full object-cover absolute inset-0"
             />
@@ -320,7 +320,7 @@ const Competition: React.FC = () => {
           </div>
           <div className="relative overflow-hidden min-h-[320px]">
             <img
-              src="https://images.pexels.com/photos/3137081/pexels-photo-3137081.jpeg?auto=compress&cs=tinysrgb&w=800"
+              src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800"
               alt="Donate"
               className="w-full h-full object-cover absolute inset-0"
             />

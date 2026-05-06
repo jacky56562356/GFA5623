@@ -17,7 +17,7 @@ const About: React.FC = () => {
       <section className="relative min-h-[70vh] flex items-end justify-start overflow-hidden bg-gfa-inkBlack mt-[90px] md:mt-[100px]">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.pexels.com/photos/3062541/pexels-photo-3062541.jpeg?auto=compress&cs=tinysrgb&w=1920"
+            src="https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg?auto=compress&cs=tinysrgb&w=1920"
             alt="Filmmakers at work"
             className="w-full h-full object-cover opacity-50"
           />
@@ -68,10 +68,10 @@ const About: React.FC = () => {
               </div>
             </div>
             <div className="space-y-4">
-              <img src="https://images.pexels.com/photos/8942090/pexels-photo-8942090.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Youth filmmaking" className="w-full h-72 object-cover rounded-3xl" />
+              <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Youth filmmaking" className="w-full h-72 object-cover rounded-3xl" />
               <div className="grid grid-cols-2 gap-4">
-                <img src="https://images.pexels.com/photos/7991579/pexels-photo-7991579.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Camera crew" className="w-full h-44 object-cover rounded-2xl" />
-                <img src="https://images.pexels.com/photos/3807571/pexels-photo-3807571.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Film production" className="w-full h-44 object-cover rounded-2xl" />
+                <img src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Director on set" className="w-full h-44 object-cover rounded-2xl" />
+                <img src="https://images.pexels.com/photos/1181472/pexels-photo-1181472.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Production team" className="w-full h-44 object-cover rounded-2xl" />
               </div>
             </div>
           </div>
@@ -187,15 +187,15 @@ const About: React.FC = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {(isEn ? [
-              { img: 'https://images.pexels.com/photos/7234266/pexels-photo-7234266.jpeg?auto=compress&cs=tinysrgb&w=400', title: 'Film Graduates', desc: 'Recent graduates from USC, UCLA, Chapman, and other programs seeking their industry break.' },
-              { img: 'https://images.pexels.com/photos/8106613/pexels-photo-8106613.jpeg?auto=compress&cs=tinysrgb&w=400', title: 'Emerging Directors', desc: 'Independent creators with vision who lack distribution channels and industry resources.' },
-              { img: 'https://images.pexels.com/photos/8942090/pexels-photo-8942090.jpeg?auto=compress&cs=tinysrgb&w=400', title: 'Youth Ages 6–17', desc: 'Young people exploring creative potential through camps, production projects, and competitions.' },
-              { img: 'https://images.pexels.com/photos/8044196/pexels-photo-8044196.jpeg?auto=compress&cs=tinysrgb&w=400', title: 'Special Needs Youth', desc: 'Children with autism, depression, or other special needs finding healing through film arts therapy.' },
+              { img: 'https://images.pexels.com/photos/2422278/pexels-photo-2422278.jpeg?auto=compress&cs=tinysrgb&w=400', title: 'Film Graduates', desc: 'Recent graduates from USC, UCLA, Chapman, and other programs seeking their industry break.' },
+              { img: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=400', title: 'Emerging Directors', desc: 'Independent creators with vision who lack distribution channels and industry resources.' },
+              { img: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=400', title: 'Youth Ages 6–17', desc: 'Young people exploring creative potential through camps, production projects, and competitions.' },
+              { img: 'https://images.pexels.com/photos/3379934/pexels-photo-3379934.jpeg?auto=compress&cs=tinysrgb&w=400', title: 'Special Needs Youth', desc: 'Children with autism, depression, or other special needs finding healing through film arts therapy.' },
             ] : [
-              { img: 'https://images.pexels.com/photos/7234266/pexels-photo-7234266.jpeg?auto=compress&cs=tinysrgb&w=400', title: '电影专业毕业生', desc: '来自USC、UCLA、Chapman等院校的应届毕业生，寻求进入行业的第一步。' },
-              { img: 'https://images.pexels.com/photos/8106613/pexels-photo-8106613.jpeg?auto=compress&cs=tinysrgb&w=400', title: '新晋独立导演', desc: '有创作愿景但缺乏发行渠道和行业资源的独立创作者。' },
-              { img: 'https://images.pexels.com/photos/8942090/pexels-photo-8942090.jpeg?auto=compress&cs=tinysrgb&w=400', title: '6-17岁青少年', desc: '通过夏令营、制作项目和比赛探索创作潜能的年轻人。' },
-              { img: 'https://images.pexels.com/photos/8044196/pexels-photo-8044196.jpeg?auto=compress&cs=tinysrgb&w=400', title: '特殊需求儿童', desc: '自闭症、抑郁症等特殊需求儿童，通过电影艺术疗法找到疗愈。' },
+              { img: 'https://images.pexels.com/photos/2422278/pexels-photo-2422278.jpeg?auto=compress&cs=tinysrgb&w=400', title: '电影专业毕业生', desc: '来自USC、UCLA、Chapman等院校的应届毕业生，寻求进入行业的第一步。' },
+              { img: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=400', title: '新晋独立导演', desc: '有创作愿景但缺乏发行渠道和行业资源的独立创作者。' },
+              { img: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=400', title: '6-17岁青少年', desc: '通过夏令营、制作项目和比赛探索创作潜能的年轻人。' },
+              { img: 'https://images.pexels.com/photos/3379934/pexels-photo-3379934.jpeg?auto=compress&cs=tinysrgb&w=400', title: '特殊需求儿童', desc: '自闭症、抑郁症等特殊需求儿童，通过电影艺术疗法找到疗愈。' },
             ]).map(item => (
               <div key={item.title} className="group bg-white border border-gfa-border rounded-3xl overflow-hidden hover:shadow-lg hover:border-[#C9A84C]/30 transition-all">
                 <div className="h-44 overflow-hidden">
