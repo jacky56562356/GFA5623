@@ -87,9 +87,6 @@ const About: React.FC = () => {
                   ? "Global Film Alliance (GFA) is a 501(c)(3) certified nonprofit organization headquartered in Los Angeles, California. Through our commitment to film education, industry support, and international cooperation, we break down industry barriers and create equitable opportunities for everyone passionate about film." 
                   : "全球电影联盟（Global Film Alliance，简称GFA）是总部位于加利福尼亚州洛杉矶的501(c)(3)认证非营利组织。我们通过致力于影视教育、产业支撑与国际合作，为所有热爱电影的人打破行业壁垒，创造公平的机会。"}
               </p>
-              <div className="mt-8 flex items-center gap-4">
-                <img src="https://i.ibb.co/nNQnFsHd/t.png" alt="GFA Certification" className="h-16 w-auto object-contain" />
-              </div>
             </div>
             <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-100">
                <img src="https://i.ibb.co/5W4kfjsB/intro-photo.jpg" alt="About GFA" className="w-full h-auto object-cover" />

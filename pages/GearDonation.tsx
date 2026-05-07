@@ -18,10 +18,13 @@ const GearDonation: React.FC = () => {
     phone: '',
     shippingMethod: 'mail',
     shippingAddress: '',
-    heavyGearRemarks: '',
-    lightGearRemarks: '',
+    overallRemarks: '',
     needsTaxDeduction: false
   });
+
+  const [donatedItems, setDonatedItems] = useState([
+    { id: Date.now().toString(), category: 'camera', brandModel: '', condition: 'good', quantity: 1 }
+  ]);
 
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const [previewUrls, setPreviewUrls] = useState<string[]>([]);
@@ -61,29 +64,40 @@ const GearDonation: React.FC = () => {
     setPreviewUrls(newUrls);
   };
 
+  const handleItemChange = (id: string, field: string, value: string | number) => {
+    setDonatedItems(prev => prev.map(item => item.id === id ? { ...item, [field]: value } : item));
+  };
+
+  const addItem = () => {
+    setDonatedItems(prev => [...prev, { id: Date.now().toString(), category: 'camera', brandModel: '', condition: 'good', quantity: 1 }]);
+  };
+
+  const removeItem = (id: string) => {
+    if (donatedItems.length > 1) {
+      setDonatedItems(prev => prev.filter(item => item.id !== id));
+    }
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!user) {
-      setError(isEn ? "Please sign in to submit a donation." : "请先登录以提交捐赠表单。");
-      return;
-    }
 
     setSubmitting(true);
     setError(null);
 
     try {
+      const uid = user ? user.uid : 'anonymous';
       // Fake image upload process
-      const uploadedImageUrls = selectedFiles.map((_, i) => `https://gfa-storage.example.com/donations/${user.uid}/img_${i}.jpg`);
+      const uploadedImageUrls = selectedFiles.map((_, i) => `https://gfa-storage.example.com/donations/${uid}/img_${i}.jpg`);
 
       const dataToSubmit: any = {
-        userId: user.uid,
+        userId: uid,
         donorName: formData.donorName,
         email: formData.email,
         phone: formData.phone,
         shippingMethod: formData.shippingMethod,
         shippingAddress: formData.shippingAddress,
-        heavyGearRemarks: formData.heavyGearRemarks,
-        lightGearRemarks: formData.lightGearRemarks,
+        donatedItemsDetails: JSON.stringify(donatedItems),
+        overallRemarks: formData.overallRemarks,
         needsTaxDeduction: formData.needsTaxDeduction,
         imageUrls: uploadedImageUrls,
         status: 'pending',
@@ -235,23 +249,7 @@ const GearDonation: React.FC = () => {
             </p>
           </div>
 
-          {!user ? (
-            <div className="bg-white p-12 rounded-3xl text-center shadow-lg border border-gfa-border">
-              <div className="w-20 h-20 bg-[#C9A84C]/10 rounded-full flex items-center justify-center mx-auto mb-6 text-[#C9A84C]">
-                <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
-              </div>
-              <h3 className="text-2xl font-bold text-gfa-inkBlack mb-4">
-                {isEn ? "Sign in Required" : "需要登录"}
-              </h3>
-              <p className="text-gfa-slate font-light mb-8 max-w-md mx-auto">
-                {isEn ? "Please sign in or create an account to submit a gear donation so we can securely track your contribution and issue tax receipts." : "为了安全追踪您的捐赠记录并准确发放免税收据，请先登录或注册账号。"}
-              </p>
-              <button onClick={() => window.location.href = '/'} className="px-8 py-3 bg-gfa-inkBlack text-white rounded-full font-bold uppercase tracking-widest text-sm hover:bg-[#C9A84C] transition-colors shadow-md">
-                {isEn ? "Go to Home to Sign In" : "返回主页进行登录"}
-              </button>
-            </div>
-          ) : (
-            <form onSubmit={handleSubmit} className="space-y-12">
+          <form onSubmit={handleSubmit} className="space-y-12">
               {error && (
                 <div className="bg-red-50 text-red-600 p-4 rounded-xl text-sm border border-red-100">
                   {error}
@@ -371,41 +369,111 @@ const GearDonation: React.FC = () => {
 
               {/* Equipment Details */}
               <div className="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-gfa-border">
-                <h3 className="text-xl font-bold font-serif text-gfa-inkBlack mb-6 pb-4 border-b border-gfa-border flex items-center gap-3">
-                  <span className="w-8 h-8 rounded-full bg-[#C9A84C]/10 text-[#C9A84C] flex items-center justify-center text-sm">3</span>
-                  {isEn ? "Equipment Details" : "捐赠设备明细"}
-                </h3>
+                <div className="flex items-center justify-between border-b border-gfa-border pb-4 mb-6">
+                  <h3 className="text-xl font-bold font-serif text-gfa-inkBlack flex items-center gap-3">
+                    <span className="w-8 h-8 rounded-full bg-[#C9A84C]/10 text-[#C9A84C] flex items-center justify-center text-sm">3</span>
+                    {isEn ? "Equipment Details" : "捐赠设备明细"}
+                  </h3>
+                  <button type="button" onClick={addItem} className="text-[#C9A84C] hover:text-[#b09241] font-bold text-sm tracking-widest uppercase flex items-center gap-1 transition-colors">
+                    <span>+</span> {isEn ? "Add Item" : "添加设备"}
+                  </button>
+                </div>
+                
                 <div className="space-y-6">
+                  {/* Equipment Table / List */}
+                  <div className="overflow-x-auto border border-gfa-border rounded-xl">
+                    <table className="w-full text-sm text-left">
+                      <thead className="bg-[#fcfaf5] text-gfa-slate font-bold uppercase text-xs border-b border-gfa-border">
+                        <tr>
+                          <th className="px-4 py-3">{isEn ? "Category" : "类别"} *</th>
+                          <th className="px-4 py-3">{isEn ? "Brand / Model" : "品牌 / 型号"} *</th>
+                          <th className="px-4 py-3">{isEn ? "Condition" : "设备状况"} *</th>
+                          <th className="px-4 py-3 w-24 text-center">{isEn ? "Qty" : "数量"} *</th>
+                          <th className="px-4 py-3 w-16 text-center"></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {donatedItems.map((item, index) => (
+                          <tr key={item.id} className="border-b border-gfa-border last:border-0 hover:bg-gfa-warmWhite transition-colors">
+                            <td className="px-4 py-3">
+                              <select 
+                                value={item.category} 
+                                onChange={(e) => handleItemChange(item.id, 'category', e.target.value)}
+                                className="w-full bg-white border border-gfa-border rounded-lg px-3 py-2 focus:outline-none focus:border-[#C9A84C]"
+                              >
+                                <option value="camera">{isEn ? "Camera" : "摄影机"}</option>
+                                <option value="lens">{isEn ? "Lens" : "镜头"}</option>
+                                <option value="lighting">{isEn ? "Lighting" : "灯光"}</option>
+                                <option value="grip">{isEn ? "Grip & Support" : "脚架与移动"}</option>
+                                <option value="audio">{isEn ? "Audio" : "录音设备"}</option>
+                                <option value="accessory">{isEn ? "Accessory" : "配件"}</option>
+                                <option value="other">{isEn ? "Other" : "其他"}</option>
+                              </select>
+                            </td>
+                            <td className="px-4 py-3">
+                              <input 
+                                type="text"
+                                required
+                                value={item.brandModel}
+                                onChange={(e) => handleItemChange(item.id, 'brandModel', e.target.value)}
+                                placeholder={isEn ? "e.g. BMPCC 6K Pro" : "例如: BMPCC 6K Pro"}
+                                className="w-full bg-white border border-gfa-border rounded-lg px-3 py-2 focus:outline-none focus:border-[#C9A84C]"
+                              />
+                            </td>
+                            <td className="px-4 py-3">
+                              <select 
+                                value={item.condition} 
+                                onChange={(e) => handleItemChange(item.id, 'condition', e.target.value)}
+                                className="w-full bg-white border border-gfa-border rounded-lg px-3 py-2 focus:outline-none focus:border-[#C9A84C]"
+                              >
+                                <option value="like_new">{isEn ? "Like New" : "几乎全新"}</option>
+                                <option value="good">{isEn ? "Good (Normal wear)" : "良好 (正常使用痕迹)"}</option>
+                                <option value="fair">{isEn ? "Fair (Heavy wear)" : "一般 (较多使用痕迹)"}</option>
+                                <option value="needs_repair">{isEn ? "Needs Repair" : "需要维修"}</option>
+                              </select>
+                            </td>
+                            <td className="px-4 py-3">
+                              <input 
+                                type="number"
+                                min="1"
+                                required
+                                value={item.quantity}
+                                onChange={(e) => handleItemChange(item.id, 'quantity', parseInt(e.target.value) || 1)}
+                                className="w-full bg-white border border-gfa-border rounded-lg px-3 py-2 focus:outline-none focus:border-[#C9A84C] text-center"
+                              />
+                            </td>
+                            <td className="px-4 py-3 text-center">
+                              <button 
+                                type="button" 
+                                onClick={() => removeItem(item.id)}
+                                disabled={donatedItems.length === 1}
+                                className="text-red-400 hover:text-red-600 disabled:opacity-30 transition-colors"
+                              >
+                                <svg className="w-5 h-5 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
+                              </button>
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+
                   <div>
-                    <label className="block text-sm font-bold tracking-widest text-gfa-slate uppercase mb-2">
-                      {isEn ? "Heavy Gear Remerks" : "重型设备备注说明"}
+                    <label className="block text-sm font-bold tracking-widest text-gfa-slate uppercase mb-2 mt-8">
+                      {isEn ? "Overall Remarks (Optional)" : "总体备注说明 (选填)"}
                     </label>
                     <textarea
-                      name="heavyGearRemarks"
+                      name="overallRemarks"
                       maxLength={1000}
                       rows={3}
-                      value={formData.heavyGearRemarks}
+                      value={formData.overallRemarks}
                       onChange={handleChange}
-                      placeholder={isEn ? "e.g. C-stands, large lighting fixtures, heavy grip gear. Briefly describe condition." : "如C型魔术腿、重型灯光、滑轨等。请简述设备及使用状况。"}
+                      placeholder={isEn ? "Any additional context about the equipment History, missing parts, battery health, etc." : "关于设备的任何其他说明，如维修历史、缺失配件、电池健康度度等。"}
                       className="w-full bg-gfa-warmWhite border border-gfa-border rounded-lg px-4 py-3 focus:outline-none focus:border-[#C9A84C] resize-none"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-bold tracking-widest text-gfa-slate uppercase mb-2">
-                      {isEn ? "Light Gear Remarks" : "轻型设备备注说明"}
-                    </label>
-                    <textarea
-                      name="lightGearRemarks"
-                      maxLength={1000}
-                      rows={3}
-                      value={formData.lightGearRemarks}
-                      onChange={handleChange}
-                      placeholder={isEn ? "e.g. Cameras, lenses, audio recorders, smaller LED panels." : "如摄影机、镜头、录音设备、小型LED灯等。请简述设备及使用状况。"}
-                      className="w-full bg-gfa-warmWhite border border-gfa-border rounded-lg px-4 py-3 focus:outline-none focus:border-[#C9A84C] resize-none"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-bold tracking-widest text-gfa-slate uppercase mb-2">
+                    <label className="block text-sm font-bold tracking-widest text-gfa-slate uppercase mb-2 mt-4">
                       {isEn ? "Upload Photos (Max 10)" : "上传设备图片 (最多10张)"}
                     </label>
                     <input
@@ -479,7 +547,6 @@ const GearDonation: React.FC = () => {
                 </button>
               </div>
             </form>
-          )}
         </div>
       </section>
     </div>

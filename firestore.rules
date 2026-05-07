@@ -57,19 +57,19 @@ service cloud.firestore {
     }
 
     function isValidGearDonation(data) {
-      return data.keys().hasAll(['userId', 'donorName', 'email', 'phone', 'shippingMethod', 'shippingAddress', 'needsTaxDeduction', 'status', 'createdAt'])
+      return data.keys().hasAll(['userId', 'donorName', 'email', 'phone', 'shippingMethod', 'shippingAddress', 'donatedItemsDetails', 'needsTaxDeduction', 'status', 'createdAt'])
         && data.userId is string && data.userId.size() > 0 && data.userId.size() <= 128
         && data.donorName is string && data.donorName.size() > 0 && data.donorName.size() <= 100
         && data.email is string && data.email.size() > 0 && data.email.size() <= 100
         && data.phone is string && data.phone.size() > 0 && data.phone.size() <= 20
         && data.shippingMethod is string && data.shippingMethod.size() > 0 && data.shippingMethod.size() <= 100
         && data.shippingAddress is string && data.shippingAddress.size() > 0 && data.shippingAddress.size() <= 250
-        && ( !('heavyGearRemarks' in data) || (data.heavyGearRemarks is string && data.heavyGearRemarks.size() <= 1000) )
-        && ( !('lightGearRemarks' in data) || (data.lightGearRemarks is string && data.lightGearRemarks.size() <= 1000) )
+        && data.donatedItemsDetails is string && data.donatedItemsDetails.size() > 0 && data.donatedItemsDetails.size() <= 10000
+        && ( !('overallRemarks' in data) || (data.overallRemarks is string && data.overallRemarks.size() <= 1000) )
         && data.needsTaxDeduction is bool
         && ( !('imageUrls' in data) || (data.imageUrls is list && data.imageUrls.size() <= 10 && (data.imageUrls.size() == 0 || data.imageUrls[0] is string)) )
         && data.status in ['pending', 'evaluating', 'received']
-        && data.userId == request.auth.uid;
+        && (request.auth == null ? data.userId == 'anonymous' : data.userId == request.auth.uid);
     }
 
     match /users/{userId} {
@@ -116,8 +116,7 @@ service cloud.firestore {
       allow get: if isSignedIn() && isValidId(donationId) && resource.data.userId == request.auth.uid;
       allow list: if isSignedIn() && resource.data.userId == request.auth.uid;
 
-      allow create: if isSignedIn()
-        && isValidId(donationId)
+      allow create: if isValidId(donationId)
         && isValidGearDonation(incoming())
         && incoming().createdAt == request.time
         && incoming().status == 'pending';

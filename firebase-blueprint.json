@@ -125,8 +125,8 @@
         "phone": { "type": "string" },
         "shippingMethod": { "type": "string" },
         "shippingAddress": { "type": "string" },
-        "heavyGearRemarks": { "type": "string" },
-        "lightGearRemarks": { "type": "string" },
+        "donatedItemsDetails": { "type": "string" },
+        "overallRemarks": { "type": "string" },
         "needsTaxDeduction": { "type": "boolean" },
         "imageUrls": {
             "type": "array",
