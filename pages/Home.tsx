@@ -14,7 +14,7 @@ const Home: React.FC = () => {
     <div className="font-sans">
       <SEO 
         title="Home" 
-        description="Global Film Alliance (GFA) is a U.S. 501(c)(3) nonprofit supporting youth film education, helping children create films, and empowering film graduates to build careers. Los Angeles, CA."
+        description="Global Film Alliance (GFA) is a U.S. 501(c)(3) nonprofit helping children learn film arts, supporting community youth through filmmaking, and empowering film graduates to find their first professional opportunity. Los Angeles, CA."
       />
 
       {/* Hero Section */}
