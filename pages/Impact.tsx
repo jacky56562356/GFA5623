@@ -2,18 +2,18 @@ import React from 'react';
 import { useLocale } from '../LocaleContext.tsx';
 import { Locale } from '../types.ts';
 import SEO from '../components/SEO.tsx';
-import { FileText, CirclePlay as PlayCircle } from 'lucide-react';
+import { FileText, PlayCircle } from 'lucide-react';
 
 const Impact: React.FC = () => {
   const { locale } = useLocale();
-  const isEn = locale !== Locale.ZH;
+  const isEn = locale === Locale.EN;
 
   return (
     <div className="font-sans pb-24">
       <SEO title="Impact | Global Film Alliance" />
 
       {/* Banner */}
-      <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden bg-gfa-inkBlack pt-16">
+      <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden bg-gfa-inkBlack pt-20">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=2070&auto=format&fit=crop" 
@@ -177,7 +177,7 @@ const Impact: React.FC = () => {
                   </div>
                   <div className="md:w-1/2 p-8 flex flex-col justify-center">
                      <div className="text-[#C9A84C] text-[10px] uppercase tracking-widest font-bold mb-2">Short Film</div>
-                     <h3 className="text-2xl font-bold font-serif mb-2">Garden <span className="font-sans font-light">/ 花园</span></h3>
+                     <h3 className="text-2xl font-bold font-serif mb-2">Garden {!isEn && <span className="font-sans font-light">/ 花园</span>}</h3>
                      <p className="text-sm font-light text-white/60 mb-6 italic">
                        {isEn ? "Winner: Best Family Film (Golden State Film Festival)" : "荣获 Golden State Film Festival 最佳家庭电影"}
                      </p>

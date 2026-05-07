@@ -9,7 +9,7 @@ interface Props {
 
 const PolicyPage: React.FC<Props> = ({ type }) => {
   const { locale } = useLocale();
-  const isEn = locale !== Locale.ZH;
+  const isEn = locale === Locale.EN;
   
   const getPolicyContent = () => {
     if (type === 'privacy') {

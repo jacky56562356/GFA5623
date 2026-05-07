@@ -9,7 +9,7 @@ const Events: React.FC = () => {
   const eventsList: GFAEvent[] = t.eventsList || [];
 
   return (
-    <div className="bg-gfa-warmWhite pt-20 pb-16 px-6 min-h-screen relative">
+    <div className="bg-gfa-warmWhite pt-32 pb-16 px-6 min-h-screen relative">
       <SEO 
         title={t.events.title || "Industry Events"} 
         description={t.events.intro || "Explore upcoming film industry events, competitions, screenings, and workshops endorsed by GFA."} 

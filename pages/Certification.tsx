@@ -2,7 +2,7 @@
 import React, { useState, useMemo } from 'react';
 import { useLocale } from '../LocaleContext.tsx';
 import SEO from '../components/SEO.tsx';
-import { Shield, CircleCheck as CheckCircle, FileText, Scale, BadgeCheck, Clock, Printer, Download, Info, Search, RotateCcw } from 'lucide-react';
+import { Shield, CheckCircle, FileText, Scale, BadgeCheck, Clock, Printer, Download, Info, Search, RotateCcw } from 'lucide-react';
 import { MOCK_REGISTRY } from '../lib/registry/mockData.ts';
 import { RegistryOrg, OrgCategory } from '../lib/registry/types.ts';
 import OrgDetailsDialog from '../components/registry/OrgDetailsDialog.tsx';
@@ -52,7 +52,7 @@ const Certification: React.FC = () => {
   }, [searchTerm, filters]);
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans pt-16 pb-16 relative">
+    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans pt-[80px] pb-16 relative">
       <SEO title={cert.title || "Accreditation Framework"} description={cert.subtitle} />
 
       {/* Global Background Image */}

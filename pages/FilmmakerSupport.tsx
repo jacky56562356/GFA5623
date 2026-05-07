@@ -2,35 +2,32 @@ import React from 'react';
 import { useLocale } from '../LocaleContext.tsx';
 import { Locale } from '../types.ts';
 import SEO from '../components/SEO.tsx';
-import { Camera, Users, SquarePlay as PlaySquare, FileText, Clapperboard, CircleCheck as CheckCircle2, ArrowRight } from 'lucide-react';
+import { Camera, Users, PlaySquare, FileText, Clapperboard, CheckCircle2, ArrowRight } from 'lucide-react';
 
 const FilmmakerSupport: React.FC = () => {
   const { locale } = useLocale();
-  const isEn = locale !== Locale.ZH;
+  const isEn = locale === Locale.EN;
 
   return (
     <div className="font-sans pb-24">
       <SEO title="Filmmaker Support | Global Film Alliance" />
 
       {/* Banner */}
-      <section className="relative min-h-[65vh] flex items-end justify-start overflow-hidden bg-gfa-inkBlack pt-16">
+      <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden bg-gfa-inkBlack pt-20">
         <div className="absolute inset-0 z-0">
-          <img
-            src="/images/ChatGPT_Image_2026年5月6日_18_08_23.png"
-            alt="Young filmmakers filming at sunset"
-            className="w-full h-full object-cover opacity-50"
+          <img 
+            src="https://i.ibb.co/sp4fWHq3/Chat-GPT-Image-2026-3-23-12-23-22.png" 
+            alt="Filmmaker on set" 
+            className="w-full h-full object-cover opacity-40 mix-blend-luminosity" 
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-gfa-inkBlack via-gfa-inkBlack/60 to-transparent"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-gfa-inkBlack/90 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-gfa-inkBlack via-gfa-inkBlack/50 to-transparent"></div>
         </div>
-        <div className="container-gfa relative z-10 px-4 pb-20 max-w-3xl">
-          <div className="text-[11px] font-bold text-[#C9A84C] uppercase tracking-[0.3em] mb-4">{isEn ? 'Filmmaker Career Support' : '电影人就业扶持'}</div>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-serif text-white mb-6 leading-tight">
-            {isEn ? <>You Have the Talent.<br/><span className="text-[#C9A84C]">We'll Open the Door.</span></> : <>你有才华，<br/><span className="text-[#C9A84C]">我们帮你打开那扇门。</span></>}
+
+        <div className="container-gfa relative z-10 text-center px-4 max-w-4xl mx-auto">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-serif text-white mb-6 leading-tight drop-shadow-2xl">
+            {isEn ? "You Have the Talent." : "你有才华，"}<br/>
+            <span className="text-[#C9A84C]">{isEn ? "We'll Help You Get Through the Door." : "我们帮你打开那扇门。"}</span>
           </h1>
-          <p className="text-lg text-white/70 font-light max-w-xl">
-            {isEn ? 'Free equipment, Hollywood mentors, streaming distribution, and grant coaching — for filmmakers who deserve a real shot.' : '免费设备、好莱坞导师、流媒体发行和基金辅导——为值得真正机会的电影人。'}
-          </p>
         </div>
       </section>
 
@@ -249,30 +246,35 @@ const FilmmakerSupport: React.FC = () => {
       <section className="py-24 bg-white">
         <div className="container-gfa max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
-            <div className="text-[11px] font-bold text-[#C9A84C] uppercase tracking-[0.3em] mb-4">{isEn ? 'Real Stories' : '真实故事'}</div>
-            <h2 className="text-3xl md:text-4xl font-bold font-serif text-gfa-inkBlack">
-              {isEn ? "Stories of Change" : "改变的故事"}
+            <h2 className="text-3xl md:text-5xl font-bold font-serif text-gfa-inkBlack">
+              {isEn ? "Success Stories" : "学员故事"}
             </h2>
           </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { name: 'Alex', role: isEn ? 'Cinematography Grad · USC' : '摄影系毕业生 · USC', img: '/images/ChatGPT_Image_2026年5月6日_18_06_00.png', quote: isEn ? '"GFA lent me an entire Blackmagic camera package for my first short film. That short got into festivals, and directly led to my first paying gig."' : '"通过设备借用完成了第一部短片，入围电影节后获得工作机会。"' },
-              { name: 'Sarah', role: isEn ? 'Independent Director · Chapman' : '独立导演 · Chapman', img: '/images/ChatGPT_Image_2026年5月6日_18_08_23.png', quote: isEn ? '"My GFA mentor pulled my resume from the pile and got me a production company internship. Now I work there full-time."' : '"通过导师网络进入制片公司实习，现在已经全职工作。"' },
-              { name: 'David', role: isEn ? 'Low-Income Creator · UCLA' : '低收入创作者 · UCLA', img: '/images/ChatGPT_Image_2026年5月6日_18_06_52.png', quote: isEn ? '"GFA\'s grant coaching helped me secure funding to finish my passion project. It screened at three festivals."' : '"通过基金辅导获得资助，完成了长期搁置的项目，在三个电影节上放映。"' },
-            ].map(s => (
-              <div key={s.name} className="bg-[#F9F7F4] rounded-3xl overflow-hidden border border-gfa-border hover:shadow-lg transition-all">
-                <div className="h-48 overflow-hidden">
-                  <img src={s.img} alt={s.name} className="w-full h-full object-cover" />
-                </div>
-                <div className="p-8">
-                  <p className="text-sm font-light text-gfa-slate italic leading-relaxed mb-6">{s.quote}</p>
-                  <div>
-                    <p className="font-bold text-gfa-inkBlack font-serif">{s.name}</p>
-                    <p className="text-xs text-[#C9A84C] font-bold uppercase tracking-widest">{s.role}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
+             <div className="bg-[#F5F2EE] p-8 rounded-3xl border border-gray-200">
+               <h4 className="font-bold text-xl font-serif text-gfa-inkBlack mb-1">Alex</h4>
+               <p className="text-xs uppercase tracking-widest text-[#C9A84C] font-bold mb-4">{isEn ? "Cinematography Grad" : "摄影系毕业生"}</p>
+               <p className="text-sm font-light text-gfa-slate mb-6 flex-grow italic">
+                 "{isEn ? "GFA lent me an entire Blackmagic camera package for my first short film. That short got into festivals, and directly led to my first paying gig." : "通过设备借用完成了第一部短片，入围电影节后获得工作机会。"}"
+               </p>
+             </div>
+
+             <div className="bg-[#F5F2EE] p-8 rounded-3xl border border-gray-200">
+               <h4 className="font-bold text-xl font-serif text-gfa-inkBlack mb-1">Sarah</h4>
+               <p className="text-xs uppercase tracking-widest text-[#C9A84C] font-bold mb-4">{isEn ? "Independent Director" : "独立导演"}</p>
+               <p className="text-sm font-light text-gfa-slate mb-6 flex-grow italic">
+                 "{isEn ? "My GFA mentor pulled my resume from the pile and got me a production company internship. Now I work there full-time." : "通过导师网络进入制片公司实习，现在已经全职工作。"}"
+               </p>
+             </div>
+
+             <div className="bg-[#F5F2EE] p-8 rounded-3xl border border-gray-200">
+               <h4 className="font-bold text-xl font-serif text-gfa-inkBlack mb-1">David</h4>
+               <p className="text-xs uppercase tracking-widest text-[#C9A84C] font-bold mb-4">{isEn ? "Low-Income Creator" : "低收入创作者"}</p>
+               <p className="text-sm font-light text-gfa-slate mb-6 flex-grow italic">
+                 "{isEn ? "I had to shelve my passion project because I couldn't afford production. GFA's grant application coaching helped me secure the funding to finish it." : "通过基金辅导获得资助，完成了长期搁置的项目。"}"
+               </p>
+             </div>
           </div>
         </div>
       </section>

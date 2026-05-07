@@ -7,7 +7,7 @@ import { ArrowRight } from 'lucide-react';
 
 const Programs: React.FC = () => {
   const { locale } = useLocale();
-  const isEn = locale !== Locale.ZH;
+  const isEn = locale === Locale.EN;
 
   const title = isEn ? "Our Programs — Shaping Tomorrow's Storytellers" : "我们的项目 — 塑造未来的影像讲述者";
   const desc = isEn 
@@ -50,7 +50,7 @@ const Programs: React.FC = () => {
   ];
 
   return (
-    <div className="bg-gfa-warmWhite pt-16 font-sans pb-24">
+    <div className="bg-gfa-warmWhite pt-[80px] font-sans pb-24">
       <SEO title={isEn ? "Programs | GFA" : "项目 | GFA"} description={desc} />
 
       {/* Banner */}

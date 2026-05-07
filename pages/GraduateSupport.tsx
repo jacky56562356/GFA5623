@@ -2,7 +2,7 @@
 import React from 'react';
 import { useLocale } from '../LocaleContext.tsx';
 import SEO from '../components/SEO.tsx';
-import { GraduationCap, Users, CircleCheck as CheckCircle, Calendar, ArrowRight, Star, Briefcase, FileText, Network, Award } from 'lucide-react';
+import { GraduationCap, Users, CheckCircle, Calendar, ArrowRight, Star, Briefcase, FileText, Network, Award } from 'lucide-react';
 
 const GraduateSupport = () => {
   const { t } = useLocale();
@@ -22,7 +22,7 @@ const GraduateSupport = () => {
   };
 
   return (
-    <div className="bg-gfa-warmWhite min-h-screen font-sans pt-16 pb-16 relative">
+    <div className="bg-gfa-warmWhite min-h-screen font-sans pt-[80px] pb-16 relative">
       <SEO 
         title={cap.title || "Career Access"} 
         description={cap.subtitle || "Supporting the next generation of film professionals through mentorship, funding, and project matchmaking."} 

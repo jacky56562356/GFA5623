@@ -2,14 +2,14 @@ import React from 'react';
 import { useLocale } from '../LocaleContext.tsx';
 import { Locale } from '../types.ts';
 import SEO from '../components/SEO.tsx';
-import { Award, Globe, Video, Handshake, Users, DollarSign, Send, Star, CircleCheck as CheckCircle, Trophy, CalendarDays, Camera, Clapperboard, Sparkles, Mic, Lightbulb } from 'lucide-react';
+import { Award, Globe, Video, Handshake, Users, DollarSign, Send, Star, CheckCircle, Trophy, CalendarDays, Camera, Clapperboard, Sparkles, Mic, Lightbulb } from 'lucide-react';
 
 const ProgramAwards: React.FC = () => {
   const { locale } = useLocale();
-  const isEn = locale !== Locale.ZH;
+  const isEn = locale === Locale.EN;
 
   return (
-    <div className="bg-[#F5F2EE] pt-16 font-sans pb-24">
+    <div className="bg-[#F5F2EE] pt-[80px] font-sans pb-24">
       <SEO title="Golden Feather Film Awards | GFA" />
 
       {/* Banner */}

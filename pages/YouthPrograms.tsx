@@ -1,364 +1,292 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { useLocale } from '../LocaleContext.tsx';
 import { Locale } from '../types.ts';
 import SEO from '../components/SEO.tsx';
-import { ArrowRight, Heart, MapPin, Calendar, Clock, CircleCheck as CheckCircle2, Users, Film, Star, Clapperboard, GraduationCap, Briefcase } from 'lucide-react';
+import { Tent, Film, HeartHandshake, Sparkles, Calendar, MapPin, Video, ArrowRight } from 'lucide-react';
 
 const YouthPrograms: React.FC = () => {
   const { locale } = useLocale();
-  const isZh = locale === Locale.ZH;
+  const isEn = locale === Locale.EN;
 
   return (
-    <div className="font-sans pb-24 pt-16">
+    <div className="font-sans pb-24">
       <SEO title="Youth Programs | Global Film Alliance" />
 
-      {/* Hero */}
-      <section className="relative h-[65vh] min-h-[500px] flex items-end overflow-hidden bg-gfa-inkBlack">
+      {/* Banner */}
+      <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden bg-gfa-inkBlack pt-20">
         <div className="absolute inset-0 z-0">
-          <img
-            src="/images/ChatGPT_Image_2026年5月6日_18_06_00.png"
-            alt="Youth filmmakers learning on set"
-            className="w-full h-full object-cover opacity-60"
+          <img 
+            src="https://i.ibb.co/0p2HWy3Z/filmmaking-in-classroom.jpg" 
+            alt="Youth holding a clapperboard" 
+            className="w-full h-full object-cover opacity-40 mix-blend-luminosity" 
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-gfa-inkBlack via-gfa-inkBlack/40 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-gfa-inkBlack via-gfa-inkBlack/50 to-transparent"></div>
         </div>
 
-        <div className="container-gfa relative z-10 px-4 pb-16 max-w-6xl mx-auto w-full">
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 bg-[#C9A84C]/20 border border-[#C9A84C]/40 text-[#C9A84C] text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-6">
-              <Heart className="w-3.5 h-3.5 fill-current" />
-              {isZh ? '全球电影联盟 · 青少年项目' : 'Global Film Alliance · Youth Programs'}
-            </div>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-serif text-white mb-5 leading-tight">
-              {isZh ? <>通过电影<br /><span className="text-[#C9A84C]">赋能下一代</span></> : <>Empowering<br /><span className="text-[#C9A84C]">The Next Generation</span></>}
-            </h1>
-            <p className="text-lg text-white/70 font-light max-w-2xl">
-              {isZh
-                ? 'GFA致力于培养青少年电影人，将电影文化带入加州各地社区，让每个孩子都有机会感受电影的力量。'
-                : 'GFA cultivates young filmmakers, brings film culture into communities across California, and gives every child the chance to experience the power of cinema.'}
+        <div className="container-gfa relative z-10 text-center px-4 max-w-4xl mx-auto">
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold font-serif text-white mb-6 leading-tight drop-shadow-2xl">
+            {isEn ? "Planting the Seed of a" : "为下一代电影人"}<br/>
+            <span className="text-[#C9A84C]">{isEn ? "Filmmaker's Dream" : "种下梦想的种子"}</span>
+          </h1>
+        </div>
+      </section>
+
+      {/* Program 1: Summer Camp */}
+      <section className="py-24 bg-white border-b border-gfa-border">
+        <div className="container-gfa max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-sm font-bold text-[#C9A84C] uppercase tracking-widest mb-4 flex justify-center items-center gap-2">
+              <Tent className="w-5 h-5"/> {isEn ? "Youth Film Summer Camp" : "影视夏令营"}
+            </h2>
+            <h3 className="text-3xl md:text-5xl font-bold font-serif text-gfa-inkBlack mb-8">
+              {isEn ? "From First Frame to Premiere" : "从最初的画面到最终的首映"}
+            </h3>
+            <p className="text-lg md:text-xl font-serif font-light text-gfa-slate leading-relaxed max-w-3xl mx-auto italic">
+              {isEn 
+                ? "Picture day one: A child holds a professional camera for the first time, nervous but fully mesmerized. Now picture the final day: Sitting in a real theater, watching the audience's reaction to a film they directed themselves. That transformation is our summer camp." 
+                : "第一天：从未摸过摄影机，紧张又期待。最后一天：坐在观众席，看着自己导演的短片第一次公映，感受观众的掌声。这不仅仅是一个夏令营，这是一条清晰的职业成长路径的起点。"}
             </p>
           </div>
-        </div>
-      </section>
 
-      {/* Intro */}
-      <section className="py-16 bg-white border-b border-[#E6E7EA]">
-        <div className="container-gfa max-w-4xl mx-auto px-4 text-center">
-          <p className="text-xl md:text-2xl font-light font-serif text-[#444] leading-relaxed">
-            {isZh
-              ? '我们相信每个孩子都有接触电影艺术的权利。通过教育、制作和社区放映，GFA在青少年与专业电影世界之间架起桥梁。'
-              : 'We believe every child has the right to access film art. Through education, production, and community screenings, GFA bridges the gap between youth and the professional world of cinema.'}
-          </p>
-        </div>
-      </section>
-
-      {/* ── PROGRAM 1: Community Screening ── */}
-      <section className="py-20 bg-[#F9F7F4]">
-        <div className="container-gfa max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="relative rounded-2xl overflow-hidden h-80">
-              <img
-                src="/images/ChatGPT_Image_2026年5月6日_18_12_27.png"
-                alt="Community screening"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute top-4 left-4">
-                <span className="bg-green-500 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1.5 rounded-full">{isZh ? '正在实施中' : 'Active'}</span>
-              </div>
-            </div>
-            <div>
-              <div className="text-[11px] font-bold text-[#C9A84C] uppercase tracking-[0.25em] mb-3">{isZh ? '项目一' : 'Program 1'}</div>
-              <h2 className="text-3xl md:text-4xl font-bold font-serif text-[#0B0B0C] leading-tight mb-5">
-                {isZh ? '社区儿童电影放映计划' : 'Community Children\'s Film Screening'}
-              </h2>
-              <p className="text-[#555] leading-relaxed mb-6">
-                {isZh
-                  ? 'GFA定期进入加州各地社区，举办免费电影放映活动——放映的全部是由孩子们制作的电影。我们把文化直接带到社区、学校、电影图书馆和公园。放映全部完全免费，服务所有社区居民。'
-                  : 'GFA regularly enters communities across California to host free film screenings — featuring films made entirely by children. We bring culture directly to communities, schools, libraries, and parks. All screenings are completely free.'}
-              </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
-                {(isZh ? [
-                  '对所有社区居民完全免费',
-                  '放映的电影全部由儿童制作',
-                  '在加州各地社区轮流举办',
-                  '与学校、图书馆和社区中心合作',
-                ] : [
-                  'Completely free for all community members',
-                  'All films are made by children',
-                  'Rotating across California communities',
-                  'Partnering with schools, libraries, and community centers',
-                ]).map(item => (
-                  <div key={item} className="flex items-start gap-2.5">
-                    <CheckCircle2 className="w-4 h-4 text-[#C9A84C] shrink-0 mt-0.5" />
-                    <span className="text-sm text-[#444]">{item}</span>
+          <div className="bg-[#F5F2EE] rounded-3xl p-8 md:p-12 border border-[#C9A84C]/20 flex flex-col lg:flex-row gap-12 mb-16">
+            <div className="lg:w-1/3">
+              <h4 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-6">{isEn ? "2026 Camp Details" : "2026年营地信息"}</h4>
+              <ul className="space-y-6 text-sm font-light text-gfa-slate">
+                <li className="flex items-start gap-3">
+                  <Calendar className="w-5 h-5 text-[#C9A84C] shrink-0 mt-0.5" />
+                  <div>
+                    <strong className="block font-bold text-gfa-inkBlack mb-1">Session 1</strong>
+                    June 15–27, 2026
                   </div>
-                ))}
-              </div>
-              <div className="flex items-center gap-2 text-sm text-gray-400">
-                <MapPin className="w-4 h-4" />
-                <span>{isZh ? '加利福尼亚州各地社区' : 'Communities across California'}</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── PROGRAM 2: Summer Camp ── */}
-      <section className="py-20 bg-white">
-        <div className="container-gfa max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <div>
-              <div className="text-[11px] font-bold text-[#C9A84C] uppercase tracking-[0.25em] mb-3">{isZh ? '项目二' : 'Program 2'}</div>
-              <div className="flex items-center gap-3 mb-4">
-                <h2 className="text-3xl md:text-4xl font-bold font-serif text-[#0B0B0C] leading-tight">
-                  {isZh ? '好莱坞青少年电影夏令营2026' : 'Hollywood Youth Film Camp 2026'}
-                </h2>
-              </div>
-              <div className="inline-flex items-center gap-2 bg-[#C9A84C]/15 border border-[#C9A84C]/30 text-[#C9A84C] text-[11px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full mb-5">
-                {isZh ? '现正接受报名' : 'Enrolling Now'}
-              </div>
-
-              <div className="grid grid-cols-3 gap-3 mb-6">
-                <div className="bg-[#F9F7F4] rounded-xl p-3 text-center border border-[#E6E7EA]">
-                  <Calendar className="w-4 h-4 text-[#C9A84C] mx-auto mb-1" />
-                  <div className="text-[11px] font-bold text-[#0B0B0C]">{isZh ? '6月15–30日' : 'June 15–30'}</div>
-                  <div className="text-[10px] text-gray-400">2026</div>
-                </div>
-                <div className="bg-[#F9F7F4] rounded-xl p-3 text-center border border-[#E6E7EA]">
-                  <Clock className="w-4 h-4 text-[#C9A84C] mx-auto mb-1" />
-                  <div className="text-[11px] font-bold text-[#0B0B0C]">{isZh ? '上午10–下午4:30' : '10am–4:30pm'}</div>
-                  <div className="text-[10px] text-gray-400">{isZh ? '每日' : 'Daily'}</div>
-                </div>
-                <div className="bg-[#F9F7F4] rounded-xl p-3 text-center border border-[#E6E7EA]">
-                  <MapPin className="w-4 h-4 text-[#C9A84C] mx-auto mb-1" />
-                  <div className="text-[11px] font-bold text-[#0B0B0C]">{isZh ? '洛杉矶' : 'Los Angeles'}</div>
-                  <div className="text-[10px] text-gray-400">California</div>
-                </div>
-              </div>
-
-              <p className="text-[#555] leading-relaxed mb-5">
-                {isZh
-                  ? '为年轻故事讲述者提供好莱坞水平的沉浸式电影制作体验。参与者与专业团队合作，在真实舞台和礼堂接受训练，并在洛杉矶多个地点进行实地拍摄。'
-                  : 'A Hollywood-level immersive filmmaking experience for young storytellers. Participants work with professional teams, train in real stages and auditoriums, and shoot on location at multiple LA sites.'}
-              </p>
-
-              <div className="mb-6">
-                <p className="text-[12px] font-bold uppercase tracking-widest text-[#0B0B0C] mb-3">{isZh ? '学习内容' : 'What You\'ll Learn'}</p>
-                <div className="space-y-2">
-                  {(isZh ? [
-                    '专业表演与表现力训练',
-                    '导演与故事讲述基础',
-                    '剧本与剧本开发',
-                    '幕后技术：摄影、灯光、录音',
-                    '后期制作基础：动画与音效设计',
-                    '从概念到最终成片的完整电影制作流程',
-                  ] : [
-                    'Professional acting and performance training',
-                    'Directing and storytelling fundamentals',
-                    'Screenwriting and script development',
-                    'Behind-the-scenes: cinematography, lighting, sound',
-                    'Post-production basics: animation and sound design',
-                    'Complete filmmaking process from concept to final cut',
-                  ]).map(item => (
-                    <div key={item} className="flex items-start gap-2.5">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-[#C9A84C] shrink-0 mt-0.5" />
-                      <span className="text-sm text-[#444]">{item}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <button className="inline-flex items-center gap-2 bg-[#C9A84C] text-white px-6 py-3 rounded-xl font-bold text-sm hover:bg-[#b09241] transition-all">
-                {isZh ? '立即报名' : 'Register Now'} <ArrowRight className="w-4 h-4" />
-              </button>
-            </div>
-
-            <div className="space-y-4">
-              <div className="relative rounded-2xl overflow-hidden h-56">
-                <img
-                  src="/images/ChatGPT_Image_2026年5月6日_18_12_27.png"
-                  alt="Youth filmmakers around campfire at summer camp"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="bg-[#0B0B0C] rounded-2xl p-6 text-white">
-                <p className="text-[11px] font-bold text-[#C9A84C] uppercase tracking-widest mb-3">{isZh ? '夏令营亮点' : 'Camp Highlights'}</p>
-                <div className="space-y-2.5">
-                  {(isZh ? [
-                    '与洛杉矶多地专业团队实地拍摄',
-                    '专业舞台和礼堂训练',
-                    '由好莱坞在职专业人士主导的工作坊',
-                    '结营电影放映仪式',
-                    'GFA结业证书',
-                  ] : [
-                    'On-location shoots with professional teams across LA',
-                    'Professional stage and auditorium training',
-                    'Workshops led by working Hollywood professionals',
-                    'End-of-camp film screening ceremony',
-                    'GFA Certificate of Completion',
-                  ]).map(item => (
-                    <div key={item} className="flex items-start gap-2.5">
-                      <Star className="w-3.5 h-3.5 text-[#C9A84C] shrink-0 mt-0.5" />
-                      <span className="text-sm text-white/80">{item}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── PROGRAM 3: Quarterly Short Film ── */}
-      <section className="py-20 bg-[#F9F7F4] border-t border-[#E6E7EA]">
-        <div className="container-gfa max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="relative rounded-2xl overflow-hidden h-80">
-              <img
-                src="/images/ChatGPT_Image_2026年5月6日_18_06_52.png"
-                alt="Youth short film production"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute top-4 left-4">
-                <span className="bg-blue-500 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1.5 rounded-full">{isZh ? '春季开放报名' : 'Spring Enrollment Open'}</span>
-              </div>
-            </div>
-            <div>
-              <div className="text-[11px] font-bold text-[#C9A84C] uppercase tracking-[0.25em] mb-3">{isZh ? '项目三' : 'Program 3'}</div>
-              <h2 className="text-3xl md:text-4xl font-bold font-serif text-[#0B0B0C] leading-tight mb-5">
-                {isZh ? '青少年短片季度制作' : 'Youth Quarterly Short Film Production'}
-              </h2>
-              <p className="text-[#555] leading-relaxed mb-6">
-                {isZh
-                  ? '每个季度，GFA制作一部完全由青少年主导的专业短片。儿童和青少年在好莱坞职业人士的指导下担任每个关键角色——演员、导演、编剧和制片人。所有完成的影片提交国际电影节参赛。'
-                  : 'Each quarter, GFA produces a professionally made short film led entirely by youth. Children and teens take on every key role — actors, directors, writers, and producers — under the guidance of Hollywood professionals. All completed films are submitted to international festivals.'}
-              </p>
-
-              <div className="space-y-3 mb-6">
-                {[
-                  { step: '01', title: isZh ? '公开招募' : 'Open Recruitment', desc: isZh ? '向8-22岁青少年开放报名，招募演员、导演助理、编剧、摄影助理等岗位。' : 'Open to ages 8–22, recruiting actors, director assistants, writers, camera assistants and more.' },
-                  { step: '02', title: isZh ? '剧本与前期开发' : 'Script & Pre-Production', desc: isZh ? '由GFA专业导师促成青少年参与者共同开发故事概念和剧本，所有创意决策由年轻人主导。' : 'GFA mentors guide youth participants to develop story concepts and scripts — all creative decisions led by the young creators.' },
-                  { step: '03', title: isZh ? '拍摄' : 'Production', desc: isZh ? '在好莱坞专业电影团队支持下，青少年在真实片场完成拍摄，专业人士提供技术支持。' : 'Youth complete the shoot on a real film set with Hollywood professional support for technical aspects.' },
-                  { step: '04', title: isZh ? '后期与发布' : 'Post & Release', desc: isZh ? '青少年参与后期制作，完成的影片以GFA名义提交国际青少年电影节参赛。' : 'Youth participate in post-production, and finished films are submitted to international youth film festivals under GFA.' },
-                ].map(s => (
-                  <div key={s.step} className="flex gap-4 items-start">
-                    <div className="w-8 h-8 rounded-full bg-[#C9A84C] text-white text-[12px] font-bold flex items-center justify-center shrink-0">{s.step}</div>
-                    <div>
-                      <div className="text-sm font-bold text-[#0B0B0C] mb-0.5">{s.title}</div>
-                      <div className="text-[13px] text-gray-500 leading-relaxed">{s.desc}</div>
-                    </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Calendar className="w-5 h-5 text-[#C9A84C] shrink-0 mt-0.5" />
+                  <div>
+                    <strong className="block font-bold text-gfa-inkBlack mb-1">Session 2</strong>
+                    July 20–Aug 1, 2026
                   </div>
-                ))}
-              </div>
-
-              <div className="bg-amber-50 border border-[#C9A84C]/30 rounded-xl p-4">
-                <p className="text-[12px] font-bold text-[#C9A84C] uppercase tracking-widest mb-2">{isZh ? '报名要求' : 'Requirements'}</p>
-                <p className="text-sm text-[#444]">{isZh ? '年龄：8–22岁 · 无需任何先前经验 · 全程由专业团队陪伴指导' : 'Ages 8–22 · No prior experience required · Full professional team guidance throughout'}</p>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-5 h-5 flex justify-center items-center text-[#C9A84C] font-bold shrink-0 mt-0.5">@</span>
+                  <div>
+                    <strong className="block font-bold text-gfa-inkBlack mb-1">{isEn ? "Ages" : "年龄"}</strong>
+                    6–17 {isEn ? " years old" : "岁"}
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <MapPin className="w-5 h-5 text-[#C9A84C] shrink-0 mt-0.5" />
+                  <div>
+                    <strong className="block font-bold text-gfa-inkBlack mb-1">{isEn ? "Location" : "地点"}</strong>
+                    Greater Los Angeles Area
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Video className="w-5 h-5 text-[#C9A84C] shrink-0 mt-0.5" />
+                  <div>
+                    <strong className="block font-bold text-gfa-inkBlack mb-1">{isEn ? "Gear" : "使用设备"}</strong>
+                    {isEn ? "Professional Blackmagic Design cameras used by Hollywood directors." : "使用Blackmagic Design专业设备（和好莱坞导演用同款）"}
+                  </div>
+                </li>
+              </ul>
+            </div>
+            
+            <div className="lg:w-2/3">
+              <h4 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-6">{isEn ? "Curriculum Modules" : "课程内容"}</h4>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                 <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+                    <h5 className="font-bold text-gfa-inkBlack mb-1">{isEn ? "1. Screenwriting" : "1. 剧本创作"}</h5>
+                    <p className="text-sm font-light text-gfa-slate">{isEn ? "Find the stories that only you can tell." : "找到只有你才能讲的故事"}</p>
+                 </div>
+                 <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+                    <h5 className="font-bold text-gfa-inkBlack mb-1">{isEn ? "2. Cinematography" : "2. 摄影技术"}</h5>
+                    <p className="text-sm font-light text-gfa-slate">{isEn ? "Learn to express emotion through lenses and lighting." : "学会用光和镜头表达情感"}</p>
+                 </div>
+                 <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+                    <h5 className="font-bold text-gfa-inkBlack mb-1">{isEn ? "3. Acting" : "3. 表演指导"}</h5>
+                    <p className="text-sm font-light text-gfa-slate">{isEn ? "Find your authentic self in front of the camera." : "在镜头前找到真实的自己"}</p>
+                 </div>
+                 <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+                    <h5 className="font-bold text-gfa-inkBlack mb-1">{isEn ? "4. Post-Production" : "4. 剪辑后期"}</h5>
+                    <p className="text-sm font-light text-gfa-slate">{isEn ? "Transform scattered clips into a complete narrative." : "把零散的素材变成完整作品"}</p>
+                 </div>
+                 <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+                    <h5 className="font-bold text-gfa-inkBlack mb-1">{isEn ? "5. Directing" : "5. 导演技巧"}</h5>
+                    <p className="text-sm font-light text-gfa-slate">{isEn ? "Learn how to lead a team to tell a unified story." : "学会带领团队讲述故事"}</p>
+                 </div>
+                 <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+                    <h5 className="font-bold text-gfa-inkBlack mb-1">{isEn ? "6. The Premiere" : "6. 作品展映"}</h5>
+                    <p className="text-sm font-light text-gfa-slate">{isEn ? "Experience the thrill of a live audience watching your work." : "第一次看到观众看自己的作品"}</p>
+                 </div>
               </div>
             </div>
+          </div>
+
+          {/* Scholarship */}
+          <div className="bg-gfa-inkBlack text-white rounded-3xl p-8 md:p-12 text-center relative overflow-hidden">
+             <div className="absolute inset-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center"></div>
+             <div className="relative z-10 max-w-3xl mx-auto">
+               <h4 className="text-2xl md:text-3xl font-bold font-serif mb-4 text-[#C9A84C]">
+                 {isEn ? "Talent shouldn't be limited by family income." : "才华，不应该被家庭收入所限制"}
+               </h4>
+               <p className="text-white/80 font-light mb-8">
+                 {isEn 
+                   ? "We provide full and partial scholarships so that passionate children, regardless of their financial background, can experience the magic of our camps." 
+                   : "我们为什么提供奖学金：为了确保所有对电影充满热情的孩子都有机会参与。我们为低收入家庭提供全额或部分费用减免。"}
+               </p>
+               <div className="flex flex-col sm:flex-row justify-center gap-4">
+                 <button className="bg-[#C9A84C] hover:bg-[#b09241] text-gfa-inkBlack font-bold uppercase tracking-widest text-xs px-8 py-4 rounded-full transition-colors">
+                   {isEn ? "Register My Child" : "为我的孩子报名"}
+                 </button>
+                 <button className="border border-white hover:bg-white hover:text-gfa-inkBlack text-white font-bold uppercase tracking-widest text-xs px-8 py-4 rounded-full transition-colors">
+                   {isEn ? "Sponsor a Child" : "资助一个孩子"}
+                 </button>
+               </div>
+             </div>
           </div>
         </div>
       </section>
 
-      {/* ── PROGRAM 4: Graduate/Emerging Director Support ── */}
-      <section className="py-20 bg-white border-t border-[#E6E7EA]">
+      {/* Program 2 & 3 */}
+      <section className="py-24 bg-[#F5F2EE] border-b border-gfa-border">
         <div className="container-gfa max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <div>
-              <div className="text-[11px] font-bold text-[#C9A84C] uppercase tracking-[0.25em] mb-3">{isZh ? '项目四' : 'Program 4'}</div>
-              <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 text-blue-600 text-[11px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full mb-4">
-                {isZh ? '夏季开放' : 'Summer Open'}
-              </div>
-              <h2 className="text-3xl md:text-4xl font-bold font-serif text-[#0B0B0C] leading-tight mb-5">
-                {isZh ? '新晋导演与毕业生支持计划' : 'Emerging Director & Graduate Support'}
-              </h2>
-              <p className="text-[#555] leading-relaxed mb-6">
-                {isZh
-                  ? 'GFA致力于帮助电影专业毕业生和新晋导演跨越从学校到行业的鸿沟。我们提供资源和支持，帮助他们完成第一部作品、专业组建团队、进入好莱坞职业体系。'
-                  : 'GFA is dedicated to helping film graduates and emerging directors bridge the gap from school to industry. We provide resources and support to help them complete their first work, build professional teams, and enter the Hollywood career system.'}
-              </p>
-
-              <div className="space-y-4 mb-7">
-                {[
-                  { icon: <Film className="w-4 h-4" />, title: isZh ? '创作支持——帮助完成作品' : 'Creative Support', desc: isZh ? '为有创作计划的新晋导演提供专业设备使用、现场协调和制作资源，帮助将剧本变成真实的完整作品。' : 'Professional equipment, on-set coordination and production resources for directors with creative plans — turning scripts into completed works.' },
-                  { icon: <Users className="w-4 h-4" />, title: isZh ? '团队搭建协助' : 'Team Building', desc: isZh ? '协助新晋导演搭建制作团队，通过GFA行业网络将新兴人才相互连接。' : 'Helping emerging directors build production teams and connecting new talents through GFA\'s industry network.' },
-                  { icon: <Star className="w-4 h-4" />, title: isZh ? '导师网络——一对一指导' : 'Mentorship Network', desc: isZh ? '将新晋电影人与好莱坞在职专业人士匹配，提供一对一创作指导、行业经验分享和职业建议。' : 'Matching emerging filmmakers with working Hollywood professionals for 1-on-1 creative guidance, industry experience sharing and career advice.' },
-                  { icon: <Clapperboard className="w-4 h-4" />, title: isZh ? '发行渠道支持' : 'Distribution Support', desc: isZh ? '帮助完成作品进入发行渠道，包括国际电影节、流媒体平台对接、短片放映等。' : 'Helping completed works enter distribution channels including international festivals, streaming platforms, and short film screenings.' },
-                  { icon: <Briefcase className="w-4 h-4" />, title: isZh ? '就业指导与推荐' : 'Career Guidance', desc: isZh ? '提供职业路径规划、简历优化、行业人脉对接，通过GFA合作机构网络协助推荐就业机会。' : 'Career path planning, resume optimization, industry networking, and job referrals through GFA\'s partner network.' },
-                  { icon: <GraduationCap className="w-4 h-4" />, title: isZh ? '资金与资助信息' : 'Funding & Grants', desc: isZh ? '提供电影基金、政府文化资助、独立电影资助项目的申请指导，帮助获取创作所需启动资金。' : 'Application guidance for film grants, government cultural funding, and independent film grants to secure the startup funding you need.' },
-                ].map(item => (
-                  <div key={item.title} className="flex gap-3 items-start">
-                    <div className="w-8 h-8 rounded-lg bg-amber-50 flex items-center justify-center text-[#C9A84C] shrink-0">
-                      {item.icon}
-                    </div>
-                    <div>
-                      <div className="text-sm font-bold text-[#0B0B0C] mb-0.5">{item.title}</div>
-                      <div className="text-[13px] text-gray-500 leading-relaxed">{item.desc}</div>
-                    </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            
+            {/* Program 2: Dream Film Project */}
+            <div className="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 flex flex-col">
+              <div className="h-64 bg-gray-200 relative">
+                <img src="https://i.ibb.co/LXS8q7yn/u8238228639-behind-the-scenes-photo-of-a-real-childrens-movie-5253418c-4b1d-4d9b-8f51-219cc38fdef7-3.png" alt="Children's Film Project" className="w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div className="absolute bottom-6 left-6 text-white">
+                  <div className="flex items-center gap-2 mb-2 text-[#C9A84C] font-bold text-xs uppercase tracking-widest">
+                    <Film className="w-4 h-4"/> Children's Dream Film Project
                   </div>
-                ))}
+                  <h3 className="text-2xl font-bold font-serif">{isEn ? "Children's Dream Film Project" : "儿童梦想电影项目"}</h3>
+                </div>
               </div>
-
-              <Link to="/filmmaker-support" className="inline-flex items-center gap-2 bg-[#0B0B0C] text-white px-6 py-3 rounded-xl font-bold text-sm hover:bg-[#C9A84C] transition-all">
-                {isZh ? '申请支持' : 'Apply for Support'} <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
-
-            <div className="space-y-4">
-              <div className="relative rounded-2xl overflow-hidden h-64">
-                <img
-                  src="/images/ChatGPT_Image_2026年5月6日_18_08_23.png"
-                  alt="Young filmmaker with camera"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="bg-[#F9F7F4] rounded-2xl p-6 border border-[#E6E7EA]">
-                <p className="text-[12px] font-bold text-[#C9A84C] uppercase tracking-widest mb-4">{isZh ? '适合对象' : 'Who This Is For'}</p>
-                <div className="space-y-2.5">
-                  {(isZh ? [
-                    '电影专业应届及近三年毕业生',
-                    '有完整构想但缺乏资源的新晋导演',
-                    '希望完成第一部独立作品的创作者',
-                    '寻求行业入口和就业机会的电影人',
-                  ] : [
-                    'Recent film graduates and those within 3 years of graduation',
-                    'Emerging directors with a complete vision but limited resources',
-                    'Creators who want to complete their first independent work',
-                    'Filmmakers seeking industry entry points and employment opportunities',
-                  ]).map(item => (
-                    <div key={item} className="flex items-start gap-2.5">
-                      <CheckCircle2 className="w-4 h-4 text-[#C9A84C] shrink-0 mt-0.5" />
-                      <span className="text-sm text-[#444]">{item}</span>
-                    </div>
-                  ))}
+              <div className="p-8 md:p-10 flex flex-col flex-grow">
+                <p className="text-gfa-slate font-light leading-relaxed mb-6 font-bold">
+                  {isEn ? "We don't simulate—we actually produce and distribute. Every quarter, we produce a complete short film led entirely by youth." : "我们不模拟——我们真的制作，真的发行。每季度制作一部完整短片，全程由青少年主导。"}
+                </p>
+                <div className="bg-gray-50 border-l-4 border-[#C9A84C] p-6 rounded-r-xl mb-8 flex-grow">
+                  <h4 className="font-bold text-gfa-inkBlack font-serif mb-2">{isEn ? "Case Study: 'Garden'" : "代表作：《花园 Garden》"}</h4>
+                  <ul className="text-sm font-light text-gfa-slate space-y-2 mb-4">
+                    <li>• {isEn ? "Winner: Best Family Film at Golden State Film Festival" : "Golden State Film Festival 最佳家庭电影"}</li>
+                    <li>• {isEn ? "Distributed on Amazon Prime, YouTube, and Tubi" : "Amazon Prime / YouTube / Tubi 广泛发行"}</li>
+                  </ul>
+                  <p className="text-xs italic text-gfa-slate">"{isEn ? "Seeing my name in the credits on Amazon Prime made me realize I want to do this forever." : "在亚马逊上看到我的名字出现在片尾字幕时，我觉得我找到了我一生的热爱。"}"</p>
+                </div>
+                <div className="flex flex-col xl:flex-row gap-3">
+                  <button className="bg-gfa-inkBlack hover:bg-black text-white font-bold uppercase tracking-widest text-[10px] sm:text-xs px-6 py-3 rounded-full transition-colors flex-1">
+                    {isEn ? "Enroll for Next Film" : "让我的孩子参与下一部"}
+                  </button>
+                  <button className="border border-gfa-border hover:bg-gray-50 text-gfa-inkBlack font-bold uppercase tracking-widest text-[10px] sm:text-xs px-6 py-3 rounded-full transition-colors flex-1">
+                    {isEn ? "Co-Produce" : "联合出品"}
+                  </button>
                 </div>
               </div>
             </div>
+
+            {/* Program 3: Special Needs */}
+            <div className="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 flex flex-col">
+              <div className="h-64 bg-gray-200 relative">
+                <img src="https://i.ibb.co/ycRFxBZ4/Chat-GPT-Image-2026-3-23-12-23-04.png" alt="Film Therapy" className="w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div className="absolute bottom-6 left-6 text-white">
+                  <div className="flex items-center gap-2 mb-2 text-[#C9A84C] font-bold text-xs uppercase tracking-widest">
+                    <HeartHandshake className="w-4 h-4"/> Film Therapy
+                  </div>
+                  <h3 className="text-2xl font-bold font-serif">{isEn ? "Film Therapy for Special Needs Youth" : "特殊需求儿童计划"}</h3>
+                </div>
+              </div>
+              <div className="p-8 md:p-10 flex flex-col flex-grow">
+                <p className="text-gfa-slate font-light leading-relaxed mb-6 font-serif italic text-lg text-gfa-inkBlack">
+                  {isEn ? "\"Film is just another language. For children with special needs, it might be their most powerful one.\"" : "“电影，是另一种语言。对于有特殊需求的孩子，它可能是最有力的语言。”"}
+                </p>
+                <ul className="text-sm font-light text-gfa-slate space-y-4 mb-8 flex-grow">
+                  <li className="flex items-start gap-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#C9A84C] mt-1.5 shrink-0"></div>
+                    {isEn ? "Filmmaking therapy designed specifically for youth with autism, depression, and anxiety." : "专为自闭症、抑郁症、焦虑症儿童设计的影视创作疗愈课程"}
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#C9A84C] mt-1.5 shrink-0"></div>
+                    {isEn ? "Helping children find self-expression and connection through acting and camerawork." : "通过拍摄和表演帮助孩子表达自我"}
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#C9A84C] mt-1.5 shrink-0"></div>
+                    {isEn ? "Instructors with professional backgrounds in psychological counseling." : "有专业心理辅导背景的导师团队"}
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#C9A84C] mt-1.5 shrink-0"></div>
+                    {isEn ? "Small group settings ensuring a 1:3 teacher-to-student ratio." : "小班制，1:3师生比例"}
+                  </li>
+                </ul>
+                <div className="flex flex-col xl:flex-row gap-3">
+                  <button className="bg-gfa-inkBlack hover:bg-black text-white font-bold uppercase tracking-widest text-[10px] sm:text-xs px-6 py-3 rounded-full transition-colors flex-1">
+                    {isEn ? "Learn More" : "了解详情"}
+                  </button>
+                  <button className="border border-gfa-border hover:bg-gray-50 text-gfa-inkBlack font-bold uppercase tracking-widest text-[10px] sm:text-xs px-6 py-3 rounded-full transition-colors flex-1">
+                    {isEn ? "Book Consultation" : "预约咨询"}
+                  </button>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 bg-[#0B0B0C] text-white">
-        <div className="container-gfa max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold font-serif mb-5">
-            {isZh ? <>准备好了吗？<br /><span className="text-[#C9A84C]">让我们一起开始。</span></> : <>Ready to Begin?<br /><span className="text-[#C9A84C]">We're Here for You.</span></>}
-          </h2>
-          <p className="text-white/60 font-light max-w-xl mx-auto mb-8 leading-relaxed">
-            {isZh ? '无论你是一个充满好奇的孩子、有梦想的青少年，还是渴望突破的新晋电影人，GFA都为你准备好了。' : 'Whether you\'re a curious child, a dream-filled teenager, or an aspiring filmmaker ready to break through — GFA is here for you.'}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" className="inline-flex items-center gap-2 bg-[#C9A84C] text-black px-8 py-4 rounded-xl font-bold text-sm hover:bg-[#d4b055] transition-all">
-              {isZh ? '联系我们报名' : 'Contact Us to Enroll'} <ArrowRight className="w-4 h-4" />
-            </Link>
-            <Link to="/donate" className="inline-flex items-center gap-2 border border-white/20 text-white px-8 py-4 rounded-xl font-bold text-sm hover:bg-white/5 transition-colors">
-              <Heart className="w-4 h-4 fill-current text-[#C9A84C]" />
-              {isZh ? '捐款支持青少年项目' : 'Donate to Youth Programs'}
-            </Link>
-          </div>
+      {/* Program 4: AI Filmmaking */}
+      <section className="py-24 bg-white">
+        <div className="container-gfa max-w-5xl mx-auto px-4 text-center">
+           <div className="inline-block px-4 py-1 border border-gfa-border text-gfa-inkBlack text-xs font-bold uppercase tracking-widest rounded-full mb-6">
+             {isEn ? "Innovation Track" : "前沿科技"}
+           </div>
+           <h2 className="text-3xl md:text-5xl font-bold font-serif text-gfa-inkBlack mb-6">
+             {isEn ? "AI Filmmaking Training" : "AI影视制作培训"}
+           </h2>
+           <p className="text-xl md:text-2xl font-light text-gfa-slate mb-16 font-serif italic max-w-3xl mx-auto">
+             {isEn 
+               ? "As AI revolutionizes the film industry, we ensure the next generation doesn't fall behind. They will lead the paradigm shift." 
+               : "当AI正在改变整个影视工业，我们不让下一代落在时代后面。"}
+           </p>
+
+           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-left mb-16">
+             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:-translate-y-2 transition-transform duration-300">
+               <Sparkles className="w-8 h-8 text-[#C9A84C] mb-4"/>
+               <h4 className="font-bold text-gfa-inkBlack font-serif text-lg mb-2">{isEn ? "AI Screenwriting" : "AI剧本创作"}</h4>
+               <p className="text-sm font-light text-gfa-slate leading-relaxed">
+                 {isEn ? "Mastering narrative generation workflows using ChatGPT and Claude." : "（ChatGPT、Claude等工具的创作流程）"}
+               </p>
+             </div>
+             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:-translate-y-2 transition-transform duration-300">
+               <Sparkles className="w-8 h-8 text-[#C9A84C] mb-4"/>
+               <h4 className="font-bold text-gfa-inkBlack font-serif text-lg mb-2">{isEn ? "Visual Gen & VFX" : "AI视觉生成与特效"}</h4>
+               <p className="text-sm font-light text-gfa-slate leading-relaxed">
+                 {isEn ? "Creating mind-bending visuals with Midjourney, Runway, and Sora." : "（Midjourney、Runway、Sora等）"}
+               </p>
+             </div>
+             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:-translate-y-2 transition-transform duration-300">
+               <Sparkles className="w-8 h-8 text-[#C9A84C] mb-4"/>
+               <h4 className="font-bold text-gfa-inkBlack font-serif text-lg mb-2">{isEn ? "AI Editing" : "AI辅助剪辑"}</h4>
+               <p className="text-sm font-light text-gfa-slate leading-relaxed">
+                 {isEn ? "Speeding up post-production using Descript and Adobe AI." : "（Descript、Adobe AI等）"}
+               </p>
+             </div>
+             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:-translate-y-2 transition-transform duration-300">
+               <Sparkles className="w-8 h-8 text-[#C9A84C] mb-4"/>
+               <h4 className="font-bold text-gfa-inkBlack font-serif text-lg mb-2">{isEn ? "AI Producing" : "AI制片与项目管理"}</h4>
+               <p className="text-sm font-light text-gfa-slate leading-relaxed">
+                 {isEn ? "Automating breakdowns and scheduling with intelligent production tools." : "自动化剧本拆解与拍摄计划制定"}
+               </p>
+             </div>
+           </div>
+
+           <button className="bg-gfa-inkBlack hover:bg-[#C9A84C] text-white px-10 py-4 rounded-full font-bold uppercase tracking-widest text-sm transition-colors shadow-lg inline-flex items-center gap-2">
+             {isEn ? "Join the Waitlist" : "加入等候名单"} <ArrowRight className="w-4 h-4"/>
+           </button>
         </div>
       </section>
+
     </div>
   );
 };

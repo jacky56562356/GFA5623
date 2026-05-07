@@ -2,14 +2,30 @@
 import React from 'react';
 import { useLocale } from '../LocaleContext.tsx';
 import { Link } from 'react-router-dom';
-import { Building, User, FileText, RefreshCw, Activity, TriangleAlert as AlertTriangle, ShieldCheck, CreditCard, Calendar, Download, Award, FileCheck, LogOut, LifeBuoy, ChevronRight } from 'lucide-react';
+import { 
+  Building, 
+  User, 
+  FileText, 
+  RefreshCw, 
+  Activity, 
+  AlertTriangle, 
+  ShieldCheck, 
+  CreditCard, 
+  Calendar, 
+  Download, 
+  Award, 
+  FileCheck,
+  LogOut,
+  LifeBuoy,
+  ChevronRight
+} from 'lucide-react';
 
 const MemberPortal = () => {
   const { t } = useLocale();
   const mp = t.memberPortal;
 
   return (
-    <div className="bg-gfa-warmWhite pt-20 pb-16 px-6 min-h-screen font-sans">
+    <div className="bg-gfa-warmWhite pt-32 pb-16 px-6 min-h-screen font-sans">
       <div className="container-gfa max-w-7xl mx-auto">
         
         {/* Header */}

@@ -6,7 +6,7 @@ import { ChevronDown, Map, Compass, BookOpen, GraduationCap, PhoneCall } from 'l
 
 const FamilyGuide: React.FC = () => {
   const { locale } = useLocale();
-  const isEn = locale !== Locale.ZH;
+  const isEn = locale === Locale.EN;
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const toggleFaq = (index: number) => {
@@ -38,10 +38,10 @@ const FamilyGuide: React.FC = () => {
       <SEO title="Family Career Guide | Global Film Alliance" />
 
       {/* Banner */}
-      <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden bg-gfa-inkBlack pt-16">
+      <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden bg-gfa-inkBlack pt-20">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1498228775437-1eeeaffec258?q=80&w=2070&auto=format&fit=crop" 
+            src="https://i.ibb.co/F4jckgZp/Chat-GPT-Image-2026-1-25-15-29-13.png" 
             alt="Family reviewing a script" 
             className="w-full h-full object-cover opacity-30 mix-blend-luminosity" 
           />
