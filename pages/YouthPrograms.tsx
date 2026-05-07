@@ -308,8 +308,8 @@ const YouthPrograms: React.FC = () => {
             <div className="space-y-4">
               <div className="relative rounded-2xl overflow-hidden h-64">
                 <img
-                  src="https://images.pexels.com/photos/2566573/pexels-photo-2566573.jpeg?auto=compress&cs=tinysrgb&w=700"
-                  alt="Emerging director"
+                  src="https://images.pexels.com/photos/7551659/pexels-photo-7551659.jpeg?auto=compress&cs=tinysrgb&w=700"
+                  alt="Young filmmaker with camera"
                   className="w-full h-full object-cover"
                 />
               </div>

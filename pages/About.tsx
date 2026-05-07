@@ -17,8 +17,8 @@ const About: React.FC = () => {
       <section className="relative min-h-[60vh] flex items-end justify-start overflow-hidden bg-gfa-inkBlack">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg?auto=compress&cs=tinysrgb&w=1920"
-            alt="Filmmakers at work"
+            src="https://images.pexels.com/photos/4350057/pexels-photo-4350057.jpeg?auto=compress&cs=tinysrgb&w=1920"
+            alt="Youth filmmakers at work"
             className="w-full h-full object-cover opacity-50"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-gfa-inkBlack via-gfa-inkBlack/70 to-transparent"></div>
@@ -105,7 +105,7 @@ const About: React.FC = () => {
                 )}
               </div>
               <div className="flex items-center gap-4 pt-6 border-t border-gfa-border">
-                <img src="https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Jack Liu" className="w-16 h-16 rounded-full object-cover border-2 border-[#C9A84C]" />
+                <img src="https://images.pexels.com/photos/5792641/pexels-photo-5792641.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Jack Liu" className="w-16 h-16 rounded-full object-cover border-2 border-[#C9A84C]" />
                 <div>
                   <p className="font-bold text-gfa-inkBlack font-serif text-lg">刘宗基 / Jack Liu</p>
                   <p className="text-sm text-[#C9A84C] font-bold uppercase tracking-widest">{isZh ? '全球电影联盟主席' : 'Chairman, Global Film Alliance'}</p>
@@ -113,10 +113,10 @@ const About: React.FC = () => {
               </div>
             </div>
             <div className="space-y-4">
-              <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Youth filmmaking" className="w-full h-72 object-cover rounded-2xl" />
+              <img src="https://images.pexels.com/photos/7551659/pexels-photo-7551659.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Youth filmmaking" className="w-full h-72 object-cover rounded-2xl" />
               <div className="grid grid-cols-2 gap-4">
-                <img src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Director on set" className="w-full h-44 object-cover rounded-2xl" />
-                <img src="https://images.pexels.com/photos/1181472/pexels-photo-1181472.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Production team" className="w-full h-44 object-cover rounded-2xl" />
+                <img src="https://images.pexels.com/photos/8942090/pexels-photo-8942090.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Young director on set" className="w-full h-44 object-cover rounded-2xl" />
+                <img src="https://images.pexels.com/photos/8363831/pexels-photo-8363831.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Children film production" className="w-full h-44 object-cover rounded-2xl" />
               </div>
             </div>
           </div>
@@ -204,15 +204,15 @@ const About: React.FC = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {(isZh ? [
-              { img: 'https://images.pexels.com/photos/2422278/pexels-photo-2422278.jpeg?auto=compress&cs=tinysrgb&w=400', title: '电影专业毕业生', desc: '来自USC、UCLA、Chapman等院校的应届毕业生，寻求进入行业的第一步。' },
-              { img: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=400', title: '新晋独立导演', desc: '有创作愿景但缺乏发行渠道和行业资源的独立创作者。' },
-              { img: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=400', title: '6-17岁青少年', desc: '通过夏令营、制作项目和比赛探索创作潜能的年轻人。' },
-              { img: 'https://images.pexels.com/photos/3379934/pexels-photo-3379934.jpeg?auto=compress&cs=tinysrgb&w=400', title: '特殊需求儿童', desc: '自闭症、抑郁症等特殊需求儿童，通过电影艺术疗法找到疗愈。' },
+              { img: 'https://images.pexels.com/photos/8363831/pexels-photo-8363831.jpeg?auto=compress&cs=tinysrgb&w=400', title: '电影专业毕业生', desc: '来自USC、UCLA、Chapman等院校的应届毕业生，寻求进入行业的第一步。' },
+              { img: 'https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg?auto=compress&cs=tinysrgb&w=400', title: '新晋独立导演', desc: '有创作愿景但缺乏发行渠道和行业资源的独立创作者。' },
+              { img: 'https://images.pexels.com/photos/4350057/pexels-photo-4350057.jpeg?auto=compress&cs=tinysrgb&w=400', title: '6-17岁青少年', desc: '通过夏令营、制作项目和比赛探索创作潜能的年轻人。' },
+              { img: 'https://images.pexels.com/photos/8106613/pexels-photo-8106613.jpeg?auto=compress&cs=tinysrgb&w=400', title: '特殊需求儿童', desc: '自闭症、抑郁症等特殊需求儿童，通过电影艺术疗法找到疗愈。' },
             ] : [
-              { img: 'https://images.pexels.com/photos/2422278/pexels-photo-2422278.jpeg?auto=compress&cs=tinysrgb&w=400', title: 'Film Graduates', desc: 'Recent graduates from USC, UCLA, Chapman seeking their industry breakthrough.' },
-              { img: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=400', title: 'Emerging Directors', desc: 'Independent creators with vision who lack distribution channels and industry resources.' },
-              { img: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=400', title: 'Youth Ages 6–17', desc: 'Young people exploring creative potential through camps, production projects, and competitions.' },
-              { img: 'https://images.pexels.com/photos/3379934/pexels-photo-3379934.jpeg?auto=compress&cs=tinysrgb&w=400', title: 'Special Needs Youth', desc: 'Children with autism or depression finding healing through film arts therapy programs.' },
+              { img: 'https://images.pexels.com/photos/8363831/pexels-photo-8363831.jpeg?auto=compress&cs=tinysrgb&w=400', title: 'Film Graduates', desc: 'Recent graduates from USC, UCLA, Chapman seeking their industry breakthrough.' },
+              { img: 'https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg?auto=compress&cs=tinysrgb&w=400', title: 'Emerging Directors', desc: 'Independent creators with vision who lack distribution channels and industry resources.' },
+              { img: 'https://images.pexels.com/photos/4350057/pexels-photo-4350057.jpeg?auto=compress&cs=tinysrgb&w=400', title: 'Youth Ages 6–17', desc: 'Young people exploring creative potential through camps, production projects, and competitions.' },
+              { img: 'https://images.pexels.com/photos/8106613/pexels-photo-8106613.jpeg?auto=compress&cs=tinysrgb&w=400', title: 'Special Needs Youth', desc: 'Children with autism or depression finding healing through film arts therapy programs.' },
             ]).map(item => (
               <div key={item.title} className="group bg-white border border-[#E6E7EA] rounded-2xl overflow-hidden hover:shadow-lg hover:border-[#C9A84C]/30 transition-all">
                 <div className="h-44 overflow-hidden">

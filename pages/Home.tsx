@@ -70,7 +70,7 @@ const Home: React.FC = () => {
               <div className="space-y-3">
                 <div className="relative rounded-2xl overflow-hidden h-52 group">
                   <img
-                    src="https://images.pexels.com/photos/7991579/pexels-photo-7991579.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    src="https://images.pexels.com/photos/8942090/pexels-photo-8942090.jpeg?auto=compress&cs=tinysrgb&w=600"
                     alt="Youth filmmaker on set"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
@@ -80,7 +80,7 @@ const Home: React.FC = () => {
                 </div>
                 <div className="relative rounded-2xl overflow-hidden h-36 group">
                   <img
-                    src="https://images.pexels.com/photos/3062541/pexels-photo-3062541.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    src="https://images.pexels.com/photos/4350057/pexels-photo-4350057.jpeg?auto=compress&cs=tinysrgb&w=600"
                     alt="Film production"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
@@ -92,8 +92,8 @@ const Home: React.FC = () => {
               <div className="space-y-3 mt-8">
                 <div className="relative rounded-2xl overflow-hidden h-36 group">
                   <img
-                    src="https://images.pexels.com/photos/3137081/pexels-photo-3137081.jpeg?auto=compress&cs=tinysrgb&w=600"
-                    alt="Awards ceremony"
+                    src="https://images.pexels.com/photos/7245486/pexels-photo-7245486.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="Youth award ceremony"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
                   <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/70 to-transparent">
@@ -102,7 +102,7 @@ const Home: React.FC = () => {
                 </div>
                 <div className="relative rounded-2xl overflow-hidden h-52 group">
                   <img
-                    src="https://images.pexels.com/photos/8942090/pexels-photo-8942090.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    src="https://images.pexels.com/photos/8106613/pexels-photo-8106613.jpeg?auto=compress&cs=tinysrgb&w=600"
                     alt="Community screening"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
@@ -201,8 +201,8 @@ const Home: React.FC = () => {
             <div className="bg-white rounded-2xl overflow-hidden border border-[#E6E7EA] hover:border-[#C9A84C]/40 hover:shadow-md transition-all group">
               <div className="h-44 overflow-hidden relative">
                 <img
-                  src="https://images.pexels.com/photos/8106613/pexels-photo-8106613.jpeg?auto=compress&cs=tinysrgb&w=500"
-                  alt="Community screening"
+                  src="https://images.pexels.com/photos/8363831/pexels-photo-8363831.jpeg?auto=compress&cs=tinysrgb&w=500"
+                  alt="Children watching film"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute top-3 left-3">
@@ -225,8 +225,8 @@ const Home: React.FC = () => {
             <div className="bg-white rounded-2xl overflow-hidden border border-[#E6E7EA] hover:border-[#C9A84C]/40 hover:shadow-md transition-all group">
               <div className="h-44 overflow-hidden relative">
                 <img
-                  src="https://images.pexels.com/photos/4350057/pexels-photo-4350057.jpeg?auto=compress&cs=tinysrgb&w=500"
-                  alt="Film summer camp"
+                  src="https://images.pexels.com/photos/7551659/pexels-photo-7551659.jpeg?auto=compress&cs=tinysrgb&w=500"
+                  alt="Youth film camp"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute top-3 left-3">
@@ -249,8 +249,8 @@ const Home: React.FC = () => {
             <div className="bg-white rounded-2xl overflow-hidden border border-[#E6E7EA] hover:border-[#C9A84C]/40 hover:shadow-md transition-all group">
               <div className="h-44 overflow-hidden relative">
                 <img
-                  src="https://images.pexels.com/photos/3807571/pexels-photo-3807571.jpeg?auto=compress&cs=tinysrgb&w=500"
-                  alt="Filmmaker support"
+                  src="https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg?auto=compress&cs=tinysrgb&w=500"
+                  alt="Young filmmaker learning"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute top-3 left-3">
@@ -286,7 +286,7 @@ const Home: React.FC = () => {
             <div className="rounded-2xl overflow-hidden bg-[#0B0B0C] relative group min-h-[360px]">
               <div className="absolute inset-0">
                 <img
-                  src="https://images.pexels.com/photos/3473492/pexels-photo-3473492.jpeg?auto=compress&cs=tinysrgb&w=700"
+                  src="https://images.pexels.com/photos/8106613/pexels-photo-8106613.jpeg?auto=compress&cs=tinysrgb&w=700"
                   alt="Youth film education"
                   className="w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-1000"
                 />
@@ -307,8 +307,8 @@ const Home: React.FC = () => {
             <div className="rounded-2xl overflow-hidden bg-[#F9F7F4] border border-[#E6E7EA] relative group min-h-[360px] hover:border-[#C9A84C]/30 hover:shadow-md transition-all">
               <div className="h-48 overflow-hidden">
                 <img
-                  src="https://images.pexels.com/photos/2566573/pexels-photo-2566573.jpeg?auto=compress&cs=tinysrgb&w=700"
-                  alt="Filmmaker support"
+                  src="https://images.pexels.com/photos/7551659/pexels-photo-7551659.jpeg?auto=compress&cs=tinysrgb&w=700"
+                  alt="Young filmmaker with camera"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
                 />
               </div>
@@ -343,8 +343,8 @@ const Home: React.FC = () => {
             <div className="rounded-2xl overflow-hidden group relative">
               <div className="h-72 overflow-hidden">
                 <img
-                  src="https://images.pexels.com/photos/3137081/pexels-photo-3137081.jpeg?auto=compress&cs=tinysrgb&w=900"
-                  alt="Golden Feather Awards"
+                  src="https://images.pexels.com/photos/7245486/pexels-photo-7245486.jpeg?auto=compress&cs=tinysrgb&w=900"
+                  alt="Golden Feather Awards ceremony"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
@@ -366,8 +366,8 @@ const Home: React.FC = () => {
             <div className="rounded-2xl overflow-hidden group relative">
               <div className="h-72 overflow-hidden">
                 <img
-                  src="https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&w=900"
-                  alt="Dolby Theatre competition"
+                  src="https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=900"
+                  alt="Youth performing on stage"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
@@ -419,13 +419,13 @@ const Home: React.FC = () => {
               </div>
               <div className="hidden lg:grid grid-cols-2 gap-0">
                 <img
-                  src="https://images.pexels.com/photos/8424554/pexels-photo-8424554.jpeg?auto=compress&cs=tinysrgb&w=500"
+                  src="https://images.pexels.com/photos/4350057/pexels-photo-4350057.jpeg?auto=compress&cs=tinysrgb&w=500"
                   alt="Youth filmmaker"
                   className="w-full h-full object-cover opacity-80"
                 />
                 <img
-                  src="https://images.pexels.com/photos/5212364/pexels-photo-5212364.jpeg?auto=compress&cs=tinysrgb&w=500"
-                  alt="Mentor with student"
+                  src="https://images.pexels.com/photos/8363831/pexels-photo-8363831.jpeg?auto=compress&cs=tinysrgb&w=500"
+                  alt="Children at film screening"
                   className="w-full h-full object-cover opacity-80"
                 />
               </div>

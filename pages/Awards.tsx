@@ -69,8 +69,8 @@ const Awards: React.FC = () => {
       <section className="relative h-[65vh] min-h-[500px] flex items-end overflow-hidden bg-gfa-inkBlack">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.pexels.com/photos/2263436/pexels-photo-2263436.jpeg?auto=compress&cs=tinysrgb&w=1600"
-            alt="Awards ceremony"
+            src="https://images.pexels.com/photos/7245486/pexels-photo-7245486.jpeg?auto=compress&cs=tinysrgb&w=1600"
+            alt="Youth awards ceremony"
             className="w-full h-full object-cover opacity-50"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-gfa-inkBlack via-gfa-inkBlack/40 to-transparent"></div>
@@ -145,10 +145,10 @@ const Awards: React.FC = () => {
               </div>
             </div>
             <div className="space-y-4">
-              <img src="https://images.pexels.com/photos/3379422/pexels-photo-3379422.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Awards photography" className="w-full h-72 object-cover rounded-2xl" />
+              <img src="https://images.pexels.com/photos/8942090/pexels-photo-8942090.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Young filmmaker receiving award" className="w-full h-72 object-cover rounded-2xl" />
               <div className="grid grid-cols-2 gap-4">
-                <img src="https://images.pexels.com/photos/3419592/pexels-photo-3419592.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Trophy" className="w-full h-40 object-cover rounded-2xl" />
-                <img src="https://images.pexels.com/photos/2869396/pexels-photo-2869396.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Youth on stage" className="w-full h-40 object-cover rounded-2xl" />
+                <img src="https://images.pexels.com/photos/8106613/pexels-photo-8106613.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Children at film screening" className="w-full h-40 object-cover rounded-2xl" />
+                <img src="https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Youth performing on stage" className="w-full h-40 object-cover rounded-2xl" />
               </div>
             </div>
           </div>
@@ -272,9 +272,9 @@ const Awards: React.FC = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { role: isZh ? '好莱坞电影导演' : 'Hollywood Director', img: 'https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=400' },
-              { role: isZh ? '电影节策展人' : 'Festival Programmer', img: 'https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=400' },
-              { role: isZh ? '电影教育专家' : 'Film Education Expert', img: 'https://images.pexels.com/photos/3379932/pexels-photo-3379932.jpeg?auto=compress&cs=tinysrgb&w=400' },
+              { role: isZh ? '好莱坞电影导演' : 'Hollywood Director', img: 'https://images.pexels.com/photos/5792641/pexels-photo-5792641.jpeg?auto=compress&cs=tinysrgb&w=400' },
+              { role: isZh ? '电影节策展人' : 'Festival Programmer', img: 'https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg?auto=compress&cs=tinysrgb&w=400' },
+              { role: isZh ? '电影教育专家' : 'Film Education Expert', img: 'https://images.pexels.com/photos/7551659/pexels-photo-7551659.jpeg?auto=compress&cs=tinysrgb&w=400' },
             ].map((juror, i) => (
               <div key={i} className="bg-[#F9F7F4] rounded-2xl overflow-hidden border border-[#E6E7EA]">
                 <div className="h-52 overflow-hidden">
