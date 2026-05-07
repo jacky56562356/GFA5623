@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import CookieBanner from './CookieBanner';
+import { AuthModal } from './AuthModal';
 import { useLocation } from 'react-router-dom';
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -16,7 +17,8 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <div className="flex flex-col min-h-screen font-sans text-gfa-inkBlack bg-gfa-warmWhite selection:bg-gfa-gold/20 selection:text-gfa-inkBlack">
       <Navbar />
-      <main className="flex-grow">
+      <AuthModal />
+      <main className="flex-grow pt-[80px] md:pt-[90px]">
         {children}
       </main>
       <Footer />
@@ -26,3 +28,4 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 };
 
 export default Layout;
+

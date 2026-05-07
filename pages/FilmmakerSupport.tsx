@@ -10,11 +10,14 @@ const FilmmakerSupport: React.FC = () => {
   const isEn = locale === Locale.EN;
 
   return (
-    <div className="font-sans pb-24">
-      <SEO title="Filmmaker Support | Global Film Alliance" />
+    <div className="font-sans pb-6">
+      <SEO 
+        title="Filmmaker Support" 
+        description="GFA provides free professional filming equipment, mentorship, distribution support, and funding advice to help young filmmakers succeed."
+      />
 
       {/* Banner */}
-      <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden bg-gfa-inkBlack pt-20">
+      <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden bg-gfa-inkBlack pt-5">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://i.ibb.co/sp4fWHq3/Chat-GPT-Image-2026-3-23-12-23-22.png" 
@@ -25,7 +28,7 @@ const FilmmakerSupport: React.FC = () => {
         </div>
 
         <div className="container-gfa relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-serif text-white mb-6 leading-tight drop-shadow-2xl">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-serif text-white mb-3 leading-tight drop-shadow-2xl">
             {isEn ? "You Have the Talent." : "你有才华，"}<br/>
             <span className="text-[#C9A84C]">{isEn ? "We'll Help You Get Through the Door." : "我们帮你打开那扇门。"}</span>
           </h1>
@@ -33,7 +36,7 @@ const FilmmakerSupport: React.FC = () => {
       </section>
 
       {/* Intro Context */}
-      <section className="py-20 bg-white">
+      <section className="py-5 bg-white">
         <div className="container-gfa max-w-3xl mx-auto px-4 text-center">
           <p className="text-xl md:text-2xl font-light text-gfa-slate leading-relaxed font-serif">
             {isEn 
@@ -44,19 +47,19 @@ const FilmmakerSupport: React.FC = () => {
       </section>
 
       {/* Core Support Areas */}
-      <section className="py-24 bg-[#F5F2EE]">
+      <section className="py-6 bg-[#F5F2EE]">
         <div className="container-gfa px-4 max-w-6xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4">
             <h2 className="text-3xl md:text-5xl font-bold font-serif text-gfa-inkBlack">
               {isEn ? "How We Help You Break In" : "我们如何提供公益支持"}
             </h2>
           </div>
 
-          <div className="space-y-12">
+          <div className="space-y-3">
             {/* Support 1 */}
-            <div className="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100 flex flex-col md:flex-row gap-8">
+            <div className="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100 flex flex-col md:flex-row gap-4">
               <div className="md:w-1/3 shrink-0">
-                <div className="w-16 h-16 bg-[#C9A84C]/10 rounded-2xl flex items-center justify-center mb-6 text-[#C9A84C]">
+                <div className="w-16 h-16 bg-[#C9A84C]/10 rounded-2xl flex items-center justify-center mb-3 text-[#C9A84C]">
                   <Camera className="w-8 h-8" />
                 </div>
                 <h3 className="text-2xl font-bold font-serif mb-2">{isEn ? "Free Pro Gear Access" : "公益影视设备借用"}</h3>
@@ -81,9 +84,9 @@ const FilmmakerSupport: React.FC = () => {
             </div>
 
             {/* Support 2 */}
-            <div className="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100 flex flex-col md:flex-row gap-8">
+            <div className="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100 flex flex-col md:flex-row gap-4">
               <div className="md:w-1/3 shrink-0">
-                <div className="w-16 h-16 bg-[#C9A84C]/10 rounded-2xl flex items-center justify-center mb-6 text-[#C9A84C]">
+                <div className="w-16 h-16 bg-[#C9A84C]/10 rounded-2xl flex items-center justify-center mb-3 text-[#C9A84C]">
                   <Users className="w-8 h-8" />
                 </div>
                 <h3 className="text-2xl font-bold font-serif mb-2">{isEn ? "Nonprofit Mentorship" : "公益导师扶持计划"}</h3>
@@ -107,9 +110,9 @@ const FilmmakerSupport: React.FC = () => {
             </div>
 
             {/* Support 3 */}
-            <div className="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100 flex flex-col md:flex-row gap-8">
+            <div className="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100 flex flex-col md:flex-row gap-4">
               <div className="md:w-1/3 shrink-0">
-                <div className="w-16 h-16 bg-[#C9A84C]/10 rounded-2xl flex items-center justify-center mb-6 text-[#C9A84C]">
+                <div className="w-16 h-16 bg-[#C9A84C]/10 rounded-2xl flex items-center justify-center mb-3 text-[#C9A84C]">
                   <PlaySquare className="w-8 h-8" />
                 </div>
                 <h3 className="text-2xl font-bold font-serif mb-2">{isEn ? "Festival Strategy Support" : "公益展映与电影节支持"}</h3>
@@ -133,9 +136,9 @@ const FilmmakerSupport: React.FC = () => {
             </div>
 
             {/* Support 4 */}
-            <div className="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100 flex flex-col md:flex-row gap-8">
+            <div className="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100 flex flex-col md:flex-row gap-4">
               <div className="md:w-1/3 shrink-0">
-                <div className="w-16 h-16 bg-[#C9A84C]/10 rounded-2xl flex items-center justify-center mb-6 text-[#C9A84C]">
+                <div className="w-16 h-16 bg-[#C9A84C]/10 rounded-2xl flex items-center justify-center mb-3 text-[#C9A84C]">
                   <FileText className="w-8 h-8" />
                 </div>
                 <h3 className="text-2xl font-bold font-serif mb-2">{isEn ? "Public Grant Coaching" : "公共艺术资助申报辅导"}</h3>
@@ -159,9 +162,9 @@ const FilmmakerSupport: React.FC = () => {
             </div>
 
             {/* Support 5 */}
-            <div className="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100 flex flex-col md:flex-row gap-8">
+            <div className="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100 flex flex-col md:flex-row gap-4">
               <div className="md:w-1/3 shrink-0">
-                <div className="w-16 h-16 bg-[#C9A84C]/10 rounded-2xl flex items-center justify-center mb-6 text-[#C9A84C]">
+                <div className="w-16 h-16 bg-[#C9A84C]/10 rounded-2xl flex items-center justify-center mb-3 text-[#C9A84C]">
                   <Clapperboard className="w-8 h-8" />
                 </div>
                 <h3 className="text-2xl font-bold font-serif mb-2">{isEn ? "Educational On-Set Experience" : "教育性片场实战锻炼"}</h3>
@@ -188,15 +191,15 @@ const FilmmakerSupport: React.FC = () => {
       </section>
 
       {/* Application Process */}
-      <section className="py-24 bg-white border-b border-gfa-border">
+      <section className="py-6 bg-white border-b border-gfa-border">
         <div className="container-gfa px-4 max-w-5xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4">
             <h2 className="text-3xl md:text-5xl font-bold font-serif text-gfa-inkBlack mb-4">
               {isEn ? "How to Apply" : "申请流程"}
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             <div className="text-center">
               <div className="w-12 h-12 rounded-full bg-[#C9A84C] text-white flex items-center justify-center mx-auto text-xl font-bold font-serif mb-4 shadow-lg border-4 border-white">1</div>
               <h4 className="font-bold text-lg mb-2">{isEn ? "Submit Application" : "提交申请"}</h4>
@@ -225,10 +228,10 @@ const FilmmakerSupport: React.FC = () => {
       </section>
 
       {/* Eligibility */}
-      <section className="py-20 bg-gfa-inkBlack text-white">
+      <section className="py-5 bg-gfa-inkBlack text-white">
         <div className="container-gfa max-w-4xl mx-auto px-4 text-center">
-           <h3 className="text-2xl font-bold font-serif text-[#C9A84C] mb-8">{isEn ? "Who Can Apply?" : "谁可以申请？"}</h3>
-           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left max-w-3xl mx-auto bg-white/5 p-8 rounded-3xl border border-white/10">
+           <h3 className="text-2xl font-bold font-serif text-[#C9A84C] mb-4">{isEn ? "Who Can Apply?" : "谁可以申请？"}</h3>
+           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left max-w-3xl mx-auto bg-white/5 p-8 rounded-3xl border border-white/10">
               <div>
                 <h4 className="font-bold text-lg mb-4 flex items-center gap-2"><CheckCircle2 className="text-green-400 w-5 h-5"/> {isEn ? "Eligible:" : "符合资格："}</h4>
                 <ul className="space-y-3 text-sm font-light text-white/80">
@@ -251,19 +254,19 @@ const FilmmakerSupport: React.FC = () => {
       </section>
 
       {/* Stories */}
-      <section className="py-24 bg-white">
+      <section className="py-6 bg-white">
         <div className="container-gfa max-w-6xl mx-auto px-4">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4">
             <h2 className="text-3xl md:text-5xl font-bold font-serif text-gfa-inkBlack">
               {isEn ? "Success Stories" : "学员故事"}
             </h2>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
              <div className="bg-[#F5F2EE] p-8 rounded-3xl border border-gray-200">
                <h4 className="font-bold text-xl font-serif text-gfa-inkBlack mb-1">Alex</h4>
                <p className="text-xs uppercase tracking-widest text-[#C9A84C] font-bold mb-4">{isEn ? "Cinematography Grad" : "摄影系毕业生"}</p>
-               <p className="text-sm font-light text-gfa-slate mb-6 flex-grow italic">
+               <p className="text-sm font-light text-gfa-slate mb-3 flex-grow italic">
                  "{isEn ? "GFA lent me an entire Blackmagic camera package for my first short film. That short got into festivals, and directly led to my first paying gig." : "通过设备借用完成了第一部短片，入围电影节后获得工作机会。"}"
                </p>
              </div>
@@ -271,7 +274,7 @@ const FilmmakerSupport: React.FC = () => {
              <div className="bg-[#F5F2EE] p-8 rounded-3xl border border-gray-200">
                <h4 className="font-bold text-xl font-serif text-gfa-inkBlack mb-1">Sarah</h4>
                <p className="text-xs uppercase tracking-widest text-[#C9A84C] font-bold mb-4">{isEn ? "Independent Director" : "独立导演"}</p>
-               <p className="text-sm font-light text-gfa-slate mb-6 flex-grow italic">
+               <p className="text-sm font-light text-gfa-slate mb-3 flex-grow italic">
                  "{isEn ? "My GFA mentor pulled my resume from the pile and got me a production company internship. Now I work there full-time." : "通过导师网络进入制片公司实习，现在已经全职工作。"}"
                </p>
              </div>
@@ -279,7 +282,7 @@ const FilmmakerSupport: React.FC = () => {
              <div className="bg-[#F5F2EE] p-8 rounded-3xl border border-gray-200">
                <h4 className="font-bold text-xl font-serif text-gfa-inkBlack mb-1">David</h4>
                <p className="text-xs uppercase tracking-widest text-[#C9A84C] font-bold mb-4">{isEn ? "Low-Income Creator" : "低收入创作者"}</p>
-               <p className="text-sm font-light text-gfa-slate mb-6 flex-grow italic">
+               <p className="text-sm font-light text-gfa-slate mb-3 flex-grow italic">
                  "{isEn ? "I had to shelve my passion project because I couldn't afford production. GFA's grant application coaching helped me secure the funding to finish it." : "通过基金辅导获得资助，完成了长期搁置的项目。"}"
                </p>
              </div>
@@ -288,13 +291,13 @@ const FilmmakerSupport: React.FC = () => {
       </section>
 
       {/* Large CTA */}
-      <section className="py-24 bg-gfa-inkBlack text-center relative overflow-hidden">
+      <section className="py-6 bg-gfa-inkBlack text-center relative overflow-hidden">
         <div className="absolute inset-0 bg-[#C9A84C] mix-blend-overlay opacity-10"></div>
         <div className="container-gfa relative z-10 px-4">
-          <h2 className="text-4xl md:text-6xl font-bold font-serif text-white mb-6">
+          <h2 className="text-4xl md:text-6xl font-bold font-serif text-white mb-3">
             {isEn ? "You're One Step Away." : "你距离行业，只差一步"}
           </h2>
-          <p className="text-xl md:text-2xl font-serif text-[#C9A84C] mb-12">
+          <p className="text-xl md:text-2xl font-serif text-[#C9A84C] mb-3">
             {isEn ? "Let GFA help you take it." : "GFA帮你跨过那一步"}
           </p>
           <Link to="/gear-application" className="bg-[#C9A84C] hover:bg-[#b09241] text-gfa-inkBlack px-12 py-5 rounded-full font-bold uppercase tracking-widest text-base hover:scale-105 hover:-translate-y-1 hover:shadow-[0_10px_40px_rgba(201,168,76,0.4)] active:scale-95 active:shadow-[0_0_20px_rgba(201,168,76,0.2)] transition-all duration-200 shadow-[0_0_30px_rgba(201,168,76,0.3)] mb-4 inline-flex items-center gap-2">

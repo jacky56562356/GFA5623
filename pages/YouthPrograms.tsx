@@ -9,11 +9,11 @@ const YouthPrograms: React.FC = () => {
   const isEn = locale === Locale.EN;
 
   return (
-    <div className="font-sans pb-24">
+    <div className="font-sans pb-6">
       <SEO title="Youth Programs | Global Film Alliance" />
 
       {/* Banner */}
-      <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden bg-gfa-inkBlack pt-20">
+      <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden bg-gfa-inkBlack pt-5">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://i.ibb.co/0p2HWy3Z/filmmaking-in-classroom.jpg" 
@@ -24,7 +24,7 @@ const YouthPrograms: React.FC = () => {
         </div>
 
         <div className="container-gfa relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold font-serif text-white mb-6 leading-tight drop-shadow-2xl">
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold font-serif text-white mb-3 leading-tight drop-shadow-2xl">
             {isEn ? "Planting the Seed of a" : "为下一代电影人"}<br/>
             <span className="text-[#C9A84C]">{isEn ? "Filmmaker's Dream" : "种下梦想的种子"}</span>
           </h1>
@@ -32,13 +32,13 @@ const YouthPrograms: React.FC = () => {
       </section>
 
       {/* Program 1: Summer Camp */}
-      <section className="py-24 bg-white border-b border-gfa-border">
+      <section className="py-6 bg-white border-b border-gfa-border">
         <div className="container-gfa max-w-6xl mx-auto px-4">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4">
             <h2 className="text-sm font-bold text-[#C9A84C] uppercase tracking-widest mb-4 flex justify-center items-center gap-2">
               <Tent className="w-5 h-5"/> {isEn ? "Youth Film Summer Camp" : "影视夏令营"}
             </h2>
-            <h3 className="text-3xl md:text-5xl font-bold font-serif text-gfa-inkBlack mb-8">
+            <h3 className="text-3xl md:text-5xl font-bold font-serif text-gfa-inkBlack mb-4">
               {isEn ? "From First Frame to Premiere" : "从最初的画面到最终的首映"}
             </h3>
             <p className="text-lg md:text-xl font-serif font-light text-gfa-slate leading-relaxed max-w-3xl mx-auto italic">
@@ -48,10 +48,10 @@ const YouthPrograms: React.FC = () => {
             </p>
           </div>
 
-          <div className="bg-[#F5F2EE] rounded-3xl p-8 md:p-12 border border-[#C9A84C]/20 flex flex-col lg:flex-row gap-12 mb-16">
+          <div className="bg-[#F5F2EE] rounded-3xl p-8 md:p-12 border border-[#C9A84C]/20 flex flex-col lg:flex-row gap-3 mb-4">
             <div className="lg:w-1/3">
-              <h4 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-6">{isEn ? "2026 Camp Details" : "2026年营地信息"}</h4>
-              <ul className="space-y-6 text-sm font-light text-gfa-slate">
+              <h4 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-3">{isEn ? "2026 Camp Details" : "2026年营地信息"}</h4>
+              <ul className="space-y-3 text-sm font-light text-gfa-slate">
                 <li className="flex items-start gap-3">
                   <Calendar className="w-5 h-5 text-[#C9A84C] shrink-0 mt-0.5" />
                   <div>
@@ -91,8 +91,8 @@ const YouthPrograms: React.FC = () => {
             </div>
             
             <div className="lg:w-2/3">
-              <h4 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-6">{isEn ? "Curriculum Modules" : "课程内容"}</h4>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <h4 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-3">{isEn ? "Curriculum Modules" : "课程内容"}</h4>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                  <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
                     <h5 className="font-bold text-gfa-inkBlack mb-1">{isEn ? "1. Screenwriting" : "1. 剧本创作"}</h5>
                     <p className="text-sm font-light text-gfa-slate">{isEn ? "Find the stories that only you can tell." : "找到只有你才能讲的故事"}</p>
@@ -128,7 +128,7 @@ const YouthPrograms: React.FC = () => {
                <h4 className="text-2xl md:text-3xl font-bold font-serif mb-4 text-[#C9A84C]">
                  {isEn ? "Talent shouldn't be limited by family income." : "才华，不应该被家庭收入所限制"}
                </h4>
-               <p className="text-white/80 font-light mb-8">
+               <p className="text-white/80 font-light mb-4">
                  {isEn 
                    ? "We provide full and partial scholarships so that passionate children, regardless of their financial background, can experience the magic of our camps." 
                    : "我们为什么提供奖学金：为了确保所有对电影充满热情的孩子都有机会参与。我们为低收入家庭提供全额或部分费用减免。"}
@@ -147,9 +147,9 @@ const YouthPrograms: React.FC = () => {
       </section>
 
       {/* Program 2 & 3 */}
-      <section className="py-24 bg-[#F5F2EE] border-b border-gfa-border">
+      <section className="py-6 bg-[#F5F2EE] border-b border-gfa-border">
         <div className="container-gfa max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
             
             {/* Program 2: Dream Film Project */}
             <div className="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 flex flex-col">
@@ -164,12 +164,12 @@ const YouthPrograms: React.FC = () => {
                 </div>
               </div>
               <div className="p-8 md:p-10 flex flex-col flex-grow">
-                <p className="text-gfa-slate font-light leading-relaxed mb-6 font-bold">
+                <p className="text-gfa-slate font-light leading-relaxed mb-3 font-bold">
                   {isEn ? "We don't simulate—we actually produce and distribute. Every quarter, we produce a complete short film led entirely by youth." : "我们不模拟——我们真的制作，真的发行。每季度制作一部完整短片，全程由青少年主导。"}
                 </p>
-                <div className="bg-gray-50 border-l-4 border-[#C9A84C] p-6 rounded-r-xl mb-8 flex-grow">
+                <div className="bg-gray-50 border-l-4 border-[#C9A84C] p-6 rounded-r-xl mb-4 flex-grow">
                   <h4 className="font-bold text-gfa-inkBlack font-serif mb-4">{isEn ? "Case Study: 'Garden'" : "代表作：《花园 Garden》"}</h4>
-                  <div className="grid grid-cols-2 gap-4 mb-6">
+                  <div className="grid grid-cols-2 gap-4 mb-3">
                     <img src="https://i.ibb.co/sJKd1kNv/MV5-BNWI3-Mj-I2-NDIt-Yj-Ix-Mi00-MGM4-LTlk-Mz-Qt-Mm-Rk-MDQ0-ZDRj-OWU5-Xk-Ey-Xk-Fqc-Gc-V1.jpg" alt="Film Poster 1" className="w-full h-auto rounded-lg shadow-md object-cover aspect-[2/3] hover:scale-105 transition-transform duration-300" />
                     <img src="https://i.ibb.co/bgKF8pwy/Gemini-Generated-Image-jtsengjtsengjtse.png" alt="Film Poster 2" className="w-full h-auto rounded-lg shadow-md object-cover aspect-[2/3] hover:scale-105 transition-transform duration-300" />
                   </div>
@@ -201,15 +201,15 @@ const YouthPrograms: React.FC = () => {
                 </div>
               </div>
               <div className="p-8 md:p-10 flex flex-col flex-grow">
-                <p className="text-gfa-slate font-light leading-relaxed mb-6 font-serif italic text-lg text-gfa-inkBlack">
+                <p className="text-gfa-slate font-light leading-relaxed mb-3 font-serif italic text-lg text-gfa-inkBlack">
                   {isEn ? "\"Film is just another language. For children with special needs, it might be their most powerful one.\"" : "“电影，是另一种语言。对于有特殊需求的孩子，它可能是最有力的语言。”"}
                 </p>
                 <img 
                   src="https://i.ibb.co/KcNpRyb4/Gemini-Generated-Image-2fx58a2fx58a2fx5-1.png" 
                   alt="Film Therapy Program" 
-                  className="w-full h-auto rounded-xl shadow-sm mb-6 object-cover"
+                  className="w-full h-auto rounded-xl shadow-sm mb-3 object-cover"
                 />
-                <ul className="text-sm font-light text-gfa-slate space-y-4 mb-8 flex-grow">
+                <ul className="text-sm font-light text-gfa-slate space-y-4 mb-4 flex-grow">
                   <li className="flex items-start gap-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-[#C9A84C] mt-1.5 shrink-0"></div>
                     {isEn ? "Filmmaking therapy designed specifically for youth with autism, depression, and anxiety." : "专为自闭症、抑郁症、焦虑症儿童设计的影视创作疗愈课程"}
@@ -243,21 +243,21 @@ const YouthPrograms: React.FC = () => {
       </section>
 
       {/* Program 4: AI Filmmaking */}
-      <section className="py-24 bg-white">
+      <section className="py-6 bg-white">
         <div className="container-gfa max-w-5xl mx-auto px-4 text-center">
-           <div className="inline-block px-4 py-1 border border-gfa-border text-gfa-inkBlack text-xs font-bold uppercase tracking-widest rounded-full mb-6">
+           <div className="inline-block px-4 py-1 border border-gfa-border text-gfa-inkBlack text-xs font-bold uppercase tracking-widest rounded-full mb-3">
              {isEn ? "Innovation Track" : "前沿科技"}
            </div>
-           <h2 className="text-3xl md:text-5xl font-bold font-serif text-gfa-inkBlack mb-6">
+           <h2 className="text-3xl md:text-5xl font-bold font-serif text-gfa-inkBlack mb-3">
              {isEn ? "AI Filmmaking Training" : "AI影视制作培训"}
            </h2>
-           <p className="text-xl md:text-2xl font-light text-gfa-slate mb-16 font-serif italic max-w-3xl mx-auto">
+           <p className="text-xl md:text-2xl font-light text-gfa-slate mb-4 font-serif italic max-w-3xl mx-auto">
              {isEn 
                ? "As AI revolutionizes the film industry, we ensure the next generation doesn't fall behind. They will lead the paradigm shift." 
                : "当AI正在改变整个影视工业，我们不让下一代落在时代后面。"}
            </p>
 
-           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-left mb-16">
+           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 text-left mb-4">
              <div className="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:-translate-y-2 transition-transform duration-300">
                <Sparkles className="w-8 h-8 text-[#C9A84C] mb-4"/>
                <h4 className="font-bold text-gfa-inkBlack font-serif text-lg mb-2">{isEn ? "AI Screenwriting" : "AI剧本创作"}</h4>

@@ -34,11 +34,11 @@ const FamilyGuide: React.FC = () => {
   ];
 
   return (
-    <div className="font-sans pb-24">
+    <div className="font-sans pb-6">
       <SEO title="Family Career Guide | Global Film Alliance" />
 
       {/* Banner */}
-      <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden bg-gfa-inkBlack pt-20">
+      <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden bg-gfa-inkBlack pt-5">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://i.ibb.co/F4jckgZp/Chat-GPT-Image-2026-1-25-15-29-13.png" 
@@ -49,7 +49,7 @@ const FamilyGuide: React.FC = () => {
         </div>
 
         <div className="container-gfa relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <h1 className="text-3xl md:text-5xl lg:text-5xl font-bold font-serif text-white mb-6 leading-tight drop-shadow-2xl">
+          <h1 className="text-3xl md:text-5xl lg:text-5xl font-bold font-serif text-white mb-3 leading-tight drop-shadow-2xl">
             {isEn ? "Your Child Dreams of Film." : "您的孩子想从事电影行业？"}<br/>
             <span className="text-[#C9A84C] mt-2 block">{isEn ? "Let's Build the Path Together." : "我们帮您规划这条路。"}</span>
           </h1>
@@ -57,7 +57,7 @@ const FamilyGuide: React.FC = () => {
       </section>
 
       {/* Empathy Section */}
-      <section className="py-20 bg-white border-b border-gfa-border">
+      <section className="py-5 bg-white border-b border-gfa-border">
         <div className="container-gfa max-w-3xl mx-auto px-4">
            <p className="text-xl md:text-2xl font-light text-gfa-slate leading-relaxed font-serif">
              {isEn 
@@ -68,18 +68,18 @@ const FamilyGuide: React.FC = () => {
       </section>
 
       {/* Industry Paths */}
-      <section className="py-24 bg-[#F5F2EE]">
+      <section className="py-6 bg-[#F5F2EE]">
         <div className="container-gfa px-4 max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold font-serif text-gfa-inkBlack mb-6">
+          <div className="text-center mb-4">
+            <h2 className="text-3xl font-bold font-serif text-gfa-inkBlack mb-3">
               {isEn ? "Understanding Industry Roles" : "影视行业职业路径说明"}
             </h2>
-            <p className="text-gfa-slate font-light mb-8 max-w-2xl mx-auto">
+            <p className="text-gfa-slate font-light mb-4 max-w-2xl mx-auto">
               {isEn ? "It's not just 'being a director'. The industry offers a vast array of specialized, highly-skilled professions." : "不仅限于是制片人或者导演，影视行业拥有各种各样专业化、对技术要求极高的职业分支。"}
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
              <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
                 <h3 className="font-bold font-serif text-xl border-b-2 border-[#C9A84C] pb-2 inline-block mb-4 text-gfa-inkBlack">{isEn ? "Creative" : "创作类"}</h3>
                 <p className="text-sm text-gfa-slate font-light leading-relaxed mb-4">
@@ -124,19 +124,19 @@ const FamilyGuide: React.FC = () => {
       </section>
 
       {/* Age Timeline */}
-      <section className="py-24 bg-white border-y border-gfa-border">
+      <section className="py-6 bg-white border-y border-gfa-border">
          <div className="container-gfa max-w-4xl mx-auto px-4">
-            <div className="text-center mb-16">
+            <div className="text-center mb-4">
               <h2 className="text-3xl font-bold font-serif text-gfa-inkBlack">
                 {isEn ? "Development Strategy by Age" : "按年龄的培养建议"}
               </h2>
             </div>
 
-            <div className="space-y-12">
+            <div className="space-y-3">
                {/* 6-10 */}
                <div className="bg-[#F5F2EE] rounded-3xl p-8 md:p-12 border border-[#C9A84C]/20 relative">
                   <div className="absolute top-0 right-0 bg-[#C9A84C] text-black font-bold font-serif text-2xl px-6 py-2 rounded-bl-3xl rounded-tr-3xl">6-10</div>
-                  <h3 className="text-2xl font-bold font-serif mb-6 text-gfa-inkBlack flex items-center gap-3">
+                  <h3 className="text-2xl font-bold font-serif mb-3 text-gfa-inkBlack flex items-center gap-3">
                     <Map className="text-[#C9A84C] w-6 h-6"/> {isEn ? "Exploration Phase" : "探索期"}
                   </h3>
                   <div className="space-y-4 text-sm font-light text-gfa-slate">
@@ -158,7 +158,7 @@ const FamilyGuide: React.FC = () => {
                {/* 11-14 */}
                <div className="bg-[#F5F2EE] rounded-3xl p-8 md:p-12 border border-[#C9A84C]/20 relative">
                   <div className="absolute top-0 right-0 bg-[#C9A84C] text-black font-bold font-serif text-2xl px-6 py-2 rounded-bl-3xl rounded-tr-3xl">11-14</div>
-                  <h3 className="text-2xl font-bold font-serif mb-6 text-gfa-inkBlack flex items-center gap-3">
+                  <h3 className="text-2xl font-bold font-serif mb-3 text-gfa-inkBlack flex items-center gap-3">
                     <Compass className="text-[#C9A84C] w-6 h-6"/> {isEn ? "Development Phase" : "发展期"}
                   </h3>
                   <div className="space-y-4 text-sm font-light text-gfa-slate">
@@ -180,7 +180,7 @@ const FamilyGuide: React.FC = () => {
                {/* 15-18 */}
                <div className="bg-[#F5F2EE] rounded-3xl p-8 md:p-12 border border-[#C9A84C]/20 relative">
                   <div className="absolute top-0 right-0 bg-[#C9A84C] text-black font-bold font-serif text-2xl px-6 py-2 rounded-bl-3xl rounded-tr-3xl">15-18</div>
-                  <h3 className="text-2xl font-bold font-serif mb-6 text-gfa-inkBlack flex items-center gap-3">
+                  <h3 className="text-2xl font-bold font-serif mb-3 text-gfa-inkBlack flex items-center gap-3">
                     <BookOpen className="text-[#C9A84C] w-6 h-6"/> {isEn ? "Specialization Phase" : "定向期"}
                   </h3>
                   <div className="space-y-4 text-sm font-light text-gfa-slate">
@@ -202,7 +202,7 @@ const FamilyGuide: React.FC = () => {
                {/* College / Grad */}
                <div className="bg-[#F5F2EE] rounded-3xl p-8 md:p-12 border border-[#C9A84C]/20 relative">
                   <div className="absolute top-0 right-0 bg-gfa-inkBlack text-white font-bold font-serif text-sm tracking-widest uppercase px-6 py-3 rounded-bl-3xl rounded-tr-3xl">Grad</div>
-                  <h3 className="text-2xl font-bold font-serif mb-6 text-gfa-inkBlack flex items-center gap-3">
+                  <h3 className="text-2xl font-bold font-serif mb-3 text-gfa-inkBlack flex items-center gap-3">
                     <GraduationCap className="text-gfa-inkBlack w-6 h-6"/> {isEn ? "Professional Launcher" : "大学 / 毕业阶段"}
                   </h3>
                   <div className="space-y-4 text-sm font-light text-gfa-slate">
@@ -217,9 +217,9 @@ const FamilyGuide: React.FC = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-24 bg-gfa-inkBlack text-white">
+      <section className="py-6 bg-gfa-inkBlack text-white">
         <div className="container-gfa max-w-4xl mx-auto px-4">
-           <div className="text-center mb-16">
+           <div className="text-center mb-4">
              <h2 className="text-3xl font-bold font-serif text-[#C9A84C]">{isEn ? "Frequently Asked Questions" : "家长常见问题 (FAQ)"}</h2>
            </div>
            
@@ -233,7 +233,7 @@ const FamilyGuide: React.FC = () => {
                        <span className="pr-8">{faq.q}</span>
                        <ChevronDown className={`w-5 h-5 text-[#C9A84C] shrink-0 transform transition-transform duration-300 ${openFaq === idx ? 'rotate-180' : ''}`} />
                     </button>
-                    <div className={`px-6 text-white/70 font-light text-sm overflow-hidden transition-all duration-300 ${openFaq === idx ? 'pb-6 max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
+                    <div className={`px-6 text-white/70 font-light text-sm overflow-hidden transition-all duration-300 ${openFaq === idx ? 'pb-3 max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
                        <div className="pt-2 border-t border-white/10 mt-2">{faq.a}</div>
                     </div>
                  </div>
@@ -243,16 +243,16 @@ const FamilyGuide: React.FC = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-white text-center">
+      <section className="py-6 bg-white text-center">
          <div className="container-gfa px-4">
-           <div className="w-20 h-20 bg-[#C9A84C]/10 rounded-full flex items-center justify-center mx-auto mb-8 text-[#C9A84C]">
+           <div className="w-20 h-20 bg-[#C9A84C]/10 rounded-full flex items-center justify-center mx-auto mb-4 text-[#C9A84C]">
              <PhoneCall className="w-8 h-8" />
            </div>
-           <h2 className="text-3xl md:text-5xl font-bold font-serif text-gfa-inkBlack mb-6">
+           <h2 className="text-3xl md:text-5xl font-bold font-serif text-gfa-inkBlack mb-3">
              {isEn ? "Not Sure Where to Start?" : "不确定从哪里开始？"}<br/>
              <span className="text-[#C9A84C]">{isEn ? "Talk to us." : "和我们聊聊。"}</span>
            </h2>
-           <p className="text-lg text-gfa-slate font-light max-w-2xl mx-auto mb-10">
+           <p className="text-lg text-gfa-slate font-light max-w-2xl mx-auto mb-5">
              {isEn ? "The GFA team offers free, one-on-one parent consultations to help you understand the most suitable path for your talented child." : "GFA团队提供免费的一对一家长咨询，帮助您了解最适合孩子的艺术成长路径。"}
            </p>
            <button className="bg-gfa-inkBlack hover:bg-[#C9A84C] text-white px-10 py-4 rounded-full font-bold uppercase tracking-widest text-sm transition-colors shadow-xl">

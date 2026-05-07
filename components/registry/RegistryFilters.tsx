@@ -23,10 +23,10 @@ export default function RegistryFilters({
   const { t } = useLocale();
 
   return (
-    <div className="rounded-sm border border-gfa-border bg-white p-10 mb-12 shadow-sm relative overflow-hidden group">
+    <div className="rounded-sm border border-gfa-border bg-white p-10 mb-3 shadow-sm relative overflow-hidden group">
       <div className="absolute top-0 left-0 w-1.5 h-full bg-gfa-gold/40 group-hover:bg-gfa-gold transition-colors duration-700"></div>
-      <div className="flex flex-col gap-8">
-        <div className="flex items-center justify-between border-b border-gfa-border pb-6">
+      <div className="flex flex-col gap-4">
+        <div className="flex items-center justify-between border-b border-gfa-border pb-3">
           <div className="text-[11px] font-black uppercase tracking-[0.4em] text-gfa-gold font-sans">
             {t.common.filters}
           </div>
@@ -48,7 +48,7 @@ export default function RegistryFilters({
           </button>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-3">
           <div className="md:col-span-12 lg:col-span-5">
             <div className="text-[10px] text-gfa-slate font-black uppercase tracking-widest mb-3 px-1">Keywords / Institutional ID</div>
             <input

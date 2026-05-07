@@ -6,31 +6,31 @@ const Reporting: React.FC = () => {
   const r = t.reporting;
 
   return (
-    <div className="bg-gfa-warmWhite pt-40 pb-16 px-6 min-h-screen">
+    <div className="bg-gfa-warmWhite pt-40 pb-4 px-6 min-h-screen">
       <div className="container-gfa">
-        <header className="mb-12 text-center max-w-4xl mx-auto">
-          <span className="gold-badge mb-8">Statutory Ethics Channel</span>
-          <h1 className="text-4xl md:text-5xl font-bold font-serif text-gfa-inkBlack mb-10 leading-tight">
+        <header className="mb-3 text-center max-w-4xl mx-auto">
+          <span className="gold-badge mb-4">Statutory Ethics Channel</span>
+          <h1 className="text-4xl md:text-5xl font-bold font-serif text-gfa-inkBlack mb-5 leading-tight">
             {r.title}
           </h1>
-          <p className="text-lg text-gfa-slate leading-loose font-medium opacity-80 border-y border-gfa-border py-12 italic">
+          <p className="text-lg text-gfa-slate leading-loose font-medium opacity-80 border-y border-gfa-border py-3 italic">
             {r.subtitle}
           </p>
-          <div className="mt-12 bg-gfa-gold/10 border border-gfa-gold/20 p-6 rounded-sm text-gfa-inkBlack font-bold text-sm tracking-wide">
+          <div className="mt-3 bg-gfa-gold/10 border border-gfa-gold/20 p-6 rounded-sm text-gfa-inkBlack font-bold text-sm tracking-wide">
              🛡️ {r.commitment}
           </div>
         </header>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
           <div className="lg:col-span-2">
             <form 
-              className="bg-white p-12 border border-gfa-border shadow-sm rounded-card space-y-8" 
+              className="bg-white p-12 border border-gfa-border shadow-sm rounded-card space-y-4" 
               onSubmit={(e) => { e.preventDefault(); alert('Report received. Administrative case number assigned. Check email for response.'); }}
               aria-labelledby="form-header"
             >
-              <h3 id="form-header" className="text-2xl font-bold mb-8 font-serif text-gfa-inkBlack border-b border-gfa-border pb-6">{r.formTitle}</h3>
+              <h3 id="form-header" className="text-2xl font-bold mb-4 font-serif text-gfa-inkBlack border-b border-gfa-border pb-3">{r.formTitle}</h3>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-3">
                   <label htmlFor="report-type" className="text-[11px] text-gfa-gold uppercase font-black tracking-widest">{r.formLabels.type}</label>
                   <select id="report-type" required className="w-full bg-gfa-warmWhite border border-gfa-border p-4 text-gfa-inkBlack focus:outline-none focus:border-gfa-gold font-bold uppercase text-[12px] tracking-widest rounded-btn cursor-pointer">
@@ -61,12 +61,12 @@ const Reporting: React.FC = () => {
             </form>
           </div>
 
-          <div className="space-y-12">
+          <div className="space-y-3">
             <div>
-              <h4 className="text-[12px] text-gfa-inkBlack font-bold uppercase tracking-widest mb-8 border-l-4 border-gfa-gold pl-4">{r.processTitle}</h4>
-              <div className="space-y-8">
+              <h4 className="text-[12px] text-gfa-inkBlack font-bold uppercase tracking-widest mb-4 border-l-4 border-gfa-gold pl-4">{r.processTitle}</h4>
+              <div className="space-y-4">
                 {r.process.map((step: any, i: number) => (
-                  <div key={i} className="flex gap-6 items-start">
+                  <div key={i} className="flex gap-3 items-start">
                     <span className="w-8 h-8 rounded-full bg-gfa-gold/10 text-gfa-gold font-black text-xs flex items-center justify-center border border-gfa-gold/20 shrink-0">{i+1}</span>
                     <div>
                       <h5 className="text-[11px] font-black uppercase text-gfa-inkBlack mb-1 tracking-widest">{step.s}</h5>
@@ -78,7 +78,7 @@ const Reporting: React.FC = () => {
             </div>
 
             <div className="p-10 bg-white border border-gfa-border rounded-card">
-              <h4 className="text-[12px] text-gfa-inkBlack font-bold uppercase tracking-widest mb-6 font-serif">Possible Administrative Actions</h4>
+              <h4 className="text-[12px] text-gfa-inkBlack font-bold uppercase tracking-widest mb-3 font-serif">Possible Administrative Actions</h4>
               <ul className="text-[12px] text-gfa-slate font-bold space-y-4 uppercase tracking-widest opacity-70">
                 {r.outcomes.map((outcome: string) => (
                   <li key={outcome} className="flex items-center gap-3">

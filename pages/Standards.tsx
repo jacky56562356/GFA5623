@@ -45,7 +45,7 @@ const Standards: React.FC = () => {
                      </div>
                    ))}
                 </div>
-                <div className="mt-8">
+                <div className="mt-4">
                   <h4 className="small-text text-white font-black uppercase tracking-widest mb-4 border-l-2 border-gfa-gold pl-3">{cat.docsTitle}</h4>
                   <ul className="space-y-3 micro-text text-gfa-gray font-bold uppercase tracking-widest opacity-80">
                     {cat.docs.map((d: string, i: number) => (

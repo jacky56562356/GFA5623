@@ -8,10 +8,10 @@ const ProgramPlatformAlliance: React.FC = () => {
   const isEn = locale === Locale.EN;
 
   return (
-    <div className="bg-gfa-warmWhite pt-[80px] font-sans pb-24">
+    <div className="bg-gfa-warmWhite pt-[80px] font-sans pb-6">
       <SEO title="Hollywood Career Training | GFA" />
 
-      <div className="relative bg-[#1A2B4A] py-20 mb-12 overflow-hidden">
+      <div className="relative bg-[#1A2B4A] py-5 mb-3 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=2059&auto=format&fit=crop" 
@@ -21,13 +21,13 @@ const ProgramPlatformAlliance: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-[#1A2B4A] via-[#1A2B4A]/80 to-transparent"></div>
         </div>
         <div className="container-gfa relative z-10 text-center max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-bold font-serif text-white mb-6 leading-tight drop-shadow-lg">
+          <h1 className="text-5xl md:text-7xl font-bold font-serif text-white mb-3 leading-tight drop-shadow-lg">
             {isEn ? "Your Hollywood Journey Starts Here" : "你的好莱坞之旅从这里开始"}
           </h1>
         </div>
       </div>
 
-      <div className="container-gfa max-w-5xl mx-auto space-y-20">
+      <div className="container-gfa max-w-5xl mx-auto space-y-5">
          <section className="text-center max-w-3xl mx-auto bg-white p-12 rounded-[40px] shadow-xl border border-gfa-border -mt-32 relative z-20">
           <p className="text-xl text-gfa-slate leading-relaxed font-light">
              {isEn 
@@ -37,7 +37,7 @@ const ProgramPlatformAlliance: React.FC = () => {
         </section>
 
         <section>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             <div className="bg-white rounded-[32px] overflow-hidden shadow-md border border-gfa-border group">
                <div className="h-48 overflow-hidden">
                  <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=2070&auto=format&fit=crop" alt="Mentorship" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
@@ -96,7 +96,7 @@ const ProgramPlatformAlliance: React.FC = () => {
           </div>
         </section>
 
-        <section className="text-center py-12">
+        <section className="text-center py-3">
           <button className="bg-[#1A2B4A] text-white px-12 py-5 rounded-full font-bold uppercase tracking-widest text-sm hover:bg-[#C9A84C] transition-colors shadow-2xl">
             {isEn ? "Apply Now" : "立即申请"}
           </button>

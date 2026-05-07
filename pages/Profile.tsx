@@ -8,7 +8,7 @@ import { Locale } from '../types';
 import SEO from '../components/SEO';
 
 const Profile: React.FC = () => {
-  const { user, loading: authLoading } = useAuth();
+  const { user, loading: authLoading, setAuthModalOpen } = useAuth();
   const { locale } = useLocale();
   const isEn = locale === Locale.EN;
 
@@ -71,7 +71,7 @@ const Profile: React.FC = () => {
 
   if (authLoading || loading) {
     return (
-      <div className="min-h-screen py-32 flex justify-center items-center">
+      <div className="min-h-screen py-8 flex justify-center items-center">
         <p className="text-gfa-slate">{isEn ? "Loading..." : "加载中..."}</p>
       </div>
     );
@@ -79,30 +79,36 @@ const Profile: React.FC = () => {
 
   if (!user) {
     return (
-      <div className="min-h-screen py-32 flex justify-center items-center">
-        <p className="text-gfa-slate">{isEn ? "Please log in to view your profile." : "请登录以查看您的个人资料。"}</p>
+      <div className="min-h-screen py-8 flex flex-col justify-center items-center">
+        <p className="text-gfa-slate mb-4">{isEn ? "Please log in to view your profile." : "请登录以查看您的个人资料。"}</p>
+        <button
+           onClick={() => setAuthModalOpen(true)}
+           className="bg-[#C9A84C] text-white px-6 py-2 rounded-full font-bold text-sm tracking-widest uppercase hover:bg-[#b09241]"
+        >
+          {isEn ? "Sign In" : "登录"}
+        </button>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-gfa-warmWhite py-32">
+    <div className="min-h-screen bg-gfa-warmWhite py-8">
       <SEO title={isEn ? "User Profile | GFA" : "个人资料 | GFA"} />
       
       <div className="container-gfa max-w-2xl mx-auto px-4">
-        <h1 className="text-4xl font-serif font-bold text-gfa-inkBlack mb-8">
+        <h1 className="text-4xl font-serif font-bold text-gfa-inkBlack mb-4">
           {isEn ? "My Profile" : "我的档案"}
         </h1>
 
         <div className="bg-white rounded-2xl shadow-sm border border-gfa-border p-8">
           {error && (
-            <div className="bg-red-50 text-red-600 p-4 rounded-lg mb-6 text-sm">
+            <div className="bg-red-50 text-red-600 p-4 rounded-lg mb-3 text-sm">
               {error}
             </div>
           )}
 
           {!editing ? (
-            <div className="space-y-6">
+            <div className="space-y-3">
               <div>
                 <h3 className="text-sm font-bold tracking-widest text-[#C9A84C] uppercase mb-1">{isEn ? "Name" : "姓名"}</h3>
                 <p className="text-lg text-gfa-inkBlack">{profile.name}</p>
@@ -115,7 +121,7 @@ const Profile: React.FC = () => {
                 </p>
               </div>
 
-              <div className="pt-6">
+              <div className="pt-3">
                 <button
                   onClick={() => setEditing(true)}
                   className="bg-gfa-inkBlack hover:bg-black text-white px-8 py-3 rounded-full font-bold uppercase tracking-widest text-sm transition-colors"
@@ -125,7 +131,7 @@ const Profile: React.FC = () => {
               </div>
             </div>
           ) : (
-            <form onSubmit={handleSave} className="space-y-6">
+            <form onSubmit={handleSave} className="space-y-3">
               <div>
                 <label className="block text-sm font-bold tracking-widest text-[#C9A84C] uppercase mb-2">
                   {isEn ? "Name" : "姓名"} *

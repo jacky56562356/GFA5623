@@ -23,12 +23,12 @@ const YouthProtection: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-gfa-inkBlack via-gfa-inkBlack/50 to-transparent"></div>
         </div>
 
-        <div className="container-gfa relative z-10 text-center px-4 mt-20 max-w-4xl mx-auto">
-          <Shield className="w-16 h-16 text-[#C9A84C] mx-auto mb-6" />
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-serif text-white mb-6 leading-tight drop-shadow-2xl">
+        <div className="container-gfa relative z-10 text-center px-4 mt-5 max-w-4xl mx-auto">
+          <Shield className="w-16 h-16 text-[#C9A84C] mx-auto mb-3" />
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-serif text-white mb-3 leading-tight drop-shadow-2xl">
             {isEn ? "Youth Protection & Safety" : "青少年安全与保护"}
           </h1>
-          <p className="text-xl md:text-2xl text-white/90 font-light mb-10 leading-relaxed italic">
+          <p className="text-xl md:text-2xl text-white/90 font-light mb-5 leading-relaxed italic">
             {isEn 
               ? "Because giving them a stage means nothing if they don't feel safe standing on it." 
               : "因为如果他们站在舞台上感到不安全，那么即使给他们舞台也毫无意义。"}
@@ -37,21 +37,21 @@ const YouthProtection: React.FC = () => {
       </section>
 
       {/* Intro */}
-      <section className="py-16 bg-white">
+      <section className="py-4 bg-white">
         <div className="container-gfa max-w-4xl mx-auto text-center">
             <h2 className="text-sm font-bold text-[#C9A84C] uppercase tracking-[0.3em] mb-4">
               {isEn ? "Our Commitment" : "我们的承诺"}
             </h2>
-            <h3 className="text-3xl md:text-5xl font-bold font-serif text-gfa-inkBlack mb-8 leading-tight">
+            <h3 className="text-3xl md:text-5xl font-bold font-serif text-gfa-inkBlack mb-4 leading-tight">
               {isEn ? "Safety is not an afterthought. It is our foundation." : "安全绝非后话。它是我们一切工作的基础。"}
             </h3>
-            <p className="text-lg text-gfa-slate font-light leading-relaxed mb-12">
+            <p className="text-lg text-gfa-slate font-light leading-relaxed mb-3">
               {isEn 
                 ? "At Global Film Alliance, we are absolutely committed to providing a safe, ethical, and supportive environment for every child. Whether on set, in a summer camp, or at our awards ceremony, the physical and emotional well-being of our young artists is our highest priority." 
                 : "在全球电影联盟 (GFA)，我们绝对致力于为每个孩子提供一个安全、合乎道德和充满支持的环境。无论是在片场、夏令营，还是在颁奖典礼上，保护我们年轻艺术家的身心健康都是我们的最高优先事项。"}
             </p>
 
-            <div className="flex flex-wrap justify-center gap-8 opacity-80">
+            <div className="flex flex-wrap justify-center gap-4 opacity-80">
                <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=400&q=80" alt="Safe Set" className="w-48 h-48 rounded-full object-cover shadow-xl border-4 border-gfa-warmWhite" />
                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=400&q=80" alt="Mentoring" className="w-56 h-56 rounded-full object-cover shadow-2xl border-4 border-white -mt-8 relative z-10" />
                <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=400&q=80" alt="Event Safety" className="w-48 h-48 rounded-full object-cover shadow-xl border-4 border-gfa-warmWhite" />
@@ -60,11 +60,11 @@ const YouthProtection: React.FC = () => {
       </section>
 
       {/* Core Policies */}
-      <section className="py-16 bg-[#F5F2EE] border-t border-gfa-border">
+      <section className="py-4 bg-[#F5F2EE] border-t border-gfa-border">
         <div className="container-gfa max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-             <div className="space-y-10">
-                <div className="flex gap-6 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 items-center">
+             <div className="space-y-5">
+                <div className="flex gap-3 items-start">
                    <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-md shrink-0 text-[#C9A84C]">
                       <Eye className="w-6 h-6" />
                    </div>
@@ -76,7 +76,7 @@ const YouthProtection: React.FC = () => {
                    </div>
                 </div>
 
-                <div className="flex gap-6 items-start">
+                <div className="flex gap-3 items-start">
                    <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-md shrink-0 text-[#C9A84C]">
                       <CheckCircle className="w-6 h-6" />
                    </div>
@@ -88,7 +88,7 @@ const YouthProtection: React.FC = () => {
                    </div>
                 </div>
 
-                <div className="flex gap-6 items-start">
+                <div className="flex gap-3 items-start">
                    <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-md shrink-0 text-[#C9A84C]">
                       <Lock className="w-6 h-6" />
                    </div>
@@ -107,7 +107,7 @@ const YouthProtection: React.FC = () => {
                    <h4 className="text-2xl font-bold font-serif text-[#C9A84C] mb-4">
                      {isEn ? "The Hollywood Standard" : "好莱坞级别的保护标准"}
                    </h4>
-                   <p className="text-white/80 font-light leading-relaxed mb-6">
+                   <p className="text-white/80 font-light leading-relaxed mb-3">
                      {isEn 
                        ? "Because our students work on real film sets, we mandate strict adherence to California child labor laws and industry safety protocols. Working hours are carefully managed, and on-set welfare coordinators are appointed for all production programs." 
                        : "因为我们的学生在真实的电影片场工作，我们强制要求严格遵守加州童工法和行业安全协议。工作时间受到精心管理，并在所有制作项目中配备驻场福利协调员。"}
@@ -119,9 +119,9 @@ const YouthProtection: React.FC = () => {
       </section>
 
       {/* Advancing Industry Integrity Section */}
-      <section className="py-16 bg-white">
+      <section className="py-4 bg-white">
         <div className="container-gfa max-w-5xl mx-auto">
-           <div className="flex flex-col md:flex-row gap-16 items-center">
+           <div className="flex flex-col md:flex-row gap-4 items-center">
               <div className="md:w-1/2">
                 <div className="rounded-[32px] overflow-hidden shadow-2xl border border-gfa-border bg-gfa-warmWhite p-2">
                    <img 
@@ -135,10 +135,10 @@ const YouthProtection: React.FC = () => {
                 <h2 className="text-sm font-bold text-[#C9A84C] uppercase tracking-[0.3em] mb-4">
                   {isEn ? "Ethical Leadership" : "道德准则"}
                 </h2>
-                <h3 className="text-4xl font-bold font-serif text-gfa-inkBlack mb-6 leading-tight">
+                <h3 className="text-4xl font-bold font-serif text-gfa-inkBlack mb-3 leading-tight">
                   {isEn ? "Advancing Industry Integrity" : "推进行业诚信与保护准则"}
                 </h3>
-                <p className="text-lg text-gfa-slate font-light leading-relaxed mb-6">
+                <p className="text-lg text-gfa-slate font-light leading-relaxed mb-3">
                   {isEn 
                     ? "GFA actively promotes a culture of integrity across all our partnerships. We collaborate with studios, theaters, and local governments to ensure that youth participation in media is not only creatively fulfilling, but ethically sound." 
                     : "GFA 积极在我们所有的合作伙伴中推广诚信文化。我们与制片厂、剧院和地方政府合作，以确保青少年参与媒体不仅在创意上令人满足，而且在道德上也是正确的。"}
@@ -154,12 +154,12 @@ const YouthProtection: React.FC = () => {
       </section>
 
       {/* Contact for Concerns */}
-      <section className="py-16 bg-[#1A2B4A] text-center border-t border-[#C9A84C]/30">
+      <section className="py-4 bg-[#1A2B4A] text-center border-t border-[#C9A84C]/30">
         <div className="container-gfa max-w-3xl mx-auto">
-           <h3 className="text-3xl font-bold font-serif text-white mb-6">
+           <h3 className="text-3xl font-bold font-serif text-white mb-3">
              {isEn ? "Report a Concern" : "报告安全问题"}
            </h3>
-           <p className="text-white/80 font-light mb-8 max-w-xl mx-auto leading-relaxed">
+           <p className="text-white/80 font-light mb-4 max-w-xl mx-auto leading-relaxed">
              {isEn 
                ? "If you ever have a concern regarding the safety or well-being of a child at any GFA program, please contact us immediately. We have a zero-tolerance policy for misconduct." 
                : "如果您对 GFA 任何项目中的任何儿童的安全或福祉有任何疑虑，请立即与我们联系。我们对任何不当行为采取零容忍政策。"}

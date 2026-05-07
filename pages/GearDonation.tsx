@@ -118,13 +118,13 @@ const GearDonation: React.FC = () => {
 
   if (success) {
     return (
-      <div className="min-h-screen bg-[#F5F2EE] py-20">
+      <div className="min-h-screen bg-[#F5F2EE] py-5">
         <div className="container-gfa max-w-3xl mx-auto px-4 text-center">
           <div className="bg-white rounded-3xl p-12 shadow-sm border border-gfa-border">
-            <h1 className="text-3xl md:text-4xl font-bold font-serif text-gfa-inkBlack mb-6">
+            <h1 className="text-3xl md:text-4xl font-bold font-serif text-gfa-inkBlack mb-3">
               {isEn ? "Thank You!" : "感谢您的捐赠！"}
             </h1>
-            <p className="text-lg text-gfa-slate font-light mb-8">
+            <p className="text-lg text-gfa-slate font-light mb-4">
               {isEn 
                 ? "Your donation form has been submitted for evaluation. We will contact you shortly." 
                 : "您的捐赠表单已提交评估。我们会在评估完成后尽快与您取得联系。"}
@@ -142,12 +142,12 @@ const GearDonation: React.FC = () => {
   }
 
   return (
-    <div className="font-sans pb-24 bg-[#F5F2EE] min-h-screen">
+    <div className="font-sans pb-6 bg-[#F5F2EE] min-h-screen">
       <SEO title="Gear Donation | Global Film Alliance" />
 
       {/* Header */}
-      <section className="bg-gfa-inkBlack text-white py-24 px-4 text-center">
-        <h1 className="text-3xl md:text-5xl font-bold font-serif mb-6">
+      <section className="bg-gfa-inkBlack text-white py-6 px-4 text-center">
+        <h1 className="text-3xl md:text-5xl font-bold font-serif mb-3">
           {isEn ? "Donate Gear for Employment Support" : "闲置设备捐赠与就业扶持计划"}
         </h1>
         <p className="text-xl font-light text-[#C9A84C] max-w-3xl mx-auto leading-relaxed">
@@ -158,11 +158,11 @@ const GearDonation: React.FC = () => {
       </section>
 
       {/* Impact Section */}
-      <section className="py-16 px-4">
+      <section className="py-4 px-4">
         <div className="container-gfa max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-4">
             <div className="bg-white p-8 rounded-3xl shadow-sm border border-gfa-border text-center">
-              <div className="w-16 h-16 bg-[#C9A84C]/10 rounded-full flex items-center justify-center mx-auto mb-6 text-[#C9A84C]">
+              <div className="w-16 h-16 bg-[#C9A84C]/10 rounded-full flex items-center justify-center mx-auto mb-3 text-[#C9A84C]">
                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
               </div>
               <h3 className="text-xl font-bold text-gfa-inkBlack mb-3">{isEn ? "Empower Filmmakers" : "赋能影视新人"}</h3>
@@ -171,7 +171,7 @@ const GearDonation: React.FC = () => {
               </p>
             </div>
             <div className="bg-white p-8 rounded-3xl shadow-sm border border-gfa-border text-center">
-              <div className="w-16 h-16 bg-[#C9A84C]/10 rounded-full flex items-center justify-center mx-auto mb-6 text-[#C9A84C]">
+              <div className="w-16 h-16 bg-[#C9A84C]/10 rounded-full flex items-center justify-center mx-auto mb-3 text-[#C9A84C]">
                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
               </div>
               <h3 className="text-xl font-bold text-gfa-inkBlack mb-3">{isEn ? "Create Real Jobs" : "创造实际就业"}</h3>
@@ -180,7 +180,7 @@ const GearDonation: React.FC = () => {
               </p>
             </div>
             <div className="bg-white p-8 rounded-3xl shadow-sm border border-gfa-border text-center">
-              <div className="w-16 h-16 bg-[#C9A84C]/10 rounded-full flex items-center justify-center mx-auto mb-6 text-[#C9A84C]">
+              <div className="w-16 h-16 bg-[#C9A84C]/10 rounded-full flex items-center justify-center mx-auto mb-3 text-[#C9A84C]">
                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
               </div>
               <h3 className="text-xl font-bold text-gfa-inkBlack mb-3">{isEn ? "Tax Deductible" : "税务减免支持"}</h3>
@@ -193,12 +193,12 @@ const GearDonation: React.FC = () => {
       </section>
 
       {/* How it works */}
-      <section className="py-12 px-4 bg-white border-y border-gfa-border">
+      <section className="py-3 px-4 bg-white border-y border-gfa-border">
         <div className="container-gfa max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold font-serif text-gfa-inkBlack text-center mb-10">
+          <h2 className="text-2xl font-bold font-serif text-gfa-inkBlack text-center mb-5">
             {isEn ? "Donation Process" : "捐赠流程"}
           </h2>
-          <div className="relative border-l-2 border-[#C9A84C]/30 ml-4 md:ml-1/2 pl-6 md:pl-0 space-y-12">
+          <div className="relative border-l-2 border-[#C9A84C]/30 ml-4 md:ml-1/2 pl-6 md:pl-0 space-y-3">
             <div className="md:flex items-center justify-between w-full">
               <div className="md:w-5/12 text-left md:text-right pr-6">
                 <h4 className="text-lg font-bold text-gfa-inkBlack">{isEn ? "1. Submit Intention" : "1. 提交捐赠意向"}</h4>
@@ -238,9 +238,9 @@ const GearDonation: React.FC = () => {
         </div>
       </section>
 
-      <section className="py-16">
+      <section className="py-4">
         <div className="container-gfa max-w-4xl mx-auto px-4">
-          <div className="text-center mb-10">
+          <div className="text-center mb-5">
             <h2 className="text-3xl font-bold font-serif text-gfa-inkBlack mb-4">
               {isEn ? "Donation Form" : "设备捐赠表单"}
             </h2>
@@ -249,7 +249,7 @@ const GearDonation: React.FC = () => {
             </p>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-12">
+          <form onSubmit={handleSubmit} className="space-y-3">
               {error && (
                 <div className="bg-red-50 text-red-600 p-4 rounded-xl text-sm border border-red-100">
                   {error}
@@ -258,11 +258,11 @@ const GearDonation: React.FC = () => {
 
               {/* Personal Info */}
               <div className="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-gfa-border">
-                <h3 className="text-xl font-bold font-serif text-gfa-inkBlack mb-6 pb-4 border-b border-gfa-border flex items-center gap-3">
+                <h3 className="text-xl font-bold font-serif text-gfa-inkBlack mb-3 pb-4 border-b border-gfa-border flex items-center gap-3">
                   <span className="w-8 h-8 rounded-full bg-[#C9A84C]/10 text-[#C9A84C] flex items-center justify-center text-sm">1</span>
                   {isEn ? "Your Contact Information" : "个人联系方式"}
                 </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                   <div>
                     <label className="block text-sm font-bold tracking-widest text-gfa-slate uppercase mb-2">
                       {isEn ? "Donor Name / Entity" : "捐赠人 / 机构名称"} *
@@ -310,11 +310,11 @@ const GearDonation: React.FC = () => {
 
               {/* Logistics */}
               <div className="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-gfa-border">
-                <h3 className="text-xl font-bold font-serif text-gfa-inkBlack mb-6 pb-4 border-b border-gfa-border flex items-center gap-3">
+                <h3 className="text-xl font-bold font-serif text-gfa-inkBlack mb-3 pb-4 border-b border-gfa-border flex items-center gap-3">
                   <span className="w-8 h-8 rounded-full bg-[#C9A84C]/10 text-[#C9A84C] flex items-center justify-center text-sm">2</span>
                   {isEn ? "Shipping Logistics" : "设备邮寄方式"}
                 </h3>
-                <div className="space-y-6">
+                <div className="space-y-3">
                   <div>
                     <label className="block text-sm font-bold tracking-widest text-gfa-slate uppercase mb-2">
                       {isEn ? "Shipping Method" : "递送方式"} *
@@ -369,7 +369,7 @@ const GearDonation: React.FC = () => {
 
               {/* Equipment Details */}
               <div className="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-gfa-border">
-                <div className="flex items-center justify-between border-b border-gfa-border pb-4 mb-6">
+                <div className="flex items-center justify-between border-b border-gfa-border pb-4 mb-3">
                   <h3 className="text-xl font-bold font-serif text-gfa-inkBlack flex items-center gap-3">
                     <span className="w-8 h-8 rounded-full bg-[#C9A84C]/10 text-[#C9A84C] flex items-center justify-center text-sm">3</span>
                     {isEn ? "Equipment Details" : "捐赠设备明细"}
@@ -379,7 +379,7 @@ const GearDonation: React.FC = () => {
                   </button>
                 </div>
                 
-                <div className="space-y-6">
+                <div className="space-y-3">
                   {/* Equipment Table / List */}
                   <div className="overflow-x-auto border border-gfa-border rounded-xl">
                     <table className="w-full text-sm text-left">
@@ -459,7 +459,7 @@ const GearDonation: React.FC = () => {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-bold tracking-widest text-gfa-slate uppercase mb-2 mt-8">
+                    <label className="block text-sm font-bold tracking-widest text-gfa-slate uppercase mb-2 mt-4">
                       {isEn ? "Overall Remarks (Optional)" : "总体备注说明 (选填)"}
                     </label>
                     <textarea
@@ -509,7 +509,7 @@ const GearDonation: React.FC = () => {
 
               {/* Tax Deduction */}
               <div className="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-gfa-border">
-                <h3 className="text-xl font-bold font-serif text-gfa-inkBlack mb-6 pb-4 border-b border-gfa-border flex items-center gap-3">
+                <h3 className="text-xl font-bold font-serif text-gfa-inkBlack mb-3 pb-4 border-b border-gfa-border flex items-center gap-3">
                   <span className="w-8 h-8 rounded-full bg-[#C9A84C]/10 text-[#C9A84C] flex items-center justify-center text-sm">4</span>
                   {isEn ? "Tax Deduction Assessment" : "抵税评估需求"}
                 </h3>
@@ -537,7 +537,7 @@ const GearDonation: React.FC = () => {
               </div>
 
               {/* Submit */}
-              <div className="pt-8">
+              <div className="pt-4">
                 <button
                   type="submit"
                   disabled={submitting}

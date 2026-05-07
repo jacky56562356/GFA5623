@@ -26,7 +26,7 @@ const availableGearList = [
 const GearApplication: React.FC = () => {
   const { locale } = useLocale();
   const isEn = locale === Locale.EN;
-  const { user } = useAuth();
+  const { user, setAuthModalOpen } = useAuth();
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
@@ -67,7 +67,7 @@ const GearApplication: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!user) {
-      alert(isEn ? "Please log in first." : "请先登录。");
+       setAuthModalOpen(true);
       return;
     }
 
@@ -123,14 +123,14 @@ const GearApplication: React.FC = () => {
 
   if (success) {
     return (
-      <div className="min-h-screen bg-gfa-warmWhite py-32 flex justify-center items-center">
+      <div className="min-h-screen bg-gfa-warmWhite py-8 flex justify-center items-center">
         <SEO title={isEn ? "Application Submitted | GFA" : "申请已提交 | GFA"} />
         <div className="container-gfa max-w-2xl mx-auto px-4 text-center">
           <div className="bg-white rounded-2xl shadow-sm border border-gfa-border p-12">
             <h1 className="text-3xl font-bold font-serif text-gfa-inkBlack mb-4">
               {isEn ? "Application Submitted" : "申请已成功提交"}
             </h1>
-            <p className="text-gfa-slate mb-8">
+            <p className="text-gfa-slate mb-4">
               {isEn 
                 ? "Thank you for applying. Our team will review your application and get back to you shortly." 
                 : "感谢您的申请。我们的团队将评估您的项目并尽快与您联系。"}
@@ -148,11 +148,11 @@ const GearApplication: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gfa-warmWhite py-32">
+    <div className="min-h-screen bg-gfa-warmWhite py-8">
       <SEO title={isEn ? "Pro Gear Access Application | GFA" : "摄影设备申请 | GFA"} />
 
       <div className="container-gfa max-w-3xl mx-auto px-4">
-        <div className="mb-12 text-center">
+        <div className="mb-3 text-center">
           <h1 className="text-4xl font-bold font-serif text-gfa-inkBlack mb-4">
             {isEn ? "Pro Gear Access Application" : "公益影视设备借用申请"}
           </h1>
@@ -164,25 +164,33 @@ const GearApplication: React.FC = () => {
         </div>
 
         {!user && (
-          <div className="bg-red-50 text-red-800 p-4 rounded-xl mb-8 border border-red-100 text-center">
-            {isEn ? "You must be logged in to submit an application." : "您必须先登录才能提交申请。"}
+          <div className="bg-[#fcfaf5] p-6 rounded-xl mb-6 border border-[#C9A84C]/30 text-center">
+             <p className="text-gfa-inkBlack mb-4">
+              {isEn ? "You must sign in or create an account to submit an application." : "您必须先登录或注册账号才能提交申请。"}
+            </p>
+            <button
+               onClick={() => setAuthModalOpen(true)}
+               className="bg-[#C9A84C] text-white px-6 py-2 rounded-full font-bold text-sm tracking-widest uppercase hover:bg-[#b09241]"
+            >
+              {isEn ? "Sign In / Sign Up" : "登录 / 注册"}
+            </button>
           </div>
         )}
 
         <div className="bg-white rounded-2xl shadow-sm border border-gfa-border p-8">
           {error && (
-            <div className="bg-red-50 text-red-600 p-4 rounded-lg mb-6 text-sm">
+            <div className="bg-red-50 text-red-600 p-4 rounded-lg mb-3 text-sm">
               {error}
             </div>
           )}
 
-          <form onSubmit={handleSubmit} className="space-y-8">
+          <form onSubmit={handleSubmit} className="space-y-4">
             {/* Applicant Identity */}
             <div>
               <h3 className="text-lg font-bold font-serif border-b border-gfa-border pb-2 mb-4">
                 {isEn ? "Applicant Information" : "申请人信息"}
               </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 <div>
                   <label className="block text-sm font-bold tracking-widest text-gfa-slate uppercase mb-2">
                     {isEn ? "Full Name" : "姓名"} *
@@ -333,7 +341,7 @@ const GearApplication: React.FC = () => {
               <h3 className="text-lg font-bold font-serif border-b border-gfa-border pb-2 mb-4">
                 {isEn ? "Project Information" : "项目信息"}
               </h3>
-              <div className="space-y-6">
+              <div className="space-y-3">
                 <div>
                   <label className="block text-sm font-bold tracking-widest text-gfa-slate uppercase mb-2">
                     {isEn ? "Project Title" : "项目名称"} *
@@ -394,7 +402,7 @@ const GearApplication: React.FC = () => {
                     className="w-full bg-gfa-warmWhite border border-gfa-border rounded-lg px-4 py-3 focus:outline-none focus:border-[#C9A84C] resize-none"
                   />
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                   <div>
                     <label className="block text-sm font-bold tracking-widest text-gfa-slate uppercase mb-2">
                       {isEn ? "Total Budget" : "总投资成本"} *
@@ -498,12 +506,12 @@ const GearApplication: React.FC = () => {
               <h3 className="text-lg font-bold font-serif border-b border-gfa-border pb-2 mb-4">
                 {isEn ? "Equipment Details" : "设备需求与档期"}
               </h3>
-              <div className="space-y-6">
+              <div className="space-y-3">
                 <div>
                   <label className="block text-sm font-bold tracking-widest text-gfa-slate uppercase mb-4">
                     {isEn ? "Select Requested Gear" : "选择您需要的设备"}
                   </label>
-                  <div className="overflow-x-auto mb-6">
+                  <div className="overflow-x-auto mb-3">
                     <table className="w-full text-sm text-left border border-gfa-border rounded-lg bg-white">
                       <thead className="bg-[#fcfaf5] text-gfa-slate font-bold uppercase text-xs border-b border-gfa-border">
                         <tr>
@@ -554,7 +562,7 @@ const GearApplication: React.FC = () => {
                     className="w-full bg-gfa-warmWhite border border-gfa-border rounded-lg px-4 py-3 focus:outline-none focus:border-[#C9A84C] resize-none"
                   />
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                   <div>
                     <label className="block text-sm font-bold tracking-widest text-gfa-slate uppercase mb-2">
                       {isEn ? "Shoot Start Date" : "计划开机日期"} *
@@ -585,7 +593,7 @@ const GearApplication: React.FC = () => {
               </div>
             </div>
 
-            <div className="pt-6">
+            <div className="pt-3">
               <button
                 type="submit"
                 disabled={submitting || !user}

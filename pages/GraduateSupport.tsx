@@ -22,7 +22,7 @@ const GraduateSupport = () => {
   };
 
   return (
-    <div className="bg-gfa-warmWhite min-h-screen font-sans pt-[80px] pb-16 relative">
+    <div className="bg-gfa-warmWhite min-h-screen font-sans pt-[80px] pb-4 relative">
       <SEO 
         title={cap.title || "Career Access"} 
         description={cap.subtitle || "Supporting the next generation of film professionals through mentorship, funding, and project matchmaking."} 
@@ -38,7 +38,7 @@ const GraduateSupport = () => {
       </div>
 
       {/* Document Header */}
-      <div className="relative bg-gfa-inkBlack py-16 mb-12 shadow-2xl overflow-hidden">
+      <div className="relative bg-gfa-inkBlack py-4 mb-3 shadow-2xl overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-20 grayscale">
           <img 
             src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=2070&auto=format&fit=crop" 
@@ -50,10 +50,10 @@ const GraduateSupport = () => {
         
         <div className="container-gfa relative z-10 text-center">
           <div className="max-w-4xl mx-auto animate-fade-in">
-            <div className="gold-badge mb-8 animate-fade-up">
+            <div className="gold-badge mb-4 animate-fade-up">
               Professional Industry Program
             </div>
-            <h1 className="text-5xl md:text-8xl font-bold font-serif text-white mb-8 leading-tight drop-shadow-2xl">
+            <h1 className="text-5xl md:text-8xl font-bold font-serif text-white mb-4 leading-tight drop-shadow-2xl">
               {cap.title}
             </h1>
             <p className="text-xl md:text-2xl text-gfa-gold font-light leading-relaxed max-w-2xl mx-auto italic font-serif animate-fade-up delay-200">
@@ -65,7 +65,7 @@ const GraduateSupport = () => {
 
       <div className="container-gfa max-w-7xl mx-auto relative z-10">
         {/* Intro Block */}
-        <section className="mb-10 max-w-5xl mx-auto">
+        <section className="mb-5 max-w-5xl mx-auto">
           <div className="bg-white border border-gfa-border p-8 md:p-12 rounded-[32px] shadow-xl relative overflow-hidden group hover:border-gfa-gold/30 transition-all duration-500">
             <div className="absolute top-0 left-0 w-2 h-full bg-gfa-inkBlack group-hover:bg-gfa-gold transition-colors duration-500"></div>
             <div className="absolute -right-10 -bottom-10 opacity-5 group-hover:scale-110 transition-transform duration-700">
@@ -78,8 +78,8 @@ const GraduateSupport = () => {
         </section>
 
         {/* Program Pillars */}
-        <section className="mb-10">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <section className="mb-5">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {Object.entries(cap.pillars || {}).map(([key, pillar]: [string, any], index) => (
               <div key={key} className="relative group rounded-[32px] overflow-hidden border border-gfa-border shadow-sm hover:shadow-2xl transition-all duration-500 h-[350px]">
                 <div className="absolute inset-0 z-0">
@@ -96,7 +96,7 @@ const GraduateSupport = () => {
                 </div>
                 
                 <div className="relative z-10 p-8 h-full flex flex-col justify-end">
-                  <div className="w-14 h-14 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center mb-6 border border-white/20 group-hover:bg-gfa-gold group-hover:border-gfa-gold transition-all duration-500">
+                  <div className="w-14 h-14 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center mb-3 border border-white/20 group-hover:bg-gfa-gold group-hover:border-gfa-gold transition-all duration-500">
                     {index === 0 ? <Users className="w-6 h-6 text-white" /> : index === 1 ? <Award className="w-6 h-6 text-white" /> : <Briefcase className="w-6 h-6 text-white" />}
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4 font-serif leading-tight">{pillar.title}</h3>
@@ -115,11 +115,11 @@ const GraduateSupport = () => {
             <div className="p-8 md:p-12 bg-gfa-inkBlack text-white relative overflow-hidden">
               <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gfa-gold/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
               <div className="relative z-10">
-                <h2 className="text-3xl font-bold font-serif mb-12 flex items-center gap-3">
+                <h2 className="text-3xl font-bold font-serif mb-3 flex items-center gap-3">
                   <span className="w-8 h-1 bg-gfa-gold rounded-full"></span>
                   Supported Pathways
                 </h2>
-                <div className="space-y-10">
+                <div className="space-y-5">
                   {pathways.map((item: any) => (
                     <div key={item.id} className="group pl-6 border-l border-white/10 hover:border-gfa-gold transition-colors">
                       <span className="text-[10px] font-bold text-gfa-gold uppercase tracking-[0.2em] mb-2 block opacity-70">Step {item.id}</span>
@@ -133,10 +133,10 @@ const GraduateSupport = () => {
 
             {/* Right Column: Form */}
             <div className="p-8 md:p-12 bg-white">
-              <h3 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-8">
+              <h3 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-4">
                 {cap.inquiryTitle}
               </h3>
-              <form className="space-y-6" onSubmit={e => { e.preventDefault(); alert("Inquiry Received. Our team will support your request within 48 hours."); }}>
+              <form className="space-y-3" onSubmit={e => { e.preventDefault(); alert("Inquiry Received. Our team will support your request within 48 hours."); }}>
                 <div className="space-y-2">
                   <label className="text-xs font-bold uppercase tracking-widest text-gfa-slate block">Full Identity</label>
                   <div className="relative">
@@ -171,14 +171,14 @@ const GraduateSupport = () => {
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </button>
               </form>
-              <p className="mt-8 text-[10px] text-gfa-slate font-bold uppercase tracking-widest text-center opacity-50">
+              <p className="mt-4 text-[10px] text-gfa-slate font-bold uppercase tracking-widest text-center opacity-50">
                 {cap.inquiryNote}
               </p>
             </div>
           </div>
         </section>
 
-        <div className="mt-24 pt-12 border-t border-gfa-border text-center">
+        <div className="mt-6 pt-3 border-t border-gfa-border text-center">
            <p className="text-[10px] text-gfa-slate uppercase tracking-[0.3em] font-bold opacity-40">
               Non-Profit Industry Service • Est. 2024 • Supportive Excellence
            </p>

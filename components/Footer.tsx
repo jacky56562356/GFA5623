@@ -8,12 +8,12 @@ const Footer: React.FC = () => {
   const isEn = locale === Locale.EN;
 
   return (
-    <footer className="bg-gfa-inkBlack text-white pt-16 pb-8 px-6 border-t-[6px] border-t-[#C9A84C] relative overflow-hidden">
+    <footer className="bg-gfa-inkBlack text-white pt-4 pb-4 px-6 border-t-[6px] border-t-[#C9A84C] relative overflow-hidden">
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{backgroundImage: "radial-gradient(circle at 50% 0%, #ffffff 0%, transparent 70%)"}}></div>
-      <div className="container-gfa grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-12 relative z-10">
+      <div className="container-gfa grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4 mb-3 relative z-10">
         
         {/* Brand & Mission */}
-        <div className="space-y-6 lg:border-r lg:border-white/10 lg:pr-8">
+        <div className="space-y-3 lg:border-r lg:border-white/10 lg:pr-8">
           <div className="flex items-center gap-4">
             <img src="https://i.ibb.co/mFgDBtBp/1.png" alt="GFA Logo" className="h-20 w-auto object-contain" />
             <div className="flex flex-col">
@@ -34,28 +34,22 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* Quick Links */}
+        {/* Footer Links replaced by Top Bar */}
         <div>
-          <h4 className="text-[12px] font-bold uppercase tracking-widest text-[#C9A84C] mb-8 flex items-center gap-3">
-            <span className="w-1 h-1 bg-[#C9A84C] rounded-full"></span> {isEn ? "Quick Links" : "快捷链接"}
+          <h4 className="text-[12px] font-bold uppercase tracking-widest text-[#C9A84C] mb-4 flex items-center gap-3">
+            <span className="w-1 h-1 bg-[#C9A84C] rounded-full"></span> {isEn ? "Platform" : "平台建设"}
           </h4>
           <div className="space-y-4 text-sm text-white/70 font-light">
-            <Link to="/about" className="block hover:text-white transition-colors hover:translate-x-1 duration-300">{isEn ? 'About' : '关于我们'}</Link>
-            <Link to="/filmmaker-support" className="block hover:text-white transition-colors hover:translate-x-1 duration-300">{isEn ? 'Filmmaker Support' : '电影人支持'}</Link>
-            <Link to="/youth-programs" className="block hover:text-white transition-colors hover:translate-x-1 duration-300">{isEn ? 'Youth Programs' : '青少年计划'}</Link>
-            <Link to="/family-guide" className="block hover:text-[#C9A84C] transition-colors hover:translate-x-1 duration-300">{isEn ? 'Family Guide' : '家长指南'}</Link>
-            <Link to="/awards" className="block hover:text-white transition-colors hover:translate-x-1 duration-300">{isEn ? 'Golden Feather Awards' : '金羽奖'}</Link>
-            <Link to="/competition" className="block hover:text-white transition-colors hover:translate-x-1 duration-300">{isEn ? 'Global Competition' : '全球才艺大赛'}</Link>
-            <Link to="/impact" className="block hover:text-white transition-colors hover:translate-x-1 duration-300">{isEn ? 'Impact' : '影响力'}</Link>
-            <Link to="/news" className="block hover:text-white transition-colors hover:translate-x-1 duration-300">{isEn ? 'News & Media' : '新闻与媒体'}</Link>
-            <Link to="/get-involved" className="block hover:text-white transition-colors hover:translate-x-1 duration-300">{isEn ? 'Get Involved' : '参与我们'}</Link>
-            <Link to="/donate" className="block hover:text-white transition-colors hover:translate-x-1 duration-300">{isEn ? 'Donate' : '捐款'}</Link>
+            <Link to="/about" className="block hover:text-white transition-colors hover:translate-x-1 duration-300">{isEn ? 'About Us' : '关于我们'}</Link>
+            <Link to="/programs" className="block hover:text-white transition-colors hover:translate-x-1 duration-300">{isEn ? 'Programs & Initiatives' : '项目与倡议'}</Link>
+            <Link to="/membership" className="block hover:text-white transition-colors hover:translate-x-1 duration-300">{isEn ? 'Membership' : '平台与会员'}</Link>
+            <Link to="/governance" className="block hover:text-white transition-colors hover:translate-x-1 duration-300">{isEn ? 'Governance' : '治理架构'}</Link>
           </div>
         </div>
 
         {/* Contact */}
         <div>
-          <h4 className="text-[12px] font-bold uppercase tracking-widest text-[#C9A84C] mb-8 flex items-center gap-3">
+          <h4 className="text-[12px] font-bold uppercase tracking-widest text-[#C9A84C] mb-4 flex items-center gap-3">
             <span className="w-1 h-1 bg-[#C9A84C] rounded-full"></span> {isEn ? "Contact" : "联系我们"}
           </h4>
           <div className="space-y-4 text-sm text-white/70 font-light">
@@ -76,16 +70,16 @@ const Footer: React.FC = () => {
 
         {/* Legal & Nonprofit Status */}
         <div className="bg-white/5 p-8 border border-white/10 rounded-3xl text-sm text-white/70 font-light backdrop-blur-sm flex flex-col justify-center">
-           <img src="https://i.ibb.co/mFgDBtBp/1.png" alt="Nonprofit" className="h-12 w-auto object-contain object-left mb-6 opacity-50 grayscale mix-blend-screen" />
+           <img src="https://i.ibb.co/mFgDBtBp/1.png" alt="Nonprofit" className="h-12 w-auto object-contain object-left mb-3 opacity-50 grayscale mix-blend-screen" />
            <p className="mb-4 text-white/90 font-medium">Global Film Alliance, Inc.</p>
            <p className="mb-2">A registered 501(c)(3) nonprofit organization in California.</p>
            <p className="font-mono text-xs bg-black/30 p-2 rounded text-center mb-0 mt-4 border border-white/5">EIN: 33-4817276</p>
         </div>
       </div>
 
-      <div className="container-gfa pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-white/40 font-light">
+      <div className="container-gfa pt-4 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-white/40 font-light">
         <p>&copy; {new Date().getFullYear()} Global Film Alliance, Inc. All rights reserved.</p>
-        <div className="flex flex-wrap justify-center gap-6">
+        <div className="flex flex-wrap justify-center gap-3">
           <Link to="/youth-protection" className="hover:text-[#C9A84C] font-bold text-white/70 transition-colors uppercase tracking-widest">{isEn ? 'Youth Protection' : '青少年安全与保护'}</Link>
           <Link to="/policy/privacy" className="hover:text-white transition-colors">{isEn ? 'Privacy Policy' : '隐私政策'}</Link>
           <Link to="/policy/terms" className="hover:text-white transition-colors">{isEn ? 'Terms of Service' : '服务条款'}</Link>

@@ -38,7 +38,7 @@ export default function RegistryList({
 
   if (loading && items.length === 0) {
     return (
-      <div className="grid gap-6">
+      <div className="grid gap-3">
         {[...Array(3)].map((_, i) => (
           <div
             key={i}
@@ -52,7 +52,7 @@ export default function RegistryList({
   if (items.length === 0) {
     return (
       <div className="rounded-sm border border-white/5 bg-white/5 py-40 text-center shadow-4xl group">
-        <div className="text-8xl mb-8 opacity-5 group-hover:opacity-10 transition-opacity duration-1000">🏛️</div>
+        <div className="text-8xl mb-4 opacity-5 group-hover:opacity-10 transition-opacity duration-1000">🏛️</div>
         <p className="text-[11px] text-white/20 uppercase tracking-[0.5em] font-black max-w-sm mx-auto">
           No institutional records match your current criteria.
         </p>
@@ -69,7 +69,7 @@ export default function RegistryList({
   };
 
   return (
-    <div className="grid gap-6">
+    <div className="grid gap-3">
       {items.map((o) => (
         <div
           key={o.orgId}
@@ -79,8 +79,8 @@ export default function RegistryList({
           {/* Accent Line */}
           <div className="absolute top-0 left-0 h-full w-1.5 bg-gfa-gold scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-top"></div>
           
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-10">
-            <div className="flex flex-col md:flex-row items-center md:items-start gap-10">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-5">
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-5">
               {/* Logo / Initial */}
               <div className="h-24 w-24 rounded-sm bg-gfa-black/80 border border-white/10 flex items-center justify-center font-black text-4xl gold shrink-0 group-hover:border-gfa-gold/40 transition-all duration-500 shadow-inner">
                 {o.name.slice(0, 1).toUpperCase()}
@@ -116,7 +116,7 @@ export default function RegistryList({
               </div>
             </div>
 
-            <div className="flex flex-col items-center md:items-end gap-8 border-t md:border-t-0 border-white/5 pt-10 md:pt-0">
+            <div className="flex flex-col items-center md:items-end gap-4 border-t md:border-t-0 border-white/5 pt-5 md:pt-0">
               <div className="text-center md:text-right">
                 <div className="flex items-center gap-4 md:justify-end">
                   <span className="text-[10px] text-gfa-gray/40 uppercase font-black tracking-[0.4em] font-montserrat">{t.registry.trustScore}</span>

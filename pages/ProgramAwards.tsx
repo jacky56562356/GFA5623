@@ -9,11 +9,11 @@ const ProgramAwards: React.FC = () => {
   const isEn = locale === Locale.EN;
 
   return (
-    <div className="bg-[#F5F2EE] pt-[80px] font-sans pb-24">
+    <div className="bg-[#F5F2EE] pt-[80px] font-sans pb-6">
       <SEO title="Golden Feather Film Awards | GFA" />
 
       {/* Banner */}
-      <div className="relative bg-gfa-inkBlack py-28 mb-16 overflow-hidden">
+      <div className="relative bg-gfa-inkBlack py-28 mb-4 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=2025&auto=format&fit=crop" 
@@ -23,10 +23,10 @@ const ProgramAwards: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-gfa-inkBlack via-gfa-inkBlack/80 to-transparent"></div>
         </div>
         <div className="container-gfa relative z-10 text-center max-w-5xl mx-auto">
-          <div className="inline-block px-4 py-1 border border-[#C9A84C]/50 text-[#C9A84C] text-xs font-bold uppercase tracking-widest rounded-full mb-6 relative">
+          <div className="inline-block px-4 py-1 border border-[#C9A84C]/50 text-[#C9A84C] text-xs font-bold uppercase tracking-widest rounded-full mb-3 relative">
             {isEn ? "Annual Highlight" : "年度盛事"}
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold font-serif text-white mb-6 leading-tight drop-shadow-xl">
+          <h1 className="text-5xl md:text-7xl font-bold font-serif text-white mb-3 leading-tight drop-shadow-xl">
             {isEn ? "Golden Feather Film Awards" : "金羽奖电影颁奖礼"}
           </h1>
           <p className="text-xl text-white/80 font-light max-w-3xl mx-auto leading-relaxed">
@@ -37,15 +37,15 @@ const ProgramAwards: React.FC = () => {
         </div>
       </div>
 
-      <div className="container-gfa max-w-6xl mx-auto space-y-24 px-4">
+      <div className="container-gfa max-w-6xl mx-auto space-y-6 px-4">
         
         {/* About the Awards */}
-        <section className="bg-white p-12 lg:p-16 rounded-[40px] shadow-xl border border-gray-100 flex flex-col md:flex-row gap-12 items-center -mt-32 relative z-20">
+        <section className="bg-white p-12 lg:p-16 rounded-[40px] shadow-xl border border-gray-100 flex flex-col md:flex-row gap-3 items-center -mt-32 relative z-20">
            <div className="md:w-1/2">
-              <h2 className="text-3xl md:text-4xl font-bold font-serif text-gfa-inkBlack mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold font-serif text-gfa-inkBlack mb-3">
                 {isEn ? "About the Golden Feather Awards" : "关于金羽奖"}
               </h2>
-              <p className="text-gfa-slate leading-relaxed font-light mb-6 text-lg">
+              <p className="text-gfa-slate leading-relaxed font-light mb-3 text-lg">
                 {isEn 
                   ? "The Golden Feather Film Awards is a premier international ceremony dedicated to discovering and empowering emerging voices in youth cinema. We go beyond simple recognition; we actively invest in your future." 
                   : "金羽奖电影颁奖礼是一项顶级的国际颁奖盛典，致力于发掘和赋能青年电影中的新兴声音。我们不只是提供认可，我们更是积极为您未来的电影事业进行投资。"}
@@ -58,13 +58,13 @@ const ProgramAwards: React.FC = () => {
            </div>
            <div className="md:w-1/2 grid grid-cols-2 gap-4">
                <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=2070&auto=format&fit=crop" className="rounded-3xl w-full h-48 object-cover shadow-md" alt="Ceremony" />
-               <img src="https://images.unsplash.com/photo-1542204165-65bf26472b9b?q=80&w=1974&auto=format&fit=crop" className="rounded-3xl w-full h-48 object-cover shadow-md mt-8" alt="Trophy" />
+               <img src="https://images.unsplash.com/photo-1542204165-65bf26472b9b?q=80&w=1974&auto=format&fit=crop" className="rounded-3xl w-full h-48 object-cover shadow-md mt-4" alt="Trophy" />
            </div>
         </section>
 
         {/* Global Distribution & Platform Value */}
         <section>
-          <div className="text-center mb-16">
+          <div className="text-center mb-4">
             <h2 className="text-4xl font-bold font-serif text-gfa-inkBlack mb-4">
               {isEn ? "Opportunities & Industry Platform" : "机遇与产业平台整合"}
             </h2>
@@ -73,9 +73,9 @@ const ProgramAwards: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl transition-shadow group">
-               <div className="w-14 h-14 bg-[#C9A84C]/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-[#C9A84C] transition-colors">
+               <div className="w-14 h-14 bg-[#C9A84C]/10 rounded-full flex items-center justify-center mb-3 group-hover:bg-[#C9A84C] transition-colors">
                   <Globe className="w-7 h-7 text-[#C9A84C] group-hover:text-white transition-colors" />
                </div>
                <h3 className="text-xl font-bold font-serif mb-4">{isEn ? "Global Distribution Network" : "全球发行平台"}</h3>
@@ -85,7 +85,7 @@ const ProgramAwards: React.FC = () => {
             </div>
 
             <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl transition-shadow group">
-               <div className="w-14 h-14 bg-[#C9A84C]/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-[#C9A84C] transition-colors">
+               <div className="w-14 h-14 bg-[#C9A84C]/10 rounded-full flex items-center justify-center mb-3 group-hover:bg-[#C9A84C] transition-colors">
                   <Video className="w-7 h-7 text-[#C9A84C] group-hover:text-white transition-colors" />
                </div>
                <h3 className="text-xl font-bold font-serif mb-4">{isEn ? "Premier Screening Opportunities" : "国际展映平台"}</h3>
@@ -95,7 +95,7 @@ const ProgramAwards: React.FC = () => {
             </div>
 
             <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl transition-shadow group">
-               <div className="w-14 h-14 bg-[#C9A84C]/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-[#C9A84C] transition-colors">
+               <div className="w-14 h-14 bg-[#C9A84C]/10 rounded-full flex items-center justify-center mb-3 group-hover:bg-[#C9A84C] transition-colors">
                   <Handshake className="w-7 h-7 text-[#C9A84C] group-hover:text-white transition-colors" />
                </div>
                <h3 className="text-xl font-bold font-serif mb-4">{isEn ? "Expanding into the Asian Market" : "深度对接亚洲市场"}</h3>
@@ -105,7 +105,7 @@ const ProgramAwards: React.FC = () => {
             </div>
 
             <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl transition-shadow group">
-               <div className="w-14 h-14 bg-[#C9A84C]/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-[#C9A84C] transition-colors">
+               <div className="w-14 h-14 bg-[#C9A84C]/10 rounded-full flex items-center justify-center mb-3 group-hover:bg-[#C9A84C] transition-colors">
                   <span className="text-[#C9A84C] group-hover:text-white font-serif italic text-2xl">🎬</span>
                </div>
                <h3 className="text-xl font-bold font-serif mb-4">{isEn ? "Film Creation Ecosystem" : "建立电影创作平台"}</h3>
@@ -115,7 +115,7 @@ const ProgramAwards: React.FC = () => {
             </div>
 
             <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl transition-shadow group">
-               <div className="w-14 h-14 bg-[#C9A84C]/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-[#C9A84C] transition-colors">
+               <div className="w-14 h-14 bg-[#C9A84C]/10 rounded-full flex items-center justify-center mb-3 group-hover:bg-[#C9A84C] transition-colors">
                   <DollarSign className="w-7 h-7 text-[#C9A84C] group-hover:text-white transition-colors" />
                </div>
                <h3 className="text-xl font-bold font-serif mb-4">{isEn ? "Lowering Production Costs" : "大幅降低拍摄成本"}</h3>
@@ -125,7 +125,7 @@ const ProgramAwards: React.FC = () => {
             </div>
 
             <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl transition-shadow group">
-               <div className="w-14 h-14 bg-[#C9A84C]/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-[#C9A84C] transition-colors">
+               <div className="w-14 h-14 bg-[#C9A84C]/10 rounded-full flex items-center justify-center mb-3 group-hover:bg-[#C9A84C] transition-colors">
                   <Users className="w-7 h-7 text-[#C9A84C] group-hover:text-white transition-colors" />
                </div>
                <h3 className="text-xl font-bold font-serif mb-4">{isEn ? "Investor Matchmaking" : "绑定行业投资人"}</h3>
@@ -138,7 +138,7 @@ const ProgramAwards: React.FC = () => {
 
         {/* Award Categories */}
         <section className="bg-gfa-inkBlack text-white rounded-[40px] p-12 lg:p-16 shadow-xl border border-gray-800">
-           <div className="text-center mb-16">
+           <div className="text-center mb-4">
              <h2 className="text-4xl font-bold font-serif mb-4 flex justify-center items-center gap-4">
                 <Trophy className="w-10 h-10 text-[#C9A84C]" />
                 {isEn ? "Award Categories" : "奖项设置"}
@@ -148,7 +148,7 @@ const ProgramAwards: React.FC = () => {
              </p>
            </div>
            
-           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
               {[
                   { icon: Clapperboard, en: "Best Picture", zh: "最佳影片大奖" },
                   { icon: Sparkles, en: "Best Director", zh: "最佳新晋导演" },
@@ -171,7 +171,7 @@ const ProgramAwards: React.FC = () => {
 
         {/* Ceremony Format & Timeline */}
         <section className="bg-white p-12 lg:p-16 rounded-[40px] shadow-xl border border-gray-100">
-           <div className="text-center mb-16">
+           <div className="text-center mb-4">
              <h2 className="text-4xl font-bold font-serif text-gfa-inkBlack mb-4 flex justify-center items-center gap-4">
                 <Sparkles className="w-10 h-10 text-[#C9A84C]" />
                 {isEn ? "Ceremony Format & Experience" : "颁奖礼形式与盛典全流程"}
@@ -185,10 +185,10 @@ const ProgramAwards: React.FC = () => {
               {/* Vertical line connecting events */}
               <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-[#F5F2EE] transform -translate-x-1/2 rounded-full"></div>
               
-              <div className="space-y-12">
+              <div className="space-y-3">
                  {/* Step 1 */}
                  <div className="flex flex-col md:flex-row items-center justify-between w-full">
-                    <div className="md:w-5/12 mb-6 md:mb-0 text-center md:text-right">
+                    <div className="md:w-5/12 mb-3 md:mb-0 text-center md:text-right">
                        <h3 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-2">{isEn ? "The Red Carpet" : "星光红毯秀"}</h3>
                        <p className="text-gfa-slate font-light">{isEn ? "Walk the exclusive Hollywood red carpet with media coverage and celebrity guests." : "走上好莱坞专属红毯，接受全球媒体采访，与顶级明星嘉宾共襄盛举。"}</p>
                     </div>
@@ -202,7 +202,7 @@ const ProgramAwards: React.FC = () => {
 
                  {/* Step 2 */}
                  <div className="flex flex-col md:flex-row-reverse items-center justify-between w-full">
-                    <div className="md:w-5/12 mb-6 md:mb-0 text-center md:text-left">
+                    <div className="md:w-5/12 mb-3 md:mb-0 text-center md:text-left">
                        <h3 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-2">{isEn ? "Nominee Showcase & Premiere" : "入围电影展映与首映礼"}</h3>
                        <p className="text-gfa-slate font-light">{isEn ? "Exclusive theater screenings of nominated films for distributors and international buyers." : "为发行商和国际买家专门安排的入围影片顶级影院级展映。"}</p>
                     </div>
@@ -216,7 +216,7 @@ const ProgramAwards: React.FC = () => {
 
                  {/* Step 3 */}
                  <div className="flex flex-col md:flex-row items-center justify-between w-full">
-                    <div className="md:w-5/12 mb-6 md:mb-0 text-center md:text-right">
+                    <div className="md:w-5/12 mb-3 md:mb-0 text-center md:text-right">
                        <h3 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-2">{isEn ? "Gala & Awards Presentation" : "颁奖盛典与文艺汇演"}</h3>
                        <p className="text-gfa-slate font-light">{isEn ? "The grand ceremony featuring live performances, keynote speeches, and the Golden Feather presentations." : "隆重的盛典晚会，包括激燃的现场表演、行业领袖的主题演讲及金羽奖的正式颁发。"}</p>
                     </div>
@@ -230,7 +230,7 @@ const ProgramAwards: React.FC = () => {
 
                  {/* Step 4 */}
                  <div className="flex flex-col md:flex-row-reverse items-center justify-between w-full">
-                    <div className="md:w-5/12 mb-6 md:mb-0 text-center md:text-left">
+                    <div className="md:w-5/12 mb-3 md:mb-0 text-center md:text-left">
                        <h3 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-2">{isEn ? "Industry After Party" : "行业交流晚宴"}</h3>
                        <p className="text-gfa-slate font-light">{isEn ? "A dedicated networking event to connect winners with Hollywood producers and Asian market funds." : "颁奖礼后的专属晚宴，旨在将获奖者与好莱坞知名制片人及亚洲市场基金无缝对接。"}</p>
                     </div>
@@ -252,17 +252,17 @@ const ProgramAwards: React.FC = () => {
            </div>
            
            <div className="relative z-10">
-              <h2 className="text-4xl font-bold font-serif mb-12">
+              <h2 className="text-4xl font-bold font-serif mb-3">
                 {isEn ? "Evaluation Criteria & Selection Model" : "评奖标准与评选模式"}
               </h2>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                  <div>
-                    <h3 className="text-2xl font-bold mb-6 text-[#C9A84C] flex items-center gap-3">
+                    <h3 className="text-2xl font-bold mb-3 text-[#C9A84C] flex items-center gap-3">
                        <CheckCircle className="w-6 h-6" />
                        {isEn ? "Evaluation Criteria" : "评奖标准"}
                     </h3>
-                    <ul className="space-y-6">
+                    <ul className="space-y-3">
                        <li className="flex gap-4">
                           <div className="text-[#C9A84C] font-serif font-bold text-2xl">01</div>
                           <div>
@@ -288,11 +288,11 @@ const ProgramAwards: React.FC = () => {
                  </div>
 
                  <div>
-                    <h3 className="text-2xl font-bold mb-6 text-[#C9A84C] flex items-center gap-3">
+                    <h3 className="text-2xl font-bold mb-3 text-[#C9A84C] flex items-center gap-3">
                        <Star className="w-6 h-6" />
                        {isEn ? "Selection Model" : "评选模式"}
                     </h3>
-                    <div className="space-y-6">
+                    <div className="space-y-3">
                        <div className="bg-white/5 border border-white/10 p-6 rounded-2xl">
                           <h4 className="font-bold text-lg mb-2">{isEn ? "Preliminary Round" : "初审阶段"}</h4>
                           <p className="text-white/70 font-light text-sm">
@@ -317,8 +317,8 @@ const ProgramAwards: React.FC = () => {
            <div className="absolute -top-32 -right-32 w-96 h-96 bg-[#C9A84C]/5 rounded-full blur-3xl pointer-events-none"></div>
            
            <div className="relative z-10">
-              <div className="text-center mb-12">
-                 <div className="w-20 h-20 bg-gfa-inkBlack rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+              <div className="text-center mb-3">
+                 <div className="w-20 h-20 bg-gfa-inkBlack rounded-full flex items-center justify-center mx-auto mb-3 shadow-lg">
                     <Send className="w-8 h-8 text-[#C9A84C] ml-1" />
                  </div>
                  <h2 className="text-4xl md:text-5xl font-bold font-serif text-gfa-inkBlack mb-4 leading-tight">
@@ -331,9 +331,9 @@ const ProgramAwards: React.FC = () => {
                  </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
                  <div className="bg-[#F5F2EE] p-8 rounded-3xl border border-[#C9A84C]/20">
-                    <h3 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-6 flex items-center gap-3">
+                    <h3 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-3 flex items-center gap-3">
                        <CheckCircle className="w-6 h-6 text-[#C9A84C]" />
                        {isEn ? "Eligibility Requirements" : "评选要求与获奖资格"}
                     </h3>
@@ -362,11 +362,11 @@ const ProgramAwards: React.FC = () => {
                  </div>
 
                  <div className="bg-[#F5F2EE] p-8 rounded-3xl border border-[#C9A84C]/20">
-                    <h3 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-6 flex items-center gap-3">
+                    <h3 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-3 flex items-center gap-3">
                        <CalendarDays className="w-6 h-6 text-[#C9A84C]" />
                        {isEn ? "Application Timeline" : "赛事报名流程及时间表"}
                     </h3>
-                    <div className="space-y-6">
+                    <div className="space-y-3">
                        <div className="relative pl-6 border-l-2 border-[#C9A84C]/30 pb-4">
                           <div className="absolute w-3 h-3 bg-[#C9A84C] rounded-full -left-[7px] top-1"></div>
                           <h4 className="font-bold text-gfa-inkBlack">{isEn ? "Early Bird Submission" : "早鸟报名阶段"}</h4>

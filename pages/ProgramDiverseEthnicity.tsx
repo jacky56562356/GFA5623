@@ -9,10 +9,10 @@ const ProgramDiverseEthnicity: React.FC = () => {
   const isEn = locale === Locale.EN;
 
   return (
-    <div className="bg-gfa-warmWhite pt-[80px] font-sans pb-24">
+    <div className="bg-gfa-warmWhite pt-[80px] font-sans pb-6">
       <SEO title="AI Filmmaking Training | GFA" />
 
-      <div className="relative bg-[#1A2B4A] py-20 mb-12 overflow-hidden">
+      <div className="relative bg-[#1A2B4A] py-5 mb-3 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1974&auto=format&fit=crop" 
@@ -22,13 +22,13 @@ const ProgramDiverseEthnicity: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-[#1A2B4A] via-[#1A2B4A]/80 to-transparent"></div>
         </div>
         <div className="container-gfa relative z-10 text-center max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-bold font-serif text-white mb-6 leading-tight drop-shadow-lg">
+          <h1 className="text-5xl md:text-7xl font-bold font-serif text-white mb-3 leading-tight drop-shadow-lg">
             {isEn ? "The Future of Film is Here — Are You Ready?" : "影视的未来已来——你准备好了吗？"}
           </h1>
         </div>
       </div>
 
-      <div className="container-gfa max-w-5xl mx-auto space-y-20">
+      <div className="container-gfa max-w-5xl mx-auto space-y-5">
          <section className="text-center max-w-3xl mx-auto bg-white p-12 rounded-[40px] shadow-xl border border-gfa-border -mt-32 relative z-20">
           <p className="text-xl text-gfa-slate leading-relaxed font-light">
              {isEn 
@@ -38,12 +38,12 @@ const ProgramDiverseEthnicity: React.FC = () => {
         </section>
 
         <section>
-           <h2 className="text-4xl font-bold font-serif text-gfa-inkBlack mb-12 text-center">
+           <h2 className="text-4xl font-bold font-serif text-gfa-inkBlack mb-3 text-center">
             {isEn ? "Curriculum Overview" : "课程内容"}
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
              <div className="bg-white p-10 rounded-[32px] border border-gfa-border hover:border-[#C9A84C]/50 transition-colors shadow-sm">
-               <Cpu className="w-10 h-10 text-[#C9A84C] mb-6" />
+               <Cpu className="w-10 h-10 text-[#C9A84C] mb-3" />
                <h3 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-4">
                  {isEn ? "AI Scriptwriting Tools" : "AI剧本创作工具"}
                </h3>
@@ -53,7 +53,7 @@ const ProgramDiverseEthnicity: React.FC = () => {
              </div>
              
              <div className="bg-white p-10 rounded-[32px] border border-gfa-border hover:border-[#C9A84C]/50 transition-colors shadow-sm">
-               <ImageIcon className="w-10 h-10 text-[#C9A84C] mb-6" />
+               <ImageIcon className="w-10 h-10 text-[#C9A84C] mb-3" />
                <h3 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-4">
                  {isEn ? "AI Visual Effects & Image Generation" : "AI视觉特效与图像生成"}
                </h3>
@@ -63,7 +63,7 @@ const ProgramDiverseEthnicity: React.FC = () => {
              </div>
 
              <div className="bg-white p-10 rounded-[32px] border border-gfa-border hover:border-[#C9A84C]/50 transition-colors shadow-sm">
-               <Scissors className="w-10 h-10 text-[#C9A84C] mb-6" />
+               <Scissors className="w-10 h-10 text-[#C9A84C] mb-3" />
                <h3 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-4">
                  {isEn ? "AI-Assisted Editing" : "AI辅助剪辑"}
                </h3>
@@ -73,7 +73,7 @@ const ProgramDiverseEthnicity: React.FC = () => {
              </div>
 
              <div className="bg-white p-10 rounded-[32px] border border-gfa-border hover:border-[#C9A84C]/50 transition-colors shadow-sm">
-               <Palette className="w-10 h-10 text-[#C9A84C] mb-6" />
+               <Palette className="w-10 h-10 text-[#C9A84C] mb-3" />
                <h3 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-4">
                  {isEn ? "AI in Production Design" : "AI美术与场景设计"}
                </h3>
@@ -87,10 +87,10 @@ const ProgramDiverseEthnicity: React.FC = () => {
         <section className="bg-gfa-inkBlack text-white p-12 rounded-[40px] text-center shadow-2xl relative overflow-hidden">
           <div className="absolute inset-0 z-0 bg-[url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070&auto=format&fit=crop')] opacity-10 bg-cover bg-center"></div>
           <div className="relative z-10">
-             <h3 className="text-3xl font-bold font-serif mb-6 text-[#C9A84C]">
+             <h3 className="text-3xl font-bold font-serif mb-3 text-[#C9A84C]">
                 {isEn ? "Who is this for?" : "适合人群"}
              </h3>
-             <p className="text-lg font-light text-white/80 max-w-2xl mx-auto mb-10">
+             <p className="text-lg font-light text-white/80 max-w-2xl mx-auto mb-5">
                {isEn 
                  ? "Designed for young filmmakers, tech-enthusiasts, and storytellers aged 14+. No prior coding experience required." 
                  : "专为14岁以上的年轻电影制作人、科技爱好者和故事创作者设计。无需任何编程经验。"}

@@ -14,14 +14,14 @@ const Transparency: React.FC = () => {
   ];
 
   return (
-    <div className="py-16 max-w-7xl mx-auto px-4">
+    <div className="py-4 max-w-7xl mx-auto px-4">
       <SectionHeading 
         title={tr.title} 
         subtitle={tr.subtitle} 
       />
 
-      <div className="mb-12">
-        <h3 className="text-2xl font-black mb-12 uppercase tracking-widest gold-gradient">{tr.tableTitle}</h3>
+      <div className="mb-3">
+        <h3 className="text-2xl font-black mb-3 uppercase tracking-widest gold-gradient">{tr.tableTitle}</h3>
         <div className="overflow-x-auto border border-white/10 shadow-2xl">
           <table className="w-full text-left border-collapse bg-gfa-darkGray">
             <thead>
@@ -46,18 +46,18 @@ const Transparency: React.FC = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 mb-3">
         <div className="bg-gfa-darkGray p-12 border border-white/5">
-          <h4 className="text-sm font-black uppercase tracking-widest text-gfa-gold mb-8 border-b border-gfa-gold/30 pb-4">{tr.rulesTitle}</h4>
-          <ul className="space-y-6 text-xs text-gfa-gray font-bold uppercase tracking-wider">
+          <h4 className="text-sm font-black uppercase tracking-widest text-gfa-gold mb-4 border-b border-gfa-gold/30 pb-4">{tr.rulesTitle}</h4>
+          <ul className="space-y-3 text-xs text-gfa-gray font-bold uppercase tracking-wider">
             {tr.rules.map((rule: string, i: number) => (
               <li key={i} className="flex gap-4"><span>0{i+1}</span> {rule}</li>
             ))}
           </ul>
         </div>
         <div className="bg-gfa-darkGray p-12 border border-white/5">
-          <h4 className="text-sm font-black uppercase tracking-widest text-gfa-gold mb-8 border-b border-gfa-gold/30 pb-4">{tr.protectionTitle}</h4>
-          <ul className="space-y-6 text-xs text-gfa-gray font-bold uppercase tracking-wider">
+          <h4 className="text-sm font-black uppercase tracking-widest text-gfa-gold mb-4 border-b border-gfa-gold/30 pb-4">{tr.protectionTitle}</h4>
+          <ul className="space-y-3 text-xs text-gfa-gray font-bold uppercase tracking-wider">
             {tr.protectionRules.map((pRule: string, i: number) => (
               <li key={i} className="flex gap-4"><span>🛡️</span> {pRule}</li>
             ))}
@@ -66,8 +66,8 @@ const Transparency: React.FC = () => {
       </div>
 
       <div className="p-12 bg-red-500/5 border border-red-500/20 text-center">
-        <h4 className="text-xl font-black text-red-500 uppercase tracking-widest mb-6">{tr.enforcementTitle}</h4>
-        <div className="flex flex-wrap justify-center gap-8">
+        <h4 className="text-xl font-black text-red-500 uppercase tracking-widest mb-3">{tr.enforcementTitle}</h4>
+        <div className="flex flex-wrap justify-center gap-4">
           {tr.enforcementItems.map((v: string) => (
             <div key={v} className="text-[10px] font-black uppercase tracking-[0.2em] text-red-400 opacity-60">
               • {v}

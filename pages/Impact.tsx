@@ -9,11 +9,11 @@ const Impact: React.FC = () => {
   const isEn = locale === Locale.EN;
 
   return (
-    <div className="font-sans pb-24">
+    <div className="font-sans pb-6">
       <SEO title="Impact | Global Film Alliance" />
 
       {/* Banner */}
-      <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden bg-gfa-inkBlack pt-20">
+      <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden bg-gfa-inkBlack pt-5">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=2070&auto=format&fit=crop" 
@@ -24,7 +24,7 @@ const Impact: React.FC = () => {
         </div>
 
         <div className="container-gfa relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-serif text-white mb-6 leading-tight drop-shadow-2xl">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-serif text-white mb-3 leading-tight drop-shadow-2xl">
             {isEn ? "Real Change." : "真实的改变，"}<br/>
             <span className="text-[#C9A84C]">{isEn ? "Real People." : "真实的人。"}</span>
           </h1>
@@ -32,9 +32,9 @@ const Impact: React.FC = () => {
       </section>
 
       {/* Impact Numbers */}
-      <section className="py-24 bg-white border-b border-gfa-border">
+      <section className="py-6 bg-white border-b border-gfa-border">
         <div className="container-gfa px-4 max-w-6xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4">
             <h2 className="text-sm font-bold text-[#C9A84C] uppercase tracking-widest mb-4">
               {isEn ? "Our Footprint" : "我们的足迹"}
             </h2>
@@ -43,7 +43,7 @@ const Impact: React.FC = () => {
             </h3>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="text-center bg-[#F5F2EE] p-8 rounded-3xl border border-gray-100">
               <div className="text-5xl md:text-6xl font-bold font-serif text-gfa-inkBlack mb-2">500<span className="text-[#C9A84C]">+</span></div>
               <p className="text-sm font-bold uppercase tracking-widest text-[#C9A84C] mb-2">{isEn ? "Child Performers" : "参演儿童"}</p>
@@ -69,12 +69,12 @@ const Impact: React.FC = () => {
       </section>
 
       {/* Financial Transparency */}
-      <section className="py-24 bg-gfa-inkBlack text-white relative">
+      <section className="py-6 bg-gfa-inkBlack text-white relative">
         <div className="container-gfa max-w-4xl mx-auto px-4 text-center">
-           <h2 className="text-3xl md:text-5xl font-bold font-serif mb-16">
+           <h2 className="text-3xl md:text-5xl font-bold font-serif mb-4">
              {isEn ? "Financial Transparency" : "资金透明度声明"}
            </h2>
-           <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16 mb-16">
+           <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-4 mb-4">
               <div className="flex flex-col items-center">
                  <span className="text-5xl md:text-7xl font-bold font-serif text-[#C9A84C] mb-4">70%</span>
                  <span className="text-sm uppercase tracking-widest font-bold text-white/80">{isEn ? "Filmmaker Support & Youth Programs" : "电影人支持与青少年项目"}</span>
@@ -107,13 +107,13 @@ const Impact: React.FC = () => {
       </section>
 
       {/* Stories */}
-      <section className="py-24 bg-white border-b border-gfa-border">
+      <section className="py-6 bg-white border-b border-gfa-border">
          <div className="container-gfa max-w-6xl mx-auto px-4">
-            <div className="text-center mb-16">
+            <div className="text-center mb-4">
               <h2 className="text-3xl font-bold font-serif text-gfa-inkBlack">{isEn ? "The Faces of Change" : "每一个真实的故事"}</h2>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                {/* Story 1 */}
                <div className="bg-[#F5F2EE] rounded-3xl overflow-hidden group">
                  <div className="h-48 overflow-hidden relative">
@@ -160,14 +160,14 @@ const Impact: React.FC = () => {
       </section>
 
       {/* Featured Films */}
-      <section className="py-24 bg-[#F5F2EE]">
+      <section className="py-6 bg-[#F5F2EE]">
          <div className="container-gfa px-4 max-w-6xl mx-auto">
-            <div className="text-center mb-16">
+            <div className="text-center mb-4">
               <h2 className="text-3xl font-bold font-serif text-gfa-inkBlack mb-4">{isEn ? "Films Distributed" : "已发行的优秀影片"}</h2>
               <p className="text-gfa-slate font-light">{isEn ? "Available now on major streaming platforms." : "可以在流媒体平台上观看我们的作品。"}</p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                <div className="bg-gfa-inkBlack rounded-3xl overflow-hidden text-white flex flex-col md:flex-row shadow-lg border border-gray-200 group">
                   <div className="md:w-1/2 h-64 md:h-auto relative">
                      <img src="https://images.unsplash.com/photo-1440404653325-ab127d49abc1?q=80&w=2070&auto=format&fit=crop" alt="Garden Film" className="w-full h-full object-cover opacity-80" />
@@ -178,7 +178,7 @@ const Impact: React.FC = () => {
                   <div className="md:w-1/2 p-8 flex flex-col justify-center">
                      <div className="text-[#C9A84C] text-[10px] uppercase tracking-widest font-bold mb-2">Short Film</div>
                      <h3 className="text-2xl font-bold font-serif mb-2">Garden {!isEn && <span className="font-sans font-light">/ 花园</span>}</h3>
-                     <p className="text-sm font-light text-white/60 mb-6 italic">
+                     <p className="text-sm font-light text-white/60 mb-3 italic">
                        {isEn ? "Winner: Best Family Film (Golden State Film Festival)" : "荣获 Golden State Film Festival 最佳家庭电影"}
                      </p>
                      <div className="flex gap-2 text-xs font-bold uppercase tracking-widest text-white/40">
@@ -198,7 +198,7 @@ const Impact: React.FC = () => {
                   <div className="md:w-1/2 p-8 flex flex-col justify-center">
                      <div className="text-[#C9A84C] text-[10px] uppercase tracking-widest font-bold mb-2">Documentary</div>
                      <h3 className="text-2xl font-bold font-serif mb-2">Echoes</h3>
-                     <p className="text-sm font-light text-white/60 mb-6 italic">
+                     <p className="text-sm font-light text-white/60 mb-3 italic">
                        {isEn ? "Official Selection: Independent Youth Fest" : "官方入选：独立青年电影节"}
                      </p>
                      <div className="flex gap-2 text-xs font-bold uppercase tracking-widest text-white/40">

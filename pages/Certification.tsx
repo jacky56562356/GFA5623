@@ -52,7 +52,7 @@ const Certification: React.FC = () => {
   }, [searchTerm, filters]);
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans pt-[80px] pb-16 relative">
+    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans pt-[80px] pb-4 relative">
       <SEO title={cert.title || "Accreditation Framework"} description={cert.subtitle} />
 
       {/* Global Background Image */}
@@ -65,7 +65,7 @@ const Certification: React.FC = () => {
       </div>
 
       {/* Document Header */}
-      <div className="relative bg-gfa-inkBlack py-16 mb-12 shadow-2xl overflow-hidden">
+      <div className="relative bg-gfa-inkBlack py-4 mb-3 shadow-2xl overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-20 grayscale">
           <img 
             src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=2070&auto=format&fit=crop" 
@@ -77,10 +77,10 @@ const Certification: React.FC = () => {
         
         <div className="container-gfa relative z-10 text-center">
           <div className="max-w-4xl mx-auto animate-fade-in">
-            <div className="gold-badge mb-8 animate-fade-up">
+            <div className="gold-badge mb-4 animate-fade-up">
               Regulatory Standard
             </div>
-            <h1 className="text-5xl md:text-8xl font-bold font-serif text-white mb-8 leading-tight drop-shadow-2xl">
+            <h1 className="text-5xl md:text-8xl font-bold font-serif text-white mb-4 leading-tight drop-shadow-2xl">
               {cert.title}
             </h1>
             <p className="text-xl md:text-2xl text-gfa-gold font-light leading-relaxed max-w-2xl mx-auto italic font-serif animate-fade-up delay-200">
@@ -91,13 +91,13 @@ const Certification: React.FC = () => {
       </div>
 
       <div className="container-gfa relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
           
           {/* Sidebar Navigation */}
           <aside className="lg:col-span-3 hidden lg:block">
-            <div className="sticky top-24 space-y-8">
+            <div className="sticky top-24 space-y-4">
               <div className="bg-white p-8 rounded-[32px] shadow-xl border border-gfa-border">
-                <h3 className="text-[10px] font-bold uppercase tracking-widest text-gfa-slate mb-8 border-b border-gfa-border pb-4">Framework Sections</h3>
+                <h3 className="text-[10px] font-bold uppercase tracking-widest text-gfa-slate mb-4 border-b border-gfa-border pb-4">Framework Sections</h3>
                 <nav className="space-y-4">
                   <a href="#categories" className="flex items-center gap-3 text-sm font-bold text-gfa-slate hover:text-gfa-gold transition-all group">
                     <div className="w-2 h-2 bg-gfa-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
@@ -123,7 +123,7 @@ const Certification: React.FC = () => {
                   <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2070&auto=format&fit=crop" alt="Legal" className="w-full h-full object-cover grayscale" />
                 </div>
                 <div className="relative z-10">
-                  <Shield className="w-10 h-10 text-gfa-gold mb-6" />
+                  <Shield className="w-10 h-10 text-gfa-gold mb-3" />
                   <h4 className="text-xs font-bold uppercase tracking-widest mb-4">Regulatory Note</h4>
                   <p className="text-sm text-white/70 leading-relaxed italic font-serif">
                     {t.disclaimer?.statutory}
@@ -138,7 +138,7 @@ const Certification: React.FC = () => {
             <div className="bg-white border border-gfa-border rounded-[40px] shadow-2xl overflow-hidden">
               
               {/* Document Metadata Strip */}
-              <div className="bg-gfa-warmWhite border-b border-gfa-border px-10 py-6 flex flex-wrap gap-12 text-[10px] font-bold uppercase tracking-widest text-gfa-slate">
+              <div className="bg-gfa-warmWhite border-b border-gfa-border px-10 py-3 flex flex-wrap gap-3 text-[10px] font-bold uppercase tracking-widest text-gfa-slate">
                 <div className="flex items-center gap-2">
                   <span className="opacity-50">Document Type:</span>
                   <span className="text-gfa-inkBlack">Accreditation Standard</span>
@@ -156,10 +156,10 @@ const Certification: React.FC = () => {
                 </div>
               </div>
 
-              <div className="p-8 md:p-12 space-y-16">
+              <div className="p-8 md:p-12 space-y-4">
                 {/* Categories */}
                 <section id="categories" className="scroll-mt-24">
-                  <div className="flex items-start gap-8 mb-10">
+                  <div className="flex items-start gap-4 mb-5">
                     <div className="w-16 h-16 bg-gfa-warmWhite border border-gfa-border rounded-2xl flex items-center justify-center text-2xl font-serif text-gfa-gold shrink-0 shadow-inner">
                       01
                     </div>
@@ -171,7 +171,7 @@ const Certification: React.FC = () => {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     {(cert.categories || []).map((cat: any, i: number) => (
                       <div key={i} className="relative group rounded-[32px] overflow-hidden border border-gfa-border shadow-sm hover:shadow-2xl transition-all duration-500 h-[400px]">
                         <div className="absolute inset-0 z-0">
@@ -188,7 +188,7 @@ const Certification: React.FC = () => {
                         </div>
                         
                         <div className="relative z-10 p-8 h-full flex flex-col justify-end">
-                          <div className="w-14 h-14 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center mb-6 border border-white/20 group-hover:bg-gfa-gold group-hover:border-gfa-gold transition-all duration-500">
+                          <div className="w-14 h-14 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center mb-3 border border-white/20 group-hover:bg-gfa-gold group-hover:border-gfa-gold transition-all duration-500">
                             {i === 0 ? <Shield className="w-6 h-6 text-white" /> : i === 1 ? <CheckCircle className="w-6 h-6 text-white" /> : <Scale className="w-6 h-6 text-white" />}
                           </div>
                           <h3 className="text-2xl font-bold text-white mb-4 font-serif leading-tight">{cat.title}</h3>
@@ -201,7 +201,7 @@ const Certification: React.FC = () => {
 
                 {/* Criteria */}
                 <section id="criteria" className="scroll-mt-24">
-                  <div className="flex items-start gap-8 mb-10">
+                  <div className="flex items-start gap-4 mb-5">
                     <div className="w-16 h-16 bg-gfa-warmWhite border border-gfa-border rounded-2xl flex items-center justify-center text-2xl font-serif text-gfa-gold shrink-0 shadow-inner">
                       02
                     </div>
@@ -213,9 +213,9 @@ const Certification: React.FC = () => {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {(cert.criteria || []).map((item: string, i: number) => (
-                      <div key={i} className="flex items-center gap-6 p-8 bg-white border border-gfa-border rounded-[24px] shadow-sm hover:border-gfa-gold/30 transition-all group">
+                      <div key={i} className="flex items-center gap-3 p-8 bg-white border border-gfa-border rounded-[24px] shadow-sm hover:border-gfa-gold/30 transition-all group">
                         <div className="w-10 h-10 bg-gfa-gold/10 text-gfa-gold rounded-full flex items-center justify-center shrink-0 group-hover:bg-gfa-gold group-hover:text-white transition-all">
                           <FileText className="w-5 h-5" />
                         </div>
@@ -227,7 +227,7 @@ const Certification: React.FC = () => {
 
                 {/* Validity */}
                 <section id="validity" className="scroll-mt-24">
-                  <div className="flex items-start gap-8 mb-10">
+                  <div className="flex items-start gap-4 mb-5">
                     <div className="w-16 h-16 bg-gfa-warmWhite border border-gfa-border rounded-2xl flex items-center justify-center text-2xl font-serif text-gfa-gold shrink-0 shadow-inner">
                       03
                     </div>
@@ -243,7 +243,7 @@ const Certification: React.FC = () => {
                     <div className="absolute inset-0 opacity-10 group-hover:scale-110 transition-transform duration-1000">
                       <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=2069&auto=format&fit=crop" alt="Time" className="w-full h-full object-cover grayscale" />
                     </div>
-                    <div className="relative z-10 flex flex-col md:flex-row items-center gap-12">
+                    <div className="relative z-10 flex flex-col md:flex-row items-center gap-3">
                       <div className="w-24 h-24 bg-gfa-gold rounded-3xl flex items-center justify-center text-gfa-inkBlack shadow-2xl shrink-0 animate-float">
                         <Clock className="w-12 h-12" />
                       </div>
@@ -258,7 +258,7 @@ const Certification: React.FC = () => {
 
                 {/* Registry Section */}
                 <section id="registry" className="scroll-mt-24">
-                  <div className="flex items-start gap-8 mb-10">
+                  <div className="flex items-start gap-4 mb-5">
                     <div className="w-16 h-16 bg-gfa-warmWhite border border-gfa-border rounded-2xl flex items-center justify-center text-2xl font-serif text-gfa-gold shrink-0 shadow-inner">
                       04
                     </div>
@@ -270,14 +270,14 @@ const Certification: React.FC = () => {
                     </div>
                   </div>
 
-                  <div className="space-y-12">
+                  <div className="space-y-3">
                     <p className="text-lg text-gfa-slate font-light italic font-serif leading-relaxed opacity-90">
                       {reg.subtitle}
                     </p>
 
                     {/* Search & Filters */}
                     <div className="bg-gfa-warmWhite p-8 rounded-3xl border border-gfa-border">
-                      <div className="grid grid-cols-12 gap-6">
+                      <div className="grid grid-cols-12 gap-3">
                         <div className="col-span-12 lg:col-span-6">
                           <label className="text-[10px] font-bold uppercase tracking-[0.3em] text-gfa-slate mb-3 block opacity-60">Search (Name / ID / City)</label>
                           <div className="relative">
@@ -323,25 +323,25 @@ const Certification: React.FC = () => {
                           <tbody className="divide-y divide-gfa-border/30">
                             {filteredData.length === 0 ? (
                               <tr>
-                                <td colSpan={6} className="text-center py-20 text-gfa-slate italic font-serif text-xl opacity-30">
+                                <td colSpan={6} className="text-center py-5 text-gfa-slate italic font-serif text-xl opacity-30">
                                   {reg.ui.noResults}
                                 </td>
                               </tr>
                             ) : filteredData.map((o) => (
                               <tr key={o.orgId} className="hover:bg-gfa-warmWhite/30 transition-all group">
-                                <td className="px-6 py-6">
+                                <td className="px-6 py-3">
                                   <div className="text-base font-bold text-gfa-inkBlack font-serif leading-tight group-hover:text-gfa-gold transition-colors">{o.name}</div>
                                   <div className="text-[9px] text-gfa-slate mt-1 font-mono uppercase tracking-widest opacity-60">GFA-ID: {o.orgId}</div>
                                 </td>
-                                <td className="px-6 py-6">
+                                <td className="px-6 py-3">
                                   <span className="text-[10px] font-bold uppercase tracking-widest text-gfa-slate bg-gfa-warmWhite px-3 py-1 rounded-full border border-gfa-border">
                                     {o.categories[0]}
                                   </span>
                                 </td>
-                                <td className="px-6 py-6">
+                                <td className="px-6 py-3">
                                   <div className="text-xs font-medium text-gfa-inkBlack font-serif italic">{o.city}, {o.country}</div>
                                 </td>
-                                <td className="px-6 py-6">
+                                <td className="px-6 py-3">
                                   <div className="flex items-center gap-2">
                                     <div className={`w-1.5 h-1.5 rounded-full ${o.certification.status === 'Active' ? 'bg-emerald-500' : 'bg-red-500'}`}></div>
                                     <span className={`text-[9px] font-bold uppercase tracking-widest ${o.certification.status === 'Active' ? 'text-emerald-600' : 'text-red-500'}`}>
@@ -349,10 +349,10 @@ const Certification: React.FC = () => {
                                     </span>
                                   </div>
                                 </td>
-                                <td className="px-6 py-6">
+                                <td className="px-6 py-3">
                                   <span className="text-[10px] font-mono text-gfa-slate opacity-80">{o.certification.validTo}</span>
                                 </td>
-                                <td className="px-6 py-6">
+                                <td className="px-6 py-3">
                                   <button 
                                     onClick={() => setSelectedOrg(o)}
                                     className="btn-primary h-8 px-4 text-[9px] rounded-full"
@@ -373,10 +373,10 @@ const Certification: React.FC = () => {
 
               {/* Document Footer */}
               <div className="bg-gfa-warmWhite border-t border-gfa-border p-16 text-center">
-                <p className="text-[10px] text-gfa-slate font-bold uppercase tracking-[0.4em] mb-10 opacity-50">
+                <p className="text-[10px] text-gfa-slate font-bold uppercase tracking-[0.4em] mb-5 opacity-50">
                   Official GFA Accreditation Standard
                 </p>
-                <div className="flex justify-center gap-8">
+                <div className="flex justify-center gap-4">
                   <button className="btn-primary h-16 px-16 text-lg">
                     Start Application
                   </button>

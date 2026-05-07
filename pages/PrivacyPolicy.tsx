@@ -8,13 +8,13 @@ const PrivacyPolicy: React.FC = () => {
   const isEn = locale === Locale.EN;
 
   return (
-    <div className="font-sans pb-24">
+    <div className="font-sans pb-6">
       <SEO title="Privacy Policy | Global Film Alliance" />
 
       {/* Hero */}
-      <section className="bg-gfa-inkBlack text-white pt-32 pb-16 border-b border-white/10">
+      <section className="bg-gfa-inkBlack text-white pt-8 pb-4 border-b border-white/10">
         <div className="container-gfa max-w-4xl mx-auto px-4 text-center">
-           <h1 className="text-3xl md:text-5xl font-bold font-serif mb-6 leading-tight">
+           <h1 className="text-3xl md:text-5xl font-bold font-serif mb-3 leading-tight">
              {isEn ? "Privacy Policy" : "隐私政策"}
            </h1>
            <p className="text-white/70 font-light text-sm max-w-2xl mx-auto uppercase tracking-widest">
@@ -24,7 +24,7 @@ const PrivacyPolicy: React.FC = () => {
       </section>
 
       {/* Policy Content */}
-      <section className="py-20 bg-white">
+      <section className="py-5 bg-white">
         <div className="container-gfa max-w-4xl mx-auto px-4">
           <div className="prose prose-lg prose-slate max-w-none prose-h2:font-serif prose-h2:text-gfa-inkBlack prose-a:text-[#C9A84C]">
             {isEn ? (

@@ -9,8 +9,11 @@ const About: React.FC = () => {
   const isEn = locale === Locale.EN;
 
   return (
-    <div className="font-sans pb-16">
-      <SEO title="About | Global Film Alliance" />
+    <div className="font-sans pb-4">
+      <SEO 
+        title="About" 
+        description="Learn about the Global Film Alliance (GFA). We are a nonprofit organization dedicated to film education, industry support, and breaking down industry barriers."
+      />
 
       {/* Banner */}
       <section className="relative h-[40vh] min-h-[400px] flex items-center justify-center overflow-hidden bg-gfa-inkBlack mt-[90px] md:mt-[100px]">
@@ -24,7 +27,7 @@ const About: React.FC = () => {
         </div>
 
         <div className="container-gfa relative z-10 text-center px-4">
-          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold font-serif text-white mb-6 leading-tight drop-shadow-2xl">
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold font-serif text-white mb-3 leading-tight drop-shadow-2xl">
             {isEn ? "Who We Are &" : "我们是谁，"}<br/>
             <span className="text-[#C9A84C]">{isEn ? "Why We Exist" : "我们为什么存在"}</span>
           </h1>
@@ -32,7 +35,7 @@ const About: React.FC = () => {
       </section>
 
       {/* Founder's Statement */}
-      <section className="py-6 md:py-8 bg-white relative">
+      <section className="py-3 md:py-4 bg-white relative">
         <div className="container-gfa max-w-4xl mx-auto px-4">
           <div className="relative bg-[#F5F2EE] rounded-2xl p-5 md:p-6 shadow-sm border border-[#C9A84C]/20">
             <Quote className="absolute top-4 left-4 w-8 h-8 text-[#C9A84C]/20 -rotate-6" />
@@ -41,7 +44,7 @@ const About: React.FC = () => {
                 {isEn ? "A Message From Our Founder" : "创始人致辞"}
               </h2>
               
-              <div className="space-y-4 text-lg md:text-xl font-serif text-gfa-inkBlack leading-relaxed italic mb-8">
+              <div className="space-y-4 text-lg md:text-xl font-serif text-gfa-inkBlack leading-relaxed italic mb-4">
                 {isEn ? (
                   <>
                     <p>"Working in the film industry for years, I've seen too many talented filmmakers leave because of invisible barriers—not because they weren't good enough, but because they didn't have a camera, didn't have someone to open that door, didn't have a platform willing to believe in them."</p>
@@ -73,13 +76,13 @@ const About: React.FC = () => {
       </section>
 
       {/* Complete Content Section */}
-      <section className="py-12 md:py-16 bg-white border-t border-gfa-border">
+      <section className="py-3 md:py-4 bg-white border-t border-gfa-border">
         <div className="container-gfa max-w-5xl mx-auto px-4">
           
           {/* Organization Introduction */}
-          <div className="mb-16 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+          <div className="mb-4 grid grid-cols-1 md:grid-cols-2 gap-5 items-center">
             <div>
-              <h3 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-6">
+              <h3 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-3">
                 {isEn ? "About Global Film Alliance" : "机构简介"}
               </h3>
               <p className="text-base md:text-lg font-light text-gfa-slate leading-relaxed">
@@ -94,7 +97,7 @@ const About: React.FC = () => {
           </div>
 
           {/* Mission and Vision Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
             <div className="bg-[#F5F2EE] p-8 rounded-2xl border border-[#C9A84C]/20">
               <h3 className="text-xl font-bold font-serif text-gfa-inkBlack mb-4 flex items-center gap-2">
                  <Target className="w-5 h-5 text-[#C9A84C]" />
@@ -120,14 +123,14 @@ const About: React.FC = () => {
           </div>
 
           {/* Four Core Truths */}
-          <div className="mb-16">
-            <div className="text-center mb-10">
+          <div className="mb-4">
+            <div className="text-center mb-5">
               <h3 className="text-2xl md:text-3xl font-bold font-serif text-gfa-inkBlack">
                 {isEn ? "Four Core Truths" : "四大真理"}
               </h3>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               {/* Truth 1 */}
               <div className="relative overflow-hidden rounded-2xl border border-gray-100/20 hover:border-[#C9A84C]/50 transition-all shadow-sm hover:shadow-lg p-6 group h-[320px] flex flex-col justify-end">
                 <div className="absolute inset-0 z-0 bg-black">
@@ -208,7 +211,7 @@ const About: React.FC = () => {
 
           {/* Core Nonprofit Support */}
           <div>
-            <div className="text-center mb-10">
+            <div className="text-center mb-5">
               <h3 className="text-2xl md:text-3xl font-bold font-serif text-gfa-inkBlack">
                 {isEn ? "Core Nonprofit Support" : "核心公益支持"}
               </h3>
@@ -275,9 +278,9 @@ const About: React.FC = () => {
       </section>
 
       {/* Partners section */}
-      <section className="py-6 md:py-8 bg-white">
+      <section className="py-3 md:py-4 bg-white">
         <div className="container-gfa px-4 max-w-5xl mx-auto">
-          <div className="text-center mb-6">
+          <div className="text-center mb-3">
             <h2 className="text-xs font-bold text-[#C9A84C] uppercase tracking-widest mb-2">
               {isEn ? "Partners" : "我们的合作伙伴"}
             </h2>
@@ -286,7 +289,7 @@ const About: React.FC = () => {
             </h3>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-3">
             <div className="bg-gray-50 rounded-xl p-5 text-center border border-gray-100 hover:shadow-sm transition-shadow">
               <div className="h-10 flex items-center justify-center mb-3">
                  <div className="text-xl md:text-2xl font-bold italic tracking-tighter text-gfa-inkBlack">Blackmagic Design</div>

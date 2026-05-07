@@ -30,11 +30,14 @@ const Competition: React.FC = () => {
   ];
 
   return (
-    <div className="font-sans pb-24">
-      <SEO title="Global Competition | Global Film Alliance" />
+    <div className="font-sans pb-6">
+      <SEO 
+        title="Global Competition" 
+        description="Join the GFA Global Youth Talent Competition. An international platform for young actors and filmmakers to showcase their skills in Hollywood."
+      />
 
       {/* Hero */}
-      <section className="relative h-screen min-h-[800px] flex items-center justify-center overflow-hidden bg-gfa-inkBlack group pt-20">
+      <section className="relative h-screen min-h-[800px] flex items-center justify-center overflow-hidden bg-gfa-inkBlack group pt-5">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://i.ibb.co/S4Mb6TcN/24480b00-65a2-4468-8dc6-50aae205d0fa.png" 
@@ -45,18 +48,18 @@ const Competition: React.FC = () => {
         </div>
 
         <div className="container-gfa relative z-10 text-center px-4 max-w-6xl mx-auto flex flex-col items-center">
-          <div className="flex flex-wrap items-center justify-center gap-6 mb-8">
+          <div className="flex flex-wrap items-center justify-center gap-3 mb-4">
             <img src="https://i.ibb.co/S4Mb6TcN/24480b00-65a2-4468-8dc6-50aae205d0fa.png" alt="Global Youth Talent Competition Logo" className="h-20 md:h-28 w-auto object-contain bg-white/90 rounded-2xl p-3 shadow-xl" />
             <img src="https://i.ibb.co/YB6gWM9L/20260326145435-449-10.jpg" alt="Competition Logo V2" className="h-20 md:h-28 w-auto object-contain rounded-2xl shadow-xl" />
           </div>
-          <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold font-serif text-white mb-6 leading-tight drop-shadow-2xl">
+          <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold font-serif text-white mb-3 leading-tight drop-shadow-2xl">
             {isEn ? "2026 GFA Global Youth" : "2026全球青少年"}<br/>
             <span className="text-[#C9A84C]">{isEn ? "Talent Competition" : "才艺大赛"}</span>
           </h1>
-          <h2 className="text-xl md:text-3xl font-light text-white/90 tracking-widest uppercase mb-12">
+          <h2 className="text-xl md:text-3xl font-light text-white/90 tracking-widest uppercase mb-3">
             {isEn ? "Grand Finale in Hollywood" : "决赛在好莱坞顶级舞台"}
           </h2>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
             <button className="w-full sm:w-auto bg-[#C9A84C] hover:bg-[#b09241] text-gfa-inkBlack px-10 py-5 rounded-full font-bold uppercase tracking-widest text-sm transition-colors shadow-[0_0_30px_rgba(201,168,76,0.4)]">
               {isEn ? "Register — US" : "美国区报名"}
             </button>
@@ -68,9 +71,9 @@ const Competition: React.FC = () => {
       </section>
 
       {/* Intro */}
-      <section className="py-24 bg-white">
-        <div className="container-gfa px-4 max-w-4xl mx-auto text-center space-y-10 text-lg md:text-xl font-light text-gfa-slate leading-relaxed">
-           <p className="font-serif text-2xl text-gfa-inkBlack italic mb-12">
+      <section className="py-6 bg-white">
+        <div className="container-gfa px-4 max-w-4xl mx-auto text-center space-y-5 text-lg md:text-xl font-light text-gfa-slate leading-relaxed">
+           <p className="font-serif text-2xl text-gfa-inkBlack italic mb-3">
              {isEn 
                ? "The first simultaneous youth film and talent competition held across the US and China, bridging a massive cultural gap to unite the next generation of creators." 
                : "首个中美同步举办的青少年影视才艺大赛，以最高规格的艺术展示，填补了中美青少年深度文化交流的空白。"}
@@ -91,34 +94,34 @@ const Competition: React.FC = () => {
       </section>
 
       {/* Categories & Age Groups */}
-      <section className="py-24 bg-[#F5F2EE]">
+      <section className="py-6 bg-[#F5F2EE]">
         <div className="container-gfa px-4 max-w-6xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4">
             <h2 className="text-4xl text-gfa-inkBlack font-bold font-serif">{isEn ? "Competition Divisions" : "参赛组别"}</h2>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
              {/* Age Groups */}
              <div>
-               <h3 className="text-lg font-bold text-[#C9A84C] uppercase tracking-widest mb-6 flex items-center gap-2">
+               <h3 className="text-lg font-bold text-[#C9A84C] uppercase tracking-widest mb-3 flex items-center gap-2">
                  <CheckCircle2 className="w-5 h-5"/> {isEn ? "By Age Group" : "按年龄划分"}
                </h3>
                <div className="space-y-4">
-                 <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-center gap-6">
+                 <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-center gap-3">
                    <div className="w-16 h-16 bg-[#111111] text-white rounded-full flex items-center justify-center font-bold font-serif text-xl">Mini</div>
                    <div>
                      <h4 className="font-bold text-lg text-gfa-inkBlack">Mini Stars</h4>
                      <p className="text-sm font-light text-gfa-slate">{isEn ? "Ages 6–10" : "6–10岁"}</p>
                    </div>
                  </div>
-                 <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-center gap-6">
+                 <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-center gap-3">
                    <div className="w-16 h-16 bg-[#C9A84C] text-black rounded-full flex items-center justify-center font-bold font-serif text-xl">Rise</div>
                    <div>
                      <h4 className="font-bold text-lg text-gfa-inkBlack">Rising Stars</h4>
                      <p className="text-sm font-light text-gfa-slate">{isEn ? "Ages 11–14" : "11–14岁"}</p>
                    </div>
                  </div>
-                 <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-center gap-6">
+                 <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-center gap-3">
                    <div className="w-16 h-16 bg-white border-4 border-[#C9A84C] text-gfa-inkBlack rounded-full flex items-center justify-center font-bold font-serif text-xl">Next</div>
                    <div>
                      <h4 className="font-bold text-lg text-gfa-inkBlack">Next Gen</h4>
@@ -130,7 +133,7 @@ const Competition: React.FC = () => {
 
              {/* Categories */}
              <div>
-               <h3 className="text-lg font-bold text-[#C9A84C] uppercase tracking-widest mb-6 flex items-center gap-2">
+               <h3 className="text-lg font-bold text-[#C9A84C] uppercase tracking-widest mb-3 flex items-center gap-2">
                  <CheckCircle2 className="w-5 h-5"/> {isEn ? "By Category" : "按专业类别划分"}
                </h3>
                <div className="grid grid-cols-2 gap-4">
@@ -177,14 +180,14 @@ const Competition: React.FC = () => {
       </section>
 
       {/* Process & Timeline */}
-      <section className="py-24 bg-white border-b border-gfa-border">
+      <section className="py-6 bg-white border-b border-gfa-border">
         <div className="container-gfa px-4 max-w-5xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4">
             <h2 className="text-3xl font-bold font-serif text-gfa-inkBlack">{isEn ? "Process & Timeline" : "参赛流程与节点"}</h2>
           </div>
 
           {/* Timeline */}
-          <div className="relative border-l border-gray-200 ml-4 md:ml-0 md:border-none space-y-12 md:space-y-0 md:flex md:justify-between mb-16">
+          <div className="relative border-l border-gray-200 ml-4 md:ml-0 md:border-none space-y-3 md:space-y-0 md:flex md:justify-between mb-4">
              <div className="md:hidden absolute top-0 bottom-0 left-[-1px] w-0.5 bg-gradient-to-b from-[#C9A84C] to-gray-200"></div>
              <div className="hidden md:block absolute top-[24px] left-8 right-8 h-0.5 bg-gradient-to-r from-[#C9A84C] to-gray-200"></div>
 
@@ -207,9 +210,9 @@ const Competition: React.FC = () => {
       </section>
 
       {/* Awards List */}
-      <section className="py-24 bg-[#F5F2EE]">
+      <section className="py-6 bg-[#F5F2EE]">
         <div className="container-gfa px-4 max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-12">{isEn ? "Awards & Honors" : "最高荣誉奖项设置"}</h2>
+          <h2 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-3">{isEn ? "Awards & Honors" : "最高荣誉奖项设置"}</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
              <div className="bg-white p-4 rounded-xl border border-[#C9A84C] shadow-md transform -translate-y-2">
                <Trophy className="w-8 h-8 text-[#C9A84C] mx-auto mb-2"/>
@@ -244,9 +247,9 @@ const Competition: React.FC = () => {
       </section>
 
       {/* FAQ */}
-      <section className="py-24 bg-white">
+      <section className="py-6 bg-white">
         <div className="container-gfa max-w-4xl mx-auto px-4">
-           <div className="text-center mb-16">
+           <div className="text-center mb-4">
              <h2 className="text-3xl font-bold font-serif text-gfa-inkBlack">{isEn ? "FAQ" : "常见问题"}</h2>
            </div>
            
@@ -260,7 +263,7 @@ const Competition: React.FC = () => {
                        <span className="pr-8">{faq.q}</span>
                        <ChevronDown className={`w-5 h-5 text-[#C9A84C] shrink-0 transform transition-transform duration-300 ${openFaq === idx ? 'rotate-180' : ''}`} />
                     </button>
-                    <div className={`px-6 text-gfa-slate font-light text-sm overflow-hidden transition-all duration-300 ${openFaq === idx ? 'pb-6 max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
+                    <div className={`px-6 text-gfa-slate font-light text-sm overflow-hidden transition-all duration-300 ${openFaq === idx ? 'pb-3 max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
                        <div className="pt-2 border-t border-gray-200 mt-2">{faq.a}</div>
                     </div>
                  </div>
@@ -270,12 +273,12 @@ const Competition: React.FC = () => {
       </section>
 
       {/* Sponsorship CTA */}
-      <section className="py-16 bg-gfa-inkBlack text-center">
+      <section className="py-4 bg-gfa-inkBlack text-center">
         <div className="container-gfa px-4">
-           <h3 className="text-2xl font-serif text-white mb-6">
+           <h3 className="text-2xl font-serif text-white mb-3">
              {isEn ? "Become an Official Sponsor" : "成为大赛官方赞助商"}
            </h3>
-           <p className="text-white/60 font-light max-w-2xl mx-auto mb-8">
+           <p className="text-white/60 font-light max-w-2xl mx-auto mb-4">
              {isEn 
                ? "Gain brand exposure in Hollywood while supporting the next generation of global creators." 
                : "在好莱坞核心舞台获得极致的品牌曝光，同时支持下一代全球创作者群体的发展。"}

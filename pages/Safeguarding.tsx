@@ -12,11 +12,11 @@ const Safeguarding: React.FC = () => {
   const isEn = locale === Locale.EN;
 
   return (
-    <div className="bg-gfa-warmWhite pt-[80px] font-sans pb-24">
+    <div className="bg-gfa-warmWhite pt-[80px] font-sans pb-6">
       <SEO title="Safeguarding Youth | GFA" />
 
       {/* Hero */}
-      <div className="relative bg-[#1A2B4A] py-20 mb-16 overflow-hidden">
+      <div className="relative bg-[#1A2B4A] py-5 mb-4 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://images.unsplash.com/photo-1529390079861-591de354faf5?q=80&w=2070&auto=format&fit=crop" 
@@ -26,7 +26,7 @@ const Safeguarding: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-[#1A2B4A] via-[#1A2B4A]/80 to-transparent"></div>
         </div>
         <div className="container-gfa relative z-10 text-center max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-bold font-serif text-white mb-6 leading-tight drop-shadow-lg">
+          <h1 className="text-5xl md:text-7xl font-bold font-serif text-white mb-3 leading-tight drop-shadow-lg">
             {isEn ? "Creating Safe Spaces for Young Storytellers" : "为年轻讲述者创造安全的空间"}
           </h1>
           <p className="text-xl md:text-2xl text-[#C9A84C] font-light leading-relaxed italic font-serif">
@@ -37,12 +37,12 @@ const Safeguarding: React.FC = () => {
         </div>
       </div>
 
-      <div className="container-gfa max-w-6xl mx-auto space-y-16">
+      <div className="container-gfa max-w-6xl mx-auto space-y-4">
         
         {/* Intro */}
         <section className="bg-white p-12 md:p-16 rounded-[40px] shadow-xl border border-gfa-border relative overflow-hidden text-center max-w-4xl mx-auto -mt-32 z-20">
-          <Heart className="w-16 h-16 text-[#C9A84C] mx-auto mb-6" />
-          <h2 className="text-3xl md:text-4xl font-bold font-serif text-gfa-inkBlack mb-6">
+          <Heart className="w-16 h-16 text-[#C9A84C] mx-auto mb-3" />
+          <h2 className="text-3xl md:text-4xl font-bold font-serif text-gfa-inkBlack mb-3">
             {isEn ? "Our Commitment to Youth" : "我们对青少年的承诺"}
           </h2>
           <p className="text-xl text-gfa-slate leading-relaxed font-light">
@@ -54,12 +54,12 @@ const Safeguarding: React.FC = () => {
 
         {/* Photo Grid / Core Values */}
         <section>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-             <div className="space-y-6">
-                <h3 className="text-4xl font-bold font-serif text-gfa-inkBlack mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+             <div className="space-y-3">
+                <h3 className="text-4xl font-bold font-serif text-gfa-inkBlack mb-4">
                   {isEn ? "A Culture of Care on Every Set" : "每个片场都充满关爱的文化"}
                 </h3>
-                <p className="text-lg text-gfa-slate font-light leading-relaxed mb-6">
+                <p className="text-lg text-gfa-slate font-light leading-relaxed mb-3">
                   {isEn 
                     ? "The film industry can be demanding, but our programs are designed to be nurturing. We train all our mentors, directors, and crew members on strict child safeguarding protocols." 
                     : "电影行业可能会要求很高，但我们的项目旨在培养。我们对所有导师、导演和剧组成员进行严格的儿童保护协议培训。"}
@@ -75,17 +75,17 @@ const Safeguarding: React.FC = () => {
              {/* Photo Collage */}
              <div className="grid grid-cols-2 gap-4">
                <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=2069&auto=format&fit=crop" alt="Youth reading" className="w-full h-64 object-cover rounded-[32px] shadow-lg" />
-               <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=2070&auto=format&fit=crop" alt="Youth smiling" className="w-full h-48 object-cover rounded-[32px] shadow-lg mt-16" />
+               <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=2070&auto=format&fit=crop" alt="Youth smiling" className="w-full h-48 object-cover rounded-[32px] shadow-lg mt-4" />
              </div>
           </div>
         </section>
 
         {/* Protection Framework */}
-        <section className="bg-gfa-inkBlack text-white py-16 px-12 md:px-20 rounded-[40px] shadow-2xl relative overflow-hidden">
+        <section className="bg-gfa-inkBlack text-white py-4 px-12 md:px-20 rounded-[40px] shadow-2xl relative overflow-hidden">
            <div className="absolute inset-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center mix-blend-overlay"></div>
            
-           <div className="relative z-10 text-center mb-16">
-             <h2 className="text-4xl md:text-5xl font-bold font-serif text-white mb-6">
+           <div className="relative z-10 text-center mb-4">
+             <h2 className="text-4xl md:text-5xl font-bold font-serif text-white mb-3">
                 {isEn ? "Our Protection Framework" : "我们的保护框架"}
              </h2>
              <p className="max-w-2xl mx-auto text-white/80 font-light text-lg">
@@ -93,23 +93,23 @@ const Safeguarding: React.FC = () => {
              </p>
            </div>
 
-           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 relative z-10">
+           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 relative z-10">
               <div className="bg-white/10 backdrop-blur-md border border-white/20 p-10 rounded-[32px]">
-                 <Shield className="w-12 h-12 text-[#C9A84C] mb-6" />
+                 <Shield className="w-12 h-12 text-[#C9A84C] mb-3" />
                  <h4 className="text-xl font-bold font-serif mb-4">{isEn ? "Physical Safety" : "物理环境安全"}</h4>
                  <p className="text-sm font-light text-white/70">
                    {isEn ? "Safe sets, appropriate lighting, hydration stations, and strictly enforced safety rules around equipment." : "安全的片场、合适的照明、饮水站以及设备周围严格执行的安全规章。"}
                  </p>
               </div>
               <div className="bg-white/10 backdrop-blur-md border border-white/20 p-10 rounded-[32px]">
-                 <Users className="w-12 h-12 text-[#C9A84C] mb-6" />
+                 <Users className="w-12 h-12 text-[#C9A84C] mb-3" />
                  <h4 className="text-xl font-bold font-serif mb-4">{isEn ? "Emotional Well-being" : "情感健康"}</h4>
                  <p className="text-sm font-light text-white/70">
                    {isEn ? "Creating an inclusive, non-judgmental environment where mistakes are treated as learning opportunities." : "创造一个包容、不评判的环境，把犯错视为学习的机会。"}
                  </p>
               </div>
               <div className="bg-white/10 backdrop-blur-md border border-white/20 p-10 rounded-[32px]">
-                 <Scale className="w-12 h-12 text-[#C9A84C] mb-6" />
+                 <Scale className="w-12 h-12 text-[#C9A84C] mb-3" />
                  <h4 className="text-xl font-bold font-serif mb-4">{isEn ? "Digital Privacy" : "数字与隐私安全"}</h4>
                  <p className="text-sm font-light text-white/70">
                    {isEn ? "Strict consent protocols for publishing images or films featuring minors, protecting their digital footprint." : "严格的照片或影像发布许可协议，保护未成年人的数字足迹。"}
@@ -119,7 +119,7 @@ const Safeguarding: React.FC = () => {
         </section>
 
         {/* More Images */}
-        <section className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <section className="grid grid-cols-1 md:grid-cols-3 gap-4">
            <div className="aspect-[4/3] rounded-[32px] overflow-hidden shadow-lg border border-gfa-border">
               <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=2070&auto=format&fit=crop" alt="Mentorship" className="w-full h-full object-cover" />
            </div>
@@ -132,7 +132,7 @@ const Safeguarding: React.FC = () => {
         </section>
 
         {/* Reporting Contact */}
-        <section className="bg-red-50 border border-red-100 p-12 md:p-16 rounded-[40px] shadow-sm flex flex-col md:flex-row items-center gap-12">
+        <section className="bg-red-50 border border-red-100 p-12 md:p-16 rounded-[40px] shadow-sm flex flex-col md:flex-row items-center gap-3">
             <div className="w-24 h-24 bg-red-100 rounded-full flex items-center justify-center text-red-500 shrink-0">
                <PhoneCall className="w-10 h-10" />
             </div>
@@ -140,7 +140,7 @@ const Safeguarding: React.FC = () => {
                <h3 className="text-3xl font-bold font-serif text-gfa-inkBlack mb-4">
                  {isEn ? "See something? Say something." : "看到异常？请发声。"}
                </h3>
-               <p className="text-gfa-slate font-light leading-relaxed mb-6 max-w-2xl">
+               <p className="text-gfa-slate font-light leading-relaxed mb-3 max-w-2xl">
                  {isEn 
                    ? "If you have witnessed or experienced any violation of our youth protection standards, please contact us immediately. All reports are strictly confidential." 
                    : "如果您目睹或经历了任何违反我们青少年保护标准的行为，请立即与我们联系。所有报告均严格保密。"}

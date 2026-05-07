@@ -89,16 +89,16 @@ const PolicyPage: React.FC<Props> = ({ type }) => {
   const currentPolicy = getPolicyContent();
 
   return (
-    <div className="py-24 max-w-4xl mx-auto px-4">
-      <h1 className="text-4xl md:text-5xl font-bold font-serif mb-6 text-gfa-inkBlack">{currentPolicy.title}</h1>
-      <p className="text-gfa-slate font-light text-lg mb-12 leading-relaxed">
+    <div className="py-6 max-w-4xl mx-auto px-4">
+      <h1 className="text-4xl md:text-5xl font-bold font-serif mb-3 text-gfa-inkBlack">{currentPolicy.title}</h1>
+      <p className="text-gfa-slate font-light text-lg mb-3 leading-relaxed">
         {currentPolicy.summary}
       </p>
 
-      <div className="space-y-12">
+      <div className="space-y-3">
         {Object.entries(currentPolicy.sections).map(([key, value]) => (
           <div key={key} className="bg-white p-10 border border-gfa-border rounded-2xl shadow-sm">
-            <h3 className="text-xl font-bold font-serif mb-6 text-gfa-inkBlack pb-4 border-b border-gfa-border">
+            <h3 className="text-xl font-bold font-serif mb-3 text-gfa-inkBlack pb-4 border-b border-gfa-border">
               {key}
             </h3>
             <div className="text-gfa-slate font-light leading-relaxed text-sm md:text-base">
@@ -108,7 +108,7 @@ const PolicyPage: React.FC<Props> = ({ type }) => {
         ))}
       </div>
 
-      <div className="mt-12 pt-10 border-t border-white/5 text-center">
+      <div className="mt-3 pt-5 border-t border-white/5 text-center">
         <p className="text-gfa-gray text-xs font-bold uppercase tracking-widest">
           {isEn ? "Last Updated: May 2026 • Global Compliance Office" : "最后更新：2026年5月 • 全球合规办公室"}
         </p>

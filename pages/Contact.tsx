@@ -46,20 +46,20 @@ const Contact: React.FC = () => {
       {/* Background Decoration */}
       <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gfa-gold/5 rounded-full blur-[120px] -mr-64 -mt-64 pointer-events-none z-0"></div>
 
-      <div className="pt-32 pb-16 px-6 container-gfa relative z-10">
-        <header className="mb-10 text-center max-w-4xl mx-auto animate-fade-in">
-          <div className="gold-badge mb-10 animate-fade-up">{ui.secretariatBadge}</div>
-          <h1 className="text-5xl md:text-8xl font-bold font-serif text-white mb-12 leading-tight drop-shadow-2xl">
+      <div className="pt-8 pb-4 px-6 container-gfa relative z-10">
+        <header className="mb-5 text-center max-w-4xl mx-auto animate-fade-in">
+          <div className="gold-badge mb-5 animate-fade-up">{ui.secretariatBadge}</div>
+          <h1 className="text-5xl md:text-8xl font-bold font-serif text-white mb-3 leading-tight drop-shadow-2xl">
             {contact.title}
           </h1>
-          <p className="text-xl md:text-2xl text-gfa-slate leading-relaxed font-light italic font-serif opacity-90 border-y border-gfa-border/50 py-16">
+          <p className="text-xl md:text-2xl text-gfa-slate leading-relaxed font-light italic font-serif opacity-90 border-y border-gfa-border/50 py-4">
             {contact.intro}
           </p>
         </header>
       
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
-          <div className="lg:col-span-4 space-y-12">
-            <div className="flex flex-col gap-6 animate-fade-up">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5">
+          <div className="lg:col-span-4 space-y-3">
+            <div className="flex flex-col gap-3 animate-fade-up">
               {types.map((type) => (
                 <button 
                   key={type.id}
@@ -71,7 +71,7 @@ const Contact: React.FC = () => {
               ))}
             </div>
             
-            <div className="pt-16 border-t border-gfa-border space-y-10 bg-white/50 p-10 rounded-[40px] backdrop-blur-xl shadow-2xl animate-fade-up delay-200">
+            <div className="pt-4 border-t border-gfa-border space-y-5 bg-white/50 p-10 rounded-[40px] backdrop-blur-xl shadow-2xl animate-fade-up delay-200">
               <div>
                 <h4 className="text-gfa-slate font-bold uppercase text-[10px] tracking-[0.4em] mb-4 opacity-50">{labels.inquiries}</h4>
                 <p className="text-gfa-inkBlack font-bold text-lg font-serif italic">general@gfa-alliance.org</p>
@@ -86,17 +86,17 @@ const Contact: React.FC = () => {
           <div className="lg:col-span-8 bg-white p-8 md:p-12 rounded-[48px] border border-gfa-border shadow-2xl relative overflow-hidden animate-fade-up delay-300">
             <div className="absolute top-0 right-0 w-48 h-48 bg-gfa-gold/5 rounded-bl-full pointer-events-none"></div>
             
-            <h3 className="text-3xl font-bold mb-10 font-serif text-gfa-inkBlack relative z-10 leading-tight">
+            <h3 className="text-3xl font-bold mb-5 font-serif text-gfa-inkBlack relative z-10 leading-tight">
               {(form.header || "Contact Form: {type}").replace('{type}', types.find(it => it.id === formType)?.label || '')}
             </h3>
             
-            <form action="https://formsubmit.co/jacky@gfafilm.org" method="POST" className="space-y-10 relative z-10">
+            <form action="https://formsubmit.co/jacky@gfafilm.org" method="POST" className="space-y-5 relative z-10">
               {/* Optional: Add hidden fields for formsubmit.co configuration */}
               <input type="hidden" name="_subject" value="New Contact Form Request from GFA Website!" />
               <input type="hidden" name="_next" value="https://gfaalliance.org/contact" />
               <input type="hidden" name="FormType" value={formType} />
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div className="space-y-4">
                   <label className="text-[10px] text-gfa-slate uppercase font-bold tracking-[0.3em] opacity-60">{form.name || "Name"}</label>
                   <input required type="text" name="name" className="w-full h-16 px-6 bg-gfa-warmWhite border border-gfa-border rounded-2xl text-base font-serif italic focus:border-gfa-gold focus:ring-4 focus:ring-gfa-gold/5 transition-all outline-none" />
@@ -107,7 +107,7 @@ const Contact: React.FC = () => {
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div className="space-y-4">
                   <label className="text-[10px] text-gfa-slate uppercase font-bold tracking-[0.3em] opacity-60">{form.location || "Location"}</label>
                   <input required type="text" name="location" className="w-full h-16 px-6 bg-gfa-warmWhite border border-gfa-border rounded-2xl text-base font-serif italic focus:border-gfa-gold focus:ring-4 focus:ring-gfa-gold/5 transition-all outline-none" />
@@ -135,7 +135,7 @@ const Contact: React.FC = () => {
                 <textarea required name="message" rows={6} className="w-full p-6 bg-gfa-warmWhite border border-gfa-border rounded-2xl text-base font-serif italic focus:border-gfa-gold focus:ring-4 focus:ring-gfa-gold/5 transition-all outline-none resize-none"></textarea>
               </div>
 
-              <div className="flex items-start gap-6 py-6">
+              <div className="flex items-start gap-3 py-3">
                 <div className="relative flex items-center">
                   <input required type="checkbox" name="consent" value="given" className="w-6 h-6 rounded-lg border-gfa-border text-gfa-gold focus:ring-gfa-gold/20 cursor-pointer" />
                 </div>

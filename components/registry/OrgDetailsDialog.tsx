@@ -36,12 +36,12 @@ const OrgDetailsDialog: React.FC<Props> = ({ org, onClose }) => {
         </div>
 
         <div className="p-8 md:p-20 pt-0">
-          <header className="flex flex-col md:flex-row gap-12 items-center mb-20 border-b border-white/10 pb-16">
+          <header className="flex flex-col md:flex-row gap-3 items-center mb-5 border-b border-white/10 pb-4">
             <div className="w-40 h-40 grayscale group-hover:grayscale-0 rounded-sm border border-white/10 p-3 bg-gfa-black/60 shadow-inner flex items-center justify-center text-5xl gold font-black">
                {org.name.slice(0,1).toUpperCase()}
             </div>
             <div className="text-center md:text-left flex-grow">
-              <div className="flex flex-wrap items-center gap-4 mb-6 justify-center md:justify-start">
+              <div className="flex flex-wrap items-center gap-4 mb-3 justify-center md:justify-start">
                 <span className={`px-5 py-2 text-[10px] font-black uppercase tracking-[0.3em] border shadow-lg ${org.certification.status === 'Active' ? 'bg-gfa-gold/10 border-gfa-gold text-gfa-gold' : 'bg-white/5 border-white/20 text-white/40'}`}>
                   {org.certification.status}
                 </span>
@@ -54,18 +54,18 @@ const OrgDetailsDialog: React.FC<Props> = ({ org, onClose }) => {
                 {org.city}, {org.country} • INSTITUTIONAL ID: {org.orgId}
               </p>
               {org.website && (
-                <a href={org.website} target="_blank" rel="noreferrer" className="text-[10px] text-gfa-gold font-black uppercase tracking-[0.4em] hover:text-white mt-8 inline-block border-b border-gfa-gold/20 pb-1">
+                <a href={org.website} target="_blank" rel="noreferrer" className="text-[10px] text-gfa-gold font-black uppercase tracking-[0.4em] hover:text-white mt-4 inline-block border-b border-gfa-gold/20 pb-1">
                   OFFICIAL PORTAL ↗
                 </a>
               )}
             </div>
           </header>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 mb-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-5">
             {/* Left: Transparency Breakdown */}
             <div className="bg-white/5 p-12 border border-white/5 rounded-sm">
-              <h3 className="text-2xl font-black uppercase tracking-[0.3em] text-white mb-10 border-l-3 border-gfa-gold pl-6 font-montserrat">Transparency Audit</h3>
-              <div className="space-y-8">
+              <h3 className="text-2xl font-black uppercase tracking-[0.3em] text-white mb-5 border-l-3 border-gfa-gold pl-6 font-montserrat">Transparency Audit</h3>
+              <div className="space-y-4">
                 {Object.entries(org.indicators).map(([key, val]) => (
                   <div key={key} className="flex justify-between items-center border-b border-white/5 pb-5">
                     <span className="text-[12px] font-black uppercase tracking-[0.2em] text-gfa-gray/80">
@@ -80,9 +80,9 @@ const OrgDetailsDialog: React.FC<Props> = ({ org, onClose }) => {
             </div>
             
             {/* Right: Confidence Index & Audit Period */}
-            <div className="flex flex-col gap-12">
+            <div className="flex flex-col gap-3">
               <div className="bg-gfa-black/60 p-12 border border-white/10 rounded-sm">
-                <h3 className="text-2xl font-black uppercase tracking-[0.3em] text-gfa-gold mb-10 font-montserrat">Trust Confidence Index</h3>
+                <h3 className="text-2xl font-black uppercase tracking-[0.3em] text-gfa-gold mb-5 font-montserrat">Trust Confidence Index</h3>
                 <div className="flex items-baseline gap-4 mb-4">
                    <div className="text-8xl font-black gold tracking-tighter font-cinzel leading-none">{org.trustScore}</div>
                    <div className="text-3xl font-serif text-white/20">/100</div>
@@ -91,8 +91,8 @@ const OrgDetailsDialog: React.FC<Props> = ({ org, onClose }) => {
               </div>
 
               <div className="bg-white/2 p-12 border border-white/5 rounded-sm">
-                <h3 className="text-[11px] font-black uppercase tracking-[0.5em] text-gfa-gold/60 mb-8 font-montserrat">Certification Period</h3>
-                <div className="grid grid-cols-2 gap-10 text-[11px] font-black uppercase tracking-[0.2em] font-montserrat">
+                <h3 className="text-[11px] font-black uppercase tracking-[0.5em] text-gfa-gold/60 mb-4 font-montserrat">Certification Period</h3>
+                <div className="grid grid-cols-2 gap-5 text-[11px] font-black uppercase tracking-[0.2em] font-montserrat">
                   <div className="space-y-2">
                     <span className="opacity-30 block">Valid From</span>
                     <span className="text-white">{org.certification.validFrom}</span>
@@ -114,9 +114,9 @@ const OrgDetailsDialog: React.FC<Props> = ({ org, onClose }) => {
             </div>
           </div>
 
-          <div className="space-y-20">
+          <div className="space-y-5">
             <div className="max-w-4xl">
-              <h3 className="text-2xl font-black uppercase tracking-[0.3em] text-white mb-8 font-montserrat">Institutional Profile</h3>
+              <h3 className="text-2xl font-black uppercase tracking-[0.3em] text-white mb-4 font-montserrat">Institutional Profile</h3>
               <p className="text-gfa-gray text-lg leading-loose uppercase tracking-widest opacity-80 font-medium">
                 {org.description || "The full institutional description is currently being audited for international translation compliance."}
               </p>
@@ -124,7 +124,7 @@ const OrgDetailsDialog: React.FC<Props> = ({ org, onClose }) => {
             
             {org.disclosures && org.disclosures.length > 0 && (
               <div>
-                <h3 className="text-2xl font-black uppercase tracking-[0.3em] text-white mb-10 font-montserrat">Verified Disclosures</h3>
+                <h3 className="text-2xl font-black uppercase tracking-[0.3em] text-white mb-5 font-montserrat">Verified Disclosures</h3>
                 <div className="flex flex-wrap gap-4">
                   {org.disclosures.map(d => (
                     <span key={d} className="bg-gfa-gold/5 px-6 py-3 border border-gfa-gold/20 text-[11px] font-black uppercase tracking-[0.3em] text-gfa-gold">
@@ -136,7 +136,7 @@ const OrgDetailsDialog: React.FC<Props> = ({ org, onClose }) => {
             )}
           </div>
           
-          <div className="mt-32 pt-16 border-t border-white/10 text-center flex flex-col md:flex-row justify-center gap-8">
+          <div className="mt-8 pt-4 border-t border-white/10 text-center flex flex-col md:flex-row justify-center gap-4">
             <button className="bg-white/5 border border-white/20 text-white px-16 py-5 text-[11px] font-black uppercase tracking-[0.4em] hover:bg-white hover:text-gfa-black transition-all duration-500 rounded-sm">
               Initiate Inquiry
             </button>
@@ -148,7 +148,7 @@ const OrgDetailsDialog: React.FC<Props> = ({ org, onClose }) => {
             </button>
           </div>
           
-          <div className="mt-20 text-center">
+          <div className="mt-5 text-center">
             <p className="text-[10px] text-gfa-gray/30 uppercase tracking-[0.5em] leading-loose max-w-3xl mx-auto italic font-bold">
               {t.registry.disclaimerBody}
             </p>

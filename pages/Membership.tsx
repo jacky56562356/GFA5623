@@ -9,7 +9,7 @@ const Membership: React.FC = () => {
   const m = t.membership || {};
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans pt-[80px] pb-16 relative">
+    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans pt-[80px] pb-4 relative">
       <SEO title={m.title || "Membership Structure"} description={m.subtitle} />
 
       {/* Global Background Image */}
@@ -22,7 +22,7 @@ const Membership: React.FC = () => {
       </div>
 
       {/* Document Header */}
-      <div className="relative bg-gfa-inkBlack py-16 mb-12 shadow-2xl overflow-hidden">
+      <div className="relative bg-gfa-inkBlack py-4 mb-3 shadow-2xl overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-20 grayscale">
           <img 
             src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop" 
@@ -34,10 +34,10 @@ const Membership: React.FC = () => {
         
         <div className="container-gfa relative z-10 text-center">
           <div className="max-w-4xl mx-auto animate-fade-in">
-            <div className="gold-badge mb-8 animate-fade-up">
+            <div className="gold-badge mb-4 animate-fade-up">
               Institutional Network
             </div>
-            <h1 className="text-5xl md:text-8xl font-bold font-serif text-white mb-8 leading-tight drop-shadow-2xl">
+            <h1 className="text-5xl md:text-8xl font-bold font-serif text-white mb-4 leading-tight drop-shadow-2xl">
               {m.title}
             </h1>
             <p className="text-xl md:text-2xl text-gfa-gold font-light leading-relaxed max-w-2xl mx-auto italic font-serif animate-fade-up delay-200">
@@ -48,13 +48,13 @@ const Membership: React.FC = () => {
       </div>
 
       <div className="container-gfa relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
           
           {/* Sidebar Navigation */}
           <aside className="lg:col-span-3 hidden lg:block">
-            <div className="sticky top-24 space-y-8">
+            <div className="sticky top-24 space-y-4">
               <div className="bg-white p-8 rounded-[32px] shadow-xl border border-gfa-border">
-                <h3 className="text-[10px] font-bold uppercase tracking-widest text-gfa-slate mb-8 border-b border-gfa-border pb-4">Document Sections</h3>
+                <h3 className="text-[10px] font-bold uppercase tracking-widest text-gfa-slate mb-4 border-b border-gfa-border pb-4">Document Sections</h3>
                 <nav className="space-y-4">
                   <a href="#structure" className="flex items-center gap-3 text-sm font-bold text-gfa-slate hover:text-gfa-gold transition-all group">
                     <div className="w-2 h-2 bg-gfa-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
@@ -72,7 +72,7 @@ const Membership: React.FC = () => {
                   <img src="https://images.unsplash.com/photo-1521791136364-798a730bb361?q=80&w=2070&auto=format&fit=crop" alt="Network" className="w-full h-full object-cover grayscale" />
                 </div>
                 <div className="relative z-10">
-                  <ShieldCheck className="w-10 h-10 text-gfa-gold mb-6" />
+                  <ShieldCheck className="w-10 h-10 text-gfa-gold mb-3" />
                   <h4 className="text-xs font-bold uppercase tracking-widest mb-4">Institutional Note</h4>
                   <p className="text-sm text-white/70 leading-relaxed italic font-serif">
                     Membership in the GFA is a commitment to professional excellence and uncompromising industry integrity.
@@ -87,7 +87,7 @@ const Membership: React.FC = () => {
             <div className="bg-white border border-gfa-border rounded-[40px] shadow-2xl overflow-hidden">
               
               {/* Document Metadata Strip */}
-              <div className="bg-gfa-warmWhite border-b border-gfa-border px-10 py-6 flex flex-wrap gap-12 text-[10px] font-bold uppercase tracking-widest text-gfa-slate">
+              <div className="bg-gfa-warmWhite border-b border-gfa-border px-10 py-3 flex flex-wrap gap-3 text-[10px] font-bold uppercase tracking-widest text-gfa-slate">
                 <div className="flex items-center gap-2">
                   <span className="opacity-50">Document Type:</span>
                   <span className="text-gfa-inkBlack">Membership Framework</span>
@@ -105,10 +105,10 @@ const Membership: React.FC = () => {
                 </div>
               </div>
 
-              <div className="p-8 md:p-12 space-y-16">
+              <div className="p-8 md:p-12 space-y-4">
                 {/* Structure */}
                 <section id="structure" className="scroll-mt-24">
-                  <div className="flex items-start gap-8 mb-10">
+                  <div className="flex items-start gap-4 mb-5">
                     <div className="w-16 h-16 bg-gfa-warmWhite border border-gfa-border rounded-2xl flex items-center justify-center text-2xl font-serif text-gfa-gold shrink-0 shadow-inner">
                       01
                     </div>
@@ -120,7 +120,7 @@ const Membership: React.FC = () => {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 gap-12">
+                  <div className="grid grid-cols-1 gap-3">
                     {(m.tiers || []).map((tier: any, i: number) => (
                       <div key={i} className="flex flex-col md:flex-row gap-0 items-stretch bg-gfa-warmWhite rounded-[32px] border border-gfa-border hover:border-gfa-gold/30 hover:shadow-2xl transition-all duration-500 group overflow-hidden">
                         <div className="md:w-1/3 relative overflow-hidden min-h-[250px]">
@@ -140,7 +140,7 @@ const Membership: React.FC = () => {
                         </div>
                         <div className="md:w-2/3 p-10 md:p-12 flex flex-col justify-center bg-white relative">
                           <div className="absolute top-0 right-0 w-32 h-32 bg-gfa-gold/5 rounded-bl-full -mr-16 -mt-10 transition-all group-hover:bg-gfa-gold/10 pointer-events-none"></div>
-                          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8">
+                          <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 mb-4">
                             <div>
                               <h3 className="text-3xl font-bold text-gfa-inkBlack font-serif leading-tight">{tier.name}</h3>
                               <div className="text-[10px] font-bold text-gfa-gold uppercase tracking-[0.3em] mt-2">Institutional Tier Level {i + 1}</div>
@@ -150,7 +150,7 @@ const Membership: React.FC = () => {
                             </button>
                           </div>
                           
-                          <p className="text-lg text-gfa-slate leading-relaxed font-light mb-10 opacity-90">
+                          <p className="text-lg text-gfa-slate leading-relaxed font-light mb-5 opacity-90">
                             {tier.desc}
                           </p>
 
@@ -174,7 +174,7 @@ const Membership: React.FC = () => {
 
                 {/* Benefits */}
                 <section id="benefits" className="scroll-mt-24">
-                  <div className="flex items-start gap-8 mb-10">
+                  <div className="flex items-start gap-4 mb-5">
                     <div className="w-16 h-16 bg-gfa-warmWhite border border-gfa-border rounded-2xl flex items-center justify-center text-2xl font-serif text-gfa-gold shrink-0 shadow-inner">
                       02
                     </div>
@@ -186,9 +186,9 @@ const Membership: React.FC = () => {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     {(m.benefits || []).map((item: string, i: number) => (
-                      <div key={i} className="flex flex-col gap-6 p-10 bg-white border border-gfa-border rounded-[32px] shadow-sm hover:border-gfa-gold/30 transition-all group">
+                      <div key={i} className="flex flex-col gap-3 p-10 bg-white border border-gfa-border rounded-[32px] shadow-sm hover:border-gfa-gold/30 transition-all group">
                         <div className="w-12 h-12 bg-gfa-warmWhite rounded-2xl flex items-center justify-center text-gfa-gold group-hover:bg-gfa-gold group-hover:text-white transition-all duration-500">
                           <CheckCircle className="w-6 h-6" />
                         </div>
@@ -203,10 +203,10 @@ const Membership: React.FC = () => {
 
               {/* Document Footer */}
               <div className="bg-gfa-warmWhite border-t border-gfa-border p-16 text-center">
-                <p className="text-[10px] text-gfa-slate font-bold uppercase tracking-[0.4em] mb-10 opacity-50">
+                <p className="text-[10px] text-gfa-slate font-bold uppercase tracking-[0.4em] mb-5 opacity-50">
                   Official GFA Membership Framework
                 </p>
-                <div className="flex justify-center gap-8">
+                <div className="flex justify-center gap-4">
                   <button className="btn-primary h-16 px-16 text-lg">
                     Apply for Membership
                   </button>

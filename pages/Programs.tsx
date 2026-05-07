@@ -50,11 +50,11 @@ const Programs: React.FC = () => {
   ];
 
   return (
-    <div className="bg-gfa-warmWhite pt-[80px] font-sans pb-24">
+    <div className="bg-gfa-warmWhite pt-[80px] font-sans pb-6">
       <SEO title={isEn ? "Programs | GFA" : "项目 | GFA"} description={desc} />
 
       {/* Banner */}
-      <div className="relative bg-[#1A2B4A] py-20 mb-12 overflow-hidden">
+      <div className="relative bg-[#1A2B4A] py-5 mb-3 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://images.unsplash.com/photo-1604928141064-207cea6f5722?q=80&w=2070&auto=format&fit=crop" 
@@ -65,7 +65,7 @@ const Programs: React.FC = () => {
         </div>
         <div className="container-gfa relative z-10">
           <div className="max-w-4xl">
-            <h1 className="text-5xl md:text-7xl font-bold font-serif text-white mb-6 leading-tight drop-shadow-lg">
+            <h1 className="text-5xl md:text-7xl font-bold font-serif text-white mb-3 leading-tight drop-shadow-lg">
               {title}
             </h1>
             <p className="text-xl md:text-2xl text-gfa-gold font-light leading-relaxed max-w-2xl italic font-serif">
@@ -75,7 +75,7 @@ const Programs: React.FC = () => {
         </div>
       </div>
 
-      <div className="container-gfa max-w-6xl mx-auto space-y-16">
+      <div className="container-gfa max-w-6xl mx-auto space-y-4">
         {programs.map((program, idx) => (
           <div key={idx} className={`bg-white rounded-[32px] overflow-hidden shadow-xl border border-gfa-border flex flex-col ${idx % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row'} group hover:shadow-2xl transition-all duration-500`}>
             {/* Image */}
@@ -90,8 +90,8 @@ const Programs: React.FC = () => {
             {/* Content */}
             <div className="md:w-1/2 p-10 md:p-16 flex flex-col justify-center bg-white relative">
                <div className="absolute top-0 right-0 w-32 h-32 bg-[#C9A84C]/5 rounded-bl-full -mr-16 -mt-16 transition-all group-hover:bg-[#C9A84C]/10 pointer-events-none"></div>
-               <h2 className="text-3xl md:text-4xl font-bold font-serif text-gfa-inkBlack mb-6 leading-tight">{program.title}</h2>
-               <p className="text-lg text-gfa-slate leading-relaxed font-light mb-10 opacity-90">
+               <h2 className="text-3xl md:text-4xl font-bold font-serif text-gfa-inkBlack mb-3 leading-tight">{program.title}</h2>
+               <p className="text-lg text-gfa-slate leading-relaxed font-light mb-5 opacity-90">
                  {program.desc}
                </p>
                <Link 

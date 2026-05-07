@@ -24,13 +24,13 @@ const Verify: React.FC = () => {
   return (
     <div className="py-40 max-w-6xl mx-auto px-4 min-h-screen">
       <div className="max-w-3xl mx-auto text-center animate-fade-in">
-        <div className="inline-block px-4 py-1.5 border border-gfa-gold/30 text-gfa-gold text-[8px] font-black uppercase tracking-[0.5em] mb-8 bg-gfa-gold/5 font-montserrat">
+        <div className="inline-block px-4 py-1.5 border border-gfa-gold/30 text-gfa-gold text-[8px] font-black uppercase tracking-[0.5em] mb-4 bg-gfa-gold/5 font-montserrat">
            Supervisory Database Access
         </div>
-        <h1 className="text-3xl md:text-5xl font-black mb-6 gold uppercase tracking-tighter font-cinzel leading-none">
+        <h1 className="text-3xl md:text-5xl font-black mb-3 gold uppercase tracking-tighter font-cinzel leading-none">
           {v.title}
         </h1>
-        <p className="text-sm md:text-base text-gfa-gray mb-10 font-medium uppercase tracking-[0.2em] max-w-2xl mx-auto leading-loose opacity-60">
+        <p className="text-sm md:text-base text-gfa-gray mb-5 font-medium uppercase tracking-[0.2em] max-w-2xl mx-auto leading-loose opacity-60">
           {v.body}
         </p>
         
@@ -41,7 +41,7 @@ const Verify: React.FC = () => {
             placeholder={v.form.placeholder} 
             value={id}
             onChange={(e) => setId(e.target.value)}
-            className="w-full bg-gfa-black/60 border border-white/10 p-5 text-white focus:outline-none focus:border-gfa-gold font-mono uppercase text-xs tracking-[0.2em] rounded-sm mb-6 transition-all"
+            className="w-full bg-gfa-black/60 border border-white/10 p-5 text-white focus:outline-none focus:border-gfa-gold font-mono uppercase text-xs tracking-[0.2em] rounded-sm mb-3 transition-all"
           />
           <button disabled={loading} className="btn-gold px-12 py-5 w-full text-[11px] shadow-2xl">
             {loading ? t.common.loading : v.form.button}
@@ -49,14 +49,14 @@ const Verify: React.FC = () => {
         </form>
 
         {result === 'valid' && (
-          <div className="mt-10 p-8 bg-gfa-gold/10 border border-gfa-gold/20 animate-fade-up">
+          <div className="mt-5 p-8 bg-gfa-gold/10 border border-gfa-gold/20 animate-fade-up">
             <div className="text-gfa-gold font-black text-[9px] uppercase tracking-[0.4em] mb-2">Statutory Status: Verified</div>
             <div className="text-white text-base font-black uppercase tracking-widest leading-tight">Bond Active & Audited for 2024-2025</div>
           </div>
         )}
         
         {result === 'notFound' && (
-          <div className="mt-10 p-8 bg-white/5 border border-white/10 animate-fade-up">
+          <div className="mt-5 p-8 bg-white/5 border border-white/10 animate-fade-up">
             <div className="text-white font-black text-[9px] uppercase tracking-[0.4em] mb-2">Statutory Status: Not Found</div>
             <div className="text-white text-base font-black uppercase tracking-widest leading-tight opacity-60">No Active Bond Record in GFA Database</div>
           </div>

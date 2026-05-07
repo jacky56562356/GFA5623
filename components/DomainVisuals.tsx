@@ -62,7 +62,7 @@ const DomainVisuals: React.FC = () => {
   }, []);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-4">
       {DOMAINS.map(domain => (
         <div key={domain.id} className="relative aspect-video rounded-xl overflow-hidden border border-white/10 bg-white/5 group">
           {loading[domain.id] ? (
