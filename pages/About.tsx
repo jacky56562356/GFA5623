@@ -14,7 +14,7 @@ const About: React.FC = () => {
       <SEO title="About | Global Film Alliance" />
 
       {/* ── HERO ── */}
-      <section className="relative min-h-[70vh] flex items-end justify-start overflow-hidden bg-gfa-inkBlack mt-[90px] md:mt-[100px]">
+      <section className="relative min-h-[65vh] flex items-end justify-start overflow-hidden bg-gfa-inkBlack pt-16">
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg?auto=compress&cs=tinysrgb&w=1920"

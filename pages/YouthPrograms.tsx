@@ -14,7 +14,7 @@ const YouthPrograms: React.FC = () => {
       <SEO title="Youth Programs | Global Film Alliance" />
 
       {/* Hero */}
-      <section className="relative h-screen min-h-[700px] flex items-end overflow-hidden bg-gfa-inkBlack pt-20">
+      <section className="relative h-screen min-h-[700px] flex items-end overflow-hidden bg-gfa-inkBlack pt-16">
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.pexels.com/photos/4350057/pexels-photo-4350057.jpeg?auto=compress&cs=tinysrgb&w=1600"

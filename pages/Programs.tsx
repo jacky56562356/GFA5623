@@ -50,7 +50,7 @@ const Programs: React.FC = () => {
   ];
 
   return (
-    <div className="bg-gfa-warmWhite pt-[80px] font-sans pb-24">
+    <div className="bg-gfa-warmWhite pt-16 font-sans pb-24">
       <SEO title={isEn ? "Programs | GFA" : "项目 | GFA"} description={desc} />
 
       {/* Banner */}

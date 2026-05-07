@@ -8,7 +8,7 @@ const ProgramPlatformAlliance: React.FC = () => {
   const isEn = locale !== Locale.ZH;
 
   return (
-    <div className="bg-gfa-warmWhite pt-[80px] font-sans pb-24">
+    <div className="bg-gfa-warmWhite pt-16 font-sans pb-24">
       <SEO title="Hollywood Career Training | GFA" />
 
       <div className="relative bg-[#1A2B4A] py-20 mb-12 overflow-hidden">

@@ -35,7 +35,7 @@ const Competition: React.FC = () => {
       <SEO title="Global Competition | Global Film Alliance" />
 
       {/* Hero */}
-      <section className="relative h-screen min-h-[800px] flex items-end overflow-hidden bg-gfa-inkBlack pt-20">
+      <section className="relative h-screen min-h-[800px] flex items-end overflow-hidden bg-gfa-inkBlack pt-16">
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=1600"

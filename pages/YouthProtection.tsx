@@ -13,7 +13,7 @@ const YouthProtection: React.FC = () => {
       <SEO title="Youth Protection | Global Film Alliance" />
 
       {/* Hero Section */}
-      <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden bg-gfa-inkBlack group">
+      <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden bg-gfa-inkBlack group pt-16">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://images.unsplash.com/photo-1544717305-2782549b5136?q=80&w=1974&auto=format&fit=crop" 
@@ -23,7 +23,7 @@ const YouthProtection: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-gfa-inkBlack via-gfa-inkBlack/50 to-transparent"></div>
         </div>
 
-        <div className="container-gfa relative z-10 text-center px-4 mt-20 max-w-4xl mx-auto">
+        <div className="container-gfa relative z-10 text-center px-4 max-w-4xl mx-auto">
           <Shield className="w-16 h-16 text-[#C9A84C] mx-auto mb-6" />
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-serif text-white mb-6 leading-tight drop-shadow-2xl">
             {isEn ? "Youth Protection & Safety" : "青少年安全与保护"}

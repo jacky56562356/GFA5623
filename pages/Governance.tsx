@@ -9,7 +9,7 @@ const Governance: React.FC = () => {
   const gov = t.governance;
 
   return (
-    <div className="bg-gfa-warmWhite pt-32 pb-16 px-6 min-h-screen relative overflow-hidden">
+    <div className="bg-gfa-warmWhite pt-20 pb-16 px-6 min-h-screen relative overflow-hidden">
       <SEO 
         title={gov.title || "Governance Charter"} 
         description={gov.subtitle || "Guided by a multi-national board dedicated to cinematic ethics."} 

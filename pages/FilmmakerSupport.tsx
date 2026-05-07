@@ -13,7 +13,7 @@ const FilmmakerSupport: React.FC = () => {
       <SEO title="Filmmaker Support | Global Film Alliance" />
 
       {/* Banner */}
-      <section className="relative min-h-[75vh] flex items-end justify-start overflow-hidden bg-gfa-inkBlack pt-20">
+      <section className="relative min-h-[65vh] flex items-end justify-start overflow-hidden bg-gfa-inkBlack pt-16">
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.pexels.com/photos/2566573/pexels-photo-2566573.jpeg?auto=compress&cs=tinysrgb&w=1920"

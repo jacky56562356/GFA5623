@@ -9,7 +9,7 @@ const ProgramAwards: React.FC = () => {
   const isEn = locale !== Locale.ZH;
 
   return (
-    <div className="bg-[#F5F2EE] pt-[80px] font-sans pb-24">
+    <div className="bg-[#F5F2EE] pt-16 font-sans pb-24">
       <SEO title="Golden Feather Film Awards | GFA" />
 
       {/* Banner */}

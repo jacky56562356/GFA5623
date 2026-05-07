@@ -13,7 +13,7 @@ const Impact: React.FC = () => {
       <SEO title="Impact | Global Film Alliance" />
 
       {/* Banner */}
-      <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden bg-gfa-inkBlack pt-20">
+      <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden bg-gfa-inkBlack pt-16">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=2070&auto=format&fit=crop" 

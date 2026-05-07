@@ -2,17 +2,14 @@ import React from 'react';
 import { useLocale } from '../LocaleContext.tsx';
 import { Locale } from '../types.ts';
 import SEO from '../components/SEO.tsx';
-import { 
-  Shield, CheckCircle, AlertCircle, 
-  Heart, Users, PhoneCall, BookOpen, Scale
-} from 'lucide-react';
+import { Shield, CircleCheck as CheckCircle, CircleAlert as AlertCircle, Heart, Users, PhoneCall, BookOpen, Scale } from 'lucide-react';
 
 const Safeguarding: React.FC = () => {
   const { locale } = useLocale();
   const isEn = locale !== Locale.ZH;
 
   return (
-    <div className="bg-gfa-warmWhite pt-[80px] font-sans pb-24">
+    <div className="bg-gfa-warmWhite pt-16 font-sans pb-24">
       <SEO title="Safeguarding Youth | GFA" />
 
       {/* Hero */}

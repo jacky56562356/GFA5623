@@ -2,14 +2,14 @@
 import React from 'react';
 import { useLocale } from '../LocaleContext.tsx';
 import SEO from '../components/SEO.tsx';
-import { Users, CheckCircle, Globe, ShieldCheck, FileText, Share2, Printer, Download, Info, Star, Briefcase, GraduationCap } from 'lucide-react';
+import { Users, CircleCheck as CheckCircle, Globe, ShieldCheck, FileText, Share2, Printer, Download, Info, Star, Briefcase, GraduationCap } from 'lucide-react';
 
 const Membership: React.FC = () => {
   const { t } = useLocale();
   const m = t.membership || {};
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans pt-[80px] pb-16 relative">
+    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans pt-16 pb-16 relative">
       <SEO title={m.title || "Membership Structure"} description={m.subtitle} />
 
       {/* Global Background Image */}

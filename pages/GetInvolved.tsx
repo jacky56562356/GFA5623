@@ -13,7 +13,7 @@ const GetInvolved: React.FC = () => {
       <SEO title="Get Involved | Global Film Alliance" />
 
       {/* Hero */}
-      <section className="bg-gfa-inkBlack text-white pt-32 pb-24 border-b border-white/10">
+      <section className="bg-gfa-inkBlack text-white pt-20 pb-24 border-b border-white/10">
         <div className="container-gfa max-w-4xl mx-auto px-4 text-center">
            <h1 className="text-4xl md:text-6xl font-bold font-serif mb-6 leading-tight">
              {isEn ? "Join the" : "加入"}<br/>

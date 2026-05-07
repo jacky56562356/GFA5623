@@ -9,7 +9,7 @@ const Complaints = () => {
   const comp = t.complaints;
 
   return (
-    <div className="bg-gfa-warmWhite pt-32 pb-16 px-6 min-h-screen relative overflow-hidden">
+    <div className="bg-gfa-warmWhite pt-20 pb-16 px-6 min-h-screen relative overflow-hidden">
       <SEO 
         title={comp.title || "Feedback & Complaints"} 
         description="Official channel for reporting concerns or providing feedback regarding GFA-accredited organizations." 

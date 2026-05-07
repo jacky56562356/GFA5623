@@ -82,7 +82,7 @@ section {
 }
 
 /* Kill excessive default spacing */
-* { scroll-margin-top: 90px; }
+* { scroll-margin-top: 64px; }
 .section-title { margin-bottom: var(--s-4); } /* 24px */
 .stack > * + * { margin-top: var(--s-3); } /* vertical rhythm helper */
 
