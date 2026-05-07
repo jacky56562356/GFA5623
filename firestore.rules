@@ -1,0 +1,100 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // 0. Global Safety Net
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // 3. Primitive Definition
+    function isValidId(id) {
+      return id is string && id.size() > 0 && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+    
+    function incoming() { return request.resource.data; }
+    function existing() { return resource.data; }
+    function isSignedIn() { return request.auth != null; }
+
+    // UserProfile Blueprint Validation
+    function isValidUserProfile(data) {
+      return data.keys().hasAll(['userId', 'name', 'createdAt', 'updatedAt'])
+        // check types and sizes
+        && data.userId is string && data.userId.size() > 0 && data.userId.size() <= 128
+        && data.name is string && data.name.size() > 0 && data.name.size() <= 100
+        && ( !('bio' in data) || (data.bio is string && data.bio.size() <= 500) )
+        // identity integrity
+        && data.userId == request.auth.uid;
+    }
+
+    function isValidGearApplication(data) {
+      return data.keys().hasAll(['userId', 'applicantName', 'email', 'phone', 'driversLicense', 'ssn', 'currentAddress', 'homeAddress', 'graduatedSchool', 'graduationProjectUrl', 'schoolMentorContact', 'shootingPlan', 'totalBudget', 'existingCrew', 'neededCrew', 'projectTitle', 'projectType', 'logline', 'scriptUrl', 'futureDirection', 'requestedGear', 'estimatedShootDates', 'status', 'createdAt'])
+        && data.userId is string && data.userId.size() > 0 && data.userId.size() <= 128
+        && data.applicantName is string && data.applicantName.size() > 0 && data.applicantName.size() <= 100
+        && data.email is string && data.email.size() > 0 && data.email.size() <= 100
+        && data.phone is string && data.phone.size() > 0 && data.phone.size() <= 20
+        && data.driversLicense is string && data.driversLicense.size() > 0 && data.driversLicense.size() <= 50
+        && data.ssn is string && data.ssn.size() > 0 && data.ssn.size() <= 20
+        && data.currentAddress is string && data.currentAddress.size() > 0 && data.currentAddress.size() <= 250
+        && data.homeAddress is string && data.homeAddress.size() > 0 && data.homeAddress.size() <= 250
+        && data.graduatedSchool is string && data.graduatedSchool.size() > 0 && data.graduatedSchool.size() <= 100
+        && data.graduationProjectUrl is string && data.graduationProjectUrl.size() > 0 && data.graduationProjectUrl.size() <= 500
+        && data.schoolMentorContact is string && data.schoolMentorContact.size() > 0 && data.schoolMentorContact.size() <= 100
+        && data.shootingPlan is string && data.shootingPlan.size() > 0 && data.shootingPlan.size() <= 2000
+        && data.totalBudget is string && data.totalBudget.size() > 0 && data.totalBudget.size() <= 100
+        && data.existingCrew is string && data.existingCrew.size() > 0 && data.existingCrew.size() <= 1000
+        && data.neededCrew is string && data.neededCrew.size() > 0 && data.neededCrew.size() <= 1000
+        && data.projectTitle is string && data.projectTitle.size() > 0 && data.projectTitle.size() <= 200
+        && data.projectType is string && data.projectType.size() > 0 && data.projectType.size() <= 100
+        && data.logline is string && data.logline.size() > 0 && data.logline.size() <= 1000
+        && data.scriptUrl is string && data.scriptUrl.size() > 0 && data.scriptUrl.size() <= 500
+        && ( !('pitchDeckUrl' in data) || (data.pitchDeckUrl is string && data.pitchDeckUrl.size() <= 500) )
+        && data.futureDirection is string && data.futureDirection.size() > 0 && data.futureDirection.size() <= 1000
+        && data.requestedGear is string && data.requestedGear.size() > 0 && data.requestedGear.size() <= 2000
+        && data.estimatedShootDates is string && data.estimatedShootDates.size() > 0 && data.estimatedShootDates.size() <= 100
+        && data.status in ['pending', 'approved', 'rejected']
+        && data.userId == request.auth.uid;
+    }
+
+    match /users/{userId} {
+      // 3. Path Variable Hardening
+      allow get: if isSignedIn() && isValidId(userId);
+      // Query Enforcer
+      allow list: if isSignedIn() && resource.data.userId == request.auth.uid;
+
+      allow create: if isSignedIn() 
+        && isValidId(userId)
+        && request.auth.uid == userId
+        && isValidUserProfile(incoming())
+        && incoming().keys().size() == ( ('bio' in incoming()) ? 5 : 4 )
+        && incoming().createdAt == request.time
+        && incoming().updatedAt == request.time;
+
+      allow update: if isSignedIn()
+        && isValidId(userId)
+        && request.auth.uid == userId
+        && isValidUserProfile(incoming())
+        && incoming().updatedAt == request.time
+        && incoming().createdAt == existing().createdAt
+        && incoming().userId == existing().userId
+        && incoming().diff(existing()).affectedKeys().hasOnly(['name', 'bio', 'updatedAt']);
+        
+      allow delete: if false; // Users shouldn't be deleted via client SDK
+    }
+
+    match /gear_applications/{applicationId} {
+      allow get: if isSignedIn() && isValidId(applicationId) && resource.data.userId == request.auth.uid;
+      allow list: if isSignedIn() && resource.data.userId == request.auth.uid;
+
+      allow create: if isSignedIn()
+        && isValidId(applicationId)
+        && isValidGearApplication(incoming())
+        && incoming().keys().size() == ( ('pitchDeckUrl' in incoming()) ? 25 : 24 )
+        && incoming().createdAt == request.time
+        && incoming().status == 'pending';
+
+      allow update: if false; // Cannot update application via client SDK once submitted for now
+      allow delete: if false; // Cannot delete applications
+    }
+  }
+}

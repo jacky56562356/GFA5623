@@ -1,0 +1,132 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "User Profile",
+      "description": "Public and private information for a user.",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": "Firebase Auth UID"
+        },
+        "name": {
+          "type": "string",
+          "description": "User's display name"
+        },
+        "bio": {
+          "type": "string",
+          "description": "User's bio"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "datetime"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "datetime"
+        }
+      },
+      "required": ["userId", "name", "createdAt", "updatedAt"]
+    },
+    "GearApplication": {
+      "title": "Gear Application",
+      "description": "Application for free pro gear access.",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": "Firebase Auth UID of the applicant"
+        },
+        "applicantName": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "phone": {
+          "type": "string"
+        },
+        "driversLicense": {
+          "type": "string"
+        },
+        "ssn": {
+          "type": "string"
+        },
+        "currentAddress": {
+          "type": "string"
+        },
+        "homeAddress": {
+          "type": "string"
+        },
+        "graduatedSchool": {
+          "type": "string"
+        },
+        "graduationProjectUrl": {
+          "type": "string"
+        },
+        "schoolMentorContact": {
+          "type": "string"
+        },
+        "shootingPlan": {
+          "type": "string"
+        },
+        "totalBudget": {
+          "type": "string"
+        },
+        "existingCrew": {
+          "type": "string"
+        },
+        "neededCrew": {
+          "type": "string"
+        },
+        "projectTitle": {
+          "type": "string"
+        },
+        "projectType": {
+          "type": "string"
+        },
+        "logline": {
+          "type": "string"
+        },
+        "scriptUrl": {
+          "type": "string"
+        },
+        "pitchDeckUrl": {
+          "type": "string"
+        },
+        "futureDirection": {
+          "type": "string"
+        },
+        "requestedGear": {
+          "type": "string"
+        },
+        "estimatedShootDates": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["pending", "approved", "rejected"]
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "datetime"
+        }
+      },
+      "required": ["userId", "applicantName", "email", "phone", "driversLicense", "ssn", "currentAddress", "homeAddress", "graduatedSchool", "graduationProjectUrl", "schoolMentorContact", "shootingPlan", "totalBudget", "existingCrew", "neededCrew", "projectTitle", "projectType", "logline", "scriptUrl", "futureDirection", "requestedGear", "estimatedShootDates", "status", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": {
+        "$ref": "#/entities/UserProfile"
+      },
+      "description": "User profiles. Each document ID is the Firebase Auth UID."
+    },
+    "/gear_applications/{applicationId}": {
+      "schema": {
+        "$ref": "#/entities/GearApplication"
+      },
+      "description": "Gear access applications. Random ID."
+    }
+  }
+}

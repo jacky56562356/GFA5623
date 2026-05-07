@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useLocale } from '../LocaleContext.tsx';
 import { Locale } from '../types.ts';
 import SEO from '../components/SEO.tsx';
@@ -47,7 +48,7 @@ const FilmmakerSupport: React.FC = () => {
         <div className="container-gfa px-4 max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold font-serif text-gfa-inkBlack">
-              {isEn ? "How We Help You Break In" : "我们帮你解决什么"}
+              {isEn ? "How We Help You Break In" : "我们如何提供公益支持"}
             </h2>
           </div>
 
@@ -58,22 +59,22 @@ const FilmmakerSupport: React.FC = () => {
                 <div className="w-16 h-16 bg-[#C9A84C]/10 rounded-2xl flex items-center justify-center mb-6 text-[#C9A84C]">
                   <Camera className="w-8 h-8" />
                 </div>
-                <h3 className="text-2xl font-bold font-serif mb-2">{isEn ? "Free Pro Gear Access" : "专业设备免费借用"}</h3>
+                <h3 className="text-2xl font-bold font-serif mb-2">{isEn ? "Free Pro Gear Access" : "公益影视设备借用"}</h3>
               </div>
               <div className="md:w-2/3 flex flex-col justify-center space-y-4">
-                <div className="bg-red-50 text-red-800 p-4 rounded-xl text-sm font-light border border-red-100">
-                  <strong className="font-bold">{isEn ? "The Barrier: " : "障碍："}</strong>
-                  {isEn ? "Professional cinema cameras cost hundreds of dollars a day to rent. Recent grads simply can't afford it." : "专业摄影机一天租金数百美元，刚毕业的电影人根本负担不起。"}
+                <div className="bg-red-50 text-red-800 p-5 rounded-xl text-sm font-light border border-red-100 leading-relaxed">
+                  <strong className="font-bold">{isEn ? "The Barrier: " : "高昂的硬件门槛："}</strong>
+                  {isEn ? "A cinema camera package costs $1,500+ a day. This financial barrier forces talented emerging creators to shoot on consumer gear, compromising their creative vision." : "专业摄影机、镜头及灯光设备的单日租金极高。这道显而易见的资金门槛，让许多拥有卓越才华但预算有限的新生代创作者，被迫妥协于创作质量。"}
                 </div>
-                <div className="bg-green-50 text-green-800 p-4 rounded-xl text-sm font-light border border-green-100">
-                  <strong className="font-bold">{isEn ? "GFA Solution: " : "GFA方案："}</strong>
-                  {isEn ? "Through our Blackmagic Design partnership, we offer pro-level cameras, lighting, and audio gear for free or at radically reduced costs." : "通过 Blackmagic Design 合作，提供专业级摄影机、灯光、收音设备免费或低价借用。"}
+                <div className="bg-green-50 text-green-800 p-5 rounded-xl text-sm font-light border border-green-100 leading-relaxed">
+                  <strong className="font-bold">{isEn ? "GFA Solution: " : "GFA方案：平权与赋能："}</strong>
+                  {isEn ? "Driven by our nonprofit mission, we provide free access to professional equipment. Through industry donations and partnerships, we offer approved independent projects access to cinema cameras to equalize opportunities." : "作为非营利机构，GFA致力于影视资源平等化。我们为符合条件的独立创作者免费提供工业级摄像机（如Blackmagic Design设备）、镜头与配套收音器材，帮助年轻力量实现高质量视觉表达。"}
                 </div>
-                <p className="text-sm text-gfa-slate font-light pt-2">
-                  {isEn ? "Details: Apply with your project plan. Upon approval, you can borrow gear for 2-4 weeks." : "具体说明：按项目申请，需提交作品计划，审核通过后可借用2-4周。"}
+                <p className="text-sm text-gfa-slate font-light pt-2 leading-relaxed">
+                  {isEn ? "Details: Open to low-budget narrative shorts and documentaries. Projects must demonstrate a clear vision and need. Approved filmmakers receive a 1 to 4-week equipment loan at no cost." : "具体说明：面向预算有限的独立短片、纪录片及公益影像项目开放。提交完整剧本与制片计划评估后，创作者即可获得1至4周的公益免租金设备借用支持。"}
                 </p>
                 <div className="pt-2">
-                  <button className="text-xs font-bold uppercase tracking-widest bg-gfa-inkBlack text-white px-6 py-2 rounded-full hover:bg-[#C9A84C] hover:shadow-md hover:-translate-y-0.5 active:bg-[#a68636] active:scale-95 transition-all duration-200">{isEn ? "Apply for Gear" : "申请设备借用"}</button>
+                  <Link to="/gear-application" className="inline-block text-xs font-bold uppercase tracking-widest bg-gfa-inkBlack text-white px-6 py-2 rounded-full hover:bg-[#C9A84C] hover:shadow-md hover:-translate-y-0.5 active:bg-[#a68636] active:scale-95 transition-all duration-200">{isEn ? "Apply for Gear" : "提交项目审阅与设备申请"}</Link>
                 </div>
               </div>
             </div>
@@ -84,22 +85,22 @@ const FilmmakerSupport: React.FC = () => {
                 <div className="w-16 h-16 bg-[#C9A84C]/10 rounded-2xl flex items-center justify-center mb-6 text-[#C9A84C]">
                   <Users className="w-8 h-8" />
                 </div>
-                <h3 className="text-2xl font-bold font-serif mb-2">{isEn ? "1-on-1 Hollywood Mentorship" : "好莱坞导师一对一指导"}</h3>
+                <h3 className="text-2xl font-bold font-serif mb-2">{isEn ? "Nonprofit Mentorship" : "公益导师扶持计划"}</h3>
               </div>
               <div className="md:w-2/3 flex flex-col justify-center space-y-4">
-                <div className="bg-red-50 text-red-800 p-4 rounded-xl text-sm font-light border border-red-100">
-                  <strong className="font-bold">{isEn ? "The Barrier: " : "障碍："}</strong>
-                  {isEn ? "Hollywood runs on relationships. It is incredibly difficult for outsiders to penetrate the inner circle." : "好莱坞靠关系，外人很难进入核心圈子。"}
+                <div className="bg-red-50 text-red-800 p-5 rounded-xl text-sm font-light border border-red-100 leading-relaxed">
+                  <strong className="font-bold">{isEn ? "The Barrier: " : "资源纽带缺失："}</strong>
+                  {isEn ? "The film industry relies heavily on established networks, making it extremely difficult for outsiders—especially those from underrepresented backgrounds—to find guidance and opportunities." : "影视行业高度依赖人际协作网络。缺乏引路人的青年创作者，即使拥有出色的潜力，也往往在职业初期迷失方向，难以及时获得专业人士的指导与反馈。"}
                 </div>
-                <div className="bg-green-50 text-green-800 p-4 rounded-xl text-sm font-light border border-green-100">
-                  <strong className="font-bold">{isEn ? "GFA Solution: " : "GFA方案："}</strong>
-                  {isEn ? "We match each applicant with an active industry mentor who provides one-on-one career guidance." : "为每位申请者匹配有好莱坞工业背景的导师，提供一对一职业指导。"}
+                <div className="bg-green-50 text-green-800 p-5 rounded-xl text-sm font-light border border-green-100 leading-relaxed">
+                  <strong className="font-bold">{isEn ? "GFA Solution: " : "GFA方案：社区连结："}</strong>
+                  {isEn ? "We connect emerging filmmakers with experienced industry volunteers. Dedicated professionals offer guidance, review creative work, and help young creators navigate their early careers." : "通过非营利社区网络，GFA将新兴创作者与好莱坞资深行业志愿者（如导演、制片人、行业前辈）建立1对1辅导关系。导师无私分享经验、批注剧本，提供纯粹的职业发展指引。"}
                 </div>
-                <p className="text-sm text-gfa-slate font-light pt-2">
-                  {isEn ? "Details: Mentors hail from studios, networks, and independent prod-cos. Expect at least 2 sessions per month." : "具体说明：导师来自制片公司、电视网、独立电影行业，每月至少2次指导。"}
+                <p className="text-sm text-gfa-slate font-light pt-2 leading-relaxed">
+                  {isEn ? "Details: Mentorship cycles typically run 3 to 6 months with monthly guidance sessions. The focus is on educational growth, community building, and long-term career planning." : "具体说明：辅导周期通常为3至6个月，每月提供系统性的公益深度对谈。旨在帮助青年电影人完善作品集、建立行业信心，并融入一个互相支持互助的创作者青年社群。"}
                 </p>
                 <div className="pt-2">
-                  <button className="text-xs font-bold uppercase tracking-widest bg-gfa-inkBlack text-white px-6 py-2 rounded-full hover:bg-[#C9A84C] hover:shadow-md hover:-translate-y-0.5 active:bg-[#a68636] active:scale-95 transition-all duration-200">{isEn ? "Apply for Mentorship" : "申请导师匹配"}</button>
+                  <button className="text-xs font-bold uppercase tracking-widest bg-gfa-inkBlack text-white px-6 py-2 rounded-full hover:bg-[#C9A84C] hover:shadow-md hover:-translate-y-0.5 active:bg-[#a68636] active:scale-95 transition-all duration-200">{isEn ? "Apply for Mentorship" : "申请进入公益导师池"}</button>
                 </div>
               </div>
             </div>
@@ -110,22 +111,22 @@ const FilmmakerSupport: React.FC = () => {
                 <div className="w-16 h-16 bg-[#C9A84C]/10 rounded-2xl flex items-center justify-center mb-6 text-[#C9A84C]">
                   <PlaySquare className="w-8 h-8" />
                 </div>
-                <h3 className="text-2xl font-bold font-serif mb-2">{isEn ? "Distribution & Festivals" : "作品发行与电影节申报"}</h3>
+                <h3 className="text-2xl font-bold font-serif mb-2">{isEn ? "Festival Strategy Support" : "公益展映与电影节支持"}</h3>
               </div>
               <div className="md:w-2/3 flex flex-col justify-center space-y-4">
-                <div className="bg-red-50 text-red-800 p-4 rounded-xl text-sm font-light border border-red-100">
-                  <strong className="font-bold">{isEn ? "The Barrier: " : "障碍："}</strong>
-                  {isEn ? "You made a great film, but have no idea how to get the world to actually see it." : "有好作品，但不知道如何让世界看到。"}
+                <div className="bg-red-50 text-red-800 p-5 rounded-xl text-sm font-light border border-red-100 leading-relaxed">
+                  <strong className="font-bold">{isEn ? "The Barrier: " : "传播渠道困境："}</strong>
+                  {isEn ? "Submitting blindly to festivals drains precious indie budgets, and getting independent work seen by a broader audience remains an enormous challenge." : "独立创作者往往需要面对高昂的电影节报名费，且对节展定位了解不足，盲目投递极易消耗宝贵资金；优秀作品完成之后，极大受限于被大众看见的稀缺发声平台。"}
                 </div>
-                <div className="bg-green-50 text-green-800 p-4 rounded-xl text-sm font-light border border-green-100">
-                  <strong className="font-bold">{isEn ? "GFA Solution: " : "GFA方案："}</strong>
-                  {isEn ? "We help place your work on streaming platforms and guide your festival submission strategy." : "协助作品进入流媒体平台发行，指导电影节申报策略。"}
+                <div className="bg-green-50 text-green-800 p-5 rounded-xl text-sm font-light border border-green-100 leading-relaxed">
+                  <strong className="font-bold">{isEn ? "GFA Solution: " : "GFA方案：公益放映赋能："}</strong>
+                  {isEn ? "We provide strategic festival guidance and community screening opportunities. GFA helps filmmakers craft a realistic festival plan and secures fee waivers from partner festivals to reduce financial burdens." : "GFA为创作者提供电影节申报策略公益诊断，降低错误投递成本。并依托机构合作网络，为优秀作品争取合作电影节的豁免名额 (Fee Waivers) 以及免费的社区放映与展演机会。"}
                 </div>
-                <p className="text-sm text-gfa-slate font-light pt-2">
-                  {isEn ? "Details: We've helped films onto Amazon Prime, Tubi, and YouTube, alongside submissions to Sundance, SXSW, and AFI." : "具体说明：GFA已有作品在Amazon Prime、Tubi、YouTube发行，协助申报 Sundance、SXSW、AFI 等主要电影节。"}
+                <p className="text-sm text-gfa-slate font-light pt-2 leading-relaxed">
+                  {isEn ? "Details: Includes access to our educational resources on festival touring and opportunities to showcase work at GFA community events." : "具体说明：为创作者进行作品复盘及投递白名单设计。同时协助优秀的公益类独立电影及青年短片推向非营利的数字及线下放映社群，促进多元文化之间的共鸣。"}
                 </p>
                 <div className="pt-2">
-                  <button className="text-xs font-bold uppercase tracking-widest bg-gfa-inkBlack text-white px-6 py-2 rounded-full hover:bg-[#C9A84C] hover:shadow-md hover:-translate-y-0.5 active:bg-[#a68636] active:scale-95 transition-all duration-200">{isEn ? "Apply for Distribution" : "申请发行支持"}</button>
+                  <button className="text-xs font-bold uppercase tracking-widest bg-gfa-inkBlack text-white px-6 py-2 rounded-full hover:bg-[#C9A84C] hover:shadow-md hover:-translate-y-0.5 active:bg-[#a68636] active:scale-95 transition-all duration-200">{isEn ? "Request Strategy" : "提交作品获取展映辅导"}</button>
                 </div>
               </div>
             </div>
@@ -136,19 +137,22 @@ const FilmmakerSupport: React.FC = () => {
                 <div className="w-16 h-16 bg-[#C9A84C]/10 rounded-2xl flex items-center justify-center mb-6 text-[#C9A84C]">
                   <FileText className="w-8 h-8" />
                 </div>
-                <h3 className="text-2xl font-bold font-serif mb-2">{isEn ? "Grant Application Coaching" : "电影基金申请辅导"}</h3>
+                <h3 className="text-2xl font-bold font-serif mb-2">{isEn ? "Public Grant Coaching" : "公共艺术资助申报辅导"}</h3>
               </div>
               <div className="md:w-2/3 flex flex-col justify-center space-y-4">
-                <div className="bg-red-50 text-red-800 p-4 rounded-xl text-sm font-light border border-red-100">
-                  <strong className="font-bold">{isEn ? "The Barrier: " : "障碍："}</strong>
-                  {isEn ? "You don't know where the funding is, or how to write the complicated paperwork to get it." : "不知道哪里有基金，申请文件复杂不知道怎么写。"}
+                <div className="bg-red-50 text-red-800 p-5 rounded-xl text-sm font-light border border-red-100 leading-relaxed">
+                  <strong className="font-bold">{isEn ? "The Barrier: " : "公共资金申请经验缺失："}</strong>
+                  {isEn ? "Navigating complex nonprofit and government film grants is overwhelming. Many independent creators lack the specialized grant-writing skills required to secure public arts funding." : "虽然有许多非营利艺术组织提供公益创作基金，但初出茅庐的电影人大多缺乏复杂的文书应对经验。诸多极具潜力的创作者，往往因不清晰的项目提案与预算规划错失公共资助的帮扶。"}
                 </div>
-                <div className="bg-green-50 text-green-800 p-4 rounded-xl text-sm font-light border border-green-100">
-                  <strong className="font-bold">{isEn ? "GFA Solution: " : "GFA方案："}</strong>
-                  {isEn ? "We provide a database of film grants, review your application materials, and share proven winning strategies." : "提供电影基金信息库，协助撰写和审阅申请文件，分享成功申请经验。"}
+                <div className="bg-green-50 text-green-800 p-5 rounded-xl text-sm font-light border border-green-100 leading-relaxed">
+                  <strong className="font-bold">{isEn ? "GFA Solution: " : "GFA方案：公益文书教育："}</strong>
+                  {isEn ? "GFA offers educational workshops and specialized coaching to help filmmakers decode grant applications. We teach creators how to articulate their vision and construct transparent budgets for arts organizations." : "GFA为独立创作者免费提供艺术扶持基金（Grants）的申请教育体系。资深辅导志愿者手把手教您如何撰写真诚专业的《导演阐述》、明确制作初衷并构架公开透明、符合捐助方审查原则的制作预算表。"}
                 </div>
+                <p className="text-sm text-gfa-slate font-light pt-2 leading-relaxed">
+                  {isEn ? "Details: We host grant-writing workshops and offer peer reviews of director's statements and budget proposals to empower marginalized creators to successfully secure funding." : "具体说明：定期举办非营利属性的基金提案教育讲座工作坊（Workshop）及一对一文书精修审阅。旨在全面提升青年电影人尤其是代表不足群体在公共艺术领域的获资助能力。"}
+                </p>
                 <div className="pt-2">
-                  <button className="text-xs font-bold uppercase tracking-widest bg-gfa-inkBlack text-white px-6 py-2 rounded-full hover:bg-[#C9A84C] hover:shadow-md hover:-translate-y-0.5 active:bg-[#a68636] active:scale-95 transition-all duration-200">{isEn ? "Book Consultation" : "预约基金咨询"}</button>
+                  <button className="text-xs font-bold uppercase tracking-widest bg-gfa-inkBlack text-white px-6 py-2 rounded-full hover:bg-[#C9A84C] hover:shadow-md hover:-translate-y-0.5 active:bg-[#a68636] active:scale-95 transition-all duration-200">{isEn ? "Book Consultation" : "登记参与公益文书辅导"}</button>
                 </div>
               </div>
             </div>
@@ -159,19 +163,22 @@ const FilmmakerSupport: React.FC = () => {
                 <div className="w-16 h-16 bg-[#C9A84C]/10 rounded-2xl flex items-center justify-center mb-6 text-[#C9A84C]">
                   <Clapperboard className="w-8 h-8" />
                 </div>
-                <h3 className="text-2xl font-bold font-serif mb-2">{isEn ? "Real On-Set Experience" : "真实片场实战机会"}</h3>
+                <h3 className="text-2xl font-bold font-serif mb-2">{isEn ? "Educational On-Set Experience" : "教育性片场实战锻炼"}</h3>
               </div>
               <div className="md:w-2/3 flex flex-col justify-center space-y-4">
-                <div className="bg-red-50 text-red-800 p-4 rounded-xl text-sm font-light border border-red-100">
-                  <strong className="font-bold">{isEn ? "The Barrier: " : "障碍："}</strong>
-                  {isEn ? "A blank resume. Without actual set experience, professional teams won't hire you." : "简历空白，没有真实片场经验无法进入专业团队。"}
+                <div className="bg-red-50 text-red-800 p-5 rounded-xl text-sm font-light border border-red-100 leading-relaxed">
+                  <strong className="font-bold">{isEn ? "The Barrier: " : "经验积淀两难困境："}</strong>
+                  {isEn ? "It is an industry paradox: young filmmakers need set experience to get hired, but cannot gain that experience without prior opportunities." : "青年一代在职业起步时往往遭遇经验积累的死角：因为缺乏丰富的片场大组协同履历，往往被专业团队视作“新人风险”而拒之门外；但脱离实战剧组，也无从获取宝贵经验。"}
                 </div>
-                <div className="bg-green-50 text-green-800 p-4 rounded-xl text-sm font-light border border-green-100">
-                  <strong className="font-bold">{isEn ? "GFA Solution: " : "GFA方案："}</strong>
-                  {isEn ? "Work in genuine professional roles on GFA's own productions to build a resume that gets you hired." : "在GFA自己的制作项目中担任真实的专业岗位，积累可写进简历的经验。"}
+                <div className="bg-green-50 text-green-800 p-5 rounded-xl text-sm font-light border border-green-100 leading-relaxed">
+                  <strong className="font-bold">{isEn ? "GFA Solution: " : "GFA方案：社区片场共演："}</strong>
+                  {isEn ? "GFA produces educational content, community PSAs, and nonprofit short films. We invite aspiring filmmakers to shadow experienced volunteers and fill essential crew roles in a supportive environment." : "GFA作为社区核心，每年主导或联合筹拍高质量的教育宣传片(PSA)及公益短片。我们邀请并接纳尚缺乏履历但满怀热情的青年，加入到这些包容且安全的拍摄项目中。在资深业内志愿者的手把手传帮带下，在实战中淬炼技艺。"}
                 </div>
+                <p className="text-sm text-gfa-slate font-light pt-2 leading-relaxed">
+                  {isEn ? "Details: These practical experiences help young creators learn professional protocols, earn real IMDb credits, and build their collaborative skills before formally entering the industry." : "具体说明：提供如摄影二助、灯光协助或场记执行的跟组学习机会。这既是一场公益摄制，也是青年人建立行业协作规范、积累早期IMDb学分并自信走向影视职场的完美“毕业试演”。"}
+                </p>
                 <div className="pt-2">
-                  <button className="text-xs font-bold uppercase tracking-widest bg-gfa-inkBlack text-white px-6 py-2 rounded-full hover:bg-[#C9A84C] hover:shadow-md hover:-translate-y-0.5 active:bg-[#a68636] active:scale-95 transition-all duration-200">{isEn ? "Apply for Crew" : "申请实战机会"}</button>
+                  <button className="text-xs font-bold uppercase tracking-widest bg-gfa-inkBlack text-white px-6 py-2 rounded-full hover:bg-[#C9A84C] hover:shadow-md hover:-translate-y-0.5 active:bg-[#a68636] active:scale-95 transition-all duration-200">{isEn ? "Apply for Crew" : "申请参与公益影片实战摄制"}</button>
                 </div>
               </div>
             </div>
@@ -289,9 +296,9 @@ const FilmmakerSupport: React.FC = () => {
           <p className="text-xl md:text-2xl font-serif text-[#C9A84C] mb-12">
             {isEn ? "Let GFA help you take it." : "GFA帮你跨过那一步"}
           </p>
-          <button className="bg-[#C9A84C] hover:bg-[#b09241] text-gfa-inkBlack px-12 py-5 rounded-full font-bold uppercase tracking-widest text-base hover:scale-105 hover:-translate-y-1 hover:shadow-[0_10px_40px_rgba(201,168,76,0.4)] active:scale-95 active:shadow-[0_0_20px_rgba(201,168,76,0.2)] transition-all duration-200 shadow-[0_0_30px_rgba(201,168,76,0.3)] mb-4 inline-flex items-center gap-2">
-            {isEn ? "Apply Now" : "立即申请支持"} <ArrowRight className="w-5 h-5"/>
-          </button>
+          <Link to="/gear-application" className="bg-[#C9A84C] hover:bg-[#b09241] text-gfa-inkBlack px-12 py-5 rounded-full font-bold uppercase tracking-widest text-base hover:scale-105 hover:-translate-y-1 hover:shadow-[0_10px_40px_rgba(201,168,76,0.4)] active:scale-95 active:shadow-[0_0_20px_rgba(201,168,76,0.2)] transition-all duration-200 shadow-[0_0_30px_rgba(201,168,76,0.3)] mb-4 inline-flex items-center gap-2">
+            {isEn ? "Apply Now" : "立即进入申请主页"} <ArrowRight className="w-5 h-5"/>
+          </Link>
           <div className="text-sm font-light text-white/50 tracking-widest uppercase mt-4">
             {isEn ? "Free · Nonprofit · No Connections Required" : "免费 · 非营利 · 无需行业背景"}
           </div>

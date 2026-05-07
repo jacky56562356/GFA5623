@@ -372,7 +372,7 @@ const Donate: React.FC = () => {
                 <li className="flex gap-3"><Check className="w-5 h-5 text-[#C9A043] shrink-0"/> {isEn ? "Premium logo placement" : "官网首页 Logo 展示"}</li>
                 <li className="flex gap-3"><Check className="w-5 h-5 text-[#C9A043] shrink-0"/> {isEn ? "All events brand integration" : "所有活动现场品牌展示"}</li>
                 <li className="flex gap-3"><Check className="w-5 h-5 text-[#C9A043] shrink-0"/> {isEn ? "Golden Feather Awards VIP seats (4)" : "Golden Feather Awards 颁奖礼 VIP 席位（4位）"}</li>
-                <li className="flex gap-3"><Check className="w-5 h-5 text-[#C9A043] shrink-0"/> {isEn ? "Dolby Theatre finals exposure" : "Dolby Theatre 决赛品牌曝光"}</li>
+                <li className="flex gap-3"><Check className="w-5 h-5 text-[#C9A043] shrink-0"/> {isEn ? "Grand finale brand exposure" : "好莱坞决赛品牌曝光"}</li>
                 <li className="flex gap-3"><Check className="w-5 h-5 text-[#C9A043] shrink-0"/> {isEn ? "Dedicated social feature" : "社交媒体专题感谢帖"}</li>
                 <li className="flex gap-3"><Check className="w-5 h-5 text-[#C9A043] shrink-0"/> {isEn ? "Annual report cover acknowledgment" : "年度报告封面致谢"}</li>
                 <li className="flex gap-3"><Check className="w-5 h-5 text-[#C9A043] shrink-0"/> {isEn ? "Joint press release" : "联合新闻稿发布"}</li>

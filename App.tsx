@@ -2,6 +2,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { LocaleProvider } from './LocaleContext';
+import { AuthProvider } from './lib/AuthContext';
 import Layout from './components/Layout';
 
 // Pages
@@ -18,6 +19,9 @@ import GetInvolved from './pages/GetInvolved';
 import Donate from './pages/Donate';
 import Contact from './pages/Contact';
 import YouthProtection from './pages/YouthProtection';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import Profile from './pages/Profile';
+import GearApplication from './pages/GearApplication';
 
 // Policy Pages
 import PolicyPage from './pages/PolicyPage';
@@ -25,9 +29,10 @@ import PolicyPage from './pages/PolicyPage';
 function App() {
   return (
     <LocaleProvider>
-      <BrowserRouter>
-        <Layout>
-          <Routes>
+      <AuthProvider>
+        <BrowserRouter>
+          <Layout>
+            <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/filmmaker-support" element={<FilmmakerSupport />} />
@@ -41,15 +46,18 @@ function App() {
             <Route path="/donate" element={<Donate />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/youth-protection" element={<YouthProtection />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/gear-application" element={<GearApplication />} />
             
             {/* Policy Routes */}
-            <Route path="/policy/privacy" element={<PolicyPage type="privacy" />} />
+            <Route path="/policy/privacy" element={<PrivacyPolicy />} />
             <Route path="/policy/terms" element={<PolicyPage type="terms" />} />
             <Route path="/policy/consent" element={<PolicyPage type="consent" />} />
             <Route path="/policy/content" element={<PolicyPage type="content" />} />
           </Routes>
-        </Layout>
-      </BrowserRouter>
+          </Layout>
+        </BrowserRouter>
+      </AuthProvider>
     </LocaleProvider>
   );
 }

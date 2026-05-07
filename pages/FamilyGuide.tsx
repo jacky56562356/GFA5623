@@ -20,7 +20,7 @@ const FamilyGuide: React.FC = () => {
     { q: "As a Chinese family, how can we help our child succeed in the US industry?", a: "By understanding the US system early. Hollywood relies entirely on union structures, verified credits, and professional networks. GFA acts as a bridge, giving Chinese families the exact roadmap required to build an authentic Hollywood career." },
     { q: "How much do GFA's programs cost? Is there financial aid?", a: "Cost varies by program, but as a nonprofit, profitability is not our goal. We offer robust scholarships—up to 100% coverage—for low and middle-income families." },
     { q: "My child has absolutely no experience. Can they start with GFA?", a: "Yes. Our 6-10 age programs assume zero prior experience. We focus purely on kindling their passion and creativity in a pressure-free environment." },
-    { q: "Will the Global Talent Competition actually help my child's future?", a: "Absolutely. Competing at the Dolby Theatre, receiving verified credentials from a recognized US 501(c)(3), and performing for industry judges are massive resume builders for college applications and talent agents." },
+    { q: "Will the Global Talent Competition actually help my child's future?", a: "Absolutely. Competing in Hollywood, receiving verified credentials from a recognized US 501(c)(3), and performing for industry judges are massive resume builders for college applications and talent agents." },
     { q: "How do I schedule a 1-on-1 consultation with the GFA team?", a: "Simply click the 'Book Free Consultation' button at the bottom of this page. We'll find a time to discuss your child's specific situation." }
   ] : [
     { q: "孩子喜欢电影，但我不确定这是不是一条好的职业道路？", a: "影视娱乐业是美国最大的出口产业之一，对从创作、技术到商业的各个领域都有巨大的人才需求。只要规划得当，这是一条极为可行且前景广阔的职业道路。" },
@@ -29,7 +29,7 @@ const FamilyGuide: React.FC = () => {
     { q: "来自中国的家庭，如何帮助孩子在美国影视圈发展？", a: "尽早理解美国的行业体系非常重要。好莱坞完全依赖工会结构、被验证的履历网络。GFA作为桥梁，为中国家庭提供建立真正好莱坞事业所需的精确路线图。" },
     { q: "GFA的项目费用是多少？有没有资助？", a: "各项目费用不同，但作为非营利组织，盈利不是我们的目的。我们为中低收入家庭提供高达100%费用的奖学金。" },
     { q: "孩子没有任何基础，可以从GFA的项目开始吗？", a: "完全可以。我们6-10岁的项目无需任何基础。我们在无压力的环境中，纯粹专注于点燃他们的热情和创造力。" },
-    { q: "全球才艺大赛对孩子的未来有帮助吗？", a: "极其有帮助。在杜比剧院角逐、获得受认可的美国501(c)(3)机构背书、并在行业评委面前展示才华——这些对大学申请和吸引经纪人来说都是极具含金量的履历。" },
+    { q: "全球才艺大赛对孩子的未来有帮助吗？", a: "极其有帮助。在好莱坞中心舞台角逐、获得受认可的美国501(c)(3)机构背书、并在行业评委面前展示才华——这些对大学申请和吸引经纪人来说都是极具含金量的履历。" },
     { q: "如何预约和GFA团队的一对一咨询？", a: "只需点击页面底部的“预约免费咨询”按钮，我们团队会与您安排专门的时间深入探讨您孩子的具体情况。" }
   ];
 

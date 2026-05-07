@@ -14,16 +14,16 @@ const Competition: React.FC = () => {
   };
 
   const faqs = isEn ? [
-    { q: "How do Chinese children participate?", a: "We have an official China division handling local registrations and preliminary rounds. Finalists will be invited to Los Angeles for the Grand Finale at the Dolby Theatre." },
+    { q: "How do Chinese children participate?", a: "We have an official China division handling local registrations and preliminary rounds. Finalists will be invited to Los Angeles for the Grand Finale in Hollywood." },
     { q: "What language skills are required?", a: "Art transcends language. While basic English is helpful for the LA trip, performances and films can be in Chinese with English subtitles. We provide translation support during the finals." },
-    { q: "Do we have to travel to Los Angeles for the finals?", a: "Yes, the Grand Finale is a live, in-person event at the Dolby Theatre. For finalists who cannot secure a visa, we offer live-streamed inclusion, but in-person attendance is strongly encouraged." },
+    { q: "Do we have to travel to Los Angeles for the finals?", a: "Yes, the Grand Finale is a live, in-person event in Hollywood. For finalists who cannot secure a visa, we offer live-streamed inclusion, but in-person attendance is strongly encouraged." },
     { q: "What are the entry fees? Are there scholarships?", a: "Entry fees cover administrative costs. Yes, GFA provides needs-based scholarships that can waive entry fees and even subsidize travel costs for extraordinary talents from low-income families." },
     { q: "Who are the judges and what is the criteria?", a: "Our jury consists of active Hollywood directors, casting agents, and educators. They judge based on originality, emotional resonance, technical execution (for film), and stage presence (for talent)." },
     { q: "How will we know if we made it to the finals?", a: "All participants will be notified via email on the scheduled 'Finalist Announcement' date. A public list will also be published on our website." }
   ] : [
-    { q: "中国的孩子如何参赛？", a: "我们设有官方中国赛区，负责本地报名和初筛。成功晋级的选手将收到官方邀请函，前往洛杉矶主场地参加杜比剧院的总决赛。" },
+    { q: "中国的孩子如何参赛？", a: "我们设有官方中国赛区，负责本地报名和初筛。成功晋级的选手将收到官方邀请函，前往洛杉矶主场地参加好莱坞的总决赛。" },
     { q: "参赛需要什么语言能力？", a: "艺术超越语言。虽然基础英语对洛杉矶之旅有帮助，但表演和短片完全可以是中文（配备英文字幕）。我们在总决赛期间提供必要的语言协助。" },
-    { q: "决赛是否需要亲自去洛杉矶？", a: "是的，总决赛是在杜比剧院举办的现场落地活动。如果您获得了决赛资格但因签证等不可抗力无法抵达，我们提供线上接入方案，但强烈建议亲自出席以获得完整体验。" },
+    { q: "决赛是否需要亲自去洛杉矶？", a: "是的，总决赛是在好莱坞举办的现场落地活动。如果您获得了决赛资格但因签证等不可抗力无法抵达，我们提供线上接入方案，但强烈建议亲自出席以获得完整体验。" },
     { q: "参赛费用是多少？有奖学金吗？", a: "报名费用于覆盖评审与行政成本。是的，GFA为来自低收入家庭的卓越才华选手提供按需分配的奖学金，包含报名费豁免，甚至是差旅补贴。" },
     { q: "评审是谁？标准是什么？", a: "我们的评审团由好莱坞活跃的导演、选角导演及资深教育专家组成。他们的评判标准基于：原创性、情感共鸣、技术执行力（针对短片组）和舞台表现力（针对才艺组）。" },
     { q: "如何知道是否入围决赛？", a: "所有参赛者将在预定的“入围名单公布日”通过电子邮件收到正式通知。同时，官方晋级名单也会在网站上公示。" }
@@ -38,7 +38,7 @@ const Competition: React.FC = () => {
         <div className="absolute inset-0 z-0">
           <img 
             src="https://i.ibb.co/S4Mb6TcN/24480b00-65a2-4468-8dc6-50aae205d0fa.png" 
-            alt="Dolby Theatre style stage" 
+            alt="Hollywood style stage" 
             className="w-full h-full object-cover opacity-50 mix-blend-luminosity transform group-hover:scale-105 transition-transform duration-[20s]" 
           />
           <div className="absolute inset-0 bg-gradient-to-t from-gfa-inkBlack via-gfa-inkBlack/40 to-transparent"></div>
@@ -54,7 +54,7 @@ const Competition: React.FC = () => {
             <span className="text-[#C9A84C]">{isEn ? "Talent Competition" : "才艺大赛"}</span>
           </h1>
           <h2 className="text-xl md:text-3xl font-light text-white/90 tracking-widest uppercase mb-12">
-            {isEn ? "Grand Finale at Dolby Theatre, Hollywood" : "决赛在好莱坞 Dolby Theatre"}
+            {isEn ? "Grand Finale in Hollywood" : "决赛在好莱坞顶级舞台"}
           </h2>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <button className="w-full sm:w-auto bg-[#C9A84C] hover:bg-[#b09241] text-gfa-inkBlack px-10 py-5 rounded-full font-bold uppercase tracking-widest text-sm transition-colors shadow-[0_0_30px_rgba(201,168,76,0.4)]">
@@ -78,8 +78,8 @@ const Competition: React.FC = () => {
            
            <p>
              {isEn 
-               ? "Why the Dolby Theatre? We didn't choose it for its size or luxury. We chose it because it is the home of the Oscars. Every February, the absolute pinnacle of cinematic achievement is honored here. In 2026, we are giving that exact same stage to your children. We are telling them their art matters that much." 
-               : "为什么是Dolby Theatre？我们不是为了强调场地的奢华。这里是奥斯卡的家。每年二月，世界最顶尖的电影人在这里接受表彰，书写历史。2026年，这个舞台属于你的孩子。我们要用这个舞台告诉他们，他们的才华值得被世界看见。"}
+               ? "Why do we host the finals in Hollywood? We chose it because it is the home of cinema. Every year, the absolute pinnacle of cinematic achievement is honored here. We are giving that exact same stage to your children. We are telling them their art matters that much." 
+               : "为什么是好莱坞核心舞台？这里是世界电影的中心。每年，世界最顶尖的电影人在这里接受表彰，书写历史。这个舞台属于你的孩子。我们要用这个舞台告诉他们，他们的才华值得被世界看见。"}
            </p>
 
            <p>
@@ -165,7 +165,7 @@ const Competition: React.FC = () => {
         <div className="md:w-1/2 bg-gfa-inkBlack text-white p-16 md:p-24 flex flex-col justify-center">
            <h3 className="text-[#C9A84C] font-bold tracking-widest uppercase text-sm mb-4">To Chinese Families</h3>
            <p className="text-2xl md:text-3xl font-serif font-light leading-relaxed italic">
-             "这不是一个普通的才艺比赛。这是让你的孩子真正站上好莱坞最著名舞台的机会。Dolby Theatre，是每一个电影梦开始的地方。"
+             "这不是一个普通的才艺比赛。这是让你的孩子真正站上好莱坞大舞台的机会。这里，是每一个电影梦开始的地方。"
            </p>
         </div>
         <div className="md:w-1/2 bg-[#C9A84C] text-black p-16 md:p-24 flex flex-col justify-center">
@@ -192,7 +192,7 @@ const Competition: React.FC = () => {
                { n: 1, zh: "在线报名", zhd: "填写基本信息和参赛类别", en: "Register Online", end: "Fill out info & categories" },
                { n: 2, zh: "提交作品", zhd: "上传视频或作品文件", en: "Submit Work", end: "Upload video or file" },
                { n: 3, zh: "评审入围", zhd: "专业评审委员会审核", en: "Jury Selection", end: "Industry panel review" },
-               { n: 4, zh: "决赛舞台", zhd: "Dolby Theatre，好莱坞", en: "Grand Finale", end: "Dolby Theatre, LA" },
+               { n: 4, zh: "决赛舞台", zhd: "顶级舞台，好莱坞", en: "Grand Finale", end: "Hollywood, LA" },
              ].map((step) => (
                <div key={step.n} className="relative z-10 pl-10 md:pl-0 md:text-center md:w-1/4">
                  <div className="absolute left-[-20px] top-0 md:relative md:left-auto flex items-center justify-center w-12 h-12 rounded-full border-4 border-white bg-[#C9A84C] text-white font-bold mx-auto mb-4 shadow-sm">
@@ -277,8 +277,8 @@ const Competition: React.FC = () => {
            </h3>
            <p className="text-white/60 font-light max-w-2xl mx-auto mb-8">
              {isEn 
-               ? "Gain brand exposure at the Dolby Theatre while supporting the next generation of global creators." 
-               : "在杜比剧院获得极致的品牌曝光，同时支持下一代全球创作者群体的发展。"}
+               ? "Gain brand exposure in Hollywood while supporting the next generation of global creators." 
+               : "在好莱坞核心舞台获得极致的品牌曝光，同时支持下一代全球创作者群体的发展。"}
            </p>
            <button className="border border-[#C9A84C] text-[#C9A84C] hover:bg-[#C9A84C] hover:text-black uppercase tracking-widest text-xs font-bold px-8 py-3 rounded-full transition-colors">
              {isEn ? "Sponsorship Inquiry" : "赞助方案咨询"}

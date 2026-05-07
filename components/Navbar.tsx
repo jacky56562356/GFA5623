@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useLocale } from '../LocaleContext.tsx';
 import { Locale } from '../types.ts';
-import { Heart } from 'lucide-react';
+import { Heart, UserCircle, LogOut } from 'lucide-react';
+import { useAuth } from '../lib/AuthContext';
 
 const Navbar: React.FC = () => {
   const { locale, setLocale } = useLocale();
   const location = useLocation();
+  const navigate = useNavigate();
+  const { user, signInWithGoogle, logout } = useAuth();
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -79,6 +82,27 @@ const Navbar: React.FC = () => {
               <Heart className="w-4 h-4 fill-current" />
               {locale === Locale.EN ? 'Donate' : '捐款'}
             </Link>
+
+            {user ? (
+              <div className="flex items-center gap-4 border-l border-gfa-border pl-6">
+                <Link to="/profile" className="flex items-center gap-2 text-gfa-inkBlack hover:text-gfa-gold transition-colors">
+                  <UserCircle className="w-6 h-6" />
+                </Link>
+                <button 
+                  onClick={() => { logout(); navigate('/'); }}
+                  className="text-gfa-slate hover:text-gfa-gold transition-colors"
+                >
+                  <LogOut className="w-5 h-5" />
+                </button>
+              </div>
+            ) : (
+              <button 
+                onClick={signInWithGoogle}
+                className="text-gfa-inkBlack hover:text-gfa-gold font-bold uppercase tracking-widest text-[12px] transition-colors border-l border-gfa-border pl-6"
+              >
+                {locale === Locale.EN ? 'Sign In' : '登录'}
+              </button>
+            )}
           </div>
 
           <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="xl:hidden p-2 group" aria-label="Toggle Menu">
@@ -119,6 +143,34 @@ const Navbar: React.FC = () => {
               {link.name}
             </Link>
           ))}
+          
+          <div className="mt-8 border-t border-gfa-border pt-8 mb-8">
+            {user ? (
+              <div className="flex items-center gap-6">
+                <Link 
+                  to="/profile" 
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="flex items-center gap-3 text-xl font-bold uppercase tracking-tight text-gfa-inkBlack font-serif hover:text-gfa-gold transition-colors"
+                >
+                  <UserCircle className="w-6 h-6" />
+                  {locale === Locale.EN ? 'Profile' : '个人资料'}
+                </Link>
+                <button 
+                  onClick={() => { logout(); setMobileMenuOpen(false); navigate('/'); }}
+                  className="text-gfa-slate hover:text-gfa-gold transition-colors"
+                >
+                  <LogOut className="w-6 h-6" />
+                </button>
+              </div>
+            ) : (
+              <button 
+                onClick={() => { signInWithGoogle(); setMobileMenuOpen(false); }}
+                className="text-xl font-bold uppercase tracking-tight text-gfa-inkBlack font-serif hover:text-gfa-gold transition-colors"
+              >
+                {locale === Locale.EN ? 'Sign In' : '登录'}
+              </button>
+            )}
+          </div>
           
           <div className="mt-auto mb-16">
             <Link to="/donate" onClick={() => setMobileMenuOpen(false)} className="flex items-center justify-center gap-2 bg-[#C9A84C] text-white px-8 py-4 rounded-full font-bold text-sm tracking-widest shadow-lg uppercase w-full">

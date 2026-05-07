@@ -40,7 +40,7 @@ const News: React.FC = () => {
                       {isEn ? "Global Youth Talent Competition 2026 Officially Announced" : "2026全球青少年才艺大赛正式启动"}
                     </h3>
                     <p className="text-gfa-slate font-light text-sm mb-6">
-                      {isEn ? "GFA announces its flagship event to be held at the Dolby Theatre, uniting young talents from the US and China on a single stage." : "GFA宣布将于好莱坞杜比剧院举办核心赛事，首次将中美两地的才华青少年汇聚于同一舞台。"}
+                      {isEn ? "GFA announces its flagship event to be held in Hollywood, uniting young talents from the US and China on a single stage." : "GFA宣布将于好莱坞中心舞台举办核心赛事，首次将中美两地的才华青少年汇聚于同一舞台。"}
                     </p>
                     <button className="text-gfa-inkBlack font-bold uppercase tracking-widest text-xs flex items-center gap-2 hover:text-[#C9A84C] transition-colors w-fit">
                       {isEn ? "Read Full Release" : "阅读完整新闻稿"} <ArrowRight className="w-4 h-4"/>

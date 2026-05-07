@@ -578,14 +578,14 @@ const Home: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
                 <div className="absolute bottom-6 left-6 right-6">
                   <h3 className="text-3xl font-bold font-serif text-white mb-2">{isEn ? "Global Youth Talent Competition" : "2026全球青少年才艺大赛"}</h3>
-                  <p className="text-[#C9A84C] font-bold text-sm tracking-widest uppercase">{isEn ? "2026 Grand Finale at Dolby Theatre" : "全球青少年才艺大赛"}</p>
+                  <p className="text-[#C9A84C] font-bold text-sm tracking-widest uppercase">{isEn ? "Global Youth Talent Competition" : "全球青少年才艺大赛"}</p>
                 </div>
               </div>
               <div className="p-8 flex flex-col flex-grow">
                 <p className="text-gfa-slate font-light leading-relaxed mb-8 flex-grow">
                   {isEn 
-                    ? "The first simultaneous US-China youth film and talent competition. The 2026 Grand Finale will light up the iconic Dolby Theatre in Hollywood." 
-                    : "首个中美同步举办的青少年影视才艺大赛，2026年决赛登陆好莱坞 Dolby Theatre。"}
+                    ? "The first simultaneous US-China youth film and talent competition. The 2026 Grand Finale will light up Hollywood." 
+                    : "首个中美同步举办的青少年影视才艺大赛，2026年决赛登陆好莱坞。"}
                 </p>
                 <Link to="/competition" className="inline-flex items-center justify-center gap-2 bg-[#C9A84C] text-gfa-inkBlack hover:bg-[#b09241] font-bold uppercase tracking-widest text-xs px-6 py-3 rounded-full transition-colors w-full">
                   {isEn ? "Register Now" : "立即报名"}

@@ -132,64 +132,88 @@ const About: React.FC = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Truth 1 */}
-              <div className="bg-white p-6 rounded-2xl border border-gray-100 hover:border-[#C9A84C]/50 transition-colors shadow-sm">
-                <div className="w-10 h-10 bg-[#C9A84C]/10 rounded-full flex items-center justify-center mb-4 text-[#C9A84C] font-bold text-lg">1</div>
-                <h4 className="text-lg font-bold font-serif text-gfa-inkBlack mb-3">
-                  {isEn ? "Nurture Youth Film Talent" : "培养青少年电影人才"}
-                </h4>
-                <p className="text-sm font-light text-gfa-slate leading-relaxed">
-                  {isEn
-                    ? "Provide systematic film education for children and youth, including professional training in acting, directing, filming, and screenwriting, fostering artistic literacy and creativity."
-                    : "为儿童及青少年提供系统化影视教育，包括表演、导演、拍摄、编剧等专业训练，有利于建立艺术素养与创造力。"}
-                </p>
+              <div className="relative overflow-hidden rounded-2xl border border-gray-100/20 hover:border-[#C9A84C]/50 transition-all shadow-sm hover:shadow-lg p-6 group h-[320px] flex flex-col justify-end">
+                <div className="absolute inset-0 z-0 bg-black">
+                  <img src="https://i.ibb.co/7Jsztbmc/99eee363-e56f-48a1-9ea7-355b47007e8d.jpg" alt="Nurture Youth Film Talent" className="w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-700" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/30"></div>
+                </div>
+                <div className="relative z-10">
+                  <div className="w-10 h-10 bg-[#C9A84C]/20 backdrop-blur-sm rounded-full flex items-center justify-center mb-4 text-[#C9A84C] font-bold text-lg border border-[#C9A84C]/30">1</div>
+                  <h4 className="text-lg font-bold font-serif text-white mb-3">
+                    {isEn ? "Nurture Youth Film Talent" : "培养青少年电影人才"}
+                  </h4>
+                  <p className="text-sm font-light text-white/80 leading-relaxed">
+                    {isEn
+                      ? "Provide systematic film education for children and youth, including professional training in acting, directing, filming, and screenwriting, fostering artistic literacy and creativity."
+                      : "为儿童及青少年提供系统化影视教育，包括表演、导演、拍摄、编剧等专业训练，有利于建立艺术素养与创造力。"}
+                  </p>
+                </div>
               </div>
 
               {/* Truth 2 */}
-              <div className="bg-white p-6 rounded-2xl border border-gray-100 hover:border-[#C9A84C]/50 transition-colors shadow-sm">
-                <div className="w-10 h-10 bg-[#C9A84C]/10 rounded-full flex items-center justify-center mb-4 text-[#C9A84C] font-bold text-lg">2</div>
-                <h4 className="text-lg font-bold font-serif text-gfa-inkBlack mb-3">
-                  {isEn ? "Promote Equitable Film Opportunities" : "推动公平的电影机会"}
-                </h4>
-                <p className="text-sm font-light text-gfa-slate leading-relaxed">
-                  {isEn
-                    ? "Provide opportunities for seniors from diverse backgrounds to enter the film industry, raising industry standards and promoting confidence and caring development."
-                    : "为不同背景的老年人提供进入影视行业的机会，提高行业水平，促进信心与关怀性发展。"}
-                </p>
+              <div className="relative overflow-hidden rounded-2xl border border-gray-100/20 hover:border-[#C9A84C]/50 transition-all shadow-sm hover:shadow-lg p-6 group h-[320px] flex flex-col justify-end">
+                <div className="absolute inset-0 z-0 bg-black">
+                  <img src="https://i.ibb.co/ZzZbpJ2G/20260122155828-1667-151-1.jpg" alt="Promote Equitable Film Opportunities" className="w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-700" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/30"></div>
+                </div>
+                <div className="relative z-10">
+                  <div className="w-10 h-10 bg-[#C9A84C]/20 backdrop-blur-sm rounded-full flex items-center justify-center mb-4 text-[#C9A84C] font-bold text-lg border border-[#C9A84C]/30">2</div>
+                  <h4 className="text-lg font-bold font-serif text-white mb-3">
+                    {isEn ? "Promote Equitable Film Opportunities" : "推动公平的电影机会"}
+                  </h4>
+                  <p className="text-sm font-light text-white/80 leading-relaxed">
+                    {isEn
+                      ? "Provide opportunities for seniors from diverse backgrounds to enter the film industry, raising industry standards and promoting confidence and caring development."
+                      : "为不同背景的老年人提供进入影视行业的机会，提高行业水平，促进信心与关怀性发展。"}
+                  </p>
+                </div>
               </div>
 
               {/* Truth 3 */}
-              <div className="bg-white p-6 rounded-2xl border border-gray-100 hover:border-[#C9A84C]/50 transition-colors shadow-sm">
-                <div className="w-10 h-10 bg-[#C9A84C]/10 rounded-full flex items-center justify-center mb-4 text-[#C9A84C] font-bold text-lg">3</div>
-                <h4 className="text-lg font-bold font-serif text-gfa-inkBlack mb-3">
-                  {isEn ? "Support Independent Filmmakers & Emerging Directors" : "支持独立电影人与新晋导演"}
-                </h4>
-                <p className="text-sm font-light text-gfa-slate leading-relaxed">
-                  {isEn
-                    ? "Provide emerging filmmakers with equipment, mentorship networks, distribution channels, and funding support to help them complete the full cycle from creation to distribution."
-                    : "为新兴电影人提供设备、导师网络、发行渠道和资金支持，帮助完成从创作到发行的全程闭环。"}
-                </p>
+              <div className="relative overflow-hidden rounded-2xl border border-gray-100/20 hover:border-[#C9A84C]/50 transition-all shadow-sm hover:shadow-lg p-6 group h-[320px] flex flex-col justify-end">
+                <div className="absolute inset-0 z-0 bg-black">
+                  <img src="https://i.ibb.co/nNQnFsHd/t.png" alt="Support Independent Filmmakers & Emerging Directors" className="w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-700" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/30"></div>
+                </div>
+                <div className="relative z-10">
+                  <div className="w-10 h-10 bg-[#C9A84C]/20 backdrop-blur-sm rounded-full flex items-center justify-center mb-4 text-[#C9A84C] font-bold text-lg border border-[#C9A84C]/30">3</div>
+                  <h4 className="text-lg font-bold font-serif text-white mb-3">
+                    {isEn ? "Support Independent Filmmakers & Emerging Directors" : "支持独立电影人与新晋导演"}
+                  </h4>
+                  <p className="text-sm font-light text-white/80 leading-relaxed">
+                    {isEn
+                      ? "Provide emerging filmmakers with equipment, mentorship networks, distribution channels, and funding support to help them complete the full cycle from creation to distribution."
+                      : "为新兴电影人提供设备、导师网络、发行渠道和资金支持，帮助完成从创作到发行的全程闭环。"}
+                  </p>
+                </div>
               </div>
 
               {/* Truth 4 */}
-              <div className="bg-white p-6 rounded-2xl border border-gray-100 hover:border-[#C9A84C]/50 transition-colors shadow-sm">
-                <div className="w-10 h-10 bg-[#C9A84C]/10 rounded-full flex items-center justify-center mb-4 text-[#C9A84C] font-bold text-lg">4</div>
-                <h4 className="text-lg font-bold font-serif text-gfa-inkBlack mb-3">
-                  {isEn ? "Build a Film Ecosystem" : "打造电影生态"}
-                </h4>
-                <p className="text-sm font-light text-gfa-slate leading-relaxed">
-                  {isEn
-                    ? "Advance high-quality, socially valuable film and television content, and utilize the Golden Feather Awards system to honor outstanding emerging directors and distinguished filmmakers."
-                    : "推进高质量、有社会价值的影视制作内容，并通过金羽毛奖（Golden Feather Awards）体系表彰优秀的新晋导演与杰出电影人。"}
-                </p>
+              <div className="relative overflow-hidden rounded-2xl border border-gray-100/20 hover:border-[#C9A84C]/50 transition-all shadow-sm hover:shadow-lg p-6 group h-[320px] flex flex-col justify-end">
+                <div className="absolute inset-0 z-0 bg-black">
+                  <img src="https://i.ibb.co/8DDg94mN/professional-camera-man-at-work-2022-02-09-18-59-44-utc.jpg" alt="Build a Film Ecosystem" className="w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-700" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/30"></div>
+                </div>
+                <div className="relative z-10">
+                  <div className="w-10 h-10 bg-[#C9A84C]/20 backdrop-blur-sm rounded-full flex items-center justify-center mb-4 text-[#C9A84C] font-bold text-lg border border-[#C9A84C]/30">4</div>
+                  <h4 className="text-lg font-bold font-serif text-white mb-3">
+                    {isEn ? "Build a Film Ecosystem" : "打造电影生态"}
+                  </h4>
+                  <p className="text-sm font-light text-white/80 leading-relaxed">
+                    {isEn
+                      ? "Advance high-quality, socially valuable film and television content, and utilize the Golden Feather Awards system to honor outstanding emerging directors and distinguished filmmakers."
+                      : "推进高质量、有社会价值的影视制作内容，并通过金羽毛奖（Golden Feather Awards）体系表彰优秀的新晋导演与杰出电影人。"}
+                  </p>
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Core Business */}
+          {/* Core Nonprofit Support */}
           <div>
             <div className="text-center mb-10">
               <h3 className="text-2xl md:text-3xl font-bold font-serif text-gfa-inkBlack">
-                {isEn ? "Core Business" : "核心业务"}
+                {isEn ? "Core Nonprofit Support" : "核心公益支持"}
               </h3>
             </div>
 
