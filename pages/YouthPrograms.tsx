@@ -168,12 +168,14 @@ const YouthPrograms: React.FC = () => {
                   {isEn ? "We don't simulate—we actually produce and distribute. Every quarter, we produce a complete short film led entirely by youth." : "我们不模拟——我们真的制作，真的发行。每季度制作一部完整短片，全程由青少年主导。"}
                 </p>
                 <div className="bg-gray-50 border-l-4 border-[#C9A84C] p-6 rounded-r-xl mb-8 flex-grow">
-                  <h4 className="font-bold text-gfa-inkBlack font-serif mb-2">{isEn ? "Case Study: 'Garden'" : "代表作：《花园 Garden》"}</h4>
+                  <h4 className="font-bold text-gfa-inkBlack font-serif mb-4">{isEn ? "Case Study: 'Garden'" : "代表作：《花园 Garden》"}</h4>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <img src="https://i.ibb.co/sJKd1kNv/MV5-BNWI3-Mj-I2-NDIt-Yj-Ix-Mi00-MGM4-LTlk-Mz-Qt-Mm-Rk-MDQ0-ZDRj-OWU5-Xk-Ey-Xk-Fqc-Gc-V1.jpg" alt="Film Poster 1" className="w-full h-auto rounded-lg shadow-md object-cover aspect-[2/3] hover:scale-105 transition-transform duration-300" />
+                    <img src="https://i.ibb.co/bgKF8pwy/Gemini-Generated-Image-jtsengjtsengjtse.png" alt="Film Poster 2" className="w-full h-auto rounded-lg shadow-md object-cover aspect-[2/3] hover:scale-105 transition-transform duration-300" />
+                  </div>
                   <ul className="text-sm font-light text-gfa-slate space-y-2 mb-4">
                     <li>• {isEn ? "Winner: Best Family Film at Golden State Film Festival" : "Golden State Film Festival 最佳家庭电影"}</li>
-                    <li>• {isEn ? "Distributed on Amazon Prime, YouTube, and Tubi" : "Amazon Prime / YouTube / Tubi 广泛发行"}</li>
                   </ul>
-                  <p className="text-xs italic text-gfa-slate">"{isEn ? "Seeing my name in the credits on Amazon Prime made me realize I want to do this forever." : "在亚马逊上看到我的名字出现在片尾字幕时，我觉得我找到了我一生的热爱。"}"</p>
                 </div>
                 <div className="flex flex-col xl:flex-row gap-3">
                   <button className="bg-gfa-inkBlack hover:bg-black text-white font-bold uppercase tracking-widest text-[10px] sm:text-xs px-6 py-3 rounded-full transition-colors flex-1">
@@ -202,6 +204,11 @@ const YouthPrograms: React.FC = () => {
                 <p className="text-gfa-slate font-light leading-relaxed mb-6 font-serif italic text-lg text-gfa-inkBlack">
                   {isEn ? "\"Film is just another language. For children with special needs, it might be their most powerful one.\"" : "“电影，是另一种语言。对于有特殊需求的孩子，它可能是最有力的语言。”"}
                 </p>
+                <img 
+                  src="https://i.ibb.co/KcNpRyb4/Gemini-Generated-Image-2fx58a2fx58a2fx5-1.png" 
+                  alt="Film Therapy Program" 
+                  className="w-full h-auto rounded-xl shadow-sm mb-6 object-cover"
+                />
                 <ul className="text-sm font-light text-gfa-slate space-y-4 mb-8 flex-grow">
                   <li className="flex items-start gap-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-[#C9A84C] mt-1.5 shrink-0"></div>

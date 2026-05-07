@@ -55,12 +55,10 @@ const Home: React.FC = () => {
 
       {/* Trust Bar */}
       <div className="bg-[#111111] border-b border-gfa-border/10 py-5 overflow-hidden relative z-20">
-         <div className="container-gfa flex flex-wrap justify-center md:justify-between items-center text-[10px] md:text-xs font-bold uppercase tracking-widest text-white/60 gap-8">
+          <div className="container-gfa flex flex-wrap justify-center md:justify-between items-center text-[10px] md:text-xs font-bold uppercase tracking-widest text-white/60 gap-8">
             <span>501(c)(3) Certified Nonprofit</span>
             <span>Blackmagic Design Partner</span>
-            <span>Amazon Prime · Tubi · YouTube</span>
             <span className="hidden md:inline">Golden State Film Festival Winner</span>
-            <span>Dolby Theatre 2026</span>
             <span className="hidden lg:inline">City of Pomona Partner</span>
          </div>
       </div>
@@ -253,52 +251,76 @@ const Home: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-white border border-gfa-border p-8 rounded-3xl relative shadow-sm hover:shadow-md hover:border-[#C9A84C] transition-all group">
-               <div className="text-[#C9A84C] font-bold uppercase tracking-widest text-[10px] mb-3">Equipment Barrier</div>
-               <h3 className="text-lg md:text-xl font-bold text-gfa-inkBlack font-serif mb-3 border-b border-gfa-border pb-3 group-hover:border-[#C9A84C] transition-colors">
-                 {isEn ? "Equipment Access" : "设备壁垒"}
-               </h3>
-               <p className="text-gfa-slate font-light leading-relaxed text-sm">
-                 {isEn 
-                   ? "Blackmagic Design partnership grants access to professional camera packages. We provide 100% free rentals, allowing grads to complete their first industry-standard feature without crippling debt." 
-                   : "基于Blackmagic Design等品牌的合作设备库，我们提供100%免费借用，让毕业生无需高昂负债即可利用专业级电影机完成第一部行业标准的独立长片。"}
-               </p>
+            <div className="relative overflow-hidden border border-gfa-border/20 rounded-3xl p-8 shadow-sm hover:shadow-lg hover:border-[#C9A84C]/50 transition-all group">
+               <div className="absolute inset-0 z-0 bg-blue-950">
+                 <img src="https://images.unsplash.com/photo-1540614099511-9a7dc92323f4?w=800&auto=format&fit=crop&q=60" alt="" className="w-full h-full object-cover opacity-20 mix-blend-overlay group-hover:scale-105 transition-transform duration-700" />
+                 <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 to-blue-950/95"></div>
+               </div>
+               <div className="relative z-10">
+                 <div className="text-[#C9A84C] font-bold uppercase tracking-widest text-[10px] mb-3">Equipment Barrier</div>
+                 <h3 className="text-lg md:text-xl font-bold text-white font-serif mb-3 border-b border-white/20 pb-3 group-hover:border-[#C9A84C] transition-colors">
+                   {isEn ? "Equipment Access" : "设备壁垒"}
+                 </h3>
+                 <p className="text-white/80 font-light leading-relaxed text-sm">
+                   {isEn 
+                     ? "Blackmagic Design partnership grants access to professional camera packages. We provide 100% free rentals, allowing grads to complete their first industry-standard feature without crippling debt." 
+                     : "基于Blackmagic Design等品牌的合作设备库，我们提供100%免费借用，让毕业生无需高昂负债即可利用专业级电影机完成第一部行业标准的独立长片。"}
+                 </p>
+               </div>
             </div>
 
-            <div className="bg-white border border-gfa-border p-8 rounded-3xl relative shadow-sm hover:shadow-md hover:border-[#C9A84C] transition-all group">
-               <div className="text-[#C9A84C] font-bold uppercase tracking-widest text-[10px] mb-3">Network Barrier</div>
-               <h3 className="text-lg md:text-xl font-bold text-gfa-inkBlack font-serif mb-3 border-b border-gfa-border pb-3 group-hover:border-[#C9A84C] transition-colors">
-                 {isEn ? "Industry Mentorship" : "人脉壁垒"}
-               </h3>
-               <p className="text-gfa-slate font-light leading-relaxed text-sm">
-                 {isEn 
-                   ? "Our robust 1-on-1 Hollywood mentor network matches newcomers with veteran filmmakers, granting outsiders physical and social access to elite industry circles." 
-                   : "构建强大的好莱坞导师网络，实行一对一精准匹配。我们致力于帮助外来者和处于极度劣势地位的毕业生打破圈层，真正进入核心行业社交圈。"}
-               </p>
+            <div className="relative overflow-hidden border border-gfa-border/20 rounded-3xl p-8 shadow-sm hover:shadow-lg hover:border-[#C9A84C]/50 transition-all group">
+               <div className="absolute inset-0 z-0 bg-amber-950">
+                 <img src="https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?w=800&auto=format&fit=crop&q=60" alt="" className="w-full h-full object-cover opacity-20 mix-blend-overlay group-hover:scale-105 transition-transform duration-700" />
+                 <div className="absolute inset-0 bg-gradient-to-br from-amber-900/90 to-amber-950/95"></div>
+               </div>
+               <div className="relative z-10">
+                 <div className="text-[#C9A84C] font-bold uppercase tracking-widest text-[10px] mb-3">Network Barrier</div>
+                 <h3 className="text-lg md:text-xl font-bold text-white font-serif mb-3 border-b border-white/20 pb-3 group-hover:border-[#C9A84C] transition-colors">
+                   {isEn ? "Industry Mentorship" : "人脉壁垒"}
+                 </h3>
+                 <p className="text-white/80 font-light leading-relaxed text-sm">
+                   {isEn 
+                     ? "Our robust 1-on-1 Hollywood mentor network matches newcomers with veteran filmmakers, granting outsiders physical and social access to elite industry circles." 
+                     : "构建强大的好莱坞导师网络，实行一对一精准匹配。我们致力于帮助外来者和处于极度劣势地位的毕业生打破圈层，真正进入核心行业社交圈。"}
+                 </p>
+               </div>
             </div>
 
-            <div className="bg-white border border-gfa-border p-8 rounded-3xl relative shadow-sm hover:shadow-md hover:border-[#C9A84C] transition-all group">
-               <div className="text-[#C9A84C] font-bold uppercase tracking-widest text-[10px] mb-3">Distribution Barrier</div>
-               <h3 className="text-lg md:text-xl font-bold text-gfa-inkBlack font-serif mb-3 border-b border-gfa-border pb-3 group-hover:border-[#C9A84C] transition-colors">
-                 {isEn ? "Platform Distribution" : "发行壁垒"}
-               </h3>
-               <p className="text-gfa-slate font-light leading-relaxed text-sm">
-                 {isEn 
-                   ? "We actively establish visibility by helping youth and graduate projects secure distribution pipelines into massive global platforms like Amazon Prime, Tubi, and beyond." 
-                   : "我们通过直接的发行管道，协助青年创作者的影视作品成功进入Amazon Prime、Tubi等全球性流媒体平台，在海量受众前建立作品可见度。"}
-               </p>
+            <div className="relative overflow-hidden border border-gfa-border/20 rounded-3xl p-8 shadow-sm hover:shadow-lg hover:border-[#C9A84C]/50 transition-all group">
+               <div className="absolute inset-0 z-0 bg-emerald-950">
+                 <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=800&auto=format&fit=crop&q=60" alt="" className="w-full h-full object-cover opacity-20 mix-blend-overlay group-hover:scale-105 transition-transform duration-700" />
+                 <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/90 to-emerald-950/95"></div>
+               </div>
+               <div className="relative z-10">
+                 <div className="text-[#C9A84C] font-bold uppercase tracking-widest text-[10px] mb-3">Distribution Barrier</div>
+                 <h3 className="text-lg md:text-xl font-bold text-white font-serif mb-3 border-b border-white/20 pb-3 group-hover:border-[#C9A84C] transition-colors">
+                   {isEn ? "Platform Distribution" : "发行壁垒"}
+                 </h3>
+                 <p className="text-white/80 font-light leading-relaxed text-sm">
+                   {isEn 
+                     ? "We actively establish visibility by helping youth and graduate projects secure distribution pipelines into massive global platforms like Amazon Prime, Tubi, and beyond." 
+                     : "我们通过直接的发行管道，协助青年创作者的影视作品成功进入Amazon Prime、Tubi等全球性流媒体平台，在海量受众前建立作品可见度。"}
+                 </p>
+               </div>
             </div>
 
-            <div className="bg-white border border-gfa-border p-8 rounded-3xl relative shadow-sm hover:shadow-md hover:border-[#C9A84C] transition-all group">
-               <div className="text-[#C9A84C] font-bold uppercase tracking-widest text-[10px] mb-3">Funding Barrier</div>
-               <h3 className="text-lg md:text-xl font-bold text-gfa-inkBlack font-serif mb-3 border-b border-gfa-border pb-3 group-hover:border-[#C9A84C] transition-colors">
-                 {isEn ? "Grant Assistance" : "资金壁垒"}
-               </h3>
-               <p className="text-gfa-slate font-light leading-relaxed text-sm">
-                 {isEn 
-                   ? "Extensive 1-on-1 grant application coaching. We guide independent graduates to secure public arts funding from the NEA, California Arts Council, and private endowments." 
-                   : "提供专业的基金申请辅导培训。我们帮助独立电影毕业生撰写标书，以获取NEA、加州艺术委员会及多项私人艺术基金会的资金支持。"}
-               </p>
+            <div className="relative overflow-hidden border border-gfa-border/20 rounded-3xl p-8 shadow-sm hover:shadow-lg hover:border-[#C9A84C]/50 transition-all group">
+               <div className="absolute inset-0 z-0 bg-purple-950">
+                 <img src="https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=800&auto=format&fit=crop&q=60" alt="" className="w-full h-full object-cover opacity-20 mix-blend-overlay group-hover:scale-105 transition-transform duration-700" />
+                 <div className="absolute inset-0 bg-gradient-to-br from-purple-900/90 to-purple-950/95"></div>
+               </div>
+               <div className="relative z-10">
+                 <div className="text-[#C9A84C] font-bold uppercase tracking-widest text-[10px] mb-3">Funding Barrier</div>
+                 <h3 className="text-lg md:text-xl font-bold text-white font-serif mb-3 border-b border-white/20 pb-3 group-hover:border-[#C9A84C] transition-colors">
+                   {isEn ? "Grant Assistance" : "资金壁垒"}
+                 </h3>
+                 <p className="text-white/80 font-light leading-relaxed text-sm">
+                   {isEn 
+                     ? "Extensive 1-on-1 grant application coaching. We guide independent graduates to secure public arts funding from the NEA, California Arts Council, and private endowments." 
+                     : "提供专业的基金申请辅导培训。我们帮助独立电影毕业生撰写标书，以获取NEA、加州艺术委员会及多项私人艺术基金会的资金支持。"}
+                 </p>
+               </div>
             </div>
           </div>
         </div>
