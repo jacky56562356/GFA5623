@@ -17,8 +17,8 @@ const YouthPrograms: React.FC = () => {
       <section className="relative h-[65vh] min-h-[500px] flex items-end overflow-hidden bg-gfa-inkBlack">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.pexels.com/photos/4350057/pexels-photo-4350057.jpeg?auto=compress&cs=tinysrgb&w=1600"
-            alt="Young filmmaker"
+            src="/images/ChatGPT_Image_2026年5月6日_18_06_00.png"
+            alt="Youth filmmakers learning on set"
             className="w-full h-full object-cover opacity-60"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-gfa-inkBlack via-gfa-inkBlack/40 to-transparent"></div>
@@ -177,8 +177,8 @@ const YouthPrograms: React.FC = () => {
             <div className="space-y-4">
               <div className="relative rounded-2xl overflow-hidden h-56">
                 <img
-                  src="https://images.pexels.com/photos/8363831/pexels-photo-8363831.jpeg?auto=compress&cs=tinysrgb&w=700"
-                  alt="Summer camp workshop"
+                  src="/images/ChatGPT_Image_2026年5月6日_18_12_27.png"
+                  alt="Youth filmmakers around campfire at summer camp"
                   className="w-full h-full object-cover"
                 />
               </div>

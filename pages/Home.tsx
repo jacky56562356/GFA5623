@@ -70,8 +70,8 @@ const Home: React.FC = () => {
               <div className="space-y-3">
                 <div className="relative rounded-2xl overflow-hidden h-52 group">
                   <img
-                    src="https://images.pexels.com/photos/8942090/pexels-photo-8942090.jpeg?auto=compress&cs=tinysrgb&w=600"
-                    alt="Youth filmmaker on set"
+                    src="/images/ChatGPT_Image_2026年5月6日_18_06_00.png"
+                    alt="Youth filmmakers around professional camera"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
                   <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/70 to-transparent">
@@ -80,8 +80,8 @@ const Home: React.FC = () => {
                 </div>
                 <div className="relative rounded-2xl overflow-hidden h-36 group">
                   <img
-                    src="https://images.pexels.com/photos/4350057/pexels-photo-4350057.jpeg?auto=compress&cs=tinysrgb&w=600"
-                    alt="Film production"
+                    src="/images/ChatGPT_Image_2026年5月6日_18_06_52.png"
+                    alt="Young boy with clapperboard on film set"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
                   <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/70 to-transparent">
@@ -225,8 +225,8 @@ const Home: React.FC = () => {
             <div className="bg-white rounded-2xl overflow-hidden border border-[#E6E7EA] hover:border-[#C9A84C]/40 hover:shadow-md transition-all group">
               <div className="h-44 overflow-hidden relative">
                 <img
-                  src="https://images.pexels.com/photos/7551659/pexels-photo-7551659.jpeg?auto=compress&cs=tinysrgb&w=500"
-                  alt="Youth film camp"
+                  src="/images/ChatGPT_Image_2026年5月6日_18_06_52.png"
+                  alt="Young boy with clapperboard at film camp"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute top-3 left-3">

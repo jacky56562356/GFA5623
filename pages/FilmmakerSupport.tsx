@@ -16,8 +16,8 @@ const FilmmakerSupport: React.FC = () => {
       <section className="relative min-h-[65vh] flex items-end justify-start overflow-hidden bg-gfa-inkBlack pt-16">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.pexels.com/photos/7551659/pexels-photo-7551659.jpeg?auto=compress&cs=tinysrgb&w=1920"
-            alt="Young filmmaker on set"
+            src="/images/ChatGPT_Image_2026年5月6日_18_08_23.png"
+            alt="Young filmmakers filming at sunset"
             className="w-full h-full object-cover opacity-50"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-gfa-inkBlack via-gfa-inkBlack/60 to-transparent"></div>

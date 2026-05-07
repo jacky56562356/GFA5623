@@ -17,8 +17,8 @@ const About: React.FC = () => {
       <section className="relative min-h-[60vh] flex items-end justify-start overflow-hidden bg-gfa-inkBlack">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.pexels.com/photos/4350057/pexels-photo-4350057.jpeg?auto=compress&cs=tinysrgb&w=1920"
-            alt="Youth filmmakers at work"
+            src="/images/ChatGPT_Image_2026年5月6日_18_08_23.png"
+            alt="Youth filmmakers at sunset"
             className="w-full h-full object-cover opacity-50"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-gfa-inkBlack via-gfa-inkBlack/70 to-transparent"></div>
@@ -113,9 +113,9 @@ const About: React.FC = () => {
               </div>
             </div>
             <div className="space-y-4">
-              <img src="https://images.pexels.com/photos/7551659/pexels-photo-7551659.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Youth filmmaking" className="w-full h-72 object-cover rounded-2xl" />
+              <img src="/images/ChatGPT_Image_2026年5月6日_18_06_00.png" alt="Youth filmmakers on professional set" className="w-full h-72 object-cover rounded-2xl" />
               <div className="grid grid-cols-2 gap-4">
-                <img src="https://images.pexels.com/photos/8942090/pexels-photo-8942090.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Young director on set" className="w-full h-44 object-cover rounded-2xl" />
+                <img src="/images/ChatGPT_Image_2026年5月6日_18_06_52.png" alt="Young director with clapperboard" className="w-full h-44 object-cover rounded-2xl" />
                 <img src="https://images.pexels.com/photos/8363831/pexels-photo-8363831.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Children film production" className="w-full h-44 object-cover rounded-2xl" />
               </div>
             </div>
