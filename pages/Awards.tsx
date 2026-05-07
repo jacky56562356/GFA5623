@@ -69,7 +69,7 @@ const Awards: React.FC = () => {
       <section className="relative h-[65vh] min-h-[500px] flex items-end overflow-hidden bg-gfa-inkBlack">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.pexels.com/photos/7245486/pexels-photo-7245486.jpeg?auto=compress&cs=tinysrgb&w=1600"
+            src="/images/ChatGPT_Image_2026年5月6日_18_06_00.png"
             alt="Youth awards ceremony"
             className="w-full h-full object-cover opacity-50"
           />
@@ -145,10 +145,10 @@ const Awards: React.FC = () => {
               </div>
             </div>
             <div className="space-y-4">
-              <img src="https://images.pexels.com/photos/8942090/pexels-photo-8942090.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Young filmmaker receiving award" className="w-full h-72 object-cover rounded-2xl" />
+              <img src="/images/ChatGPT_Image_2026年5月6日_18_12_27.png" alt="Young filmmaker receiving award" className="w-full h-72 object-cover rounded-2xl" />
               <div className="grid grid-cols-2 gap-4">
-                <img src="https://images.pexels.com/photos/8106613/pexels-photo-8106613.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Children at film screening" className="w-full h-40 object-cover rounded-2xl" />
-                <img src="https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Youth performing on stage" className="w-full h-40 object-cover rounded-2xl" />
+                <img src="/images/ChatGPT_Image_2026年5月6日_18_06_52.png" alt="Children at film screening" className="w-full h-40 object-cover rounded-2xl" />
+                <img src="/images/ChatGPT_Image_2026年5月6日_18_06_00.png" alt="Youth performing on stage" className="w-full h-40 object-cover rounded-2xl" />
               </div>
             </div>
           </div>
@@ -272,9 +272,9 @@ const Awards: React.FC = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { role: isZh ? '好莱坞电影导演' : 'Hollywood Director', img: 'https://images.pexels.com/photos/5792641/pexels-photo-5792641.jpeg?auto=compress&cs=tinysrgb&w=400' },
-              { role: isZh ? '电影节策展人' : 'Festival Programmer', img: 'https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg?auto=compress&cs=tinysrgb&w=400' },
-              { role: isZh ? '电影教育专家' : 'Film Education Expert', img: 'https://images.pexels.com/photos/7551659/pexels-photo-7551659.jpeg?auto=compress&cs=tinysrgb&w=400' },
+              { role: isZh ? '好莱坞电影导演' : 'Hollywood Director', img: '/images/ChatGPT_Image_2026年5月6日_18_08_23.png' },
+              { role: isZh ? '电影节策展人' : 'Festival Programmer', img: '/images/ChatGPT_Image_2026年5月6日_18_06_00.png' },
+              { role: isZh ? '电影教育专家' : 'Film Education Expert', img: '/images/ChatGPT_Image_2026年5月6日_18_12_27.png' },
             ].map((juror, i) => (
               <div key={i} className="bg-[#F9F7F4] rounded-2xl overflow-hidden border border-[#E6E7EA]">
                 <div className="h-52 overflow-hidden">

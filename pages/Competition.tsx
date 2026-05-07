@@ -38,7 +38,7 @@ const Competition: React.FC = () => {
       <section className="relative h-screen min-h-[800px] flex items-end overflow-hidden bg-gfa-inkBlack pt-16">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=1600"
+            src="/images/ChatGPT_Image_2026年5月6日_18_06_00.png"
             alt="Grand stage competition"
             className="w-full h-full object-cover opacity-50"
           />
@@ -97,22 +97,22 @@ const Competition: React.FC = () => {
             </div>
             <div className="grid grid-cols-2 gap-4">
               <img
-                src="https://images.pexels.com/photos/7551659/pexels-photo-7551659.jpeg?auto=compress&cs=tinysrgb&w=600"
+                src="/images/ChatGPT_Image_2026年5月6日_18_06_52.png"
                 alt="Young filmmaker with camera"
                 className="rounded-2xl w-full h-52 object-cover"
               />
               <img
-                src="https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=600"
+                src="/images/ChatGPT_Image_2026年5月6日_18_12_27.png"
                 alt="Youth performance on stage"
                 className="rounded-2xl w-full h-52 object-cover mt-8"
               />
               <img
-                src="https://images.pexels.com/photos/4350057/pexels-photo-4350057.jpeg?auto=compress&cs=tinysrgb&w=600"
+                src="/images/ChatGPT_Image_2026年5月6日_18_06_00.png"
                 alt="Youth film production"
                 className="rounded-2xl w-full h-52 object-cover"
               />
               <img
-                src="https://images.pexels.com/photos/8363831/pexels-photo-8363831.jpeg?auto=compress&cs=tinysrgb&w=600"
+                src="/images/ChatGPT_Image_2026年5月6日_18_08_23.png"
                 alt="Youth talent showcase"
                 className="rounded-2xl w-full h-52 object-cover mt-8"
               />
@@ -179,7 +179,7 @@ const Competition: React.FC = () => {
       <section className="flex flex-col md:flex-row">
         <div className="md:w-1/2 relative overflow-hidden min-h-[360px]">
           <img
-            src="https://images.pexels.com/photos/8942090/pexels-photo-8942090.jpeg?auto=compress&cs=tinysrgb&w=800"
+            src="/images/ChatGPT_Image_2026年5月6日_18_06_00.png"
             alt="Youth filmmaking"
             className="w-full h-full object-cover absolute inset-0"
           />
@@ -193,7 +193,7 @@ const Competition: React.FC = () => {
         </div>
         <div className="md:w-1/2 relative overflow-hidden min-h-[360px]">
           <img
-            src="https://images.pexels.com/photos/7245486/pexels-photo-7245486.jpeg?auto=compress&cs=tinysrgb&w=800"
+            src="/images/ChatGPT_Image_2026年5月6日_18_12_27.png"
             alt="Young performers on stage"
             className="w-full h-full object-cover absolute inset-0"
           />
@@ -216,10 +216,10 @@ const Competition: React.FC = () => {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
             {[
-              { n: 1, zh: "在线报名", zhd: "填写基本信息和参赛类别", en: "Register Online", end: "Fill out info & categories", img: "https://images.pexels.com/photos/4350057/pexels-photo-4350057.jpeg?auto=compress&cs=tinysrgb&w=300" },
-              { n: 2, zh: "提交作品", zhd: "上传视频或作品文件", en: "Submit Work", end: "Upload video or file", img: "https://images.pexels.com/photos/7551659/pexels-photo-7551659.jpeg?auto=compress&cs=tinysrgb&w=300" },
-              { n: 3, zh: "评审入围", zhd: "专业评审委员会审核", en: "Jury Selection", end: "Industry panel review", img: "https://images.pexels.com/photos/8942090/pexels-photo-8942090.jpeg?auto=compress&cs=tinysrgb&w=300" },
-              { n: 4, zh: "决赛舞台", zhd: "Dolby Theatre，好莱坞", en: "Grand Finale", end: "Dolby Theatre, LA", img: "https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=300" },
+              { n: 1, zh: "在线报名", zhd: "填写基本信息和参赛类别", en: "Register Online", end: "Fill out info & categories", img: "/images/ChatGPT_Image_2026年5月6日_18_06_00.png" },
+              { n: 2, zh: "提交作品", zhd: "上传视频或作品文件", en: "Submit Work", end: "Upload video or file", img: "/images/ChatGPT_Image_2026年5月6日_18_06_52.png" },
+              { n: 3, zh: "评审入围", zhd: "专业评审委员会审核", en: "Jury Selection", end: "Industry panel review", img: "/images/ChatGPT_Image_2026年5月6日_18_12_27.png" },
+              { n: 4, zh: "决赛舞台", zhd: "Dolby Theatre，好莱坞", en: "Grand Finale", end: "Dolby Theatre, LA", img: "/images/ChatGPT_Image_2026年5月6日_18_08_23.png" },
             ].map((step) => (
               <div key={step.n} className="text-center">
                 <div className="relative rounded-2xl overflow-hidden mb-4">
@@ -242,7 +242,7 @@ const Competition: React.FC = () => {
       <section className="py-24 bg-gfa-inkBlack relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.pexels.com/photos/7245486/pexels-photo-7245486.jpeg?auto=compress&cs=tinysrgb&w=1600"
+            src="/images/ChatGPT_Image_2026年5月6日_18_06_00.png"
             alt="Youth awards ceremony"
             className="w-full h-full object-cover opacity-10"
           />
@@ -300,7 +300,7 @@ const Competition: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2">
           <div className="relative overflow-hidden min-h-[320px]">
             <img
-              src="https://images.pexels.com/photos/8106613/pexels-photo-8106613.jpeg?auto=compress&cs=tinysrgb&w=800"
+              src="/images/ChatGPT_Image_2026年5月6日_18_12_27.png"
               alt="Community film event"
               className="w-full h-full object-cover absolute inset-0"
             />
@@ -320,7 +320,7 @@ const Competition: React.FC = () => {
           </div>
           <div className="relative overflow-hidden min-h-[320px]">
             <img
-              src="https://images.pexels.com/photos/8363831/pexels-photo-8363831.jpeg?auto=compress&cs=tinysrgb&w=800"
+              src="/images/ChatGPT_Image_2026年5月6日_18_06_52.png"
               alt="Children at film event"
               className="w-full h-full object-cover absolute inset-0"
             />

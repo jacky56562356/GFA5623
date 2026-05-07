@@ -256,9 +256,9 @@ const FilmmakerSupport: React.FC = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { name: 'Alex', role: isEn ? 'Cinematography Grad · USC' : '摄影系毕业生 · USC', img: 'https://images.pexels.com/photos/8942090/pexels-photo-8942090.jpeg?auto=compress&cs=tinysrgb&w=300', quote: isEn ? '"GFA lent me an entire Blackmagic camera package for my first short film. That short got into festivals, and directly led to my first paying gig."' : '"通过设备借用完成了第一部短片，入围电影节后获得工作机会。"' },
-              { name: 'Sarah', role: isEn ? 'Independent Director · Chapman' : '独立导演 · Chapman', img: 'https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg?auto=compress&cs=tinysrgb&w=300', quote: isEn ? '"My GFA mentor pulled my resume from the pile and got me a production company internship. Now I work there full-time."' : '"通过导师网络进入制片公司实习，现在已经全职工作。"' },
-              { name: 'David', role: isEn ? 'Low-Income Creator · UCLA' : '低收入创作者 · UCLA', img: 'https://images.pexels.com/photos/7551659/pexels-photo-7551659.jpeg?auto=compress&cs=tinysrgb&w=300', quote: isEn ? '"GFA\'s grant coaching helped me secure funding to finish my passion project. It screened at three festivals."' : '"通过基金辅导获得资助，完成了长期搁置的项目，在三个电影节上放映。"' },
+              { name: 'Alex', role: isEn ? 'Cinematography Grad · USC' : '摄影系毕业生 · USC', img: '/images/ChatGPT_Image_2026年5月6日_18_06_00.png', quote: isEn ? '"GFA lent me an entire Blackmagic camera package for my first short film. That short got into festivals, and directly led to my first paying gig."' : '"通过设备借用完成了第一部短片，入围电影节后获得工作机会。"' },
+              { name: 'Sarah', role: isEn ? 'Independent Director · Chapman' : '独立导演 · Chapman', img: '/images/ChatGPT_Image_2026年5月6日_18_08_23.png', quote: isEn ? '"My GFA mentor pulled my resume from the pile and got me a production company internship. Now I work there full-time."' : '"通过导师网络进入制片公司实习，现在已经全职工作。"' },
+              { name: 'David', role: isEn ? 'Low-Income Creator · UCLA' : '低收入创作者 · UCLA', img: '/images/ChatGPT_Image_2026年5月6日_18_06_52.png', quote: isEn ? '"GFA\'s grant coaching helped me secure funding to finish my passion project. It screened at three festivals."' : '"通过基金辅导获得资助，完成了长期搁置的项目，在三个电影节上放映。"' },
             ].map(s => (
               <div key={s.name} className="bg-[#F9F7F4] rounded-3xl overflow-hidden border border-gfa-border hover:shadow-lg transition-all">
                 <div className="h-48 overflow-hidden">

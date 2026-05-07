@@ -59,7 +59,7 @@ const YouthPrograms: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative rounded-2xl overflow-hidden h-80">
               <img
-                src="https://images.pexels.com/photos/8106613/pexels-photo-8106613.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="/images/ChatGPT_Image_2026年5月6日_18_12_27.png"
                 alt="Community screening"
                 className="w-full h-full object-cover"
               />
@@ -216,7 +216,7 @@ const YouthPrograms: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative rounded-2xl overflow-hidden h-80">
               <img
-                src="https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="/images/ChatGPT_Image_2026年5月6日_18_06_52.png"
                 alt="Youth short film production"
                 className="w-full h-full object-cover"
               />
@@ -308,7 +308,7 @@ const YouthPrograms: React.FC = () => {
             <div className="space-y-4">
               <div className="relative rounded-2xl overflow-hidden h-64">
                 <img
-                  src="https://images.pexels.com/photos/7551659/pexels-photo-7551659.jpeg?auto=compress&cs=tinysrgb&w=700"
+                  src="/images/ChatGPT_Image_2026年5月6日_18_08_23.png"
                   alt="Young filmmaker with camera"
                   className="w-full h-full object-cover"
                 />
