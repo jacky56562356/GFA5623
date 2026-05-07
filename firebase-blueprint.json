@@ -113,6 +113,35 @@
         }
       },
       "required": ["userId", "applicantName", "email", "phone", "driversLicense", "ssn", "currentAddress", "homeAddress", "graduatedSchool", "graduationProjectUrl", "schoolMentorContact", "shootingPlan", "totalBudget", "existingCrew", "neededCrew", "projectTitle", "projectType", "logline", "scriptUrl", "futureDirection", "requestedGear", "estimatedShootDates", "status", "createdAt"]
+    },
+    "GearDonation": {
+      "title": "Gear Donation",
+      "description": "Donation of gear for employment support.",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "donorName": { "type": "string" },
+        "email": { "type": "string" },
+        "phone": { "type": "string" },
+        "shippingMethod": { "type": "string" },
+        "shippingAddress": { "type": "string" },
+        "heavyGearRemarks": { "type": "string" },
+        "lightGearRemarks": { "type": "string" },
+        "needsTaxDeduction": { "type": "boolean" },
+        "imageUrls": {
+            "type": "array",
+            "items": { "type": "string" }
+        },
+        "status": {
+            "type": "string",
+            "enum": ["pending", "evaluating", "received"]
+        },
+        "createdAt": {
+            "type": "string",
+            "format": "datetime"
+        }
+      },
+      "required": ["userId", "donorName", "email", "phone", "shippingMethod", "shippingAddress", "needsTaxDeduction", "status", "createdAt"]
     }
   },
   "firestore": {
@@ -127,6 +156,12 @@
         "$ref": "#/entities/GearApplication"
       },
       "description": "Gear access applications. Random ID."
+    },
+    "/gear_donations/{donationId}": {
+      "schema": {
+        "$ref": "#/entities/GearDonation"
+      },
+      "description": "Gear donations for employment support. Random ID."
     }
   }
 }

@@ -73,8 +73,9 @@ const FilmmakerSupport: React.FC = () => {
                 <p className="text-sm text-gfa-slate font-light pt-2 leading-relaxed">
                   {isEn ? "Details: Open to low-budget narrative shorts and documentaries. Projects must demonstrate a clear vision and need. Approved filmmakers receive a 1 to 4-week equipment loan at no cost." : "具体说明：面向预算有限的独立短片、纪录片及公益影像项目开放。提交完整剧本与制片计划评估后，创作者即可获得1至4周的公益免租金设备借用支持。"}
                 </p>
-                <div className="pt-2">
+                <div className="pt-2 flex flex-wrap gap-4">
                   <Link to="/gear-application" className="inline-block text-xs font-bold uppercase tracking-widest bg-gfa-inkBlack text-white px-6 py-2 rounded-full hover:bg-[#C9A84C] hover:shadow-md hover:-translate-y-0.5 active:bg-[#a68636] active:scale-95 transition-all duration-200">{isEn ? "Apply for Gear" : "提交项目审阅与设备申请"}</Link>
+                  <Link to="/gear-donation" className="inline-block text-xs font-bold uppercase tracking-widest bg-[#F5F2EE] border border-gfa-border text-gfa-inkBlack px-6 py-2 rounded-full hover:bg-[#C9A84C] hover:text-white hover:border-[#C9A84C] hover:shadow-md hover:-translate-y-0.5 active:scale-95 transition-all duration-200">{isEn ? "Donate Gear for Employment Support" : "为就业扶持捐赠设备"}</Link>
                 </div>
               </div>
             </div>
