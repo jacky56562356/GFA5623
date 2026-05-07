@@ -38,7 +38,7 @@ const Navbar: React.FC = () => {
       <nav className={`fixed top-0 left-0 right-0 z-[100] h-[90px] md:h-[100px] flex items-center transition-all duration-300 border-t-4 border-t-gfa-gold ${scrolled ? "bg-white/95 backdrop-blur-md shadow-md border-b border-gfa-border/50" : "bg-white border-b border-gfa-border"}`}>
         <div className="container-gfa flex items-center justify-between w-full">
           <Link to="/" className="flex items-center gap-3 shrink-0 hover:opacity-80 transition-opacity">
-            <img src="https://i.ibb.co/mFgDBtBp/1.png" alt="GFA" className="h-12 md:h-16 w-auto" />
+            <img src="https://i.ibb.co/mFgDBtBp/1.png" alt="GFA" className="h-12 md:h-16 w-auto object-contain" />
             <div className="hidden lg:flex flex-col">
               <span className={`text-3xl lg:text-4xl font-bold leading-none tracking-tighter font-serif ${textColor}`}>GFA</span>
               <span className="text-[7px] tracking-[0.2em] font-black mt-1 text-gfa-gold whitespace-nowrap">Global Film Alliance</span>

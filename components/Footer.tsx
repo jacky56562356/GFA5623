@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
         {/* Brand & Mission */}
         <div className="space-y-6 lg:border-r lg:border-white/10 lg:pr-8">
           <div className="flex items-center gap-4">
-            <img src="https://i.ibb.co/mFgDBtBp/1.png" alt="GFA Logo" className="h-20 w-auto" />
+            <img src="https://i.ibb.co/mFgDBtBp/1.png" alt="GFA Logo" className="h-20 w-auto object-contain" />
             <div className="flex flex-col">
               <span className="text-3xl font-bold tracking-tighter font-serif leading-none">GFA</span>
               <span className="text-[10px] uppercase tracking-[0.2em] text-[#C9A84C] font-bold mt-1">Global Film Alliance</span>
@@ -76,7 +76,7 @@ const Footer: React.FC = () => {
 
         {/* Legal & Nonprofit Status */}
         <div className="bg-white/5 p-8 border border-white/10 rounded-3xl text-sm text-white/70 font-light backdrop-blur-sm flex flex-col justify-center">
-           <img src="https://i.ibb.co/mFgDBtBp/1.png" alt="Nonprofit" className="h-12 w-auto mb-6 opacity-50 grayscale mix-blend-screen" />
+           <img src="https://i.ibb.co/mFgDBtBp/1.png" alt="Nonprofit" className="h-12 w-auto object-contain object-left mb-6 opacity-50 grayscale mix-blend-screen" />
            <p className="mb-4 text-white/90 font-medium">Global Film Alliance, Inc.</p>
            <p className="mb-2">A registered 501(c)(3) nonprofit organization in California.</p>
            <p className="font-mono text-xs bg-black/30 p-2 rounded text-center mb-0 mt-4 border border-white/5">EIN: 33-4817276</p>
@@ -87,8 +87,9 @@ const Footer: React.FC = () => {
         <p>&copy; {new Date().getFullYear()} Global Film Alliance, Inc. All rights reserved.</p>
         <div className="flex flex-wrap justify-center gap-6">
           <Link to="/youth-protection" className="hover:text-[#C9A84C] font-bold text-white/70 transition-colors uppercase tracking-widest">{isEn ? 'Youth Protection' : '青少年安全与保护'}</Link>
-          <Link to="/policy/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
-          <Link to="/policy/terms" className="hover:text-white transition-colors">Terms of Service</Link>
+          <Link to="/policy/privacy" className="hover:text-white transition-colors">{isEn ? 'Privacy Policy' : '隐私政策'}</Link>
+          <Link to="/policy/terms" className="hover:text-white transition-colors">{isEn ? 'Terms of Service' : '服务条款'}</Link>
+          <Link to="/policy/consent" className="hover:text-white transition-colors">{isEn ? 'Cookie Policy' : 'Cookie政策'}</Link>
         </div>
       </div>
     </footer>
