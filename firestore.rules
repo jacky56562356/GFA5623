@@ -72,6 +72,32 @@ service cloud.firestore {
         && (request.auth == null ? data.userId == 'anonymous' : data.userId == request.auth.uid);
     }
 
+    function isValidAwardSubmission(data) {
+      return data.keys().hasAll(['applicantName', 'applicantEmail', 'applicantRole', 'applicantAge', 'filmTitleOrig', 'category', 'runtime', 'completionDate', 'synopsis', 'copyrightOwnership', 'creditsInfo', 'attendeeCount', 'screenerLink', 'agreesToTerms', 'createdAt', 'status'])
+        && data.applicantName is string 
+        && data.applicantEmail is string 
+        && data.applicantRole is string 
+        && data.filmTitleOrig is string 
+        && data.category is string 
+        && data.runtime is string 
+        && data.completionDate is string 
+        && data.synopsis is string 
+        && data.copyrightOwnership is string 
+        && data.creditsInfo is string 
+        && data.attendeeCount is string 
+        && data.screenerLink is string 
+        && data.agreesToTerms is bool
+        && data.status in ['pending', 'evaluating', 'received']
+        && ( !('applicantPhone' in data) || (data.applicantPhone is string) )
+        && ( !('applicantAge' in data) || (data.applicantAge is string) )
+        && ( !('filmTitleEn' in data) || (data.filmTitleEn is string) )
+        && ( !('releasedPlatforms' in data) || (data.releasedPlatforms is string) )
+        && ( !('screenerPassword' in data) || (data.screenerPassword is string) )
+        && ( !('posterLink' in data) || (data.posterLink is string) )
+        && ( !('posterFileName' in data) || (data.posterFileName is string) )
+        && ( !('posterFileBase64' in data) || (data.posterFileBase64 is string) );
+    }
+
     match /users/{userId} {
       // 3. Path Variable Hardening
       allow get: if isSignedIn() && isValidId(userId);
@@ -118,6 +144,17 @@ service cloud.firestore {
 
       allow create: if isValidId(donationId)
         && isValidGearDonation(incoming())
+        && incoming().createdAt == request.time
+        && incoming().status == 'pending';
+        
+      allow update: if false;
+      allow delete: if false;
+    }
+    match /award_submissions/{submissionId} {
+      allow get: if isSignedIn(); // Add proper filtering in real use
+      allow list: if isSignedIn(); 
+
+      allow create: if isValidAwardSubmission(incoming())
         && incoming().createdAt == request.time
         && incoming().status == 'pending';
         

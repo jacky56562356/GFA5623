@@ -81,8 +81,9 @@ export default function AwardSubmission() {
     setIsSubmitting(true);
     try {
       if (db) {
+        const { posterFileBase64, ...dbData } = formData;
         await addDoc(collection(db, 'award_submissions'), {
-          ...formData,
+          ...dbData,
           createdAt: serverTimestamp(),
           status: 'pending'
         });
@@ -112,9 +113,9 @@ export default function AwardSubmission() {
       }
 
       setSubmitSuccess(true);
-    } catch (error) {
+    } catch (error: any) {
       console.error('Error submitting application:', error);
-      alert(isEn ? "An error occurred. Please try again." : "提交失败，请重试。");
+      alert((isEn ? "An error occurred: " : "提交失败: ") + (error.message || "Unknown error"));
     } finally {
       setIsSubmitting(false);
     }
