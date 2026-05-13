@@ -36,34 +36,32 @@ const Competition: React.FC = () => {
         description="Join the GFA Global Youth Talent Competition. An international platform for young actors and filmmakers to showcase their skills in Hollywood."
       />
 
-      {/* Hero */}
-      <section className="relative h-screen min-h-[800px] flex items-center justify-center overflow-hidden bg-gfa-inkBlack group pt-5">
-        <div className="absolute inset-0 z-0">
+      {/* Hero Image */}
+      <section className="relative w-full bg-gfa-inkBlack pt-[80px] md:pt-[100px] flex justify-center">
+        <div className="relative w-full max-w-7xl mx-auto px-4 md:px-8">
           <img 
             src="https://i.ibb.co/S4Mb6TcN/24480b00-65a2-4468-8dc6-50aae205d0fa.png" 
             alt="Hollywood style stage" 
-            className="w-full h-full object-cover opacity-50 mix-blend-luminosity transform group-hover:scale-105 transition-transform duration-[20s]" 
+            className="w-full h-auto object-contain" 
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-gfa-inkBlack via-gfa-inkBlack/40 to-transparent"></div>
         </div>
+      </section>
 
-        <div className="container-gfa relative z-10 text-center px-4 max-w-6xl mx-auto flex flex-col items-center">
-          <div className="flex flex-wrap items-center justify-center gap-3 mb-4">
-            <img src="https://i.ibb.co/S4Mb6TcN/24480b00-65a2-4468-8dc6-50aae205d0fa.png" alt="Global Youth Talent Competition Logo" className="h-20 md:h-28 w-auto object-contain bg-white/90 rounded-2xl p-3 shadow-xl" />
-            <img src="https://i.ibb.co/YB6gWM9L/20260326145435-449-10.jpg" alt="Competition Logo V2" className="h-20 md:h-28 w-auto object-contain rounded-2xl shadow-xl" />
-          </div>
-          <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold font-serif text-white mb-3 leading-tight drop-shadow-2xl">
+      {/* Hero Text & Actions */}
+      <section className="py-12 md:py-16 bg-gfa-inkBlack relative z-10 border-b border-white/5">
+        <div className="container-gfa text-center px-4 max-w-6xl mx-auto flex flex-col items-center">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold font-serif text-white mb-3 md:mb-5 leading-tight">
             {isEn ? "2026 GFA Global Youth" : "2026全球青少年"}<br/>
             <span className="text-[#C9A84C]">{isEn ? "Talent Competition" : "才艺大赛"}</span>
           </h1>
-          <h2 className="text-xl md:text-3xl font-light text-white/90 tracking-widest uppercase mb-3">
+          <h2 className="text-lg md:text-2xl font-light text-white/90 tracking-widest uppercase mb-8 md:mb-10">
             {isEn ? "Grand Finale in Hollywood" : "决赛在好莱坞顶级舞台"}
           </h2>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-            <button className="w-full sm:w-auto bg-[#C9A84C] hover:bg-[#b09241] text-gfa-inkBlack px-10 py-5 rounded-full font-bold uppercase tracking-widest text-sm transition-colors shadow-[0_0_30px_rgba(201,168,76,0.4)]">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto px-4">
+            <button className="w-full sm:w-auto bg-[#C9A84C] hover:bg-[#b09241] text-gfa-inkBlack px-10 py-4 rounded-full font-bold uppercase tracking-widest text-sm transition-colors shadow-[0_0_30px_rgba(201,168,76,0.3)] min-w-[200px]">
               {isEn ? "Register — US" : "美国区报名"}
             </button>
-            <button className="w-full sm:w-auto border-2 border-white hover:bg-white hover:text-gfa-inkBlack text-white px-10 py-5 rounded-full font-bold uppercase tracking-widest text-sm transition-colors shadow-lg">
+            <button className="w-full sm:w-auto border-2 border-[#C9A84C] text-[#C9A84C] hover:bg-[#C9A84C] hover:text-gfa-inkBlack px-10 py-4 rounded-full font-bold uppercase tracking-widest text-sm transition-colors shadow-lg min-w-[200px]">
               {isEn ? "Register — China" : "报名参赛 — 中国"}
             </button>
           </div>

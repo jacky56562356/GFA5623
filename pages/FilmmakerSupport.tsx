@@ -103,8 +103,60 @@ const FilmmakerSupport: React.FC = () => {
                 <p className="text-sm text-gfa-slate font-light pt-2 leading-relaxed">
                   {isEn ? "Details: Mentorship cycles typically run 3 to 6 months with monthly guidance sessions. The focus is on educational growth, community building, and long-term career planning." : "具体说明：辅导周期通常为3至6个月，每月提供系统性的公益深度对谈。旨在帮助青年电影人完善作品集、建立行业信心，并融入一个互相支持互助的创作者青年社群。"}
                 </p>
+
+                {/* Mentors Info */}
+                <div className="pt-4 border-t border-gray-100 mt-2">
+                  <h4 className="text-sm font-bold mb-3">{isEn ? "Our Mentors Spotlight" : "公益导师风采展示"}</h4>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className="flex gap-3 items-center bg-gray-50 p-3 rounded-xl border border-gray-100">
+                      <div className="w-12 h-12 rounded-full overflow-hidden shrink-0 bg-gray-200">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&q=80" alt="Mentor" className="w-full h-full object-cover" />
+                      </div>
+                      <div>
+                        <div className="font-bold text-sm">Jacky L.</div>
+                        <div className="text-xs text-gfa-slate">{isEn ? "Award-winning Producer" : "好莱坞资深独立制片人"}</div>
+                      </div>
+                    </div>
+                    <div className="flex gap-3 items-center bg-gray-50 p-3 rounded-xl border border-gray-100">
+                      <div className="w-12 h-12 rounded-full overflow-hidden shrink-0 bg-gray-200">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&h=150&fit=crop&q=80" alt="Mentor" className="w-full h-full object-cover" />
+                      </div>
+                      <div>
+                        <div className="font-bold text-sm">Sarah W.</div>
+                        <div className="text-xs text-gfa-slate">{isEn ? "Indie Film Director" : "国际独立电影导演"}</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Works Showcase */}
                 <div className="pt-2">
-                  <button className="text-xs font-bold uppercase tracking-widest bg-gfa-inkBlack text-white px-6 py-2 rounded-full hover:bg-[#C9A84C] hover:shadow-md hover:-translate-y-0.5 active:bg-[#a68636] active:scale-95 transition-all duration-200">{isEn ? "Apply for Mentorship" : "申请进入公益导师池"}</button>
+                  <h4 className="text-sm font-bold mb-3">{isEn ? "Supported Works Showcase" : "扶持作品展示"}</h4>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                    <div className="aspect-video bg-gray-200 rounded-lg overflow-hidden relative group">
+                      <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=300&h=200&fit=crop&q=80" alt="Work" className="w-full h-full object-cover" />
+                      <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span className="text-white text-[10px] sm:text-xs font-bold px-2 py-1 bg-[#C9A84C]/90 rounded">{isEn ? "Watch Trailer" : "预告片"}</span>
+                      </div>
+                    </div>
+                    <div className="aspect-video bg-gray-200 rounded-lg overflow-hidden relative group">
+                      <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=300&h=200&fit=crop&q=80" alt="Work" className="w-full h-full object-cover" />
+                      <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span className="text-white text-[10px] sm:text-xs font-bold px-2 py-1 bg-[#C9A84C]/90 rounded">{isEn ? "Watch Trailer" : "预告片"}</span>
+                      </div>
+                    </div>
+                    <div className="aspect-video bg-gray-200 rounded-lg overflow-hidden relative group hidden sm:block">
+                      <img src="https://images.unsplash.com/photo-1604904612715-47bf9d9bc670?w=300&h=200&fit=crop&q=80" alt="Work" className="w-full h-full object-cover" />
+                      <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span className="text-white text-[10px] sm:text-xs font-bold px-2 py-1 bg-[#C9A84C]/90 rounded">{isEn ? "Watch Trailer" : "预告片"}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="pt-4 flex flex-wrap gap-4">
+                  <Link to="/mentorship-application" className="inline-block text-xs font-bold uppercase tracking-widest bg-gfa-inkBlack text-white px-6 py-2 rounded-full hover:bg-[#C9A84C] hover:shadow-md hover:-translate-y-0.5 active:bg-[#a68636] active:scale-95 transition-all duration-200">{isEn ? "Mentorship Application Form" : "填写申请表格"}</Link>
+                  <Link to="/mentors" className="inline-block text-xs font-bold uppercase tracking-widest bg-[#F5F2EE] border border-gfa-border text-gfa-inkBlack px-6 py-2 rounded-full hover:bg-[#C9A84C] hover:text-white hover:border-[#C9A84C] hover:shadow-md hover:-translate-y-0.5 active:scale-95 transition-all duration-200">{isEn ? "View All Mentors" : "查看全部导师"}</Link>
                 </div>
               </div>
             </div>
