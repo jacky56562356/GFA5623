@@ -23,6 +23,8 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import Profile from './pages/Profile';
 import GearApplication from './pages/GearApplication';
 import GearDonation from './pages/GearDonation';
+import MentorshipApplication from './pages/MentorshipApplication';
+import Mentors from './pages/Mentors';
 
 // Policy Pages
 import PolicyPage from './pages/PolicyPage';
@@ -50,6 +52,8 @@ function App() {
             <Route path="/profile" element={<Profile />} />
             <Route path="/gear-application" element={<GearApplication />} />
             <Route path="/gear-donation" element={<GearDonation />} />
+            <Route path="/mentorship-application" element={<MentorshipApplication />} />
+            <Route path="/mentors" element={<Mentors />} />
             
             {/* Policy Routes */}
             <Route path="/policy/privacy" element={<PrivacyPolicy />} />
