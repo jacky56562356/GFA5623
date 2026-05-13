@@ -27,6 +27,7 @@ import GearDonation from './pages/GearDonation';
 import MentorshipApplication from './pages/MentorshipApplication';
 import Mentors from './pages/Mentors';
 import BecomeMentorApplication from './pages/BecomeMentorApplication';
+import AdminDashboard from './pages/AdminDashboard';
 
 // Policy Pages
 import PolicyPage from './pages/PolicyPage';
@@ -58,6 +59,7 @@ function App() {
             <Route path="/mentorship-application" element={<MentorshipApplication />} />
             <Route path="/become-mentor" element={<BecomeMentorApplication />} />
             <Route path="/mentors" element={<Mentors />} />
+            <Route path="/admin" element={<AdminDashboard />} />
             
             {/* Policy Routes */}
             <Route path="/policy/privacy" element={<PrivacyPolicy />} />

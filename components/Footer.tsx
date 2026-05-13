@@ -79,11 +79,13 @@ const Footer: React.FC = () => {
 
       <div className="container-gfa pt-4 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-white/40 font-light">
         <p>&copy; {new Date().getFullYear()} Global Film Alliance, Inc. All rights reserved.</p>
-        <div className="flex flex-wrap justify-center gap-3">
+        <div className="flex flex-wrap justify-center gap-3 items-center">
           <Link to="/youth-protection" className="hover:text-[#C9A84C] font-bold text-white/70 transition-colors uppercase tracking-widest">{isEn ? 'Youth Protection' : '青少年安全与保护'}</Link>
           <Link to="/policy/privacy" className="hover:text-white transition-colors">{isEn ? 'Privacy Policy' : '隐私政策'}</Link>
           <Link to="/policy/terms" className="hover:text-white transition-colors">{isEn ? 'Terms of Service' : '服务条款'}</Link>
           <Link to="/policy/consent" className="hover:text-white transition-colors">{isEn ? 'Cookie Policy' : 'Cookie政策'}</Link>
+          <span className="text-white/20">|</span>
+          <Link to="/admin" className="hover:text-[#C9A84C] transition-colors">{isEn ? 'Admin' : '系统管理'}</Link>
         </div>
       </div>
     </footer>

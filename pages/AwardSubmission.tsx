@@ -4,6 +4,7 @@ import { Locale } from '../types';
 import SEO from '../components/SEO';
 import { db } from '../lib/firebase';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import emailjs from '@emailjs/browser';
 import { 
   Clapperboard, CheckCircle, ArrowLeft
 } from 'lucide-react';
@@ -86,6 +87,30 @@ export default function AwardSubmission() {
           status: 'pending'
         });
       }
+
+      try {
+        await emailjs.send(
+          'service_eqytzjp',
+          'template_e3bza7v',
+          {
+            ...formData,
+            // A condensed string to easily read the key details on receipt
+            submission_details: `
+              Film: ${formData.filmTitleOrig} (${formData.filmTitleEn})
+              Applicant: ${formData.applicantName} (${formData.applicantEmail})
+              Role: ${formData.applicantRole}
+              Category: ${formData.category}
+              Screener Link: ${formData.screenerLink}
+              Poster Name: ${formData.posterFileName}
+            `
+          },
+          '-nL93F_Lv6Wgc1JSc'
+        );
+      } catch (emailErr) {
+        console.error("EmailJS error:", emailErr);
+        // Continue to success screen even if email fails, because the firebase doc was created.
+      }
+
       setSubmitSuccess(true);
     } catch (error) {
       console.error('Error submitting application:', error);
@@ -246,15 +271,25 @@ export default function AwardSubmission() {
                   <label className="block text-sm font-bold text-gfa-inkBlack mb-2">
                      {isEn ? "Completion Date" : "影片完成日期"} <span className="text-red-500">*</span>
                   </label>
-                  <input type="month" name="completionDate" required value={formData.completionDate} onChange={handleChange} className="w-full px-5 py-4 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#C9A84C] bg-gray-50" />
+                  <input 
+                    type="text" 
+                    placeholder={isEn ? "YYYY-MM" : "YYYY-MM"}
+                    onFocus={(e) => (e.target.type = "month")}
+                    onBlur={(e) => {if (!e.target.value) e.target.type = "text"}}
+                    name="completionDate" 
+                    required 
+                    value={formData.completionDate} 
+                    onChange={handleChange} 
+                    className="w-full px-5 py-4 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#C9A84C] bg-gray-50" 
+                  />
                 </div>
               </div>
 
               <div>
                 <label className="block text-sm font-bold text-gfa-inkBlack mb-2">
-                   {isEn ? "Logline / Synopsis" : "一句话故事梗概"} (Max 300 words) <span className="text-red-500">*</span>
+                   {isEn ? "Logline / Synopsis" : "故事梗概"} ({isEn ? "Max 2000 characters" : "2000字以内"}) <span className="text-red-500">*</span>
                 </label>
-                <textarea name="synopsis" required rows={4} value={formData.synopsis} onChange={handleChange} className="w-full px-5 py-4 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#C9A84C] bg-gray-50 resize-none"></textarea>
+                <textarea name="synopsis" required rows={6} maxLength={2000} value={formData.synopsis} onChange={handleChange} className="w-full px-5 py-4 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#C9A84C] bg-gray-50 resize-none"></textarea>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -320,7 +355,17 @@ export default function AwardSubmission() {
                 <label className="block text-sm font-bold text-gfa-inkBlack mb-2">
                    {isEn ? "Poster / File Upload (Photo or PDF)" : "海报文件上传（照片或PDF）"}
                 </label>
-                <input type="file" accept="image/*,application/pdf" onChange={handleFileChange} className="w-full px-5 py-4 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#C9A84C] bg-gray-50 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:bg-[#C9A84C] file:text-black file:font-semibold hover:file:bg-[#b09241] cursor-pointer" />
+                <div className="relative">
+                  <input type="file" id="poster-upload" accept="image/*,application/pdf" onChange={handleFileChange} className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10" />
+                  <div className="w-full px-5 py-4 border border-gray-200 rounded-2xl bg-gray-50 flex items-center justify-between">
+                     <span className="text-gfa-slate font-medium truncate pr-4">
+                        {formData.posterFileName ? formData.posterFileName : (isEn ? "No file chosen" : "未选择文件")}
+                     </span>
+                     <span className="bg-[#C9A84C] text-black px-6 py-2 rounded-full font-bold text-xs uppercase tracking-widest whitespace-nowrap">
+                        {isEn ? "Choose File" : "选择文件"}
+                     </span>
+                  </div>
+                </div>
                 {formData.posterFileName && <p className="text-sm font-medium text-green-600 mt-2">{isEn ? "Selected file:" : "已选择文件："} {formData.posterFileName}</p>}
                 <p className="text-xs text-gfa-slate mt-2">{isEn ? "Max file size: 2MB" : "文件大小上限：2MB"}</p>
               </div>
