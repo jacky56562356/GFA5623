@@ -2,185 +2,460 @@ import React from 'react';
 import { useLocale } from '../LocaleContext.tsx';
 import { Locale } from '../types.ts';
 import SEO from '../components/SEO.tsx';
-import { Trophy, Star, Medal, ArrowRight, Heart } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Trophy, Star, Medal, ArrowRight, Heart, Globe, Video, Handshake, Users, DollarSign, Send, CheckCircle, CalendarDays, Camera, Clapperboard, Sparkles, Mic, Lightbulb, Scissors, Music, Paintbrush, Film } from 'lucide-react';
 
 const Awards: React.FC = () => {
   const { locale } = useLocale();
   const isEn = locale === Locale.EN;
 
   return (
-    <div className="font-sans pb-6">
+    <div className="font-sans pb-6 bg-[#F5F2EE]">
       <SEO title="Golden Feather Awards | Global Film Alliance" />
 
       {/* Banner */}
-      <section className="relative h-[70vh] min-h-[600px] flex items-center justify-center overflow-hidden bg-gfa-inkBlack pt-5">
+      <section className="relative h-[70vh] min-h-[600px] flex items-end justify-center pb-16 overflow-hidden bg-gfa-inkBlack pt-[80px]">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://i.ibb.co/QvgYZ8fk/20250929162843-133-10.jpg" 
+            src="https://i.ibb.co/pjRZK2vm/Gemini-Generated-Image-k7a54jk7a54jk7a5-1.png" 
             alt="Awards Ceremony" 
-            className="w-full h-full object-cover opacity-50 mix-blend-luminosity" 
+            className="w-full h-full object-cover object-[center_20%] opacity-90" 
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-gfa-inkBlack via-gfa-inkBlack/30 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-gfa-inkBlack/80 via-gfa-inkBlack/20 to-transparent"></div>
         </div>
 
         <div className="container-gfa relative z-10 text-center px-4 max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold font-serif text-white mb-3 leading-tight drop-shadow-2xl">
-            {isEn ? "Hollywood's Premier" : "好莱坞最受期待的"}<br/>
-            <span className="text-[#C9A84C]">{isEn ? "Youth Film Awards" : "青年电影人颁奖礼"}</span>
+            {isEn ? "The Golden Feather Awards" : "金羽奖电影颁奖礼"}
           </h1>
         </div>
       </section>
 
-      {/* The Soulful Intro */}
-      <section className="py-6 bg-white border-b border-gfa-border">
+      {/* Introduction */}
+      <section className="py-16 md:py-24 bg-white relative z-20 -mt-10 rounded-t-[40px] shadow-sm">
         <div className="container-gfa max-w-4xl mx-auto px-4 text-center">
-          <p className="text-xl md:text-3xl font-light text-gfa-inkBlack leading-relaxed font-serif italic mb-5">
+          <p className="text-xl md:text-3xl font-light text-gfa-inkBlack leading-relaxed font-serif mb-8">
             {isEn 
-              ? "It's the moment they call your name. You walk up the steps of that Hollywood stage. The lights are blinding, but when you look down, you see your parents in the front row, tears in their eyes. In that exact second, all those late nights editing, all the doubts, all the times you carried heavy gear in the rain... it becomes real. You are a filmmaker." 
-              : "当名字被念出的那一刻，你走上好莱坞那座熠熠生辉的颁奖台。聚光灯很刺眼，但当你低下头，正好看到前排父母眼中闪烁的泪光。就在那一秒，所有熬夜剪辑的疲惫、所有自我怀疑的瞬间、所有在雨中扛着沉重设备的日夜……全部化为真实。这一刻你确信：你是一名电影人。"}
+              ? "The Golden Feather Awards is not a talent competition. It is one of Hollywood's most serious and prestigious professional recognition ceremonies — dedicated to honoring exceptional filmmakers, outstanding works, and the visionary voices shaping the future of cinema." 
+              : "金羽奖不是一场才艺比赛。它是好莱坞最严肃、最负盛名的专业表彰盛典之一——致力于表彰杰出的电影人、优秀的影视作品，以及塑造电影未来的前瞻性声音。"}
           </p>
-          <div className="w-16 h-px bg-[#C9A84C] mx-auto mb-5"></div>
-          <div className="text-gfa-slate font-light leading-relaxed space-y-4">
-             <p>{isEn ? "The Golden Feather Awards is not a youth talent show. It is a serious, rigorous industry commendation." : "金羽奖不是一个简单的儿童才艺比赛。它是一个极其严肃的专业表彰活动。"}</p>
-             <p>{isEn ? "Judged by a panel of active Hollywood professionals, we host a formal gala in the heart of Los Angeles to recognize the exceptional artistic vision and unyielding dedication of emerging young creatives." : "由好莱坞仍在活跃的专业人士组成评审委员会，并在好莱坞的核心地带举办正式的高规格颁奖典礼，隆重表彰在电影艺术领域展现卓越才华和不懈努力的青年创作者。"}</p>
-          </div>
-        </div>
-      </section>
-
-      {/* 2025 Recap */}
-      <section className="py-6 bg-gfa-inkBlack text-white">
-        <div className="container-gfa px-4 max-w-6xl mx-auto">
-           <div className="text-center mb-4">
-             <h2 className="text-3xl md:text-5xl font-bold font-serif text-[#C9A84C]">
-               {isEn ? "2025 Ceremony Recap" : "2025 年度回顾"}
-             </h2>
-           </div>
-
-           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-              <div className="text-center border-r border-white/10 last:border-0 p-4">
-                 <div className="text-5xl font-bold font-serif mb-2 text-white">18</div>
-                 <div className="text-sm text-[#C9A84C] font-bold uppercase tracking-widest">{isEn ? "Youth Winners" : "位青年电影人获奖"}</div>
-              </div>
-              <div className="text-center border-r border-white/10 last:border-0 p-4">
-                 <div className="text-5xl font-bold font-serif mb-2 text-white">100%</div>
-                 <div className="text-sm text-[#C9A84C] font-bold uppercase tracking-widest">{isEn ? "Industry Judging" : "好莱坞工业评审"}</div>
-              </div>
-              <div className="text-center p-4">
-                 <div className="text-5xl font-bold font-serif mb-2 text-white">LA</div>
-                 <div className="text-sm text-[#C9A84C] font-bold uppercase tracking-widest">{isEn ? "Red Carpet Gala" : "正式红毯大典"}</div>
-              </div>
-           </div>
-
-           <div className="bg-white/5 border border-white/10 p-8 md:p-12 rounded-3xl relative">
-              <Trophy className="absolute top-6 right-6 w-16 h-16 text-white/5" />
-              <h3 className="text-xl font-bold font-serif mb-4 text-[#C9A84C]">{isEn ? "Winner Spotlight" : "获奖者感言"}</h3>
-              <p className="text-lg md:text-xl font-light text-white/80 italic mb-3">
-                "{isEn ? "I shot my short film on my phone with my friends from school. Standing here tonight holding this trophy, surrounded by real directors... it changes everything. It tells me I actually belong here." : "我的短片是我和同学用手机拍的。今晚能站在这里拿着这座奖杯，周围全都是真正的导演……这改变了一切。它告诉我，我是属于这里的。"}"
-              </p>
-              <div className="text-sm font-bold uppercase tracking-widest text-white/50">- {isEn ? "Best Director (High School Category)" : "最佳青年导演（高中组）"}</div>
-           </div>
-        </div>
-      </section>
-
-      {/* Categories & Judging */}
-      <section className="py-6 bg-[#F5F2EE]">
-        <div className="container-gfa px-4 max-w-6xl mx-auto">
-           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          <div className="w-20 h-px bg-[#C9A84C] mx-auto mb-10"></div>
+          <div className="text-gfa-slate font-light leading-relaxed space-y-6 text-lg md:text-xl text-left md:text-justify max-w-3xl mx-auto">
+             <p>{isEn 
+               ? "Judged by active Hollywood industry professionals, and held at the heart of Hollywood in a formal, high-caliber ceremony, the Golden Feather Awards recognizes excellence across all levels of the craft — from established filmmakers to emerging directors, from seasoned creators to bold new voices entering the industry for the first time." 
+               : "金羽奖由活跃的好莱坞工业专业人士组成评审团，在好莱坞核心地带以高规格的正式典礼呈现。我们表彰电影制作各个层面的卓越成就——从成熟的电影人到新秀导演，从经验丰富的创作者到首次步入行业的勇敢新声。"}</p>
              
-             {/* Categories */}
-             <div>
-               <h2 className="text-3xl font-bold font-serif text-gfa-inkBlack mb-4">
-                 {isEn ? "Award Categories" : "奖项类别设置"}
-               </h2>
-               <div className="space-y-4">
-                 {[
-                   { en: "Best Young Director", zh: "最佳青年导演", icon: <Star className="w-5 h-5"/> },
-                   { en: "Best Performance", zh: "最佳表演", icon: <Star className="w-5 h-5"/> },
-                   { en: "Best Short Film", zh: "最佳短片", icon: <Star className="w-5 h-5"/> },
-                   { en: "Best Screenplay", zh: "最佳剧本", icon: <Star className="w-5 h-5"/> },
-                   { en: "Best Cinematography", zh: "最佳摄影", icon: <Star className="w-5 h-5"/> },
-                   { en: "Emerging Star Award", zh: "最具潜力新星奖", icon: <Medal className="w-5 h-5"/> },
-                   { en: "Special Jury Prize", zh: "评审特别奖", icon: <Trophy className="w-5 h-5"/> },
-                 ].map((cat, i) => (
-                   <div key={i} className="flex items-center gap-4 bg-white p-4 rounded-xl border border-gray-100 shadow-sm">
-                     <div className="text-[#C9A84C]">{cat.icon}</div>
-                     <span className="font-bold text-gfa-inkBlack">{isEn ? cat.en : cat.zh}</span>
-                   </div>
-                 ))}
-               </div>
-             </div>
-
-             {/* Judging */}
-             <div>
-               <h2 className="text-3xl font-bold font-serif text-gfa-inkBlack mb-4">
-                 {isEn ? "Judging Mechanism" : "公正的评审机制"}
-               </h2>
-               <p className="text-gfa-slate font-light leading-relaxed mb-3">
-                 {isEn 
-                   ? "To guarantee the prestige of the Golden Feather Awards, our jury matrix is composed exclusively of working professionals: current DGA directors, PGA producers, festival programmers, and seasoned entertainment educators." 
-                   : "为了保证金羽奖的权威性与荣誉感，我们的评审委员会完全由在一线活跃的行业专家组成：包括美国导演工会(DGA)导演、美国制片人工会(PGA)制片人、电影节选片人以及资深的影视教育专家。"}
-               </p>
-               <p className="text-gfa-slate font-light leading-relaxed mb-4">
-                 {isEn 
-                   ? "We utilize a blind-review system for initial technical categories to ensure absolute fairness, evaluating the raw emotional impact and technical competency of the art uninfluenced by background." 
-                   : "我们对初审阶段的技术类奖项采用盲审制度以确保绝对的公正性，纯粹评估作品传达的原始情感冲击力与技术成熟度，不受背景因素干扰。"}
-               </p>
+             <p>{isEn 
+               ? "We believe that great cinema deserves to be seen. A great film should not remain unseen simply because its creator lacked a platform. Our mission is to build that platform." 
+               : "我们坚信，伟大的电影理应被世界看到。一部好电影，绝不该因为创作者缺乏发声的平台而默默无闻。打造这样一个属于电影人的平台，正是我们的使命。"}</p>
                
-               <div className="bg-gfa-inkBlack text-white p-8 rounded-3xl mt-4">
-                 <h4 className="font-bold font-serif text-[#C9A84C] text-xl mb-4">{isEn ? "2026 Awards Preview" : "2026年金羽奖预告"}</h4>
-                 <p className="font-light text-white/80 mb-3 text-sm">
-                   {isEn ? "The next ceremony will be bigger, bringing together more global voices. Date to be announced." : "下一届颁奖礼将规模更大，汇聚更多全球优秀的青年声音。具体时间即将揭晓，敬请期待。"}
-                 </p>
-                 <button className="bg-[#C9A84C] hover:bg-white text-black font-bold uppercase tracking-widest text-[10px] px-6 py-3 rounded-full transition-colors">
-                   {isEn ? "Join Notification List" : "加入通知名单"}
-                 </button>
-               </div>
-             </div>
+             <p>{isEn 
+               ? "Through our distribution network spanning Asia — including Mainland China, Hong Kong, and Taiwan — the Golden Feather Awards serves as a bridge, carrying outstanding works to audiences across the world. Every film recognized by our awards gains access to new markets, new audiences, and new opportunities for growth." 
+               : "依托覆盖亚洲（包括中国大陆、香港及台湾地区）的发行网络，金羽奖犹如一座桥梁，将杰出作品推向全球观众。每一部获得我们奖项认可的影片，都将获得进入新市场、接触新受众和持续发展的新机遇。"}</p>
+               
+             <p>{isEn 
+               ? "We are building our own streaming platform to ensure that awarded filmmakers receive the recognition, reach, and professional returns their work deserves — because great storytelling should never go unrewarded." 
+               : "我们正在建立专属的流媒体平台，以确保获奖电影人能够获得与其作品价值相匹配的认可、影响力以及专业回报——因为，伟大的故事讲述永远不该被辜负。"}</p>
+          </div>
 
-           </div>
+          <div className="mt-16 text-center">
+            <h3 className="text-2xl md:text-4xl font-bold font-serif text-[#C9A84C] mb-4">
+              {isEn ? "The Golden Feather Awards." : "金羽奖"}
+            </h3>
+            <p className="text-xl md:text-2xl font-light text-gfa-inkBlack italic font-serif">
+              {isEn ? "Where excellence is recognized. Where cinema travels further." : "卓越被看见的地方。让电影走得更远。"}
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* Media & Support */}
-      <section className="py-6 bg-white text-center">
-        <div className="container-gfa px-4 max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-             <div className="border border-gray-200 p-10 rounded-3xl">
-               <h4 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-4">{isEn ? "Press & Media" : "媒体与报道"}</h4>
-               <p className="text-sm font-light text-gfa-slate mb-4">{isEn ? "Cover the brightest young talents on their big night." : "为这些在闪耀之夜的才华青年进行报道与传播。"}</p>
-               <button className="border-2 border-gfa-inkBlack text-gfa-inkBlack font-bold uppercase tracking-widest text-xs px-6 py-3 rounded-full hover:bg-gfa-inkBlack hover:text-white transition-colors">
+      <div className="container-gfa max-w-6xl mx-auto space-y-8 px-4 mt-8">
+        
+        {/* Global Distribution & Platform Value */}
+        <section>
+          <div className="text-center mb-10">
+            <h2 className="text-4xl font-bold font-serif text-gfa-inkBlack mb-4">
+              {isEn ? "Opportunities & Industry Platform" : "机遇与产业平台整合"}
+            </h2>
+            <p className="text-gfa-slate max-w-2xl mx-auto text-lg">
+               {isEn ? "Participants and winners access a comprehensive ecosystem designed to launch film careers." : "参赛者与获奖者将进入一个旨在正式开启其电影职业生涯的全面生态系统。"}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl transition-shadow group">
+               <div className="w-14 h-14 bg-[#C9A84C]/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-[#C9A84C] transition-colors">
+                  <Globe className="w-7 h-7 text-[#C9A84C] group-hover:text-white transition-colors" />
+               </div>
+               <h3 className="text-xl font-bold font-serif mb-3">{isEn ? "Asian & Global Distribution" : "中国及亚洲发行与平台播出"}</h3>
+               <p className="text-gfa-slate font-light leading-relaxed">
+                 {isEn ? "Winning films will be heavily promoted and distributed across top streaming platforms and cinemas in China and the broader Asian market, as well as globally." : "获奖影片将获得强大发行支持，重点推送至中国及亚洲顶流宣发平台和院线播出，并同步进行全球多渠道发行。"}
+               </p>
+            </div>
+
+            <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl transition-shadow group">
+               <div className="w-14 h-14 bg-[#C9A84C]/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-[#C9A84C] transition-colors">
+                  <Video className="w-7 h-7 text-[#C9A84C] group-hover:text-white transition-colors" />
+               </div>
+               <h3 className="text-xl font-bold font-serif mb-3">{isEn ? "Premier Screening Opportunities" : "国际展映平台"}</h3>
+               <p className="text-gfa-slate font-light leading-relaxed">
+                 {isEn ? "Showcase your work live at top-tier film festivals and exclusive Hollywood screenings, gathering immediate feedback from industry veterans." : "在顶级电影节和好莱坞专属放映会上面向公众及业内人士展示您的作品，并获得行业资深人士的直接反馈。"}
+               </p>
+            </div>
+
+            <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl transition-shadow group">
+               <div className="w-14 h-14 bg-[#C9A84C]/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-[#C9A84C] transition-colors">
+                  <Handshake className="w-7 h-7 text-[#C9A84C] group-hover:text-white transition-colors" />
+               </div>
+               <h3 className="text-xl font-bold font-serif mb-3">{isEn ? "Asian Co-Production Opportunities" : "创建亚洲合作拍摄与更广阔平台"}</h3>
+               <p className="text-gfa-slate font-light leading-relaxed">
+                 {isEn ? "We facilitate direct collaboration platforms to launch Asian co-productions, securing joint funding and dedicated cross-cultural partnerships for future projects." : "我们建立了直接对接的合作平台，大力促成及帮助创作者与亚洲团队合作拍摄，为未来的国际合拍项目对接更多维度的合作平台和资源。"}
+               </p>
+            </div>
+
+            <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl transition-shadow group">
+               <div className="w-14 h-14 bg-[#C9A84C]/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-[#C9A84C] transition-colors">
+                  <span className="text-[#C9A84C] group-hover:text-white font-serif italic text-2xl">🎬</span>
+               </div>
+               <h3 className="text-xl font-bold font-serif mb-3">{isEn ? "Film Creation Ecosystem" : "建立电影创作平台"}</h3>
+               <p className="text-gfa-slate font-light leading-relaxed">
+                 {isEn ? "Our platform provides comprehensive resources, from script development to post-production, streamlining the entire creative process for young filmmakers." : "平台整合了从剧本开发到后期制作的综合资源，不断搭建与完善影视孵化平台，为年轻电影人简化创作流程。"}
+               </p>
+            </div>
+
+            <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl transition-shadow group">
+               <div className="w-14 h-14 bg-[#C9A84C]/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-[#C9A84C] transition-colors">
+                  <DollarSign className="w-7 h-7 text-[#C9A84C] group-hover:text-white transition-colors" />
+               </div>
+               <h3 className="text-xl font-bold font-serif mb-3">{isEn ? "Lowering Production Costs" : "大幅降低拍摄成本"}</h3>
+               <p className="text-gfa-slate font-light leading-relaxed">
+                 {isEn ? "Through our vendor networks and equipment subsidies, we heavily reduce the financial burden of production, allowing talent to focus purely on storytelling." : "通过我们的设备补贴和供应商网络联盟，显著降低制作成本，让创作者可以全心投入讲好故事。"}
+               </p>
+            </div>
+
+            <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl transition-shadow group">
+               <div className="w-14 h-14 bg-[#C9A84C]/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-[#C9A84C] transition-colors">
+                  <Users className="w-7 h-7 text-[#C9A84C] group-hover:text-white transition-colors" />
+               </div>
+               <h3 className="text-xl font-bold font-serif mb-3">{isEn ? "Investor Matchmaking" : "绑定行业投资人"}</h3>
+               <p className="text-gfa-slate font-light leading-relaxed">
+                 {isEn ? "Dedicated pitch sessions and networking events tie promising projects to established film funds and independent investors ready to greenlight new visions." : "专设的项目路演场次与社交活动，将极具潜力的作品直接与成熟的电影基金及独立投资人绑定。"}
+               </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Ceremony Format & Timeline */}
+        <section className="bg-white p-10 lg:p-16 rounded-[40px] shadow-sm border border-gray-100 my-8">
+           <div className="text-center mb-10">
+             <h2 className="text-4xl font-bold font-serif text-gfa-inkBlack mb-4 flex justify-center items-center gap-4">
+                <Sparkles className="w-10 h-10 text-[#C9A84C]" />
+                {isEn ? "Ceremony Format & Experience" : "颁奖礼形式与盛典全流程"}
+             </h2>
+             <p className="text-gfa-slate max-w-2xl mx-auto text-lg font-light">
+                {isEn ? "An unforgettable Hollywood experience connecting rising stars with industry legends." : "一次难忘的好莱坞盛典体验，将冉冉升起的新星与行业传奇紧密相连。"}
+             </p>
+           </div>
+
+           <div className="relative">
+              {/* Vertical line connecting events */}
+              <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-[#F5F2EE] transform -translate-x-1/2 rounded-full"></div>
+              
+              <div className="space-y-6">
+                 {/* Step 1 */}
+                 <div className="flex flex-col md:flex-row items-center justify-between w-full">
+                    <div className="md:w-5/12 mb-4 md:mb-0 text-center md:text-right">
+                       <h3 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-2">{isEn ? "The Red Carpet" : "星光红毯秀"}</h3>
+                       <p className="text-gfa-slate font-light">{isEn ? "Walk the exclusive Hollywood red carpet with media coverage and celebrity guests." : "走上好莱坞专属红毯，接受全球媒体采访，与顶级明星嘉宾共襄盛举。"}</p>
+                    </div>
+                    <div className="md:w-2/12 flex justify-center relative z-10 mb-4 md:mb-0">
+                       <div className="w-16 h-16 bg-[#C9A84C] rounded-full flex items-center justify-center text-white font-bold font-serif text-xl border-4 border-white shadow-lg">01</div>
+                    </div>
+                    <div className="md:w-5/12 text-center md:text-left">
+                       <img src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?q=80&w=2070&auto=format&fit=crop" className="rounded-3xl w-full h-48 object-cover shadow-md mx-auto" alt="Red Carpet" />
+                    </div>
+                 </div>
+
+                 {/* Step 2 */}
+                 <div className="flex flex-col md:flex-row-reverse items-center justify-between w-full">
+                    <div className="md:w-5/12 mb-4 md:mb-0 text-center md:text-left">
+                       <h3 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-2">{isEn ? "Nominee Showcase & Premiere" : "入围电影展映与首映礼"}</h3>
+                       <p className="text-gfa-slate font-light">{isEn ? "Exclusive theater screenings of nominated films for distributors and international buyers." : "为发行商和国际买家专门安排的入围影片顶级影院级展映。"}</p>
+                    </div>
+                    <div className="md:w-2/12 flex justify-center relative z-10 mb-4 md:mb-0">
+                       <div className="w-16 h-16 bg-[#C9A84C] rounded-full flex items-center justify-center text-white font-bold font-serif text-xl border-4 border-white shadow-lg">02</div>
+                    </div>
+                    <div className="md:w-5/12 text-center md:text-right">
+                       <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=2070&auto=format&fit=crop" className="rounded-3xl w-full h-48 object-cover shadow-md mx-auto" alt="Premiere" />
+                    </div>
+                 </div>
+
+                 {/* Step 3 */}
+                 <div className="flex flex-col md:flex-row items-center justify-between w-full">
+                    <div className="md:w-5/12 mb-4 md:mb-0 text-center md:text-right">
+                       <h3 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-2">{isEn ? "Gala & Awards Presentation" : "颁奖盛典与文艺汇演"}</h3>
+                       <p className="text-gfa-slate font-light">{isEn ? "The grand ceremony featuring live performances, keynote speeches, and the Golden Feather presentations." : "隆重的盛典晚会，包括激燃的现场表演、行业领袖的主题演讲及金羽奖的正式颁发。"}</p>
+                    </div>
+                    <div className="md:w-2/12 flex justify-center relative z-10 mb-4 md:mb-0">
+                       <div className="w-16 h-16 bg-[#C9A84C] rounded-full flex items-center justify-center text-white font-bold font-serif text-xl border-4 border-white shadow-lg">03</div>
+                    </div>
+                    <div className="md:w-5/12 text-center md:text-left">
+                       <img src="https://images.unsplash.com/photo-1540317580384-e5d43867caa6?q=80&w=1974&auto=format&fit=crop" className="rounded-3xl w-full h-48 object-cover shadow-md mx-auto" alt="Presentation" />
+                    </div>
+                 </div>
+
+                 {/* Step 4 */}
+                 <div className="flex flex-col md:flex-row-reverse items-center justify-between w-full">
+                    <div className="md:w-5/12 mb-4 md:mb-0 text-center md:text-left">
+                       <h3 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-2">{isEn ? "Industry After Party" : "行业交流晚宴"}</h3>
+                       <p className="text-gfa-slate font-light">{isEn ? "A dedicated networking event to connect winners with Hollywood producers and Asian market funds." : "颁奖礼后的专属晚宴，旨在将获奖者与好莱坞知名制片人及亚洲市场基金无缝对接。"}</p>
+                    </div>
+                    <div className="md:w-2/12 flex justify-center relative z-10 mb-4 md:mb-0">
+                       <div className="w-16 h-16 bg-[#C9A84C] rounded-full flex items-center justify-center text-white font-bold font-serif text-xl border-4 border-white shadow-lg">04</div>
+                    </div>
+                    <div className="md:w-5/12 text-center md:text-right">
+                       <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=2069&auto=format&fit=crop" className="rounded-3xl w-full h-48 object-cover shadow-md mx-auto" alt="Networking" />
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </section>
+
+        {/* Award Categories */}
+        <section className="bg-gfa-inkBlack text-white rounded-[40px] p-10 lg:p-16 shadow-xl border border-gray-800">
+           <div className="text-center mb-8">
+             <h2 className="text-4xl font-bold font-serif mb-4 flex justify-center items-center gap-4">
+                <Trophy className="w-10 h-10 text-[#C9A84C]" />
+                {isEn ? "Award Categories" : "奖项设置"}
+             </h2>
+             <p className="text-white/70 max-w-2xl mx-auto text-lg font-light">
+                {isEn ? "Recognizing excellence across all disciplines of filmmaking." : "表彰电影制作各个领域的卓越成就，涵盖长短片及各项核心技术。"}
+             </p>
+           </div>
+           
+           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+              {[
+                  { icon: Clapperboard, en: "Best Picture", zh: "最佳影片大奖" },
+                  { icon: Sparkles, en: "Best Director", zh: "最佳新晋导演" },
+                  { icon: Star, en: "Best Youth Actor", zh: "最佳青年演员" },
+                  { icon: Users, en: "Best Acting Ensemble", zh: "最佳群戏表演" },
+                  { icon: Lightbulb, en: "Best Screenplay", zh: "最佳原创剧本" },
+                  { icon: Camera, en: "Best Cinematography", zh: "最佳摄影指导" },
+                  { icon: Scissors, en: "Best Editing", zh: "最佳剪辑" },
+                  { icon: Paintbrush, en: "Best Production Design", zh: "最佳美术指导" },
+                  { icon: Music, en: "Best Original Score", zh: "最佳原创配乐" },
+                  { icon: Mic, en: "Best Sound Design", zh: "最佳声音设计" },
+                  { icon: Video, en: "Best Live Action Short", zh: "最佳真人短片" },
+                  { icon: Film, en: "Best Documentary Short", zh: "最佳纪录短片" },
+                  { icon: Globe, en: "Global Cultural Impact", zh: "全球文化影响力奖" },
+                  { icon: Medal, en: "Emerging Star Award", zh: "最具潜力新星奖" },
+                  { icon: Trophy, en: "Special Jury Prize", zh: "评审团特别奖" },
+                  { icon: Star, en: "Best Student Film", zh: "最佳学生作品" },
+              ].map((category, idx) => (
+                 <div key={idx} className="bg-white/5 border border-white/10 rounded-3xl p-6 text-center hover:bg-white/10 transition-colors group">
+                    <div className="w-14 h-14 bg-[#C9A84C]/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-[#C9A84C] transition-colors">
+                       <category.icon className="w-7 h-7 text-[#C9A84C] group-hover:text-gfa-inkBlack" />
+                    </div>
+                    <h4 className="font-bold font-serif">{isEn ? category.en : category.zh}</h4>
+                 </div>
+              ))}
+           </div>
+        </section>
+
+        {/* Judging & Selection Process */}
+        <section className="bg-white text-gfa-inkBlack rounded-[40px] p-10 lg:p-16 shadow-sm border border-gray-100">
+           <div className="relative z-10">
+              <h2 className="text-4xl font-bold font-serif mb-10 text-center">
+                {isEn ? "Evaluation Criteria & Selection Model" : "评奖标准与评选模式"}
+              </h2>
+
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                 <div>
+                    <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+                       <CheckCircle className="w-8 h-8 text-[#C9A84C]" />
+                       {isEn ? "Evaluation Criteria" : "评奖标准"}
+                    </h3>
+                    <ul className="space-y-6">
+                       <li className="flex gap-4">
+                          <div className="text-[#C9A84C] font-serif font-bold text-3xl">01</div>
+                          <div>
+                             <h4 className="font-bold text-xl mb-2">{isEn ? "Originality & Vision" : "原创性与视野"}</h4>
+                             <p className="text-gfa-slate font-light">{isEn ? "Unique perspective, innovative storytelling, and bold artistic choices." : "独特的视角、创新的叙事方式及大胆的艺术选择。"}</p>
+                          </div>
+                       </li>
+                       <li className="flex gap-4">
+                          <div className="text-[#C9A84C] font-serif font-bold text-3xl">02</div>
+                          <div>
+                             <h4 className="font-bold text-xl mb-2">{isEn ? "Technical Execution" : "技术执行力"}</h4>
+                             <p className="text-gfa-slate font-light">{isEn ? "Proficiency in cinematography, editing, sound design, and overall production value." : "在摄影、剪辑、声音设计及整体制作水准上的专业表现。"}</p>
+                          </div>
+                       </li>
+                       <li className="flex gap-4">
+                          <div className="text-[#C9A84C] font-serif font-bold text-3xl">03</div>
+                          <div>
+                             <h4 className="font-bold text-xl mb-2">{isEn ? "Emotional Impact" : "情感共鸣"}</h4>
+                             <p className="text-gfa-slate font-light">{isEn ? "The film's ability to engage audiences and evoke a meaningful emotional response." : "影片吸引观众并引发深层情感共鸣的能力。"}</p>
+                          </div>
+                       </li>
+                    </ul>
+                 </div>
+
+                 <div>
+                    <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+                       <Star className="w-8 h-8 text-[#C9A84C]" />
+                       {isEn ? "Selection Model" : "评选模式"}
+                    </h3>
+                    <div className="space-y-4">
+                       <div className="bg-[#F5F2EE] border border-[#C9A84C]/20 p-8 rounded-3xl">
+                          <h4 className="font-bold text-xl mb-3">{isEn ? "Preliminary Round" : "初审阶段"}</h4>
+                          <p className="text-gfa-slate font-light">
+                             {isEn ? "Submissions are reviewed by an initial committee of festival programmers to ensure technical readiness and rule compliance. We utilize a blind-review system for initial technical categories to ensure absolute fairness, evaluating the raw emotional impact and technical competency of the art uninfluenced by background." : "所有提交作品将由电影节选片委员会进行初步审核，确保技术达标及符合参赛规则。我们对初审阶段的技术类奖项采用盲审制度以确保绝对的公正性，纯粹评估作品传达的原始情感冲击力与技术成熟度，不受背景因素干扰。"}
+                          </p>
+                       </div>
+                       <div className="bg-[#111111] text-white border border-[#C9A84C]/20 p-8 rounded-3xl relative overflow-hidden shadow-lg">
+                          <div className="absolute top-0 right-0 w-2 h-full bg-[#C9A84C]"></div>
+                          <h4 className="font-bold text-xl mb-3">{isEn ? "Industry Jury Panel" : "行业专家评委团终审"}</h4>
+                          <p className="text-white/80 font-light">
+                             {isEn ? "Shortlisted films are evaluated by a prestigious panel of active industry professionals: current DGA directors, PGA producers, festival programmers, and top-tier critics." : "为了保证金羽奖的权威性与荣誉感，入围影片将由一线活跃的行业专家进行终审：包括美国导演工会(DGA)导演、美国制片人工会(PGA)制片人、电影节选片人及顶级影评人。"}
+                          </p>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </section>
+
+        {/* Submission & Eligibility Section */}
+        <section className="bg-white border text-center border-[#C9A84C]/30 rounded-[40px] p-10 lg:p-16 relative overflow-hidden shadow-sm">
+           <div className="absolute -top-32 -right-32 w-96 h-96 bg-[#C9A84C]/5 rounded-full blur-3xl pointer-events-none"></div>
+           <div className="absolute top-0 left-0 w-full h-2 bg-[#C9A84C]"></div>
+           
+           <div className="relative z-10">
+              <div className="text-center mb-10">
+                 <div className="w-20 h-20 bg-[#F5F2EE] rounded-full flex items-center justify-center mx-auto mb-6 shadow-xs border border-[#C9A84C]/20">
+                    <Send className="w-8 h-8 text-[#C9A84C] ml-1" />
+                 </div>
+                 <h2 className="text-4xl md:text-5xl font-bold font-serif text-gfa-inkBlack mb-4 leading-tight">
+                    {isEn ? "Submission & Eligibility" : "报名指南与获奖资格"}
+                 </h2>
+                 <p className="text-gfa-slate text-lg font-light max-w-2xl mx-auto">
+                    {isEn 
+                      ? "Ready to present your work to exactly the audience you've been looking for?" 
+                      : "准备好向世界展现您的杰作了吗？请仔细阅读下方的赛事资格及报名要求。"}
+                 </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10 text-left">
+                 <div className="bg-[#F5F2EE] p-10 rounded-3xl border border-[#C9A84C]/10">
+                    <h3 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-6 flex items-center gap-3">
+                       <CheckCircle className="w-7 h-7 text-[#C9A84C]" />
+                       {isEn ? "Eligibility Requirements" : "评选要求与获奖资格"}
+                    </h3>
+                    <ul className="space-y-5 text-gfa-slate font-light text-lg">
+                       <li className="flex items-start gap-4">
+                          <div className="min-w-2 mt-2.5 w-2 h-2 rounded-full bg-[#C9A84C]"></div> 
+                          {isEn ? "The primary creator (Director/Writer/Lead Actor) must be under 30 years old for youth categories." : "青年单元：主创人员（导演/编剧/主演）报名时年龄需在30周岁以下。"}
+                       </li>
+                       <li className="flex items-start gap-4">
+                          <div className="min-w-2 mt-2.5 w-2 h-2 rounded-full bg-[#C9A84C]"></div> 
+                          {isEn ? "Films must have been completed on or after January 1, 2024." : "影片制作完成时间必须为2024年1月1日之后。"}
+                       </li>
+                       <li className="flex items-start gap-4">
+                          <div className="min-w-2 mt-2.5 w-2 h-2 rounded-full bg-[#C9A84C]"></div> 
+                          {isEn ? "All non-English films MUST contain burned-in English subtitles." : "所有非英语对白影片【必须】嵌有英文字幕。"}
+                       </li>
+                       <li className="flex items-start gap-4">
+                          <div className="min-w-2 mt-2.5 w-2 h-2 rounded-full bg-[#C9A84C]"></div> 
+                          {isEn ? "Applicant must hold full distribution rights and necessary copyright clearances." : "报名者必须拥有该影片的完整发行权及音视频版权许可。"}
+                       </li>
+                       <li className="flex items-start gap-4">
+                          <div className="min-w-2 mt-2.5 w-2 h-2 rounded-full bg-[#C9A84C]"></div> 
+                          {isEn ? "Length: Short Films (under 40 mins), Feature Films (60+ mins)." : "时长要求：短片单元限40分钟以内，长片单元需在60分钟以上。"}
+                       </li>
+                    </ul>
+                 </div>
+
+                 <div className="bg-[#111111] text-white p-10 rounded-3xl border border-[#C9A84C]/20 shadow-lg">
+                    <h3 className="text-2xl font-bold font-serif mb-6 flex items-center gap-3">
+                       <CalendarDays className="w-7 h-7 text-[#C9A84C]" />
+                       {isEn ? "Application Timeline" : "赛事报名流程及时间表"}
+                    </h3>
+                    <div className="space-y-6">
+                       <div className="relative pl-8 border-l border-[#C9A84C]/30 pb-6">
+                          <div className="absolute w-4 h-4 bg-[#C9A84C] rounded-full -left-[8.5px] top-1"></div>
+                          <h4 className="font-bold text-xl">{isEn ? "Submissions Open" : "启动报名通道"}</h4>
+                          <p className="text-white/70 font-light mt-1">{isEn ? "May 25, 2026" : "2026年5月25日"}</p>
+                       </div>
+                       <div className="relative pl-8 border-l border-[#C9A84C]/30 pb-6">
+                          <div className="absolute w-4 h-4 bg-[#C9A84C] rounded-full -left-[8.5px] top-1"></div>
+                          <h4 className="font-bold text-xl">{isEn ? "Regular Deadline" : "常规报名截止"}</h4>
+                          <p className="text-white/70 font-light mt-1">{isEn ? "October 2026" : "2026年10月"}</p>
+                       </div>
+                       <div className="relative pl-8 border-l border-[#C9A84C]/30 pb-6">
+                          <div className="absolute w-4 h-4 bg-[#C9A84C] rounded-full -left-[8.5px] top-1"></div>
+                          <h4 className="font-bold text-xl">{isEn ? "Shortlist Announcement" : "公布入围与获奖名单"}</h4>
+                          <p className="text-white/70 font-light mt-1">{isEn ? "Early November 2026" : "2026年11月初"}</p>
+                       </div>
+                       <div className="relative pl-8">
+                          <div className="absolute w-4 h-4 bg-[#C9A84C] rounded-full -left-[8.5px] top-1 shadow-[0_0_15px_rgba(201,168,76,0.8)]"></div>
+                          <h4 className="font-bold text-xl text-[#C9A84C]">{isEn ? "Golden Feather Gala" : "金羽奖颁奖礼盛典开幕式"}</h4>
+                          <p className="text-white/70 font-light mt-1">{isEn ? "November 2026 (Hollywood, CA)" : "2026年11月（美国好莱坞）"}</p>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+
+              <div className="bg-[#F5F2EE] p-8 md:p-12 rounded-3xl border border-[#C9A84C]/20 max-w-4xl mx-auto mt-10 text-center">
+                 <h4 className="font-bold text-2xl font-serif mb-6 text-gfa-inkBlack">
+                   {isEn ? "Ready to Submit Your Film?" : "准备好提交您的作品了吗？"}
+                 </h4>
+                 <Link to="/award-submission" className="inline-block bg-[#C9A84C] text-black px-12 py-5 rounded-full font-bold uppercase tracking-widest text-base hover:bg-gfa-inkBlack hover:text-white transition-colors shadow-lg hover:scale-105 transform duration-300">
+                    {isEn ? "Start Application" : "立即进入报名系统"}
+                 </Link>
+              </div>
+           </div>
+        </section>
+
+        {/* Media & Support */}
+        <section className="text-center pt-8 pb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+             <div className="bg-white border border-gray-100 shadow-sm p-12 rounded-3xl">
+               <h4 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-4">{isEn ? "Press & Media" : "媒体报道授权"}</h4>
+               <p className="text-gfa-slate font-light mb-8 max-w-sm mx-auto">{isEn ? "Cover the brightest young talents on their biggest night in Hollywood." : "为这些好莱坞之夜闪耀的电影青年进行报道与传播。"}</p>
+               <Link to="/contact" className="border-2 border-gfa-inkBlack text-gfa-inkBlack font-bold uppercase tracking-widest text-xs px-8 py-4 rounded-full hover:bg-gfa-inkBlack hover:text-white transition-colors inline-block w-auto">
                  {isEn ? "Request Press Pass" : "申请媒体证件"}
-               </button>
+               </Link>
              </div>
              
-             <div className="border border-gray-200 p-10 rounded-3xl bg-gray-50">
-               <h4 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-4">{isEn ? "Corporate Sponsors" : "企业赞助"}</h4>
-               <p className="text-sm font-light text-gfa-slate mb-4">{isEn ? "Align your brand with the future stars of Hollywood." : "将您的品牌与好莱坞未来的璀璨新星联系在一起。"}</p>
-               <button className="border-2 border-gfa-inkBlack text-gfa-inkBlack font-bold uppercase tracking-widest text-xs px-6 py-3 rounded-full hover:bg-gfa-inkBlack hover:text-white transition-colors">
+             <div className="bg-[#111111] text-white p-12 rounded-3xl border border-gray-800 shadow-lg">
+               <h4 className="text-2xl font-bold font-serif mb-4 text-[#C9A84C]">{isEn ? "Corporate Sponsors" : "品牌企业赞助"}</h4>
+               <p className="text-white/80 font-light mb-8 max-w-sm mx-auto">{isEn ? "Align your brand with the visionary stories and future stars of cinema." : "将您的品牌与好莱坞未来的璀璨新星联系在一起。"}</p>
+               <Link to="/contact" className="bg-[#C9A84C] text-black font-bold uppercase tracking-widest text-xs px-8 py-4 rounded-full hover:bg-white transition-colors inline-block w-auto">
                  {isEn ? "Sponsorship Inquiry" : "颁奖礼赞助咨询"}
-               </button>
+               </Link>
              </div>
           </div>
 
-          <div className="bg-[#111111] text-white p-12 rounded-3xl relative overflow-hidden">
-             <Heart className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 text-white/5 pointer-events-none" />
-             <h3 className="relative z-10 text-2xl md:text-3xl font-bold font-serif mb-4">
+          <div className="bg-gfa-inkBlack text-white p-12 md:p-16 rounded-[40px] relative overflow-hidden shadow-2xl">
+             <Heart className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 text-white/5 pointer-events-none" />
+             <h3 className="relative z-10 text-3xl md:text-5xl font-bold font-serif mb-6 drop-shadow-lg">
                {isEn ? "Fund a Dream" : "资助一个梦想之夜"}
              </h3>
-             <p className="relative z-10 text-white/80 font-light mb-4 max-w-2xl mx-auto">
+             <p className="relative z-10 text-white/80 text-lg md:text-xl font-light mb-8 max-w-3xl mx-auto leading-relaxed">
                {isEn 
                  ? "Our awards ceremony is entirely non-profit. Your donation ensures we can fly in low-income nominees and host an event they will remember for the rest of their lives." 
-                 : "我们的颁奖礼是完全非营利的。您的捐款将直接用于支持低收入家庭的提名者来到洛杉矶现场，为他们举办一场终生难忘的荣誉盛典。"}
+                 : "金羽奖颁奖礼是完全非营利的。您的捐款将直接用于支持低收入家庭的提名者来到洛杉矶现场，为他们举办一场终生难忘的荣誉盛典。"}
              </p>
-             <button className="relative z-10 bg-[#C9A84C] hover:bg-[#b09241] text-black font-bold uppercase tracking-widest text-sm px-10 py-4 rounded-full transition-colors flex items-center justify-center gap-2 mx-auto shadow-lg">
-               <Heart className="w-4 h-4 fill-current"/> {isEn ? "Donate to the Awards" : "为金羽奖捐款"}
-             </button>
+             <Link to="/donate" className="relative z-10 bg-[#C9A84C] hover:bg-white text-black font-bold uppercase tracking-widest text-base px-12 py-5 rounded-full transition-all flex items-center justify-center gap-3 mx-auto shadow-[0_0_20px_rgba(201,168,76,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.4)] hover:scale-105 inline-flex w-auto">
+               <Heart className="w-5 h-5 fill-current"/> {isEn ? "Donate to the Awards" : "为金羽奖捐款"}
+             </Link>
           </div>
-        </div>
-      </section>
+        </section>
 
+      </div>
     </div>
   );
 };
 
 export default Awards;
+

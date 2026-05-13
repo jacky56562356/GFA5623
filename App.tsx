@@ -12,6 +12,7 @@ import FilmmakerSupport from './pages/FilmmakerSupport';
 import YouthPrograms from './pages/YouthPrograms';
 import FamilyGuide from './pages/FamilyGuide';
 import Awards from './pages/Awards';
+import AwardSubmission from './pages/AwardSubmission';
 import Competition from './pages/Competition';
 import Impact from './pages/Impact';
 import News from './pages/News';
@@ -25,6 +26,7 @@ import GearApplication from './pages/GearApplication';
 import GearDonation from './pages/GearDonation';
 import MentorshipApplication from './pages/MentorshipApplication';
 import Mentors from './pages/Mentors';
+import BecomeMentorApplication from './pages/BecomeMentorApplication';
 
 // Policy Pages
 import PolicyPage from './pages/PolicyPage';
@@ -42,6 +44,7 @@ function App() {
             <Route path="/youth-programs" element={<YouthPrograms />} />
             <Route path="/family-guide" element={<FamilyGuide />} />
             <Route path="/awards" element={<Awards />} />
+            <Route path="/award-submission" element={<AwardSubmission />} />
             <Route path="/competition" element={<Competition />} />
             <Route path="/impact" element={<Impact />} />
             <Route path="/news" element={<News />} />
@@ -53,6 +56,7 @@ function App() {
             <Route path="/gear-application" element={<GearApplication />} />
             <Route path="/gear-donation" element={<GearDonation />} />
             <Route path="/mentorship-application" element={<MentorshipApplication />} />
+            <Route path="/become-mentor" element={<BecomeMentorApplication />} />
             <Route path="/mentors" element={<Mentors />} />
             
             {/* Policy Routes */}

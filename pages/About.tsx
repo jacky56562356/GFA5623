@@ -44,30 +44,38 @@ const About: React.FC = () => {
                 {isEn ? "A Message From Our Founder" : "创始人致辞"}
               </h2>
               
-              <div className="space-y-4 text-lg md:text-xl font-serif text-gfa-inkBlack leading-relaxed italic mb-4">
+              <div className="space-y-4 text-sm md:text-base font-serif text-gfa-inkBlack leading-relaxed italic mb-6">
                 {isEn ? (
                   <>
-                    <p>"Working in the film industry for years, I've seen too many talented filmmakers leave because of invisible barriers—not because they weren't good enough, but because they didn't have a camera, didn't have someone to open that door, didn't have a platform willing to believe in them."</p>
-                    <p>"GFA was born from a simple belief: talent is everywhere, but opportunity has never been equally distributed. We do not believe a closed door should be the end of anyone's cinematic dream. We want to be the place that helps them push that door open—providing the equipment, mentors, and resources they need to truly enter this industry."</p>
-                    <p>"Real change takes time, and it needs to start from the source. That is why we are simultaneously doing another thing: from the moment a child first picks up a camera, we are by their side. We accompany them through the entire journey—from the classroom to the set, from a dream to a career."</p>
+                    <p>"After years of working in Hollywood as a film producer, I have witnessed firsthand how this industry can simultaneously be the most magical place on earth — and one of the most difficult to enter.</p>
+                    <p>I have seen extraordinarily talented young filmmakers walk away — not because they lacked vision, not because they lacked passion, but because no one opened the door for them. No camera. No mentor. No platform willing to take a chance on them.</p>
+                    <p>That is the moment GFA was born in my heart.</p>
+                    <p>As the founder of Golden Lion Animation and a producer who has navigated the full journey from independent filmmaking to Hollywood, I built this organization with one conviction: talent is everywhere, but opportunity has never been equally distributed. A closed door should never be the end of anyone's cinematic dream.</p>
+                    <p>GFA is my commitment to the next generation — to give young filmmakers the equipment, the mentors, the industry connections, and the belief they need to truly enter this art form and this industry.</p>
+                    <p>But real change must start from the very beginning. That is why we walk alongside young creators from the moment they first pick up a camera — through the classroom, onto the set, from a dream all the way to a career.</p>
+                    <p>I built GFA because I believe the future of cinema depends not on who has the most access today, but on who we choose to invest in tomorrow. I invite every filmmaker, educator, and industry professional who shares this belief to join us — because the next generation of storytellers is already out there, waiting for someone to believe in them."</p>
                   </>
                 ) : (
                   <>
-                    <p>“在影视行业工作多年，我目睹了太多有才华的电影人因为一道道看不见的门槛而离开这个行业——不是因为他们不够好，而是因为他们没有一台摄影机，没有一个能推开那扇门的人，没有一个愿意相信他们的平台。”</p>
-                    <p>“GFA的诞生，源于一个简单的信念：才华无处不在，但机会从来不是均等分配的。我们不相信一扇关闭的门应该成为任何人电影梦的终点。我们要成为那个帮他们推开门的地方——提供他们需要的设备、导师和资源，让他们真正走进这个行业。”</p>
-                    <p>“真正的改变需要时间，也需要从源头开始。所以我们同时在做另一件事：从孩子第一次拿起摄影机的那一刻，我们就在他们身边。我们陪伴他们走过整个旅程——从教室到片场，从梦想到职业。”</p>
+                    <p>“在好莱坞作为电影制片人工作多年后，我亲眼目睹了这个行业在成为世界上最迷幻的地方的同时——也是最难进入的领域之一。</p>
+                    <p>我看到过极其有才华的年轻电影人黯然离场——不是因为他们缺乏远见，也没有缺乏热情，而是因为没有人为他们打开那扇门。没有摄影机，没有导师，没有平台愿意给他们机会。</p>
+                    <p>那一刻，GFA在我的心中诞生了。</p>
+                    <p>作为金狮动画的创始人，也是一位从独立电影制作一路走到好莱坞的制片人，我建立这个机构的信念是：才华无处不在，但机会从来都不是均等分配的。一扇关闭的门永远不应该成为任何人电影梦想的终点。</p>
+                    <p>GFA是我对下一代的承诺——为年轻电影人提供他们所需的设备、导师、行业人脉以及信念，让他们真正进入这门艺术和这个行业。</p>
+                    <p>但真正的改变必须从最开始发生。这就是为什么从年轻创作者第一次拿起摄影机的那一刻起，我们就与他们并肩同行——走进教室，步入片场，从梦想一路走向职业生涯。</p>
+                    <p>我建立GFA是因为我相信电影的未来不在于今天谁拥有最多的资源，而在于我们明天选择投资谁。我邀请每一位认同这一理念的电影人、教育工作者和行业专业人士加入我们——因为下一代的故事讲述者已经在那儿，等待着有人愿意相信他们。”</p>
                   </>
                 )}
               </div>
 
-              <div className="flex items-center gap-4">
-                <div className="w-16 h-16 rounded-full bg-gray-300 overflow-hidden border-2 border-[#C9A84C]">
-                  {/* Image placeholder for Jack Liu */}
-                  <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=256&auto=format&fit=crop" alt="Jack Liu" className="w-full h-full object-cover" />
+              <div className="flex flex-col sm:flex-row sm:items-center gap-4 border-t border-[#C9A84C]/20 pt-4">
+                <div className="w-16 h-16 md:w-20 md:h-20 shrink-0 rounded-full bg-gray-300 overflow-hidden border-2 border-[#C9A84C]">
+                  <img src="https://i.ibb.co/23F9WNxm/8e219be0edf629ecba7014dd02d05c5e.jpg" alt="Jacky (xiaoren) Liu" className="w-full h-full object-cover" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold font-serif text-gfa-inkBlack">Jack Liu</h3>
-                  <p className="text-sm text-gfa-slate font-bold uppercase tracking-widest">{isEn ? "Founder & Program Director" : "创始人 & 项目总监"}</p>
+                  <h3 className="text-lg font-bold font-serif text-gfa-inkBlack mb-1">Jacky (xiaoren) Liu</h3>
+                  <p className="text-xs sm:text-sm text-[#C9A84C] font-bold uppercase tracking-widest">{isEn ? "Founder & Chairman, Global Film Alliance" : "环球青年电影联盟 主席兼创始人"}</p>
+                  <p className="text-[10px] sm:text-xs text-gfa-slate uppercase tracking-wider mt-1">{isEn ? "Hollywood Film Producer | Founder, Golden Lion Animation" : "好莱坞电影制片人 | 金狮动画 创始人"}</p>
                 </div>
               </div>
             </div>

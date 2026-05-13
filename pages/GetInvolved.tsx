@@ -3,6 +3,7 @@ import { useLocale } from '../LocaleContext.tsx';
 import { Locale } from '../types.ts';
 import SEO from '../components/SEO.tsx';
 import { Users, Presentation, Briefcase, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const GetInvolved: React.FC = () => {
   const { locale } = useLocale();
@@ -41,9 +42,9 @@ const GetInvolved: React.FC = () => {
                      ? "Help out at our summer camps, assist with the Golden Feather Awards, or support our community screenings. Perfect for college students looking for hours or community lovers." 
                      : "在我们的夏令营中提供帮助，协助举办金羽奖，或是在社区放映中提供支持。非常适合寻找社区服务小时数的高中大学生和热心人士。"}
                  </p>
-                 <button className="text-gfa-inkBlack font-bold uppercase tracking-widest text-xs flex items-center gap-2 group-hover:text-[#C9A84C] transition-colors">
+                 <Link to="/contact" className="inline-flex text-gfa-inkBlack font-bold uppercase tracking-widest text-xs items-center gap-2 group-hover:text-[#C9A84C] transition-colors">
                    {isEn ? "Apply to Volunteer" : "申请成为志愿者"} <ArrowRight className="w-4 h-4"/>
-                 </button>
+                 </Link>
               </div>
 
               {/* Mentor */}
@@ -55,9 +56,9 @@ const GetInvolved: React.FC = () => {
                      ? "Are you an established Hollywood professional? Give back by taking 1-2 emerging filmmakers under your wing. Review scripts, offer coffee chats, or let them shadow." 
                      : "您是已经在好莱坞立足的专业人士吗？请通过指导1-2名新晋电影人来回馈行业。审阅他们的剧本，一起喝杯咖啡，或是让他们在片场观摩。"}
                  </p>
-                 <button className="text-gfa-inkBlack font-bold uppercase tracking-widest text-xs flex items-center gap-2 group-hover:text-[#C9A84C] transition-colors">
+                 <Link to="/become-mentor" className="inline-flex text-gfa-inkBlack font-bold uppercase tracking-widest text-xs items-center gap-2 group-hover:text-[#C9A84C] transition-colors">
                    {isEn ? "Join Mentorship Matrix" : "加入导师网络"} <ArrowRight className="w-4 h-4"/>
-                 </button>
+                 </Link>
               </div>
 
               {/* Careers */}
@@ -69,9 +70,9 @@ const GetInvolved: React.FC = () => {
                      ? "Join the GFA core team. We occasionally hire camp counselors, digital marketers, and program coordinators to keep our nonprofit running smoothly." 
                      : "加入GFA核心团队。我们不定期招聘夏令营辅导员、数字营销人员和项目协调员，以维持非营利组织的高效运转。"}
                  </p>
-                 <button className="text-gfa-inkBlack font-bold uppercase tracking-widest text-xs flex items-center gap-2 group-hover:text-[#C9A84C] transition-colors">
+                 <Link to="/contact" className="inline-flex text-gfa-inkBlack font-bold uppercase tracking-widest text-xs items-center gap-2 group-hover:text-[#C9A84C] transition-colors">
                    {isEn ? "View Openings" : "查看开放职位"} <ArrowRight className="w-4 h-4"/>
-                 </button>
+                 </Link>
               </div>
 
            </div>

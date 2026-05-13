@@ -2,6 +2,7 @@ import React from 'react';
 import { useLocale } from '../LocaleContext.tsx';
 import { Locale } from '../types.ts';
 import SEO from '../components/SEO.tsx';
+import { Link } from 'react-router-dom';
 import { Award, Globe, Video, Handshake, Users, DollarSign, Send, Star, CheckCircle, Trophy, CalendarDays, Camera, Clapperboard, Sparkles, Mic, Lightbulb } from 'lucide-react';
 
 const ProgramAwards: React.FC = () => {
@@ -13,14 +14,14 @@ const ProgramAwards: React.FC = () => {
       <SEO title="Golden Feather Film Awards | GFA" />
 
       {/* Banner */}
-      <div className="relative bg-gfa-inkBlack py-28 mb-4 overflow-hidden">
+      <div className="relative bg-gfa-inkBlack h-[70vh] min-h-[600px] flex flex-col justify-end pb-16 mb-4 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=2025&auto=format&fit=crop" 
+            src="https://i.ibb.co/pjRZK2vm/Gemini-Generated-Image-k7a54jk7a54jk7a5-1.png" 
             alt="Golden Feather Awards" 
-            className="w-full h-full object-cover opacity-40 mix-blend-overlay"
+            className="w-full h-full object-cover object-[center_20%] opacity-90"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-gfa-inkBlack via-gfa-inkBlack/80 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-gfa-inkBlack/80 via-gfa-inkBlack/20 to-transparent"></div>
         </div>
         <div className="container-gfa relative z-10 text-center max-w-5xl mx-auto">
           <div className="inline-block px-4 py-1 border border-[#C9A84C]/50 text-[#C9A84C] text-xs font-bold uppercase tracking-widest rounded-full mb-3 relative">
@@ -39,28 +40,48 @@ const ProgramAwards: React.FC = () => {
 
       <div className="container-gfa max-w-6xl mx-auto space-y-6 px-4">
         
-        {/* About the Awards */}
-        <section className="bg-white p-12 lg:p-16 rounded-[40px] shadow-xl border border-gray-100 flex flex-col md:flex-row gap-3 items-center -mt-32 relative z-20">
-           <div className="md:w-1/2">
-              <h2 className="text-3xl md:text-4xl font-bold font-serif text-gfa-inkBlack mb-3">
-                {isEn ? "About the Golden Feather Awards" : "关于金羽奖"}
-              </h2>
-              <p className="text-gfa-slate leading-relaxed font-light mb-3 text-lg">
-                {isEn 
-                  ? "The Golden Feather Film Awards is a premier international ceremony dedicated to discovering and empowering emerging voices in youth cinema. We go beyond simple recognition; we actively invest in your future." 
-                  : "金羽奖电影颁奖礼是一项顶级的国际颁奖盛典，致力于发掘和赋能青年电影中的新兴声音。我们不只是提供认可，我们更是积极为您未来的电影事业进行投资。"}
-              </p>
-              <p className="text-gfa-slate leading-relaxed font-light text-lg">
-                {isEn
-                  ? "Our goal is to build a comprehensive global film creation platform that significantly lowers production costs, connects creators directly with industry investors, and builds a sustainable bridge between Hollywood and the Asian film market."
-                  : "我们的目标是建立一个全面的全球电影创作平台，大幅降低拍摄成本，将创作者与行业投资人直接对接，并搭建好莱坞与亚洲电影市场之间的可持续合作桥梁。"}
-              </p>
-           </div>
-           <div className="md:w-1/2 grid grid-cols-2 gap-4">
-               <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=2070&auto=format&fit=crop" className="rounded-3xl w-full h-48 object-cover shadow-md" alt="Ceremony" />
-               <img src="https://images.unsplash.com/photo-1542204165-65bf26472b9b?q=80&w=1974&auto=format&fit=crop" className="rounded-3xl w-full h-48 object-cover shadow-md mt-4" alt="Trophy" />
-           </div>
-        </section>
+         {/* About the Awards */}
+         <section className="bg-white p-8 lg:p-16 rounded-[40px] shadow-xl border border-gray-100 flex flex-col md:flex-row gap-6 items-center -mt-32 relative z-20">
+            <div className="md:w-[60%]">
+               <h2 className="text-3xl md:text-4xl font-bold font-serif text-gfa-inkBlack mb-6">
+                 {isEn ? "About the Golden Feather Awards" : "关于金羽奖"}
+               </h2>
+               <div className="text-gfa-slate leading-relaxed font-light space-y-4 text-base md:text-lg text-justify">
+                 <p className="font-medium text-gfa-inkBlack">
+                   {isEn 
+                     ? "The Golden Feather Awards is not a talent competition. It is one of Hollywood's most serious and prestigious professional recognition ceremonies — dedicated to honoring exceptional filmmakers, outstanding works, and the visionary voices shaping the future of cinema." 
+                     : "金羽奖不是一场才艺比赛。它是好莱坞最严肃、最负盛名的专业表彰盛典之一——致力于表彰杰出的电影人、优秀的影视作品，以及塑造电影未来的前瞻性声音。"}
+                 </p>
+                 <p>
+                   {isEn
+                     ? "Judged by active Hollywood industry professionals, and held at the heart of Hollywood in a formal, high-caliber ceremony, the Golden Feather Awards recognizes excellence across all levels of the craft — from established filmmakers to emerging directors, from seasoned creators to bold new voices entering the industry for the first time."
+                     : "金羽奖由活跃的好莱坞工业专业人士组成评审团，在好莱坞核心地带以高规格的正式典礼呈现。我们表彰电影制作各个层面的卓越成就——从成熟的电影人到新秀导演，从经验丰富的创作者到首次步入行业的勇敢新声。"}
+                 </p>
+                 <p>
+                   {isEn
+                     ? "We believe that great cinema deserves to be seen. A great film should not remain unseen simply because its creator lacked a platform. Our mission is to build that platform."
+                     : "我们坚信，伟大的电影理应被世界看到。一部好电影，绝不该因为创作者缺乏发声的平台而默默无闻。打造这样一个属于电影人的平台，正是我们的使命。"}
+                 </p>
+                 <p>
+                   {isEn
+                     ? "Through our distribution network spanning Asia — including Mainland China, Hong Kong, and Taiwan — the Golden Feather Awards serves as a bridge, carrying outstanding works to audiences across the world. Every film recognized by our awards gains access to new markets, new audiences, and new opportunities for growth."
+                     : "依托覆盖亚洲（包括中国大陆、香港及台湾地区）的发行网络，金羽奖犹如一座桥梁，将杰出作品推向全球观众。每一部获得我们奖项认可的影片，都将获得进入新市场、接触新受众和持续发展的新机遇。"}
+                 </p>
+                 <p>
+                   {isEn
+                     ? "We are building our own streaming platform to ensure that awarded filmmakers receive the recognition, reach, and professional returns their work deserves — because great storytelling should never go unrewarded."
+                     : "我们正在建立专属的流媒体平台，以确保获奖电影人能够获得与其作品价值相匹配的认可、影响力以及专业回报——因为，伟大的故事讲述永远不该被辜负。"}
+                 </p>
+                 <p className="italic text-gfa-inkBlack font-medium pt-2">
+                   {isEn ? "The Golden Feather Awards. Where excellence is recognized. Where cinema travels further." : "金羽奖。卓越被看见的地方。让电影走得更远。"}
+                 </p>
+               </div>
+            </div>
+            <div className="md:w-[40%] grid grid-cols-2 gap-4">
+                <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=2070&auto=format&fit=crop" className="rounded-3xl w-full h-auto object-cover shadow-md aspect-square" alt="Ceremony" />
+                <img src="https://images.unsplash.com/photo-1542204165-65bf26472b9b?q=80&w=1974&auto=format&fit=crop" className="rounded-3xl w-full h-auto object-cover shadow-md aspect-square mt-6" alt="Trophy" />
+            </div>
+         </section>
 
         {/* Global Distribution & Platform Value */}
         <section>
@@ -369,23 +390,23 @@ const ProgramAwards: React.FC = () => {
                     <div className="space-y-3">
                        <div className="relative pl-6 border-l-2 border-[#C9A84C]/30 pb-4">
                           <div className="absolute w-3 h-3 bg-[#C9A84C] rounded-full -left-[7px] top-1"></div>
-                          <h4 className="font-bold text-gfa-inkBlack">{isEn ? "Early Bird Submission" : "早鸟报名阶段"}</h4>
-                          <p className="text-sm text-gfa-slate font-light mt-1">{isEn ? "Opens June 1, 2025" : "2025年6月1日开启"}</p>
+                          <h4 className="font-bold text-gfa-inkBlack">{isEn ? "Submissions Open" : "启动报名通道"}</h4>
+                          <p className="text-sm text-gfa-slate font-light mt-1">{isEn ? "May 25, 2026" : "2026年5月25日"}</p>
                        </div>
                        <div className="relative pl-6 border-l-2 border-[#C9A84C]/30 pb-4">
                           <div className="absolute w-3 h-3 bg-[#C9A84C] rounded-full -left-[7px] top-1"></div>
                           <h4 className="font-bold text-gfa-inkBlack">{isEn ? "Regular Deadline" : "常规报名截止"}</h4>
-                          <p className="text-sm text-gfa-slate font-light mt-1">{isEn ? "August 31, 2025" : "2025年8月31日"}</p>
+                          <p className="text-sm text-gfa-slate font-light mt-1">{isEn ? "October 2026" : "2026年10月"}</p>
                        </div>
                        <div className="relative pl-6 border-l-2 border-[#C9A84C]/30 pb-4">
                           <div className="absolute w-3 h-3 bg-[#C9A84C] rounded-full -left-[7px] top-1"></div>
                           <h4 className="font-bold text-gfa-inkBlack">{isEn ? "Shortlist Announcement" : "公布入围与获奖名单"}</h4>
-                          <p className="text-sm text-gfa-slate font-light mt-1">{isEn ? "November 15, 2025" : "2025年11月15日"}</p>
+                          <p className="text-sm text-gfa-slate font-light mt-1">{isEn ? "Early November 2026" : "2026年11月初"}</p>
                        </div>
                        <div className="relative pl-6">
                           <div className="absolute w-3 h-3 bg-[#C9A84C] rounded-full -left-[7px] top-1 shadow-[0_0_10px_rgba(201,168,76,0.8)]"></div>
-                          <h4 className="font-bold text-gfa-inkBlack">{isEn ? "Golden Feather Gala" : "金羽奖颁奖礼盛典"}</h4>
-                          <p className="text-sm text-gfa-slate font-light mt-1">{isEn ? "March 2026 (Hollywood, CA)" : "2026年3月（美国好莱坞）"}</p>
+                          <h4 className="font-bold text-gfa-inkBlack">{isEn ? "Golden Feather Gala" : "金羽奖颁奖礼盛典开幕式"}</h4>
+                          <p className="text-sm text-gfa-slate font-light mt-1">{isEn ? "November 2026 (Hollywood, CA)" : "2026年11月（美国好莱坞）"}</p>
                        </div>
                     </div>
                  </div>
@@ -393,18 +414,11 @@ const ProgramAwards: React.FC = () => {
 
               <div className="text-center bg-white p-8 rounded-3xl border border-gray-100 shadow-sm max-w-2xl mx-auto">
                  <h4 className="font-bold text-xl font-serif mb-4 text-gfa-inkBlack">
-                   {isEn ? "Be the First to Know" : "抢先获取报名通道开启通知"}
+                   {isEn ? "Ready to Submit Your Film?" : "准备好提交您的作品了吗？"}
                  </h4>
-                 <form className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <input 
-                      type="email" 
-                      placeholder={isEn ? "Enter your email address" : "输入邮箱地址..."} 
-                      className="px-6 py-4 rounded-full border border-gray-300 focus:outline-none focus:border-[#C9A84C] flex-grow shadow-inner bg-gray-50"
-                    />
-                    <button type="button" className="bg-[#C9A84C] text-black px-8 py-4 rounded-full font-bold uppercase tracking-widest text-sm hover:bg-gfa-inkBlack hover:text-white transition-colors whitespace-nowrap shadow-md hover:shadow-xl">
-                       {isEn ? "Notify Me" : "立即获取通知"}
-                    </button>
-                 </form>
+                 <Link to="/award-submission" className="inline-block bg-[#C9A84C] text-black px-12 py-5 rounded-full font-bold uppercase tracking-widest text-sm hover:bg-gfa-inkBlack hover:text-white transition-colors whitespace-nowrap shadow-md hover:shadow-xl hover:scale-105 transform duration-300">
+                    {isEn ? "Start Application" : "立即进入报名系统"}
+                 </Link>
               </div>
            </div>
         </section>

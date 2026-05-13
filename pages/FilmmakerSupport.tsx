@@ -110,11 +110,11 @@ const FilmmakerSupport: React.FC = () => {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="flex gap-3 items-center bg-gray-50 p-3 rounded-xl border border-gray-100">
                       <div className="w-12 h-12 rounded-full overflow-hidden shrink-0 bg-gray-200">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&q=80" alt="Mentor" className="w-full h-full object-cover" />
+                        <img src="https://i.ibb.co/23F9WNxm/8e219be0edf629ecba7014dd02d05c5e.jpg" alt="Mentor" className="w-full h-full object-cover" />
                       </div>
                       <div>
-                        <div className="font-bold text-sm">Jacky L.</div>
-                        <div className="text-xs text-gfa-slate">{isEn ? "Award-winning Producer" : "好莱坞资深独立制片人"}</div>
+                        <div className="font-bold text-sm">Jacky (xiaoren) Liu</div>
+                        <div className="text-xs text-gfa-slate">{isEn ? "President & Founder" : "主席 & 创始人"}</div>
                       </div>
                     </div>
                     <div className="flex gap-3 items-center bg-gray-50 p-3 rounded-xl border border-gray-100">

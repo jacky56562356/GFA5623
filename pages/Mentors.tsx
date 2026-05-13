@@ -7,10 +7,10 @@ import { Link } from 'react-router-dom';
 const mentors = [
   {
     id: 1,
-    name: "Jacky L.",
-    roleEn: "Award-winning Producer",
-    roleZh: "好莱坞资深独立制片人",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&q=80",
+    name: "Jacky (xiaoren) Liu",
+    roleEn: "President & Founder",
+    roleZh: "主席 & 创始人",
+    image: "https://i.ibb.co/23F9WNxm/8e219be0edf629ecba7014dd02d05c5e.jpg",
     bioEn: "Over 15 years of experience in producing independent films. Dedicated to helping young filmmakers navigate the industry.",
     bioZh: "拥有超过15年的独立电影制作经验。致力于帮助年轻电影人了解行业、建立人脉。"
   },
