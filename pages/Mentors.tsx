@@ -48,15 +48,15 @@ export default function Mentors() {
   const isEn = locale === Locale.EN;
 
   return (
-    <div className="font-sans pb-16 pt-24 bg-gray-50 min-h-screen">
+    <div className="font-sans pb-4 pt-3 bg-gray-50 min-h-screen">
       <SEO 
         title={isEn ? "Our Mentors | Global Film Alliance" : "公益导师概览 | 环球青年电影联盟"} 
         description={isEn ? "Meet the mentors supporting young filmmakers." : "了解支持青年电影人的公益导师阵容。"}
       />
       
       <div className="container-gfa max-w-6xl mx-auto px-4">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold font-serif mb-6 text-gfa-inkBlack">
+        <div className="text-center mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold font-serif mb-3 text-gfa-inkBlack">
             {isEn ? "Meet Our Mentors" : "我们的公益导师"}
           </h1>
           <p className="text-xl text-gfa-slate max-w-3xl mx-auto font-light">
@@ -66,7 +66,7 @@ export default function Mentors() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
           {mentors.map(mentor => (
             <div key={mentor.id} className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
               <div className="aspect-square bg-gray-200">
@@ -89,7 +89,7 @@ export default function Mentors() {
           <h2 className="text-3xl font-bold font-serif mb-4">
             {isEn ? "Ready to join the program?" : "准备好加入导师计划了吗？"}
           </h2>
-          <p className="text-white/80 max-w-2xl mx-auto mb-8 font-light">
+          <p className="text-white/80 max-w-2xl mx-auto mb-4 font-light">
             {isEn 
               ? "Apply now to connect with our mentors and get the guidance you need for your film career." 
               : "立即申请，与我们的专业导师取得联系，获取电影职业发展所需的指导和支持。"}

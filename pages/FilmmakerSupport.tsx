@@ -10,7 +10,7 @@ const FilmmakerSupport: React.FC = () => {
   const isEn = locale === Locale.EN;
 
   return (
-    <div className="font-sans pb-6">
+    <div className="font-sans pb-3">
       <SEO 
         title="Filmmaker Support" 
         description="GFA provides free professional filming equipment, mentorship, distribution support, and funding advice to help young filmmakers succeed."
@@ -47,7 +47,7 @@ const FilmmakerSupport: React.FC = () => {
       </section>
 
       {/* Core Support Areas */}
-      <section className="py-6 bg-[#F5F2EE]">
+      <section className="py-3 bg-[#F5F2EE]">
         <div className="container-gfa px-4 max-w-6xl mx-auto">
           <div className="text-center mb-4">
             <h2 className="text-3xl md:text-5xl font-bold font-serif text-gfa-inkBlack">
@@ -243,7 +243,7 @@ const FilmmakerSupport: React.FC = () => {
       </section>
 
       {/* Application Process */}
-      <section className="py-6 bg-white border-b border-gfa-border">
+      <section className="py-3 bg-white border-b border-gfa-border">
         <div className="container-gfa px-4 max-w-5xl mx-auto">
           <div className="text-center mb-4">
             <h2 className="text-3xl md:text-5xl font-bold font-serif text-gfa-inkBlack mb-4">
@@ -306,7 +306,7 @@ const FilmmakerSupport: React.FC = () => {
       </section>
 
       {/* Stories */}
-      <section className="py-6 bg-white">
+      <section className="py-3 bg-white">
         <div className="container-gfa max-w-6xl mx-auto px-4">
           <div className="text-center mb-4">
             <h2 className="text-3xl md:text-5xl font-bold font-serif text-gfa-inkBlack">
@@ -343,7 +343,7 @@ const FilmmakerSupport: React.FC = () => {
       </section>
 
       {/* Large CTA */}
-      <section className="py-6 bg-gfa-inkBlack text-center relative overflow-hidden">
+      <section className="py-3 bg-gfa-inkBlack text-center relative overflow-hidden">
         <div className="absolute inset-0 bg-[#C9A84C] mix-blend-overlay opacity-10"></div>
         <div className="container-gfa relative z-10 px-4">
           <h2 className="text-4xl md:text-6xl font-bold font-serif text-white mb-3">

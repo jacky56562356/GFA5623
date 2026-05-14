@@ -9,11 +9,11 @@ const News: React.FC = () => {
   const isEn = locale === Locale.EN;
 
   return (
-    <div className="font-sans pb-6">
+    <div className="font-sans pb-3">
       <SEO title="News & Media | Global Film Alliance" />
 
       {/* Hero */}
-      <section className="bg-gfa-inkBlack text-white pt-8 pb-6 border-b border-white/10">
+      <section className="bg-gfa-inkBlack text-white pt-4 pb-3 border-b border-white/10">
         <div className="container-gfa max-w-4xl mx-auto px-4 text-center">
            <h1 className="text-4xl md:text-6xl font-bold font-serif mb-3 leading-tight">
              {isEn ? "News &" : "新闻与"}<br/>
@@ -23,7 +23,7 @@ const News: React.FC = () => {
       </section>
 
       {/* Press Releases & News */}
-      <section className="py-6 bg-[#F5F2EE]">
+      <section className="py-3 bg-[#F5F2EE]">
         <div className="container-gfa max-w-4xl mx-auto px-4">
            
            <div className="space-y-4">

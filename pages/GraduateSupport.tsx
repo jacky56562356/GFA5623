@@ -178,7 +178,7 @@ const GraduateSupport = () => {
           </div>
         </section>
 
-        <div className="mt-6 pt-3 border-t border-gfa-border text-center">
+        <div className="mt-3 pt-3 border-t border-gfa-border text-center">
            <p className="text-[10px] text-gfa-slate uppercase tracking-[0.3em] font-bold opacity-40">
               Non-Profit Industry Service • Est. 2024 • Supportive Excellence
            </p>

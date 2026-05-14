@@ -141,18 +141,18 @@ Attendees: ${formData.attendeeCount}
       <div className="min-h-screen bg-[#F5F2EE] flex items-center justify-center font-sans">
         <SEO title={isEn ? "Submission Successful | Global Film Alliance" : "提交成功 | 环球青年电影联盟"} />
         <div className="bg-white p-12 rounded-[40px] shadow-sm max-w-2xl w-full text-center mx-4">
-          <div className="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+          <div className="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
             <CheckCircle className="w-12 h-12 text-green-600" />
           </div>
           <h2 className="text-4xl font-bold font-serif text-gfa-inkBlack mb-4">
             {isEn ? "Application Received!" : "报名成功！"}
           </h2>
-          <p className="text-gfa-slate text-lg mb-8">
+          <p className="text-gfa-slate text-lg mb-4">
             {isEn 
               ? "Your film has been successfully submitted for the Golden Feather Awards. Our programming team will review your project and be in touch soon." 
               : "您的电影已成功提交金羽奖。我们的选片委员会将对您的作品进行审核，并尽快与您联系。"}
           </p>
-          <div className="bg-gray-50 border border-gray-100 p-6 rounded-2xl mb-8 text-left text-sm text-gfa-slate space-y-2">
+          <div className="bg-gray-50 border border-gray-100 p-6 rounded-2xl mb-4 text-left text-sm text-gfa-slate space-y-2">
             <p><strong>{isEn ? "Film Title:" : "影片名称："}</strong> {formData.filmTitleOrig}</p>
             <p><strong>{isEn ? "Applicant:" : "申请人姓名："}</strong> {formData.applicantName}</p>
             <p><strong>{isEn ? "Category:" : "奖项单元："}</strong> {formData.category}</p>
@@ -166,7 +166,7 @@ Attendees: ${formData.attendeeCount}
   }
 
   return (
-    <div className="min-h-screen font-sans bg-[#F5F2EE] pb-24 pt-32">
+    <div className="min-h-screen font-sans bg-[#F5F2EE] pb-3 pt-4">
       <SEO 
         title={isEn ? "Awards Submission | Global Film Alliance" : "金羽奖报名系统 | 环球青年电影联盟"}
         description={isEn ? "Submit your film to the Golden Feather Awards." : "递交您的电影作品参与金羽奖评选。"}
@@ -174,8 +174,8 @@ Attendees: ${formData.attendeeCount}
 
       <div className="max-w-4xl mx-auto px-4">
         {/* Header */}
-        <div className="mb-12">
-          <Link to="/awards" className="inline-flex items-center text-gfa-slate hover:text-gfa-inkBlack text-sm font-bold uppercase tracking-widest mb-6">
+        <div className="mb-3">
+          <Link to="/awards" className="inline-flex items-center text-gfa-slate hover:text-gfa-inkBlack text-sm font-bold uppercase tracking-widest mb-3">
             <ArrowLeft className="w-4 h-4 mr-2" />
             {isEn ? "Back to Awards Page" : "返回奖项主页"}
           </Link>
@@ -190,15 +190,15 @@ Attendees: ${formData.attendeeCount}
 
         {/* Form Container */}
         <div className="bg-white rounded-[40px] shadow-sm p-8 md:p-12 border border-gray-100">
-          <form onSubmit={handleSubmit} className="space-y-12">
+          <form onSubmit={handleSubmit} className="space-y-3">
             
             {/* Section 1: Applicant Info */}
-            <div className="space-y-6">
+            <div className="space-y-3">
               <h3 className="text-2xl font-bold font-serif border-b pb-4 text-gfa-inkBlack">
                 {isEn ? "1. Primary Creator Information" : "一、 主创信息申报"}
               </h3>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 <div>
                   <label className="block text-sm font-bold text-gfa-inkBlack mb-2">
                      {isEn ? "Full Name" : "主创人员姓名"} (Director/Writer/Lead Actor) <span className="text-red-500">*</span>
@@ -213,7 +213,7 @@ Attendees: ${formData.attendeeCount}
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 <div>
                   <label className="block text-sm font-bold text-gfa-inkBlack mb-2">
                      {isEn ? "Email Address" : "联系邮箱"} <span className="text-red-500">*</span>
@@ -244,12 +244,12 @@ Attendees: ${formData.attendeeCount}
             </div>
 
             {/* Section 2: Film Details */}
-            <div className="space-y-6">
+            <div className="space-y-3">
               <h3 className="text-2xl font-bold font-serif border-b pb-4 text-gfa-inkBlack">
                 {isEn ? "2. Film Information" : "二、 影片基本资料"}
               </h3>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 <div>
                   <label className="block text-sm font-bold text-gfa-inkBlack mb-2">
                      {isEn ? "Original Film Title" : "影片原名"} <span className="text-red-500">*</span>
@@ -264,7 +264,7 @@ Attendees: ${formData.attendeeCount}
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
                 <div>
                   <label className="block text-sm font-bold text-gfa-inkBlack mb-2">
                      {isEn ? "Submission Category" : "报名单元"} <span className="text-red-500">*</span>
@@ -274,6 +274,7 @@ Attendees: ${formData.attendeeCount}
                     <option value="Feature">{isEn ? "Feature Film (60+ mins)" : "长片单元 (>60分钟)"}</option>
                     <option value="Short">{isEn ? "Short Film (<40 mins)" : "短片单元 (<40分钟)"}</option>
                     <option value="Documentary">{isEn ? "Documentary" : "纪录片单元"}</option>
+                    <option value="Short Drama">{isEn ? "Short Drama" : "短剧专项单元"}</option>
                     <option value="Student">{isEn ? "Student Category" : "学生作品单元"}</option>
                   </select>
                 </div>
@@ -308,7 +309,7 @@ Attendees: ${formData.attendeeCount}
                 <textarea name="synopsis" required rows={6} maxLength={2000} value={formData.synopsis} onChange={handleChange} className="w-full px-5 py-4 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#C9A84C] bg-gray-50 resize-none"></textarea>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 <div>
                   <label className="block text-sm font-bold text-gfa-inkBlack mb-2">
                      {isEn ? "Copyright Ownership" : "版权归属说明"} <span className="text-red-500">*</span>
@@ -339,12 +340,12 @@ Attendees: ${formData.attendeeCount}
             </div>
 
             {/* Section 3: Screener Details & Submit */}
-            <div className="space-y-6">
+            <div className="space-y-3">
               <h3 className="text-2xl font-bold font-serif border-b pb-4 text-gfa-inkBlack">
                 {isEn ? "3. Screener Materials & Terms" : "三、 放映物料与声明"}
               </h3>
               
-              <div className="bg-[#e9f0f7] p-6 rounded-2xl border border-blue-100 mb-6">
+              <div className="bg-[#e9f0f7] p-6 rounded-2xl border border-blue-100 mb-3">
                 <p className="text-sm text-blue-900 leading-relaxed">
                   <strong className="block mb-2 text-base">{isEn ? "Screener Requirements:" : "放映成片提交要求："}</strong>
                   {isEn 
@@ -394,7 +395,7 @@ Attendees: ${formData.attendeeCount}
                 <p className="text-xs text-gfa-slate mt-2">{isEn ? "If your files exceed 20MB, provide a folder link here." : "如果海报/剧照超过20MB，请提供网盘链接。"}</p>
               </div>
 
-              <div className="pt-6 mt-8">
+              <div className="pt-3 mt-4">
                 <label className="flex items-start gap-4 cursor-pointer">
                   <input type="checkbox" name="agreesToTerms" required checked={formData.agreesToTerms} onChange={handleChange} className="mt-1 w-5 h-5 text-[#C9A84C] focus:ring-[#C9A84C] rounded border-gray-300" />
                   <span className="text-sm text-gfa-slate leading-relaxed">
@@ -408,7 +409,7 @@ Attendees: ${formData.attendeeCount}
             </div>
 
             {/* Submit Action */}
-            <div className="text-center pt-8 border-t border-gray-100">
+            <div className="text-center pt-4 border-t border-gray-100">
               <button
                 type="submit"
                 disabled={isSubmitting || !formData.agreesToTerms}

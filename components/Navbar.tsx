@@ -117,7 +117,7 @@ const Navbar: React.FC = () => {
       </nav>
 
       <div className={`fixed inset-0 bg-white z-[105] transition-transform duration-500 lg:hidden ${mobileMenuOpen ? "translate-x-0" : "translate-x-full"}`}>
-        <div className="flex flex-col h-full pt-8 px-10">
+        <div className="flex flex-col h-full pt-4 px-10">
           <button onClick={() => setMobileMenuOpen(false)} className="text-gfa-inkBlack text-5xl font-light self-end mb-3 hover:text-gfa-gold transition-colors" aria-label="Close Menu">×</button>
           
           <div className="flex items-center space-x-4 mb-3 border-b border-gfa-border pb-3">

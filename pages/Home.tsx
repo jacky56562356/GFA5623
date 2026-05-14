@@ -67,7 +67,7 @@ const Home: React.FC = () => {
       </div>
 
       {/* Crisis Data Section */}
-      <section className="py-4 md:py-6 relative overflow-hidden bg-gfa-inkBlack border-b border-white/10">
+      <section className="py-4 md:py-3 relative overflow-hidden bg-gfa-inkBlack border-b border-white/10">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://i.ibb.co/bgKF8pwy/Gemini-Generated-Image-jtsengjtsengjtse.png" 
@@ -375,7 +375,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Core Services */}
-      <section className="py-4 md:py-6 bg-[#F5F2EE]">
+      <section className="py-4 md:py-3 bg-[#F5F2EE]">
         <div className="container-gfa px-4 max-w-7xl mx-auto">
           <div className="text-center mb-4">
             <h2 className="text-3xl md:text-5xl font-bold font-serif text-gfa-inkBlack leading-tight">
@@ -601,7 +601,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Donation Section */}
-      <section className="py-4 md:py-6 bg-[#EAE2D6] relative overflow-hidden" id="donate-section">
+      <section className="py-4 md:py-3 bg-[#EAE2D6] relative overflow-hidden" id="donate-section">
          <div className="container-gfa max-w-7xl mx-auto px-4 relative z-10">
             <h2 className="text-2xl md:text-5xl font-bold font-serif text-gfa-inkBlack mb-3 italic text-center max-w-5xl mx-auto leading-relaxed">
                {isEn 
@@ -676,7 +676,7 @@ const Home: React.FC = () => {
 
             <div className="flex animate-marquee pause-animation items-center">
               {/* First Set of Logos */}
-              <div className="flex items-center justify-around min-w-[100vw] shrink-0 gap-3 md:gap-6 px-4 md:px-8">
+              <div className="flex items-center justify-around min-w-[100vw] shrink-0 gap-3 md:gap-3 px-4 md:px-8">
                  <div className="text-xl font-bold italic tracking-tighter shrink-0 text-gfa-inkBlack">Blackmagic Design</div>
                  <div className="text-2xl font-serif shrink-0 text-gfa-inkBlack">Harmony Gold</div>
                  <div className="text-xl font-bold uppercase tracking-widest text-center shrink-0 text-gfa-inkBlack">City of<br/>Pomona</div>
@@ -688,7 +688,7 @@ const Home: React.FC = () => {
               </div>
               
               {/* Second Set of Logos (Duplicate for infinite scroll) */}
-              <div className="flex items-center justify-around min-w-[100vw] shrink-0 gap-3 md:gap-6 px-4 md:px-8">
+              <div className="flex items-center justify-around min-w-[100vw] shrink-0 gap-3 md:gap-3 px-4 md:px-8">
                  <div className="text-xl font-bold italic tracking-tighter shrink-0 text-gfa-inkBlack">Blackmagic Design</div>
                  <div className="text-2xl font-serif shrink-0 text-gfa-inkBlack">Harmony Gold</div>
                  <div className="text-xl font-bold uppercase tracking-widest text-center shrink-0 text-gfa-inkBlack">City of<br/>Pomona</div>

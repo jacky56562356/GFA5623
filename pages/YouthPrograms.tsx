@@ -9,7 +9,7 @@ const YouthPrograms: React.FC = () => {
   const isEn = locale === Locale.EN;
 
   return (
-    <div className="font-sans pb-6">
+    <div className="font-sans pb-3">
       <SEO title="Youth Programs | Global Film Alliance" />
 
       {/* Banner */}
@@ -32,7 +32,7 @@ const YouthPrograms: React.FC = () => {
       </section>
 
       {/* Program 1: Summer Camp */}
-      <section className="py-6 bg-white border-b border-gfa-border">
+      <section className="py-3 bg-white border-b border-gfa-border">
         <div className="container-gfa max-w-6xl mx-auto px-4">
           <div className="text-center mb-4">
             <h2 className="text-sm font-bold text-[#C9A84C] uppercase tracking-widest mb-4 flex justify-center items-center gap-2">
@@ -147,7 +147,7 @@ const YouthPrograms: React.FC = () => {
       </section>
 
       {/* Program 2 & 3 */}
-      <section className="py-6 bg-[#F5F2EE] border-b border-gfa-border">
+      <section className="py-3 bg-[#F5F2EE] border-b border-gfa-border">
         <div className="container-gfa max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
             
@@ -243,7 +243,7 @@ const YouthPrograms: React.FC = () => {
       </section>
 
       {/* Program 4: AI Filmmaking */}
-      <section className="py-6 bg-white">
+      <section className="py-3 bg-white">
         <div className="container-gfa max-w-5xl mx-auto px-4 text-center">
            <div className="inline-block px-4 py-1 border border-gfa-border text-gfa-inkBlack text-xs font-bold uppercase tracking-widest rounded-full mb-3">
              {isEn ? "Innovation Track" : "前沿科技"}

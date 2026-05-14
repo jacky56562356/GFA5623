@@ -29,7 +29,7 @@ const Partners: React.FC = () => {
   });
 
   return (
-    <div className="bg-gfa-warmWhite pt-8 pb-4 px-6 min-h-screen relative overflow-hidden">
+    <div className="bg-gfa-warmWhite pt-4 pb-4 px-6 min-h-screen relative overflow-hidden">
       <SEO 
         title={p.title || "Partners"} 
         description={p.intro || "Find verified service providers including legal, insurance, and production vendors for your film projects."} 

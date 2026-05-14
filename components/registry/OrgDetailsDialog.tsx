@@ -136,7 +136,7 @@ const OrgDetailsDialog: React.FC<Props> = ({ org, onClose }) => {
             )}
           </div>
           
-          <div className="mt-8 pt-4 border-t border-white/10 text-center flex flex-col md:flex-row justify-center gap-4">
+          <div className="mt-4 pt-4 border-t border-white/10 text-center flex flex-col md:flex-row justify-center gap-4">
             <button className="bg-white/5 border border-white/20 text-white px-16 py-5 text-[11px] font-black uppercase tracking-[0.4em] hover:bg-white hover:text-gfa-black transition-all duration-500 rounded-sm">
               Initiate Inquiry
             </button>

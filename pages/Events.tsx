@@ -9,7 +9,7 @@ const Events: React.FC = () => {
   const eventsList: GFAEvent[] = t.eventsList || [];
 
   return (
-    <div className="bg-gfa-warmWhite pt-8 pb-4 px-6 min-h-screen relative">
+    <div className="bg-gfa-warmWhite pt-4 pb-4 px-6 min-h-screen relative">
       <SEO 
         title={t.events.title || "Industry Events"} 
         description={t.events.intro || "Explore upcoming film industry events, competitions, screenings, and workshops endorsed by GFA."} 
@@ -91,7 +91,7 @@ const Events: React.FC = () => {
            </div>
         </div>
         
-        <div className="mt-6 text-center">
+        <div className="mt-3 text-center">
            <p className="text-gfa-slate text-[11px] font-bold uppercase tracking-widest italic opacity-50">{t.events.note}</p>
         </div>
       </div>

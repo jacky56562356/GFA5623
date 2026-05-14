@@ -38,9 +38,9 @@ const AdminDashboard = () => {
   }, []);
 
   return (
-    <div className="bg-[#F5F2EE] pt-40 pb-20 px-6 min-h-screen font-sans">
+    <div className="bg-[#F5F2EE] pt-40 pb-5 px-6 min-h-screen font-sans">
       <div className="max-w-7xl mx-auto">
-        <header className="mb-8 flex flex-col md:flex-row justify-between items-end gap-5 border-b border-gray-200 pb-5">
+        <header className="mb-4 flex flex-col md:flex-row justify-between items-end gap-5 border-b border-gray-200 pb-5">
           <div>
             <span className="text-[#C9A84C] font-bold text-xs uppercase tracking-[0.2em] mb-2 block">{isEn ? "Administrator" : "管理员后台"}</span>
             <h1 className="text-gfa-inkBlack text-4xl leading-tight font-serif font-bold">{isEn ? "System Dashboard" : "系统管理面板"}</h1>
@@ -52,7 +52,7 @@ const AdminDashboard = () => {
           </div>
         </header>
 
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-3">
           <aside className="lg:col-span-1 space-y-4">
              <div className="bg-white border border-gray-100 p-6 space-y-4 rounded-3xl shadow-sm">
                 <nav className="space-y-2">
@@ -69,8 +69,8 @@ const AdminDashboard = () => {
              </div>
           </aside>
 
-          <main className="lg:col-span-3 space-y-6">
-             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <main className="lg:col-span-3 space-y-3">
+             <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
                 <div className="bg-white border border-gray-100 p-8 rounded-3xl shadow-sm flex flex-col items-center justify-center text-center">
                    <h5 className="text-xs font-bold uppercase tracking-widest text-gfa-slate mb-4">{isEn ? "Total Submissions" : "收到总申请数"}</h5>
                    <div className="text-5xl font-black text-gfa-inkBlack font-serif">{submissions.length}</div>
@@ -82,16 +82,16 @@ const AdminDashboard = () => {
              </div>
 
              <div className="bg-white border border-gray-100 p-8 md:p-12 rounded-3xl shadow-sm">
-                <h3 className="text-xl font-bold font-serif text-gfa-inkBlack mb-6 border-b border-gray-100 pb-4">
+                <h3 className="text-xl font-bold font-serif text-gfa-inkBlack mb-3 border-b border-gray-100 pb-4">
                    {isEn ? "Recent Award Submissions" : "最近收到的金羽奖报名"}
                 </h3>
                 
                 {loading ? (
-                  <div className="text-center py-12 text-gfa-slate">
+                  <div className="text-center py-3 text-gfa-slate">
                      {isEn ? "Loading secure data..." : "正在加载安全数据..."}
                   </div>
                 ) : submissions.length === 0 ? (
-                  <div className="text-center py-12 text-gfa-slate">
+                  <div className="text-center py-3 text-gfa-slate">
                      {isEn ? "No submissions found." : "暂无报名数据。"}
                   </div>
                 ) : (

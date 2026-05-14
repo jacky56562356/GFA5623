@@ -34,7 +34,7 @@ const FamilyGuide: React.FC = () => {
   ];
 
   return (
-    <div className="font-sans pb-6">
+    <div className="font-sans pb-3">
       <SEO title="Family Career Guide | Global Film Alliance" />
 
       {/* Banner */}
@@ -68,7 +68,7 @@ const FamilyGuide: React.FC = () => {
       </section>
 
       {/* Industry Paths */}
-      <section className="py-6 bg-[#F5F2EE]">
+      <section className="py-3 bg-[#F5F2EE]">
         <div className="container-gfa px-4 max-w-6xl mx-auto">
           <div className="text-center mb-4">
             <h2 className="text-3xl font-bold font-serif text-gfa-inkBlack mb-3">
@@ -124,7 +124,7 @@ const FamilyGuide: React.FC = () => {
       </section>
 
       {/* Age Timeline */}
-      <section className="py-6 bg-white border-y border-gfa-border">
+      <section className="py-3 bg-white border-y border-gfa-border">
          <div className="container-gfa max-w-4xl mx-auto px-4">
             <div className="text-center mb-4">
               <h2 className="text-3xl font-bold font-serif text-gfa-inkBlack">
@@ -217,7 +217,7 @@ const FamilyGuide: React.FC = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-6 bg-gfa-inkBlack text-white">
+      <section className="py-3 bg-gfa-inkBlack text-white">
         <div className="container-gfa max-w-4xl mx-auto px-4">
            <div className="text-center mb-4">
              <h2 className="text-3xl font-bold font-serif text-[#C9A84C]">{isEn ? "Frequently Asked Questions" : "家长常见问题 (FAQ)"}</h2>
@@ -243,7 +243,7 @@ const FamilyGuide: React.FC = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-6 bg-white text-center">
+      <section className="py-3 bg-white text-center">
          <div className="container-gfa px-4">
            <div className="w-20 h-20 bg-[#C9A84C]/10 rounded-full flex items-center justify-center mx-auto mb-4 text-[#C9A84C]">
              <PhoneCall className="w-8 h-8" />

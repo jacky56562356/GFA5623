@@ -63,7 +63,7 @@ const Donate: React.FC = () => {
       <SEO title="Donate | Global Film Alliance" />
 
       {/* 2. Hero情感区 */}
-      <section className="bg-[#0D1B2A] text-white min-h-[90vh] flex flex-col justify-center relative overflow-hidden pt-6 md:pt-8 pb-5">
+      <section className="bg-[#0D1B2A] text-white min-h-[90vh] flex flex-col justify-center relative overflow-hidden pt-3 md:pt-4 pb-5">
         <div className="container-gfa max-w-4xl mx-auto px-4 text-center relative z-10">
           <div className="inline-block bg-[#C9A043]/10 border border-[#C9A043]/30 px-6 py-2 rounded-full mb-4">
             <span className="text-[#C9A043] font-bold text-xs uppercase tracking-widest">
@@ -477,7 +477,7 @@ const Donate: React.FC = () => {
       </section>
 
       {/* 9. 最终CTA区 */}
-      <section className="py-6 bg-[#0D1B2A] text-center border-t border-white/10">
+      <section className="py-3 bg-[#0D1B2A] text-center border-t border-white/10">
         <div className="container-gfa max-w-4xl mx-auto px-4">
           <blockquote className="text-2xl md:text-4xl font-serif text-white leading-relaxed max-w-3xl mx-auto mb-3 italic">
             "{isEn 

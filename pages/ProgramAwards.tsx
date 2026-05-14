@@ -10,11 +10,11 @@ const ProgramAwards: React.FC = () => {
   const isEn = locale === Locale.EN;
 
   return (
-    <div className="bg-[#F5F2EE] pt-[80px] font-sans pb-6">
+    <div className="bg-[#F5F2EE] pt-[80px] font-sans pb-3">
       <SEO title="Golden Feather Film Awards | GFA" />
 
       {/* Banner */}
-      <div className="relative bg-gfa-inkBlack h-[70vh] min-h-[600px] flex flex-col justify-end pb-16 mb-4 overflow-hidden">
+      <div className="relative bg-gfa-inkBlack h-[70vh] min-h-[600px] flex flex-col justify-end pb-4 mb-4 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://i.ibb.co/pjRZK2vm/Gemini-Generated-Image-k7a54jk7a54jk7a5-1.png" 
@@ -38,12 +38,12 @@ const ProgramAwards: React.FC = () => {
         </div>
       </div>
 
-      <div className="container-gfa max-w-6xl mx-auto space-y-6 px-4">
+      <div className="container-gfa max-w-6xl mx-auto space-y-3 px-4">
         
          {/* About the Awards */}
-         <section className="bg-white p-8 lg:p-16 rounded-[40px] shadow-xl border border-gray-100 flex flex-col md:flex-row gap-6 items-center -mt-32 relative z-20">
+         <section className="bg-white p-8 lg:p-16 rounded-[40px] shadow-xl border border-gray-100 flex flex-col md:flex-row gap-3 items-center -mt-32 relative z-20">
             <div className="md:w-[60%]">
-               <h2 className="text-3xl md:text-4xl font-bold font-serif text-gfa-inkBlack mb-6">
+               <h2 className="text-3xl md:text-4xl font-bold font-serif text-gfa-inkBlack mb-3">
                  {isEn ? "About the Golden Feather Awards" : "关于金羽奖"}
                </h2>
                <div className="text-gfa-slate leading-relaxed font-light space-y-4 text-base md:text-lg text-justify">
@@ -79,7 +79,7 @@ const ProgramAwards: React.FC = () => {
             </div>
             <div className="md:w-[40%] grid grid-cols-2 gap-4">
                 <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=2070&auto=format&fit=crop" className="rounded-3xl w-full h-auto object-cover shadow-md aspect-square" alt="Ceremony" />
-                <img src="https://images.unsplash.com/photo-1542204165-65bf26472b9b?q=80&w=1974&auto=format&fit=crop" className="rounded-3xl w-full h-auto object-cover shadow-md aspect-square mt-6" alt="Trophy" />
+                <img src="https://images.unsplash.com/photo-1542204165-65bf26472b9b?q=80&w=1974&auto=format&fit=crop" className="rounded-3xl w-full h-auto object-cover shadow-md aspect-square mt-3" alt="Trophy" />
             </div>
          </section>
 

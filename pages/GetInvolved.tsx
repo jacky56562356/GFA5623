@@ -10,11 +10,11 @@ const GetInvolved: React.FC = () => {
   const isEn = locale === Locale.EN;
 
   return (
-    <div className="font-sans pb-6">
+    <div className="font-sans pb-3">
       <SEO title="Get Involved | Global Film Alliance" />
 
       {/* Hero */}
-      <section className="bg-gfa-inkBlack text-white pt-8 pb-6 border-b border-white/10">
+      <section className="bg-gfa-inkBlack text-white pt-4 pb-3 border-b border-white/10">
         <div className="container-gfa max-w-4xl mx-auto px-4 text-center">
            <h1 className="text-4xl md:text-6xl font-bold font-serif mb-3 leading-tight">
              {isEn ? "Join the" : "加入"}<br/>
@@ -29,7 +29,7 @@ const GetInvolved: React.FC = () => {
       </section>
 
       {/* Options */}
-      <section className="py-6 bg-white">
+      <section className="py-3 bg-white">
         <div className="container-gfa max-w-6xl mx-auto px-4">
            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               

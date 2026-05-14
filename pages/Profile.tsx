@@ -71,7 +71,7 @@ const Profile: React.FC = () => {
 
   if (authLoading || loading) {
     return (
-      <div className="min-h-screen py-8 flex justify-center items-center">
+      <div className="min-h-screen py-4 flex justify-center items-center">
         <p className="text-gfa-slate">{isEn ? "Loading..." : "加载中..."}</p>
       </div>
     );
@@ -79,7 +79,7 @@ const Profile: React.FC = () => {
 
   if (!user) {
     return (
-      <div className="min-h-screen py-8 flex flex-col justify-center items-center">
+      <div className="min-h-screen py-4 flex flex-col justify-center items-center">
         <p className="text-gfa-slate mb-4">{isEn ? "Please log in to view your profile." : "请登录以查看您的个人资料。"}</p>
         <button
            onClick={() => setAuthModalOpen(true)}
@@ -92,7 +92,7 @@ const Profile: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gfa-warmWhite py-8">
+    <div className="min-h-screen bg-gfa-warmWhite py-4">
       <SEO title={isEn ? "User Profile | GFA" : "个人资料 | GFA"} />
       
       <div className="container-gfa max-w-2xl mx-auto px-4">

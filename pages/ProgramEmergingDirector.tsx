@@ -9,7 +9,7 @@ const ProgramEmergingDirector: React.FC = () => {
   const isEn = locale === Locale.EN;
 
   return (
-    <div className="bg-gfa-warmWhite pt-[80px] font-sans pb-6">
+    <div className="bg-gfa-warmWhite pt-[80px] font-sans pb-3">
       <SEO title="Children's Dream Film Project | GFA" />
 
       <div className="relative bg-[#1A2B4A] py-5 mb-3 overflow-hidden">

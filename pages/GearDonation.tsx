@@ -142,11 +142,11 @@ const GearDonation: React.FC = () => {
   }
 
   return (
-    <div className="font-sans pb-6 bg-[#F5F2EE] min-h-screen">
+    <div className="font-sans pb-3 bg-[#F5F2EE] min-h-screen">
       <SEO title="Gear Donation | Global Film Alliance" />
 
       {/* Header */}
-      <section className="bg-gfa-inkBlack text-white py-6 px-4 text-center">
+      <section className="bg-gfa-inkBlack text-white py-3 px-4 text-center">
         <h1 className="text-3xl md:text-5xl font-bold font-serif mb-3">
           {isEn ? "Donate Gear for Employment Support" : "闲置设备捐赠与就业扶持计划"}
         </h1>

@@ -89,7 +89,7 @@ const PolicyPage: React.FC<Props> = ({ type }) => {
   const currentPolicy = getPolicyContent();
 
   return (
-    <div className="py-6 max-w-4xl mx-auto px-4">
+    <div className="py-3 max-w-4xl mx-auto px-4">
       <h1 className="text-4xl md:text-5xl font-bold font-serif mb-3 text-gfa-inkBlack">{currentPolicy.title}</h1>
       <p className="text-gfa-slate font-light text-lg mb-3 leading-relaxed">
         {currentPolicy.summary}

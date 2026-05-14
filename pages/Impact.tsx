@@ -9,7 +9,7 @@ const Impact: React.FC = () => {
   const isEn = locale === Locale.EN;
 
   return (
-    <div className="font-sans pb-6">
+    <div className="font-sans pb-3">
       <SEO title="Impact | Global Film Alliance" />
 
       {/* Banner */}
@@ -32,7 +32,7 @@ const Impact: React.FC = () => {
       </section>
 
       {/* Impact Numbers */}
-      <section className="py-6 bg-white border-b border-gfa-border">
+      <section className="py-3 bg-white border-b border-gfa-border">
         <div className="container-gfa px-4 max-w-6xl mx-auto">
           <div className="text-center mb-4">
             <h2 className="text-sm font-bold text-[#C9A84C] uppercase tracking-widest mb-4">
@@ -69,7 +69,7 @@ const Impact: React.FC = () => {
       </section>
 
       {/* Financial Transparency */}
-      <section className="py-6 bg-gfa-inkBlack text-white relative">
+      <section className="py-3 bg-gfa-inkBlack text-white relative">
         <div className="container-gfa max-w-4xl mx-auto px-4 text-center">
            <h2 className="text-3xl md:text-5xl font-bold font-serif mb-4">
              {isEn ? "Financial Transparency" : "资金透明度声明"}
@@ -107,7 +107,7 @@ const Impact: React.FC = () => {
       </section>
 
       {/* Stories */}
-      <section className="py-6 bg-white border-b border-gfa-border">
+      <section className="py-3 bg-white border-b border-gfa-border">
          <div className="container-gfa max-w-6xl mx-auto px-4">
             <div className="text-center mb-4">
               <h2 className="text-3xl font-bold font-serif text-gfa-inkBlack">{isEn ? "The Faces of Change" : "每一个真实的故事"}</h2>
@@ -160,7 +160,7 @@ const Impact: React.FC = () => {
       </section>
 
       {/* Featured Films */}
-      <section className="py-6 bg-[#F5F2EE]">
+      <section className="py-3 bg-[#F5F2EE]">
          <div className="container-gfa px-4 max-w-6xl mx-auto">
             <div className="text-center mb-4">
               <h2 className="text-3xl font-bold font-serif text-gfa-inkBlack mb-4">{isEn ? "Films Distributed" : "已发行的优秀影片"}</h2>

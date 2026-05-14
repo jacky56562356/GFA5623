@@ -50,7 +50,7 @@ const YouthSafetyPolicy: React.FC = () => {
         </div>
 
         {/* Official Disclaimer Footer */}
-        <div className="mt-6 pt-4 border-t border-gfa-border text-center max-w-4xl mx-auto">
+        <div className="mt-3 pt-4 border-t border-gfa-border text-center max-w-4xl mx-auto">
           <div className="bg-white border border-gfa-border p-10 mb-3 text-left shadow-inner">
             <h4 className="text-[11px] font-black uppercase tracking-[0.4em] text-red-600 mb-3 border-b border-gfa-border pb-4">Mandatory Legal Notice</h4>
             <p className="text-[12px] text-gfa-slate leading-loose font-bold italic">

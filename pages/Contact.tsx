@@ -46,7 +46,7 @@ const Contact: React.FC = () => {
       {/* Background Decoration */}
       <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gfa-gold/5 rounded-full blur-[120px] -mr-64 -mt-64 pointer-events-none z-0"></div>
 
-      <div className="pt-8 pb-4 px-6 container-gfa relative z-10">
+      <div className="pt-4 pb-4 px-6 container-gfa relative z-10">
         <header className="mb-5 text-center max-w-4xl mx-auto animate-fade-in">
           <div className="gold-badge mb-5 animate-fade-up">{ui.secretariatBadge}</div>
           <h1 className="text-5xl md:text-8xl font-bold font-serif text-white mb-3 leading-tight drop-shadow-2xl">

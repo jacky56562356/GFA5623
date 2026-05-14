@@ -123,7 +123,7 @@ const GearApplication: React.FC = () => {
 
   if (success) {
     return (
-      <div className="min-h-screen bg-gfa-warmWhite py-8 flex justify-center items-center">
+      <div className="min-h-screen bg-gfa-warmWhite py-4 flex justify-center items-center">
         <SEO title={isEn ? "Application Submitted | GFA" : "申请已提交 | GFA"} />
         <div className="container-gfa max-w-2xl mx-auto px-4 text-center">
           <div className="bg-white rounded-2xl shadow-sm border border-gfa-border p-12">
@@ -148,7 +148,7 @@ const GearApplication: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gfa-warmWhite py-8">
+    <div className="min-h-screen bg-gfa-warmWhite py-4">
       <SEO title={isEn ? "Pro Gear Access Application | GFA" : "摄影设备申请 | GFA"} />
 
       <div className="container-gfa max-w-3xl mx-auto px-4">
@@ -164,7 +164,7 @@ const GearApplication: React.FC = () => {
         </div>
 
         {!user && (
-          <div className="bg-[#fcfaf5] p-6 rounded-xl mb-6 border border-[#C9A84C]/30 text-center">
+          <div className="bg-[#fcfaf5] p-6 rounded-xl mb-3 border border-[#C9A84C]/30 text-center">
              <p className="text-gfa-inkBlack mb-4">
               {isEn ? "You must sign in or create an account to submit an application." : "您必须先登录或注册账号才能提交申请。"}
             </p>

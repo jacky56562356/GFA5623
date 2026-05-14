@@ -8,11 +8,11 @@ const PrivacyPolicy: React.FC = () => {
   const isEn = locale === Locale.EN;
 
   return (
-    <div className="font-sans pb-6">
+    <div className="font-sans pb-3">
       <SEO title="Privacy Policy | Global Film Alliance" />
 
       {/* Hero */}
-      <section className="bg-gfa-inkBlack text-white pt-8 pb-4 border-b border-white/10">
+      <section className="bg-gfa-inkBlack text-white pt-4 pb-4 border-b border-white/10">
         <div className="container-gfa max-w-4xl mx-auto px-4 text-center">
            <h1 className="text-3xl md:text-5xl font-bold font-serif mb-3 leading-tight">
              {isEn ? "Privacy Policy" : "隐私政策"}

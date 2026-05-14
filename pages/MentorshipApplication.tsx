@@ -58,7 +58,7 @@ export default function MentorshipApplication() {
   };
 
   return (
-    <div className="font-sans pb-16 pt-24 bg-gray-50 min-h-screen">
+    <div className="font-sans pb-4 pt-3 bg-gray-50 min-h-screen">
       <SEO 
         title={isEn ? "Mentorship Application | Global Film Alliance" : "公益导师扶持申请 | 环球青年电影联盟"}
         description={isEn ? "Apply for the GFA mentorship program." : "申请加入GFA公益导师扶持计划。"}
@@ -67,7 +67,7 @@ export default function MentorshipApplication() {
       <div className="container-gfa max-w-3xl mx-auto px-4">
         <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
           <div className="p-8 md:p-12">
-            <div className="mb-10 text-center">
+            <div className="mb-5 text-center">
               <h1 className="text-3xl md:text-4xl font-bold font-serif mb-4 text-gfa-inkBlack">
                 {isEn ? "Mentorship Application" : "公益导师扶持申请表"}
               </h1>
@@ -90,14 +90,14 @@ export default function MentorshipApplication() {
                 </p>
                 <button 
                   onClick={() => setSubmitStatus('idle')}
-                  className="mt-6 font-bold uppercase tracking-widest text-xs bg-green-600 text-white px-6 py-2 rounded-full hover:bg-green-700 transition"
+                  className="mt-3 font-bold uppercase tracking-widest text-xs bg-green-600 text-white px-6 py-2 rounded-full hover:bg-green-700 transition"
                 >
                   {isEn ? "Submit Another Application" : "提交新申请"}
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <form onSubmit={handleSubmit} className="space-y-3">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                   <div>
                     <label htmlFor="name" className="block text-sm font-bold text-gfa-inkBlack mb-1">
                       {isEn ? "Full Name" : "姓名"} <span className="text-red-500">*</span>
@@ -128,7 +128,7 @@ export default function MentorshipApplication() {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                   <div>
                     <label htmlFor="phone" className="block text-sm font-bold text-gfa-inkBlack mb-1">
                       {isEn ? "Phone Number" : "联系电话"}

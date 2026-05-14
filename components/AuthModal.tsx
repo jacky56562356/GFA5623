@@ -93,7 +93,7 @@ export const AuthModal: React.FC = () => {
         </button>
 
         <div className="p-8">
-          <div className="text-center mb-8">
+          <div className="text-center mb-4">
             <h2 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-2">
               {isLogin ? (isEn ? 'Welcome Back' : '欢迎回来') : (isEn ? 'Create Account' : '创建账号')}
             </h2>
@@ -201,7 +201,7 @@ export const AuthModal: React.FC = () => {
             </button>
           </form>
 
-          <div className="mt-6 flex items-center justify-between">
+          <div className="mt-3 flex items-center justify-between">
             <span className="w-1/5 border-b border-gfa-border"></span>
             <span className="text-xs text-gfa-slate uppercase tracking-widest">{isEn ? 'Or continue with' : '或其他方式登录'}</span>
             <span className="w-1/5 border-b border-gfa-border"></span>
@@ -209,7 +209,7 @@ export const AuthModal: React.FC = () => {
 
           <button
             onClick={handleGoogleSignIn}
-            className="w-full mt-6 bg-white border border-gfa-border text-gfa-inkBlack py-3 rounded-lg font-bold text-sm hover:bg-gfa-warmWhite transition-colors flex items-center justify-center gap-3"
+            className="w-full mt-3 bg-white border border-gfa-border text-gfa-inkBlack py-3 rounded-lg font-bold text-sm hover:bg-gfa-warmWhite transition-colors flex items-center justify-center gap-3"
           >
             <svg className="w-5 h-5" viewBox="0 0 24 24">
               <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4" />
@@ -220,7 +220,7 @@ export const AuthModal: React.FC = () => {
             {isEn ? 'Google' : '谷歌账号'}
           </button>
 
-          <div className="mt-8 text-center text-sm text-gfa-slate">
+          <div className="mt-4 text-center text-sm text-gfa-slate">
             {isLogin ? (
               <p>
                 {isEn ? "Don't have an account? " : "还没有账号？"}

@@ -12,7 +12,7 @@ const Safeguarding: React.FC = () => {
   const isEn = locale === Locale.EN;
 
   return (
-    <div className="bg-gfa-warmWhite pt-[80px] font-sans pb-6">
+    <div className="bg-gfa-warmWhite pt-[80px] font-sans pb-3">
       <SEO title="Safeguarding Youth | GFA" />
 
       {/* Hero */}

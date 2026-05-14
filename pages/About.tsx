@@ -44,7 +44,7 @@ const About: React.FC = () => {
                 {isEn ? "A Message From Our Founder" : "创始人致辞"}
               </h2>
               
-              <div className="space-y-4 text-sm md:text-base font-serif text-gfa-inkBlack leading-relaxed italic mb-6">
+              <div className="space-y-4 text-sm md:text-base font-serif text-gfa-inkBlack leading-relaxed italic mb-3">
                 {isEn ? (
                   <>
                     <p>"After years of working in Hollywood as a film producer, I have witnessed firsthand how this industry can simultaneously be the most magical place on earth — and one of the most difficult to enter.</p>

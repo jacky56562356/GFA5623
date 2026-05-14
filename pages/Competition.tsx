@@ -30,7 +30,7 @@ const Competition: React.FC = () => {
   ];
 
   return (
-    <div className="font-sans pb-6">
+    <div className="font-sans pb-3">
       <SEO 
         title="Global Competition" 
         description="Join the GFA Global Youth Talent Competition. An international platform for young actors and filmmakers to showcase their skills in Hollywood."
@@ -48,13 +48,13 @@ const Competition: React.FC = () => {
       </section>
 
       {/* Hero Text & Actions */}
-      <section className="py-12 md:py-16 bg-gfa-inkBlack relative z-10 border-b border-white/5">
+      <section className="py-3 md:py-4 bg-gfa-inkBlack relative z-10 border-b border-white/5">
         <div className="container-gfa text-center px-4 max-w-6xl mx-auto flex flex-col items-center">
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold font-serif text-white mb-3 md:mb-5 leading-tight">
             {isEn ? "2026 GFA Global Youth" : "2026全球青少年"}<br/>
             <span className="text-[#C9A84C]">{isEn ? "Talent Competition" : "才艺大赛"}</span>
           </h1>
-          <h2 className="text-lg md:text-2xl font-light text-white/90 tracking-widest uppercase mb-8 md:mb-10">
+          <h2 className="text-lg md:text-2xl font-light text-white/90 tracking-widest uppercase mb-4 md:mb-5">
             {isEn ? "Grand Finale in Hollywood" : "决赛在好莱坞顶级舞台"}
           </h2>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto px-4">
@@ -69,7 +69,7 @@ const Competition: React.FC = () => {
       </section>
 
       {/* Intro */}
-      <section className="py-6 bg-white">
+      <section className="py-3 bg-white">
         <div className="container-gfa px-4 max-w-4xl mx-auto text-center space-y-5 text-lg md:text-xl font-light text-gfa-slate leading-relaxed">
            <p className="font-serif text-2xl text-gfa-inkBlack italic mb-3">
              {isEn 
@@ -92,7 +92,7 @@ const Competition: React.FC = () => {
       </section>
 
       {/* Categories & Age Groups */}
-      <section className="py-6 bg-[#F5F2EE]">
+      <section className="py-3 bg-[#F5F2EE]">
         <div className="container-gfa px-4 max-w-6xl mx-auto">
           <div className="text-center mb-4">
             <h2 className="text-4xl text-gfa-inkBlack font-bold font-serif">{isEn ? "Competition Divisions" : "参赛组别"}</h2>
@@ -178,7 +178,7 @@ const Competition: React.FC = () => {
       </section>
 
       {/* Process & Timeline */}
-      <section className="py-6 bg-white border-b border-gfa-border">
+      <section className="py-3 bg-white border-b border-gfa-border">
         <div className="container-gfa px-4 max-w-5xl mx-auto">
           <div className="text-center mb-4">
             <h2 className="text-3xl font-bold font-serif text-gfa-inkBlack">{isEn ? "Process & Timeline" : "参赛流程与节点"}</h2>
@@ -208,7 +208,7 @@ const Competition: React.FC = () => {
       </section>
 
       {/* Awards List */}
-      <section className="py-6 bg-[#F5F2EE]">
+      <section className="py-3 bg-[#F5F2EE]">
         <div className="container-gfa px-4 max-w-4xl mx-auto text-center">
           <h2 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-3">{isEn ? "Awards & Honors" : "最高荣誉奖项设置"}</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -245,7 +245,7 @@ const Competition: React.FC = () => {
       </section>
 
       {/* FAQ */}
-      <section className="py-6 bg-white">
+      <section className="py-3 bg-white">
         <div className="container-gfa max-w-4xl mx-auto px-4">
            <div className="text-center mb-4">
              <h2 className="text-3xl font-bold font-serif text-gfa-inkBlack">{isEn ? "FAQ" : "常见问题"}</h2>
