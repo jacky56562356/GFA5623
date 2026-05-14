@@ -14,7 +14,7 @@ const Awards: React.FC = () => {
       <SEO title="Golden Feather Awards | Global Film Alliance" />
 
       {/* Banner */}
-      <section className="relative h-[70vh] min-h-[600px] flex items-center justify-center overflow-hidden bg-gfa-inkBlack pt-32 pb-20">
+      <section className="relative h-[70vh] min-h-[600px] flex items-center justify-center overflow-hidden bg-gfa-inkBlack pt-8 pb-5">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://i.ibb.co/pjRZK2vm/Gemini-Generated-Image-k7a54jk7a54jk7a5-1.png" 
@@ -24,15 +24,15 @@ const Awards: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-gfa-inkBlack/80 via-gfa-inkBlack/40 to-transparent"></div>
         </div>
 
-        <div className="container-gfa relative z-10 text-center px-4 max-w-4xl mx-auto mt-20">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-serif text-white mb-6 leading-tight drop-shadow-2xl">
+        <div className="container-gfa relative z-10 text-center px-4 max-w-4xl mx-auto mt-5">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-serif text-white mb-3 leading-tight drop-shadow-2xl">
             {isEn ? "The Golden Feather Awards" : "金羽奖电影颁奖礼"}
           </h1>
         </div>
       </section>
 
       {/* Introduction */}
-      <section className="py-20 md:py-32 bg-white relative z-20 -mt-16 rounded-t-[40px] shadow-xl">
+      <section className="py-5 md:py-8 bg-white relative z-20 -mt-16 rounded-t-[40px] shadow-xl">
         <div className="container-gfa max-w-4xl mx-auto px-6 text-center">
           <p className="text-xl md:text-3xl font-light text-gfa-inkBlack leading-relaxed font-serif mb-4">
             {isEn 
@@ -58,7 +58,7 @@ const Awards: React.FC = () => {
                : "我们正在建立专属的流媒体平台，以确保获奖电影人能够获得与其作品价值相匹配的认可、影响力以及专业回报——因为，伟大的故事讲述永远不该被辜负。"}</p>
           </div>
 
-          <div className="mt-16 text-center">
+          <div className="mt-4 text-center">
             <h3 className="text-2xl md:text-4xl font-bold font-serif text-[#C9A84C] mb-4">
               {isEn ? "The Golden Feather Awards." : "金羽奖"}
             </h3>
@@ -69,12 +69,12 @@ const Awards: React.FC = () => {
         </div>
       </section>
 
-      <div className="container-gfa max-w-6xl mx-auto space-y-20 px-4 mt-20">
+      <div className="container-gfa max-w-6xl mx-auto space-y-5 px-4 mt-5">
         
         {/* Global Distribution & Platform Value */}
         <section>
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold font-serif text-gfa-inkBlack mb-6">
+          <div className="text-center mb-3">
+            <h2 className="text-4xl font-bold font-serif text-gfa-inkBlack mb-3">
               {isEn ? "Opportunities & Industry Platform" : "机遇与产业平台整合"}
             </h2>
             <p className="text-gfa-slate max-w-2xl mx-auto text-lg">
@@ -82,7 +82,7 @@ const Awards: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl transition-shadow group">
                <div className="w-14 h-14 bg-[#C9A84C]/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-[#C9A84C] transition-colors">
                   <Globe className="w-7 h-7 text-[#C9A84C] group-hover:text-white transition-colors" />
@@ -146,8 +146,8 @@ const Awards: React.FC = () => {
         </section>
 
         {/* Ceremony Format & Timeline */}
-        <section className="bg-white p-10 lg:p-16 rounded-[40px] shadow-sm border border-gray-100 my-20">
-           <div className="text-center mb-16">
+        <section className="bg-white p-10 lg:p-16 rounded-[40px] shadow-sm border border-gray-100 my-5">
+           <div className="text-center mb-4">
              <h2 className="text-4xl font-bold font-serif text-gfa-inkBlack mb-4 flex justify-center items-center gap-4">
                 <Sparkles className="w-10 h-10 text-[#C9A84C]" />
                 {isEn ? "Ceremony Format & Experience" : "颁奖礼形式与盛典全流程"}
@@ -161,7 +161,7 @@ const Awards: React.FC = () => {
               {/* Vertical line connecting events */}
               <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-[#F5F2EE] transform -translate-x-1/2 rounded-full"></div>
               
-              <div className="space-y-16">
+              <div className="space-y-4">
                  {/* Step 1 */}
                  <div className="flex flex-col md:flex-row items-center justify-between w-full">
                     <div className="md:w-5/12 mb-4 md:mb-0 text-center md:text-right">
@@ -223,7 +223,7 @@ const Awards: React.FC = () => {
 
         {/* Award Categories */}
         <section className="bg-gfa-inkBlack text-white rounded-[40px] p-10 lg:p-16 shadow-xl border border-gray-800">
-           <div className="text-center mb-12">
+           <div className="text-center mb-3">
              <h2 className="text-4xl lg:text-5xl font-bold font-serif mb-4 flex justify-center items-center gap-4">
                 <Trophy className="w-10 h-10 lg:w-12 lg:h-12 text-[#C9A84C]" />
                 {isEn ? "The Complete Golden Feather Awards System" : "GFA金羽奖完整奖项方案"}
@@ -233,10 +233,10 @@ const Awards: React.FC = () => {
              </p>
            </div>
            
-           <div className="space-y-12">
+           <div className="space-y-3">
               {/* Grand Honors */}
               <div>
-                 <h3 className="text-2xl font-bold font-serif mb-6 text-[#C9A84C] flex items-center gap-3 border-b border-white/10 pb-4">
+                 <h3 className="text-2xl font-bold font-serif mb-3 text-[#C9A84C] flex items-center gap-3 border-b border-white/10 pb-4">
                     <Clapperboard className="w-6 h-6" /> {isEn ? "Grand Honors" : "最高荣誉"}
                  </h3>
                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
