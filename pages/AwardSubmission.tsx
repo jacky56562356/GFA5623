@@ -58,8 +58,8 @@ export default function AwardSubmission() {
     const file = e.target.files?.[0];
     if (!file) return;
 
-    if (file.size > 2 * 1024 * 1024) { // 2MB limit
-      alert(isEn ? "File size exceeds 2MB limit. Please upload a smaller file." : "文件大小不能超过2MB，请重新选择。");
+    if (file.size > 20 * 1024 * 1024) { // 20MB limit
+      alert(isEn ? "File size exceeds 20MB limit. Please upload a smaller file." : "文件大小不能超过20MB，请重新选择。");
       return;
     }
 
@@ -90,22 +90,37 @@ export default function AwardSubmission() {
       }
 
       try {
+        const { posterFileBase64, ...emailData } = formData;
+        
+        const details = `
+Film: ${formData.filmTitleOrig} (${formData.filmTitleEn})
+Applicant: ${formData.applicantName} (${formData.applicantEmail})
+Phone: ${formData.applicantPhone}
+Role: ${formData.applicantRole}
+Category: ${formData.category}
+Screener Link: ${formData.screenerLink}
+Poster Name: ${formData.posterFileName}
+Copyright: ${formData.copyrightOwnership}
+Attendees: ${formData.attendeeCount}
+        `.trim();
+
         await emailjs.send(
           'service_eqytzjp',
           'template_e3bza7v',
           {
-            ...formData,
-            // A condensed string to easily read the key details on receipt
-            submission_details: `
-              Film: ${formData.filmTitleOrig} (${formData.filmTitleEn})
-              Applicant: ${formData.applicantName} (${formData.applicantEmail})
-              Role: ${formData.applicantRole}
-              Category: ${formData.category}
-              Screener Link: ${formData.screenerLink}
-              Poster Name: ${formData.posterFileName}
-            `
+            ...emailData,
+            // Custom variable
+            submission_details: details,
+            // Default EmailJS template variables
+            message: details,
+            from_name: formData.applicantName,
+            reply_to: formData.applicantEmail,
+            to_name: 'Admin',
+            email: formData.applicantEmail,
           },
-          '-nL93F_Lv6Wgc1JSc'
+          {
+            publicKey: '-nL93F_Lv6Wgc1JSc'
+          }
         );
       } catch (emailErr) {
         console.error("EmailJS error:", emailErr);
@@ -368,7 +383,7 @@ export default function AwardSubmission() {
                   </div>
                 </div>
                 {formData.posterFileName && <p className="text-sm font-medium text-green-600 mt-2">{isEn ? "Selected file:" : "已选择文件："} {formData.posterFileName}</p>}
-                <p className="text-xs text-gfa-slate mt-2">{isEn ? "Max file size: 2MB" : "文件大小上限：2MB"}</p>
+                <p className="text-xs text-gfa-slate mt-2">{isEn ? "Max file size: 20MB" : "文件大小上限：20MB"}</p>
               </div>
 
               <div>
@@ -376,7 +391,7 @@ export default function AwardSubmission() {
                    {isEn ? "Poster/Stills Link (Optional Drive Link)" : "海报/剧照网盘链接（超大文件请提供链接）"}
                 </label>
                 <input type="url" name="posterLink" placeholder="https://" value={formData.posterLink} onChange={handleChange} className="w-full px-5 py-4 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#C9A84C] bg-gray-50" />
-                <p className="text-xs text-gfa-slate mt-2">{isEn ? "If your files exceed 2MB, provide a folder link here." : "如果海报/剧照超过2MB，请提供网盘链接。"}</p>
+                <p className="text-xs text-gfa-slate mt-2">{isEn ? "If your files exceed 20MB, provide a folder link here." : "如果海报/剧照超过20MB，请提供网盘链接。"}</p>
               </div>
 
               <div className="pt-6 mt-8">

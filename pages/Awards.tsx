@@ -405,13 +405,24 @@ const Awards: React.FC = () => {
                  </div>
               </div>
 
-              <div className="bg-[#F5F2EE] p-8 md:p-12 rounded-3xl border border-[#C9A84C]/20 max-w-4xl mx-auto mt-10 text-center">
-                 <h4 className="font-bold text-2xl font-serif mb-6 text-gfa-inkBlack">
-                   {isEn ? "Ready to Submit Your Film?" : "准备好提交您的作品了吗？"}
+              <div className="bg-[#F5F2EE] p-8 md:p-12 rounded-3xl border border-[#C9A84C]/20 max-w-4xl mx-auto mt-10 text-center relative overflow-hidden">
+                 <div className="absolute top-0 right-0 w-64 h-64 bg-[#C9A84C]/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+                 <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#C9A84C]/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+                 
+                 <h4 className="font-bold text-2xl md:text-3xl font-serif mb-6 text-gfa-inkBlack relative z-10">
+                   {isEn ? "Step Into the Spotlight" : "闪耀好莱坞，成就电影梦"}
                  </h4>
-                 <Link to="/award-submission" className="inline-block bg-[#C9A84C] text-black px-12 py-5 rounded-full font-bold uppercase tracking-widest text-base hover:bg-gfa-inkBlack hover:text-white transition-colors shadow-lg hover:scale-105 transform duration-300">
-                    {isEn ? "Start Application" : "立即进入报名系统"}
+                 <p className="text-gfa-slate text-lg mb-10 max-w-2xl mx-auto relative z-10 leading-relaxed font-light">
+                   {isEn 
+                     ? "Submit your masterpiece to the Golden Feather Awards. Not only will you gain global exposure, industry connections, and prestigious recognition, but standout filmmakers are also eligible for robust project support and a Cash Prize of up to $2,000 USD to fuel your next cinematic journey!" 
+                     : "向金羽奖提交您的诚意之作。在这里，您不仅将获得全球强曝光的瞩目、无接缝对接好莱坞顶级资源的机遇与无上盛行荣誉；优秀影片主创团队更有机会赢取高规格的项目扶持，以及最高达2000美金的现金大奖，为您的电影逐梦之旅重磅加码！"}
+                 </p>
+                 <Link to="/award-submission" className="inline-block relative z-10 bg-gradient-to-r from-[#C9A84C] to-[#E5C973] text-black px-12 py-5 rounded-full font-bold uppercase tracking-widest text-base hover:from-gfa-inkBlack hover:to-gfa-inkBlack hover:text-white transition-all shadow-[0_10px_30px_rgba(201,168,76,0.3)] hover:shadow-2xl hover:-translate-y-1 transform duration-300">
+                    {isEn ? "Start Your Submission" : "即刻提交报名申请"}
                  </Link>
+                 <p className="text-xs text-gfa-slate mt-4 relative z-10 uppercase tracking-widest font-bold opacity-60">
+                    {isEn ? "Join the ranks of visionaries" : "与未来之星并肩"}
+                 </p>
               </div>
            </div>
         </section>
