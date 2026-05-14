@@ -33,8 +33,8 @@ const Navbar: React.FC = () => {
     { name: locale === Locale.EN ? 'Awards' : '金羽奖', path: '/awards' },
     { name: locale === Locale.EN ? 'Short Drama' : '短剧', path: '/short-drama' },
     { name: locale === Locale.EN ? 'Competition' : '大赛', path: '/competition' },
-    { name: locale === Locale.EN ? 'Impact' : '影响力', path: '/impact' },
-    { name: locale === Locale.EN ? 'News' : '新闻', path: '/news' },
+    
+    
     { name: locale === Locale.EN ? 'Involve' : '参与', path: '/get-involved' }
   ];
 

@@ -248,7 +248,7 @@ export default function ShortDrama() {
 
       {/* Hero Section */}
       <section className="relative pt-16 pb-8 lg:pt-24 lg:pb-12 border-b border-[#252525] bg-gradient-to-b from-[#0A0A0A] via-[#1A1208] to-[#0A0A0A] overflow-hidden">
-        <div className="absolute inset-0 z-0 opacity-20">
+        <div className="absolute inset-0 z-0 opacity-50">
            <img src="https://i.ibb.co/fdnnyXHm/Gemini-Generated-Image-vzmo29vzmo29vzmo-1.png" referrerPolicy="no-referrer" className="w-full h-full object-cover mix-blend-screen" alt="Hero background" />
            <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-[#0A0A0A]"></div>
         </div>

@@ -15,8 +15,6 @@ import Awards from './pages/Awards';
 import AwardSubmission from './pages/AwardSubmission';
 import ShortDrama from './pages/ShortDrama';
 import Competition from './pages/Competition';
-import Impact from './pages/Impact';
-import News from './pages/News';
 import GetInvolved from './pages/GetInvolved';
 import Donate from './pages/Donate';
 import Contact from './pages/Contact';
@@ -49,9 +47,7 @@ function App() {
             <Route path="/award-submission" element={<AwardSubmission />} />
             <Route path="/short-drama" element={<ShortDrama />} />
             <Route path="/competition" element={<Competition />} />
-            <Route path="/impact" element={<Impact />} />
-            <Route path="/news" element={<News />} />
-            <Route path="/get-involved" element={<GetInvolved />} />
+                                    <Route path="/get-involved" element={<GetInvolved />} />
             <Route path="/donate" element={<Donate />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/youth-protection" element={<YouthProtection />} />
