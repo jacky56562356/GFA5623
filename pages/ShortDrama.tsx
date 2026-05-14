@@ -100,6 +100,7 @@ export default function ShortDrama() {
   
   const [deadline, setDeadline] = useState('regular');
   const [cart, setCart] = useState<Record<string, number>>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
   
 
   // Recalculate Total
@@ -248,7 +249,7 @@ export default function ShortDrama() {
       {/* Hero Section */}
       <section className="relative pt-16 pb-8 lg:pt-24 lg:pb-12 border-b border-[#252525] bg-gradient-to-b from-[#0A0A0A] via-[#1A1208] to-[#0A0A0A] overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-20">
-           <img src="https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?q=80&w=2670&auto=format&fit=crop" referrerPolicy="no-referrer" className="w-full h-full object-cover mix-blend-screen" alt="Hero background" />
+           <img src="https://i.ibb.co/fdnnyXHm/Gemini-Generated-Image-vzmo29vzmo29vzmo-1.png" referrerPolicy="no-referrer" className="w-full h-full object-cover mix-blend-screen" alt="Hero background" />
            <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-[#0A0A0A]"></div>
         </div>
         
@@ -383,36 +384,65 @@ export default function ShortDrama() {
 
       {/* Booking Form Layout */}
       <form 
-        onSubmit={(e) => {
+        onSubmit={async (e) => {
           e.preventDefault();
           const formData = new FormData(e.currentTarget);
           const data = Object.fromEntries(formData.entries());
           
-          let emailBody = `${isEn ? 'GFA Registration Form Submission' : 'GFA 报名表单提交'}\n\n`;
-          
-          emailBody += `--- Selected Items ---\n`;
-          Object.entries(cart).forEach(([id, count]) => {
-            if (count > 0) {
-              emailBody += `- ${id}: ${count}\n`;
-            }
-          });
-          emailBody += `Total Amount due: \${currentTotal.toLocaleString()}\n\n`;
+          setIsSubmitting(true);
+          try {
+             const itemsList: any[] = [];
+             Object.entries(cart).forEach(([id, count]) => {
+                if (count > 0) {
+                   const allCatalogs = [...ITEM_CATALOG.submission, ...ITEM_CATALOG.student, ...ITEM_CATALOG.booths, ...ITEM_CATALOG.ads_web, ...ITEM_CATALOG.ads_onsite, ...ITEM_CATALOG.ads_book, ...ITEM_CATALOG.posters, ...ITEM_CATALOG.pitch, ...ITEM_CATALOG.packages];
+                   const catalogItem: any = allCatalogs.find((i: any) => i.id === id);
+                   if (catalogItem) {
+                      let finalPrice = catalogItem.price;
+                      if (ITEM_CATALOG.submission.find(i=>i.id===id) || ITEM_CATALOG.student.find(i=>i.id===id)) {
+                         const studentAdjustment = ITEM_CATALOG.student.find(i=>i.id===id) ? -100 : 0;
+                         if (deadline === 'early') finalPrice = 199 + studentAdjustment;
+                         if (deadline === 'regular') finalPrice = 299 + studentAdjustment;
+                         if (deadline === 'late') finalPrice = 399 + studentAdjustment;
+                      }
+                      
+                      itemsList.push({
+                         name: isEn ? catalogItem.nameEn : catalogItem.nameZh,
+                         qty: count,
+                         price: finalPrice
+                      });
+                   }
+                }
+             });
 
-          emailBody += `--- Form Information ---\n`;
-          for (const [key, value] of Object.entries(data)) {
-            if (value && typeof value === 'string' && value.trim() !== '') {
-               emailBody += `${key}: ${value}\n`;
-            }
+             const response = await fetch('/api/create-checkout-session', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                   items: itemsList,
+                   customerDetails: {
+                      email: data['Email'] || '',
+                      filmTitle: data['Film Title (En)'] || data['Film Title (Zh)'] || 'Short Drama Entry',
+                      director: data['Director Name'] || '',
+                      company: data['Company/Brand Name'] || '',
+                   }
+                })
+             });
+             
+             const result = await response.json();
+             if (result.url) {
+                window.location.href = result.url;
+             } else if (result.error === "missing_stripe_key") {
+                alert(isEn ? 'Stripe Checkout Demo Mode: Success! (Add STRIPE_SECRET_KEY to test payments)' : '演示模式：提交成功！（注：尚未配置真实支付密钥，故跳过支付环节）');
+                setCart({});
+             } else {
+                throw new Error(result.message || 'Error redirecting to checkout');
+             }
+          } catch (e: any) {
+             console.error(e);
+             alert(e.message || "Failed to go to checkout");
+          } finally {
+             setIsSubmitting(false);
           }
-
-          emailBody += `\n* Note: Any uploaded files (posters, logos) must be sent as email attachments directly since web forms cannot automatically attach local files to email clients.`;
-
-          const subject = encodeURIComponent("GFA Short Drama Showcase Registration");
-          const body = encodeURIComponent(emailBody);
-          
-          window.location.href = `mailto:hpag96@gmail.com?subject=${subject}&body=${body}`;
-          
-          setCart({});
         }}
         className="container-gfa max-w-7xl mx-auto px-6 py-6 flex flex-col lg:flex-row gap-6 relative" id="registration-form">
          
@@ -429,6 +459,122 @@ export default function ShortDrama() {
                <div className="mb-4 overflow-hidden rounded-[20px]">
                   <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=2670&auto=format&fit=crop" referrerPolicy="no-referrer" alt="Filmmaking" className="w-full h-48 object-cover opacity-60 border border-[#252525] rounded-[20px]" />
                </div>
+
+               {/* Registration Details */}
+               <section id="registration-details" className="mt-8 mb-12">
+                  <SectionTitle en="Applicant & Film Information" zh="报名与影片信息填写" />
+                  <div className="bg-[#111] border border-[#252525] rounded-xl p-6 md:p-8 shadow-inner space-y-6">
+                     {/* Submission Form Fields */}
+                   <div className="space-y-4">
+                     <h4 className="text-[#C9A84C] uppercase tracking-widest text-sm font-bold border-b border-[#333] pb-2">{isEn ? 'Film Information' : '影片基本信息'}</h4>
+                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                          <label className="block text-[11px] text-gray-400 uppercase tracking-widest mb-1">{isEn ? 'Film Title (En) (If applicable)' : '影片名称 (英文) (若有必填)'}</label>
+                          <input type="text" name="Film Title (En)" />
+                        </div>
+                        <div>
+                          <label className="block text-[11px] text-gray-400 uppercase tracking-widest mb-1">{isEn ? 'Film Title (Zh)' : '影片名称 (中文)'}</label>
+                          <input type="text" name="Film Title (Zh)" className="w-full bg-[#1A1A1A] border border-[#333] rounded p-2 text-white focus:border-[#C9A84C] outline-none" />
+                        </div>
+                        <div>
+                          <label className="block text-[11px] text-gray-400 uppercase tracking-widest mb-1">{isEn ? 'Director Name (If applicable)' : '导演姓名 (若有必填)'}</label>
+                          <input type="text" name="" />
+                        </div>
+                        <div>
+                          <label className="block text-[11px] text-gray-400 uppercase tracking-widest mb-1">{isEn ? 'Production Company' : '制作公司'}</label>
+                          <input type="text" name="Production Company" className="w-full bg-[#1A1A1A] border border-[#333] rounded p-2 text-white focus:border-[#C9A84C] outline-none" />
+                        </div>
+                        <div>
+                          <label className="block text-[11px] text-gray-400 uppercase tracking-widest mb-1">{isEn ? 'Duration (minutes)' : '影片时长 (分钟)'}</label>
+                          <input type="number" name="Duration (minutes)" min="0" className="w-full bg-[#1A1A1A] border border-[#333] rounded p-2 text-white focus:border-[#C9A84C] outline-none" />
+                        </div>
+                        <div>
+                          <label className="block text-[11px] text-gray-400 uppercase tracking-widest mb-1">{isEn ? 'Production Year' : '制作年份'}</label>
+                          <input type="number" name="Production Year" min="1900" max="2099" className="w-full bg-[#1A1A1A] border border-[#333] rounded p-2 text-white focus:border-[#C9A84C] outline-none" />
+                        </div>
+                        <div className="md:col-span-2">
+                          <label className="block text-[11px] text-gray-400 uppercase tracking-widest mb-1">{isEn ? 'Screener Link (If applicable)' : '样片链接 Screener/Trailer (若有必填)'}</label>
+                          <input type="url" name="" />
+                        </div>
+                        <div className="md:col-span-2">
+                          <label className="block text-[11px] text-gray-400 uppercase tracking-widest mb-1">{isEn ? 'Poster Upload (JPG/PNG/PDF, min A2)' : '海报上传 Poster Upload (JPG/PNG/PDF)'}</label>
+                          <input type="file" name="Poster File" accept="image/png, image/jpeg, application/pdf" className="w-full bg-[#1A1A1A] border border-[#333] rounded p-2 text-gray-500 text-sm focus:border-[#C9A84C] outline-none file:mr-4 file:py-1 file:px-3 file:rounded file:border-0 file:bg-[#333] file:text-gray-200 hover:file:bg-[#C9A84C] hover:file:text-black" />
+                        </div>
+                        <div className="md:col-span-2">
+                          <label className="block text-[11px] text-gray-400 uppercase tracking-widest mb-1">{isEn ? 'Synopsis / Intro' : '简介 Synopsis (若有必填)'}</label>
+                          <textarea name=""></textarea>
+                        </div>
+                     </div>
+                   </div>
+
+                {/* Booths & Sponsored Ads Info */}
+                
+                   <div className="space-y-4">
+                     <h4 className="text-[#C9A84C] uppercase tracking-widest text-sm font-bold border-b border-[#333] pb-2 pt-4">{isEn ? 'Corporate / Brand Information' : '企业/品牌信息'}</h4>
+                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                          <label className="block text-[11px] text-gray-400 uppercase tracking-widest mb-1">{isEn ? 'Company/Brand Name (If applicable)' : '公司/品牌名称 (若有必填)'}</label>
+                          <input type="text" name="" />
+                        </div>
+                        <div>
+                          <label className="block text-[11px] text-gray-400 uppercase tracking-widest mb-1">{isEn ? 'Contact Person' : '联系人姓名'} *</label>
+                          <input type="text" name="Contact Person" className="w-full bg-[#1A1A1A] border border-[#333] rounded p-2 text-white focus:border-[#C9A84C] outline-none" required />
+                        </div>
+                        <div>
+                          <label className="block text-[11px] text-gray-400 uppercase tracking-widest mb-1">{isEn ? 'Title / Position' : '职位/头衔'}</label>
+                          <input type="text" name="Title/Position" className="w-full bg-[#1A1A1A] border border-[#333] rounded p-2 text-white focus:border-[#C9A84C] outline-none" />
+                        </div>
+                        <div>
+                          <label className="block text-[11px] text-gray-400 uppercase tracking-widest mb-1">{isEn ? 'Website URL' : '公司网址 URL'}</label>
+                          <input type="url" name="Website URL" placeholder="https://" className="w-full bg-[#1A1A1A] border border-[#333] rounded p-2 text-white focus:border-[#C9A84C] outline-none" />
+                        </div>
+                        
+                        {/* Only show these if they selected a booth or setup */}
+                        
+                          <>
+                            <div className="md:col-span-2">
+                              <label className="block text-[11px] text-gray-400 uppercase tracking-widest mb-1">{isEn ? 'On-site Representatives (If booking booth)' : '现场参展代表姓名 (预订展位必填)'}</label>
+                              <div className="text-[10px] text-gray-500 mb-1">{isEn ? 'Please list names of staff attending the booth (for badges)' : '请列出所有将在展位工作的代表名单（用于制作参展证件）'}</div>
+                              <input type="text" name="" />
+                            </div>
+                            <div className="md:col-span-2">
+                              <label className="block text-[11px] text-gray-400 uppercase tracking-widest mb-1">{isEn ? 'Brand/Product Intro' : '品牌/展品简介 (限150字以内)'}</label>
+                              <textarea name=""></textarea>
+                            </div>
+                          </>
+
+                        <div className="md:col-span-2">
+                          <label className="block text-[11px] text-gray-400 uppercase tracking-widest mb-1">{isEn ? 'Logo / Ad Material Upload' : 'Logo/广告素材上传 Ad Material Upload'}</label>
+                          <div className="text-[10px] text-gray-500 mb-2">{isEn ? 'PNG transparent / CMYK PDF / JPG (min 300dpi)' : '支持JPG/PNG/PDF格式，最小300dpi。横幅为1920x400，侧边栏为300x250'}</div>
+                          <input type="file" name="Brand Material File" accept="image/png, image/jpeg, application/pdf" className="w-full bg-[#1A1A1A] border border-[#333] rounded p-2 text-gray-500 text-sm focus:border-[#C9A84C] outline-none file:mr-4 file:py-1 file:px-3 file:rounded file:border-0 file:bg-[#333] file:text-gray-200 hover:file:bg-[#C9A84C] hover:file:text-black" />
+                        </div>
+                        <div className="md:col-span-2">
+                          <label className="block text-[11px] text-gray-400 uppercase tracking-widest mb-1">{isEn ? 'Special Booth Requirements or Notes' : '特殊布展需求或备注 Special Requirements'}</label>
+                          <textarea name="Special Requirements" rows={2} className="w-full bg-[#1A1A1A] border border-[#333] rounded p-2 text-white focus:border-[#C9A84C] outline-none"></textarea>
+                        </div>
+                     </div>
+                   </div>
+
+                {/* Common Contact Fields */}
+                <div className="space-y-4">
+                  <h4 className="text-[#C9A84C] uppercase tracking-widest text-sm font-bold border-b border-[#333] pb-2 pt-4">{isEn ? 'Contact Details' : '联络方式'}</h4>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                     <div>
+                       <label className="block text-[11px] text-gray-400 uppercase tracking-widest mb-1">{isEn ? 'Email Address' : '联系邮箱 Email'} *</label>
+                       <input type="email" name="Email" className="w-full bg-[#1A1A1A] border border-[#333] rounded p-2 text-white focus:border-[#C9A84C] outline-none" required />
+                     </div>
+                     <div>
+                       <label className="block text-[11px] text-gray-400 uppercase tracking-widest mb-1">{isEn ? 'Phone Number' : '联系电话 Phone'} *</label>
+                       <input type="tel" name="Phone" className="w-full bg-[#1A1A1A] border border-[#333] rounded p-2 text-white focus:border-[#C9A84C] outline-none" required />
+                     </div>
+                  </div>
+                </div>
+
+             
+                  </div>
+               </section>
+
+            
                <div className="mb-4 pl-4 border-l-2 border-[#C9A84C] bg-[#1A1A1A] p-3 text-xs text-gray-300 leading-relaxed rounded-r shadow-inner">
                   {isEn 
                     ? "Select your submission category. Entry fees vary by deadline."
@@ -466,120 +612,6 @@ export default function ShortDrama() {
             
 
          
-            {/* Registration Details */}
-               <section id="registration-details" className="mt-8 mb-12">
-                  <SectionTitle en="Applicant & Film Information" zh="报名与影片信息填写" />
-                  <div className="bg-[#111] border border-[#252525] rounded-xl p-6 md:p-8 shadow-inner space-y-6">
-                     {/* Submission Form Fields */}
-                   <div className="space-y-4">
-                     <h4 className="text-[#C9A84C] uppercase tracking-widest text-sm font-bold border-b border-[#333] pb-2">{isEn ? 'Film Information' : '影片基本信息'}</h4>
-                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div>
-                          <label className="block text-[11px] text-gray-400 uppercase tracking-widest mb-1">{isEn ? 'Film Title (En)' : '影片名称 (英文)'} *</label>
-                          <input type="text" name="Film Title (En)" className="w-full bg-[#1A1A1A] border border-[#333] rounded p-2 text-white focus:border-[#C9A84C] outline-none" required />
-                        </div>
-                        <div>
-                          <label className="block text-[11px] text-gray-400 uppercase tracking-widest mb-1">{isEn ? 'Film Title (Zh)' : '影片名称 (中文)'}</label>
-                          <input type="text" name="Film Title (Zh)" className="w-full bg-[#1A1A1A] border border-[#333] rounded p-2 text-white focus:border-[#C9A84C] outline-none" />
-                        </div>
-                        <div>
-                          <label className="block text-[11px] text-gray-400 uppercase tracking-widest mb-1">{isEn ? 'Director Name' : '导演姓名'} *</label>
-                          <input type="text" name="Director Name" className="w-full bg-[#1A1A1A] border border-[#333] rounded p-2 text-white focus:border-[#C9A84C] outline-none" required />
-                        </div>
-                        <div>
-                          <label className="block text-[11px] text-gray-400 uppercase tracking-widest mb-1">{isEn ? 'Production Company' : '制作公司'}</label>
-                          <input type="text" name="Production Company" className="w-full bg-[#1A1A1A] border border-[#333] rounded p-2 text-white focus:border-[#C9A84C] outline-none" />
-                        </div>
-                        <div>
-                          <label className="block text-[11px] text-gray-400 uppercase tracking-widest mb-1">{isEn ? 'Duration (minutes)' : '影片时长 (分钟)'}</label>
-                          <input type="number" name="Duration (minutes)" min="0" className="w-full bg-[#1A1A1A] border border-[#333] rounded p-2 text-white focus:border-[#C9A84C] outline-none" />
-                        </div>
-                        <div>
-                          <label className="block text-[11px] text-gray-400 uppercase tracking-widest mb-1">{isEn ? 'Production Year' : '制作年份'}</label>
-                          <input type="number" name="Production Year" min="1900" max="2099" className="w-full bg-[#1A1A1A] border border-[#333] rounded p-2 text-white focus:border-[#C9A84C] outline-none" />
-                        </div>
-                        <div className="md:col-span-2">
-                          <label className="block text-[11px] text-gray-400 uppercase tracking-widest mb-1">{isEn ? 'Screener Link (Vimeo/YouTube/Drive)' : '样片链接 Screener Link'} *</label>
-                          <input type="url" name="Screener Link" placeholder="https://" className="w-full bg-[#1A1A1A] border border-[#333] rounded p-2 text-white focus:border-[#C9A84C] outline-none" required />
-                        </div>
-                        <div className="md:col-span-2">
-                          <label className="block text-[11px] text-gray-400 uppercase tracking-widest mb-1">{isEn ? 'Poster Upload (JPG/PNG/PDF, min A2)' : '海报上传 Poster Upload (JPG/PNG/PDF)'}</label>
-                          <input type="file" name="Poster File" accept="image/png, image/jpeg, application/pdf" className="w-full bg-[#1A1A1A] border border-[#333] rounded p-2 text-gray-500 text-sm focus:border-[#C9A84C] outline-none file:mr-4 file:py-1 file:px-3 file:rounded file:border-0 file:bg-[#333] file:text-gray-200 hover:file:bg-[#C9A84C] hover:file:text-black" />
-                        </div>
-                        <div className="md:col-span-2">
-                          <label className="block text-[11px] text-gray-400 uppercase tracking-widest mb-1">{isEn ? 'Synopsis (300 words max)' : '简介 Synopsis (300字以内)'} *</label>
-                          <textarea name="Synopsis" rows={3} className="w-full bg-[#1A1A1A] border border-[#333] rounded p-2 text-white focus:border-[#C9A84C] outline-none" required></textarea>
-                        </div>
-                     </div>
-                   </div>
-
-                {/* Booths & Sponsored Ads Info */}
-                
-                   <div className="space-y-4">
-                     <h4 className="text-[#C9A84C] uppercase tracking-widest text-sm font-bold border-b border-[#333] pb-2 pt-4">{isEn ? 'Corporate / Brand Information' : '企业/品牌信息'}</h4>
-                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div>
-                          <label className="block text-[11px] text-gray-400 uppercase tracking-widest mb-1">{isEn ? 'Company/Brand Name' : '公司/品牌名称'} *</label>
-                          <input type="text" name="Company/Brand Name" className="w-full bg-[#1A1A1A] border border-[#333] rounded p-2 text-white focus:border-[#C9A84C] outline-none" required />
-                        </div>
-                        <div>
-                          <label className="block text-[11px] text-gray-400 uppercase tracking-widest mb-1">{isEn ? 'Contact Person' : '联系人姓名'} *</label>
-                          <input type="text" name="Contact Person" className="w-full bg-[#1A1A1A] border border-[#333] rounded p-2 text-white focus:border-[#C9A84C] outline-none" required />
-                        </div>
-                        <div>
-                          <label className="block text-[11px] text-gray-400 uppercase tracking-widest mb-1">{isEn ? 'Title / Position' : '职位/头衔'}</label>
-                          <input type="text" name="Title/Position" className="w-full bg-[#1A1A1A] border border-[#333] rounded p-2 text-white focus:border-[#C9A84C] outline-none" />
-                        </div>
-                        <div>
-                          <label className="block text-[11px] text-gray-400 uppercase tracking-widest mb-1">{isEn ? 'Website URL' : '公司网址 URL'}</label>
-                          <input type="url" name="Website URL" placeholder="https://" className="w-full bg-[#1A1A1A] border border-[#333] rounded p-2 text-white focus:border-[#C9A84C] outline-none" />
-                        </div>
-                        
-                        {/* Only show these if they selected a booth or setup */}
-                        
-                          <>
-                            <div className="md:col-span-2">
-                              <label className="block text-[11px] text-gray-400 uppercase tracking-widest mb-1">{isEn ? 'On-site Representatives (Names)' : '现场参展代表人员姓名'} *</label>
-                              <div className="text-[10px] text-gray-500 mb-1">{isEn ? 'Please list names of staff attending the booth (for badges)' : '请列出所有将在展位工作的代表名单（用于制作参展证件）'}</div>
-                              <input type="text" name="On-site Representatives" className="w-full bg-[#1A1A1A] border border-[#333] rounded p-2 text-white focus:border-[#C9A84C] outline-none" placeholder={isEn ? 'e.g. John Doe, Jane Smith' : '如：张三, 李四'} required />
-                            </div>
-                            <div className="md:col-span-2">
-                              <label className="block text-[11px] text-gray-400 uppercase tracking-widest mb-1">{isEn ? 'Brand / Product Intro (Maximum 150 words)' : '品牌或展品简介 (限150字以内)'} *</label>
-                              <textarea name="Brand Intro" rows={3} className="w-full bg-[#1A1A1A] border border-[#333] rounded p-2 text-white focus:border-[#C9A84C] outline-none" required></textarea>
-                            </div>
-                          </>
-
-                        <div className="md:col-span-2">
-                          <label className="block text-[11px] text-gray-400 uppercase tracking-widest mb-1">{isEn ? 'Logo / Ad Material Upload' : 'Logo/广告素材上传 Ad Material Upload'}</label>
-                          <div className="text-[10px] text-gray-500 mb-2">{isEn ? 'PNG transparent / CMYK PDF / JPG (min 300dpi)' : '支持JPG/PNG/PDF格式，最小300dpi。横幅为1920x400，侧边栏为300x250'}</div>
-                          <input type="file" name="Brand Material File" accept="image/png, image/jpeg, application/pdf" className="w-full bg-[#1A1A1A] border border-[#333] rounded p-2 text-gray-500 text-sm focus:border-[#C9A84C] outline-none file:mr-4 file:py-1 file:px-3 file:rounded file:border-0 file:bg-[#333] file:text-gray-200 hover:file:bg-[#C9A84C] hover:file:text-black" />
-                        </div>
-                        <div className="md:col-span-2">
-                          <label className="block text-[11px] text-gray-400 uppercase tracking-widest mb-1">{isEn ? 'Special Booth Requirements or Notes' : '特殊布展需求或备注 Special Requirements'}</label>
-                          <textarea name="Special Requirements" rows={2} className="w-full bg-[#1A1A1A] border border-[#333] rounded p-2 text-white focus:border-[#C9A84C] outline-none"></textarea>
-                        </div>
-                     </div>
-                   </div>
-
-                {/* Common Contact Fields */}
-                <div className="space-y-4">
-                  <h4 className="text-[#C9A84C] uppercase tracking-widest text-sm font-bold border-b border-[#333] pb-2 pt-4">{isEn ? 'Contact Details' : '联络方式'}</h4>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                     <div>
-                       <label className="block text-[11px] text-gray-400 uppercase tracking-widest mb-1">{isEn ? 'Email Address' : '联系邮箱 Email'} *</label>
-                       <input type="email" name="Email" className="w-full bg-[#1A1A1A] border border-[#333] rounded p-2 text-white focus:border-[#C9A84C] outline-none" required />
-                     </div>
-                     <div>
-                       <label className="block text-[11px] text-gray-400 uppercase tracking-widest mb-1">{isEn ? 'Phone Number' : '联系电话 Phone'} *</label>
-                       <input type="tel" name="Phone" className="w-full bg-[#1A1A1A] border border-[#333] rounded p-2 text-white focus:border-[#C9A84C] outline-none" required />
-                     </div>
-                  </div>
-                </div>
-
-             
-                  </div>
-               </section>
-
             {/* Step 2: Booths */}
             <section id="step2">
                <SectionTitle step="2" en="Exhibition Booths" zh="现场实体展位" />
@@ -1028,13 +1060,13 @@ export default function ShortDrama() {
 
                   <button 
                      type="submit"
-                     disabled={currentTotal === 0}
+                     disabled={currentTotal === 0 || isSubmitting}
                      className={`w-full mt-6 py-4 font-bold tracking-widest uppercase transition-all duration-300 rounded text-sm
                        ${currentTotal > 0 
                          ? 'bg-[#C9A84C] text-[#0A0A0A] hover:bg-[#E8C97A] shadow-[0_0_20px_rgba(201,168,76,0.3)]' 
                          : 'bg-[#252525] text-gray-500 cursor-not-allowed'}`}
                   >
-                     {isEn ? 'Submit Registration' : '确认并提交报名'}
+                     {isSubmitting ? (isEn ? 'Processing...' : '处理中...') : (isEn ? 'Submit & Pay via Stripe' : '确认提交并去 Stripe 线上付款')}
                   </button>
                   
                   {currentTotal > 0 && (
