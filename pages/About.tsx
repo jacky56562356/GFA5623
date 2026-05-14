@@ -223,7 +223,7 @@ const About: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
              <div className="bg-[#F5F2EE] rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
                <div className="h-56 overflow-hidden relative">
-                 <img src="https://images.unsplash.com/photo-1531844251246-9a1bfaae09fc?q=80&w=2000&auto=format&fit=crop" alt="Filmmaker Action" className="w-full h-full object-cover" />
+                 <img src="https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?auto=format&fit=crop&w=2000&q=80" alt="Filmmaker Action" className="w-full h-full object-cover" />
                </div>
                <div className="p-8">
                  <div className="text-xs font-bold text-[#C9A84C] uppercase tracking-widest mb-3">{isEn ? "Career Support" : "就业扶持计划"}</div>
@@ -236,7 +236,7 @@ const About: React.FC = () => {
 
              <div className="bg-[#F5F2EE] rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
                <div className="h-56 overflow-hidden relative">
-                 <img src="https://images.unsplash.com/photo-1543332164-6e82f355badc?q=80&w=2000&auto=format&fit=crop" alt="Summer Camp" className="w-full h-full object-cover" />
+                 <img src="https://images.unsplash.com/photo-1533222481259-ce20eda1e20b?auto=format&fit=crop&w=2000&q=80" alt="Summer Camp" className="w-full h-full object-cover" />
                </div>
                <div className="p-8">
                  <div className="text-xs font-bold text-[#C9A84C] uppercase tracking-widest mb-3">{isEn ? "Youth Camp" : "影视夏令营"}</div>
@@ -248,8 +248,8 @@ const About: React.FC = () => {
              </div>
 
              <div className="bg-[#F5F2EE] rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
-               <div className="h-56 overflow-hidden relative">
-                 <img src="https://images.unsplash.com/photo-1495727034151-8fdc73e332a8?q=80&w=2000&auto=format&fit=crop" alt="Awards Night" className="w-full h-full object-cover" />
+               <div className="h-56 overflow-hidden relative flex justify-center p-4">
+                 <img src="https://i.ibb.co/8gHZ9bxG/Chat-GPT-Image-2026-3-8-11-02-27.png" alt="Awards Night" className="h-full object-contain drop-shadow-xl" />
                </div>
                <div className="p-8">
                  <div className="text-xs font-bold text-[#C9A84C] uppercase tracking-widest mb-3">{isEn ? "Golden Feather" : "金羽奖获奖者"}</div>
@@ -335,22 +335,13 @@ const About: React.FC = () => {
             </h3>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             <div className="bg-gray-50 rounded-2xl p-8 text-center border border-gray-100 hover:shadow-md transition-shadow">
               <div className="h-16 flex items-center justify-center mb-4">
                  <div className="text-2xl font-bold italic tracking-tighter text-gfa-inkBlack">Blackmagic Design</div>
               </div>
               <p className="text-sm md:text-base font-light text-gfa-slate leading-relaxed mx-auto">
                 {isEn ? "Professional equipment partner, providing pro-level camera gear support for GFA projects." : "专业设备合作伙伴，为GFA项目提供专业级摄影器材支持"}
-              </p>
-            </div>
-
-            <div className="bg-gray-50 rounded-2xl p-8 text-center border border-gray-100 hover:shadow-md transition-shadow">
-              <div className="h-16 flex items-center justify-center mb-4">
-                 <div className="text-2xl font-serif text-gfa-inkBlack">Harmony Gold</div>
-              </div>
-              <p className="text-sm md:text-base font-light text-gfa-slate leading-relaxed mx-auto">
-                {isEn ? "Content partner collaborating on distribution and youth production." : "内容合作伙伴，参与项目发行及合作体验。"}
               </p>
             </div>
 
