@@ -10,15 +10,6 @@ async function startServer() {
   // Middleware to parse JSON bodies
   app.use(express.json());
 
-  // Security headers
-  app.use((req, res, next) => {
-    res.setHeader("Content-Security-Policy", "default-src 'self' https: http: 'unsafe-inline' 'unsafe-eval' data: blob: ws: wss:");
-    res.setHeader("Strict-Transport-Security", "max-age=31536000; includeSubDomains; preload");
-    res.setHeader("X-Frame-Options", "SAMEORIGIN");
-    res.setHeader("X-Content-Type-Options", "nosniff");
-    next();
-  });
-
   // Define API routes FIRST
   app.get("/api/health", (req, res) => {
     res.json({ status: "ok" });

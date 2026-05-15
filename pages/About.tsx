@@ -223,7 +223,7 @@ const About: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
              <div className="bg-[#F5F2EE] rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
                <div className="h-56 overflow-hidden relative">
-                 <img src="https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?auto=format&fit=crop&w=2000&q=80" alt="Filmmaker Action" className="w-full h-full object-cover" />
+                 <img src="https://images.unsplash.com/photo-1588636400925-5ae86cd2fa79?auto=format&fit=crop&w=2000&q=80" alt="Filmmaker Action" className="w-full h-full object-cover" />
                </div>
                <div className="p-8">
                  <div className="text-xs font-bold text-[#C9A84C] uppercase tracking-widest mb-3">{isEn ? "Career Support" : "就业扶持计划"}</div>
@@ -236,7 +236,7 @@ const About: React.FC = () => {
 
              <div className="bg-[#F5F2EE] rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
                <div className="h-56 overflow-hidden relative">
-                 <img src="https://images.unsplash.com/photo-1533222481259-ce20eda1e20b?auto=format&fit=crop&w=2000&q=80" alt="Summer Camp" className="w-full h-full object-cover" />
+                 <img src="https://images.unsplash.com/photo-1511629091441-ee46146481b6?auto=format&fit=crop&w=2000&q=80" alt="Summer Camp" className="w-full h-full object-cover" />
                </div>
                <div className="p-8">
                  <div className="text-xs font-bold text-[#C9A84C] uppercase tracking-widest mb-3">{isEn ? "Youth Camp" : "影视夏令营"}</div>
