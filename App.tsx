@@ -1,35 +1,36 @@
 
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Suspense } from 'react';
 import { LocaleProvider } from './LocaleContext';
 import { AuthProvider } from './lib/AuthContext';
 import Layout from './components/Layout';
 
 // Pages
-import Home from './pages/Home';
-import About from './pages/About';
-import FilmmakerSupport from './pages/FilmmakerSupport';
-import YouthPrograms from './pages/YouthPrograms';
-import FamilyGuide from './pages/FamilyGuide';
-import Awards from './pages/Awards';
-import AwardSubmission from './pages/AwardSubmission';
-import ShortDrama from './pages/ShortDrama';
-import Competition from './pages/Competition';
-import GetInvolved from './pages/GetInvolved';
-import Donate from './pages/Donate';
-import Contact from './pages/Contact';
-import YouthProtection from './pages/YouthProtection';
-import PrivacyPolicy from './pages/PrivacyPolicy';
-import Profile from './pages/Profile';
-import GearApplication from './pages/GearApplication';
-import GearDonation from './pages/GearDonation';
-import MentorshipApplication from './pages/MentorshipApplication';
-import Mentors from './pages/Mentors';
-import BecomeMentorApplication from './pages/BecomeMentorApplication';
-import AdminDashboard from './pages/AdminDashboard';
+const Home = React.lazy(() => import('./pages/Home'));
+const About = React.lazy(() => import('./pages/About'));
+const FilmmakerSupport = React.lazy(() => import('./pages/FilmmakerSupport'));
+const YouthPrograms = React.lazy(() => import('./pages/YouthPrograms'));
+const FamilyGuide = React.lazy(() => import('./pages/FamilyGuide'));
+const Awards = React.lazy(() => import('./pages/Awards'));
+const AwardSubmission = React.lazy(() => import('./pages/AwardSubmission'));
+const ShortDrama = React.lazy(() => import('./pages/ShortDrama'));
+const Competition = React.lazy(() => import('./pages/Competition'));
+const GetInvolved = React.lazy(() => import('./pages/GetInvolved'));
+const Donate = React.lazy(() => import('./pages/Donate'));
+const Contact = React.lazy(() => import('./pages/Contact'));
+const YouthProtection = React.lazy(() => import('./pages/YouthProtection'));
+const PrivacyPolicy = React.lazy(() => import('./pages/PrivacyPolicy'));
+const Profile = React.lazy(() => import('./pages/Profile'));
+const GearApplication = React.lazy(() => import('./pages/GearApplication'));
+const GearDonation = React.lazy(() => import('./pages/GearDonation'));
+const MentorshipApplication = React.lazy(() => import('./pages/MentorshipApplication'));
+const Mentors = React.lazy(() => import('./pages/Mentors'));
+const BecomeMentorApplication = React.lazy(() => import('./pages/BecomeMentorApplication'));
+const AdminDashboard = React.lazy(() => import('./pages/AdminDashboard'));
 
 // Policy Pages
-import PolicyPage from './pages/PolicyPage';
+const PolicyPage = React.lazy(() => import('./pages/PolicyPage'));
 
 function App() {
   return (
@@ -37,7 +38,8 @@ function App() {
       <AuthProvider>
         <BrowserRouter>
           <Layout>
-            <Routes>
+            <Suspense fallback={<div className="flex h-screen items-center justify-center"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gfa-diamond"></div></div>}>
+              <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/filmmaker-support" element={<FilmmakerSupport />} />
@@ -65,6 +67,7 @@ function App() {
             <Route path="/policy/consent" element={<PolicyPage type="consent" />} />
             <Route path="/policy/content" element={<PolicyPage type="content" />} />
           </Routes>
+            </Suspense>
           </Layout>
         </BrowserRouter>
       </AuthProvider>

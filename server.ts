@@ -2,10 +2,14 @@ import express from "express";
 import path from "path";
 import { createServer as createViteServer } from "vite";
 import Stripe from "stripe";
+import compression from "compression";
 
 async function startServer() {
   const app = express();
   const PORT = 3000;
+
+  // Use compression middleware for all responses
+  app.use(compression());
 
   // Middleware to parse JSON bodies
   app.use(express.json());
@@ -87,8 +91,15 @@ async function startServer() {
   } else {
     // Serve static files in production
     const distPath = path.join(process.cwd(), 'dist');
-    app.use(express.static(distPath));
+    // Add cache headers for static assets
+    app.use(express.static(distPath, {
+      maxAge: '1y',
+      etag: true,
+      lastModified: true
+    }));
     app.get('*all', (req, res) => {
+      // Avoid caching index.html
+      res.setHeader('Cache-Control', 'no-cache');
       res.sendFile(path.join(distPath, 'index.html'));
     });
   }

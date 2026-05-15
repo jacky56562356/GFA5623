@@ -14,7 +14,7 @@ const ProgramDiverseEthnicity: React.FC = () => {
 
       <div className="relative bg-[#1A2B4A] py-5 mb-3 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img 
+          <img loading="lazy" 
             src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1974&auto=format&fit=crop" 
             alt="AI Filmmaking" 
             className="w-full h-full object-cover opacity-30 grayscale"

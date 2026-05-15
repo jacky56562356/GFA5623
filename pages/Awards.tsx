@@ -16,7 +16,7 @@ const Awards: React.FC = () => {
       {/* Banner */}
       <section className="relative h-[70vh] min-h-[600px] flex items-center justify-center overflow-hidden bg-gfa-inkBlack pt-8 pb-5">
         <div className="absolute inset-0 z-0">
-          <img 
+          <img loading="lazy" 
             src="https://i.ibb.co/pjRZK2vm/Gemini-Generated-Image-k7a54jk7a54jk7a5-1.png" 
             alt="Awards Ceremony" 
             className="w-full h-full object-cover object-[center_20%] opacity-90" 
@@ -172,7 +172,7 @@ const Awards: React.FC = () => {
                        <div className="w-16 h-16 bg-[#C9A84C] rounded-full flex items-center justify-center text-white font-bold font-serif text-xl border-4 border-white shadow-lg">01</div>
                     </div>
                     <div className="md:w-5/12 text-center md:text-left">
-                       <img src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?q=80&w=2070&auto=format&fit=crop" className="rounded-3xl w-full h-48 object-cover shadow-md mx-auto" alt="Red Carpet" />
+                       <img loading="lazy" src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?q=80&w=2070&auto=format&fit=crop" className="rounded-3xl w-full h-48 object-cover shadow-md mx-auto" alt="Red Carpet" />
                     </div>
                  </div>
 
@@ -186,7 +186,7 @@ const Awards: React.FC = () => {
                        <div className="w-16 h-16 bg-[#C9A84C] rounded-full flex items-center justify-center text-white font-bold font-serif text-xl border-4 border-white shadow-lg">02</div>
                     </div>
                     <div className="md:w-5/12 text-center md:text-right">
-                       <img src="https://i.ibb.co/LHxHQZp/Gemini-Generated-Image-1t721i1t721i1t72.png" className="rounded-3xl w-full h-48 object-cover shadow-md mx-auto" alt="Premiere" />
+                       <img loading="lazy" src="https://i.ibb.co/LHxHQZp/Gemini-Generated-Image-1t721i1t721i1t72.png" className="rounded-3xl w-full h-48 object-cover shadow-md mx-auto" alt="Premiere" />
                     </div>
                  </div>
 
@@ -200,7 +200,7 @@ const Awards: React.FC = () => {
                        <div className="w-16 h-16 bg-[#C9A84C] rounded-full flex items-center justify-center text-white font-bold font-serif text-xl border-4 border-white shadow-lg">03</div>
                     </div>
                     <div className="md:w-5/12 text-center md:text-left">
-                       <img src="https://i.ibb.co/pBntWWRc/Gemini-Generated-Image-x5h15zx5h15zx5h1.png" className="rounded-3xl w-full h-48 object-cover shadow-md mx-auto" alt="Presentation" />
+                       <img loading="lazy" src="https://i.ibb.co/pBntWWRc/Gemini-Generated-Image-x5h15zx5h15zx5h1.png" className="rounded-3xl w-full h-48 object-cover shadow-md mx-auto" alt="Presentation" />
                     </div>
                  </div>
 
@@ -214,7 +214,7 @@ const Awards: React.FC = () => {
                        <div className="w-16 h-16 bg-[#C9A84C] rounded-full flex items-center justify-center text-white font-bold font-serif text-xl border-4 border-white shadow-lg">04</div>
                     </div>
                     <div className="md:w-5/12 text-center md:text-right">
-                       <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=2069&auto=format&fit=crop" className="rounded-3xl w-full h-48 object-cover shadow-md mx-auto" alt="Networking" />
+                       <img loading="lazy" src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=2069&auto=format&fit=crop" className="rounded-3xl w-full h-48 object-cover shadow-md mx-auto" alt="Networking" />
                     </div>
                  </div>
               </div>

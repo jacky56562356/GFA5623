@@ -14,7 +14,7 @@ const Membership: React.FC = () => {
 
       {/* Global Background Image */}
       <div className="fixed inset-0 z-0 opacity-[0.05] pointer-events-none">
-        <img 
+        <img loading="lazy" 
           src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop" 
           alt="Global Cinematic Background" 
           className="w-full h-full object-cover"
@@ -24,7 +24,7 @@ const Membership: React.FC = () => {
       {/* Document Header */}
       <div className="relative bg-gfa-inkBlack py-4 mb-3 shadow-2xl overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-20 grayscale">
-          <img 
+          <img loading="lazy" 
             src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop" 
             alt="Header Background" 
             className="w-full h-full object-cover"
@@ -69,7 +69,7 @@ const Membership: React.FC = () => {
 
               <div className="p-10 bg-gfa-inkBlack text-white rounded-[32px] shadow-2xl border border-white/5 relative overflow-hidden group">
                 <div className="absolute inset-0 opacity-20 group-hover:scale-110 transition-transform duration-1000">
-                  <img src="https://images.unsplash.com/photo-1521791136364-798a730bb361?q=80&w=2070&auto=format&fit=crop" alt="Network" className="w-full h-full object-cover grayscale" />
+                  <img loading="lazy" src="https://images.unsplash.com/photo-1521791136364-798a730bb361?q=80&w=2070&auto=format&fit=crop" alt="Network" className="w-full h-full object-cover grayscale" />
                 </div>
                 <div className="relative z-10">
                   <ShieldCheck className="w-10 h-10 text-gfa-gold mb-3" />
@@ -124,7 +124,7 @@ const Membership: React.FC = () => {
                     {(m.tiers || []).map((tier: any, i: number) => (
                       <div key={i} className="flex flex-col md:flex-row gap-0 items-stretch bg-gfa-warmWhite rounded-[32px] border border-gfa-border hover:border-gfa-gold/30 hover:shadow-2xl transition-all duration-500 group overflow-hidden">
                         <div className="md:w-1/3 relative overflow-hidden min-h-[250px]">
-                          <img 
+                          <img loading="lazy" 
                             src={
                               i === 0 ? "https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=1974&auto=format&fit=crop" :
                               i === 1 ? "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2070&auto=format&fit=crop" :

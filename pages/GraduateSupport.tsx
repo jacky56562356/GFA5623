@@ -30,7 +30,7 @@ const GraduateSupport = () => {
 
       {/* Global Background Image */}
       <div className="fixed inset-0 z-0 opacity-[0.03] pointer-events-none">
-        <img 
+        <img loading="lazy" 
           src="https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=2059&auto=format&fit=crop" 
           alt="Film Background" 
           className="w-full h-full object-cover"
@@ -40,7 +40,7 @@ const GraduateSupport = () => {
       {/* Document Header */}
       <div className="relative bg-gfa-inkBlack py-4 mb-3 shadow-2xl overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-20 grayscale">
-          <img 
+          <img loading="lazy" 
             src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=2070&auto=format&fit=crop" 
             alt="Header Background" 
             className="w-full h-full object-cover"
@@ -83,7 +83,7 @@ const GraduateSupport = () => {
             {Object.entries(cap.pillars || {}).map(([key, pillar]: [string, any], index) => (
               <div key={key} className="relative group rounded-[32px] overflow-hidden border border-gfa-border shadow-sm hover:shadow-2xl transition-all duration-500 h-[350px]">
                 <div className="absolute inset-0 z-0">
-                  <img 
+                  <img loading="lazy" 
                     src={
                       index === 0 ? "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop" :
                       index === 1 ? "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2011&auto=format&fit=crop" :

@@ -13,7 +13,7 @@ const ProgramPlatformAlliance: React.FC = () => {
 
       <div className="relative bg-[#1A2B4A] py-5 mb-3 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img 
+          <img loading="lazy" 
             src="https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=2059&auto=format&fit=crop" 
             alt="Hollywood Career" 
             className="w-full h-full object-cover opacity-30 grayscale"
@@ -40,7 +40,7 @@ const ProgramPlatformAlliance: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             <div className="bg-white rounded-[32px] overflow-hidden shadow-md border border-gfa-border group">
                <div className="h-48 overflow-hidden">
-                 <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=2070&auto=format&fit=crop" alt="Mentorship" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
+                 <img loading="lazy" src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=2070&auto=format&fit=crop" alt="Mentorship" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
                </div>
                <div className="p-8">
                  <h3 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-3">
@@ -54,7 +54,7 @@ const ProgramPlatformAlliance: React.FC = () => {
 
             <div className="bg-white rounded-[32px] overflow-hidden shadow-md border border-gfa-border group">
                <div className="h-48 overflow-hidden">
-                 <img src="https://images.unsplash.com/photo-1542204165-65bf26472b9b?q=80&w=1974&auto=format&fit=crop" alt="On set" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
+                 <img loading="lazy" src="https://images.unsplash.com/photo-1542204165-65bf26472b9b?q=80&w=1974&auto=format&fit=crop" alt="On set" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
                </div>
                <div className="p-8">
                  <h3 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-3">
@@ -68,7 +68,7 @@ const ProgramPlatformAlliance: React.FC = () => {
 
             <div className="bg-white rounded-[32px] overflow-hidden shadow-md border border-gfa-border group">
                <div className="h-48 overflow-hidden">
-                 <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=2025&auto=format&fit=crop" alt="Portfolio" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
+                 <img loading="lazy" src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=2025&auto=format&fit=crop" alt="Portfolio" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
                </div>
                <div className="p-8">
                  <h3 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-3">
@@ -82,7 +82,7 @@ const ProgramPlatformAlliance: React.FC = () => {
 
             <div className="bg-white rounded-[32px] overflow-hidden shadow-md border border-gfa-border group">
                <div className="h-48 overflow-hidden">
-                 <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2022&auto=format&fit=crop" alt="Festivals" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
+                 <img loading="lazy" src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2022&auto=format&fit=crop" alt="Festivals" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
                </div>
                <div className="p-8">
                  <h3 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-3">

@@ -15,7 +15,7 @@ const YouthPrograms: React.FC = () => {
       {/* Banner */}
       <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden bg-gfa-inkBlack pt-5">
         <div className="absolute inset-0 z-0">
-          <img 
+          <img loading="lazy" 
             src="https://i.ibb.co/0p2HWy3Z/filmmaking-in-classroom.jpg" 
             alt="Youth holding a clapperboard" 
             className="w-full h-full object-cover opacity-40 mix-blend-luminosity" 
@@ -154,7 +154,7 @@ const YouthPrograms: React.FC = () => {
             {/* Program 2: Dream Film Project */}
             <div className="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 flex flex-col">
               <div className="h-64 bg-gray-200 relative">
-                <img src="https://i.ibb.co/LXS8q7yn/u8238228639-behind-the-scenes-photo-of-a-real-childrens-movie-5253418c-4b1d-4d9b-8f51-219cc38fdef7-3.png" alt="Children's Film Project" className="w-full h-full object-cover" />
+                <img loading="lazy" src="https://i.ibb.co/LXS8q7yn/u8238228639-behind-the-scenes-photo-of-a-real-childrens-movie-5253418c-4b1d-4d9b-8f51-219cc38fdef7-3.png" alt="Children's Film Project" className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 <div className="absolute bottom-6 left-6 text-white">
                   <div className="flex items-center gap-2 mb-2 text-[#C9A84C] font-bold text-xs uppercase tracking-widest">
@@ -170,8 +170,8 @@ const YouthPrograms: React.FC = () => {
                 <div className="bg-gray-50 border-l-4 border-[#C9A84C] p-6 rounded-r-xl mb-4 flex-grow">
                   <h4 className="font-bold text-gfa-inkBlack font-serif mb-4">{isEn ? "Case Study: 'Garden'" : "代表作：《花园 Garden》"}</h4>
                   <div className="grid grid-cols-2 gap-4 mb-3">
-                    <img src="https://i.ibb.co/sJKd1kNv/MV5-BNWI3-Mj-I2-NDIt-Yj-Ix-Mi00-MGM4-LTlk-Mz-Qt-Mm-Rk-MDQ0-ZDRj-OWU5-Xk-Ey-Xk-Fqc-Gc-V1.jpg" alt="Film Poster 1" className="w-full h-auto rounded-lg shadow-md object-cover aspect-[2/3] hover:scale-105 transition-transform duration-300" />
-                    <img src="https://i.ibb.co/bgKF8pwy/Gemini-Generated-Image-jtsengjtsengjtse.png" alt="Film Poster 2" className="w-full h-auto rounded-lg shadow-md object-cover aspect-[2/3] hover:scale-105 transition-transform duration-300" />
+                    <img loading="lazy" src="https://i.ibb.co/sJKd1kNv/MV5-BNWI3-Mj-I2-NDIt-Yj-Ix-Mi00-MGM4-LTlk-Mz-Qt-Mm-Rk-MDQ0-ZDRj-OWU5-Xk-Ey-Xk-Fqc-Gc-V1.jpg" alt="Film Poster 1" className="w-full h-auto rounded-lg shadow-md object-cover aspect-[2/3] hover:scale-105 transition-transform duration-300" />
+                    <img loading="lazy" src="https://i.ibb.co/bgKF8pwy/Gemini-Generated-Image-jtsengjtsengjtse.png" alt="Film Poster 2" className="w-full h-auto rounded-lg shadow-md object-cover aspect-[2/3] hover:scale-105 transition-transform duration-300" />
                   </div>
                   <ul className="text-sm font-light text-gfa-slate space-y-2 mb-4">
                     <li>• {isEn ? "Winner: Best Family Film at Golden State Film Festival" : "Golden State Film Festival 最佳家庭电影"}</li>
@@ -191,7 +191,7 @@ const YouthPrograms: React.FC = () => {
             {/* Program 3: Special Needs */}
             <div className="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 flex flex-col">
               <div className="h-64 bg-gray-200 relative">
-                <img src="https://i.ibb.co/ycRFxBZ4/Chat-GPT-Image-2026-3-23-12-23-04.png" alt="Film Therapy" className="w-full h-full object-cover" />
+                <img loading="lazy" src="https://i.ibb.co/ycRFxBZ4/Chat-GPT-Image-2026-3-23-12-23-04.png" alt="Film Therapy" className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 <div className="absolute bottom-6 left-6 text-white">
                   <div className="flex items-center gap-2 mb-2 text-[#C9A84C] font-bold text-xs uppercase tracking-widest">
@@ -204,7 +204,7 @@ const YouthPrograms: React.FC = () => {
                 <p className="text-gfa-slate font-light leading-relaxed mb-3 font-serif italic text-lg text-gfa-inkBlack">
                   {isEn ? "\"Film is just another language. For children with special needs, it might be their most powerful one.\"" : "“电影，是另一种语言。对于有特殊需求的孩子，它可能是最有力的语言。”"}
                 </p>
-                <img 
+                <img loading="lazy" 
                   src="https://i.ibb.co/KcNpRyb4/Gemini-Generated-Image-2fx58a2fx58a2fx5-1.png" 
                   alt="Film Therapy Program" 
                   className="w-full h-auto rounded-xl shadow-sm mb-3 object-cover"

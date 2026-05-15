@@ -56,7 +56,7 @@ const Programs: React.FC = () => {
       {/* Banner */}
       <div className="relative bg-[#1A2B4A] py-5 mb-3 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img 
+          <img loading="lazy" 
             src="https://images.unsplash.com/photo-1604928141064-207cea6f5722?q=80&w=2070&auto=format&fit=crop" 
             alt="Programs Background" 
             className="w-full h-full object-cover opacity-20 grayscale"
@@ -80,7 +80,7 @@ const Programs: React.FC = () => {
           <div key={idx} className={`bg-white rounded-[32px] overflow-hidden shadow-xl border border-gfa-border flex flex-col ${idx % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row'} group hover:shadow-2xl transition-all duration-500`}>
             {/* Image */}
             <div className="md:w-1/2 relative overflow-hidden h-[300px] md:h-auto">
-              <img 
+              <img loading="lazy" 
                 src={program.image}
                 alt={program.title}
                 className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"

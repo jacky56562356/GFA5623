@@ -18,7 +18,7 @@ const Safeguarding: React.FC = () => {
       {/* Hero */}
       <div className="relative bg-[#1A2B4A] py-5 mb-4 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img 
+          <img loading="lazy" 
             src="https://images.unsplash.com/photo-1529390079861-591de354faf5?q=80&w=2070&auto=format&fit=crop" 
             alt="Protecting Youth" 
             className="w-full h-full object-cover opacity-25 grayscale"
@@ -74,8 +74,8 @@ const Safeguarding: React.FC = () => {
              
              {/* Photo Collage */}
              <div className="grid grid-cols-2 gap-4">
-               <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=2069&auto=format&fit=crop" alt="Youth reading" className="w-full h-64 object-cover rounded-[32px] shadow-lg" />
-               <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=2070&auto=format&fit=crop" alt="Youth smiling" className="w-full h-48 object-cover rounded-[32px] shadow-lg mt-4" />
+               <img loading="lazy" src="https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=2069&auto=format&fit=crop" alt="Youth reading" className="w-full h-64 object-cover rounded-[32px] shadow-lg" />
+               <img loading="lazy" src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=2070&auto=format&fit=crop" alt="Youth smiling" className="w-full h-48 object-cover rounded-[32px] shadow-lg mt-4" />
              </div>
           </div>
         </section>
@@ -121,13 +121,13 @@ const Safeguarding: React.FC = () => {
         {/* More Images */}
         <section className="grid grid-cols-1 md:grid-cols-3 gap-4">
            <div className="aspect-[4/3] rounded-[32px] overflow-hidden shadow-lg border border-gfa-border">
-              <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=2070&auto=format&fit=crop" alt="Mentorship" className="w-full h-full object-cover" />
+              <img loading="lazy" src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=2070&auto=format&fit=crop" alt="Mentorship" className="w-full h-full object-cover" />
            </div>
            <div className="aspect-[4/3] rounded-[32px] overflow-hidden shadow-lg border border-gfa-border">
-              <img src="https://images.unsplash.com/photo-1604928141064-207cea6f5722?q=80&w=2070&auto=format&fit=crop" alt="Mentorship 2" className="w-full h-full object-cover" />
+              <img loading="lazy" src="https://images.unsplash.com/photo-1604928141064-207cea6f5722?q=80&w=2070&auto=format&fit=crop" alt="Mentorship 2" className="w-full h-full object-cover" />
            </div>
            <div className="aspect-[4/3] rounded-[32px] overflow-hidden shadow-lg border border-gfa-border">
-              <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2022&auto=format&fit=crop" alt="Mentorship 3" className="w-full h-full object-cover" />
+              <img loading="lazy" src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2022&auto=format&fit=crop" alt="Mentorship 3" className="w-full h-full object-cover" />
            </div>
         </section>
 

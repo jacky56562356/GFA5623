@@ -57,7 +57,7 @@ const Certification: React.FC = () => {
 
       {/* Global Background Image */}
       <div className="fixed inset-0 z-0 opacity-[0.03] pointer-events-none">
-        <img 
+        <img loading="lazy" 
           src="https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=2059&auto=format&fit=crop" 
           alt="Film Background" 
           className="w-full h-full object-cover"
@@ -67,7 +67,7 @@ const Certification: React.FC = () => {
       {/* Document Header */}
       <div className="relative bg-gfa-inkBlack py-4 mb-3 shadow-2xl overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-20 grayscale">
-          <img 
+          <img loading="lazy" 
             src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=2070&auto=format&fit=crop" 
             alt="Header Background" 
             className="w-full h-full object-cover"
@@ -120,7 +120,7 @@ const Certification: React.FC = () => {
 
               <div className="p-10 bg-gfa-inkBlack text-white rounded-[32px] shadow-2xl border border-white/5 relative overflow-hidden group">
                 <div className="absolute inset-0 opacity-20 group-hover:scale-110 transition-transform duration-1000">
-                  <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2070&auto=format&fit=crop" alt="Legal" className="w-full h-full object-cover grayscale" />
+                  <img loading="lazy" src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2070&auto=format&fit=crop" alt="Legal" className="w-full h-full object-cover grayscale" />
                 </div>
                 <div className="relative z-10">
                   <Shield className="w-10 h-10 text-gfa-gold mb-3" />
@@ -175,7 +175,7 @@ const Certification: React.FC = () => {
                     {(cert.categories || []).map((cat: any, i: number) => (
                       <div key={i} className="relative group rounded-[32px] overflow-hidden border border-gfa-border shadow-sm hover:shadow-2xl transition-all duration-500 h-[400px]">
                         <div className="absolute inset-0 z-0">
-                          <img 
+                          <img loading="lazy" 
                             src={
                               i === 0 ? "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop" :
                               i === 1 ? "https://images.unsplash.com/photo-1521791136364-798a730bb361?q=80&w=2070&auto=format&fit=crop" :
@@ -241,7 +241,7 @@ const Certification: React.FC = () => {
 
                   <div className="p-8 md:p-12 bg-gfa-inkBlack text-white rounded-[48px] relative overflow-hidden group shadow-2xl">
                     <div className="absolute inset-0 opacity-10 group-hover:scale-110 transition-transform duration-1000">
-                      <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=2069&auto=format&fit=crop" alt="Time" className="w-full h-full object-cover grayscale" />
+                      <img loading="lazy" src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=2069&auto=format&fit=crop" alt="Time" className="w-full h-full object-cover grayscale" />
                     </div>
                     <div className="relative z-10 flex flex-col md:flex-row items-center gap-3">
                       <div className="w-24 h-24 bg-gfa-gold rounded-3xl flex items-center justify-center text-gfa-inkBlack shadow-2xl shrink-0 animate-float">

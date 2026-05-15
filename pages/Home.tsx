@@ -680,11 +680,11 @@ const Home: React.FC = () => {
                  <div className="text-xl font-bold italic tracking-tighter shrink-0 text-gfa-inkBlack">Blackmagic Design</div>
                  <div className="text-2xl font-serif shrink-0 text-gfa-inkBlack">Harmony Gold</div>
                  <div className="text-xl font-bold uppercase tracking-widest text-center shrink-0 text-gfa-inkBlack">City of<br/>Pomona</div>
-                 <img src="https://i.ibb.co/4RNsSNYg/AI-8707697f3ab3980df8ccc03824c49fc3-3804x2800.png" alt="Sponsor 1" className="h-12 md:h-16 object-contain transition-all duration-300" />
-                 <img src="https://i.ibb.co/Ldwg7vRN/4a2ec28a2689027a04641d8a150fda3f.png" alt="Sponsor 2" className="h-12 md:h-16 object-contain transition-all duration-300" />
-                 <img src="https://i.ibb.co/XBZ4F7j/Alvantor-new-logo-2020-1.png" alt="Sponsor 3" className="h-12 md:h-16 object-contain transition-all duration-300" />
-                 <img src="https://i.ibb.co/cSVbb7ZM/list-2.png" alt="Sponsor 4" className="h-12 md:h-16 object-contain transition-all duration-300" />
-                 <img src="https://i.ibb.co/whJfbzKn/ALT-LOGO-2400x1800-2.jpg" alt="Sponsor 5" className="h-12 md:h-16 object-contain transition-all duration-300" />
+                 <img src="https://wsrv.nl/?url=i.ibb.co/4RNsSNYg/AI-8707697f3ab3980df8ccc03824c49fc3-3804x2800.png&h=100&output=webp" alt="Sponsor 1" className="h-12 md:h-16 object-contain transition-all duration-300" />
+                 <img src="https://wsrv.nl/?url=i.ibb.co/Ldwg7vRN/4a2ec28a2689027a04641d8a150fda3f.png&h=100&output=webp" alt="Sponsor 2" className="h-12 md:h-16 object-contain transition-all duration-300" />
+                 <img src="https://wsrv.nl/?url=i.ibb.co/XBZ4F7j/Alvantor-new-logo-2020-1.png&h=100&output=webp" alt="Sponsor 3" className="h-12 md:h-16 object-contain transition-all duration-300" />
+                 <img src="https://wsrv.nl/?url=i.ibb.co/cSVbb7ZM/list-2.png&h=100&output=webp" alt="Sponsor 4" className="h-12 md:h-16 object-contain transition-all duration-300" />
+                 <img src="https://wsrv.nl/?url=i.ibb.co/whJfbzKn/ALT-LOGO-2400x1800-2.jpg&h=100&output=webp" alt="Sponsor 5" className="h-12 md:h-16 object-contain transition-all duration-300" />
               </div>
               
               {/* Second Set of Logos (Duplicate for infinite scroll) */}
@@ -692,11 +692,11 @@ const Home: React.FC = () => {
                  <div className="text-xl font-bold italic tracking-tighter shrink-0 text-gfa-inkBlack">Blackmagic Design</div>
                  <div className="text-2xl font-serif shrink-0 text-gfa-inkBlack">Harmony Gold</div>
                  <div className="text-xl font-bold uppercase tracking-widest text-center shrink-0 text-gfa-inkBlack">City of<br/>Pomona</div>
-                 <img src="https://i.ibb.co/4RNsSNYg/AI-8707697f3ab3980df8ccc03824c49fc3-3804x2800.png" alt="Sponsor 1" className="h-12 md:h-16 object-contain transition-all duration-300" />
-                 <img src="https://i.ibb.co/Ldwg7vRN/4a2ec28a2689027a04641d8a150fda3f.png" alt="Sponsor 2" className="h-12 md:h-16 object-contain transition-all duration-300" />
-                 <img src="https://i.ibb.co/XBZ4F7j/Alvantor-new-logo-2020-1.png" alt="Sponsor 3" className="h-12 md:h-16 object-contain transition-all duration-300" />
-                 <img src="https://i.ibb.co/cSVbb7ZM/list-2.png" alt="Sponsor 4" className="h-12 md:h-16 object-contain transition-all duration-300" />
-                 <img src="https://i.ibb.co/whJfbzKn/ALT-LOGO-2400x1800-2.jpg" alt="Sponsor 5" className="h-12 md:h-16 object-contain transition-all duration-300" />
+                 <img src="https://wsrv.nl/?url=i.ibb.co/4RNsSNYg/AI-8707697f3ab3980df8ccc03824c49fc3-3804x2800.png&h=100&output=webp" alt="Sponsor 1" className="h-12 md:h-16 object-contain transition-all duration-300" />
+                 <img src="https://wsrv.nl/?url=i.ibb.co/Ldwg7vRN/4a2ec28a2689027a04641d8a150fda3f.png&h=100&output=webp" alt="Sponsor 2" className="h-12 md:h-16 object-contain transition-all duration-300" />
+                 <img src="https://wsrv.nl/?url=i.ibb.co/XBZ4F7j/Alvantor-new-logo-2020-1.png&h=100&output=webp" alt="Sponsor 3" className="h-12 md:h-16 object-contain transition-all duration-300" />
+                 <img src="https://wsrv.nl/?url=i.ibb.co/cSVbb7ZM/list-2.png&h=100&output=webp" alt="Sponsor 4" className="h-12 md:h-16 object-contain transition-all duration-300" />
+                 <img src="https://wsrv.nl/?url=i.ibb.co/whJfbzKn/ALT-LOGO-2400x1800-2.jpg&h=100&output=webp" alt="Sponsor 5" className="h-12 md:h-16 object-contain transition-all duration-300" />
               </div>
             </div>
          </div>

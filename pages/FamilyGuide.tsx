@@ -40,7 +40,7 @@ const FamilyGuide: React.FC = () => {
       {/* Banner */}
       <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden bg-gfa-inkBlack pt-5">
         <div className="absolute inset-0 z-0">
-          <img 
+          <img loading="lazy" 
             src="https://i.ibb.co/F4jckgZp/Chat-GPT-Image-2026-1-25-15-29-13.png" 
             alt="Family reviewing a script" 
             className="w-full h-full object-cover opacity-30 mix-blend-luminosity" 
