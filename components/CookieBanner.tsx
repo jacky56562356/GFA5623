@@ -31,7 +31,7 @@ const CookieBanner: React.FC = () => {
               <>
                 We and our partners (including Google) use cookies to personalize content, show targeted ads, provide social media features, and analyze our traffic. 
                 By clicking "Accept", you consent to our use of cookies as described in our{" "}
-                <Link to="/policy/privacy" className="underline hover:text-[#C9A84C]">Privacy Policy</Link>.
+                <Link to="/policy/privacy" className="underline hover:text-[#C9A84C]">{/* [中文内容待填入] */} Privacy Policy </Link>.
               </>
             ) : (
               <>

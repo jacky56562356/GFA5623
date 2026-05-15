@@ -23,7 +23,7 @@ const FilmmakerSupport: React.FC = () => {
             src="https://wsrv.nl/?url=i.ibb.co%2Fsp4fWHq3%2FChat-GPT-Image-2026-3-23-12-23-22.png&w=1200&output=webp" 
             alt="Filmmaker on set" 
             className="w-full h-full object-cover opacity-40 mix-blend-luminosity" 
-           width="1200" height="800" />
+           width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
           <div className="absolute inset-0 bg-gradient-to-t from-gfa-inkBlack via-gfa-inkBlack/50 to-transparent"></div>
         </div>
 
@@ -110,19 +110,19 @@ const FilmmakerSupport: React.FC = () => {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="flex gap-3 items-center bg-gray-50 p-3 rounded-xl border border-gray-100">
                       <div className="w-12 h-12 rounded-full overflow-hidden shrink-0 bg-gray-200">
-                        <img loading="lazy"  src="https://wsrv.nl/?url=i.ibb.co%2F23F9WNxm%2F8e219be0edf629ecba7014dd02d05c5e.jpg&w=1200&output=webp" alt="Mentor" className="w-full h-full object-cover"  width="1200" height="800" />
+                        <img loading="lazy"  src="https://wsrv.nl/?url=i.ibb.co%2F23F9WNxm%2F8e219be0edf629ecba7014dd02d05c5e.jpg&w=1200&output=webp" alt="Mentor" className="w-full h-full object-cover"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
                       </div>
                       <div>
-                        <div className="font-bold text-sm">Jacky (xiaoren) Liu</div>
+                        <div className="font-bold text-sm">{/* [中文内容待填入] */} Jacky (xiaoren) Liu </div>
                         <div className="text-xs text-gfa-slate">{isEn ? "President & Founder" : "主席 & 创始人"}</div>
                       </div>
                     </div>
                     <div className="flex gap-3 items-center bg-gray-50 p-3 rounded-xl border border-gray-100">
                       <div className="w-12 h-12 rounded-full overflow-hidden shrink-0 bg-gray-200">
-                        <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1573496359142-b8d87734a5a2%3Fw%3D150%26h%3D150%26fit%3Dcrop%26q%3D80&w=1200&output=webp" alt="Mentor" className="w-full h-full object-cover"  width="1200" height="800" />
+                        <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1573496359142-b8d87734a5a2%3Fw%3D150%26h%3D150%26fit%3Dcrop%26q%3D80&w=1200&output=webp" alt="Mentor" className="w-full h-full object-cover"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
                       </div>
                       <div>
-                        <div className="font-bold text-sm">Sarah W.</div>
+                        <div className="font-bold text-sm">{/* [中文内容待填入] */} Sarah W. </div>
                         <div className="text-xs text-gfa-slate">{isEn ? "Indie Film Director" : "国际独立电影导演"}</div>
                       </div>
                     </div>
@@ -134,19 +134,19 @@ const FilmmakerSupport: React.FC = () => {
                   <h4 className="text-sm font-bold mb-3">{isEn ? "Supported Works Showcase" : "扶持作品展示"}</h4>
                   <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                     <div className="aspect-video bg-gray-200 rounded-lg overflow-hidden relative group">
-                      <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1536440136628-849c177e76a1%3Fw%3D300%26h%3D200%26fit%3Dcrop%26q%3D80&w=1200&output=webp" alt="Work" className="w-full h-full object-cover"  width="1200" height="800" />
+                      <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1536440136628-849c177e76a1%3Fw%3D300%26h%3D200%26fit%3Dcrop%26q%3D80&w=1200&output=webp" alt="Work" className="w-full h-full object-cover"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
                       <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                         <span className="text-white text-[10px] sm:text-xs font-bold px-2 py-1 bg-[#C9A84C]/90 rounded">{isEn ? "Watch Trailer" : "预告片"}</span>
                       </div>
                     </div>
                     <div className="aspect-video bg-gray-200 rounded-lg overflow-hidden relative group">
-                      <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1485846234645-a62644f84728%3Fw%3D300%26h%3D200%26fit%3Dcrop%26q%3D80&w=1200&output=webp" alt="Work" className="w-full h-full object-cover"  width="1200" height="800" />
+                      <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1485846234645-a62644f84728%3Fw%3D300%26h%3D200%26fit%3Dcrop%26q%3D80&w=1200&output=webp" alt="Work" className="w-full h-full object-cover"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
                       <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                         <span className="text-white text-[10px] sm:text-xs font-bold px-2 py-1 bg-[#C9A84C]/90 rounded">{isEn ? "Watch Trailer" : "预告片"}</span>
                       </div>
                     </div>
                     <div className="aspect-video bg-gray-200 rounded-lg overflow-hidden relative group hidden sm:block">
-                      <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1604904612715-47bf9d9bc670%3Fw%3D300%26h%3D200%26fit%3Dcrop%26q%3D80&w=1200&output=webp" alt="Work" className="w-full h-full object-cover"  width="1200" height="800" />
+                      <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1604904612715-47bf9d9bc670%3Fw%3D300%26h%3D200%26fit%3Dcrop%26q%3D80&w=1200&output=webp" alt="Work" className="w-full h-full object-cover"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
                       <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                         <span className="text-white text-[10px] sm:text-xs font-bold px-2 py-1 bg-[#C9A84C]/90 rounded">{isEn ? "Watch Trailer" : "预告片"}</span>
                       </div>
@@ -316,7 +316,7 @@ const FilmmakerSupport: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
              <div className="bg-[#F5F2EE] p-8 rounded-3xl border border-gray-200">
-               <h4 className="font-bold text-xl font-serif text-gfa-inkBlack mb-1">Alex</h4>
+               <h4 className="font-bold text-xl font-serif text-gfa-inkBlack mb-1">{/* [中文内容待填入] */} Alex </h4>
                <p className="text-xs uppercase tracking-widest text-[#C9A84C] font-bold mb-4">{isEn ? "Cinematography Grad" : "摄影系毕业生"}</p>
                <p className="text-sm font-light text-gfa-slate mb-3 flex-grow italic">
                  "{isEn ? "GFA lent me an entire Blackmagic camera package for my first short film. That short got into festivals, and directly led to my first paying gig." : "通过设备借用完成了第一部短片，入围电影节后获得工作机会。"}"
@@ -324,7 +324,7 @@ const FilmmakerSupport: React.FC = () => {
              </div>
 
              <div className="bg-[#F5F2EE] p-8 rounded-3xl border border-gray-200">
-               <h4 className="font-bold text-xl font-serif text-gfa-inkBlack mb-1">Sarah</h4>
+               <h4 className="font-bold text-xl font-serif text-gfa-inkBlack mb-1">{/* [中文内容待填入] */} Sarah </h4>
                <p className="text-xs uppercase tracking-widest text-[#C9A84C] font-bold mb-4">{isEn ? "Independent Director" : "独立导演"}</p>
                <p className="text-sm font-light text-gfa-slate mb-3 flex-grow italic">
                  "{isEn ? "My GFA mentor pulled my resume from the pile and got me a production company internship. Now I work there full-time." : "通过导师网络进入制片公司实习，现在已经全职工作。"}"
@@ -332,7 +332,7 @@ const FilmmakerSupport: React.FC = () => {
              </div>
 
              <div className="bg-[#F5F2EE] p-8 rounded-3xl border border-gray-200">
-               <h4 className="font-bold text-xl font-serif text-gfa-inkBlack mb-1">David</h4>
+               <h4 className="font-bold text-xl font-serif text-gfa-inkBlack mb-1">{/* [中文内容待填入] */} David </h4>
                <p className="text-xs uppercase tracking-widest text-[#C9A84C] font-bold mb-4">{isEn ? "Low-Income Creator" : "低收入创作者"}</p>
                <p className="text-sm font-light text-gfa-slate mb-3 flex-grow italic">
                  "{isEn ? "I had to shelve my passion project because I couldn't afford production. GFA's grant application coaching helped me secure the funding to finish it." : "通过基金辅导获得资助，完成了长期搁置的项目。"}"

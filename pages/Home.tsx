@@ -72,9 +72,9 @@ const Home: React.FC = () => {
       <div className="bg-[#111111] border-b border-gfa-border/10 py-5 overflow-hidden relative z-20">
           <div className="container-gfa flex flex-wrap justify-center md:justify-between items-center text-[10px] md:text-xs font-bold uppercase tracking-widest text-white/60 gap-4">
             <span>501(c)(3) Certified Nonprofit</span>
-            <span>Blackmagic Design Partner</span>
-            <span className="hidden md:inline">Golden State Film Festival Winner</span>
-            <span className="hidden lg:inline">City of Pomona Partner</span>
+            <span>{/* [中文内容待填入] */} Blackmagic Design Partner </span>
+            <span className="hidden md:inline">{/* [中文内容待填入] */} Golden State Film Festival Winner </span>
+            <span className="hidden lg:inline">{/* [中文内容待填入] */} City of Pomona Partner </span>
          </div>
       </div>
 
@@ -85,7 +85,7 @@ const Home: React.FC = () => {
             src="https://wsrv.nl/?url=i.ibb.co%2FbgKF8pwy%2FGemini-Generated-Image-jtsengjtsengjtse.png&w=1200&output=webp" 
             alt="Film reel background" 
             className="w-full h-full object-cover opacity-10 mix-blend-luminosity" 
-           width="1200" height="800" />
+           width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
           <div className="absolute inset-0 bg-gradient-to-b from-gfa-inkBlack/50 via-gfa-inkBlack to-gfa-inkBlack"></div>
         </div>
 
@@ -144,7 +144,7 @@ const Home: React.FC = () => {
                 <div className="divide-y divide-white/10 mt-3">
                   <div className="py-5 flex justify-between items-center group">
                      <div>
-                       <p className="text-sm font-bold text-white uppercase tracking-widest mb-1">USC SCA</p>
+                       <p className="text-sm font-bold text-white uppercase tracking-widest mb-1">{/* [中文内容待填入] */} USC SCA </p>
                        <p className="text-xs text-white/60 font-light">{isEn ? "Global Top Film School" : "全球顶尖电影学院"}</p>
                      </div>
                      <div className="text-xl font-serif text-gfa-gold font-bold">
@@ -154,7 +154,7 @@ const Home: React.FC = () => {
                   
                   <div className="py-5 flex justify-between items-center group">
                      <div>
-                       <p className="text-sm font-bold text-white uppercase tracking-widest mb-1">UCLA TFT</p>
+                       <p className="text-sm font-bold text-white uppercase tracking-widest mb-1">{/* [中文内容待填入] */} UCLA TFT </p>
                        <p className="text-xs text-white/60 font-light">{isEn ? "Top Public Institution" : "公立顶尖院校"}</p>
                      </div>
                      <div className="text-xl font-serif text-gfa-gold font-bold">
@@ -164,7 +164,7 @@ const Home: React.FC = () => {
 
                   <div className="py-5 flex justify-between items-center group">
                      <div>
-                       <p className="text-sm font-bold text-white uppercase tracking-widest mb-1">LMU / Chapman</p>
+                       <p className="text-sm font-bold text-white uppercase tracking-widest mb-1">{/* [中文内容待填入] */} LMU / Chapman </p>
                        <p className="text-xs text-white/60 font-light">{isEn ? "LA Region Programs" : "洛杉矶地区两校合计"}</p>
                      </div>
                      <div className="text-xl font-serif text-gfa-gold font-bold">
@@ -174,7 +174,7 @@ const Home: React.FC = () => {
 
                   <div className="py-5 flex justify-between items-center group">
                      <div>
-                       <p className="text-sm font-bold text-white uppercase tracking-widest mb-1">Cal State System</p>
+                       <p className="text-sm font-bold text-white uppercase tracking-widest mb-1">{/* [中文内容待填入] */} Cal State System </p>
                        <p className="text-xs text-white/60 font-light">{isEn ? "All CSU Film Programs" : "全加州CSU院校影视相关专业"}</p>
                      </div>
                      <div className="text-xl font-serif text-gfa-gold font-bold">
@@ -184,7 +184,7 @@ const Home: React.FC = () => {
 
                   <div className="py-5 flex justify-between items-center group flex-grow">
                      <div>
-                       <p className="text-sm font-bold text-white uppercase tracking-widest mb-1">Community Colleges</p>
+                       <p className="text-sm font-bold text-white uppercase tracking-widest mb-1">{/* [中文内容待填入] */} Community Colleges </p>
                        <p className="text-xs text-white/60 font-light">{isEn ? "Mt.SAC & other film grads" : "Mt.SAC等项目每年结业学生"}</p>
                      </div>
                      <div className="text-xl font-serif text-gfa-gold font-bold">
@@ -268,11 +268,11 @@ const Home: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             <div className="relative overflow-hidden border border-gfa-border/20 rounded-3xl p-8 shadow-sm hover:shadow-lg hover:border-gfa-gold/50 transition-all group">
                <div className="absolute inset-0 z-0 bg-blue-950">
-                 <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1540614099511-9a7dc92323f4%3Fw%3D800%26auto%3Dformat%26fit%3Dcrop%26q%3D60&w=1200&output=webp" alt="" className="w-full h-full object-cover opacity-20 mix-blend-overlay group-hover:scale-105 transition-transform duration-700"  width="1200" height="800" />
+                 <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1540614099511-9a7dc92323f4%3Fw%3D800%26auto%3Dformat%26fit%3Dcrop%26q%3D60&w=1200&output=webp" alt="" className="w-full h-full object-cover opacity-20 mix-blend-overlay group-hover:scale-105 transition-transform duration-700"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
                  <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 to-blue-950/95"></div>
                </div>
                <div className="relative z-10">
-                 <div className="text-gfa-gold font-bold uppercase tracking-widest text-[10px] mb-3">Equipment Barrier</div>
+                 <div className="text-gfa-gold font-bold uppercase tracking-widest text-[10px] mb-3">{/* [中文内容待填入] */} Equipment Barrier </div>
                  <h3 className="text-lg md:text-xl font-bold text-white font-serif mb-3 border-b border-white/20 pb-3 group-hover:border-gfa-gold transition-colors">
                    {isEn ? "Equipment Access" : "设备壁垒"}
                  </h3>
@@ -286,11 +286,11 @@ const Home: React.FC = () => {
 
             <div className="relative overflow-hidden border border-gfa-border/20 rounded-3xl p-8 shadow-sm hover:shadow-lg hover:border-gfa-gold/50 transition-all group">
                <div className="absolute inset-0 z-0 bg-amber-950">
-                 <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1515162816999-a0c47dc192f7%3Fw%3D800%26auto%3Dformat%26fit%3Dcrop%26q%3D60&w=1200&output=webp" alt="" className="w-full h-full object-cover opacity-20 mix-blend-overlay group-hover:scale-105 transition-transform duration-700"  width="1200" height="800" />
+                 <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1515162816999-a0c47dc192f7%3Fw%3D800%26auto%3Dformat%26fit%3Dcrop%26q%3D60&w=1200&output=webp" alt="" className="w-full h-full object-cover opacity-20 mix-blend-overlay group-hover:scale-105 transition-transform duration-700"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
                  <div className="absolute inset-0 bg-gradient-to-br from-amber-900/90 to-amber-950/95"></div>
                </div>
                <div className="relative z-10">
-                 <div className="text-gfa-gold font-bold uppercase tracking-widest text-[10px] mb-3">Network Barrier</div>
+                 <div className="text-gfa-gold font-bold uppercase tracking-widest text-[10px] mb-3">{/* [中文内容待填入] */} Network Barrier </div>
                  <h3 className="text-lg md:text-xl font-bold text-white font-serif mb-3 border-b border-white/20 pb-3 group-hover:border-gfa-gold transition-colors">
                    {isEn ? "Industry Mentorship" : "人脉壁垒"}
                  </h3>
@@ -304,11 +304,11 @@ const Home: React.FC = () => {
 
             <div className="relative overflow-hidden border border-gfa-border/20 rounded-3xl p-8 shadow-sm hover:shadow-lg hover:border-gfa-gold/50 transition-all group">
                <div className="absolute inset-0 z-0 bg-emerald-950">
-                 <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1489599849927-2ee91cede3ba%3Fw%3D800%26auto%3Dformat%26fit%3Dcrop%26q%3D60&w=1200&output=webp" alt="" className="w-full h-full object-cover opacity-20 mix-blend-overlay group-hover:scale-105 transition-transform duration-700"  width="1200" height="800" />
+                 <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1489599849927-2ee91cede3ba%3Fw%3D800%26auto%3Dformat%26fit%3Dcrop%26q%3D60&w=1200&output=webp" alt="" className="w-full h-full object-cover opacity-20 mix-blend-overlay group-hover:scale-105 transition-transform duration-700"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
                  <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/90 to-emerald-950/95"></div>
                </div>
                <div className="relative z-10">
-                 <div className="text-gfa-gold font-bold uppercase tracking-widest text-[10px] mb-3">Distribution Barrier</div>
+                 <div className="text-gfa-gold font-bold uppercase tracking-widest text-[10px] mb-3">{/* [中文内容待填入] */} Distribution Barrier </div>
                  <h3 className="text-lg md:text-xl font-bold text-white font-serif mb-3 border-b border-white/20 pb-3 group-hover:border-gfa-gold transition-colors">
                    {isEn ? "Platform Distribution" : "发行壁垒"}
                  </h3>
@@ -322,11 +322,11 @@ const Home: React.FC = () => {
 
             <div className="relative overflow-hidden border border-gfa-border/20 rounded-3xl p-8 shadow-sm hover:shadow-lg hover:border-gfa-gold/50 transition-all group">
                <div className="absolute inset-0 z-0 bg-purple-950">
-                 <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1553729459-efe14ef6055d%3Fw%3D800%26auto%3Dformat%26fit%3Dcrop%26q%3D60&w=1200&output=webp" alt="" className="w-full h-full object-cover opacity-20 mix-blend-overlay group-hover:scale-105 transition-transform duration-700"  width="1200" height="800" />
+                 <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1553729459-efe14ef6055d%3Fw%3D800%26auto%3Dformat%26fit%3Dcrop%26q%3D60&w=1200&output=webp" alt="" className="w-full h-full object-cover opacity-20 mix-blend-overlay group-hover:scale-105 transition-transform duration-700"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
                  <div className="absolute inset-0 bg-gradient-to-br from-purple-900/90 to-purple-950/95"></div>
                </div>
                <div className="relative z-10">
-                 <div className="text-gfa-gold font-bold uppercase tracking-widest text-[10px] mb-3">Funding Barrier</div>
+                 <div className="text-gfa-gold font-bold uppercase tracking-widest text-[10px] mb-3">{/* [中文内容待填入] */} Funding Barrier </div>
                  <h3 className="text-lg md:text-xl font-bold text-white font-serif mb-3 border-b border-white/20 pb-3 group-hover:border-gfa-gold transition-colors">
                    {isEn ? "Grant Assistance" : "资金壁垒"}
                  </h3>
@@ -400,11 +400,9 @@ const Home: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {/* Card 1 - Core */}
             <div className="bg-white rounded-[2rem] overflow-hidden shadow-xl border-2 border-gfa-gold relative group flex flex-col transform md:-translate-y-4 transition-transform hover:-translate-y-6 duration-300 h-full">
-              <div className="absolute top-4 right-4 bg-gfa-gold text-black text-[10px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-full z-10 shadow-md">
-                CORE PROGRAM
-              </div>
+              <div className="absolute top-4 right-4 bg-gfa-gold text-black text-[10px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-full z-10 shadow-md">{/* [中文内容待填入] */} CORE PROGRAM </div>
               <div className="h-64 overflow-hidden relative">
-                <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co%2FqLynYLfw%2FChat-GPT-Image-2026-5-6-18-06-52.png&w=1200&output=webp" alt="Youth collaborating" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"  width="1200" height="800" />
+                <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co%2FqLynYLfw%2FChat-GPT-Image-2026-5-6-18-06-52.png&w=1200&output=webp" alt="Youth collaborating" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 <div className="absolute bottom-4 left-6">
                    <div className="w-12 h-12 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center text-white">
@@ -415,7 +413,7 @@ const Home: React.FC = () => {
               
               <div className="p-8 flex flex-col flex-grow">
                 <h3 className="text-2xl font-bold font-serif mb-2 text-gfa-inkBlack">{isEn ? "Filmmaker Career Support" : "新电影人就业扶持"}</h3>
-                <p className="text-sm font-bold text-gfa-goldDark uppercase tracking-wider mb-4">Filmmaker Support</p>
+                <p className="text-sm font-bold text-gfa-goldDark uppercase tracking-wider mb-4">{/* [中文内容待填入] */} Filmmaker Support </p>
                 <p className="text-gfa-slate font-light leading-relaxed mb-4 flex-grow">
                   {isEn 
                     ? "Equipment rentals, mentor matching, film distribution, grant application guidance, and career networking." 
@@ -430,7 +428,7 @@ const Home: React.FC = () => {
             {/* Card 2 */}
             <div className="bg-white rounded-[2rem] overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl hover:border-gfa-gold/50 transition-all duration-300 flex flex-col group h-full">
               <div className="h-64 overflow-hidden relative">
-                <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co%2FxSc1fNkg%2FChat-GPT-Image-2026-5-6-18-06-00.png&w=1200&output=webp" alt="Youth filming outdoors" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"  width="1200" height="800" />
+                <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co%2FxSc1fNkg%2FChat-GPT-Image-2026-5-6-18-06-00.png&w=1200&output=webp" alt="Youth filming outdoors" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 <div className="absolute bottom-4 left-6">
                    <div className="w-12 h-12 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center text-white">
@@ -441,7 +439,7 @@ const Home: React.FC = () => {
 
               <div className="p-8 flex flex-col flex-grow">
                 <h3 className="text-2xl font-bold font-serif mb-2 text-gfa-inkBlack">{isEn ? "Youth Film Program" : "儿童与青少年计划"}</h3>
-                <p className="text-sm font-bold text-gfa-goldDark uppercase tracking-wider mb-4">Youth Programs</p>
+                <p className="text-sm font-bold text-gfa-goldDark uppercase tracking-wider mb-4">{/* [中文内容待填入] */} Youth Programs </p>
                 <p className="text-gfa-slate font-light leading-relaxed mb-4 flex-grow">
                   {isEn 
                     ? "Summer camps for ages 6-17, comprehensive children's film production projects, and talent competitions." 
@@ -456,7 +454,7 @@ const Home: React.FC = () => {
             {/* Card 3 */}
             <div className="bg-white rounded-[2rem] overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl hover:border-gfa-gold/50 transition-all duration-300 flex flex-col group h-full">
               <div className="h-64 overflow-hidden relative">
-                <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co%2FgZ1HJdtB%2FChat-GPT-Image-2026-5-6-18-08-23.png&w=1200&output=webp" alt="Kids looking into camera lens" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"  width="1200" height="800" />
+                <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co%2FgZ1HJdtB%2FChat-GPT-Image-2026-5-6-18-08-23.png&w=1200&output=webp" alt="Kids looking into camera lens" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 <div className="absolute bottom-4 left-6">
                    <div className="w-12 h-12 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center text-white">
@@ -467,7 +465,7 @@ const Home: React.FC = () => {
 
               <div className="p-8 flex flex-col flex-grow">
                 <h3 className="text-2xl font-bold font-serif mb-2 text-gfa-inkBlack">{isEn ? "Family Career Guide" : "家长艺术规划指南"}</h3>
-                <p className="text-sm font-bold text-gfa-goldDark uppercase tracking-wider mb-4">Family Guide</p>
+                <p className="text-sm font-bold text-gfa-goldDark uppercase tracking-wider mb-4">{/* [中文内容待填入] */} Family Guide </p>
                 <p className="text-gfa-slate font-light leading-relaxed mb-4 flex-grow">
                   {isEn 
                     ? "Helping parents navigate the film industry and building clear, actionable career paths for their children." 
@@ -486,9 +484,7 @@ const Home: React.FC = () => {
       <section className="py-4 md:py-5 bg-white overflow-hidden">
         <div className="container-gfa px-4">
           <div className="text-center mb-3">
-            <p className="text-[10px] font-bold text-gfa-gold uppercase tracking-[0.3em] mb-2">
-              From Dream to Career — GFA at Every Stage
-            </p>
+            <p className="text-[10px] font-bold text-gfa-gold uppercase tracking-[0.3em] mb-2">{/* [中文内容待填入] */} From Dream to Career — GFA at Every Stage </p>
             <h2 className="text-2xl md:text-4xl font-bold font-serif text-gfa-inkBlack">
               {isEn ? "From Dream to Career" : "从梦想到职业，GFA在每一步"}
             </h2>
@@ -567,7 +563,7 @@ const Home: React.FC = () => {
             {/* Awards */}
             <div className="bg-white rounded-3xl overflow-hidden shadow-xl group border border-gray-100 flex flex-col h-full">
               <div className="h-72 overflow-hidden relative">
-                <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co%2F1Gj2K8CX%2Fd92babf9ca9b15b9fe754beaa383a6cf.jpg&w=1200&output=webp" alt="Golden Feather Awards" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"  width="1200" height="800" />
+                <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co%2F1Gj2K8CX%2Fd92babf9ca9b15b9fe754beaa383a6cf.jpg&w=1200&output=webp" alt="Golden Feather Awards" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                 <div className="absolute bottom-6 left-6 right-6">
                   <h3 className="text-3xl font-bold font-serif text-white mb-2">{isEn ? "Golden Feather Awards" : "金羽奖"}</h3>
@@ -589,7 +585,7 @@ const Home: React.FC = () => {
             {/* Competition */}
             <div className="bg-white rounded-3xl overflow-hidden shadow-xl group border border-gray-100 flex flex-col h-full">
               <div className="h-72 overflow-hidden relative">
-                <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co%2FS4Mb6TcN%2F24480b00-65a2-4468-8dc6-50aae205d0fa.png&w=1200&output=webp" alt="Golden Feather Awards Stage" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"  width="1200" height="800" />
+                <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co%2FS4Mb6TcN%2F24480b00-65a2-4468-8dc6-50aae205d0fa.png&w=1200&output=webp" alt="Golden Feather Awards Stage" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
                 <div className="absolute bottom-6 left-6 right-6">
                   <h3 className="text-3xl font-bold font-serif text-white mb-2">{isEn ? "Global Youth Talent Competition" : "2026全球青少年才艺大赛"}</h3>
@@ -624,7 +620,7 @@ const Home: React.FC = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 items-center">
               {/* Image Side */}
               <div className="relative h-full min-h-[400px] lg:min-h-[500px] w-full rounded-[2rem] overflow-hidden shadow-2xl">
-                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co%2FVYRv0gbg%2FChat-GPT-Image-2026-5-6-18-12-27.png&w=1200&output=webp" alt="Children with a camera" className="absolute inset-0 w-full h-full object-cover"  width="1200" height="800" />
+                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co%2FVYRv0gbg%2FChat-GPT-Image-2026-5-6-18-12-27.png&w=1200&output=webp" alt="Children with a camera" className="absolute inset-0 w-full h-full object-cover"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
                  <div className="absolute inset-0 bg-gradient-to-t from-[#0D1B2A]/80 via-transparent to-transparent"></div>
                  <div className="absolute bottom-8 left-8 text-white">
                     <p className="font-bold text-lg">{isEn ? "Empowering the Next Generation" : "赋能下一代创作者"}</p>
@@ -689,28 +685,28 @@ const Home: React.FC = () => {
             <div className="flex animate-marquee-slow group-hover:pause-animation items-center">
               {/* First Set of Logos */}
               <div className="flex items-center justify-around min-w-[100vw] shrink-0 gap-12 px-8">
-                 <div className="text-xl md:text-2xl font-bold italic tracking-tighter shrink-0 text-gray-800 opacity-60 hover:opacity-100 transition-all duration-300">Blackmagic Design</div>
-                 <div className="text-lg font-bold uppercase tracking-widest text-center shrink-0 text-gray-800 opacity-60 hover:opacity-100 transition-all duration-300">City of<br/>Pomona</div>
-                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/4RNsSNYg/AI-8707697f3ab3980df8ccc03824c49fc3-3804x2800.png&h=100&output=webp" alt="Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100" />
-                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/Ldwg7vRN/4a2ec28a2689027a04641d8a150fda3f.png&h=100&output=webp" alt="Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100" />
-                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/XBZ4F7j/Alvantor-new-logo-2020-1.png&h=100&output=webp" alt="Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100" />
-                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/cSVbb7ZM/list-2.png&h=100&output=webp" alt="Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100" />
-                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/whJfbzKn/ALT-LOGO-2400x1800-2.jpg&h=100&output=webp" alt="Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100" />
-                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/6P6X52H/usc.png&h=100&output=webp" alt="SCA Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100" />
-                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/k2c5N2F4/csa-logo.png&h=100&output=webp" alt="CSA Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100" />
+                 <div className="text-xl md:text-2xl font-bold italic tracking-tighter shrink-0 text-gray-800 opacity-60 hover:opacity-100 transition-all duration-300">{/* [中文内容待填入] */} Blackmagic Design </div>
+                 <div className="text-lg font-bold uppercase tracking-widest text-center shrink-0 text-gray-800 opacity-60 hover:opacity-100 transition-all duration-300">{/* [中文内容待填入] */} City of <br/>{/* [中文内容待填入] */} Pomona </div>
+                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/4RNsSNYg/AI-8707697f3ab3980df8ccc03824c49fc3-3804x2800.png&h=100&output=webp" alt="Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/Ldwg7vRN/4a2ec28a2689027a04641d8a150fda3f.png&h=100&output=webp" alt="Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/XBZ4F7j/Alvantor-new-logo-2020-1.png&h=100&output=webp" alt="Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/cSVbb7ZM/list-2.png&h=100&output=webp" alt="Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/whJfbzKn/ALT-LOGO-2400x1800-2.jpg&h=100&output=webp" alt="Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/6P6X52H/usc.png&h=100&output=webp" alt="SCA Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/k2c5N2F4/csa-logo.png&h=100&output=webp" alt="CSA Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
               </div>
               
               {/* Second Set of Logos */}
               <div className="flex items-center justify-around min-w-[100vw] shrink-0 gap-12 px-8">
-                 <div className="text-xl md:text-2xl font-bold italic tracking-tighter shrink-0 text-gray-800 opacity-60 hover:opacity-100 transition-all duration-300">Blackmagic Design</div>
-                 <div className="text-lg font-bold uppercase tracking-widest text-center shrink-0 text-gray-800 opacity-60 hover:opacity-100 transition-all duration-300">City of<br/>Pomona</div>
-                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/4RNsSNYg/AI-8707697f3ab3980df8ccc03824c49fc3-3804x2800.png&h=100&output=webp" alt="Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100" />
-                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/Ldwg7vRN/4a2ec28a2689027a04641d8a150fda3f.png&h=100&output=webp" alt="Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100" />
-                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/XBZ4F7j/Alvantor-new-logo-2020-1.png&h=100&output=webp" alt="Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100" />
-                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/cSVbb7ZM/list-2.png&h=100&output=webp" alt="Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100" />
-                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/whJfbzKn/ALT-LOGO-2400x1800-2.jpg&h=100&output=webp" alt="Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100" />
-                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/6P6X52H/usc.png&h=100&output=webp" alt="SCA Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100" />
-                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/k2c5N2F4/csa-logo.png&h=100&output=webp" alt="CSA Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100" />
+                 <div className="text-xl md:text-2xl font-bold italic tracking-tighter shrink-0 text-gray-800 opacity-60 hover:opacity-100 transition-all duration-300">{/* [中文内容待填入] */} Blackmagic Design </div>
+                 <div className="text-lg font-bold uppercase tracking-widest text-center shrink-0 text-gray-800 opacity-60 hover:opacity-100 transition-all duration-300">{/* [中文内容待填入] */} City of <br/>{/* [中文内容待填入] */} Pomona </div>
+                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/4RNsSNYg/AI-8707697f3ab3980df8ccc03824c49fc3-3804x2800.png&h=100&output=webp" alt="Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/Ldwg7vRN/4a2ec28a2689027a04641d8a150fda3f.png&h=100&output=webp" alt="Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/XBZ4F7j/Alvantor-new-logo-2020-1.png&h=100&output=webp" alt="Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/cSVbb7ZM/list-2.png&h=100&output=webp" alt="Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/whJfbzKn/ALT-LOGO-2400x1800-2.jpg&h=100&output=webp" alt="Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/6P6X52H/usc.png&h=100&output=webp" alt="SCA Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/k2c5N2F4/csa-logo.png&h=100&output=webp" alt="CSA Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
               </div>
             </div>
          </div>

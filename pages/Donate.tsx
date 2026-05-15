@@ -73,7 +73,7 @@ const Donate: React.FC = () => {
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-serif leading-tight mb-4">
              {isEn ? (
-                <>Your Gift Opens the Door<br/>for a Talented Filmmaker</>
+                <>{/* [中文内容待填入] */} Your Gift Opens the Door <br/>{/* [中文内容待填入] */} for a Talented Filmmaker </>
              ) : (
                 <>你的捐款<br/>帮一个有才华的人打开那扇门</>
              )}
@@ -90,8 +90,7 @@ const Donate: React.FC = () => {
               <Check className="w-5 h-5"/> {isEn ? "100% Tax-Deductible" : "100% Tax-Deductible · 捐款全额可抵税"}
             </div>
             <div className="flex items-center gap-2">
-              <Check className="w-5 h-5"/> EIN: 33-4817276 · 501(c)(3) Certified
-            </div>
+              <Check className="w-5 h-5"/>{/* [中文内容待填入] */} EIN: 33-4817276 · 501(c)(3) Certified </div>
           </div>
         </div>
         
@@ -263,9 +262,7 @@ const Donate: React.FC = () => {
                <p className="text-gray-600 text-sm leading-relaxed mb-4">
                  {isEn ? "Accepts: Visa / Mastercard / American Express / Discover" : "接受：Visa / Mastercard / American Express / Discover"}
                </p>
-               <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                 PayPal / Venmo / Zelle
-               </p>
+               <p className="text-gray-600 text-sm leading-relaxed mb-4">{/* [中文内容待填入] */} PayPal / Venmo / Zelle </p>
                <p className="text-gray-600 text-sm leading-relaxed">
                  {isEn ? "Secure encrypted payment, instant processing. Receipt within 24 hours." : "安全加密支付，即时处理。捐款后24小时内收到电子收据。"}
                </p>
@@ -280,7 +277,7 @@ const Donate: React.FC = () => {
                </h3>
                <div className="text-gray-600 text-sm leading-relaxed">
                  <p className="mb-2 font-bold">{isEn ? "Payable to:" : "收款人请写："}</p>
-                 <p className="mb-4 bg-white px-3 py-2 border rounded-lg">Global Film Alliance, Inc.</p>
+                 <p className="mb-4 bg-white px-3 py-2 border rounded-lg">{/* [中文内容待填入] */} Global Film Alliance, Inc. </p>
                  
                  <p className="mb-2 font-bold">{isEn ? "Mailing Address:" : "邮寄地址："}</p>
                  <p className="mb-4 bg-white px-3 py-2 border rounded-lg whitespace-pre-wrap">
@@ -311,7 +308,7 @@ const Donate: React.FC = () => {
                </div>
                <p className="text-gray-600 text-sm leading-relaxed">
                  {isEn ? "For matching verification:" : "如需GFA的匹配捐款证明，请联系："}<br/>
-                 <a href="mailto:jacky@gfafilm.org" className="text-[#C9A043] font-bold hover:underline mt-1 inline-block">jacky@gfafilm.org</a>
+                 <a href="mailto:jacky@gfafilm.org" className="text-[#C9A043] font-bold hover:underline mt-1 inline-block">{/* [中文内容待填入] */} jacky@gfafilm.org </a>
                </p>
             </div>
           </div>
@@ -333,7 +330,7 @@ const Donate: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center mb-4">
             {/* Community Partner */}
             <div className="border border-white/10 rounded-3xl p-8 bg-white/5 hover:border-[#C9A043]/50 hover:-translate-y-2 transition-all duration-300">
-              <div className="bg-white/10 text-white font-bold text-xs uppercase tracking-widest px-4 py-1.5 rounded-full inline-block mb-3">Community Partner</div>
+              <div className="bg-white/10 text-white font-bold text-xs uppercase tracking-widest px-4 py-1.5 rounded-full inline-block mb-3">{/* [中文内容待填入] */} Community Partner </div>
               <div className="text-4xl font-serif font-bold text-[#C9A043] mb-4 border-b border-white/10 pb-3">$1,000+</div>
               <ul className="space-y-4 mb-5 text-sm text-gray-300 font-light">
                 <li className="flex gap-3"><Check className="w-5 h-5 text-[#C9A043] shrink-0"/> {isEn ? "Website acknowledgment" : "官网致谢页 Logo 展示"}</li>
@@ -349,7 +346,7 @@ const Donate: React.FC = () => {
 
             {/* Silver Partner (Highlighted) */}
             <div className="border-2 border-gray-400 rounded-3xl p-10 bg-white/10 transform md:scale-105 hover:border-gray-300 hover:-translate-y-2 transition-all duration-300 relative z-10 shadow-2xl">
-              <div className="bg-gradient-to-r from-gray-300 to-gray-500 text-[#0D1B2A] font-bold text-xs uppercase tracking-widest px-4 py-1.5 rounded-full inline-block mb-3">Silver Partner</div>
+              <div className="bg-gradient-to-r from-gray-300 to-gray-500 text-[#0D1B2A] font-bold text-xs uppercase tracking-widest px-4 py-1.5 rounded-full inline-block mb-3">{/* [中文内容待填入] */} Silver Partner </div>
               <div className="text-5xl font-serif font-bold text-white mb-4 border-b border-white/20 pb-3">$5,000+</div>
               <ul className="space-y-4 mb-5 text-sm text-gray-200 font-light">
                 <li className="flex gap-3"><Check className="w-5 h-5 text-[#C9A043] shrink-0"/> {isEn ? "Logo on website" : "官网 Logo 展示"}</li>
@@ -366,7 +363,7 @@ const Donate: React.FC = () => {
 
             {/* Gold Partner */}
             <div className="border border-[#C9A043]/50 rounded-3xl p-8 bg-[#C9A043]/5 hover:border-[#C9A043] hover:-translate-y-2 transition-all duration-300">
-              <div className="bg-[#C9A043] text-[#0D1B2A] font-bold text-xs uppercase tracking-widest px-4 py-1.5 rounded-full inline-block mb-3">Gold Partner</div>
+              <div className="bg-[#C9A043] text-[#0D1B2A] font-bold text-xs uppercase tracking-widest px-4 py-1.5 rounded-full inline-block mb-3">{/* [中文内容待填入] */} Gold Partner </div>
               <div className="text-4xl font-serif font-bold text-[#C9A043] mb-4 border-b border-[#C9A043]/20 pb-3">$10,000+</div>
               <ul className="space-y-4 mb-5 text-sm text-gray-300 font-light">
                 <li className="flex gap-3"><Check className="w-5 h-5 text-[#C9A043] shrink-0"/> {isEn ? "Premium logo placement" : "官网首页 Logo 展示"}</li>
@@ -386,7 +383,7 @@ const Donate: React.FC = () => {
 
           <div className="text-center text-gray-400 font-light text-sm bg-white/5 py-4 rounded-xl border border-white/10 max-w-2xl mx-auto">
              {isEn ? "For custom partnership packages, please contact:" : "如需定制赞助方案，请联系："} <br className="md:hidden" />
-             <a href="mailto:jacky@gfafilm.org" className="text-[#C9A043] font-bold mx-2">jacky@gfafilm.org</a> | 
+             <a href="mailto:jacky@gfafilm.org" className="text-[#C9A043] font-bold mx-2">{/* [中文内容待填入] */} jacky@gfafilm.org </a> | 
              <span className="text-white ml-2">626-677-8017</span>
           </div>
         </div>
@@ -422,11 +419,11 @@ const Donate: React.FC = () => {
               </div>
               <div className="flex flex-col items-center gap-2">
                 <Mail className="w-8 h-8 text-[#C9A043]" />
-                <span className="text-xs font-bold text-[#0D1B2A] uppercase tracking-wider">Receipt within 24 hours</span>
+                <span className="text-xs font-bold text-[#0D1B2A] uppercase tracking-wider">{/* [中文内容待填入] */} Receipt within 24 hours </span>
               </div>
               <div className="flex flex-col items-center gap-2">
                 <Lock className="w-8 h-8 text-[#C9A043]" />
-                <span className="text-xs font-bold text-[#0D1B2A] uppercase tracking-wider">Secure & Encrypted</span>
+                <span className="text-xs font-bold text-[#0D1B2A] uppercase tracking-wider">{/* [中文内容待填入] */} Secure & Encrypted </span>
               </div>
             </div>
           </div>
@@ -447,24 +444,24 @@ const Donate: React.FC = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-5">
              <div className="bg-gray-50 border border-gray-100 rounded-2xl p-6 text-center hover:bg-gray-100 transition-colors">
-                <div className="font-bold text-[#0D1B2A] text-lg mb-1">Sarah M.</div>
+                <div className="font-bold text-[#0D1B2A] text-lg mb-1">{/* [中文内容待填入] */} Sarah M. </div>
                 <div className="text-[#C9A043] font-bold mb-2">$500</div>
-                <div className="text-xs text-gray-500 border-t pt-2 mt-2">Monthly Donor</div>
+                <div className="text-xs text-gray-500 border-t pt-2 mt-2">{/* [中文内容待填入] */} Monthly Donor </div>
              </div>
              <div className="bg-gray-50 border border-gray-100 rounded-2xl p-6 text-center hover:bg-gray-100 transition-colors">
-                <div className="font-bold text-[#0D1B2A] text-lg mb-1">The Chen Family</div>
+                <div className="font-bold text-[#0D1B2A] text-lg mb-1">{/* [中文内容待填入] */} The Chen Family </div>
                 <div className="text-[#C9A043] font-bold mb-2">$1,000</div>
-                <div className="text-xs text-gray-500 border-t pt-2 mt-2">Gold Supporter</div>
+                <div className="text-xs text-gray-500 border-t pt-2 mt-2">{/* [中文内容待填入] */} Gold Supporter </div>
              </div>
              <div className="bg-gray-50 border border-gray-100 rounded-2xl p-6 text-center hover:bg-gray-100 transition-colors">
-                <div className="font-bold text-gray-400 text-lg mb-1 italic">Anonymous</div>
+                <div className="font-bold text-gray-400 text-lg mb-1 italic">{/* [中文内容待填入] */} Anonymous </div>
                 <div className="text-[#C9A043] font-bold mb-2">$250</div>
-                <div className="text-xs text-gray-500 border-t pt-2 mt-2">Youth Scholarship Fund</div>
+                <div className="text-xs text-gray-500 border-t pt-2 mt-2">{/* [中文内容待填入] */} Youth Scholarship Fund </div>
              </div>
              <div className="bg-gray-50 border border-gray-100 rounded-2xl p-6 text-center hover:bg-gray-100 transition-colors">
-                <div className="font-bold text-[#0D1B2A] text-lg mb-1">David L.</div>
+                <div className="font-bold text-[#0D1B2A] text-lg mb-1">{/* [中文内容待填入] */} David L. </div>
                 <div className="text-[#C9A043] font-bold mb-2">$100</div>
-                <div className="text-xs text-gray-500 border-t pt-2 mt-2">Equipment Fund</div>
+                <div className="text-xs text-gray-500 border-t pt-2 mt-2">{/* [中文内容待填入] */} Equipment Fund </div>
              </div>
           </div>
 
@@ -500,7 +497,7 @@ const Donate: React.FC = () => {
              <span className="hidden sm:inline">•</span>
              <span>EIN: 33-4817276</span>
              <span className="hidden sm:inline">•</span>
-             <span>Secure Payment</span>
+             <span>{/* [中文内容待填入] */} Secure Payment </span>
           </div>
         </div>
       </section>

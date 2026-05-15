@@ -43,7 +43,7 @@ const Competition: React.FC = () => {
             src="https://wsrv.nl/?url=i.ibb.co%2FS4Mb6TcN%2F24480b00-65a2-4468-8dc6-50aae205d0fa.png&w=1200&output=webp" 
             alt="Hollywood style stage" 
             className="w-full h-auto object-contain" 
-           width="1200" height="800" />
+           width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
         </div>
       </section>
 
@@ -106,23 +106,23 @@ const Competition: React.FC = () => {
                </h3>
                <div className="space-y-4">
                  <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-center gap-3">
-                   <div className="w-16 h-16 bg-[#111111] text-white rounded-full flex items-center justify-center font-bold font-serif text-xl">Mini</div>
+                   <div className="w-16 h-16 bg-[#111111] text-white rounded-full flex items-center justify-center font-bold font-serif text-xl">{/* [中文内容待填入] */} Mini </div>
                    <div>
-                     <h4 className="font-bold text-lg text-gfa-inkBlack">Mini Stars</h4>
+                     <h4 className="font-bold text-lg text-gfa-inkBlack">{/* [中文内容待填入] */} Mini Stars </h4>
                      <p className="text-sm font-light text-gfa-slate">{isEn ? "Ages 6–10" : "6–10岁"}</p>
                    </div>
                  </div>
                  <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-center gap-3">
-                   <div className="w-16 h-16 bg-[#C9A84C] text-black rounded-full flex items-center justify-center font-bold font-serif text-xl">Rise</div>
+                   <div className="w-16 h-16 bg-[#C9A84C] text-black rounded-full flex items-center justify-center font-bold font-serif text-xl">{/* [中文内容待填入] */} Rise </div>
                    <div>
-                     <h4 className="font-bold text-lg text-gfa-inkBlack">Rising Stars</h4>
+                     <h4 className="font-bold text-lg text-gfa-inkBlack">{/* [中文内容待填入] */} Rising Stars </h4>
                      <p className="text-sm font-light text-gfa-slate">{isEn ? "Ages 11–14" : "11–14岁"}</p>
                    </div>
                  </div>
                  <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-center gap-3">
-                   <div className="w-16 h-16 bg-white border-4 border-[#C9A84C] text-gfa-inkBlack rounded-full flex items-center justify-center font-bold font-serif text-xl">Next</div>
+                   <div className="w-16 h-16 bg-white border-4 border-[#C9A84C] text-gfa-inkBlack rounded-full flex items-center justify-center font-bold font-serif text-xl">{/* [中文内容待填入] */} Next </div>
                    <div>
-                     <h4 className="font-bold text-lg text-gfa-inkBlack">Next Gen</h4>
+                     <h4 className="font-bold text-lg text-gfa-inkBlack">{/* [中文内容待填入] */} Next Gen </h4>
                      <p className="text-sm font-light text-gfa-slate">{isEn ? "Ages 15–18" : "15–18岁"}</p>
                    </div>
                  </div>
@@ -164,13 +164,13 @@ const Competition: React.FC = () => {
       {/* Target Audience Messages */}
       <section className="py-0 flex flex-col md:flex-row">
         <div className="md:w-1/2 bg-gfa-inkBlack text-white p-16 md:p-24 flex flex-col justify-center">
-           <h3 className="text-[#C9A84C] font-bold tracking-widest uppercase text-sm mb-4">To Chinese Families</h3>
+           <h3 className="text-[#C9A84C] font-bold tracking-widest uppercase text-sm mb-4">{/* [中文内容待填入] */} To Chinese Families </h3>
            <p className="text-2xl md:text-3xl font-serif font-light leading-relaxed italic">
              "这不是一个普通的才艺比赛。这是让你的孩子真正站上好莱坞大舞台的机会。这里，是每一个电影梦开始的地方。"
            </p>
         </div>
         <div className="md:w-1/2 bg-[#C9A84C] text-black p-16 md:p-24 flex flex-col justify-center">
-           <h3 className="text-black/60 font-bold tracking-widest uppercase text-sm mb-4">To American Families</h3>
+           <h3 className="text-black/60 font-bold tracking-widest uppercase text-sm mb-4">{/* [中文内容待填入] */} To American Families </h3>
            <p className="text-2xl md:text-3xl font-serif font-light leading-relaxed italic">
              "This is where East meets West on Hollywood's most iconic stage. Your child's story deserves to be told to the world."
            </p>

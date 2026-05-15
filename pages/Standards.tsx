@@ -29,7 +29,7 @@ const Standards: React.FC = () => {
 
             <div className="p-grid-6 grid grid-cols-1 lg:grid-cols-2 gap-grid-12">
               <div>
-                <h4 className="small-text text-white font-black uppercase tracking-widest mb-grid-4 border-l-2 border-gfa-gold pl-3">Standardization Elements</h4>
+                <h4 className="small-text text-white font-black uppercase tracking-widest mb-grid-4 border-l-2 border-gfa-gold pl-3">{/* [中文内容待填入] */} Standardization Elements </h4>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-12">
                    {[
                      { label: 'Scope', val: 'Professional Industry Standard' },
@@ -58,7 +58,7 @@ const Standards: React.FC = () => {
               </div>
 
               <div className="flex flex-col">
-                <h4 className="small-text text-white font-black uppercase tracking-widest mb-grid-4 border-l-2 border-gfa-gold pl-3">Assessment Protocol</h4>
+                <h4 className="small-text text-white font-black uppercase tracking-widest mb-grid-4 border-l-2 border-gfa-gold pl-3">{/* [中文内容待填入] */} Assessment Protocol </h4>
                 <p className="micro-text text-gfa-gray leading-loose mb-grid-6 font-medium uppercase tracking-widest bg-white/5 p-grid-4 border border-white/5 rounded">
                   {cat.matrixBody}
                 </p>
@@ -73,9 +73,7 @@ const Standards: React.FC = () => {
       </div>
 
       <div className="mt-grid-20 text-center border-t border-white/10 pt-grid-12">
-        <p className="text-gfa-gray micro-text font-black uppercase tracking-[0.4em] opacity-40 max-w-3xl mx-auto leading-loose italic">
-          Transparency builds trust. Every certified organization adheres to these technical standards.
-        </p>
+        <p className="text-gfa-gray micro-text font-black uppercase tracking-[0.4em] opacity-40 max-w-3xl mx-auto leading-loose italic">{/* [中文内容待填入] */} Transparency builds trust. Every certified organization adheres to these technical standards. </p>
       </div>
     </div>
   );

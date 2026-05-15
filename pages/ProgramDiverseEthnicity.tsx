@@ -18,7 +18,7 @@ const ProgramDiverseEthnicity: React.FC = () => {
             src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1611162617474-5b21e879e113%3Fq%3D80%26w%3D1974%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" 
             alt="AI Filmmaking" 
             className="w-full h-full object-cover opacity-30 grayscale"
-           width="1200" height="800" />
+           width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
           <div className="absolute inset-0 bg-gradient-to-r from-[#1A2B4A] via-[#1A2B4A]/80 to-transparent"></div>
         </div>
         <div className="container-gfa relative z-10 text-center max-w-4xl mx-auto">

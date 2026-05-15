@@ -15,10 +15,10 @@ const Footer: React.FC = () => {
         {/* Brand & Mission */}
         <div className="space-y-3 lg:border-r lg:border-white/10 lg:pr-8">
           <div className="flex items-center gap-4">
-            <img fetchPriority="high"  src="https://wsrv.nl/?url=i.ibb.co%2FmFgDBtBp%2F1.png&w=1200&output=webp" alt="GFA Logo" className="h-20 w-auto object-contain"  width="1200" height="800" />
+            <img fetchPriority="high"  src="https://wsrv.nl/?url=i.ibb.co%2FmFgDBtBp%2F1.png&w=1200&output=webp" alt="GFA Logo" className="h-20 w-auto object-contain"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
             <div className="flex flex-col">
-              <span className="text-3xl font-bold tracking-tighter font-serif leading-none">GFA</span>
-              <span className="text-[10px] uppercase tracking-[0.2em] text-[#C9A84C] font-bold mt-1">Global Film Alliance</span>
+              <span className="text-3xl font-bold tracking-tighter font-serif leading-none">{/* [中文内容待填入] */} GFA </span>
+              <span className="text-[10px] uppercase tracking-[0.2em] text-[#C9A84C] font-bold mt-1">{/* [中文内容待填入] */} Global Film Alliance </span>
             </div>
           </div>
           <p className="text-sm text-gray-300 leading-relaxed font-light">
@@ -28,9 +28,9 @@ const Footer: React.FC = () => {
           </p>
           <div className="flex gap-4">
             {/* Social Icons */}
-            <a href="#" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#C9A84C] hover:border-[#C9A84C] hover:text-white transition-all cursor-pointer font-bold text-xs" aria-label="Twitter">X<span className="sr-only">Twitter</span></a>
-            <a href="#" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#C9A84C] hover:border-[#C9A84C] hover:text-white transition-all cursor-pointer font-bold text-xs" aria-label="LinkedIn">In<span className="sr-only">LinkedIn</span></a>
-            <a href="#" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#C9A84C] hover:border-[#C9A84C] hover:text-white transition-all cursor-pointer font-bold text-xs" aria-label="Instagram">Ig<span className="sr-only">Instagram</span></a>
+            <a href="#" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#C9A84C] hover:border-[#C9A84C] hover:text-white transition-all cursor-pointer font-bold text-xs" aria-label="Twitter">X<span className="sr-only">{/* [中文内容待填入] */} Twitter </span></a>
+            <a href="#" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#C9A84C] hover:border-[#C9A84C] hover:text-white transition-all cursor-pointer font-bold text-xs" aria-label="LinkedIn">In<span className="sr-only">{/* [中文内容待填入] */} LinkedIn </span></a>
+            <a href="#" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#C9A84C] hover:border-[#C9A84C] hover:text-white transition-all cursor-pointer font-bold text-xs" aria-label="Instagram">Ig<span className="sr-only">{/* [中文内容待填入] */} Instagram </span></a>
           </div>
         </div>
 
@@ -54,15 +54,15 @@ const Footer: React.FC = () => {
           </h3>
           <div className="space-y-4 text-sm text-gray-300 font-light">
             <p className="flex flex-col gap-1">
-              <span className="text-gfa-gold text-xs font-bold uppercase tracking-wider">Email</span>
-              <a href="mailto:jacky@gfafilm.org" className="hover:text-white transition-colors">jacky@gfafilm.org</a>
+              <span className="text-gfa-gold text-xs font-bold uppercase tracking-wider">{/* [中文内容待填入] */} Email </span>
+              <a href="mailto:jacky@gfafilm.org" className="hover:text-white transition-colors">{/* [中文内容待填入] */} jacky@gfafilm.org </a>
             </p>
             <p className="flex flex-col gap-1">
-              <span className="text-gfa-gold text-xs font-bold uppercase tracking-wider">Phone</span>
+              <span className="text-gfa-gold text-xs font-bold uppercase tracking-wider">{/* [中文内容待填入] */} Phone </span>
               <a href="tel:6266778017" className="hover:text-white transition-colors">626-677-8017</a>
             </p>
             <p className="flex flex-col gap-1">
-              <span className="text-gfa-gold text-xs font-bold uppercase tracking-wider">Address</span>
+              <span className="text-gfa-gold text-xs font-bold uppercase tracking-wider">{/* [中文内容待填入] */} Address </span>
               <span>17800 Castleton St, Suite 173<br/>City of Industry, CA 91748</span>
             </p>
           </div>
@@ -70,9 +70,9 @@ const Footer: React.FC = () => {
 
         {/* Legal & Nonprofit Status */}
         <div className="bg-white/5 p-8 border border-white/10 rounded-3xl text-sm text-gray-300 font-light backdrop-blur-sm flex flex-col justify-center">
-           <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co%2FmFgDBtBp%2F1.png&w=1200&output=webp" alt="Nonprofit" className="h-12 w-auto object-contain object-left mb-3 opacity-50 grayscale mix-blend-screen"  width="1200" height="800" />
-           <p className="mb-4 text-white/90 font-medium">Global Film Alliance, Inc.</p>
-           <p className="mb-2">A registered 501(c)(3) nonprofit organization in California.</p>
+           <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co%2FmFgDBtBp%2F1.png&w=1200&output=webp" alt="Nonprofit" className="h-12 w-auto object-contain object-left mb-3 opacity-50 grayscale mix-blend-screen"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+           <p className="mb-4 text-white/90 font-medium">{/* [中文内容待填入] */} Global Film Alliance, Inc. </p>
+           <p className="mb-2">{/* [中文内容待填入] */} A registered 501(c)(3) nonprofit organization in California. </p>
            <p className="font-mono text-xs bg-black/30 p-2 rounded text-center mb-0 mt-4 border border-white/5">EIN: 33-4817276</p>
         </div>
       </div>

@@ -21,7 +21,7 @@ const Governance: React.FC = () => {
       <div className="container-gfa relative z-10">
         {/* Header */}
         <header className="mb-5 text-center max-w-4xl mx-auto animate-fade-in">
-          <div className="gold-badge mb-5 animate-fade-up">Institutional Transparency</div>
+          <div className="gold-badge mb-5 animate-fade-up">{/* [中文内容待填入] */} Institutional Transparency </div>
           <h1 className="text-5xl md:text-8xl font-bold font-serif text-gfa-inkBlack mb-3 leading-tight drop-shadow-sm">
             {gov.title}
           </h1>
@@ -34,7 +34,7 @@ const Governance: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-5">
           <aside className="lg:col-span-4 space-y-3">
             <div className="sticky top-32 bg-white p-12 rounded-[40px] shadow-2xl border border-gfa-border animate-fade-up">
-              <h3 className="text-xl font-bold font-serif mb-5 border-b border-gfa-border pb-3 text-gfa-inkBlack">Official Documents</h3>
+              <h3 className="text-xl font-bold font-serif mb-5 border-b border-gfa-border pb-3 text-gfa-inkBlack">{/* [中文内容待填入] */} Official Documents </h3>
               <div className="space-y-3">
                 <button className="w-full h-16 flex items-center justify-center gap-3 bg-gfa-warmWhite border border-gfa-border rounded-2xl text-sm font-bold hover:bg-gfa-gold hover:text-white transition-all group">
                    <span className="text-lg">📄</span> {gov.downloads.charter}
@@ -51,7 +51,7 @@ const Governance: React.FC = () => {
                   </li>
                   <li className="flex justify-between items-center">
                     <span className="opacity-50">Audit Cycle:</span> 
-                    <span className="text-gfa-gold">Quarterly</span>
+                    <span className="text-gfa-gold">{/* [中文内容待填入] */} Quarterly </span>
                   </li>
                   <li className="flex justify-between items-center">
                     <span className="opacity-50">Next Review:</span> 
@@ -94,13 +94,11 @@ const Governance: React.FC = () => {
             {/* Statutory Adherence Callout */}
             <section className="bg-gfa-inkBlack text-white p-16 md:p-24 rounded-[48px] relative overflow-hidden shadow-2xl animate-fade-up delay-300">
               <div className="absolute top-0 right-0 w-96 h-96 bg-gfa-gold/10 blur-[100px] -mr-48 -mt-48"></div>
-              <h2 className="text-4xl font-bold font-serif mb-3 text-gfa-gold leading-tight">Supportive Framework</h2>
-              <p className="text-xl leading-relaxed mb-5 opacity-70 font-light italic font-serif">
-                The GFA Charter is a voluntary commitment. Participation signals an organization's dedication to professional safety and structural transparency without replacing statutory legal obligations.
-              </p>
+              <h2 className="text-4xl font-bold font-serif mb-3 text-gfa-gold leading-tight">{/* [中文内容待填入] */} Supportive Framework </h2>
+              <p className="text-xl leading-relaxed mb-5 opacity-70 font-light italic font-serif">{/* [中文内容待填入] */} The GFA Charter is a voluntary commitment. Participation signals an organization's dedication to professional safety and structural transparency without replacing statutory legal obligations. </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/certification" className="btn-primary h-16 px-10 text-sm">Apply for Recognition</Link>
-                <Link to="/about" className="h-16 px-10 flex items-center justify-center border border-white/20 rounded-full text-sm font-bold hover:bg-white/10 transition-all">Read Mission Statement</Link>
+                <Link to="/certification" className="btn-primary h-16 px-10 text-sm">{/* [中文内容待填入] */} Apply for Recognition </Link>
+                <Link to="/about" className="h-16 px-10 flex items-center justify-center border border-white/20 rounded-full text-sm font-bold hover:bg-white/10 transition-all">{/* [中文内容待填入] */} Read Mission Statement </Link>
               </div>
             </section>
           </main>

@@ -435,7 +435,7 @@ const GearApplication: React.FC = () => {
                   <div className="md:col-span-2">
                     <p className="text-xs text-gfa-slate font-light">
                       {isEn ? "If you are submitting a feature length script and shooting plan, please also email it to " : "如果有长篇剧本提交和拍摄计划，请提交邮箱："} 
-                      <a href="mailto:jacky@gfafilm.org" className="text-[#C9A84C] hover:underline font-bold">jacky@gfafilm.org</a>
+                      <a href="mailto:jacky@gfafilm.org" className="text-[#C9A84C] hover:underline font-bold">{/* [中文内容待填入] */} jacky@gfafilm.org </a>
                     </p>
                   </div>
                   <div className="md:col-span-2">

@@ -131,7 +131,7 @@ const MemberPortal = () => {
              <div className="bg-white border border-gfa-border p-8 rounded-xl shadow-sm">
                 <div className="flex justify-between items-center mb-4 border-b border-gfa-border pb-4">
                   <h3 className="text-lg font-bold uppercase tracking-widest text-gfa-inkBlack font-serif">{mp.docs.title}</h3>
-                  <button className="text-xs font-bold text-gfa-gold uppercase tracking-widest hover:text-gfa-inkBlack transition-colors">View All</button>
+                  <button className="text-xs font-bold text-gfa-gold uppercase tracking-widest hover:text-gfa-inkBlack transition-colors">{/* [中文内容待填入] */} View All </button>
                 </div>
                 
                 <div className="space-y-3">
@@ -172,12 +172,12 @@ const MemberPortal = () => {
                      <div className="p-6 border border-white/10 bg-white/5 rounded-lg text-center group cursor-pointer hover:bg-white/10 hover:border-gfa-gold/30 transition-all">
                         <Award className="w-12 h-12 mx-auto mb-4 text-gfa-slate group-hover:text-gfa-gold transition-colors" />
                         <h4 className="text-sm font-bold uppercase tracking-wide text-white mb-2">{mp.assets.badge}</h4>
-                        <p className="text-[10px] text-white/40 uppercase font-bold tracking-widest">Accredited Member SVG/PNG</p>
+                        <p className="text-[10px] text-white/40 uppercase font-bold tracking-widest">{/* [中文内容待填入] */} Accredited Member SVG/PNG </p>
                      </div>
                      <div className="p-6 border border-white/10 bg-white/5 rounded-lg text-center group cursor-pointer hover:bg-white/10 hover:border-gfa-gold/30 transition-all">
                         <FileCheck className="w-12 h-12 mx-auto mb-4 text-gfa-slate group-hover:text-gfa-gold transition-colors" />
                         <h4 className="text-sm font-bold uppercase tracking-wide text-white mb-2">{mp.assets.cert}</h4>
-                        <p className="text-[10px] text-white/40 uppercase font-bold tracking-widest">Official 2024 Document</p>
+                        <p className="text-[10px] text-white/40 uppercase font-bold tracking-widest">{/* [中文内容待填入] */} Official 2024 Document </p>
                      </div>
                   </div>
                 </div>

@@ -20,7 +20,7 @@ const ProgramAwards: React.FC = () => {
             src="https://wsrv.nl/?url=i.ibb.co%2FpjRZK2vm%2FGemini-Generated-Image-k7a54jk7a54jk7a5-1.png&w=1200&output=webp" 
             alt="Golden Feather Awards" 
             className="w-full h-full object-cover object-[center_20%] opacity-90"
-           width="1200" height="800" />
+           width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
           <div className="absolute inset-0 bg-gradient-to-t from-gfa-inkBlack/80 via-gfa-inkBlack/20 to-transparent"></div>
         </div>
         <div className="container-gfa relative z-10 text-center max-w-5xl mx-auto">
@@ -78,8 +78,8 @@ const ProgramAwards: React.FC = () => {
                </div>
             </div>
             <div className="md:w-[40%] grid grid-cols-2 gap-4">
-                <img loading="lazy"  src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1516321497487-e288fb19713f%3Fq%3D80%26w%3D2070%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" className="rounded-3xl w-full h-auto object-cover shadow-md aspect-square" alt="Ceremony"  width="1200" height="800" />
-                <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1542204165-65bf26472b9b%3Fq%3D80%26w%3D1974%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" className="rounded-3xl w-full h-auto object-cover shadow-md aspect-square mt-3" alt="Trophy"  width="1200" height="800" />
+                <img loading="lazy"  src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1516321497487-e288fb19713f%3Fq%3D80%26w%3D2070%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" className="rounded-3xl w-full h-auto object-cover shadow-md aspect-square" alt="Ceremony"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1542204165-65bf26472b9b%3Fq%3D80%26w%3D1974%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" className="rounded-3xl w-full h-auto object-cover shadow-md aspect-square mt-3" alt="Trophy"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
             </div>
          </section>
 
@@ -217,7 +217,7 @@ const ProgramAwards: React.FC = () => {
                        <div className="w-16 h-16 bg-[#C9A84C] rounded-full flex items-center justify-center text-white font-bold font-serif text-xl border-4 border-white shadow-lg">01</div>
                     </div>
                     <div className="md:w-5/12 text-center md:text-left">
-                       <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1626814026160-2237a95fc5a0%3Fq%3D80%26w%3D2070%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" className="rounded-3xl w-full h-48 object-cover shadow-md mx-auto" alt="Red Carpet"  width="1200" height="800" />
+                       <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1626814026160-2237a95fc5a0%3Fq%3D80%26w%3D2070%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" className="rounded-3xl w-full h-48 object-cover shadow-md mx-auto" alt="Red Carpet"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
                     </div>
                  </div>
 
@@ -231,7 +231,7 @@ const ProgramAwards: React.FC = () => {
                        <div className="w-16 h-16 bg-[#C9A84C] rounded-full flex items-center justify-center text-white font-bold font-serif text-xl border-4 border-white shadow-lg">02</div>
                     </div>
                     <div className="md:w-5/12 text-center md:text-right">
-                       <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1489599849927-2ee91cede3ba%3Fq%3D80%26w%3D2070%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" className="rounded-3xl w-full h-48 object-cover shadow-md mx-auto" alt="Premiere"  width="1200" height="800" />
+                       <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1489599849927-2ee91cede3ba%3Fq%3D80%26w%3D2070%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" className="rounded-3xl w-full h-48 object-cover shadow-md mx-auto" alt="Premiere"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
                     </div>
                  </div>
 
@@ -245,7 +245,7 @@ const ProgramAwards: React.FC = () => {
                        <div className="w-16 h-16 bg-[#C9A84C] rounded-full flex items-center justify-center text-white font-bold font-serif text-xl border-4 border-white shadow-lg">03</div>
                     </div>
                     <div className="md:w-5/12 text-center md:text-left">
-                       <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1540317580384-e5d43867caa6%3Fq%3D80%26w%3D1974%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" className="rounded-3xl w-full h-48 object-cover shadow-md mx-auto" alt="Presentation"  width="1200" height="800" />
+                       <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1540317580384-e5d43867caa6%3Fq%3D80%26w%3D1974%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" className="rounded-3xl w-full h-48 object-cover shadow-md mx-auto" alt="Presentation"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
                     </div>
                  </div>
 
@@ -259,7 +259,7 @@ const ProgramAwards: React.FC = () => {
                        <div className="w-16 h-16 bg-[#C9A84C] rounded-full flex items-center justify-center text-white font-bold font-serif text-xl border-4 border-white shadow-lg">04</div>
                     </div>
                     <div className="md:w-5/12 text-center md:text-right">
-                       <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1511795409834-ef04bbd61622%3Fq%3D80%26w%3D2069%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" className="rounded-3xl w-full h-48 object-cover shadow-md mx-auto" alt="Networking"  width="1200" height="800" />
+                       <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1511795409834-ef04bbd61622%3Fq%3D80%26w%3D2069%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" className="rounded-3xl w-full h-48 object-cover shadow-md mx-auto" alt="Networking"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
                     </div>
                  </div>
               </div>
@@ -338,14 +338,14 @@ const ProgramAwards: React.FC = () => {
            <div className="absolute -top-32 -right-32 w-96 h-96 bg-[#C9A84C]/5 rounded-full blur-3xl pointer-events-none"></div>
            
            <div className="relative z-10">
-              <div className="text-center mb-3">
-                 <div className="w-20 h-20 bg-gfa-inkBlack rounded-full flex items-center justify-center mx-auto mb-3 shadow-lg">
-                    <Send className="w-8 h-8 text-[#C9A84C] ml-1" />
+              <div className="text-center mb-10">
+                 <div className="w-16 h-16 bg-[#F5F2EE] rounded-full flex items-center justify-center mx-auto mb-4 border border-[#C9A84C]/20 shadow-sm text-[#C9A84C]">
+                    <Send className="w-8 h-8 ml-1" />
                  </div>
-                 <h2 className="text-4xl md:text-5xl font-bold font-serif text-gfa-inkBlack mb-4 leading-tight">
+                 <h2 className="text-4xl md:text-5xl font-bold font-serif text-gfa-inkBlack mb-4">
                     {isEn ? "Submission & Eligibility" : "报名指南与获奖资格"}
                  </h2>
-                 <p className="text-gfa-slate text-lg font-light max-w-2xl mx-auto">
+                 <p className="text-gfa-slate text-lg font-light max-w-2xl mx-auto leading-relaxed">
                     {isEn 
                       ? "Ready to present your work to exactly the audience you've been looking for?" 
                       : "准备好向世界展现您的杰作了吗？请仔细阅读下方的赛事资格及报名要求。"}

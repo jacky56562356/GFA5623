@@ -44,7 +44,7 @@ const FamilyGuide: React.FC = () => {
             src="https://wsrv.nl/?url=i.ibb.co%2FF4jckgZp%2FChat-GPT-Image-2026-1-25-15-29-13.png&w=1200&output=webp" 
             alt="Family reviewing a script" 
             className="w-full h-full object-cover opacity-30 mix-blend-luminosity" 
-           width="1200" height="800" />
+           width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
           <div className="absolute inset-0 bg-gradient-to-t from-gfa-inkBlack via-gfa-inkBlack/50 to-transparent"></div>
         </div>
 
@@ -201,7 +201,7 @@ const FamilyGuide: React.FC = () => {
 
                {/* College / Grad */}
                <div className="bg-[#F5F2EE] rounded-3xl p-8 md:p-12 border border-[#C9A84C]/20 relative">
-                  <div className="absolute top-0 right-0 bg-gfa-inkBlack text-white font-bold font-serif text-sm tracking-widest uppercase px-6 py-3 rounded-bl-3xl rounded-tr-3xl">Grad</div>
+                  <div className="absolute top-0 right-0 bg-gfa-inkBlack text-white font-bold font-serif text-sm tracking-widest uppercase px-6 py-3 rounded-bl-3xl rounded-tr-3xl">{/* [中文内容待填入] */} Grad </div>
                   <h3 className="text-2xl font-bold font-serif mb-3 text-gfa-inkBlack flex items-center gap-3">
                     <GraduationCap className="text-gfa-inkBlack w-6 h-6"/> {isEn ? "Professional Launcher" : "大学 / 毕业阶段"}
                   </h3>

@@ -11,7 +11,7 @@ const YouthSafetyPolicy: React.FC = () => {
       <div className="container-gfa">
         {/* Header */}
         <header className="mb-3 text-center max-w-4xl mx-auto">
-          <span className="gold-badge mb-4">Statutory Safety Act</span>
+          <span className="gold-badge mb-4">{/* [中文内容待填入] */} Statutory Safety Act </span>
           <h1 className="text-4xl md:text-5xl font-bold font-serif text-gfa-inkBlack mb-5 leading-tight">
             {p.title}
           </h1>
@@ -40,7 +40,7 @@ const YouthSafetyPolicy: React.FC = () => {
           {/* Dedicated Youth Privacy Section */}
           <section className="bg-gfa-inkBlack text-white p-8 md:p-12 rounded-card relative overflow-hidden">
              <div className="absolute top-0 right-0 w-32 h-32 bg-gfa-gold/10 blur-3xl"></div>
-             <h3 className="text-2xl font-bold font-serif text-gfa-gold mb-4">Youth Privacy & Data Ethics</h3>
+             <h3 className="text-2xl font-bold font-serif text-gfa-gold mb-4">{/* [中文内容待填入] */} Youth Privacy & Data Ethics </h3>
              <div className="space-y-3 text-sm leading-relaxed opacity-70 italic font-medium">
                 <p>• Zero Storage Policy: GFA does not maintain permanent digital databases of minor identification. Verification is performed in real-time and purged within 24 hours of audit completion.</p>
                 <p>• COPPA & GDPR-K Compliance: All participating agencies must adhere to the Children's Online Privacy Protection Act and equivalent global standards regarding digital signatures and consent.</p>
@@ -52,7 +52,7 @@ const YouthSafetyPolicy: React.FC = () => {
         {/* Official Disclaimer Footer */}
         <div className="mt-3 pt-4 border-t border-gfa-border text-center max-w-4xl mx-auto">
           <div className="bg-white border border-gfa-border p-10 mb-3 text-left shadow-inner">
-            <h4 className="text-[11px] font-black uppercase tracking-[0.4em] text-red-600 mb-3 border-b border-gfa-border pb-4">Mandatory Legal Notice</h4>
+            <h4 className="text-[11px] font-black uppercase tracking-[0.4em] text-red-600 mb-3 border-b border-gfa-border pb-4">{/* [中文内容待填入] */} Mandatory Legal Notice </h4>
             <p className="text-[12px] text-gfa-slate leading-loose font-bold italic">
               {t.disclaimer.statutory}
             </p>

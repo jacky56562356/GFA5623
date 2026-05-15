@@ -182,7 +182,7 @@ export const AuthModal: React.FC = () => {
                 />
                 <label htmlFor="terms" className="text-xs text-gfa-slate leading-tight">
                   {isEn ? (
-                    <>I agree to the <a href="/policy" className="text-[#C9A84C] hover:underline" target="_blank">Terms of Service</a> and <a href="/privacy" className="text-[#C9A84C] hover:underline" target="_blank">Privacy Policy</a>.</>
+                    <>{/* [中文内容待填入] */} I agree to the <a href="/policy" className="text-[#C9A84C] hover:underline" target="_blank">{/* [中文内容待填入] */} Terms of Service </a>{/* [中文内容待填入] */} and <a href="/privacy" className="text-[#C9A84C] hover:underline" target="_blank">{/* [中文内容待填入] */} Privacy Policy </a>.</>
                   ) : (
                     <>我同意 <a href="/policy" className="text-[#C9A84C] hover:underline" target="_blank">服务条款</a> 和 <a href="/privacy" className="text-[#C9A84C] hover:underline" target="_blank">隐私政策</a>。</>
                   )}

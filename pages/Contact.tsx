@@ -39,7 +39,7 @@ const Contact: React.FC = () => {
           src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1497366216548-37526070297c%3Fq%3D80%26w%3D2069%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" 
           alt="Office Background" 
           className="w-full h-full object-cover grayscale opacity-30"
-         width="1200" height="800" />
+         width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gfa-warmWhite z-20"></div>
       </div>
 
@@ -74,11 +74,11 @@ const Contact: React.FC = () => {
             <div className="pt-4 border-t border-gfa-border space-y-5 bg-white/50 p-10 rounded-[40px] backdrop-blur-xl shadow-2xl animate-fade-up delay-200">
               <div>
                 <h4 className="text-gfa-slate font-bold uppercase text-[10px] tracking-[0.4em] mb-4 opacity-50">{labels.inquiries}</h4>
-                <p className="text-gfa-inkBlack font-bold text-lg font-serif italic">general@gfa-alliance.org</p>
+                <p className="text-gfa-inkBlack font-bold text-lg font-serif italic">{/* [中文内容待填入] */} general@gfa-alliance.org </p>
               </div>
               <div>
                 <h4 className="text-gfa-slate font-bold uppercase text-[10px] tracking-[0.4em] mb-4 opacity-50">{labels.press}</h4>
-                <p className="text-gfa-inkBlack font-bold text-lg font-serif italic">media@gfa-alliance.org</p>
+                <p className="text-gfa-inkBlack font-bold text-lg font-serif italic">{/* [中文内容待填入] */} media@gfa-alliance.org </p>
               </div>
             </div>
           </div>

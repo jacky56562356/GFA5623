@@ -20,7 +20,7 @@ const Awards: React.FC = () => {
             src="https://wsrv.nl/?url=i.ibb.co%2FpjRZK2vm%2FGemini-Generated-Image-k7a54jk7a54jk7a5-1.png&w=1200&output=webp" 
             alt="Awards Ceremony" 
             className="w-full h-full object-cover object-[center_20%] opacity-90" 
-           width="1200" height="800" />
+           width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
           <div className="absolute inset-0 bg-gradient-to-t from-gfa-inkBlack/80 via-gfa-inkBlack/40 to-transparent"></div>
         </div>
 
@@ -77,11 +77,14 @@ const Awards: React.FC = () => {
         
         {/* Global Distribution & Platform Value */}
         <section>
-          <div className="text-center mb-3">
-            <h2 className="text-4xl font-bold font-serif text-gfa-inkBlack mb-3">
+          <div className="text-center mb-10">
+            <div className="w-16 h-16 bg-[#F5F2EE] rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm border border-[#C9A84C]/20 text-[#C9A84C]">
+               <Globe className="w-8 h-8" />
+            </div>
+            <h2 className="text-4xl lg:text-5xl font-bold font-serif text-gfa-inkBlack mb-4">
               {isEn ? "Opportunities & Industry Platform" : "机遇与产业平台整合"}
             </h2>
-            <p className="text-gfa-slate max-w-2xl mx-auto text-lg">
+            <p className="text-gfa-slate max-w-2xl mx-auto text-lg font-light leading-relaxed">
                {isEn ? "Participants and winners access a comprehensive ecosystem designed to launch film careers." : "参赛者与获奖者将进入一个旨在正式开启其电影职业生涯的全面生态系统。"}
             </p>
           </div>
@@ -151,12 +154,14 @@ const Awards: React.FC = () => {
 
         {/* Ceremony Format & Timeline */}
         <section className="bg-white p-10 lg:p-16 rounded-[40px] shadow-sm border border-gray-100 my-5">
-           <div className="text-center mb-4">
-             <h2 className="text-4xl font-bold font-serif text-gfa-inkBlack mb-4 flex justify-center items-center gap-4">
-                <Sparkles className="w-10 h-10 text-[#C9A84C]" />
+           <div className="text-center mb-10">
+             <div className="w-16 h-16 bg-[#F5F2EE] rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm border border-[#C9A84C]/20 text-[#C9A84C]">
+                <Sparkles className="w-8 h-8" />
+             </div>
+             <h2 className="text-4xl lg:text-5xl font-bold font-serif text-gfa-inkBlack mb-4">
                 {isEn ? "Open to filmmakers worldwide" : "向全球创作者开放"}
              </h2>
-             <p className="text-gfa-slate max-w-2xl mx-auto text-lg font-light">
+             <p className="text-gfa-slate max-w-2xl mx-auto text-lg font-light leading-relaxed">
                 {isEn ? "An unforgettable Hollywood experience connecting rising stars with industry legends." : "一次难忘的好莱坞盛典体验，将冉冉升起的新星与行业传奇紧密相连。"}
              </p>
            </div>
@@ -176,7 +181,7 @@ const Awards: React.FC = () => {
                        <div className="w-16 h-16 bg-[#C9A84C] rounded-full flex items-center justify-center text-white font-bold font-serif text-xl border-4 border-white shadow-lg">01</div>
                     </div>
                     <div className="md:w-5/12 text-center md:text-left">
-                       <img loading="lazy"  src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1626814026160-2237a95fc5a0%3Fq%3D80%26w%3D2070%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" className="rounded-3xl w-full h-48 object-cover shadow-md mx-auto" alt="Red Carpet"  width="1200" height="800" />
+                       <img loading="lazy"  src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1626814026160-2237a95fc5a0%3Fq%3D80%26w%3D2070%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" className="rounded-3xl w-full h-48 object-cover shadow-md mx-auto" alt="Red Carpet"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
                     </div>
                  </div>
 
@@ -190,7 +195,7 @@ const Awards: React.FC = () => {
                        <div className="w-16 h-16 bg-[#C9A84C] rounded-full flex items-center justify-center text-white font-bold font-serif text-xl border-4 border-white shadow-lg">02</div>
                     </div>
                     <div className="md:w-5/12 text-center md:text-right">
-                       <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co%2FLHxHQZp%2FGemini-Generated-Image-1t721i1t721i1t72.png&w=1200&output=webp" className="rounded-3xl w-full h-48 object-cover shadow-md mx-auto" alt="Premiere"  width="1200" height="800" />
+                       <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co%2FLHxHQZp%2FGemini-Generated-Image-1t721i1t721i1t72.png&w=1200&output=webp" className="rounded-3xl w-full h-48 object-cover shadow-md mx-auto" alt="Premiere"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
                     </div>
                  </div>
 
@@ -204,7 +209,7 @@ const Awards: React.FC = () => {
                        <div className="w-16 h-16 bg-[#C9A84C] rounded-full flex items-center justify-center text-white font-bold font-serif text-xl border-4 border-white shadow-lg">03</div>
                     </div>
                     <div className="md:w-5/12 text-center md:text-left">
-                       <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co%2FpBntWWRc%2FGemini-Generated-Image-x5h15zx5h15zx5h1.png&w=1200&output=webp" className="rounded-3xl w-full h-48 object-cover shadow-md mx-auto" alt="Presentation"  width="1200" height="800" />
+                       <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co%2FpBntWWRc%2FGemini-Generated-Image-x5h15zx5h15zx5h1.png&w=1200&output=webp" className="rounded-3xl w-full h-48 object-cover shadow-md mx-auto" alt="Presentation"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
                     </div>
                  </div>
 
@@ -218,7 +223,7 @@ const Awards: React.FC = () => {
                        <div className="w-16 h-16 bg-[#C9A84C] rounded-full flex items-center justify-center text-white font-bold font-serif text-xl border-4 border-white shadow-lg">04</div>
                     </div>
                     <div className="md:w-5/12 text-center md:text-right">
-                       <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1511795409834-ef04bbd61622%3Fq%3D80%26w%3D2069%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" className="rounded-3xl w-full h-48 object-cover shadow-md mx-auto" alt="Networking"  width="1200" height="800" />
+                       <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1511795409834-ef04bbd61622%3Fq%3D80%26w%3D2069%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" className="rounded-3xl w-full h-48 object-cover shadow-md mx-auto" alt="Networking"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
                     </div>
                  </div>
               </div>
@@ -227,12 +232,14 @@ const Awards: React.FC = () => {
 
         {/* Award Categories */}
         <section className="bg-gfa-inkBlack text-white rounded-[40px] p-10 lg:p-16 shadow-xl border border-gray-800">
-           <div className="text-center mb-3">
-             <h2 className="text-4xl lg:text-5xl font-bold font-serif mb-4 flex justify-center items-center gap-4">
-                <Trophy className="w-10 h-10 lg:w-12 lg:h-12 text-[#C9A84C]" />
+           <div className="text-center mb-10">
+             <div className="w-16 h-16 bg-[#333333] rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm border border-[#C9A84C]/20 text-[#C9A84C]">
+                <Trophy className="w-8 h-8" />
+             </div>
+             <h2 className="text-4xl lg:text-5xl font-bold font-serif mb-4">
                 {isEn ? "The Complete Golden Feather Awards System" : "GFA金羽奖完整奖项方案"}
              </h2>
-             <p className="text-white/70 max-w-2xl mx-auto text-lg font-light">
+             <p className="text-white/70 max-w-2xl mx-auto text-lg font-light leading-relaxed">
                 {isEn ? "Recognizing excellence across all disciplines of filmmaking." : "表彰电影制作各个领域的卓越成就，涵盖长短片及各项核心技术。"}
              </p>
            </div>
@@ -415,16 +422,20 @@ const Awards: React.FC = () => {
         </section>
 
         {/* Judging & Selection Process */}
-        <section className="bg-white text-gfa-inkBlack rounded-[40px] p-10 lg:p-16 shadow-sm border border-gray-100">
+        <section className="bg-white text-gfa-inkBlack rounded-[40px] p-10 lg:p-16 shadow-sm border border-gray-100 mt-5">
            <div className="relative z-10">
-              <h2 className="text-4xl font-bold font-serif mb-5 text-center">
-                {isEn ? "Evaluation Criteria & Selection Model" : "评奖标准与评选模式"}
-              </h2>
+              <div className="text-center mb-10">
+                 <div className="w-16 h-16 bg-[#F5F2EE] rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm border border-[#C9A84C]/20 text-[#C9A84C]">
+                    <CheckCircle className="w-8 h-8" />
+                 </div>
+                 <h2 className="text-4xl lg:text-5xl font-bold font-serif mb-4">
+                   {isEn ? "Evaluation Criteria & Selection Model" : "评奖标准与评选模式"}
+                 </h2>
+              </div>
 
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
                  <div>
-                    <h3 className="text-2xl font-bold mb-3 flex items-center gap-3">
-                       <CheckCircle className="w-8 h-8 text-[#C9A84C]" />
+                    <h3 className="text-2xl font-bold mb-3 flex items-center gap-3 border-b border-gray-100 pb-3">
                        {isEn ? "Evaluation Criteria" : "评奖标准"}
                     </h3>
                     <ul className="space-y-3">
@@ -453,8 +464,7 @@ const Awards: React.FC = () => {
                  </div>
 
                  <div>
-                    <h3 className="text-2xl font-bold mb-3 flex items-center gap-3">
-                       <Star className="w-8 h-8 text-[#C9A84C]" />
+                    <h3 className="text-2xl font-bold mb-3 flex items-center gap-3 border-b border-gray-100 pb-3">
                        {isEn ? "Selection Model" : "评选模式"}
                     </h3>
                     <div className="space-y-4">
@@ -575,7 +585,7 @@ const Awards: React.FC = () => {
                  </Link>
                  <div className="relative z-10 border-t border-[#C9A84C]/20 pt-6">
                     <p className="text-sm text-gfa-slate uppercase tracking-widest font-bold">
-                       {isEn ? "Questions? Contact us:" : "有疑问？联系我们："} <a href="mailto:info@gfafilm.org" className="text-[#C9A84C] hover:underline">info@gfafilm.org</a>
+                       {isEn ? "Questions? Contact us:" : "有疑问？联系我们："} <a href="mailto:info@gfafilm.org" className="text-[#C9A84C] hover:underline">{/* [中文内容待填入] */} info@gfafilm.org </a>
                     </p>
                  </div>
               </div>

@@ -249,7 +249,7 @@ export default function ShortDrama() {
       {/* Hero Section */}
       <section className="relative pt-16 pb-8 lg:pt-24 lg:pb-12 border-b border-[#252525] bg-gradient-to-b from-[#0A0A0A] via-[#1A1208] to-[#0A0A0A] overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-50">
-           <img fetchPriority="high"  src="https://wsrv.nl/?url=i.ibb.co%2FfdnnyXHm%2FGemini-Generated-Image-vzmo29vzmo29vzmo-1.png&w=1200&output=webp" referrerPolicy="no-referrer" className="w-full h-full object-cover mix-blend-screen" alt="Hero background"  width="1200" height="800" />
+           <img fetchPriority="high"  src="https://wsrv.nl/?url=i.ibb.co%2FfdnnyXHm%2FGemini-Generated-Image-vzmo29vzmo29vzmo-1.png&w=1200&output=webp" referrerPolicy="no-referrer" className="w-full h-full object-cover mix-blend-screen" alt="Hero background"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
            <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-[#0A0A0A]"></div>
         </div>
         
@@ -260,10 +260,11 @@ export default function ShortDrama() {
           <div className="inline-block border border-[#C9A84C] px-5 py-2 rounded-sm mb-6 bg-[#0A0A0A]/50 backdrop-blur-md">
             <div className="text-[10px] text-[#C9A84C] tracking-[0.3em] font-bold uppercase">GLOBAL FILM ALLIANCE · GOLDEN FEATHER AWARDS 2026</div>
           </div>
-          <h1 className="text-4xl md:text-6xl lg:text-[72px] font-bold font-serif text-white mb-6 leading-tight drop-shadow-2xl">
-            <span className="text-[#C9A84C]">SHORT DRAMA</span><br className="hidden md:block"/> SHOWCASE
+          <h1 className="text-4xl md:text-6xl lg:text-[72px] font-bold font-serif text-white mb-6 leading-tight drop-shadow-2xl flex flex-col items-center justify-center">
+            <span className="text-[#C9A84C] block">{/* [中文内容待填入] */} SHORT DRAMA </span>
+            <span className="block">{/* [中文内容待填入] */} SHOWCASE </span>
           </h1>
-          <p className="text-xs md:text-sm tracking-[0.4em] text-[#C9A84C] uppercase font-bold mb-4">Where Stories Meet Platforms</p>
+          <p className="text-xs md:text-sm tracking-[0.4em] text-[#C9A84C] uppercase font-bold mb-6 pl-[0.4em]">{/* [中文内容待填入] */} Where Stories Meet Platforms </p>
           <p className="text-base md:text-lg text-[#CCCCCC] font-light md:w-3/4 mx-auto mb-12 leading-relaxed">
             {isEn 
              ? "The Short Drama Showcase is a special featured category of the Golden Feather Awards, running synchronously with the main ceremony. It's a dedicated platform designed for production companies, creators, and distribution platforms to showcase their work, discover new talent, and forge strategic partnerships. From Hollywood to Asia—we bridge high-quality short drama content with global distribution." 
@@ -327,7 +328,7 @@ export default function ShortDrama() {
                </div>
                <div className="relative">
                   <div className="absolute inset-0 bg-[#C9A84C]/10 rounded-[20px] transform translate-x-3 translate-y-3 md:translate-x-6 md:translate-y-6"></div>
-                  <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1556761175-5973dc0f32d7%3Fq%3D80%26w%3D2670%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" referrerPolicy="no-referrer" alt="Partnership" className="relative rounded-[20px] shadow-2xl w-full h-[350px] md:h-[450px] object-cover border border-[#333] z-10"  width="1200" height="800" />
+                  <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1556761175-5973dc0f32d7%3Fq%3D80%26w%3D2670%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" referrerPolicy="no-referrer" alt="Partnership" className="relative rounded-[20px] shadow-2xl w-full h-[350px] md:h-[450px] object-cover border border-[#333] z-10"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
                </div>
             </div>
 
@@ -457,7 +458,7 @@ export default function ShortDrama() {
             <section id="step1">
                <SectionTitle step="1" en="Category Submissions" zh="选择参赛类别" />
                <div className="mb-4 overflow-hidden rounded-[20px]">
-                  <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1485846234645-a62644f84728%3Fq%3D80%26w%3D2670%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" referrerPolicy="no-referrer" alt="Filmmaking" className="w-full h-48 object-cover opacity-60 border border-[#252525] rounded-[20px]"  width="1200" height="800" />
+                  <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1485846234645-a62644f84728%3Fq%3D80%26w%3D2670%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" referrerPolicy="no-referrer" alt="Filmmaking" className="w-full h-48 object-cover opacity-60 border border-[#252525] rounded-[20px]"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
                </div>
 
                {/* Registration Details */}
@@ -622,7 +623,7 @@ export default function ShortDrama() {
                </div>
 
                <div className="mb-6 overflow-hidden rounded-[20px]">
-                  <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1540575467063-178a50c2df87%3Fq%3D80%26w%3D2670%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" referrerPolicy="no-referrer" alt="Exhibition Area" className="w-full h-48 object-cover opacity-60 border border-[#252525] rounded-[20px]"  width="1200" height="800" />
+                  <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1540575467063-178a50c2df87%3Fq%3D80%26w%3D2670%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" referrerPolicy="no-referrer" alt="Exhibition Area" className="w-full h-48 object-cover opacity-60 border border-[#252525] rounded-[20px]"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
                </div>
 
                <div className="grid grid-cols-1 gap-6">
@@ -698,7 +699,7 @@ export default function ShortDrama() {
                   <div>
                     <h3 className="text-base font-serif text-[#C9A84C] mb-3 border-b border-[#252525] pb-1">{isEn ? 'Digital & Website' : '数字端官网广告'}</h3>
                     <div className="mb-4 overflow-hidden rounded-[16px]">
-                      <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1551288049-bebda4e38f71%3Fq%3D80%26w%3D2670%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" referrerPolicy="no-referrer" alt="Digital Display" className="w-full h-32 object-cover opacity-60 border border-[#252525] rounded-[16px]"  width="1200" height="800" />
+                      <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1551288049-bebda4e38f71%3Fq%3D80%26w%3D2670%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" referrerPolicy="no-referrer" alt="Digital Display" className="w-full h-32 object-cover opacity-60 border border-[#252525] rounded-[16px]"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
                     </div>
                     <div className="grid grid-cols-1 gap-3 mb-2">
                       {ITEM_CATALOG.ads_web.map((item: any) => (
@@ -709,7 +710,7 @@ export default function ShortDrama() {
                               <svg width="280" height="80" viewBox="0 0 280 80">
                                  <rect x="0" y="0" width="280" height="80" fill="#2A2A2A" rx="4"/>
                                  <rect x="0" y="0" width="280" height="12" fill="#111" rx="4"/>
-                                 <text x="140" y="9" textAnchor="middle" fill="#888" fontSize="7" fontFamily="sans-serif">Website Navbar</text>
+                                 <text x="140" y="9" textAnchor="middle" fill="#888" fontSize="7" fontFamily="sans-serif">{/* [中文内容待填入] */} Website Navbar </text>
                                  <rect x="10" y="18" width="260" height="24" fill="#3A2A1A" stroke="#C9A84C" strokeWidth="1" strokeDasharray="2"/>
                                  <text x="140" y="32" textAnchor="middle" fill="#C9A84C" fontSize="9">Hero Banner Ad (1920x400px)</text>
                                  <rect x="10" y="50" width="160" height="20" fill="#222"/>
@@ -723,7 +724,7 @@ export default function ShortDrama() {
                                  <rect x="0" y="0" width="280" height="80" fill="#2A2A2A" rx="4"/>
                                  <rect x="10" y="10" width="160" height="60" fill="#222"/>
                                  <rect x="180" y="10" width="90" height="40" fill="#3A2A1A" stroke="#C9A84C" strokeWidth="1" strokeDasharray="2"/>
-                                 <text x="225" y="26" textAnchor="middle" fill="#C9A84C" fontSize="9">Sidebar Ad</text>
+                                 <text x="225" y="26" textAnchor="middle" fill="#C9A84C" fontSize="9">{/* [中文内容待填入] */} Sidebar Ad </text>
                                  <text x="225" y="38" textAnchor="middle" fill="#888" fontSize="7">300x250px</text>
                               </svg>
                             </div>
@@ -738,9 +739,9 @@ export default function ShortDrama() {
                     <h3 className="text-base font-serif text-[#C9A84C] mb-3 border-b border-[#252525] pb-1">{isEn ? 'Ceremony Onsite' : '颁奖典礼现场广告'}</h3>
                     
                     <div className="mb-4 overflow-hidden rounded-[16px] relative">
-                      <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1517604931442-7e0c8ed2963c%3Fq%3D80%26w%3D2670%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" referrerPolicy="no-referrer" alt="Onsite Billboard" className="w-full h-32 object-cover opacity-60 border border-[#252525] rounded-[16px]"  width="1200" height="800" />
+                      <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1517604931442-7e0c8ed2963c%3Fq%3D80%26w%3D2670%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" referrerPolicy="no-referrer" alt="Onsite Billboard" className="w-full h-32 object-cover opacity-60 border border-[#252525] rounded-[16px]"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
                       <div className="absolute inset-0 flex items-center justify-center">
-                         <div className="font-serif text-[#C9A84C] uppercase font-bold tracking-widest px-3 py-1.5 bg-black/60 backdrop-blur-sm border border-[#C9A84C]/30 rounded text-xs">Premium Placements</div>
+                         <div className="font-serif text-[#C9A84C] uppercase font-bold tracking-widest px-3 py-1.5 bg-black/60 backdrop-blur-sm border border-[#C9A84C]/30 rounded text-xs">{/* [中文内容待填入] */} Premium Placements </div>
                       </div>
                     </div>
 
@@ -753,7 +754,7 @@ export default function ShortDrama() {
                               <svg width="280" height="80" viewBox="0 0 280 80">
                                  <rect x="20" y="10" width="240" height="45" fill="#222" stroke="#333" strokeWidth="2"/>
                                  <rect x="40" y="15" width="200" height="30" fill="#3A2A1A" stroke="#C9A84C" strokeWidth="1"/>
-                                 <text x="140" y="32" textAnchor="middle" fill="#C9A84C" fontSize="9" fontWeight="bold">Main Stage Backdrop Logo</text>
+                                 <text x="140" y="32" textAnchor="middle" fill="#C9A84C" fontSize="9" fontWeight="bold">{/* [中文内容待填入] */} Main Stage Backdrop Logo </text>
                                  <path d="M 120 55 L 160 55 L 150 75 L 130 75 Z" fill="#444"/>
                                  <rect x="40" y="75" width="200" height="5" fill="#8B6914"/>
                               </svg>
@@ -763,7 +764,7 @@ export default function ShortDrama() {
                             <div className="mt-2 bg-[#111] border border-[#252525] rounded-lg p-3 flex justify-center items-center overflow-x-auto">
                               <svg width="280" height="60" viewBox="0 0 280 60">
                                  <rect x="40" y="5" width="200" height="20" fill="#3A2A1A" stroke="#C9A84C" strokeWidth="1" strokeDasharray="2"/>
-                                 <text x="140" y="18" textAnchor="middle" fill="#C9A84C" fontSize="8">Entrance Overhead Banner</text>
+                                 <text x="140" y="18" textAnchor="middle" fill="#C9A84C" fontSize="8">{/* [中文内容待填入] */} Entrance Overhead Banner </text>
                                  <rect x="40" y="25" width="10" height="35" fill="#333"/>
                                  <rect x="230" y="25" width="10" height="35" fill="#333"/>
                                  <rect x="80" y="35" width="120" height="25" fill="#222"/>
@@ -775,7 +776,7 @@ export default function ShortDrama() {
                               <svg width="280" height="80" viewBox="0 0 280 80">
                                  <rect x="20" y="10" width="240" height="50" rx="4" fill="#1A1A1A" stroke="#444" strokeWidth="2"/>
                                  <rect x="30" y="20" width="220" height="30" fill="#3A2A1A" stroke="#C9A84C" strokeWidth="1"/>
-                                 <text x="140" y="38" textAnchor="middle" fill="#C9A84C" fontSize="9" fontWeight="bold">Big Screen Rolling Ad</text>
+                                 <text x="140" y="38" textAnchor="middle" fill="#C9A84C" fontSize="9" fontWeight="bold">{/* [中文内容待填入] */} Big Screen Rolling Ad </text>
                                  <rect x="130" y="60" width="20" height="15" fill="#333"/>
                                  <rect x="100" y="75" width="80" height="5" fill="#555"/>
                               </svg>
@@ -786,7 +787,7 @@ export default function ShortDrama() {
                               <svg width="280" height="80" viewBox="0 0 280 80">
                                  <rect x="20" y="10" width="240" height="40" fill="#222" stroke="#444" strokeWidth="2"/>
                                  <text x="140" y="24" textAnchor="middle" fill="#C9A84C" fontSize="8">Red Carpet Backdrop (Step & Repeat)</text>
-                                 <text x="140" y="38" textAnchor="middle" fill="#E8C97A" fontSize="6">Logo Logo Logo Logo Logo Logo</text>
+                                 <text x="140" y="38" textAnchor="middle" fill="#E8C97A" fontSize="6">{/* [中文内容待填入] */} Logo Logo Logo Logo Logo Logo </text>
                                  <rect x="20" y="60" width="240" height="15" fill="#501A1A"/>
                                  <text x="140" y="70" textAnchor="middle" fill="#FAA" fontSize="7">&lt;── Red Carpet ──&gt;</text>
                               </svg>
@@ -801,7 +802,7 @@ export default function ShortDrama() {
                   <div>
                     <h3 className="text-base font-serif text-[#C9A84C] mb-3 border-b border-[#252525] pb-1">{isEn ? 'Official Program Book' : '官方节目印刷册'}</h3>
                     <div className="mb-4 overflow-hidden rounded-[16px]">
-                      <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1552596205-db43df024090%3Fq%3D80%26w%3D2670%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" referrerPolicy="no-referrer" alt="Program Book" className="w-full h-32 object-cover opacity-60 border border-[#252525] rounded-[16px]"  width="1200" height="800" />
+                      <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1552596205-db43df024090%3Fq%3D80%26w%3D2670%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" referrerPolicy="no-referrer" alt="Program Book" className="w-full h-32 object-cover opacity-60 border border-[#252525] rounded-[16px]"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
                     </div>
                     <div className="grid grid-cols-1 gap-3">
                       {ITEM_CATALOG.ads_book.map((item: any) => (
@@ -811,8 +812,8 @@ export default function ShortDrama() {
                             <div className="mt-2 bg-[#111] border border-[#252525] rounded-lg p-3 flex justify-center items-center overflow-x-auto">
                                <svg width="100" height="140" viewBox="0 0 100 140">
                                  <rect x="5" y="5" width="90" height="130" fill="#3A2A1A" stroke="#C9A84C" strokeWidth="2"/>
-                                 <text x="50" y="65" textAnchor="middle" fill="#C9A84C" fontSize="10">Cover Ad</text>
-                                 <text x="50" y="80" textAnchor="middle" fill="#888" fontSize="8">Full Page</text>
+                                 <text x="50" y="65" textAnchor="middle" fill="#C9A84C" fontSize="10">{/* [中文内容待填入] */} Cover Ad </text>
+                                 <text x="50" y="80" textAnchor="middle" fill="#888" fontSize="8">{/* [中文内容待填入] */} Full Page </text>
                                </svg>
                             </div>
                            )}
@@ -821,7 +822,7 @@ export default function ShortDrama() {
                                <svg width="100" height="140" viewBox="0 0 100 140">
                                  <rect x="5" y="5" width="90" height="130" fill="#111" stroke="#444" strokeWidth="1"/>
                                  <rect x="5" y="5" width="90" height="60" fill="#3A2A1A" stroke="#C9A84C" strokeWidth="1" strokeDasharray="2"/>
-                                 <text x="50" y="40" textAnchor="middle" fill="#C9A84C" fontSize="10">Half Page Ad</text>
+                                 <text x="50" y="40" textAnchor="middle" fill="#C9A84C" fontSize="10">{/* [中文内容待填入] */} Half Page Ad </text>
                                  <rect x="15" y="80" width="70" height="5" fill="#333"/>
                                  <rect x="15" y="90" width="50" height="5" fill="#333"/>
                                </svg>
@@ -838,7 +839,7 @@ export default function ShortDrama() {
             <section id="step4">
                <SectionTitle step="4" en="Poster & Brand Exhibitions" zh="海报与专区展示" />
                <div className="mb-4 overflow-hidden rounded-[16px]">
-                  <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1531259683007-016a7b628fc3%3Fq%3D80%26w%3D2670%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" referrerPolicy="no-referrer" alt="Gallery" className="w-full h-32 object-cover opacity-60 border border-[#252525] rounded-[16px]"  width="1200" height="800" />
+                  <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1531259683007-016a7b628fc3%3Fq%3D80%26w%3D2670%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" referrerPolicy="no-referrer" alt="Gallery" className="w-full h-32 object-cover opacity-60 border border-[#252525] rounded-[16px]"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
                </div>
                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                  {ITEM_CATALOG.posters.map((item: any) => (
@@ -851,16 +852,16 @@ export default function ShortDrama() {
                  <svg width="400" height="120" viewBox="0 0 400 120">
                     <rect x="0" y="0" width="400" height="120" fill="none" stroke="#222" strokeWidth="2"/>
                     <rect x="20" y="20" width="40" height="60" fill="#1A1A1A" stroke="#555" strokeWidth="1"/>
-                    <text x="40" y="55" textAnchor="middle" fill="#888" fontSize="8">Poster</text>
+                    <text x="40" y="55" textAnchor="middle" fill="#888" fontSize="8">{/* [中文内容待填入] */} Poster </text>
                     <rect x="70" y="20" width="40" height="60" fill="#1A1A1A" stroke="#555" strokeWidth="1"/>
-                    <text x="90" y="55" textAnchor="middle" fill="#888" fontSize="8">Poster</text>
+                    <text x="90" y="55" textAnchor="middle" fill="#888" fontSize="8">{/* [中文内容待填入] */} Poster </text>
                     
                     <rect x="140" y="20" width="80" height="60" fill="#2A2A2A" stroke="#8B6914" strokeWidth="1"/>
-                    <text x="180" y="45" textAnchor="middle" fill="#C9A84C" fontSize="8">Poster + Synopsis</text>
-                    <text x="180" y="60" textAnchor="middle" fill="#888" fontSize="6">Info Panel</text>
+                    <text x="180" y="45" textAnchor="middle" fill="#C9A84C" fontSize="8">{/* [中文内容待填入] */} Poster + Synopsis </text>
+                    <text x="180" y="60" textAnchor="middle" fill="#888" fontSize="6">{/* [中文内容待填入] */} Info Panel </text>
                     
                     <rect x="240" y="20" width="140" height="60" fill="#3A2A1A" stroke="#C9A84C" strokeWidth="1"/>
-                    <text x="310" y="50" textAnchor="middle" fill="#C9A84C" fontSize="9" fontWeight="bold">Brand Display Wall</text>
+                    <text x="310" y="50" textAnchor="middle" fill="#C9A84C" fontSize="9" fontWeight="bold">{/* [中文内容待填入] */} Brand Display Wall </text>
                     <text x="310" y="65" textAnchor="middle" fill="#E8C97A" fontSize="7">[Platform Logo] [Logo]</text>
                  </svg>
                </div>
@@ -870,7 +871,7 @@ export default function ShortDrama() {
             <section id="step5">
                <SectionTitle step="5" en="Production Team Pitch" zh="制作团队展示与路演(8分钟)" />
                <div className="mb-6 overflow-hidden rounded-[20px]">
-                  <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1559532297-c6a6f6fcd1bb%3Fq%3D80%26w%3D2670%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" referrerPolicy="no-referrer" alt="Pitch" className="w-full h-48 object-cover opacity-60 border border-[#252525] rounded-[20px]"  width="1200" height="800" />
+                  <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1559532297-c6a6f6fcd1bb%3Fq%3D80%26w%3D2670%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" referrerPolicy="no-referrer" alt="Pitch" className="w-full h-48 object-cover opacity-60 border border-[#252525] rounded-[20px]"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
                </div>
                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                  {ITEM_CATALOG.pitch.map(item => <CardItem key={item.id} item={item} />)}
@@ -939,7 +940,7 @@ export default function ShortDrama() {
             <section id="step6">
                <SectionTitle step="6" en="Sponsorship Packages" zh="官方赞助组合套餐" />
                <div className="mb-6 overflow-hidden rounded-[20px]">
-                  <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1561489422-45de3d015e3e%3Fq%3D80%26w%3D2670%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" referrerPolicy="no-referrer" alt="Event Package" className="w-full h-48 object-cover opacity-60 border border-[#252525] rounded-[20px]"  width="1200" height="800" />
+                  <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1561489422-45de3d015e3e%3Fq%3D80%26w%3D2670%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" referrerPolicy="no-referrer" alt="Event Package" className="w-full h-48 object-cover opacity-60 border border-[#252525] rounded-[20px]"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
                </div>
                <div className="mb-6 pl-4 border-l-2 border-[#C9A84C] bg-[#1A1A1A] p-4 text-sm text-gray-300 leading-relaxed rounded-r">
                   {isEn 
@@ -959,9 +960,7 @@ export default function ShortDrama() {
                            ${isSelected ? 'border-[#C9A84C] shadow-[0_0_20px_rgba(201,168,76,0.2)] bg-gradient-to-br from-[#1A1A1A] to-[#1A1208]' : 'border-[#333] hover:border-[#8B6914]'}`}
                        >
                          {pkg.isBestValue && (
-                           <div className="absolute top-0 right-0 bg-[#C9A84C] text-black text-[10px] font-bold px-3 py-1 uppercase tracking-widest rounded-bl-lg z-10 shadow-md">
-                             Best Value
-                           </div>
+                           <div className="absolute top-0 right-0 bg-[#C9A84C] text-black text-[10px] font-bold px-3 py-1 uppercase tracking-widest rounded-bl-lg z-10 shadow-md">{/* [中文内容待填入] */} Best Value </div>
                          )}
                          <div className="p-6 h-full flex flex-col relative z-0">
                             {isSelected && (
@@ -1103,8 +1102,7 @@ export default function ShortDrama() {
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
                <a href="mailto:jacky@gfafilm.org" className="flex items-center gap-2 text-white hover:text-[#C9A84C] font-mono tracking-wider transition-colors border-b border-transparent hover:border-[#C9A84C] pb-1">
-                 <Mail className="w-4 h-4" /> jacky@gfafilm.org
-               </a>
+                 <Mail className="w-4 h-4" />{/* [中文内容待填入] */} jacky@gfafilm.org </a>
                <span className="hidden sm:inline text-gray-600">|</span>
                <a href="tel:626-677-8017" className="flex items-center gap-2 text-white hover:text-[#C9A84C] font-mono tracking-wider transition-colors border-b border-transparent hover:border-[#C9A84C] pb-1">
                  <Smartphone className="w-4 h-4" /> 626-677-8017

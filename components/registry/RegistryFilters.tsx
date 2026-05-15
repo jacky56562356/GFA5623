@@ -50,7 +50,7 @@ export default function RegistryFilters({
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-3">
           <div className="md:col-span-12 lg:col-span-5">
-            <div className="text-[10px] text-gfa-slate font-black uppercase tracking-widest mb-3 px-1">Keywords / Institutional ID</div>
+            <div className="text-[10px] text-gfa-slate font-black uppercase tracking-widest mb-3 px-1">{/* [中文内容待填入] */} Keywords / Institutional ID </div>
             <input
               value={query.q || ""}
               onChange={(e) => setQuery((p) => ({ ...p, q: e.target.value }))}
@@ -68,7 +68,7 @@ export default function RegistryFilters({
               }
               className="w-full rounded-sm bg-gfa-warmWhite border border-gfa-border px-4 py-4 text-[11px] font-black uppercase tracking-widest text-gfa-inkBlack outline-none focus:border-gfa-gold transition-colors cursor-pointer"
             >
-              <option value="All">All Categories</option>
+              <option value="All">{/* [中文内容待填入] */} All Categories </option>
               {options.categories.map((c) => (
                 <option value={c} key={c}>{c}</option>
               ))}
@@ -84,10 +84,10 @@ export default function RegistryFilters({
               }
               className="w-full rounded-sm bg-gfa-warmWhite border border-gfa-border px-4 py-4 text-[11px] font-black uppercase tracking-widest text-gfa-inkBlack outline-none focus:border-gfa-gold transition-colors cursor-pointer"
             >
-              <option value="All">All Levels</option>
-              <option value="Verified">Verified</option>
-              <option value="Certified">Certified</option>
-              <option value="Accredited">Accredited</option>
+              <option value="All">{/* [中文内容待填入] */} All Levels </option>
+              <option value="Verified">{/* [中文内容待填入] */} Verified </option>
+              <option value="Certified">{/* [中文内容待填入] */} Certified </option>
+              <option value="Accredited">{/* [中文内容待填入] */} Accredited </option>
             </select>
           </div>
 
@@ -100,11 +100,11 @@ export default function RegistryFilters({
               }
               className="w-full rounded-sm bg-gfa-warmWhite border border-gfa-border px-4 py-4 text-[11px] font-black uppercase tracking-widest text-gfa-inkBlack outline-none focus:border-gfa-gold transition-colors cursor-pointer"
             >
-              <option value="All">All Statuses</option>
-              <option value="Active">Active</option>
-              <option value="Suspended">Suspended</option>
-              <option value="Expired">Expired</option>
-              <option value="Revoked">Revoked</option>
+              <option value="All">{/* [中文内容待填入] */} All Statuses </option>
+              <option value="Active">{/* [中文内容待填入] */} Active </option>
+              <option value="Suspended">{/* [中文内容待填入] */} Suspended </option>
+              <option value="Expired">{/* [中文内容待填入] */} Expired </option>
+              <option value="Revoked">{/* [中文内容待填入] */} Revoked </option>
             </select>
           </div>
         </div>

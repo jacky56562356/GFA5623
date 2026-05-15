@@ -53,9 +53,7 @@ export default function RegistryList({
     return (
       <div className="rounded-sm border border-white/5 bg-white/5 py-40 text-center shadow-4xl group">
         <div className="text-8xl mb-4 opacity-5 group-hover:opacity-10 transition-opacity duration-1000">🏛️</div>
-        <p className="text-[11px] text-white/20 uppercase tracking-[0.5em] font-black max-w-sm mx-auto">
-          No institutional records match your current criteria.
-        </p>
+        <p className="text-[11px] text-white/20 uppercase tracking-[0.5em] font-black max-w-sm mx-auto">{/* [中文内容待填入] */} No institutional records match your current criteria. </p>
       </div>
     );
   }

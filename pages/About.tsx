@@ -22,7 +22,7 @@ const About: React.FC = () => {
             src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1522071820081-009f0129c71c%3Fauto%3Dformat%26fit%3Dcrop%26w%3D2670%26q%3D80&w=1200&output=webp" 
             alt="Diverse team of young filmmakers" 
             className="w-full h-full object-cover opacity-50 mix-blend-luminosity" 
-           width="1200" height="800" />
+           width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
           <div className="absolute inset-0 bg-gradient-to-t from-gfa-inkBlack via-gfa-inkBlack/50 to-transparent"></div>
         </div>
 
@@ -55,7 +55,7 @@ const About: React.FC = () => {
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-100 h-80">
-               <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1600880292203-757bb62b4baf%3Fauto%3Dformat%26fit%3Dcrop%26w%3D1000%26q%3D80&w=1200&output=webp" alt="Film Team Working" className="w-full h-full object-cover"  width="1200" height="800" />
+               <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1600880292203-757bb62b4baf%3Fauto%3Dformat%26fit%3Dcrop%26w%3D1000%26q%3D80&w=1200&output=webp" alt="Film Team Working" className="w-full h-full object-cover"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
             </div>
           </div>
 
@@ -69,16 +69,8 @@ const About: React.FC = () => {
               <div className="text-gfa-slate font-light leading-relaxed text-lg">
                 {isEn ? (
                   <>
-                    <p className="mb-4">
-                      Talent should never disappear because opportunity never arrived.<br/>
-                      GFA opens the door for every child with a dream,<br/>
-                      helps every graduate find their place,<br/>
-                      and builds real careers for independent creators.
-                    </p>
-                    <p className="font-medium text-gfa-inkBlack">
-                      We don't offer one-time help.<br/>
-                      We offer a lifetime of support.
-                    </p>
+                    <p className="mb-4">{/* [中文内容待填入] */} Talent should never disappear because opportunity never arrived. <br/>{/* [中文内容待填入] */} GFA opens the door for every child with a dream, <br/>{/* [中文内容待填入] */} helps every graduate find their place, <br/>{/* [中文内容待填入] */} and builds real careers for independent creators. </p>
+                    <p className="font-medium text-gfa-inkBlack">{/* [中文内容待填入] */} We don't offer one-time help. <br/>{/* [中文内容待填入] */} We offer a lifetime of support. </p>
                   </>
                 ) : (
                   <>
@@ -121,7 +113,7 @@ const About: React.FC = () => {
                 {isEn ? (
                   <>
                     <p>"After years of working in Hollywood as a film producer, I have witnessed firsthand how this industry can simultaneously be the most magical place on earth — and one of the most difficult to enter.</p>
-                    <p>I have seen extraordinarily talented young filmmakers walk away — not because they lacked vision, not because they lacked passion, but because no one opened the door for them. No camera. No mentor. No platform willing to take a chance on them. That is the moment GFA was born in my heart.</p>
+                    <p>{/* [中文内容待填入] */} I have seen extraordinarily talented young filmmakers walk away — not because they lacked vision, not because they lacked passion, but because no one opened the door for them. No camera. No mentor. No platform willing to take a chance on them. That is the moment GFA was born in my heart. </p>
                     <p>I built GFA because I believe the future of cinema depends not on who has the most access today, but on who we choose to invest in tomorrow. I invite every filmmaker, educator, and industry professional who shares this belief to join us — because the next generation of storytellers is already out there, waiting for someone to believe in them."</p>
                   </>
                 ) : (
@@ -135,10 +127,10 @@ const About: React.FC = () => {
 
               <div className="flex flex-col sm:flex-row sm:items-center gap-5 border-t border-[#C9A84C]/20 pt-6">
                 <div className="w-20 h-20 md:w-24 md:h-24 shrink-0 rounded-full bg-gray-300 overflow-hidden border-2 border-[#C9A84C]">
-                  <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co%2F23F9WNxm%2F8e219be0edf629ecba7014dd02d05c5e.jpg&w=1200&output=webp" alt="Jacky (xiaoren) Liu" className="w-full h-full object-cover"  width="1200" height="800" />
+                  <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co%2F23F9WNxm%2F8e219be0edf629ecba7014dd02d05c5e.jpg&w=1200&output=webp" alt="Jacky (xiaoren) Liu" className="w-full h-full object-cover"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold font-serif text-gfa-inkBlack mb-1">Jacky (xiaoren) Liu</h3>
+                  <h3 className="text-xl font-bold font-serif text-gfa-inkBlack mb-1">{/* [中文内容待填入] */} Jacky (xiaoren) Liu </h3>
                   <p className="text-sm text-[#C9A84C] font-bold uppercase tracking-widest mb-1">{isEn ? "Founder & Chairman, Global Film Alliance" : "环球青年电影联盟 主席兼创始人"}</p>
                   <p className="text-xs text-gfa-slate uppercase tracking-wider">{isEn ? "Hollywood Film Producer | Founder, Golden Lion Animation" : "好莱坞电影制片人 | 金狮动画 创始人"}</p>
                 </div>
@@ -223,11 +215,11 @@ const About: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
              <div className="bg-[#F5F2EE] rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
                <div className="h-56 overflow-hidden relative">
-                 <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1588636400925-5ae86cd2fa79%3Fauto%3Dformat%26fit%3Dcrop%26w%3D2000%26q%3D80&w=1200&output=webp" alt="Filmmaker Action" className="w-full h-full object-cover"  width="1200" height="800" />
+                 <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1588636400925-5ae86cd2fa79%3Fauto%3Dformat%26fit%3Dcrop%26w%3D2000%26q%3D80&w=1200&output=webp" alt="Filmmaker Action" className="w-full h-full object-cover"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
                </div>
                <div className="p-8">
                  <div className="text-xs font-bold text-[#C9A84C] uppercase tracking-widest mb-3">{isEn ? "Career Support" : "就业扶持计划"}</div>
-                 <h3 className="font-serif font-bold text-2xl mb-4 text-gfa-inkBlack">Marcus T.</h3>
+                 <h3 className="font-serif font-bold text-2xl mb-4 text-gfa-inkBlack">{/* [中文内容待填入] */} Marcus T. </h3>
                  <p className="text-gfa-slate font-light text-base italic leading-relaxed">
                    "{isEn ? "I was working two retail jobs after film school just to survive. GFA connected me with my mentor, who got me my first PA gig on a real union set." : "电影学院毕业后为了生存我在做两份零售工作。是GFA给我匹配了导师，让我接到了真正的工会剧组的第一个PA职位。"}"
                  </p>
@@ -236,11 +228,11 @@ const About: React.FC = () => {
 
              <div className="bg-[#F5F2EE] rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
                <div className="h-56 overflow-hidden relative">
-                 <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1511629091441-ee46146481b6%3Fauto%3Dformat%26fit%3Dcrop%26w%3D2000%26q%3D80&w=1200&output=webp" alt="Summer Camp" className="w-full h-full object-cover"  width="1200" height="800" />
+                 <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1511629091441-ee46146481b6%3Fauto%3Dformat%26fit%3Dcrop%26w%3D2000%26q%3D80&w=1200&output=webp" alt="Summer Camp" className="w-full h-full object-cover"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
                </div>
                <div className="p-8">
                  <div className="text-xs font-bold text-[#C9A84C] uppercase tracking-widest mb-3">{isEn ? "Youth Camp" : "影视夏令营"}</div>
-                 <h3 className="font-serif font-bold text-2xl mb-4 text-gfa-inkBlack">Sophia L. & Family</h3>
+                 <h3 className="font-serif font-bold text-2xl mb-4 text-gfa-inkBlack">{/* [中文内容待填入] */} Sophia L. & Family </h3>
                  <p className="text-gfa-slate font-light text-base italic leading-relaxed">
                    "{isEn ? "The full scholarship changed everything. Watching Sophia direct her short film gave her a level of confidence we had never seen before." : "全额奖学金改变了一切。看着女儿在片场自信地当导演，那是我们在她身上从未见过的光芒。"}"
                  </p>
@@ -249,11 +241,11 @@ const About: React.FC = () => {
 
              <div className="bg-[#F5F2EE] rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
                <div className="h-56 overflow-hidden relative flex justify-center p-4">
-                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co%2F8gHZ9bxG%2FChat-GPT-Image-2026-3-8-11-02-27.png&w=1200&output=webp" alt="Awards Night" className="h-full object-contain drop-shadow-xl"  width="1200" height="800" />
+                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co%2F8gHZ9bxG%2FChat-GPT-Image-2026-3-8-11-02-27.png&w=1200&output=webp" alt="Awards Night" className="h-full object-contain drop-shadow-xl"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
                </div>
                <div className="p-8">
                  <div className="text-xs font-bold text-[#C9A84C] uppercase tracking-widest mb-3">{isEn ? "Golden Feather" : "金羽奖获奖者"}</div>
-                 <h3 className="font-serif font-bold text-2xl mb-4 text-gfa-inkBlack">Elena R.</h3>
+                 <h3 className="font-serif font-bold text-2xl mb-4 text-gfa-inkBlack">{/* [中文内容待填入] */} Elena R. </h3>
                  <p className="text-gfa-slate font-light text-base italic leading-relaxed">
                    "{isEn ? "Winning Best Screenplay meant my voice actually mattered. It's the validation I carry into every single writing session now." : "赢得最佳剧本奖意味着我的声音是有人在乎的。这份肯定我现在写每一个剧本时都带在心中。"}"
                  </p>
@@ -276,7 +268,7 @@ const About: React.FC = () => {
               <div className="bg-white p-6 md:p-8 rounded-3xl border border-gray-100 flex flex-col md:flex-row gap-6 hover:shadow-lg transition-shadow group">
                  <div className="md:w-1/3 shrink-0">
                     <div className="h-56 md:h-full bg-gray-200 rounded-2xl overflow-hidden relative">
-                       <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1478720568477-152d9b164e26%3Fq%3D80%26w%3D2000%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" alt="News Image 1" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"  width="1200" height="800" />
+                       <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1478720568477-152d9b164e26%3Fq%3D80%26w%3D2000%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" alt="News Image 1" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
                     </div>
                  </div>
                  <div className="md:w-2/3 flex flex-col justify-center">
@@ -297,7 +289,7 @@ const About: React.FC = () => {
               <div className="bg-white p-6 md:p-8 rounded-3xl border border-gray-100 flex flex-col md:flex-row gap-6 hover:shadow-lg transition-shadow group">
                  <div className="md:w-1/3 shrink-0">
                     <div className="h-56 md:h-full bg-gray-200 rounded-2xl overflow-hidden relative">
-                       <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1485846234645-a62644f84728%3Fq%3D80%26w%3D2000%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" alt="News Image 2" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"  width="1200" height="800" />
+                       <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1485846234645-a62644f84728%3Fq%3D80%26w%3D2000%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" alt="News Image 2" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
                     </div>
                  </div>
                  <div className="md:w-2/3 flex flex-col justify-center">
@@ -337,20 +329,20 @@ const About: React.FC = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-               <h4 className="font-bold text-xl mb-3 text-gfa-inkBlack">Youth Film Camp</h4>
-               <p className="text-gfa-slate font-light text-sm">Comprehensive hands-on filmmaking experience for young aspiring creators.</p>
+               <h4 className="font-bold text-xl mb-3 text-gfa-inkBlack">{/* [中文内容待填入] */} Youth Film Camp </h4>
+               <p className="text-gfa-slate font-light text-sm">{/* [中文内容待填入] */} Comprehensive hands-on filmmaking experience for young aspiring creators. </p>
             </div>
             <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-               <h4 className="font-bold text-xl mb-3 text-gfa-inkBlack">Golden Feather Awards</h4>
-               <p className="text-gfa-slate font-light text-sm">Hollywood\'s premier recognition ceremony for emerging filmmakers.</p>
+               <h4 className="font-bold text-xl mb-3 text-gfa-inkBlack">{/* [中文内容待填入] */} Golden Feather Awards </h4>
+               <p className="text-gfa-slate font-light text-sm">{/* [中文内容待填入] */} Hollywood\'s premier recognition ceremony for emerging filmmakers. </p>
             </div>
             <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-               <h4 className="font-bold text-xl mb-3 text-gfa-inkBlack">Film Graduate Support</h4>
-               <p className="text-gfa-slate font-light text-sm">Career development, mentorship, and equipment grants for recent film school grads.</p>
+               <h4 className="font-bold text-xl mb-3 text-gfa-inkBlack">{/* [中文内容待填入] */} Film Graduate Support </h4>
+               <p className="text-gfa-slate font-light text-sm">{/* [中文内容待填入] */} Career development, mentorship, and equipment grants for recent film school grads. </p>
             </div>
             <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-               <h4 className="font-bold text-xl mb-3 text-gfa-inkBlack">Children\'s Film Production</h4>
-               <p className="text-gfa-slate font-light text-sm">Empowering children to tell their own stories through guided professional production.</p>
+               <h4 className="font-bold text-xl mb-3 text-gfa-inkBlack">{/* [中文内容待填入] */} Children\'s Film Production </h4>
+               <p className="text-gfa-slate font-light text-sm">{/* [中文内容待填入] */} Empowering children to tell their own stories through guided professional production. </p>
             </div>
           </div>
         </div>
@@ -369,9 +361,7 @@ const About: React.FC = () => {
                </div>
                <div className="hidden md:block w-px h-12 bg-white/20"></div>
                <div>
-                 <span className="block font-bold text-[#C9A84C] text-sm uppercase tracking-widest mb-1">{isEn ? "Email" : "邮箱"}</span>
-                 jacky@gfafilm.org
-               </div>
+                 <span className="block font-bold text-[#C9A84C] text-sm uppercase tracking-widest mb-1">{isEn ? "Email" : "邮箱"}</span>{/* [中文内容待填入] */} jacky@gfafilm.org </div>
                <div className="hidden md:block w-px h-12 bg-white/20"></div>
                <div>
                  <span className="block font-bold text-[#C9A84C] text-sm uppercase tracking-widest mb-1">{isEn ? "Phone" : "电话"}</span>
@@ -397,7 +387,7 @@ const About: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             <div className="bg-gray-50 rounded-2xl p-8 text-center border border-gray-100 hover:shadow-md transition-shadow">
               <div className="h-16 flex items-center justify-center mb-4">
-                 <div className="text-2xl font-bold italic tracking-tighter text-gfa-inkBlack">Blackmagic Design</div>
+                 <div className="text-2xl font-bold italic tracking-tighter text-gfa-inkBlack">{/* [中文内容待填入] */} Blackmagic Design </div>
               </div>
               <p className="text-sm md:text-base font-light text-gfa-slate leading-relaxed mx-auto">
                 {isEn ? "Professional equipment partner, providing pro-level camera gear support for GFA projects." : "专业设备合作伙伴，为GFA项目提供专业级摄影器材支持"}
@@ -406,7 +396,7 @@ const About: React.FC = () => {
 
             <div className="bg-gray-50 rounded-2xl p-8 text-center border border-gray-100 hover:shadow-md transition-shadow">
               <div className="h-16 flex items-center justify-center mb-4">
-                 <div className="text-xl font-bold uppercase tracking-widest text-gfa-inkBlack">City of Pomona</div>
+                 <div className="text-xl font-bold uppercase tracking-widest text-gfa-inkBlack">{/* [中文内容待填入] */} City of Pomona </div>
               </div>
               <p className="text-sm md:text-base font-light text-gfa-slate leading-relaxed mx-auto">
                 {isEn ? "Government partner, proudly supporting GFA's local community outreach and youth initiatives." : "政府合作伙伴，支持GFA的社区服务项目"}

@@ -30,55 +30,46 @@ const PrivacyPolicy: React.FC = () => {
             {isEn ? (
               <>
                 <h2>1. Introduction</h2>
-                <p>
-                  Global Film Alliance, Inc. ("GFA," "we," "us," or "our") respects your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website (gfafilm.org) and register for our programs. Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site.
-                </p>
+                <p>{/* [中文内容待填入] */} Global Film Alliance, Inc. ("GFA," "we," "us," or "our") respects your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website (gfafilm.org) and register for our programs. Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site. </p>
 
                 <h2>2. Information We Collect</h2>
                 <p>We may collect information about you in a variety of ways. The information we may collect on the Site includes:</p>
                 <ul>
-                  <li><strong>Personal Data:</strong> Personally identifiable information, such as your name, shipping address, email address, and telephone number, and demographic information when you register with the Site, sign up for programs, or make a donation.</li>
-                  <li><strong>Derivative Data:</strong> Information our servers automatically collect when you access the Site, such as your IP address, your browser type, your operating system, your access times, and the pages you have viewed directly before and after accessing the Site.</li>
-                  <li><strong>Financial Data:</strong> Financial information, such as data related to your payment method (e.g. valid credit card number, card brand, expiration date) that we may collect when you purchase, order, return, exchange, or request information about our services from the Site. We store only very limited, if any, financial information that we collect.</li>
+                  <li><strong>Personal Data:</strong>{/* [中文内容待填入] */} Personally identifiable information, such as your name, shipping address, email address, and telephone number, and demographic information when you register with the Site, sign up for programs, or make a donation. </li>
+                  <li><strong>Derivative Data:</strong>{/* [中文内容待填入] */} Information our servers automatically collect when you access the Site, such as your IP address, your browser type, your operating system, your access times, and the pages you have viewed directly before and after accessing the Site. </li>
+                  <li><strong>Financial Data:</strong>{/* [中文内容待填入] */} Financial information, such as data related to your payment method (e.g. valid credit card number, card brand, expiration date) that we may collect when you purchase, order, return, exchange, or request information about our services from the Site. We store only very limited, if any, financial information that we collect. </li>
                 </ul>
 
                 <h2>3. Use of Your Information</h2>
                 <p>Having accurate information about you permits us to provide you with a smooth, efficient, and customized experience. We may use information collected about you to:</p>
                 <ul>
-                  <li>Administer sweepstakes, promotions, and contests (e.g. Global Youth Talent Competition).</li>
-                  <li>Process payments, donations, program registrations, and event ticketing.</li>
-                  <li>Deliver targeted advertising, coupons, newsletters, and other information regarding promotions and the Site to you.</li>
-                  <li>Monitor and analyze usage and trends to improve your experience with the Site.</li>
-                  <li>Comply with Google Advertising policies to track interactions with ad campaigns and personalize your browsing experience.</li>
+                  <li>{/* [中文内容待填入] */} Administer sweepstakes, promotions, and contests (e.g. Global Youth Talent Competition). </li>
+                  <li>{/* [中文内容待填入] */} Process payments, donations, program registrations, and event ticketing. </li>
+                  <li>{/* [中文内容待填入] */} Deliver targeted advertising, coupons, newsletters, and other information regarding promotions and the Site to you. </li>
+                  <li>{/* [中文内容待填入] */} Monitor and analyze usage and trends to improve your experience with the Site. </li>
+                  <li>{/* [中文内容待填入] */} Comply with Google Advertising policies to track interactions with ad campaigns and personalize your browsing experience. </li>
                 </ul>
 
                 <h2>4. Google Advertising and Cookies</h2>
-                <p>
-                  We use Google Ads and other analytics services. Third party vendors, including Google, use cookies to serve ads based on a user's prior visits to our website or other websites. Google's use of advertising cookies enables it and its partners to serve ads to our users based on their visit to our sites and/or other sites on the Internet.
-                </p>
-                <p>
-                  You may opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer">Ads Settings</a>. Alternatively, you can opt out of a third-party vendor's use of cookies for personalized advertising by visiting <a href="https://optout.aboutads.info" target="_blank" rel="noopener noreferrer">www.aboutads.info</a>.
+                <p>{/* [中文内容待填入] */} We use Google Ads and other analytics services. Third party vendors, including Google, use cookies to serve ads based on a user's prior visits to our website or other websites. Google's use of advertising cookies enables it and its partners to serve ads to our users based on their visit to our sites and/or other sites on the Internet. </p>
+                <p>{/* [中文内容待填入] */} You may opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer">{/* [中文内容待填入] */} Ads Settings </a>. Alternatively, you can opt out of a third-party vendor's use of cookies for personalized advertising by visiting <a href="https://optout.aboutads.info" target="_blank" rel="noopener noreferrer">{/* [中文内容待填入] */} www.aboutads.info </a>.
                 </p>
 
                 <h2>5. Disclosure of Your Information</h2>
                 <p>We may share information we have collected about you in certain situations. Your information may be disclosed as follows:</p>
                 <ul>
-                  <li><strong>By Law or to Protect Rights:</strong> If we believe the release of information about you is necessary to respond to legal process, to investigate or remedy potential violations of our policies, or to protect the rights, property, and safety of others.</li>
-                  <li><strong>Third-Party Service Providers:</strong> We may share your information with third parties that perform services for us or on our behalf, including payment processing, data analysis, email delivery, hosting services, customer service, and marketing assistance.</li>
+                  <li><strong>By Law or to Protect Rights:</strong>{/* [中文内容待填入] */} If we believe the release of information about you is necessary to respond to legal process, to investigate or remedy potential violations of our policies, or to protect the rights, property, and safety of others. </li>
+                  <li><strong>Third-Party Service Providers:</strong>{/* [中文内容待填入] */} We may share your information with third parties that perform services for us or on our behalf, including payment processing, data analysis, email delivery, hosting services, customer service, and marketing assistance. </li>
                 </ul>
 
                 <h2>6. Children's Privacy (COPPA Compliance)</h2>
-                <p>
-                  We are deeply committed to protecting the privacy of children. Many of our programs involve minors. We do not knowingly solicit information from or market to children under the age of 13 without verifiable parental consent in accordance with the Children's Online Privacy Protection Act (COPPA). If you become aware of any data we have collected from children under age 13 without consent, please contact us.
-                </p>
+                <p>{/* [中文内容待填入] */} We are deeply committed to protecting the privacy of children. Many of our programs involve minors. We do not knowingly solicit information from or market to children under the age of 13 without verifiable parental consent in accordance with the Children's Online Privacy Protection Act (COPPA). If you become aware of any data we have collected from children under age 13 without consent, please contact us. </p>
 
                 <h2>7. Contact Us</h2>
                 <p>If you have questions or comments about this Privacy Policy, please contact us at:</p>
-                <p>
-                  Global Film Alliance, Inc.<br/>
+                <p>{/* [中文内容待填入] */} Global Film Alliance, Inc. <br/>
                   17800 Castleton St, Suite 173<br/>
-                  City of Industry, CA 91748<br/>
-                  Email: jacky@gfafilm.org<br/>
+                  City of Industry, CA 91748<br/>{/* [中文内容待填入] */} Email: jacky@gfafilm.org <br/>
                   Phone: 626-677-8017
                 </p>
               </>
@@ -112,7 +103,7 @@ const PrivacyPolicy: React.FC = () => {
                   我们使用包括Google Ads在内的分析服务与广告提供商。第三方供应商（包含Google）会使用Cookie功能，根据用户先前对我们网站或互联网上其他网站的访问记录来精准投放广告。
                 </p>
                 <p>
-                  对于Google及其合作伙伴提供基于Cookie的个性化推荐广告，用户如果并不希望参与，可以通过访问 <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer">Google 广告设置 (Ads Settings)</a> 来将其关闭。或者，您可以前往 <a href="https://optout.aboutads.info" target="_blank" rel="noopener noreferrer">www.aboutads.info</a> 进行相关第三方广告Cookie设置。
+                  对于Google及其合作伙伴提供基于Cookie的个性化推荐广告，用户如果并不希望参与，可以通过访问 <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer">Google 广告设置 (Ads Settings)</a> 来将其关闭。或者，您可以前往 <a href="https://optout.aboutads.info" target="_blank" rel="noopener noreferrer">{/* [中文内容待填入] */} www.aboutads.info </a> 进行相关第三方广告Cookie设置。
                 </p>
 
                 <h2>5. 信息安全与披露</h2>
@@ -129,8 +120,7 @@ const PrivacyPolicy: React.FC = () => {
 
                 <h2>7. 联系我们</h2>
                 <p>如果您对本隐私政策有任何问题或建议，欢迎联系我们：</p>
-                <p>
-                  Global Film Alliance, Inc.<br/>
+                <p>{/* [中文内容待填入] */} Global Film Alliance, Inc. <br/>
                   17800 Castleton St, Suite 173<br/>
                   City of Industry, CA 91748<br/>
                   电子邮件: jacky@gfafilm.org<br/>
