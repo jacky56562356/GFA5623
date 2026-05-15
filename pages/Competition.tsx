@@ -39,11 +39,11 @@ const Competition: React.FC = () => {
       {/* Hero Image */}
       <section className="relative w-full bg-gfa-inkBlack pt-[80px] md:pt-[100px] flex justify-center">
         <div className="relative w-full max-w-7xl mx-auto px-4 md:px-8">
-          <img loading="lazy" 
-            src="https://i.ibb.co/S4Mb6TcN/24480b00-65a2-4468-8dc6-50aae205d0fa.png" 
+          <img fetchPriority="high" 
+            src="https://wsrv.nl/?url=i.ibb.co%2FS4Mb6TcN%2F24480b00-65a2-4468-8dc6-50aae205d0fa.png&w=1200&output=webp" 
             alt="Hollywood style stage" 
             className="w-full h-auto object-contain" 
-          />
+           width="1200" height="800" />
         </div>
       </section>
 

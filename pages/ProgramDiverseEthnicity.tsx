@@ -14,11 +14,11 @@ const ProgramDiverseEthnicity: React.FC = () => {
 
       <div className="relative bg-[#1A2B4A] py-5 mb-3 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img loading="lazy" 
-            src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1974&auto=format&fit=crop" 
+          <img fetchPriority="high" 
+            src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1611162617474-5b21e879e113%3Fq%3D80%26w%3D1974%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" 
             alt="AI Filmmaking" 
             className="w-full h-full object-cover opacity-30 grayscale"
-          />
+           width="1200" height="800" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#1A2B4A] via-[#1A2B4A]/80 to-transparent"></div>
         </div>
         <div className="container-gfa relative z-10 text-center max-w-4xl mx-auto">

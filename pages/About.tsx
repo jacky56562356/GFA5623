@@ -18,11 +18,11 @@ const About: React.FC = () => {
       {/* Hero Banner */}
       <section className="relative h-[45vh] min-h-[400px] flex items-center justify-center overflow-hidden bg-gfa-inkBlack mt-[90px] md:mt-[100px]">
         <div className="absolute inset-0 z-0">
-          <img 
-            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=2670&q=80" 
+          <img fetchPriority="high" 
+            src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1522071820081-009f0129c71c%3Fauto%3Dformat%26fit%3Dcrop%26w%3D2670%26q%3D80&w=1200&output=webp" 
             alt="Diverse team of young filmmakers" 
             className="w-full h-full object-cover opacity-50 mix-blend-luminosity" 
-          />
+           width="1200" height="800" />
           <div className="absolute inset-0 bg-gradient-to-t from-gfa-inkBlack via-gfa-inkBlack/50 to-transparent"></div>
         </div>
 
@@ -55,7 +55,7 @@ const About: React.FC = () => {
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-100 h-80">
-               <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1000&q=80" alt="Film Team Working" className="w-full h-full object-cover" />
+               <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1600880292203-757bb62b4baf%3Fauto%3Dformat%26fit%3Dcrop%26w%3D1000%26q%3D80&w=1200&output=webp" alt="Film Team Working" className="w-full h-full object-cover"  width="1200" height="800" />
             </div>
           </div>
 
@@ -135,7 +135,7 @@ const About: React.FC = () => {
 
               <div className="flex flex-col sm:flex-row sm:items-center gap-5 border-t border-[#C9A84C]/20 pt-6">
                 <div className="w-20 h-20 md:w-24 md:h-24 shrink-0 rounded-full bg-gray-300 overflow-hidden border-2 border-[#C9A84C]">
-                  <img src="https://i.ibb.co/23F9WNxm/8e219be0edf629ecba7014dd02d05c5e.jpg" alt="Jacky (xiaoren) Liu" className="w-full h-full object-cover" />
+                  <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co%2F23F9WNxm%2F8e219be0edf629ecba7014dd02d05c5e.jpg&w=1200&output=webp" alt="Jacky (xiaoren) Liu" className="w-full h-full object-cover"  width="1200" height="800" />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold font-serif text-gfa-inkBlack mb-1">Jacky (xiaoren) Liu</h3>
@@ -223,7 +223,7 @@ const About: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
              <div className="bg-[#F5F2EE] rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
                <div className="h-56 overflow-hidden relative">
-                 <img src="https://images.unsplash.com/photo-1588636400925-5ae86cd2fa79?auto=format&fit=crop&w=2000&q=80" alt="Filmmaker Action" className="w-full h-full object-cover" />
+                 <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1588636400925-5ae86cd2fa79%3Fauto%3Dformat%26fit%3Dcrop%26w%3D2000%26q%3D80&w=1200&output=webp" alt="Filmmaker Action" className="w-full h-full object-cover"  width="1200" height="800" />
                </div>
                <div className="p-8">
                  <div className="text-xs font-bold text-[#C9A84C] uppercase tracking-widest mb-3">{isEn ? "Career Support" : "就业扶持计划"}</div>
@@ -236,7 +236,7 @@ const About: React.FC = () => {
 
              <div className="bg-[#F5F2EE] rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
                <div className="h-56 overflow-hidden relative">
-                 <img src="https://images.unsplash.com/photo-1511629091441-ee46146481b6?auto=format&fit=crop&w=2000&q=80" alt="Summer Camp" className="w-full h-full object-cover" />
+                 <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1511629091441-ee46146481b6%3Fauto%3Dformat%26fit%3Dcrop%26w%3D2000%26q%3D80&w=1200&output=webp" alt="Summer Camp" className="w-full h-full object-cover"  width="1200" height="800" />
                </div>
                <div className="p-8">
                  <div className="text-xs font-bold text-[#C9A84C] uppercase tracking-widest mb-3">{isEn ? "Youth Camp" : "影视夏令营"}</div>
@@ -249,7 +249,7 @@ const About: React.FC = () => {
 
              <div className="bg-[#F5F2EE] rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
                <div className="h-56 overflow-hidden relative flex justify-center p-4">
-                 <img src="https://i.ibb.co/8gHZ9bxG/Chat-GPT-Image-2026-3-8-11-02-27.png" alt="Awards Night" className="h-full object-contain drop-shadow-xl" />
+                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co%2F8gHZ9bxG%2FChat-GPT-Image-2026-3-8-11-02-27.png&w=1200&output=webp" alt="Awards Night" className="h-full object-contain drop-shadow-xl"  width="1200" height="800" />
                </div>
                <div className="p-8">
                  <div className="text-xs font-bold text-[#C9A84C] uppercase tracking-widest mb-3">{isEn ? "Golden Feather" : "金羽奖获奖者"}</div>
@@ -276,7 +276,7 @@ const About: React.FC = () => {
               <div className="bg-white p-6 md:p-8 rounded-3xl border border-gray-100 flex flex-col md:flex-row gap-6 hover:shadow-lg transition-shadow group">
                  <div className="md:w-1/3 shrink-0">
                     <div className="h-56 md:h-full bg-gray-200 rounded-2xl overflow-hidden relative">
-                       <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?q=80&w=2000&auto=format&fit=crop" alt="News Image 1" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                       <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1478720568477-152d9b164e26%3Fq%3D80%26w%3D2000%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" alt="News Image 1" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"  width="1200" height="800" />
                     </div>
                  </div>
                  <div className="md:w-2/3 flex flex-col justify-center">
@@ -297,7 +297,7 @@ const About: React.FC = () => {
               <div className="bg-white p-6 md:p-8 rounded-3xl border border-gray-100 flex flex-col md:flex-row gap-6 hover:shadow-lg transition-shadow group">
                  <div className="md:w-1/3 shrink-0">
                     <div className="h-56 md:h-full bg-gray-200 rounded-2xl overflow-hidden relative">
-                       <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=2000&auto=format&fit=crop" alt="News Image 2" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                       <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1485846234645-a62644f84728%3Fq%3D80%26w%3D2000%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" alt="News Image 2" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"  width="1200" height="800" />
                     </div>
                  </div>
                  <div className="md:w-2/3 flex flex-col justify-center">

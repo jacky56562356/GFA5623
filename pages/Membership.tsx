@@ -14,21 +14,21 @@ const Membership: React.FC = () => {
 
       {/* Global Background Image */}
       <div className="fixed inset-0 z-0 opacity-[0.05] pointer-events-none">
-        <img loading="lazy" 
-          src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop" 
+        <img fetchPriority="high" 
+          src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1451187580459-43490279c0fa%3Fq%3D80%26w%3D2072%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" 
           alt="Global Cinematic Background" 
           className="w-full h-full object-cover"
-        />
+         width="1200" height="800" />
       </div>
 
       {/* Document Header */}
       <div className="relative bg-gfa-inkBlack py-4 mb-3 shadow-2xl overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-20 grayscale">
           <img loading="lazy" 
-            src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop" 
+            src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1517048676732-d65bc937f952%3Fq%3D80%26w%3D2070%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" 
             alt="Header Background" 
             className="w-full h-full object-cover"
-          />
+           width="1200" height="800" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-gfa-inkBlack/60 via-gfa-inkBlack/80 to-gfa-inkBlack"></div>
         
@@ -69,7 +69,7 @@ const Membership: React.FC = () => {
 
               <div className="p-10 bg-gfa-inkBlack text-white rounded-[32px] shadow-2xl border border-white/5 relative overflow-hidden group">
                 <div className="absolute inset-0 opacity-20 group-hover:scale-110 transition-transform duration-1000">
-                  <img loading="lazy" src="https://images.unsplash.com/photo-1521791136364-798a730bb361?q=80&w=2070&auto=format&fit=crop" alt="Network" className="w-full h-full object-cover grayscale" />
+                  <img loading="lazy"  src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1521791136364-798a730bb361%3Fq%3D80%26w%3D2070%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" alt="Network" className="w-full h-full object-cover grayscale"  width="1200" height="800" />
                 </div>
                 <div className="relative z-10">
                   <ShieldCheck className="w-10 h-10 text-gfa-gold mb-3" />
@@ -132,7 +132,7 @@ const Membership: React.FC = () => {
                             }
                             alt={tier.name}
                             className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700"
-                          />
+                           width="1200" height="800" />
                           <div className="absolute inset-0 bg-gfa-inkBlack/40 group-hover:bg-gfa-inkBlack/10 transition-colors duration-500"></div>
                           <div className="absolute top-6 left-6 w-16 h-16 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center text-white border border-white/30 shadow-lg">
                             {i === 0 ? <Briefcase className="w-8 h-8" /> : i === 1 ? <GraduationCap className="w-8 h-8" /> : <Star className="w-8 h-8" />}

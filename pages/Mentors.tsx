@@ -70,7 +70,7 @@ export default function Mentors() {
           {mentors.map(mentor => (
             <div key={mentor.id} className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
               <div className="aspect-square bg-gray-200">
-                <img loading="lazy" src={mentor.image} alt={mentor.name} className="w-full h-full object-cover" />
+                <img fetchPriority="high"  src={mentor.image} alt={mentor.name} className="w-full h-full object-cover"  width="1200" height="800" />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold font-serif mb-1">{mentor.name}</h3>

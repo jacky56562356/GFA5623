@@ -30,21 +30,21 @@ const GraduateSupport = () => {
 
       {/* Global Background Image */}
       <div className="fixed inset-0 z-0 opacity-[0.03] pointer-events-none">
-        <img loading="lazy" 
-          src="https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=2059&auto=format&fit=crop" 
+        <img fetchPriority="high" 
+          src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1485846234645-a62644f84728%3Fq%3D80%26w%3D2059%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" 
           alt="Film Background" 
           className="w-full h-full object-cover"
-        />
+         width="1200" height="800" />
       </div>
 
       {/* Document Header */}
       <div className="relative bg-gfa-inkBlack py-4 mb-3 shadow-2xl overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-20 grayscale">
           <img loading="lazy" 
-            src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=2070&auto=format&fit=crop" 
+            src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1517604931442-7e0c8ed2963c%3Fq%3D80%26w%3D2070%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" 
             alt="Header Background" 
             className="w-full h-full object-cover"
-          />
+           width="1200" height="800" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-gfa-inkBlack/60 via-gfa-inkBlack/80 to-gfa-inkBlack"></div>
         
@@ -91,7 +91,7 @@ const GraduateSupport = () => {
                     }
                     alt={pillar.title}
                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700"
-                  />
+                   width="1200" height="800" />
                   <div className="absolute inset-0 bg-gradient-to-t from-gfa-inkBlack via-gfa-inkBlack/80 to-gfa-inkBlack/40 group-hover:from-gfa-inkBlack group-hover:via-gfa-inkBlack/60 group-hover:to-transparent transition-all duration-500"></div>
                 </div>
                 

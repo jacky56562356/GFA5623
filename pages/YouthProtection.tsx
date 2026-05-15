@@ -15,11 +15,11 @@ const YouthProtection: React.FC = () => {
       {/* Hero Section */}
       <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden bg-gfa-inkBlack group">
         <div className="absolute inset-0 z-0">
-          <img loading="lazy" 
-            src="https://images.unsplash.com/photo-1544717305-2782549b5136?q=80&w=1974&auto=format&fit=crop" 
+          <img fetchPriority="high" 
+            src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1544717305-2782549b5136%3Fq%3D80%26w%3D1974%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" 
             alt="Youth Protection" 
             className="w-full h-full object-cover opacity-30 mix-blend-luminosity transform group-hover:scale-105 transition-transform duration-[20s]" 
-          />
+           width="1200" height="800" />
           <div className="absolute inset-0 bg-gradient-to-t from-gfa-inkBlack via-gfa-inkBlack/50 to-transparent"></div>
         </div>
 
@@ -52,9 +52,9 @@ const YouthProtection: React.FC = () => {
             </p>
 
             <div className="flex flex-wrap justify-center gap-4 opacity-80">
-               <img loading="lazy" src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=400&q=80" alt="Safe Set" className="w-48 h-48 rounded-full object-cover shadow-xl border-4 border-gfa-warmWhite" />
-               <img loading="lazy" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=400&q=80" alt="Mentoring" className="w-56 h-56 rounded-full object-cover shadow-2xl border-4 border-white -mt-8 relative z-10" />
-               <img loading="lazy" src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=400&q=80" alt="Event Safety" className="w-48 h-48 rounded-full object-cover shadow-xl border-4 border-gfa-warmWhite" />
+               <img loading="lazy"  src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1573164713988-8665fc963095%3Fauto%3Dformat%26fit%3Dcrop%26w%3D400%26q%3D80&w=1200&output=webp" alt="Safe Set" className="w-48 h-48 rounded-full object-cover shadow-xl border-4 border-gfa-warmWhite"  width="1200" height="800" />
+               <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1522071820081-009f0129c71c%3Fauto%3Dformat%26fit%3Dcrop%26w%3D400%26q%3D80&w=1200&output=webp" alt="Mentoring" className="w-56 h-56 rounded-full object-cover shadow-2xl border-4 border-white -mt-8 relative z-10"  width="1200" height="800" />
+               <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1514525253161-7a46d19cd819%3Fauto%3Dformat%26fit%3Dcrop%26w%3D400%26q%3D80&w=1200&output=webp" alt="Event Safety" className="w-48 h-48 rounded-full object-cover shadow-xl border-4 border-gfa-warmWhite"  width="1200" height="800" />
             </div>
         </div>
       </section>
@@ -125,10 +125,10 @@ const YouthProtection: React.FC = () => {
               <div className="md:w-1/2">
                 <div className="rounded-[32px] overflow-hidden shadow-2xl border border-gfa-border bg-gfa-warmWhite p-2">
                    <img loading="lazy" 
-                     src="https://i.ibb.co/sp4fWHq3/Chat-GPT-Image-2026-3-23-12-23-22.png" 
+                     src="https://wsrv.nl/?url=i.ibb.co%2Fsp4fWHq3%2FChat-GPT-Image-2026-3-23-12-23-22.png&w=1200&output=webp" 
                      alt="Advancing Industry Integrity" 
                      className="w-full h-auto rounded-[24px]"
-                   />
+                    width="1200" height="800" />
                 </div>
               </div>
               <div className="md:w-1/2">

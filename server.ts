@@ -8,7 +8,7 @@ async function startServer() {
   const app = express();
   const PORT = 3000;
 
-  // Use compression middleware for all responses
+  // Use compression for all responses
   app.use(compression());
 
   // Middleware to parse JSON bodies
