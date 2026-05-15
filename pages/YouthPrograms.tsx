@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLocale } from '../LocaleContext.tsx';
 import { Locale } from '../types.ts';
 import SEO from '../components/SEO.tsx';
@@ -7,11 +7,210 @@ import { Tent, Film, HeartHandshake, Sparkles, Calendar, MapPin, Video, ArrowRig
 const YouthPrograms: React.FC = () => {
   const { locale } = useLocale();
   const isEn = locale === Locale.EN;
+  const [showRegForm, setShowRegForm] = useState(false);
+  const [resumeFileName, setResumeFileName] = useState('');
+  const [portfolioFileNames, setPortfolioFileNames] = useState<string[]>([]);
+  const [formData, setFormData] = useState({
+    parentName: '',
+    childName: '',
+    childAge: '',
+    email: '',
+    phone: '',
+    program: 'Youth Film Summer Camp',
+    emergencyContact: '',
+    emergencyPhone: '',
+    dietary: '',
+    medical: '',
+    filmmakingExperience: 'None',
+    tshirtSize: 'M',
+    message: ''
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleRegistrationSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const subject = isEn ? `Registration: ${formData.childName} for ${formData.program}` : `报名申请: ${formData.childName} 报名 ${formData.program}`;
+    const body = `Program: ${formData.program}
+
+--- Participant Information ---
+Child Name: ${formData.childName}
+Child Age: ${formData.childAge}
+T-Shirt Size: ${formData.tshirtSize}
+Filmmaking Experience: ${formData.filmmakingExperience}
+
+--- Parent/Guardian Information ---
+Parent Name: ${formData.parentName}
+Email: ${formData.email}
+Phone: ${formData.phone}
+
+--- Emergency Contact ---
+Name: ${formData.emergencyContact}
+Phone: ${formData.emergencyPhone}
+
+--- Health & Safety ---
+Dietary Restrictions: ${formData.dietary}
+Medical Conditions: ${formData.medical}
+
+--- Additional Notes ---
+${formData.message}`;
+
+    window.location.href = `mailto:jacky@gfafilm.org?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    setShowRegForm(false);
+  };
 
   return (
     <div className="font-sans pb-3">
       <SEO title="Youth Programs | Global Film Alliance" />
 
+      {showRegForm ? (
+        <div className="bg-[#F5F2EE] min-h-screen pt-12 pb-24">
+          <div className="container-gfa max-w-3xl mx-auto px-4">
+            <button 
+              onClick={() => setShowRegForm(false)}
+              className="mb-8 flex items-center gap-2 text-gfa-slate hover:text-black transition-colors font-bold uppercase tracking-widest text-sm"
+            >
+              <ArrowRight className="w-5 h-5 rotate-180"/> {isEn ? "Back to Programs" : "返回项目"}
+            </button>
+            <div className="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100">
+              <h3 className="text-3xl font-bold font-serif text-gfa-inkBlack mb-2 text-center">
+                {isEn ? "Program Registration" : "项目报名申请"}
+              </h3>
+              <p className="text-center text-gfa-slate mb-8">{isEn ? "Please fill out the detailed form below." : "请详细填写下方的报名表单。"}</p>
+              
+              <form onSubmit={handleRegistrationSubmit} className="space-y-6">
+                <div className="bg-gray-50 p-6 rounded-xl space-y-4 border border-gray-100">
+                  <h4 className="font-bold text-[#C9A84C] text-sm uppercase tracking-widest">{isEn ? "Participant Information" : "营员信息"}</h4>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-xs font-bold text-gfa-slate mb-1">{isEn ? "Child's Name" : "孩子姓名"} *</label>
+                      <input required name="childName" value={formData.childName} onChange={handleInputChange} type="text" className="w-full px-3 py-2 text-sm rounded border border-gray-200 focus:outline-none focus:border-[#C9A84C]" />
+                    </div>
+                    <div>
+                      <label className="block text-xs font-bold text-gfa-slate mb-1">{isEn ? "Age" : "年龄"} *</label>
+                      <input required name="childAge" value={formData.childAge} onChange={handleInputChange} type="number" className="w-full px-3 py-2 text-sm rounded border border-gray-200 focus:outline-none focus:border-[#C9A84C]" />
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-xs font-bold text-gfa-slate mb-1">{isEn ? "T-Shirt Size" : "T恤尺寸"}</label>
+                      <select name="tshirtSize" value={formData.tshirtSize} onChange={handleInputChange} className="w-full px-3 py-2 text-sm rounded border border-gray-200 focus:outline-none focus:border-[#C9A84C]">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label className="block text-xs font-bold text-gfa-slate mb-1">{isEn ? "Filmmaking Experience" : "影视制作经验"}</label>
+                      <select name="filmmakingExperience" value={formData.filmmakingExperience} onChange={handleInputChange} className="w-full px-3 py-2 text-sm rounded border border-gray-200 focus:outline-none focus:border-[#C9A84C]">
+                        <option value="None">{isEn ? "None" : "无经验"}</option>
+                        <option value="Beginner">{isEn ? "Beginner" : "初学者"}</option>
+                        <option value="Intermediate">{isEn ? "Intermediate" : "有一定经验"}</option>
+                        <option value="Advanced">{isEn ? "Advanced" : "丰富经验"}</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-gray-50 p-6 rounded-xl space-y-4 border border-gray-100">
+                  <h4 className="font-bold text-[#C9A84C] text-sm uppercase tracking-widest">{isEn ? "Parent/Guardian Info" : "家长信息"}</h4>
+                  <div>
+                    <label className="block text-xs font-bold text-gfa-slate mb-1">{isEn ? "Parent/Guardian Name" : "家长/监护人姓名"} *</label>
+                    <input required name="parentName" value={formData.parentName} onChange={handleInputChange} type="text" className="w-full px-3 py-2 text-sm rounded border border-gray-200 focus:outline-none focus:border-[#C9A84C]" />
+                  </div>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-xs font-bold text-gfa-slate mb-1">{isEn ? "Phone Number" : "联系电话"} *</label>
+                      <input required name="phone" value={formData.phone} onChange={handleInputChange} type="tel" className="w-full px-3 py-2 text-sm rounded border border-gray-200 focus:outline-none focus:border-[#C9A84C]" />
+                    </div>
+                    <div>
+                      <label className="block text-xs font-bold text-gfa-slate mb-1">{isEn ? "Email Address" : "电子邮箱"} *</label>
+                      <input required name="email" value={formData.email} onChange={handleInputChange} type="email" className="w-full px-3 py-2 text-sm rounded border border-gray-200 focus:outline-none focus:border-[#C9A84C]" />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-gray-50 p-6 rounded-xl space-y-4 border border-gray-100">
+                  <h4 className="font-bold text-[#C9A84C] text-sm uppercase tracking-widest">{isEn ? "Emergency & Health" : "紧急联系及健康信息"}</h4>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-xs font-bold text-gfa-slate mb-1">{isEn ? "Emergency Contact Name" : "紧急联系人姓名"} *</label>
+                      <input required name="emergencyContact" value={formData.emergencyContact} onChange={handleInputChange} type="text" className="w-full px-3 py-2 text-sm rounded border border-gray-200 focus:outline-none focus:border-[#C9A84C]" />
+                    </div>
+                    <div>
+                      <label className="block text-xs font-bold text-gfa-slate mb-1">{isEn ? "Emergency Phone" : "紧急联系电话"} *</label>
+                      <input required name="emergencyPhone" value={formData.emergencyPhone} onChange={handleInputChange} type="tel" className="w-full px-3 py-2 text-sm rounded border border-gray-200 focus:outline-none focus:border-[#C9A84C]" />
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-xs font-bold text-gfa-slate mb-1">{isEn ? "Dietary Restrictions" : "饮食禁忌/过敏 (如无请填无)"}</label>
+                      <input name="dietary" value={formData.dietary} onChange={handleInputChange} type="text" className="w-full px-3 py-2 text-sm rounded border border-gray-200 focus:outline-none focus:border-[#C9A84C]" />
+                    </div>
+                    <div>
+                      <label className="block text-xs font-bold text-gfa-slate mb-1">{isEn ? "Medical Conditions" : "特殊医疗状况 (如无请填无)"}</label>
+                      <input name="medical" value={formData.medical} onChange={handleInputChange} type="text" className="w-full px-3 py-2 text-sm rounded border border-gray-200 focus:outline-none focus:border-[#C9A84C]" />
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-xs font-bold text-gfa-slate mb-1">{isEn ? "Select Program" : "选择报名项目"} *</label>
+                  <select required name="program" value={formData.program} onChange={handleInputChange} className="w-full px-3 py-2 text-sm rounded border border-gray-200 focus:outline-none focus:border-[#C9A84C]">
+                    <option value="Youth Film Summer Camp">{isEn ? "Youth Film Summer Camp" : "影视夏令营"}</option>
+                    <option value="Dream Film Project">{isEn ? "Dream Film Project" : "电影制作项目"}</option>
+                    <option value="Youth Short Drama Program">{isEn ? "Youth Short Drama Program" : "少儿微短剧拍摄"}</option>
+                    <option value="On-Set Internship">{isEn ? "On-Set Internship" : "剧组实习"}</option>
+                    <option value="GFA AI Content Creator">{isEn ? "GFA AI Content Creator" : "AI 内容创作者项目"}</option>
+                  </select>
+                </div>
+                
+                <div className="bg-gray-50 p-6 rounded-xl space-y-4 border border-gray-100">
+                  <h4 className="font-bold text-[#C9A84C] text-sm uppercase tracking-widest">{isEn ? "Uploads" : "上传文件"}</h4>
+                  <p className="text-xs text-gfa-slate">{isEn ? "Please note: These files will need to be manually attached when your email client opens." : "注意：在您的邮件客户端打开后，请手动将这些文件作为附件添加到邮件中。"}</p>
+                  <div>
+                    <label className="block text-sm font-bold text-gfa-slate mb-1">{isEn ? "Resume (optional)" : "个人简历 (选填)"}</label>
+                    <label className="flex items-center gap-3 w-full bg-[#F5F2EE] border border-gray-200 border-dashed rounded-lg p-3 cursor-pointer hover:bg-[#EAE4D8] transition-colors">
+                      <span className="px-4 py-1.5 bg-white text-[#C9A84C] font-semibold text-sm rounded-full shadow-sm">{isEn ? "Choose File" : "选择文件"}</span>
+                      <span className="text-sm text-gfa-slate truncate flex-1">{resumeFileName || (isEn ? "No file chosen" : "未选择任何文件")}</span>
+                      <input type="file" className="hidden" accept=".pdf,.doc,.docx" onChange={(e) => setResumeFileName(e.target.files?.[0]?.name || '')} />
+                    </label>
+                  </div>
+                  <div>
+                    <label className="block text-sm font-bold text-gfa-slate mb-1">{isEn ? "Images or Portfolio (Max 20MB)" : "照片或作品集 (最大20MB)"}</label>
+                    <label className="flex items-center gap-3 w-full bg-[#F5F2EE] border border-gray-200 border-dashed rounded-lg p-3 cursor-pointer hover:bg-[#EAE4D8] transition-colors">
+                      <span className="px-4 py-1.5 bg-white text-[#C9A84C] font-semibold text-sm rounded-full shadow-sm">{isEn ? "Choose Files" : "选择文件"}</span>
+                      <span className="text-sm text-gfa-slate truncate flex-1">
+                        {portfolioFileNames.length > 0 
+                          ? (isEn ? `${portfolioFileNames.length} file(s) chosen` : `已选择 ${portfolioFileNames.length} 个文件`) 
+                          : (isEn ? "No file chosen" : "未选择任何文件")}
+                      </span>
+                      <input type="file" multiple className="hidden" accept="image/*" onChange={(e) => setPortfolioFileNames(Array.from(e.target.files || []).map(f => f.name))} />
+                    </label>
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-xs font-bold text-gfa-slate mb-1">{isEn ? "Any Questions or Notes?" : "其他疑问或备注 (选填)"}</label>
+                  <textarea name="message" value={formData.message} onChange={handleInputChange} rows={3} className="w-full px-3 py-2 text-sm rounded border border-gray-200 focus:outline-none focus:border-[#C9A84C]"></textarea>
+                </div>
+
+                <div className="text-sm text-gfa-slate font-light mb-4 text-center">
+                  * {isEn ? "By submitting this form, you acknowledge that you will be redirected to your email client to send the registration details to GFA. Don't forget to attach your files!" : "提交此表单将带您前往您的电子邮件客户端，向GFA发送您的详细报名信息。请不要忘记在邮件中附上您的文件！"}
+                </div>
+
+                <button type="submit" className="w-full bg-[#C9A84C] hover:bg-[#b09241] text-gfa-inkBlack font-bold uppercase tracking-widest text-lg py-5 rounded-xl transition-all shadow-md hover:shadow-lg mt-4">
+                  {isEn ? "Generate Request & Email Us" : "生成报名并邮件发送"}
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      ) : (
+        <>
       {/* Banner */}
       <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden bg-gfa-inkBlack pt-5">
         <div className="absolute inset-0 z-0">
@@ -134,7 +333,7 @@ const YouthPrograms: React.FC = () => {
                    : "我们为什么提供奖学金：为了确保所有对电影充满热情的孩子都有机会参与。我们为低收入家庭提供全额或部分费用减免。"}
                </p>
                <div className="flex flex-col sm:flex-row justify-center gap-4">
-                 <button className="bg-[#C9A84C] hover:bg-[#b09241] text-gfa-inkBlack font-bold uppercase tracking-widest text-xs px-8 py-4 rounded-full transition-colors">
+                 <button onClick={() => setShowRegForm(true)} className="bg-[#C9A84C] hover:bg-[#b09241] text-gfa-inkBlack font-bold uppercase tracking-widest text-xs px-8 py-4 rounded-full transition-colors">
                    {isEn ? "Register My Child" : "为我的孩子报名"}
                  </button>
                  <button className="border border-white hover:bg-white hover:text-gfa-inkBlack text-white font-bold uppercase tracking-widest text-xs px-8 py-4 rounded-full transition-colors">
@@ -288,14 +487,16 @@ const YouthPrograms: React.FC = () => {
              </div>
            </div>
 
-           <button className="bg-gfa-inkBlack hover:bg-[#C9A84C] text-white px-10 py-4 rounded-full font-bold uppercase tracking-widest text-sm transition-colors shadow-lg inline-flex items-center gap-2">
+           <button onClick={() => setShowRegForm(true)} className="bg-gfa-inkBlack hover:bg-[#C9A84C] text-white px-10 py-4 rounded-full font-bold uppercase tracking-widest text-sm transition-colors shadow-lg inline-flex items-center gap-2">
              {isEn ? "Join the Waitlist" : "加入等候名单"} <ArrowRight className="w-4 h-4"/>
            </button>
         </div>
       </section>
 
+
+        </>
+      )}
     </div>
   );
 };
-
 export default YouthPrograms;
