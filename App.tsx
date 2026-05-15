@@ -45,6 +45,7 @@ function App() {
             <Route path="/filmmaker-support" element={<FilmmakerSupport />} />
             <Route path="/youth-programs" element={<YouthPrograms />} />
             <Route path="/family-guide" element={<FamilyGuide />} />
+            <Route path="/golden-feather-awards" element={<Awards />} />
             <Route path="/awards" element={<Awards />} />
             <Route path="/award-submission" element={<AwardSubmission />} />
             <Route path="/short-drama" element={<ShortDrama />} />

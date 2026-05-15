@@ -28,6 +28,10 @@ const Awards: React.FC = () => {
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-serif text-white mb-3 leading-tight drop-shadow-2xl">
             {isEn ? "The Golden Feather Awards" : "金羽奖电影颁奖礼"}
           </h1>
+          <h2 className="text-xl md:text-3xl font-light text-[#C9A84C] italic drop-shadow-lg mb-6">
+            {isEn ? "Hollywood's Premier Recognition for Emerging Filmmakers" : "好莱坞首屈一指的新生代电影人表彰盛典"}
+          </h2><h1 className="hidden">
+          </h1>
         </div>
       </section>
 
@@ -36,7 +40,7 @@ const Awards: React.FC = () => {
         <div className="container-gfa max-w-4xl mx-auto px-6 text-center">
           <p className="text-xl md:text-3xl font-light text-gfa-inkBlack leading-relaxed font-serif mb-4">
             {isEn 
-              ? "The Golden Feather Awards is not a talent competition. It is one of Hollywood's most serious and prestigious professional recognition ceremonies — dedicated to honoring exceptional filmmakers, outstanding works, and the visionary voices shaping the future of cinema." 
+              ? "An annual Hollywood awards ceremony recognizing excellence in youth and independent cinema. It is one of Hollywood's most serious and prestigious professional recognition ceremonies — dedicated to honoring exceptional filmmakers." 
               : "金羽奖不是一场才艺比赛。它是好莱坞最严肃、最负盛名的专业表彰盛典之一——致力于表彰杰出的电影人、优秀的影视作品，以及塑造电影未来的前瞻性声音。"}
           </p>
           <div className="w-20 h-px bg-[#C9A84C] mx-auto mb-5"></div>
@@ -150,7 +154,7 @@ const Awards: React.FC = () => {
            <div className="text-center mb-4">
              <h2 className="text-4xl font-bold font-serif text-gfa-inkBlack mb-4 flex justify-center items-center gap-4">
                 <Sparkles className="w-10 h-10 text-[#C9A84C]" />
-                {isEn ? "Ceremony Format & Experience" : "颁奖礼形式与盛典全流程"}
+                {isEn ? "Open to filmmakers worldwide" : "向全球创作者开放"}
              </h2>
              <p className="text-gfa-slate max-w-2xl mx-auto text-lg font-light">
                 {isEn ? "An unforgettable Hollywood experience connecting rising stars with industry legends." : "一次难忘的好莱坞盛典体验，将冉冉升起的新星与行业传奇紧密相连。"}
@@ -241,7 +245,7 @@ const Awards: React.FC = () => {
                  </h3>
                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="bg-white/5 border border-white/10 rounded-2xl p-6 flex justify-between items-center group hover:bg-white/10 transition">
-                       <h4 className="font-bold text-lg">{isEn ? "Best Picture" : "最佳影片"}</h4>
+                       <h4 className="font-bold text-lg">{isEn ? "Best Film" : "最佳影片 (Best Film)"}</h4>
                        <span className="text-[#C9A84C] font-mono text-xl font-bold tracking-wider">$2,000</span>
                     </div>
                     <div className="bg-white/5 border border-white/10 rounded-2xl p-6 flex justify-between items-center group hover:bg-white/10 transition">
@@ -320,7 +324,7 @@ const Awards: React.FC = () => {
                  </h3>
                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     {[
-                      { en: "Best Youth Director", zh: "最佳青年导演", prize: "$500" },
+                      { en: "Best Young Director", zh: "最佳青年导演", prize: "$500" },
                       { en: "Best Emerging Actor", zh: "最佳新人演员", prize: "$300" },
                       { en: "Best Student Film", zh: "最佳学生影片", prize: "$200" }
                     ].map((item, idx) => (
@@ -553,7 +557,8 @@ const Awards: React.FC = () => {
                  </div>
               </div>
 
-              <div className="bg-[#F5F2EE] p-8 md:p-12 rounded-3xl border border-[#C9A84C]/20 max-w-4xl mx-auto mt-5 text-center relative overflow-hidden">
+              
+               <div className="bg-[#F5F2EE] p-8 md:p-12 rounded-3xl border border-[#C9A84C]/20 max-w-4xl mx-auto mt-5 text-center relative overflow-hidden">
                  <div className="absolute top-0 right-0 w-64 h-64 bg-[#C9A84C]/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
                  <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#C9A84C]/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
                  
@@ -562,18 +567,20 @@ const Awards: React.FC = () => {
                  </h4>
                  <p className="text-gfa-slate text-lg mb-5 max-w-2xl mx-auto relative z-10 leading-relaxed font-light">
                    {isEn 
-                     ? "Submit your masterpiece to the Golden Feather Awards. Not only will you gain global exposure, industry connections, and prestigious recognition, but standout filmmakers are also eligible for robust project support and a Cash Prize of up to $2,000 USD to fuel your next cinematic journey!" 
-                     : "向金羽奖提交您的诚意之作。在这里，您不仅将获得全球强曝光的瞩目、无接缝对接好莱坞顶级资源的机遇与无上盛行荣誉；优秀影片主创团队更有机会赢取高规格的项目扶持，以及最高达2000美金的现金大奖，为您的电影逐梦之旅重磅加码！"}
+                     ? "Open to filmmakers worldwide. Submit your masterpiece to the Golden Feather Awards. Not only will you gain global exposure, industry connections, and prestigious recognition, but standout filmmakers are also eligible for robust project support and a Cash Prize of up to $2,000 USD to fuel your next cinematic journey!" 
+                     : "面向全球电影人开放。向金羽奖提交您的诚意之作，赢取高规格的项目扶持以及最高达2000美金的现金大奖！"}
                  </p>
-                 <Link to="/award-submission" className="inline-block relative z-10 bg-gradient-to-r from-[#C9A84C] to-[#E5C973] text-black px-12 py-5 rounded-full font-bold uppercase tracking-widest text-base hover:from-gfa-inkBlack hover:to-gfa-inkBlack hover:text-white transition-all shadow-[0_10px_30px_rgba(201,168,76,0.3)] hover:shadow-2xl hover:-translate-y-1 transform duration-300">
+                 <Link to="/award-submission" className="inline-block relative z-10 bg-gradient-to-r from-[#C9A84C] to-[#E5C973] text-black px-12 py-5 rounded-full font-bold uppercase tracking-widest text-base hover:from-gfa-inkBlack hover:to-gfa-inkBlack hover:text-white transition-all shadow-[0_10px_30px_rgba(201,168,76,0.3)] hover:shadow-2xl hover:-translate-y-1 transform duration-300 mb-6">
                     {isEn ? "Start Your Submission" : "即刻提交报名申请"}
                  </Link>
-                 <p className="text-xs text-gfa-slate mt-4 relative z-10 uppercase tracking-widest font-bold opacity-60">
-                    {isEn ? "Join the ranks of visionaries" : "与未来之星并肩"}
-                 </p>
+                 <div className="relative z-10 border-t border-[#C9A84C]/20 pt-6">
+                    <p className="text-sm text-gfa-slate uppercase tracking-widest font-bold">
+                       {isEn ? "Questions? Contact us:" : "有疑问？联系我们："} <a href="mailto:info@gfafilm.org" className="text-[#C9A84C] hover:underline">info@gfafilm.org</a>
+                    </p>
+                 </div>
               </div>
-           </div>
-        </section>
+            </div>
+         </section>
 
         {/* Media & Support */}
         <section className="text-center pt-4 pb-4">
