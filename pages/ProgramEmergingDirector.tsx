@@ -4,6 +4,8 @@ import { Locale } from '../types.ts';
 import SEO from '../components/SEO.tsx';
 import { Play } from 'lucide-react';
 
+import { Link } from 'react-router-dom';
+
 const ProgramEmergingDirector: React.FC = () => {
   const { locale } = useLocale();
   const isEn = locale === Locale.EN;
@@ -54,9 +56,9 @@ const ProgramEmergingDirector: React.FC = () => {
                   {isEn ? "An enchanting story exploring childhood imagination and family bonds, produced entirely by our 2024 youth cohort." : "一个探索童年想象力和家庭纽带的迷人故事，由我们2024届青少年完全主导制作。"}
                 </p>
                 <div className="flex flex-wrap gap-4">
-                  <a href="#" className="inline-flex items-center gap-2 bg-[#00A8E1] text-white px-6 py-3 rounded-full font-bold text-xs uppercase tracking-widest hover:bg-[#0090C0] transition-colors">
+                  <a href="https://www.amazon.com/primevideo" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-[#00A8E1] text-white px-6 py-3 rounded-full font-bold text-xs uppercase tracking-widest hover:bg-[#0090C0] transition-colors">
                     <Play className="w-4 h-4 fill-current" />{/* [中文内容待填入] */} Amazon Prime </a>
-                  <a href="#" className="inline-flex items-center gap-2 bg-[#FF4500] text-white px-6 py-3 rounded-full font-bold text-xs uppercase tracking-widest hover:bg-[#E03C00] transition-colors">
+                  <a href="https://tubitv.com/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-[#FF4500] text-white px-6 py-3 rounded-full font-bold text-xs uppercase tracking-widest hover:bg-[#E03C00] transition-colors">
                     <Play className="w-4 h-4 fill-current" />{/* [中文内容待填入] */} Tubi </a>
                 </div>
               </div>
@@ -85,9 +87,9 @@ const ProgramEmergingDirector: React.FC = () => {
            <p className="text-white/80 max-w-xl mx-auto mb-5 relative z-10">
              {isEn ? "If you or your child is interested in acting, directing, or crewing for our upcoming projects, let us know." : "如果您的孩子对表演、导演或参与我们未来项目的幕后工作感兴趣，请联系我们。"}
            </p>
-           <button className="bg-[#C9A84C] hover:bg-white hover:text-[#1A2B4A] text-white px-8 py-4 rounded-full font-bold uppercase tracking-widest text-sm transition-colors relative z-10">
+           <Link to="/contact" className="inline-block bg-[#C9A84C] hover:bg-white hover:text-[#1A2B4A] text-white px-8 py-4 rounded-full font-bold uppercase tracking-widest text-sm transition-colors relative z-10">
              {isEn ? "Express Interest" : "填写意向"}
-           </button>
+           </Link>
         </section>
 
       </div>

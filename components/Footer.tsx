@@ -28,9 +28,9 @@ const Footer: React.FC = () => {
           </p>
           <div className="flex gap-4">
             {/* Social Icons */}
-            <a href="#" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#C9A84C] hover:border-[#C9A84C] hover:text-white transition-all cursor-pointer font-bold text-xs" aria-label="Twitter">X<span className="sr-only">{/* [中文内容待填入] */} Twitter </span></a>
-            <a href="#" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#C9A84C] hover:border-[#C9A84C] hover:text-white transition-all cursor-pointer font-bold text-xs" aria-label="LinkedIn">In<span className="sr-only">{/* [中文内容待填入] */} LinkedIn </span></a>
-            <a href="#" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#C9A84C] hover:border-[#C9A84C] hover:text-white transition-all cursor-pointer font-bold text-xs" aria-label="Instagram">Ig<span className="sr-only">{/* [中文内容待填入] */} Instagram </span></a>
+            <a href="#" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#C9A84C] hover:border-[#C9A84C] hover:text-white transition-all cursor-pointer font-bold text-xs" aria-label="Twitter">{/* [待补充真实的社交媒体链接] */}X<span className="sr-only">{/* [中文内容待填入] */} Twitter </span></a>
+            <a href="#" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#C9A84C] hover:border-[#C9A84C] hover:text-white transition-all cursor-pointer font-bold text-xs" aria-label="LinkedIn">{/* [待补充真实的社交媒体链接] */}In<span className="sr-only">{/* [中文内容待填入] */} LinkedIn </span></a>
+            <a href="#" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#C9A84C] hover:border-[#C9A84C] hover:text-white transition-all cursor-pointer font-bold text-xs" aria-label="Instagram">{/* [待补充真实的社交媒体链接] */}Ig<span className="sr-only">{/* [中文内容待填入] */} Instagram </span></a>
           </div>
         </div>
 
