@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useLocale } from '../LocaleContext.tsx';
 import { Locale } from '../types.ts';
@@ -9,6 +9,14 @@ import { PlayCircle, ArrowRight, Heart, Star, Film, Award, MapPin, PenTool, Moni
 const Home: React.FC = () => {
   const { locale } = useLocale();
   const isEn = locale === Locale.EN;
+  const [loadVideo, setLoadVideo] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoadVideo(true);
+    }, 2500);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div className="font-sans">
@@ -20,13 +28,17 @@ const Home: React.FC = () => {
       {/* Hero Section */}
       <section className="relative h-screen min-h-[700px] max-h-[900px] flex items-center justify-center overflow-hidden bg-gfa-inkBlack group">
         <div className="absolute inset-0 z-0 bg-black overflow-hidden pointer-events-none">
-          <iframe
-            className="absolute top-1/2 left-1/2 w-[120vw] h-[67.5vw] min-h-[120vh] min-w-[213.33vh] -translate-x-1/2 -translate-y-1/2 opacity-80"
-            src="https://www.youtube-nocookie.com/embed/iedeN6DefWs?autoplay=1&mute=1&loop=1&playlist=iedeN6DefWs&controls=0&playsinline=1&rel=0&modestbranding=1&disablekb=1"
-            title="Background Video"
-            allow="autoplay; encrypted-media"
-            allowFullScreen={false}
-          ></iframe>
+          {loadVideo ? (
+            <iframe
+              className="absolute top-1/2 left-1/2 w-[120vw] h-[67.5vw] min-h-[120vh] min-w-[213.33vh] -translate-x-1/2 -translate-y-1/2 opacity-80"
+              src="https://www.youtube-nocookie.com/embed/iedeN6DefWs?autoplay=1&mute=1&loop=1&playlist=iedeN6DefWs&controls=0&playsinline=1&rel=0&modestbranding=1&disablekb=1"
+              title="Background Video"
+              allow="autoplay; encrypted-media"
+              allowFullScreen={false}
+            ></iframe>
+          ) : (
+            <div className="absolute inset-0 bg-[url('https://wsrv.nl/?url=i.ibb.co%2F1Gj2K8CX%2Fd92babf9ca9b15b9fe754beaa383a6cf.jpg&w=1200&output=webp')] bg-cover bg-center bg-no-repeat opacity-40"></div>
+          )}
           <div className="absolute inset-0 bg-gradient-to-t from-gfa-inkBlack via-gfa-inkBlack/40 to-transparent"></div>
         </div>
 
@@ -41,7 +53,7 @@ const Home: React.FC = () => {
               : "作为一家非营利机构，GFA的存在只有一个意义：帮助有才华的电影毕业生跨越行业壁垒。设备、导师、发行、资金——我们为你解决入行最难的一步。"}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mt-4">
-            <Link to="/filmmaker-support" className="group w-full sm:w-auto bg-gfa-gold hover:bg-[#b09241] text-gfa-inkBlack px-10 py-4 rounded-full font-bold uppercase tracking-widest text-sm transition-all hover:scale-105 shadow-[0_4px_20px_rgba(201,168,76,0.4)] text-center inline-flex justify-center items-center gap-3" aria-label="了解详情">
+            <Link to="/filmmaker-support" className="group w-full sm:w-auto bg-gfa-gold hover:bg-[#b09241] text-gfa-inkBlack px-10 py-4 rounded-full font-bold uppercase tracking-widest text-sm transition-all hover:scale-105 shadow-[0_4px_20px_rgba(201,168,76,0.4)] text-center inline-flex justify-center items-center gap-3" aria-label={isEn ? "Learn more about Filmmaker Support" : "了解更多关于新电影人就业扶持的信息"}>
               {isEn ? "Apply for Support" : "申请就业支持"}
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
@@ -435,7 +447,7 @@ const Home: React.FC = () => {
                     ? "Summer camps for ages 6-17, comprehensive children's film production projects, and talent competitions." 
                     : "6-17岁影视夏令营、儿童电影制作项目、才艺大赛报名。"}
                 </p>
-                <Link to="/youth-programs" className="inline-flex items-center gap-2 text-gfa-inkBlack font-bold uppercase tracking-widest text-sm hover:text-gfa-gold transition-colors mt-auto group/link" aria-label="了解详情">
+                <Link to="/youth-programs" className="inline-flex items-center gap-2 text-gfa-inkBlack font-bold uppercase tracking-widest text-sm hover:text-gfa-gold transition-colors mt-auto group/link" aria-label={isEn ? "Learn more about Youth Programs" : "了解更多关于儿童与青少年计划的信息"}>
                   {isEn ? "Learn More" : "了解详情"} <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
                 </Link>
               </div>
@@ -461,7 +473,7 @@ const Home: React.FC = () => {
                     ? "Helping parents navigate the film industry and building clear, actionable career paths for their children." 
                     : "帮助家长了解影视行业，为孩子规划清晰的艺术职业成长路径。"}
                 </p>
-                <Link to="/family-guide" className="inline-flex items-center gap-2 text-gfa-inkBlack font-bold uppercase tracking-widest text-sm hover:text-gfa-gold transition-colors mt-auto group/link" aria-label="了解详情">
+                <Link to="/family-guide" className="inline-flex items-center gap-2 text-gfa-inkBlack font-bold uppercase tracking-widest text-sm hover:text-gfa-gold transition-colors mt-auto group/link" aria-label={isEn ? "Learn more about Family Guide" : "了解更多关于家长艺术规划指南的信息"}>
                   {isEn ? "Learn More" : "了解详情"} <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
                 </Link>
               </div>
