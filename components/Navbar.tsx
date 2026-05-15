@@ -89,12 +89,13 @@ const Navbar: React.FC = () => {
 
             {user ? (
               <div className="flex items-center gap-3 border-l border-gfa-border pl-4">
-                <Link to="/profile" className="flex items-center gap-2 text-gfa-inkBlack hover:text-gfa-gold transition-colors">
+                <Link to="/profile" className="flex items-center gap-2 text-gfa-inkBlack hover:text-gfa-gold transition-colors" aria-label="User Profile">
                   <UserCircle className="w-5 h-5 xl:w-6 xl:h-6" />
                 </Link>
                 <button 
                   onClick={() => { logout(); navigate('/'); }}
                   className="text-gfa-slate hover:text-gfa-gold transition-colors"
+                  aria-label="Log Out"
                 >
                   <LogOut className="w-4 h-4 xl:w-5 xl:h-5" />
                 </button>
@@ -162,6 +163,7 @@ const Navbar: React.FC = () => {
                 <button 
                   onClick={() => { logout(); setMobileMenuOpen(false); navigate('/'); }}
                   className="text-gfa-slate hover:text-gfa-gold transition-colors"
+                  aria-label="Log Out"
                 >
                   <LogOut className="w-6 h-6" />
                 </button>

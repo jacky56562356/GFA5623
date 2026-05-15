@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
               <span className="text-[10px] uppercase tracking-[0.2em] text-[#C9A84C] font-bold mt-1">Global Film Alliance</span>
             </div>
           </div>
-          <p className="text-sm text-white/70 leading-relaxed font-light">
+          <p className="text-sm text-gray-300 leading-relaxed font-light">
             {isEn 
               ? "Opening Doors for Filmmakers." 
               : "为每一位电影人打开那扇门。"}
@@ -36,10 +36,10 @@ const Footer: React.FC = () => {
 
         {/* Footer Links replaced by Top Bar */}
         <div>
-          <h4 className="text-[12px] font-bold uppercase tracking-widest text-[#C9A84C] mb-4 flex items-center gap-3">
+          <h3 className="text-[12px] font-bold uppercase tracking-widest text-[#C9A84C] mb-4 flex items-center gap-3">
             <span className="w-1 h-1 bg-[#C9A84C] rounded-full"></span> {isEn ? "Platform" : "平台建设"}
-          </h4>
-          <div className="space-y-4 text-sm text-white/70 font-light">
+          </h3>
+          <div className="space-y-4 text-sm text-gray-300 font-light">
             <Link to="/about" className="block hover:text-white transition-colors hover:translate-x-1 duration-300">{isEn ? 'About Us' : '关于我们'}</Link>
             <Link to="/programs" className="block hover:text-white transition-colors hover:translate-x-1 duration-300">{isEn ? 'Programs & Initiatives' : '项目与倡议'}</Link>
             <Link to="/membership" className="block hover:text-white transition-colors hover:translate-x-1 duration-300">{isEn ? 'Membership' : '平台与会员'}</Link>
@@ -49,27 +49,27 @@ const Footer: React.FC = () => {
 
         {/* Contact */}
         <div>
-          <h4 className="text-[12px] font-bold uppercase tracking-widest text-[#C9A84C] mb-4 flex items-center gap-3">
+          <h3 className="text-[12px] font-bold uppercase tracking-widest text-[#C9A84C] mb-4 flex items-center gap-3">
             <span className="w-1 h-1 bg-[#C9A84C] rounded-full"></span> {isEn ? "Contact" : "联系我们"}
-          </h4>
-          <div className="space-y-4 text-sm text-white/70 font-light">
+          </h3>
+          <div className="space-y-4 text-sm text-gray-300 font-light">
             <p className="flex flex-col gap-1">
-              <span className="text-[#C9A84C]/50 text-xs font-bold uppercase tracking-wider">Email</span>
+              <span className="text-gfa-gold text-xs font-bold uppercase tracking-wider">Email</span>
               <a href="mailto:jacky@gfafilm.org" className="hover:text-white transition-colors">jacky@gfafilm.org</a>
             </p>
             <p className="flex flex-col gap-1">
-              <span className="text-[#C9A84C]/50 text-xs font-bold uppercase tracking-wider">Phone</span>
+              <span className="text-gfa-gold text-xs font-bold uppercase tracking-wider">Phone</span>
               <a href="tel:6266778017" className="hover:text-white transition-colors">626-677-8017</a>
             </p>
             <p className="flex flex-col gap-1">
-              <span className="text-[#C9A84C]/50 text-xs font-bold uppercase tracking-wider">Address</span>
+              <span className="text-gfa-gold text-xs font-bold uppercase tracking-wider">Address</span>
               <span>17800 Castleton St, Suite 173<br/>City of Industry, CA 91748</span>
             </p>
           </div>
         </div>
 
         {/* Legal & Nonprofit Status */}
-        <div className="bg-white/5 p-8 border border-white/10 rounded-3xl text-sm text-white/70 font-light backdrop-blur-sm flex flex-col justify-center">
+        <div className="bg-white/5 p-8 border border-white/10 rounded-3xl text-sm text-gray-300 font-light backdrop-blur-sm flex flex-col justify-center">
            <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co%2FmFgDBtBp%2F1.png&w=1200&output=webp" alt="Nonprofit" className="h-12 w-auto object-contain object-left mb-3 opacity-50 grayscale mix-blend-screen"  width="1200" height="800" />
            <p className="mb-4 text-white/90 font-medium">Global Film Alliance, Inc.</p>
            <p className="mb-2">A registered 501(c)(3) nonprofit organization in California.</p>
@@ -80,11 +80,11 @@ const Footer: React.FC = () => {
       <div className="container-gfa pt-4 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-white/40 font-light">
         <p>&copy; {new Date().getFullYear()} Global Film Alliance, Inc. All rights reserved.</p>
         <div className="flex flex-wrap justify-center gap-3 items-center">
-          <Link to="/youth-protection" className="hover:text-[#C9A84C] font-bold text-white/70 transition-colors uppercase tracking-widest">{isEn ? 'Youth Protection' : '青少年安全与保护'}</Link>
+          <Link to="/youth-protection" className="hover:text-[#C9A84C] font-bold text-gray-300 transition-colors uppercase tracking-widest">{isEn ? 'Youth Protection' : '青少年安全与保护'}</Link>
           <Link to="/policy/privacy" className="hover:text-white transition-colors">{isEn ? 'Privacy Policy' : '隐私政策'}</Link>
           <Link to="/policy/terms" className="hover:text-white transition-colors">{isEn ? 'Terms of Service' : '服务条款'}</Link>
           <Link to="/policy/consent" className="hover:text-white transition-colors">{isEn ? 'Cookie Policy' : 'Cookie政策'}</Link>
-          <span className="text-white/20">|</span>
+          <span className="text-gray-400">|</span>
           <Link to="/admin" className="hover:text-[#C9A84C] transition-colors">{isEn ? 'Admin' : '系统管理'}</Link>
         </div>
       </div>

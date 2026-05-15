@@ -22,7 +22,7 @@ const Home: React.FC = () => {
         <div className="absolute inset-0 z-0 bg-black overflow-hidden pointer-events-none">
           <iframe
             className="absolute top-1/2 left-1/2 w-[120vw] h-[67.5vw] min-h-[120vh] min-w-[213.33vh] -translate-x-1/2 -translate-y-1/2 opacity-80"
-            src="https://www.youtube.com/embed/iedeN6DefWs?autoplay=1&mute=1&loop=1&playlist=iedeN6DefWs&controls=0&playsinline=1&rel=0&modestbranding=1&disablekb=1"
+            src="https://www.youtube-nocookie.com/embed/iedeN6DefWs?autoplay=1&mute=1&loop=1&playlist=iedeN6DefWs&controls=0&playsinline=1&rel=0&modestbranding=1&disablekb=1"
             title="Background Video"
             allow="autoplay; encrypted-media"
             allowFullScreen={false}
@@ -51,7 +51,7 @@ const Home: React.FC = () => {
           </div>
         </div>
 
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-white/50 z-20 cursor-pointer hover:text-white transition-colors" onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}>
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-gray-300 z-20 cursor-pointer hover:text-white transition-colors" onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}>
           <ChevronDown className="w-10 h-10" />
         </div>
       </section>
@@ -96,28 +96,28 @@ const Home: React.FC = () => {
                 <NumberCounter end={42} duration={2000} suffix="K" />
               </div>
               <p className="text-xs font-bold text-white uppercase tracking-widest mb-1">{isEn ? "Lost Jobs in LA" : "洛杉矶流失岗位"}</p>
-              <p className="text-[10px] font-bold text-white/50 uppercase tracking-[0.2em]">2022 - 2024</p>
+              <p className="text-[10px] font-bold text-gray-300 uppercase tracking-[0.2em]">2022 - 2024</p>
             </div>
             <div className="bg-white/5 backdrop-blur-md p-8 rounded-3xl border border-white/10 text-center hover:bg-white/10 transition-colors">
               <div className="text-4xl md:text-5xl font-bold font-serif text-gfa-gold mb-3">
                 <NumberCounter end={10.9} duration={2000} decimals={1} suffix="%" />
               </div>
               <p className="text-xs font-bold text-white uppercase tracking-widest mb-1">{isEn ? "Unemployment Rate" : "影视行业失业率"}</p>
-              <p className="text-[10px] font-bold text-white/50 uppercase tracking-[0.2em]">{isEn ? "2.5x National Avg" : "全国平均的2.5倍"}</p>
+              <p className="text-[10px] font-bold text-gray-300 uppercase tracking-[0.2em]">{isEn ? "2.5x National Avg" : "全国平均的2.5倍"}</p>
             </div>
             <div className="bg-white/5 backdrop-blur-md p-8 rounded-3xl border border-white/10 text-center hover:bg-white/10 transition-colors">
               <div className="text-4xl md:text-5xl font-bold font-serif text-gfa-gold mb-3">
                 <NumberCounter end={-22} duration={2000} suffix="%" />
               </div>
               <p className="text-xs font-bold text-white uppercase tracking-widest mb-1">{isEn ? "On-Location Shoots" : "洛杉矶实地拍摄天数"}</p>
-              <p className="text-[10px] font-bold text-white/50 uppercase tracking-[0.2em]">{isEn ? "Q1 2025" : "2025年 Q1"}</p>
+              <p className="text-[10px] font-bold text-gray-300 uppercase tracking-[0.2em]">{isEn ? "Q1 2025" : "2025年 Q1"}</p>
             </div>
             <div className="bg-white/5 backdrop-blur-md p-8 rounded-3xl border border-white/10 text-center hover:bg-white/10 transition-colors">
               <div className="text-4xl md:text-5xl font-bold font-serif text-gfa-gold mb-3">
                 <NumberCounter end={-25} duration={2000} suffix="%" />
               </div>
               <p className="text-xs font-bold text-white uppercase tracking-widest mb-1">{isEn ? "Industry Emp Rate" : "全行业总体就业率"}</p>
-              <p className="text-[10px] font-bold text-white/50 uppercase tracking-[0.2em]">{isEn ? "Below 2022 Peak" : "低于2022年峰值"}</p>
+              <p className="text-[10px] font-bold text-gray-300 uppercase tracking-[0.2em]">{isEn ? "Below 2022 Peak" : "低于2022年峰值"}</p>
             </div>
           </div>
 
@@ -195,7 +195,7 @@ const Home: React.FC = () => {
             <div className="flex flex-col gap-4 h-full">
               <div className="bg-white/5 backdrop-blur-sm p-6 md:p-8 rounded-[2rem] border-l-4 border-l-[#8B0000] border border-white/5 flex-1 flex flex-col justify-center transition-transform hover:-translate-y-1 duration-300">
                 <h4 className="text-lg font-bold font-serif text-white mb-2">{isEn ? "Drastically Reduced Jobs" : "行业岗位大幅减少"}</h4>
-                <p className="text-sm font-light text-white/70 leading-relaxed">
+                <p className="text-sm font-light text-gray-200 leading-relaxed">
                   {isEn 
                     ? "In 2024, Los Angeles only had 7,716 on-location shoot days left, plummeting 58% from the 2021 peak. Newcomers have almost zero opportunities." 
                     : "2024年洛杉矶仅剩7,716个实地拍摄天数，较2021年峰值暴跌58%。每个岗位竞争者激增，新人几乎没有机会。"}
@@ -204,7 +204,7 @@ const Home: React.FC = () => {
 
               <div className="bg-white/5 backdrop-blur-sm p-6 md:p-8 rounded-[2rem] border-l-4 border-l-white/20 border border-white/5 flex-1 flex flex-col justify-center transition-transform hover:-translate-y-1 duration-300">
                 <h4 className="text-lg font-bold font-serif text-white mb-2">{isEn ? "No Professional Gear" : "没有专业设备"}</h4>
-                <p className="text-sm font-light text-white/70 leading-relaxed">
+                <p className="text-sm font-light text-gray-200 leading-relaxed">
                   {isEn 
                     ? "Professional camera packages rent for hundreds daily. No gear means no portfolio, and no portfolio means no job—a deadly cycle for grads." 
                     : "专业摄影机日租金数百美元，刚毕业的学生根本负担不起。没有作品就没有工作，没有设备就没有作品——死循环。"}
@@ -213,7 +213,7 @@ const Home: React.FC = () => {
 
               <div className="bg-white/5 backdrop-blur-sm p-6 md:p-8 rounded-[2rem] border-l-4 border-l-white/20 border border-white/5 flex-1 flex flex-col justify-center transition-transform hover:-translate-y-1 duration-300">
                 <h4 className="text-lg font-bold font-serif text-white mb-2">{isEn ? "No Industry Network" : "没有行业人脉"}</h4>
-                <p className="text-sm font-light text-white/70 leading-relaxed">
+                <p className="text-sm font-light text-gray-200 leading-relaxed">
                   {isEn 
                     ? "Hollywood heavily relies on referrals. Outsiders, immigrants, and low-income grads have almost zero channels to enter." 
                     : "好莱坞高度依赖人脉推荐。外人、移民、低收入背景的毕业生，几乎没有进入这个圈子的渠道。"}
@@ -222,7 +222,7 @@ const Home: React.FC = () => {
 
               <div className="bg-white/5 backdrop-blur-sm p-6 md:p-8 rounded-[2rem] border-l-4 border-l-[#C9A84C] border border-white/5 flex-1 flex flex-col justify-center transition-transform hover:-translate-y-1 duration-300">
                 <h4 className="text-lg font-bold font-serif text-white mb-2">{isEn ? "Diversity Challenges" : "多元背景者进入劣势"}</h4>
-                <p className="text-sm font-light text-white/70 leading-relaxed">
+                <p className="text-sm font-light text-gray-200 leading-relaxed">
                   {isEn 
                     ? "Minority, immigrant, and low-income grads lack social capital and industry ties, putting them at an extreme disadvantage." 
                     : "少数族裔、移民、低收入家庭的毕业生缺乏社会资本和行业关系，在市场中处于极度劣势。"}
@@ -474,9 +474,9 @@ const Home: React.FC = () => {
       <section className="py-4 md:py-5 bg-white overflow-hidden">
         <div className="container-gfa px-4">
           <div className="text-center mb-3">
-            <h2 className="text-[10px] font-bold text-gfa-gold uppercase tracking-[0.3em] mb-2">
+            <p className="text-[10px] font-bold text-gfa-gold uppercase tracking-[0.3em] mb-2">
               From Dream to Career — GFA at Every Stage
-            </h2>
+            </p>
             <h2 className="text-2xl md:text-4xl font-bold font-serif text-gfa-inkBlack">
               {isEn ? "From Dream to Career" : "从梦想到职业，GFA在每一步"}
             </h2>
@@ -646,7 +646,7 @@ const Home: React.FC = () => {
                      <h3 className="text-xl font-bold font-serif text-white mb-2">
                        {isEn ? "Financial & Equipment Support" : "资金与设备捐赠"}
                      </h3>
-                     <p className="text-sm text-white/70">
+                     <p className="text-sm text-gray-200">
                        {isEn ? "Help us fund scholarships, production grants, or gear." : "资金或设备将直接用于青年项目资助。"}
                      </p>
                    </div>
