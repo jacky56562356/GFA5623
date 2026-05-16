@@ -26,6 +26,10 @@ const Home: React.FC = () => {
               title="Background Video"
               allow="autoplay; encrypted-media"
               allowFullScreen={false}
+              autoPlay
+              muted
+              loop
+              playsInline
             ></iframe>
           <div className="absolute inset-0 bg-gradient-to-t from-gfa-inkBlack via-gfa-inkBlack/40 to-transparent"></div>
         </div>
