@@ -459,7 +459,7 @@ const Home: React.FC = () => {
                     ? "Helping parents navigate the film industry and building clear, actionable career paths for their children." 
                     : "帮助家长了解影视行业，为孩子规划清晰的艺术职业成长路径。"}
                 </p>
-                <Link to="/family-guide" className="inline-flex items-center gap-2 text-gfa-inkBlack font-bold uppercase tracking-widest text-sm hover:text-gfa-gold transition-colors mt-auto group/link" aria-label={isEn ? "Learn more about Family Guide" : "了解更多关于家长艺术规划指南的信息"}>
+                <Link to="/youth-programs#family-guide" className="inline-flex items-center gap-2 text-gfa-inkBlack font-bold uppercase tracking-widest text-sm hover:text-gfa-gold transition-colors mt-auto group/link" aria-label={isEn ? "Learn more about Family Guide" : "了解更多关于家长艺术规划指南的信息"}>
                   {isEn ? "Learn More" : "了解详情"} <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
                 </Link>
               </div>

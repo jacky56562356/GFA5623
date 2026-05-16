@@ -20,14 +20,14 @@ type Mentor = {
 const mentors: Mentor[] = [
   {
     id: 1,
-    name: "Jacky (xiaoren) Liu",
-    roleEn: "President & Founder",
-    roleZh: "主席 & 创始人",
-    image: "https://i.ibb.co/23F9WNxm/8e219be0edf629ecba7014dd02d05c5e.jpg",
-    bioEn: "Over 15 years of experience in producing independent films. Dedicated to helping young filmmakers navigate the industry.",
-    bioZh: "拥有超过15年的独立电影制作经验。致力于帮助年轻电影人了解行业、建立人脉。",
-    expertiseEn: ["Film Production", "Industry Networking", "Independent Filmmaking"],
-    expertiseZh: ["电影制作", "行业人脉", "独立电影"]
+    name: "Robert M.",
+    roleEn: "Executive Producer",
+    roleZh: "执行制片人",
+    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&q=80",
+    bioEn: "Veteran producer with a track record of supporting breakthrough independent films and emerging talents.",
+    bioZh: "资深制片人，在支持突破性独立电影和新兴电影人才方面拥有丰富经验。",
+    expertiseEn: ["Film Production", "Project Financing", "Talent Development"],
+    expertiseZh: ["电影制作", "项目融资", "人才培养"]
   },
   {
     id: 2,
