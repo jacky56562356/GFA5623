@@ -215,7 +215,7 @@ const About: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
              <div className="bg-[#F5F2EE] rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
                <div className="h-56 overflow-hidden relative">
-                 <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1588636400925-5ae86cd2fa79%3Fauto%3Dformat%26fit%3Dcrop%26w%3D2000%26q%3D80&w=1200&output=webp" alt="Filmmaker Action" className="w-full h-full object-cover"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                 <img loading="lazy" src="https://i.ibb.co/TxbFZqLB/Gemini-Generated-Image-v3wfmxv3wfmxv3wf.png" alt="Filmmaker Action" className="w-full h-full object-cover"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
                </div>
                <div className="p-8">
                  <div className="text-xs font-bold text-[#C9A84C] uppercase tracking-widest mb-3">{isEn ? "Career Support" : "就业扶持计划"}</div>
@@ -228,7 +228,7 @@ const About: React.FC = () => {
 
              <div className="bg-[#F5F2EE] rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
                <div className="h-56 overflow-hidden relative">
-                 <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1511629091441-ee46146481b6%3Fauto%3Dformat%26fit%3Dcrop%26w%3D2000%26q%3D80&w=1200&output=webp" alt="Summer Camp" className="w-full h-full object-cover"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                 <img loading="lazy" src="https://i.ibb.co/93ZJzvsG/Gemini-Generated-Image-98n2ne98n2ne98n2.png" alt="Summer Camp" className="w-full h-full object-cover"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
                </div>
                <div className="p-8">
                  <div className="text-xs font-bold text-[#C9A84C] uppercase tracking-widest mb-3">{isEn ? "Youth Camp" : "影视夏令营"}</div>
