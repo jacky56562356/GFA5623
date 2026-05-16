@@ -19,7 +19,7 @@ const About: React.FC = () => {
       {/* Hero Banner */}
       <section className="relative h-[45vh] min-h-[400px] flex items-center justify-center overflow-hidden bg-gfa-inkBlack mt-[90px] md:mt-[100px]">
         <div className="absolute inset-0 z-0">
-          <img fetchpriority="high" 
+          <img 
             src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1522071820081-009f0129c71c%3Fauto%3Dformat%26fit%3Dcrop%26w%3D2670%26q%3D80&w=1200&output=webp" 
             alt="Diverse team of young filmmakers" 
             className="w-full h-full object-cover opacity-50 mix-blend-luminosity" 
