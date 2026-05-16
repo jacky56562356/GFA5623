@@ -20,17 +20,25 @@ const Home: React.FC = () => {
       {/* Hero Section */}
       <section className="relative h-screen min-h-[700px] max-h-[900px] flex items-center justify-center overflow-hidden bg-gfa-inkBlack group">
         <div className="absolute inset-0 z-0 bg-black overflow-hidden pointer-events-none">
-            <iframe 
-              className="absolute top-1/2 left-1/2 w-[120vw] h-[67.5vw] min-h-[120vh] min-w-[213.33vh] -translate-x-1/2 -translate-y-1/2 opacity-80"
-              width="560" 
-              height="315" 
-              src="https://www.youtube.com/embed/iedeN6DefWs?si=cMofgajOjHWcGPTI&autoplay=1&mute=1&loop=1&playlist=iedeN6DefWs&controls=0&playsinline=1" 
-              title="YouTube video player" 
-              frameBorder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-              referrerPolicy="strict-origin-when-cross-origin" 
-              allowFullScreen>
-            </iframe>
+            <div dangerouslySetInnerHTML={{
+              __html: `
+                <iframe 
+                  class="absolute top-1/2 left-1/2 w-[120vw] h-[67.5vw] min-h-[120vh] min-w-[213.33vh] -translate-x-1/2 -translate-y-1/2 opacity-80"
+                  width="560" 
+                  height="315" 
+                  src="https://www.youtube.com/embed/iedeN6DefWs?autoplay=1&mute=1&loop=1&playlist=iedeN6DefWs&controls=0&playsinline=1" 
+                  title="YouTube video player" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  referrerpolicy="strict-origin-when-cross-origin" 
+                  allowfullscreen
+                  autoplay
+                  muted
+                  playsinline
+                  loop
+                ></iframe>
+              `
+            }} />
           <div className="absolute inset-0 bg-gradient-to-t from-gfa-inkBlack via-gfa-inkBlack/40 to-transparent"></div>
         </div>
 
