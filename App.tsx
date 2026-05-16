@@ -8,7 +8,7 @@ import Layout from './components/Layout';
 
 // Pages
 const Home = React.lazy(() => import('./pages/Home'));
-const About = React.lazy(() => import('./pages/AboutPage'));
+const About = React.lazy(() => import('./pages/About'));
 const FilmmakerSupport = React.lazy(() => import('./pages/FilmmakerSupport'));
 const YouthPrograms = React.lazy(() => import('./pages/YouthPrograms'));
 const FamilyGuide = React.lazy(() => import('./pages/FamilyGuide'));
