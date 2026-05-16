@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useLocale } from '../LocaleContext.tsx';
 import { Locale } from '../types.ts';
 import SEO from '../components/SEO.tsx';
@@ -279,9 +280,9 @@ const About: React.FC = () => {
                     <p className="text-gfa-slate font-light text-base mb-6 leading-relaxed">
                       {isEn ? "GFA announces its flagship event to be held in Hollywood, uniting young talents from the US and China on a single stage. Registration opens soon for students spanning multiple disciplines." : "GFA宣布将于好莱坞中心舞台举办核心赛事，首次将中美两地的才华青少年汇聚于同一舞台。目前正式对多领域的学生开放注册。"}
                     </p>
-                    <button className="text-gfa-inkBlack font-bold uppercase tracking-widest text-sm flex items-center gap-2 hover:text-[#C9A84C] transition-colors w-fit">
-                      {isEn ? "Read Full Release" : "阅读完整新闻稿"} <ArrowRight className="w-5 h-5"/>
-                    </button>
+                    <Link to="/competition" className="text-gfa-inkBlack font-bold uppercase tracking-widest text-sm flex items-center gap-2 hover:text-[#C9A84C] transition-colors w-fit">
+                      {isEn ? "View Competition" : "进入赛事页面"} <ArrowRight className="w-5 h-5"/>
+                    </Link>
                  </div>
               </div>
 

@@ -58,11 +58,14 @@ const FilmmakerSupport: React.FC = () => {
           <div className="space-y-3">
             {/* Support 1 */}
             <div className="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100 flex flex-col md:flex-row gap-4">
-              <div className="md:w-1/3 shrink-0">
+              <div className="md:w-1/3 shrink-0 flex flex-col">
                 <div className="w-16 h-16 bg-[#C9A84C]/10 rounded-2xl flex items-center justify-center mb-3 text-[#C9A84C]">
                   <Camera className="w-8 h-8" />
                 </div>
-                <h3 className="text-2xl font-bold font-serif mb-2">{isEn ? "Free Pro Gear Access" : "公益影视设备借用"}</h3>
+                <h3 className="text-2xl font-bold font-serif mb-4">{isEn ? "Free Pro Gear Access" : "公益影视设备借用"}</h3>
+                <div className="w-full aspect-[4/3] rounded-xl overflow-hidden border border-gray-100 shadow-sm mt-auto mb-4 md:mb-0">
+                  <img loading="lazy" src="https://i.ibb.co/jZs4rXHp/Gemini-Generated-Image-coqxqkcoqxqkcoqx-1.png" alt="Pro Gear Access" className="w-full h-full object-cover" width="600" height="400" onError={(e) => { e.currentTarget.src = "https://placehold.co/600x400/eeeeee/999999?text=Image+Not+Found"; }} />
+                </div>
               </div>
               <div className="md:w-2/3 flex flex-col justify-center space-y-4">
                 <div className="bg-red-50 text-red-800 p-5 rounded-xl text-sm font-light border border-red-100 leading-relaxed">
@@ -85,11 +88,19 @@ const FilmmakerSupport: React.FC = () => {
 
             {/* Support 2 */}
             <div className="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100 flex flex-col md:flex-row gap-4">
-              <div className="md:w-1/3 shrink-0">
-                <div className="w-16 h-16 bg-[#C9A84C]/10 rounded-2xl flex items-center justify-center mb-3 text-[#C9A84C]">
-                  <Users className="w-8 h-8" />
+              <div className="md:w-1/3 shrink-0 flex flex-col gap-4">
+                <div>
+                  <div className="w-16 h-16 bg-[#C9A84C]/10 rounded-2xl flex items-center justify-center mb-3 text-[#C9A84C]">
+                    <Users className="w-8 h-8" />
+                  </div>
+                  <h3 className="text-2xl font-bold font-serif mb-4">{isEn ? "Nonprofit Mentorship" : "公益导师扶持计划"}</h3>
                 </div>
-                <h3 className="text-2xl font-bold font-serif mb-2">{isEn ? "Nonprofit Mentorship" : "公益导师扶持计划"}</h3>
+                <div className="w-full aspect-[4/3] rounded-xl overflow-hidden border border-gray-100 shadow-sm">
+                  <img loading="lazy" src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&h=400&fit=crop&q=80" alt="Mentorship" className="w-full h-full object-cover" width="600" height="400" onError={(e) => { e.currentTarget.src = "https://placehold.co/600x400/eeeeee/999999?text=Image+Not+Found"; }} />
+                </div>
+                <div className="w-full aspect-[4/3] rounded-xl overflow-hidden border border-gray-100 shadow-sm">
+                  <img loading="lazy" src="https://i.ibb.co/C54fvP0D/Gemini-Generated-Image-d4y2gqd4y2gqd4y2.png" alt="Mentorship 2" className="w-full h-full object-cover" width="600" height="400" onError={(e) => { e.currentTarget.src = "https://placehold.co/600x400/eeeeee/999999?text=Image+Not+Found"; }} />
+                </div>
               </div>
               <div className="md:w-2/3 flex flex-col justify-center space-y-4">
                 <div className="bg-red-50 text-red-800 p-5 rounded-xl text-sm font-light border border-red-100 leading-relaxed">
@@ -163,11 +174,14 @@ const FilmmakerSupport: React.FC = () => {
 
             {/* Support 3 */}
             <div className="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100 flex flex-col md:flex-row gap-4">
-              <div className="md:w-1/3 shrink-0">
+              <div className="md:w-1/3 shrink-0 flex flex-col">
                 <div className="w-16 h-16 bg-[#C9A84C]/10 rounded-2xl flex items-center justify-center mb-3 text-[#C9A84C]">
                   <PlaySquare className="w-8 h-8" />
                 </div>
-                <h3 className="text-2xl font-bold font-serif mb-2">{isEn ? "Festival Strategy Support" : "公益展映与电影节支持"}</h3>
+                <h3 className="text-2xl font-bold font-serif mb-4">{isEn ? "Festival Strategy Support" : "公益展映与电影节支持"}</h3>
+                <div className="w-full aspect-[4/3] rounded-xl overflow-hidden border border-gray-100 shadow-sm mt-auto mb-4 md:mb-0">
+                  <img loading="lazy" src="https://images.unsplash.com/photo-1585699324551-f6c309eedeca?w=600&h=400&fit=crop&q=80" alt="Festival Support" className="w-full h-full object-cover" width="600" height="400" onError={(e) => { e.currentTarget.src = "https://placehold.co/600x400/eeeeee/999999?text=Image+Not+Found"; }} />
+                </div>
               </div>
               <div className="md:w-2/3 flex flex-col justify-center space-y-4">
                 <div className="bg-red-50 text-red-800 p-5 rounded-xl text-sm font-light border border-red-100 leading-relaxed">
@@ -189,11 +203,14 @@ const FilmmakerSupport: React.FC = () => {
 
             {/* Support 4 */}
             <div className="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100 flex flex-col md:flex-row gap-4">
-              <div className="md:w-1/3 shrink-0">
+              <div className="md:w-1/3 shrink-0 flex flex-col">
                 <div className="w-16 h-16 bg-[#C9A84C]/10 rounded-2xl flex items-center justify-center mb-3 text-[#C9A84C]">
                   <FileText className="w-8 h-8" />
                 </div>
-                <h3 className="text-2xl font-bold font-serif mb-2">{isEn ? "Public Grant Coaching" : "公共艺术资助申报辅导"}</h3>
+                <h3 className="text-2xl font-bold font-serif mb-4">{isEn ? "Public Grant Coaching" : "公共艺术资助申报辅导"}</h3>
+                <div className="w-full aspect-[4/3] rounded-xl overflow-hidden border border-gray-100 shadow-sm mt-auto mb-4 md:mb-0">
+                  <img loading="lazy" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop&q=80" alt="Grant Coaching" className="w-full h-full object-cover" width="600" height="400" onError={(e) => { e.currentTarget.src = "https://placehold.co/600x400/eeeeee/999999?text=Image+Not+Found"; }} />
+                </div>
               </div>
               <div className="md:w-2/3 flex flex-col justify-center space-y-4">
                 <div className="bg-red-50 text-red-800 p-5 rounded-xl text-sm font-light border border-red-100 leading-relaxed">
@@ -215,11 +232,14 @@ const FilmmakerSupport: React.FC = () => {
 
             {/* Support 5 */}
             <div className="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100 flex flex-col md:flex-row gap-4">
-              <div className="md:w-1/3 shrink-0">
+              <div className="md:w-1/3 shrink-0 flex flex-col">
                 <div className="w-16 h-16 bg-[#C9A84C]/10 rounded-2xl flex items-center justify-center mb-3 text-[#C9A84C]">
                   <Clapperboard className="w-8 h-8" />
                 </div>
-                <h3 className="text-2xl font-bold font-serif mb-2">{isEn ? "Educational On-Set Experience" : "教育性片场实战锻炼"}</h3>
+                <h3 className="text-2xl font-bold font-serif mb-4">{isEn ? "Educational On-Set Experience" : "教育性片场实战锻炼"}</h3>
+                <div className="w-full aspect-[4/3] rounded-xl overflow-hidden border border-gray-100 shadow-sm mt-auto mb-4 md:mb-0">
+                  <img loading="lazy" src="https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?w=600&h=400&fit=crop&q=80" alt="On-Set Experience" className="w-full h-full object-cover" width="600" height="400" onError={(e) => { e.currentTarget.src = "https://placehold.co/600x400/eeeeee/999999?text=Image+Not+Found"; }} />
+                </div>
               </div>
               <div className="md:w-2/3 flex flex-col justify-center space-y-4">
                 <div className="bg-red-50 text-red-800 p-5 rounded-xl text-sm font-light border border-red-100 leading-relaxed">

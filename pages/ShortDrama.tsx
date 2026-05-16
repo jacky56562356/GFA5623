@@ -258,14 +258,14 @@ export default function ShortDrama() {
 
         <div className="container-gfa relative z-10 px-6 text-center max-w-5xl mx-auto">
           <div className="inline-block border border-[#C9A84C] px-5 py-2 rounded-sm mb-6 bg-[#0A0A0A]/50 backdrop-blur-md">
-            <div className="text-[10px] text-[#C9A84C] tracking-[0.3em] font-bold uppercase">GLOBAL FILM ALLIANCE · GOLDEN FEATHER AWARDS 2026</div>
+            <div className="text-[10px] text-[#C9A84C] tracking-[0.3em] font-bold uppercase pl-[0.3em]">GLOBAL FILM ALLIANCE · GOLDEN FEATHER AWARDS 2026</div>
           </div>
           <h1 className="text-4xl md:text-6xl lg:text-[72px] font-bold font-serif text-white mb-6 leading-tight drop-shadow-2xl flex flex-col items-center justify-center">
-            <span className="text-[#C9A84C] block">{/* [中文内容待填入] */} SHORT DRAMA </span>
-            <span className="block">{/* [中文内容待填入] */} SHOWCASE </span>
+            <span className="text-[#C9A84C] block">{/* [中文内容待填入] */}SHORT DRAMA</span>
+            <span className="block">{/* [中文内容待填入] */}SHOWCASE</span>
           </h1>
-          <p className="text-xs md:text-sm tracking-[0.4em] text-[#C9A84C] uppercase font-bold mb-6 pl-[0.4em]">{/* [中文内容待填入] */} Where Stories Meet Platforms </p>
-          <p className="text-base md:text-lg text-[#CCCCCC] font-light md:w-3/4 mx-auto mb-12 leading-relaxed">
+          <p className="text-xs md:text-sm tracking-[0.4em] text-[#C9A84C] uppercase font-bold mb-6 mx-auto text-center">{/* [中文内容待填入] */}Where Stories Meet Platforms</p>
+          <p className="text-base md:text-lg text-[#CCCCCC] font-light max-w-4xl mx-auto mb-12 leading-relaxed text-center">
             {isEn 
              ? "The Short Drama Showcase is a special featured category of the Golden Feather Awards, running synchronously with the main ceremony. It's a dedicated platform designed for production companies, creators, and distribution platforms to showcase their work, discover new talent, and forge strategic partnerships. From Hollywood to Asia—we bridge high-quality short drama content with global distribution." 
              : "作为金羽奖的官方特设单元，短剧展映与金羽奖颁奖盛典同步进行。它不仅是一个内容角逐的竞赛单元，更是专为制作公司（内容方）和发行平台打造的综合性展示与对接生态。在这里，短剧作品展示、制作团队路演与平台出海需求实现精准对接。从好莱坞到亚洲——我们构建连接优质短剧内容与全球平台的最佳桥梁。"}
