@@ -256,16 +256,16 @@ export default function ShortDrama() {
         {/* Glow effect */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#C9A84C]/10 rounded-full blur-[100px] pointer-events-none"></div>
 
-        <div className="container-gfa relative z-10 px-6 text-center max-w-5xl mx-auto">
+        <div className="container-gfa relative z-10 px-6 max-w-5xl mx-auto flex flex-col items-center text-center">
           <div className="inline-block border border-[#C9A84C] px-5 py-2 rounded-sm mb-6 bg-[#0A0A0A]/50 backdrop-blur-md">
             <div className="text-[10px] text-[#C9A84C] tracking-[0.3em] font-bold uppercase pl-[0.3em]">GLOBAL FILM ALLIANCE · GOLDEN FEATHER AWARDS 2026</div>
           </div>
-          <h1 className="text-4xl md:text-6xl lg:text-[72px] font-bold font-serif text-white mb-6 leading-tight drop-shadow-2xl flex flex-col items-center justify-center">
-            <span className="text-[#C9A84C] block">{/* [中文内容待填入] */}SHORT DRAMA</span>
-            <span className="block">{/* [中文内容待填入] */}SHOWCASE</span>
+          <h1 className="text-4xl md:text-6xl lg:text-[72px] font-bold font-serif text-white mb-6 leading-tight drop-shadow-2xl flex flex-col items-center">
+            <span className="text-[#C9A84C] block">SHORT DRAMA</span>
+            <span className="block">SHOWCASE</span>
           </h1>
-          <p className="text-xs md:text-sm tracking-[0.4em] text-[#C9A84C] uppercase font-bold mb-6 mx-auto text-center">{/* [中文内容待填入] */}Where Stories Meet Platforms</p>
-          <p className="text-base md:text-lg text-[#CCCCCC] font-light max-w-4xl mx-auto mb-12 leading-relaxed text-center">
+          <p className="text-xs md:text-sm tracking-[0.4em] text-[#C9A84C] uppercase font-bold mb-6 pl-[0.4em]">Where Stories Meet Platforms</p>
+          <p className="text-base md:text-lg text-[#CCCCCC] font-light max-w-4xl mx-auto mb-12 leading-relaxed">
             {isEn 
              ? "The Short Drama Showcase is a special featured category of the Golden Feather Awards, running synchronously with the main ceremony. It's a dedicated platform designed for production companies, creators, and distribution platforms to showcase their work, discover new talent, and forge strategic partnerships. From Hollywood to Asia—we bridge high-quality short drama content with global distribution." 
              : "作为金羽奖的官方特设单元，短剧展映与金羽奖颁奖盛典同步进行。它不仅是一个内容角逐的竞赛单元，更是专为制作公司（内容方）和发行平台打造的综合性展示与对接生态。在这里，短剧作品展示、制作团队路演与平台出海需求实现精准对接。从好莱坞到亚洲——我们构建连接优质短剧内容与全球平台的最佳桥梁。"}
@@ -328,7 +328,7 @@ export default function ShortDrama() {
                </div>
                <div className="relative">
                   <div className="absolute inset-0 bg-[#C9A84C]/10 rounded-[20px] transform translate-x-3 translate-y-3 md:translate-x-6 md:translate-y-6"></div>
-                  <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1556761175-5973dc0f32d7%3Fq%3D80%26w%3D2670%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" referrerPolicy="no-referrer" alt="Partnership" className="relative rounded-[20px] shadow-2xl w-full h-[350px] md:h-[450px] object-cover border border-[#333] z-10"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                  <img loading="lazy" src="https://i.ibb.co/sp0vpNVK/Gemini-Generated-Image-nztl68nztl68nztl.png" referrerPolicy="no-referrer" alt="Partnership" className="relative rounded-[20px] shadow-2xl w-full h-[350px] md:h-[450px] object-cover border border-[#333] z-10" width="1200" height="800" onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
                </div>
             </div>
 
