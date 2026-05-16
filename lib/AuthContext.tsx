@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
-import { User, onAuthStateChanged, signInWithPopup, GoogleAuthProvider, signOut, signInWithEmailAndPassword, createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
+import { User, onAuthStateChanged, signInWithPopup, GoogleAuthProvider, signOut, signInWithEmailAndPassword, createUserWithEmailAndPassword, updateProfile, sendPasswordResetEmail } from 'firebase/auth';
 import { auth, db } from './firebase';
 import { doc, getDoc, setDoc, serverTimestamp } from 'firebase/firestore';
 
@@ -12,7 +12,8 @@ interface AuthContextType {
   setAuthModalOpen: (open: boolean) => void;
   // We provide the auth object so components can call methods if needed, or we expose functions
   signInWithEmail: (email: string, pass: string) => Promise<void>;
-  signUpWithEmail: (email: string, pass: string, name: string) => Promise<void>;
+  signUpWithEmail: (email: string, pass: string, name: string, phone: string) => Promise<void>;
+  resetPassword: (email: string) => Promise<void>;
 }
 
 const AuthContext = createContext<AuthContextType>({
@@ -24,6 +25,7 @@ const AuthContext = createContext<AuthContextType>({
   setAuthModalOpen: () => {},
   signInWithEmail: async () => {},
   signUpWithEmail: async () => {},
+  resetPassword: async () => {},
 });
 
 export const useAuth = () => useContext(AuthContext);
@@ -82,7 +84,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     }
   };
 
-  const signUpWithEmail = async (email: string, pass: string, name: string) => {
+  const signUpWithEmail = async (email: string, pass: string, name: string, phone: string) => {
     try {
       const cred = await createUserWithEmailAndPassword(auth, email, pass);
       await updateProfile(cred.user, { displayName: name });
@@ -92,12 +94,14 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       if (userDoc.exists()) {
         await setDoc(userRef, {
           name: name,
+          phone: phone,
           updatedAt: serverTimestamp()
         }, { merge: true });
       } else {
         await setDoc(userRef, {
           userId: cred.user.uid,
           name: name,
+          phone: phone,
           createdAt: serverTimestamp(),
           updatedAt: serverTimestamp(),
         });
@@ -106,6 +110,16 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       setAuthModalOpen(false);
     } catch (e) {
       console.error('Email sign up error:', e);
+      throw e;
+    }
+  };
+
+  const resetPassword = async (email: string) => {
+    try {
+      if (!email) throw new Error("Email is required");
+      await sendPasswordResetEmail(auth, email);
+    } catch (e) {
+      console.error('Password reset error:', e);
       throw e;
     }
   };
@@ -119,7 +133,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   };
 
   return (
-    <AuthContext.Provider value={{ user, loading, signInWithGoogle, logout, isAuthModalOpen, setAuthModalOpen, signInWithEmail, signUpWithEmail }}>
+    <AuthContext.Provider value={{ user, loading, signInWithGoogle, logout, isAuthModalOpen, setAuthModalOpen, signInWithEmail, signUpWithEmail, resetPassword }}>
       {children}
     </AuthContext.Provider>
   );

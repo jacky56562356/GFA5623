@@ -23,6 +23,7 @@ service cloud.firestore {
         && data.userId is string && data.userId.size() > 0 && data.userId.size() <= 128
         && data.name is string && data.name.size() > 0 && data.name.size() <= 100
         && ( !('bio' in data) || (data.bio is string && data.bio.size() <= 500) )
+        && ( !('phone' in data) || (data.phone is string && data.phone.size() <= 20) )
         // identity integrity
         && data.userId == request.auth.uid;
     }
@@ -108,7 +109,7 @@ service cloud.firestore {
         && isValidId(userId)
         && request.auth.uid == userId
         && isValidUserProfile(incoming())
-        && incoming().keys().size() == ( ('bio' in incoming()) ? 5 : 4 )
+        && incoming().keys().size() == ( ('bio' in incoming()) ? 1 : 0 ) + ( ('phone' in incoming()) ? 1 : 0 ) + 4
         && incoming().createdAt == request.time
         && incoming().updatedAt == request.time;
 
@@ -119,7 +120,7 @@ service cloud.firestore {
         && incoming().updatedAt == request.time
         && incoming().createdAt == existing().createdAt
         && incoming().userId == existing().userId
-        && incoming().diff(existing()).affectedKeys().hasOnly(['name', 'bio', 'updatedAt']);
+        && incoming().diff(existing()).affectedKeys().hasOnly(['name', 'bio', 'phone', 'updatedAt']);
         
       allow delete: if false; // Users shouldn't be deleted via client SDK
     }

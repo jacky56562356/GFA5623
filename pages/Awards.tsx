@@ -36,39 +36,45 @@ const Awards: React.FC = () => {
       </section>
 
       {/* Introduction */}
-      <section className="py-5 md:py-8 bg-white relative z-20 -mt-16 rounded-t-[40px] shadow-xl">
-        <div className="container-gfa max-w-4xl mx-auto px-6 text-center">
-          <p className="text-xl md:text-3xl font-light text-gfa-inkBlack leading-relaxed font-serif mb-4">
-            {isEn 
-              ? "An annual Hollywood awards ceremony recognizing excellence in youth and independent cinema. It is one of Hollywood's most serious and prestigious professional recognition ceremonies — dedicated to honoring exceptional filmmakers." 
-              : "金羽奖不是一场才艺比赛。它是好莱坞最严肃、最负盛名的专业表彰盛典之一——致力于表彰杰出的电影人、优秀的影视作品，以及塑造电影未来的前瞻性声音。"}
-          </p>
-          <div className="w-20 h-px bg-[#C9A84C] mx-auto mb-5"></div>
-          <div className="text-gfa-slate font-light leading-relaxed space-y-3 text-lg md:text-xl text-left md:text-justify max-w-3xl mx-auto">
-             <p>{isEn 
-               ? "Judged by active Hollywood industry professionals, and held at the heart of Hollywood in a formal, high-caliber ceremony, the Golden Feather Awards recognizes excellence across all levels of the craft — from established filmmakers to emerging directors, from seasoned creators to bold new voices entering the industry for the first time." 
-               : "金羽奖由活跃的好莱坞工业专业人士组成评审团，在好莱坞核心地带以高规格的正式典礼呈现。我们表彰电影制作各个层面的卓越成就——从成熟的电影人到新秀导演，从经验丰富的创作者到首次步入行业的勇敢新声。"}</p>
-             
-             <p>{isEn 
-               ? "We believe that great cinema deserves to be seen. A great film should not remain unseen simply because its creator lacked a platform. Our mission is to build that platform." 
-               : "我们坚信，伟大的电影理应被世界看到。一部好电影，绝不该因为创作者缺乏发声的平台而默默无闻。打造这样一个属于电影人的平台，正是我们的使命。"}</p>
-               
-             <p>{isEn 
-               ? "Through our distribution network spanning Asia — including Mainland China, Hong Kong, and Taiwan — the Golden Feather Awards serves as a bridge, carrying outstanding works to audiences across the world. Every film recognized by our awards gains access to new markets, new audiences, and new opportunities for growth." 
-               : "依托覆盖亚洲（包括中国大陆、香港及台湾地区）的发行网络，金羽奖犹如一座桥梁，将杰出作品推向全球观众。每一部获得我们奖项认可的影片，都将获得进入新市场、接触新受众和持续发展的新机遇。"}</p>
-               
-             <p>{isEn 
-               ? "We are building our own streaming platform to ensure that awarded filmmakers receive the recognition, reach, and professional returns their work deserves — because great storytelling should never go unrewarded." 
-               : "我们正在建立专属的流媒体平台，以确保获奖电影人能够获得与其作品价值相匹配的认可、影响力以及专业回报——因为，伟大的故事讲述永远不该被辜负。"}</p>
-          </div>
-
-          <div className="mt-4 text-center">
-            <h3 className="text-2xl md:text-4xl font-bold font-serif text-[#C9A84C] mb-4">
-              {isEn ? "The Golden Feather Awards." : "金羽奖"}
-            </h3>
-            <p className="text-xl md:text-2xl font-light text-gfa-inkBlack italic font-serif">
-              {isEn ? "Where excellence is recognized. Where cinema travels further." : "卓越被看见的地方。让电影走得更远。"}
+      <section className="py-8 md:py-12 bg-white relative z-20 -mt-16 rounded-t-[40px] shadow-xl">
+        <div className="container-gfa max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+          <div className="md:w-3/4">
+            <p className="text-lg md:text-xl font-light text-gfa-inkBlack leading-[1.8] font-serif mb-6 text-center md:text-left">
+              {isEn 
+                ? "An annual Hollywood awards ceremony recognizing excellence in youth and independent cinema. It is one of Hollywood's most serious and prestigious professional recognition ceremonies — dedicated to honoring exceptional filmmakers." 
+                : "金羽奖不是一场才艺比赛。它是好莱坞最严肃、最负盛名的专业表彰盛典之一——致力于表彰杰出的电影人、优秀的影视作品，以及塑造电影未来的前瞻性声音。"}
             </p>
+            <div className="w-16 h-px bg-[#C9A84C] mb-6 mx-auto md:mx-0"></div>
+            <div className="text-gfa-slate font-light leading-[1.8] space-y-4 text-sm md:text-base text-left md:text-justify mb-8">
+               <p>{isEn 
+                 ? "Judged by active Hollywood industry professionals, and held at the heart of Hollywood in a formal, high-caliber ceremony, the Golden Feather Awards recognizes excellence across all levels of the craft — from established filmmakers to emerging directors, from seasoned creators to bold new voices entering the industry for the first time." 
+                 : "金羽奖由活跃的好莱坞工业专业人士组成评审团，在好莱坞核心地带以高规格的正式典礼呈现。我们表彰电影制作各个层面的卓越成就——从成熟的电影人到新秀导演，从经验丰富的创作者到首次步入行业的勇敢新声。"}</p>
+               
+               <p>{isEn 
+                 ? "We believe that great cinema deserves to be seen. A great film should not remain unseen simply because its creator lacked a platform. Our mission is to build that platform." 
+                 : "我们坚信，伟大的电影理应被世界看到。一部好电影，绝不该因为创作者缺乏发声的平台而默默无闻。打造这样一个属于电影人的平台，正是我们的使命。"}</p>
+                 
+               <p>{isEn 
+                 ? "Through our distribution network spanning Asia — including Mainland China, Hong Kong, and Taiwan — the Golden Feather Awards serves as a bridge, carrying outstanding works to audiences across the world. Every film recognized by our awards gains access to new markets, new audiences, and new opportunities for growth." 
+                 : "依托覆盖亚洲（包括中国大陆、香港及台湾地区）的发行网络，金羽奖犹如一座桥梁，将杰出作品推向全球观众。每一部获得我们奖项认可的影片，都将获得进入新市场、接触新受众和持续发展的新机遇。"}</p>
+                 
+               <p>{isEn 
+                 ? "We are building our own streaming platform to ensure that awarded filmmakers receive the recognition, reach, and professional returns their work deserves — because great storytelling should never go unrewarded." 
+                 : "我们正在建立专属的流媒体平台，以确保获奖电影人能够获得与其作品价值相匹配的认可、影响力以及专业回报——因为，伟大的故事讲述永远不该被辜负。"}</p>
+            </div>
+
+            <div className="text-center md:text-left mt-6">
+              <h3 className="text-2xl md:text-3xl font-bold font-serif text-[#C9A84C] mb-2 tracking-wide">
+                {isEn ? "The Golden Feather Awards." : "金羽奖"}
+              </h3>
+              <p className="text-lg md:text-xl font-light text-gfa-inkBlack italic font-serif">
+                {isEn ? "Where excellence is recognized. Where cinema travels further." : "卓越被看见的地方。让电影走得更远。"}
+              </p>
+            </div>
+          </div>
+          
+          <div className="md:w-1/4 flex justify-center mt-8 md:mt-0">
+             <img src="https://i.ibb.co/8gHZ9bxG/Chat-GPT-Image-2026-3-8-11-02-27.png" alt="Golden Feather Trophy" className="w-[120px] md:w-[160px] h-auto object-contain mx-auto" />
           </div>
         </div>
       </section>

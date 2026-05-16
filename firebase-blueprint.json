@@ -13,6 +13,10 @@
           "type": "string",
           "description": "User's display name"
         },
+        "phone": {
+          "type": "string",
+          "description": "User's phone number"
+        },
         "bio": {
           "type": "string",
           "description": "User's bio"
