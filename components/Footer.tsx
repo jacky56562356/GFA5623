@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
         {/* Brand & Mission */}
         <div className="space-y-3 lg:border-r lg:border-white/10 lg:pr-8">
           <div className="flex items-center gap-4">
-            <img fetchPriority="high"  src="https://wsrv.nl/?url=i.ibb.co%2FmFgDBtBp%2F1.png&w=1200&output=webp" alt="GFA Logo" className="h-20 w-auto object-contain"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+            <img fetchpriority="high"  src="https://wsrv.nl/?url=i.ibb.co%2FmFgDBtBp%2F1.png&w=1200&output=webp" alt="GFA Logo" className="h-20 w-auto object-contain"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
             <div className="flex flex-col">
               <span className="text-3xl font-bold tracking-tighter font-serif leading-none">{/* [中文内容待填入] */} GFA </span>
               <span className="text-[10px] uppercase tracking-[0.2em] text-[#C9A84C] font-bold mt-1">{/* [中文内容待填入] */} Global Film Alliance </span>

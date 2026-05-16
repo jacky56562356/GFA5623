@@ -16,7 +16,7 @@ const ProgramAwards: React.FC = () => {
       {/* Banner */}
       <div className="relative bg-gfa-inkBlack h-[70vh] min-h-[600px] flex flex-col justify-end pb-4 mb-4 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img fetchPriority="high" 
+          <img fetchpriority="high" 
             src="https://wsrv.nl/?url=i.ibb.co%2FpjRZK2vm%2FGemini-Generated-Image-k7a54jk7a54jk7a5-1.png&w=1200&output=webp" 
             alt="Golden Feather Awards" 
             className="w-full h-full object-cover object-[center_20%] opacity-90"

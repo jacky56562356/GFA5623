@@ -16,7 +16,7 @@ const Awards: React.FC = () => {
       {/* Banner */}
       <section className="relative h-[70vh] min-h-[600px] flex items-center justify-center overflow-hidden bg-gfa-inkBlack pt-8 pb-5">
         <div className="absolute inset-0 z-0">
-          <img fetchPriority="high" 
+          <img fetchpriority="high" 
             src="https://wsrv.nl/?url=i.ibb.co%2FpjRZK2vm%2FGemini-Generated-Image-k7a54jk7a54jk7a5-1.png&w=1200&output=webp" 
             alt="Awards Ceremony" 
             className="w-full h-full object-cover object-[center_20%] opacity-90" 

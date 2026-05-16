@@ -78,12 +78,12 @@ const Partners: React.FC = () => {
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
           {filtered.map(m => (
-            <div key={m.id} className="bg-white p-12 rounded-[40px] border border-gfa-border shadow-xl hover:shadow-2xl transition-all group relative overflow-hidden">
+            <div key={m.id} className="bg-white p-12 rounded-[40px] border border-gfa-border shadow-xl hover:shadow-2xl hover:scale-[1.02] hover:border-gfa-gold transition-all duration-500 group relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-gfa-gold/5 rounded-bl-full -mr-16 -mt-10 transition-all group-hover:bg-gfa-gold/10"></div>
               
               <div className="flex justify-between items-start mb-3 relative z-10">
                 <div className="w-20 h-20 bg-gfa-warmWhite rounded-2xl flex items-center justify-center border border-gfa-border group-hover:border-gfa-gold/30 transition-all duration-500 shadow-inner">
-                  <img fetchPriority="high"  src={m.logo} alt={m.name} className="w-12 h-12 object-cover grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                  <img fetchpriority="high"  src={m.logo} alt={m.name} className="w-12 h-12 object-cover grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
                 </div>
                 <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-gfa-gold bg-gfa-gold/10 px-4 py-1.5 rounded-full border border-gfa-gold/20">
                    {m.category}

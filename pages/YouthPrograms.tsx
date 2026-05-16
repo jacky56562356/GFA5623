@@ -214,7 +214,7 @@ ${formData.message}`;
       {/* Banner */}
       <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden bg-gfa-inkBlack pt-5">
         <div className="absolute inset-0 z-0">
-          <img fetchPriority="high" 
+          <img fetchpriority="high" 
             src="https://wsrv.nl/?url=i.ibb.co%2F0p2HWy3Z%2Ffilmmaking-in-classroom.jpg&w=1200&output=webp" 
             alt="Youth holding a clapperboard" 
             className="w-full h-full object-cover opacity-40 mix-blend-luminosity" 
