@@ -7,7 +7,7 @@ import { Camera, Users, PlaySquare, FileText, Clapperboard, CheckCircle2, ArrowR
 
 const FilmmakerSupport: React.FC = () => {
   const { locale } = useLocale();
-  const isEn = locale === Locale.EN;
+  const isEn = true;
 
   return (
     <div className="font-sans pb-3">
@@ -19,7 +19,7 @@ const FilmmakerSupport: React.FC = () => {
       {/* Banner */}
       <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden bg-gfa-inkBlack pt-5">
         <div className="absolute inset-0 z-0">
-          <img fetchpriority="high" 
+          <img fetchPriority="high" 
             src="https://wsrv.nl/?url=i.ibb.co%2Fsp4fWHq3%2FChat-GPT-Image-2026-3-23-12-23-22.png&w=1200&output=webp" 
             alt="Filmmaker on set" 
             className="w-full h-full object-cover opacity-40 mix-blend-luminosity" 
@@ -29,8 +29,8 @@ const FilmmakerSupport: React.FC = () => {
 
         <div className="container-gfa relative z-10 text-center px-4 max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-serif text-white mb-3 leading-tight drop-shadow-2xl">
-            {isEn ? "You Have the Talent." : "你有才华，"}<br/>
-            <span className="text-[#C9A84C]">{isEn ? "We'll Help You Get Through the Door." : "我们帮你打开那扇门。"}</span>
+            {"You Have the Talent."}<br/>
+            <span className="text-[#C9A84C]">{"We'll Help You Get Through the Door."}</span>
           </h1>
         </div>
       </section>
@@ -39,9 +39,7 @@ const FilmmakerSupport: React.FC = () => {
       <section className="py-5 bg-white">
         <div className="container-gfa max-w-3xl mx-auto px-4 text-center">
           <p className="text-xl md:text-2xl font-light text-gfa-slate leading-relaxed font-serif">
-            {isEn 
-              ? "Imagine a recent film school graduate. Their portfolio is flawless. They have straight A's. But they have zero industry connections, cannot afford camera rentals, and have no idea how to actually break into the business. That person's exact struggle—that invisible wall—is why GFA exists." 
-              : "想象一个刚从电影学院毕业的人，作品集拿了满分。但他没有人脉，租不起昂贵的设备，甚至不知道该如何接到第一份工作。这个人的处境，以及横在他面前的那堵无形的墙，正是GFA存在的原因。"}
+            {"Imagine a recent film school graduate. Their portfolio is flawless. They have straight A's. But they have zero industry connections, cannot afford camera rentals, and have no idea how to actually break into the business. That person's exact struggle—that invisible wall—is why GFA exists."}
           </p>
         </div>
       </section>
@@ -51,7 +49,7 @@ const FilmmakerSupport: React.FC = () => {
         <div className="container-gfa px-4 max-w-6xl mx-auto">
           <div className="text-center mb-4">
             <h2 className="text-3xl md:text-5xl font-bold font-serif text-gfa-inkBlack">
-              {isEn ? "How We Help You Break In" : "我们如何提供公益支持"}
+              {"How We Help You Break In"}
             </h2>
           </div>
 
@@ -62,26 +60,26 @@ const FilmmakerSupport: React.FC = () => {
                 <div className="w-16 h-16 bg-[#C9A84C]/10 rounded-2xl flex items-center justify-center mb-3 text-[#C9A84C]">
                   <Camera className="w-8 h-8" />
                 </div>
-                <h3 className="text-2xl font-bold font-serif mb-4">{isEn ? "Free Pro Gear Access" : "公益影视设备借用"}</h3>
+                <h3 className="text-2xl font-bold font-serif mb-4">{"Free Pro Gear Access"}</h3>
                 <div className="w-full aspect-[4/3] rounded-xl overflow-hidden border border-gray-100 shadow-sm mt-auto mb-4 md:mb-0">
                   <img loading="lazy" src="https://i.ibb.co/jZs4rXHp/Gemini-Generated-Image-coqxqkcoqxqkcoqx-1.png" alt="Pro Gear Access" className="w-full h-full object-cover" width="600" height="400" onError={(e) => { e.currentTarget.src = "https://placehold.co/600x400/eeeeee/999999?text=Image+Not+Found"; }} />
                 </div>
               </div>
               <div className="md:w-2/3 flex flex-col justify-center space-y-4">
                 <div className="bg-red-50 text-red-800 p-5 rounded-xl text-sm font-light border border-red-100 leading-relaxed">
-                  <strong className="font-bold">{isEn ? "The Barrier: " : "高昂的硬件门槛："}</strong>
-                  {isEn ? "A cinema camera package costs $1,500+ a day. This financial barrier forces talented emerging creators to shoot on consumer gear, compromising their creative vision." : "专业摄影机、镜头及灯光设备的单日租金极高。这道显而易见的资金门槛，让许多拥有卓越才华但预算有限的新生代创作者，被迫妥协于创作质量。"}
+                  <strong className="font-bold">{"The Barrier: "}</strong>
+                  {"A cinema camera package costs $1,500+ a day. This financial barrier forces talented emerging creators to shoot on consumer gear, compromising their creative vision."}
                 </div>
                 <div className="bg-green-50 text-green-800 p-5 rounded-xl text-sm font-light border border-green-100 leading-relaxed">
-                  <strong className="font-bold">{isEn ? "GFA Solution: " : "GFA方案：平权与赋能："}</strong>
-                  {isEn ? "Driven by our nonprofit mission, we provide free access to professional equipment. Through industry donations and partnerships, we offer approved independent projects access to cinema cameras to equalize opportunities." : "作为非营利机构，GFA致力于影视资源平等化。我们为符合条件的独立创作者免费提供工业级摄像机（如Blackmagic Design设备）、镜头与配套收音器材，帮助年轻力量实现高质量视觉表达。"}
+                  <strong className="font-bold">{"GFA Solution: "}</strong>
+                  {"Driven by our nonprofit mission, we provide free access to professional equipment. Through industry donations and partnerships, we offer approved independent projects access to cinema cameras to equalize opportunities."}
                 </div>
                 <p className="text-sm text-gfa-slate font-light pt-2 leading-relaxed">
-                  {isEn ? "Details: Open to low-budget narrative shorts and documentaries. Projects must demonstrate a clear vision and need. Approved filmmakers receive a 1 to 4-week equipment loan at no cost." : "具体说明：面向预算有限的独立短片、纪录片及公益影像项目开放。提交完整剧本与制片计划评估后，创作者即可获得1至4周的公益免租金设备借用支持。"}
+                  {"Details: Open to low-budget narrative shorts and documentaries. Projects must demonstrate a clear vision and need. Approved filmmakers receive a 1 to 4-week equipment loan at no cost."}
                 </p>
                 <div className="pt-2 flex flex-wrap gap-4">
-                  <Link to="/gear-application" className="inline-block text-xs font-bold uppercase tracking-widest bg-gfa-inkBlack text-white px-6 py-2 rounded-full hover:bg-[#C9A84C] hover:shadow-md hover:-translate-y-0.5 active:bg-[#a68636] active:scale-95 transition-all duration-200">{isEn ? "Apply for Gear" : "提交项目审阅与设备申请"}</Link>
-                  <Link to="/gear-donation" className="inline-block text-xs font-bold uppercase tracking-widest bg-[#F5F2EE] border border-gfa-border text-gfa-inkBlack px-6 py-2 rounded-full hover:bg-[#C9A84C] hover:text-white hover:border-[#C9A84C] hover:shadow-md hover:-translate-y-0.5 active:scale-95 transition-all duration-200">{isEn ? "Donate Gear for Employment Support" : "为就业扶持捐赠设备"}</Link>
+                  <Link to="/gear-application" className="inline-block text-xs font-bold uppercase tracking-widest bg-gfa-inkBlack text-white px-6 py-2 rounded-full hover:bg-[#C9A84C] hover:shadow-md hover:-translate-y-0.5 active:bg-[#a68636] active:scale-95 transition-all duration-200">{"Apply for Gear"}</Link>
+                  <Link to="/gear-donation" className="inline-block text-xs font-bold uppercase tracking-widest bg-[#F5F2EE] border border-gfa-border text-gfa-inkBlack px-6 py-2 rounded-full hover:bg-[#C9A84C] hover:text-white hover:border-[#C9A84C] hover:shadow-md hover:-translate-y-0.5 active:scale-95 transition-all duration-200">{"Donate Gear for Employment Support"}</Link>
                 </div>
               </div>
             </div>
@@ -93,7 +91,7 @@ const FilmmakerSupport: React.FC = () => {
                   <div className="w-16 h-16 bg-[#C9A84C]/10 rounded-2xl flex items-center justify-center mb-3 text-[#C9A84C]">
                     <Users className="w-8 h-8" />
                   </div>
-                  <h3 className="text-2xl font-bold font-serif mb-4">{isEn ? "Nonprofit Mentorship" : "公益导师扶持计划"}</h3>
+                  <h3 className="text-2xl font-bold font-serif mb-4">{"Nonprofit Mentorship"}</h3>
                 </div>
                 <div className="w-full aspect-[4/3] rounded-xl overflow-hidden border border-gray-100 shadow-sm">
                   <img loading="lazy" src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&h=400&fit=crop&q=80" alt="Mentorship" className="w-full h-full object-cover" width="600" height="400" onError={(e) => { e.currentTarget.src = "https://placehold.co/600x400/eeeeee/999999?text=Image+Not+Found"; }} />
@@ -104,28 +102,28 @@ const FilmmakerSupport: React.FC = () => {
               </div>
               <div className="md:w-2/3 flex flex-col justify-center space-y-4">
                 <div className="bg-red-50 text-red-800 p-5 rounded-xl text-sm font-light border border-red-100 leading-relaxed">
-                  <strong className="font-bold">{isEn ? "The Barrier: " : "资源纽带缺失："}</strong>
-                  {isEn ? "The film industry relies heavily on established networks, making it extremely difficult for outsiders—especially those from underrepresented backgrounds—to find guidance and opportunities." : "影视行业高度依赖人际协作网络。缺乏引路人的青年创作者，即使拥有出色的潜力，也往往在职业初期迷失方向，难以及时获得专业人士的指导与反馈。"}
+                  <strong className="font-bold">{"The Barrier: "}</strong>
+                  {"The film industry relies heavily on established networks, making it extremely difficult for outsiders—especially those from underrepresented backgrounds—to find guidance and opportunities."}
                 </div>
                 <div className="bg-green-50 text-green-800 p-5 rounded-xl text-sm font-light border border-green-100 leading-relaxed">
-                  <strong className="font-bold">{isEn ? "GFA Solution: " : "GFA方案：社区连结："}</strong>
-                  {isEn ? "We connect emerging filmmakers with experienced industry volunteers. Dedicated professionals offer guidance, review creative work, and help young creators navigate their early careers." : "通过非营利社区网络，GFA将新兴创作者与好莱坞资深行业志愿者（如导演、制片人、行业前辈）建立1对1辅导关系。导师无私分享经验、批注剧本，提供纯粹的职业发展指引。"}
+                  <strong className="font-bold">{"GFA Solution: "}</strong>
+                  {"We connect emerging filmmakers with experienced industry volunteers. Dedicated professionals offer guidance, review creative work, and help young creators navigate their early careers."}
                 </div>
                 <p className="text-sm text-gfa-slate font-light pt-2 leading-relaxed">
-                  {isEn ? "Details: Mentorship cycles typically run 3 to 6 months with monthly guidance sessions. The focus is on educational growth, community building, and long-term career planning." : "具体说明：辅导周期通常为3至6个月，每月提供系统性的公益深度对谈。旨在帮助青年电影人完善作品集、建立行业信心，并融入一个互相支持互助的创作者青年社群。"}
+                  {"Details: Mentorship cycles typically run 3 to 6 months with monthly guidance sessions. The focus is on educational growth, community building, and long-term career planning."}
                 </p>
 
                 {/* Mentors Info */}
                 <div className="pt-4 border-t border-gray-100 mt-2">
-                  <h4 className="text-sm font-bold mb-3">{isEn ? "Our Mentors Spotlight" : "公益导师风采展示"}</h4>
+                  <h4 className="text-sm font-bold mb-3">{"Our Mentors Spotlight"}</h4>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="flex gap-3 items-center bg-gray-50 p-3 rounded-xl border border-gray-100">
                       <div className="w-12 h-12 rounded-full overflow-hidden shrink-0 bg-gray-200">
                         <img loading="lazy"  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&q=80" alt="Mentor" className="w-full h-full object-cover"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
                       </div>
                       <div>
-                        <div className="font-bold text-sm">{/* [中文内容待填入] */} Robert M. </div>
-                        <div className="text-xs text-gfa-slate">{isEn ? "Executive Producer" : "执行制片人"}</div>
+                        <div className="font-bold text-sm"> Robert M. </div>
+                        <div className="text-xs text-gfa-slate">{"Executive Producer"}</div>
                       </div>
                     </div>
                     <div className="flex gap-3 items-center bg-gray-50 p-3 rounded-xl border border-gray-100">
@@ -133,8 +131,8 @@ const FilmmakerSupport: React.FC = () => {
                         <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1573496359142-b8d87734a5a2%3Fw%3D150%26h%3D150%26fit%3Dcrop%26q%3D80&w=1200&output=webp" alt="Mentor" className="w-full h-full object-cover"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
                       </div>
                       <div>
-                        <div className="font-bold text-sm">{/* [中文内容待填入] */} Sarah W. </div>
-                        <div className="text-xs text-gfa-slate">{isEn ? "Indie Film Director" : "国际独立电影导演"}</div>
+                        <div className="font-bold text-sm"> Sarah W. </div>
+                        <div className="text-xs text-gfa-slate">{"Indie Film Director"}</div>
                       </div>
                     </div>
                   </div>
@@ -142,32 +140,32 @@ const FilmmakerSupport: React.FC = () => {
 
                 {/* Works Showcase */}
                 <div className="pt-2">
-                  <h4 className="text-sm font-bold mb-3">{isEn ? "Supported Works Showcase" : "扶持作品展示"}</h4>
+                  <h4 className="text-sm font-bold mb-3">{"Supported Works Showcase"}</h4>
                   <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                     <div className="aspect-video bg-gray-200 rounded-lg overflow-hidden relative group">
                       <img loading="lazy" src="https://images.unsplash.com/photo-1542204165-65bf26472b9b?w=600&h=400&fit=crop&q=80" alt="Work" className="w-full h-full object-cover"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
                       <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                        <span className="text-white text-[10px] sm:text-xs font-bold px-2 py-1 bg-[#C9A84C]/90 rounded">{isEn ? "Watch Trailer" : "预告片"}</span>
+                        <span className="text-white text-[10px] sm:text-xs font-bold px-2 py-1 bg-[#C9A84C]/90 rounded">{"Watch Trailer"}</span>
                       </div>
                     </div>
                     <div className="aspect-video bg-gray-200 rounded-lg overflow-hidden relative group">
                       <img loading="lazy" src="https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=600&h=400&fit=crop&q=80" alt="Work" className="w-full h-full object-cover"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
                       <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                        <span className="text-white text-[10px] sm:text-xs font-bold px-2 py-1 bg-[#C9A84C]/90 rounded">{isEn ? "Watch Trailer" : "预告片"}</span>
+                        <span className="text-white text-[10px] sm:text-xs font-bold px-2 py-1 bg-[#C9A84C]/90 rounded">{"Watch Trailer"}</span>
                       </div>
                     </div>
                     <div className="aspect-video bg-gray-200 rounded-lg overflow-hidden relative group hidden sm:block">
                       <img loading="lazy" src="https://images.unsplash.com/photo-1518676590629-3dcbd9c5a5c9?w=600&h=400&fit=crop&q=80" alt="Work" className="w-full h-full object-cover"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
                       <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                        <span className="text-white text-[10px] sm:text-xs font-bold px-2 py-1 bg-[#C9A84C]/90 rounded">{isEn ? "Watch Trailer" : "预告片"}</span>
+                        <span className="text-white text-[10px] sm:text-xs font-bold px-2 py-1 bg-[#C9A84C]/90 rounded">{"Watch Trailer"}</span>
                       </div>
                     </div>
                   </div>
                 </div>
 
                 <div className="pt-4 flex flex-wrap gap-4">
-                  <Link to="/mentorship-application" className="inline-block text-xs font-bold uppercase tracking-widest bg-gfa-inkBlack text-white px-6 py-2 rounded-full hover:bg-[#C9A84C] hover:shadow-md hover:-translate-y-0.5 active:bg-[#a68636] active:scale-95 transition-all duration-200">{isEn ? "Mentorship Application Form" : "填写申请表格"}</Link>
-                  <Link to="/mentors" className="inline-block text-xs font-bold uppercase tracking-widest bg-[#F5F2EE] border border-gfa-border text-gfa-inkBlack px-6 py-2 rounded-full hover:bg-[#C9A84C] hover:text-white hover:border-[#C9A84C] hover:shadow-md hover:-translate-y-0.5 active:scale-95 transition-all duration-200">{isEn ? "View All Mentors" : "查看全部导师"}</Link>
+                  <Link to="/mentorship-application" className="inline-block text-xs font-bold uppercase tracking-widest bg-gfa-inkBlack text-white px-6 py-2 rounded-full hover:bg-[#C9A84C] hover:shadow-md hover:-translate-y-0.5 active:bg-[#a68636] active:scale-95 transition-all duration-200">{"Mentorship Application Form"}</Link>
+                  <Link to="/mentors" className="inline-block text-xs font-bold uppercase tracking-widest bg-[#F5F2EE] border border-gfa-border text-gfa-inkBlack px-6 py-2 rounded-full hover:bg-[#C9A84C] hover:text-white hover:border-[#C9A84C] hover:shadow-md hover:-translate-y-0.5 active:scale-95 transition-all duration-200">{"View All Mentors"}</Link>
                 </div>
               </div>
             </div>
@@ -178,25 +176,25 @@ const FilmmakerSupport: React.FC = () => {
                 <div className="w-16 h-16 bg-[#C9A84C]/10 rounded-2xl flex items-center justify-center mb-3 text-[#C9A84C]">
                   <PlaySquare className="w-8 h-8" />
                 </div>
-                <h3 className="text-2xl font-bold font-serif mb-4">{isEn ? "Festival Strategy Support" : "公益展映与电影节支持"}</h3>
+                <h3 className="text-2xl font-bold font-serif mb-4">{"Festival Strategy Support"}</h3>
                 <div className="w-full aspect-[4/3] rounded-xl overflow-hidden border border-gray-100 shadow-sm mt-auto mb-4 md:mb-0">
                   <img loading="lazy" src="https://images.unsplash.com/photo-1585699324551-f6c309eedeca?w=600&h=400&fit=crop&q=80" alt="Festival Support" className="w-full h-full object-cover" width="600" height="400" onError={(e) => { e.currentTarget.src = "https://placehold.co/600x400/eeeeee/999999?text=Image+Not+Found"; }} />
                 </div>
               </div>
               <div className="md:w-2/3 flex flex-col justify-center space-y-4">
                 <div className="bg-red-50 text-red-800 p-5 rounded-xl text-sm font-light border border-red-100 leading-relaxed">
-                  <strong className="font-bold">{isEn ? "The Barrier: " : "传播渠道困境："}</strong>
-                  {isEn ? "Submitting blindly to festivals drains precious indie budgets, and getting independent work seen by a broader audience remains an enormous challenge." : "独立创作者往往需要面对高昂的电影节报名费，且对节展定位了解不足，盲目投递极易消耗宝贵资金；优秀作品完成之后，极大受限于被大众看见的稀缺发声平台。"}
+                  <strong className="font-bold">{"The Barrier: "}</strong>
+                  {"Submitting blindly to festivals drains precious indie budgets, and getting independent work seen by a broader audience remains an enormous challenge."}
                 </div>
                 <div className="bg-green-50 text-green-800 p-5 rounded-xl text-sm font-light border border-green-100 leading-relaxed">
-                  <strong className="font-bold">{isEn ? "GFA Solution: " : "GFA方案：公益放映赋能："}</strong>
-                  {isEn ? "We provide strategic festival guidance and community screening opportunities. GFA helps filmmakers craft a realistic festival plan and secures fee waivers from partner festivals to reduce financial burdens." : "GFA为创作者提供电影节申报策略公益诊断，降低错误投递成本。并依托机构合作网络，为优秀作品争取合作电影节的豁免名额 (Fee Waivers) 以及免费的社区放映与展演机会。"}
+                  <strong className="font-bold">{"GFA Solution: "}</strong>
+                  {"We provide strategic festival guidance and community screening opportunities. GFA helps filmmakers craft a realistic festival plan and secures fee waivers from partner festivals to reduce financial burdens."}
                 </div>
                 <p className="text-sm text-gfa-slate font-light pt-2 leading-relaxed">
-                  {isEn ? "Details: Includes access to our educational resources on festival touring and opportunities to showcase work at GFA community events." : "具体说明：为创作者进行作品复盘及投递白名单设计。同时协助优秀的公益类独立电影及青年短片推向非营利的数字及线下放映社群，促进多元文化之间的共鸣。"}
+                  {"Details: Includes access to our educational resources on festival touring and opportunities to showcase work at GFA community events."}
                 </p>
                 <div className="pt-2">
-                  <button className="text-xs font-bold uppercase tracking-widest bg-gfa-inkBlack text-white px-6 py-2 rounded-full hover:bg-[#C9A84C] hover:shadow-md hover:-translate-y-0.5 active:bg-[#a68636] active:scale-95 transition-all duration-200">{isEn ? "Request Strategy" : "提交作品获取展映辅导"}</button>
+                  <button className="text-xs font-bold uppercase tracking-widest bg-gfa-inkBlack text-white px-6 py-2 rounded-full hover:bg-[#C9A84C] hover:shadow-md hover:-translate-y-0.5 active:bg-[#a68636] active:scale-95 transition-all duration-200">{"Request Strategy"}</button>
                 </div>
               </div>
             </div>
@@ -207,25 +205,25 @@ const FilmmakerSupport: React.FC = () => {
                 <div className="w-16 h-16 bg-[#C9A84C]/10 rounded-2xl flex items-center justify-center mb-3 text-[#C9A84C]">
                   <FileText className="w-8 h-8" />
                 </div>
-                <h3 className="text-2xl font-bold font-serif mb-4">{isEn ? "Public Grant Coaching" : "公共艺术资助申报辅导"}</h3>
+                <h3 className="text-2xl font-bold font-serif mb-4">{"Public Grant Coaching"}</h3>
                 <div className="w-full aspect-[4/3] rounded-xl overflow-hidden border border-gray-100 shadow-sm mt-auto mb-4 md:mb-0">
                   <img loading="lazy" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop&q=80" alt="Grant Coaching" className="w-full h-full object-cover" width="600" height="400" onError={(e) => { e.currentTarget.src = "https://placehold.co/600x400/eeeeee/999999?text=Image+Not+Found"; }} />
                 </div>
               </div>
               <div className="md:w-2/3 flex flex-col justify-center space-y-4">
                 <div className="bg-red-50 text-red-800 p-5 rounded-xl text-sm font-light border border-red-100 leading-relaxed">
-                  <strong className="font-bold">{isEn ? "The Barrier: " : "公共资金申请经验缺失："}</strong>
-                  {isEn ? "Navigating complex nonprofit and government film grants is overwhelming. Many independent creators lack the specialized grant-writing skills required to secure public arts funding." : "虽然有许多非营利艺术组织提供公益创作基金，但初出茅庐的电影人大多缺乏复杂的文书应对经验。诸多极具潜力的创作者，往往因不清晰的项目提案与预算规划错失公共资助的帮扶。"}
+                  <strong className="font-bold">{"The Barrier: "}</strong>
+                  {"Navigating complex nonprofit and government film grants is overwhelming. Many independent creators lack the specialized grant-writing skills required to secure public arts funding."}
                 </div>
                 <div className="bg-green-50 text-green-800 p-5 rounded-xl text-sm font-light border border-green-100 leading-relaxed">
-                  <strong className="font-bold">{isEn ? "GFA Solution: " : "GFA方案：公益文书教育："}</strong>
-                  {isEn ? "GFA offers educational workshops and specialized coaching to help filmmakers decode grant applications. We teach creators how to articulate their vision and construct transparent budgets for arts organizations." : "GFA为独立创作者免费提供艺术扶持基金（Grants）的申请教育体系。资深辅导志愿者手把手教您如何撰写真诚专业的《导演阐述》、明确制作初衷并构架公开透明、符合捐助方审查原则的制作预算表。"}
+                  <strong className="font-bold">{"GFA Solution: "}</strong>
+                  {"GFA offers educational workshops and specialized coaching to help filmmakers decode grant applications. We teach creators how to articulate their vision and construct transparent budgets for arts organizations."}
                 </div>
                 <p className="text-sm text-gfa-slate font-light pt-2 leading-relaxed">
-                  {isEn ? "Details: We host grant-writing workshops and offer peer reviews of director's statements and budget proposals to empower marginalized creators to successfully secure funding." : "具体说明：定期举办非营利属性的基金提案教育讲座工作坊（Workshop）及一对一文书精修审阅。旨在全面提升青年电影人尤其是代表不足群体在公共艺术领域的获资助能力。"}
+                  {"Details: We host grant-writing workshops and offer peer reviews of director's statements and budget proposals to empower marginalized creators to successfully secure funding."}
                 </p>
                 <div className="pt-2">
-                  <button className="text-xs font-bold uppercase tracking-widest bg-gfa-inkBlack text-white px-6 py-2 rounded-full hover:bg-[#C9A84C] hover:shadow-md hover:-translate-y-0.5 active:bg-[#a68636] active:scale-95 transition-all duration-200">{isEn ? "Book Consultation" : "登记参与公益文书辅导"}</button>
+                  <button className="text-xs font-bold uppercase tracking-widest bg-gfa-inkBlack text-white px-6 py-2 rounded-full hover:bg-[#C9A84C] hover:shadow-md hover:-translate-y-0.5 active:bg-[#a68636] active:scale-95 transition-all duration-200">{"Book Consultation"}</button>
                 </div>
               </div>
             </div>
@@ -236,25 +234,25 @@ const FilmmakerSupport: React.FC = () => {
                 <div className="w-16 h-16 bg-[#C9A84C]/10 rounded-2xl flex items-center justify-center mb-3 text-[#C9A84C]">
                   <Clapperboard className="w-8 h-8" />
                 </div>
-                <h3 className="text-2xl font-bold font-serif mb-4">{isEn ? "Educational On-Set Experience" : "教育性片场实战锻炼"}</h3>
+                <h3 className="text-2xl font-bold font-serif mb-4">{"Educational On-Set Experience"}</h3>
                 <div className="w-full aspect-[4/3] rounded-xl overflow-hidden border border-gray-100 shadow-sm mt-auto mb-4 md:mb-0">
                   <img loading="lazy" src="https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?w=600&h=400&fit=crop&q=80" alt="On-Set Experience" className="w-full h-full object-cover" width="600" height="400" onError={(e) => { e.currentTarget.src = "https://placehold.co/600x400/eeeeee/999999?text=Image+Not+Found"; }} />
                 </div>
               </div>
               <div className="md:w-2/3 flex flex-col justify-center space-y-4">
                 <div className="bg-red-50 text-red-800 p-5 rounded-xl text-sm font-light border border-red-100 leading-relaxed">
-                  <strong className="font-bold">{isEn ? "The Barrier: " : "经验积淀两难困境："}</strong>
-                  {isEn ? "It is an industry paradox: young filmmakers need set experience to get hired, but cannot gain that experience without prior opportunities." : "青年一代在职业起步时往往遭遇经验积累的死角：因为缺乏丰富的片场大组协同履历，往往被专业团队视作“新人风险”而拒之门外；但脱离实战剧组，也无从获取宝贵经验。"}
+                  <strong className="font-bold">{"The Barrier: "}</strong>
+                  {"It is an industry paradox: young filmmakers need set experience to get hired, but cannot gain that experience without prior opportunities."}
                 </div>
                 <div className="bg-green-50 text-green-800 p-5 rounded-xl text-sm font-light border border-green-100 leading-relaxed">
-                  <strong className="font-bold">{isEn ? "GFA Solution: " : "GFA方案：社区片场共演："}</strong>
-                  {isEn ? "GFA produces educational content, community PSAs, and nonprofit short films. We invite aspiring filmmakers to shadow experienced volunteers and fill essential crew roles in a supportive environment." : "GFA作为社区核心，每年主导或联合筹拍高质量的教育宣传片(PSA)及公益短片。我们邀请并接纳尚缺乏履历但满怀热情的青年，加入到这些包容且安全的拍摄项目中。在资深业内志愿者的手把手传帮带下，在实战中淬炼技艺。"}
+                  <strong className="font-bold">{"GFA Solution: "}</strong>
+                  {"GFA produces educational content, community PSAs, and nonprofit short films. We invite aspiring filmmakers to shadow experienced volunteers and fill essential crew roles in a supportive environment."}
                 </div>
                 <p className="text-sm text-gfa-slate font-light pt-2 leading-relaxed">
-                  {isEn ? "Details: These practical experiences help young creators learn professional protocols, earn real IMDb credits, and build their collaborative skills before formally entering the industry." : "具体说明：提供如摄影二助、灯光协助或场记执行的跟组学习机会。这既是一场公益摄制，也是青年人建立行业协作规范、积累早期IMDb学分并自信走向影视职场的完美“毕业试演”。"}
+                  {"Details: These practical experiences help young creators learn professional protocols, earn real IMDb credits, and build their collaborative skills before formally entering the industry."}
                 </p>
                 <div className="pt-2">
-                  <button className="text-xs font-bold uppercase tracking-widest bg-gfa-inkBlack text-white px-6 py-2 rounded-full hover:bg-[#C9A84C] hover:shadow-md hover:-translate-y-0.5 active:bg-[#a68636] active:scale-95 transition-all duration-200">{isEn ? "Apply for Crew" : "申请参与公益影片实战摄制"}</button>
+                  <button className="text-xs font-bold uppercase tracking-widest bg-gfa-inkBlack text-white px-6 py-2 rounded-full hover:bg-[#C9A84C] hover:shadow-md hover:-translate-y-0.5 active:bg-[#a68636] active:scale-95 transition-all duration-200">{"Apply for Crew"}</button>
                 </div>
               </div>
             </div>
@@ -267,33 +265,33 @@ const FilmmakerSupport: React.FC = () => {
         <div className="container-gfa px-4 max-w-5xl mx-auto">
           <div className="text-center mb-4">
             <h2 className="text-3xl md:text-5xl font-bold font-serif text-gfa-inkBlack mb-4">
-              {isEn ? "How to Apply" : "申请流程"}
+              {"How to Apply"}
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             <div className="text-center">
               <div className="w-12 h-12 rounded-full bg-[#C9A84C] text-white flex items-center justify-center mx-auto text-xl font-bold font-serif mb-4 shadow-lg border-4 border-white">1</div>
-              <h4 className="font-bold text-lg mb-2">{isEn ? "Submit Application" : "提交申请"}</h4>
-              <p className="text-sm font-light text-gfa-slate">{isEn ? "Fill out the online form, attach your portfolio link and career goals." : "填写在线申请表，附上作品链接和职业目标"}</p>
+              <h4 className="font-bold text-lg mb-2">{"Submit Application"}</h4>
+              <p className="text-sm font-light text-gfa-slate">{"Fill out the online form, attach your portfolio link and career goals."}</p>
             </div>
             
             <div className="text-center">
               <div className="w-12 h-12 rounded-full bg-[#C9A84C] text-white flex items-center justify-center mx-auto text-xl font-bold font-serif mb-4 shadow-lg border-4 border-white">2</div>
-              <h4 className="font-bold text-lg mb-2">{isEn ? "GFA Review" : "GFA团队审核"}</h4>
-              <p className="text-sm font-light text-gfa-slate">{isEn ? "We will carefully review your materials (usually within 3-5 days)." : "通常3-5个工作日内回复"}</p>
+              <h4 className="font-bold text-lg mb-2">{"GFA Review"}</h4>
+              <p className="text-sm font-light text-gfa-slate">{"We will carefully review your materials (usually within 3-5 days)."}</p>
             </div>
 
             <div className="text-center">
               <div className="w-12 h-12 rounded-full bg-[#C9A84C] text-white flex items-center justify-center mx-auto text-xl font-bold font-serif mb-4 shadow-lg border-4 border-white">3</div>
-              <h4 className="font-bold text-lg mb-2">{isEn ? "1-on-1 Matching" : "一对一匹配"}</h4>
-              <p className="text-sm font-light text-gfa-slate">{isEn ? "We assign the best support resources and mentors based on your goals." : "根据你的需求和目标匹配最适合的支持资源"}</p>
+              <h4 className="font-bold text-lg mb-2">{"1-on-1 Matching"}</h4>
+              <p className="text-sm font-light text-gfa-slate">{"We assign the best support resources and mentors based on your goals."}</p>
             </div>
 
             <div className="text-center">
               <div className="w-12 h-12 rounded-full bg-[#C9A84C] text-white flex items-center justify-center mx-auto text-xl font-bold font-serif mb-4 shadow-lg border-4 border-white">4</div>
-              <h4 className="font-bold text-lg mb-2">{isEn ? "Start Your Journey" : "开始你的旅程"}</h4>
-              <p className="text-sm font-light text-gfa-slate">{isEn ? "Receive gear, meet mentors, and officially enter the GFA network." : "获得设备、导师、机会，正式进入GFA支持网络"}</p>
+              <h4 className="font-bold text-lg mb-2">{"Start Your Journey"}</h4>
+              <p className="text-sm font-light text-gfa-slate">{"Receive gear, meet mentors, and officially enter the GFA network."}</p>
             </div>
           </div>
         </div>
@@ -302,23 +300,23 @@ const FilmmakerSupport: React.FC = () => {
       {/* Eligibility */}
       <section className="py-5 bg-gfa-inkBlack text-white">
         <div className="container-gfa max-w-4xl mx-auto px-4 text-center">
-           <h3 className="text-2xl font-bold font-serif text-[#C9A84C] mb-4">{isEn ? "Who Can Apply?" : "谁可以申请？"}</h3>
+           <h3 className="text-2xl font-bold font-serif text-[#C9A84C] mb-4">{"Who Can Apply?"}</h3>
            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left max-w-3xl mx-auto bg-white/5 p-8 rounded-3xl border border-white/10">
               <div>
-                <h4 className="font-bold text-lg mb-4 flex items-center gap-2"><CheckCircle2 className="text-green-400 w-5 h-5"/> {isEn ? "Eligible:" : "符合资格："}</h4>
+                <h4 className="font-bold text-lg mb-4 flex items-center gap-2"><CheckCircle2 className="text-green-400 w-5 h-5"/> {"Eligible:"}</h4>
                 <ul className="space-y-3 text-sm font-light text-white/80">
-                  <li>• {isEn ? "Film, TV, and Media graduates" : "电影、电视、传媒相关专业毕业生"}</li>
-                  <li>• {isEn ? "Independent directors, DPs, and producers with a portfolio" : "有作品的独立导演、摄影师、制片人"}</li>
-                  <li>• {isEn ? "Emerging filmmakers from multicultural backgrounds" : "多元文化背景的新兴电影人"}</li>
-                  <li>• {isEn ? "Talented creators from low-income backgrounds" : "低收入背景的有才华创作者"}</li>
+                  <li>• {"Film, TV, and Media graduates"}</li>
+                  <li>• {"Independent directors, DPs, and producers with a portfolio"}</li>
+                  <li>• {"Emerging filmmakers from multicultural backgrounds"}</li>
+                  <li>• {"Talented creators from low-income backgrounds"}</li>
                 </ul>
               </div>
               <div>
-                <h4 className="font-bold text-lg mb-4 flex items-center gap-2 text-white/50">{isEn ? "Not Required:" : "不需要："}</h4>
+                <h4 className="font-bold text-lg mb-4 flex items-center gap-2 text-white/50">{"Not Required:"}</h4>
                 <ul className="space-y-3 text-sm font-light text-white/50">
-                  <li>• {isEn ? "Ivy League or elite film school degrees" : "名校背景"}</li>
-                  <li>• {isEn ? "Pre-existing industry connections" : "已有行业人脉"}</li>
-                  <li>• {isEn ? "Expensive ownership of cinema gear" : "昂贵的设备"}</li>
+                  <li>• {"Ivy League or elite film school degrees"}</li>
+                  <li>• {"Pre-existing industry connections"}</li>
+                  <li>• {"Expensive ownership of cinema gear"}</li>
                 </ul>
               </div>
            </div>
@@ -330,32 +328,32 @@ const FilmmakerSupport: React.FC = () => {
         <div className="container-gfa max-w-6xl mx-auto px-4">
           <div className="text-center mb-4">
             <h2 className="text-3xl md:text-5xl font-bold font-serif text-gfa-inkBlack">
-              {isEn ? "Success Stories" : "学员故事"}
+              {"Success Stories"}
             </h2>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
              <div className="bg-[#F5F2EE] p-8 rounded-3xl border border-gray-200">
-               <h4 className="font-bold text-xl font-serif text-gfa-inkBlack mb-1">{/* [中文内容待填入] */} Alex </h4>
-               <p className="text-xs uppercase tracking-widest text-[#C9A84C] font-bold mb-4">{isEn ? "Cinematography Grad" : "摄影系毕业生"}</p>
+               <h4 className="font-bold text-xl font-serif text-gfa-inkBlack mb-1"> Alex </h4>
+               <p className="text-xs uppercase tracking-widest text-[#C9A84C] font-bold mb-4">{"Cinematography Grad"}</p>
                <p className="text-sm font-light text-gfa-slate mb-3 flex-grow italic">
-                 "{isEn ? "GFA lent me an entire Blackmagic camera package for my first short film. That short got into festivals, and directly led to my first paying gig." : "通过设备借用完成了第一部短片，入围电影节后获得工作机会。"}"
+                 "{"GFA lent me an entire Blackmagic camera package for my first short film. That short got into festivals, and directly led to my first paying gig."}"
                </p>
              </div>
 
              <div className="bg-[#F5F2EE] p-8 rounded-3xl border border-gray-200">
-               <h4 className="font-bold text-xl font-serif text-gfa-inkBlack mb-1">{/* [中文内容待填入] */} Sarah </h4>
-               <p className="text-xs uppercase tracking-widest text-[#C9A84C] font-bold mb-4">{isEn ? "Independent Director" : "独立导演"}</p>
+               <h4 className="font-bold text-xl font-serif text-gfa-inkBlack mb-1"> Sarah </h4>
+               <p className="text-xs uppercase tracking-widest text-[#C9A84C] font-bold mb-4">{"Independent Director"}</p>
                <p className="text-sm font-light text-gfa-slate mb-3 flex-grow italic">
-                 "{isEn ? "My GFA mentor pulled my resume from the pile and got me a production company internship. Now I work there full-time." : "通过导师网络进入制片公司实习，现在已经全职工作。"}"
+                 "{"My GFA mentor pulled my resume from the pile and got me a production company internship. Now I work there full-time."}"
                </p>
              </div>
 
              <div className="bg-[#F5F2EE] p-8 rounded-3xl border border-gray-200">
-               <h4 className="font-bold text-xl font-serif text-gfa-inkBlack mb-1">{/* [中文内容待填入] */} David </h4>
-               <p className="text-xs uppercase tracking-widest text-[#C9A84C] font-bold mb-4">{isEn ? "Low-Income Creator" : "低收入创作者"}</p>
+               <h4 className="font-bold text-xl font-serif text-gfa-inkBlack mb-1"> David </h4>
+               <p className="text-xs uppercase tracking-widest text-[#C9A84C] font-bold mb-4">{"Low-Income Creator"}</p>
                <p className="text-sm font-light text-gfa-slate mb-3 flex-grow italic">
-                 "{isEn ? "I had to shelve my passion project because I couldn't afford production. GFA's grant application coaching helped me secure the funding to finish it." : "通过基金辅导获得资助，完成了长期搁置的项目。"}"
+                 "{"I had to shelve my passion project because I couldn't afford production. GFA's grant application coaching helped me secure the funding to finish it."}"
                </p>
              </div>
           </div>
@@ -367,16 +365,16 @@ const FilmmakerSupport: React.FC = () => {
         <div className="absolute inset-0 bg-[#C9A84C] mix-blend-overlay opacity-10"></div>
         <div className="container-gfa relative z-10 px-4">
           <h2 className="text-4xl md:text-6xl font-bold font-serif text-white mb-3">
-            {isEn ? "You're One Step Away." : "你距离行业，只差一步"}
+            {"You're One Step Away."}
           </h2>
           <p className="text-xl md:text-2xl font-serif text-[#C9A84C] mb-3">
-            {isEn ? "Let GFA help you take it." : "GFA帮你跨过那一步"}
+            {"Let GFA help you take it."}
           </p>
           <Link to="/gear-application" className="bg-[#C9A84C] hover:bg-[#b09241] text-gfa-inkBlack px-12 py-5 rounded-full font-bold uppercase tracking-widest text-base hover:scale-105 hover:-translate-y-1 hover:shadow-[0_10px_40px_rgba(201,168,76,0.4)] active:scale-95 active:shadow-[0_0_20px_rgba(201,168,76,0.2)] transition-all duration-200 shadow-[0_0_30px_rgba(201,168,76,0.3)] mb-4 inline-flex items-center gap-2">
-            {isEn ? "Apply Now" : "立即进入申请主页"} <ArrowRight className="w-5 h-5"/>
+            {"Apply Now"} <ArrowRight className="w-5 h-5"/>
           </Link>
           <div className="text-sm font-light text-white/50 tracking-widest uppercase mt-4">
-            {isEn ? "Free · Nonprofit · No Connections Required" : "免费 · 非营利 · 无需行业背景"}
+            {"Free · Nonprofit · No Connections Required"}
           </div>
         </div>
       </section>

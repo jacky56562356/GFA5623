@@ -5,7 +5,7 @@ import SEO from '../components/SEO.tsx';
 
 const ProgramPlatformAlliance: React.FC = () => {
   const { locale } = useLocale();
-  const isEn = locale === Locale.EN;
+  const isEn = true;
 
   return (
     <div className="bg-gfa-warmWhite pt-[80px] font-sans pb-3">
@@ -13,7 +13,7 @@ const ProgramPlatformAlliance: React.FC = () => {
 
       <div className="relative bg-[#1A2B4A] py-5 mb-3 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img fetchpriority="high" 
+          <img fetchPriority="high" 
             src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1485846234645-a62644f84728%3Fq%3D80%26w%3D2059%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" 
             alt="Hollywood Career" 
             className="w-full h-full object-cover opacity-30 grayscale"
@@ -22,7 +22,7 @@ const ProgramPlatformAlliance: React.FC = () => {
         </div>
         <div className="container-gfa relative z-10 text-center max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-bold font-serif text-white mb-3 leading-tight drop-shadow-lg">
-            {isEn ? "Your Hollywood Journey Starts Here" : "你的好莱坞之旅从这里开始"}
+            {"Your Hollywood Journey Starts Here"}
           </h1>
         </div>
       </div>
@@ -30,9 +30,7 @@ const ProgramPlatformAlliance: React.FC = () => {
       <div className="container-gfa max-w-5xl mx-auto space-y-5">
          <section className="text-center max-w-3xl mx-auto bg-white p-12 rounded-[40px] shadow-xl border border-gfa-border -mt-32 relative z-20">
           <p className="text-xl text-gfa-slate leading-relaxed font-light">
-             {isEn 
-               ? "Geared toward recent graduates and emerging filmmakers, providing professional training and practical opportunities within the Hollywood industrial system to bridge the gap between academic learning and professional reality." 
-               : "面向应届毕业生和新兴电影人，提供好莱坞工业体系内的专业培训和实践机会，弥合学术学习与职业现实之间的差距。"}
+             {"Geared toward recent graduates and emerging filmmakers, providing professional training and practical opportunities within the Hollywood industrial system to bridge the gap between academic learning and professional reality."}
           </p>
         </section>
 
@@ -44,10 +42,10 @@ const ProgramPlatformAlliance: React.FC = () => {
                </div>
                <div className="p-8">
                  <h3 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-3">
-                   {isEn ? "Industry Mentorship" : "行业导师指导"}
+                   {"Industry Mentorship"}
                  </h3>
                  <p className="text-gfa-slate font-light">
-                   {isEn ? "One-on-one guidance from established Hollywood professionals, producers, and directors." : "由资深好莱坞专业人士、制片人和导演提供一对一指导。"}
+                   {"One-on-one guidance from established Hollywood professionals, producers, and directors."}
                  </p>
                </div>
             </div>
@@ -58,10 +56,10 @@ const ProgramPlatformAlliance: React.FC = () => {
                </div>
                <div className="p-8">
                  <h3 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-3">
-                   {isEn ? "On-Set Professional Training" : "片场专业实训"}
+                   {"On-Set Professional Training"}
                  </h3>
                  <p className="text-gfa-slate font-light">
-                   {isEn ? "Shadowing and hands-on roles on real commercial and independent film sets." : "在真实商业广告和独立电影片场进行观摩学习和实操演练。"}
+                   {"Shadowing and hands-on roles on real commercial and independent film sets."}
                  </p>
                </div>
             </div>
@@ -72,10 +70,10 @@ const ProgramPlatformAlliance: React.FC = () => {
                </div>
                <div className="p-8">
                  <h3 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-3">
-                   {isEn ? "Portfolio & Reel Development" : "作品集与样片开发"}
+                   {"Portfolio & Reel Development"}
                  </h3>
                  <p className="text-gfa-slate font-light">
-                   {isEn ? "Expert review and refinement of your showreel, script portfolio, or DP reel." : "专家评审并完善您的样片、剧本作品集或摄影样片。"}
+                   {"Expert review and refinement of your showreel, script portfolio, or DP reel."}
                  </p>
                </div>
             </div>
@@ -86,10 +84,10 @@ const ProgramPlatformAlliance: React.FC = () => {
                </div>
                <div className="p-8">
                  <h3 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-3">
-                   {isEn ? "Film Festival Strategy" : "电影节战略规划"}
+                   {"Film Festival Strategy"}
                  </h3>
                  <p className="text-gfa-slate font-light">
-                   {isEn ? "Learn how to navigate submissions, networking, and distribution at tier-1 festivals." : "学习如何在一线电影节上进行申请、拓展人脉和发行。"}
+                   {"Learn how to navigate submissions, networking, and distribution at tier-1 festivals."}
                  </p>
                </div>
             </div>
@@ -98,7 +96,7 @@ const ProgramPlatformAlliance: React.FC = () => {
 
         <section className="text-center py-3">
           <button className="bg-[#1A2B4A] text-white px-12 py-5 rounded-full font-bold uppercase tracking-widest text-sm hover:bg-[#C9A84C] transition-colors shadow-2xl">
-            {isEn ? "Apply Now" : "立即申请"}
+            {"Apply Now"}
           </button>
         </section>
 

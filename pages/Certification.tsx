@@ -57,7 +57,7 @@ const Certification: React.FC = () => {
 
       {/* Global Background Image */}
       <div className="fixed inset-0 z-0 opacity-[0.03] pointer-events-none">
-        <img fetchpriority="high" 
+        <img fetchPriority="high" 
           src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1485846234645-a62644f84728%3Fq%3D80%26w%3D2059%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" 
           alt="Film Background" 
           className="w-full h-full object-cover"
@@ -77,7 +77,7 @@ const Certification: React.FC = () => {
         
         <div className="container-gfa relative z-10 text-center">
           <div className="max-w-4xl mx-auto animate-fade-in">
-            <div className="gold-badge mb-4 animate-fade-up">{/* [中文内容待填入] */} Regulatory Standard </div>
+            <div className="gold-badge mb-4 animate-fade-up"> Regulatory Standard </div>
             <h1 className="text-5xl md:text-8xl font-bold font-serif text-white mb-4 leading-tight drop-shadow-2xl">
               {cert.title}
             </h1>
@@ -95,16 +95,16 @@ const Certification: React.FC = () => {
           <aside className="lg:col-span-3 hidden lg:block">
             <div className="sticky top-24 space-y-4">
               <div className="bg-white p-8 rounded-[32px] shadow-xl border border-gfa-border">
-                <h3 className="text-[10px] font-bold uppercase tracking-widest text-gfa-slate mb-4 border-b border-gfa-border pb-4">{/* [中文内容待填入] */} Framework Sections </h3>
+                <h3 className="text-[10px] font-bold uppercase tracking-widest text-gfa-slate mb-4 border-b border-gfa-border pb-4"> Framework Sections </h3>
                 <nav className="space-y-4">
                   <a href="#categories" className="flex items-center gap-3 text-sm font-bold text-gfa-slate hover:text-gfa-gold transition-all group">
-                    <div className="w-2 h-2 bg-gfa-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>{/* [中文内容待填入] */} Accreditation Categories </a>
+                    <div className="w-2 h-2 bg-gfa-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div> Accreditation Categories </a>
                   <a href="#criteria" className="flex items-center gap-3 text-sm font-bold text-gfa-slate hover:text-gfa-gold transition-all group">
-                    <div className="w-2 h-2 bg-gfa-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>{/* [中文内容待填入] */} Evaluation Criteria </a>
+                    <div className="w-2 h-2 bg-gfa-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div> Evaluation Criteria </a>
                   <a href="#validity" className="flex items-center gap-3 text-sm font-bold text-gfa-slate hover:text-gfa-gold transition-all group">
-                    <div className="w-2 h-2 bg-gfa-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>{/* [中文内容待填入] */} Accreditation Validity </a>
+                    <div className="w-2 h-2 bg-gfa-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div> Accreditation Validity </a>
                   <a href="#registry" className="flex items-center gap-3 text-sm font-bold text-gfa-slate hover:text-gfa-gold transition-all group">
-                    <div className="w-2 h-2 bg-gfa-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>{/* [中文内容待填入] */} Certification Registry </a>
+                    <div className="w-2 h-2 bg-gfa-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div> Certification Registry </a>
                 </nav>
               </div>
 
@@ -114,7 +114,7 @@ const Certification: React.FC = () => {
                 </div>
                 <div className="relative z-10">
                   <Shield className="w-10 h-10 text-gfa-gold mb-3" />
-                  <h4 className="text-xs font-bold uppercase tracking-widest mb-4">{/* [中文内容待填入] */} Regulatory Note </h4>
+                  <h4 className="text-xs font-bold uppercase tracking-widest mb-4"> Regulatory Note </h4>
                   <p className="text-sm text-white/70 leading-relaxed italic font-serif">
                     {t.disclaimer?.statutory}
                   </p>
@@ -131,12 +131,12 @@ const Certification: React.FC = () => {
               <div className="bg-gfa-warmWhite border-b border-gfa-border px-10 py-3 flex flex-wrap gap-3 text-[10px] font-bold uppercase tracking-widest text-gfa-slate">
                 <div className="flex items-center gap-2">
                   <span className="opacity-50">Document Type:</span>
-                  <span className="text-gfa-inkBlack">{/* [中文内容待填入] */} Accreditation Standard </span>
+                  <span className="text-gfa-inkBlack"> Accreditation Standard </span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="opacity-50">Status:</span>
                   <span className="text-emerald-600 flex items-center gap-1">
-                    <CheckCircle className="w-3 h-3" />{/* [中文内容待填入] */} Active </span>
+                    <CheckCircle className="w-3 h-3" /> Active </span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="opacity-50">Revision:</span>
@@ -282,7 +282,7 @@ const Certification: React.FC = () => {
                         <div className="col-span-6 lg:col-span-3">
                           <label className="text-[10px] font-bold uppercase tracking-[0.3em] text-gfa-slate mb-3 block opacity-60">{t.common.category}</label>
                           <select className="w-full h-14 px-6 bg-white border border-gfa-border rounded-xl text-xs font-bold appearance-none focus:border-gfa-gold transition-all outline-none" value={filters.category} onChange={(e) => setFilters({...filters, category: e.target.value})}>
-                            <option value="All">{/* [中文内容待填入] */} All Categories </option>
+                            <option value="All"> All Categories </option>
                             {options.categories.map(c => <option key={c} value={c}>{c}</option>)}
                           </select>
                         </div>
@@ -290,7 +290,7 @@ const Certification: React.FC = () => {
                         <div className="col-span-6 lg:col-span-3">
                           <label className="text-[10px] font-bold uppercase tracking-[0.3em] text-gfa-slate mb-3 block opacity-60">{t.common.region}</label>
                           <select className="w-full h-14 px-6 bg-white border border-gfa-border rounded-xl text-xs font-bold appearance-none focus:border-gfa-gold transition-all outline-none" value={filters.region} onChange={(e) => setFilters({...filters, region: e.target.value})}>
-                            <option value="All">{/* [中文内容待填入] */} All Regions </option>
+                            <option value="All"> All Regions </option>
                             {options.regions.map(r => <option key={r} value={r}>{r}</option>)}
                           </select>
                         </div>
@@ -361,9 +361,9 @@ const Certification: React.FC = () => {
 
               {/* Document Footer */}
               <div className="bg-gfa-warmWhite border-t border-gfa-border p-16 text-center">
-                <p className="text-[10px] text-gfa-slate font-bold uppercase tracking-[0.4em] mb-5 opacity-50">{/* [中文内容待填入] */} Official GFA Accreditation Standard </p>
+                <p className="text-[10px] text-gfa-slate font-bold uppercase tracking-[0.4em] mb-5 opacity-50"> Official GFA Accreditation Standard </p>
                 <div className="flex justify-center gap-4">
-                  <button className="btn-primary h-16 px-16 text-lg">{/* [中文内容待填入] */} Start Application </button>
+                  <button className="btn-primary h-16 px-16 text-lg"> Start Application </button>
                 </div>
               </div>
             </div>

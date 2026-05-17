@@ -7,7 +7,7 @@ import { collection, getDocs } from 'firebase/firestore';
 const AdminDashboard = () => {
   const { t, locale } = useLocale();
   const adm = t.adminDashboard;
-  const isEn = locale === 'en';
+  const isEn = true;
   
   const [submissions, setSubmissions] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
@@ -42,12 +42,12 @@ const AdminDashboard = () => {
       <div className="max-w-7xl mx-auto">
         <header className="mb-4 flex flex-col md:flex-row justify-between items-end gap-5 border-b border-gray-200 pb-5">
           <div>
-            <span className="text-[#C9A84C] font-bold text-xs uppercase tracking-[0.2em] mb-2 block">{isEn ? "Administrator" : "管理员后台"}</span>
-            <h1 className="text-gfa-inkBlack text-4xl leading-tight font-serif font-bold">{isEn ? "System Dashboard" : "系统管理面板"}</h1>
+            <span className="text-[#C9A84C] font-bold text-xs uppercase tracking-[0.2em] mb-2 block">{"Administrator"}</span>
+            <h1 className="text-gfa-inkBlack text-4xl leading-tight font-serif font-bold">{"System Dashboard"}</h1>
           </div>
           <div className="flex gap-4">
             <span className="bg-[#C9A84C]/10 border border-[#C9A84C]/20 text-xs font-bold text-[#C9A84C] px-6 py-2 uppercase tracking-widest rounded-full">
-               {isEn ? "Secure Access" : "安全访问"}
+               {"Secure Access"}
             </span>
           </div>
         </header>
@@ -57,13 +57,13 @@ const AdminDashboard = () => {
              <div className="bg-white border border-gray-100 p-6 space-y-4 rounded-3xl shadow-sm">
                 <nav className="space-y-2">
                    <button className="w-full text-left p-4 bg-[#C9A84C] text-black text-xs font-bold uppercase tracking-widest rounded-2xl shadow-sm">
-                      {isEn ? "Award Submissions" : "报名申请数据"}
+                      {"Award Submissions"}
                    </button>
                    <button className="w-full text-left p-4 text-gfa-slate text-xs font-bold uppercase tracking-widest hover:bg-gray-50 rounded-2xl transition-all">
-                      {isEn ? "Mentorship" : "导师申请"}
+                      {"Mentorship"}
                    </button>
                    <button className="w-full text-left p-4 text-gfa-slate text-xs font-bold uppercase tracking-widest hover:bg-gray-50 rounded-2xl transition-all">
-                      {isEn ? "Settings" : "系统设置"}
+                      {"Settings"}
                    </button>
                 </nav>
              </div>
@@ -72,27 +72,27 @@ const AdminDashboard = () => {
           <main className="lg:col-span-3 space-y-3">
              <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
                 <div className="bg-white border border-gray-100 p-8 rounded-3xl shadow-sm flex flex-col items-center justify-center text-center">
-                   <h5 className="text-xs font-bold uppercase tracking-widest text-gfa-slate mb-4">{isEn ? "Total Submissions" : "收到总申请数"}</h5>
+                   <h5 className="text-xs font-bold uppercase tracking-widest text-gfa-slate mb-4">{"Total Submissions"}</h5>
                    <div className="text-5xl font-black text-gfa-inkBlack font-serif">{submissions.length}</div>
                 </div>
                 <div className="bg-white border border-gray-100 p-8 rounded-3xl shadow-sm flex flex-col items-center justify-center text-center">
-                   <h5 className="text-xs font-bold uppercase tracking-widest text-[#C9A84C] mb-4">{isEn ? "Pending Review" : "待处理"}</h5>
+                   <h5 className="text-xs font-bold uppercase tracking-widest text-[#C9A84C] mb-4">{"Pending Review"}</h5>
                    <div className="text-5xl font-black text-[#C9A84C] font-serif">{submissions.filter(s => s.status === 'pending').length}</div>
                 </div>
              </div>
 
              <div className="bg-white border border-gray-100 p-8 md:p-12 rounded-3xl shadow-sm">
                 <h3 className="text-xl font-bold font-serif text-gfa-inkBlack mb-3 border-b border-gray-100 pb-4">
-                   {isEn ? "Recent Award Submissions" : "最近收到的金羽奖报名"}
+                   {"Recent Award Submissions"}
                 </h3>
                 
                 {loading ? (
                   <div className="text-center py-3 text-gfa-slate">
-                     {isEn ? "Loading secure data..." : "正在加载安全数据..."}
+                     {"Loading secure data..."}
                   </div>
                 ) : submissions.length === 0 ? (
                   <div className="text-center py-3 text-gfa-slate">
-                     {isEn ? "No submissions found." : "暂无报名数据。"}
+                     {"No submissions found."}
                   </div>
                 ) : (
                   <div className="space-y-4">
@@ -106,11 +106,11 @@ const AdminDashboard = () => {
                              <div className="flex gap-2">
                                {sub.posterLink && (
                                  <a href={sub.posterLink} target="_blank" rel="noreferrer" className="text-xs bg-blue-50 text-blue-600 px-3 py-1 rounded-full border border-blue-100 hover:bg-blue-100">
-                                   {isEn ? "Drive Link" : "网盘海报"}
+                                   {"Drive Link"}
                                  </a>
                                )}
                                 <a href={sub.screenerLink} target="_blank" rel="noreferrer" className="text-xs bg-[#C9A84C]/10 text-black px-4 py-1.5 rounded-full border border-[#C9A84C]/20 hover:bg-[#C9A84C] transition-colors font-bold whitespace-nowrap">
-                                   {isEn ? "View Screener" : "查看放映影片"}
+                                   {"View Screener"}
                                 </a>
                              </div>
                           </div>
@@ -129,7 +129,7 @@ const AdminDashboard = () => {
                                 <strong>Attendees:</strong> {sub.attendeeCount || 0}
                              </div>
                              <div className="col-span-1 md:col-span-2 mt-2 bg-white p-3 rounded-xl border border-gray-100">
-                                <strong className="block mb-1">{isEn ? "Synopsis:" : "梗概:"}</strong>
+                                <strong className="block mb-1">{"Synopsis:"}</strong>
                                 <p className="line-clamp-2">{sub.synopsis}</p>
                              </div>
                           </div>

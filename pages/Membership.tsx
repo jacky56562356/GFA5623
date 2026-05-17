@@ -14,7 +14,7 @@ const Membership: React.FC = () => {
 
       {/* Global Background Image */}
       <div className="fixed inset-0 z-0 opacity-[0.05] pointer-events-none">
-        <img fetchpriority="high" 
+        <img fetchPriority="high" 
           src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1451187580459-43490279c0fa%3Fq%3D80%26w%3D2072%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" 
           alt="Global Cinematic Background" 
           className="w-full h-full object-cover"
@@ -34,7 +34,7 @@ const Membership: React.FC = () => {
         
         <div className="container-gfa relative z-10 text-center">
           <div className="max-w-4xl mx-auto animate-fade-in">
-            <div className="gold-badge mb-4 animate-fade-up">{/* [中文内容待填入] */} Institutional Network </div>
+            <div className="gold-badge mb-4 animate-fade-up"> Institutional Network </div>
             <h1 className="text-5xl md:text-8xl font-bold font-serif text-white mb-4 leading-tight drop-shadow-2xl">
               {m.title}
             </h1>
@@ -52,12 +52,12 @@ const Membership: React.FC = () => {
           <aside className="lg:col-span-3 hidden lg:block">
             <div className="sticky top-24 space-y-4">
               <div className="bg-white p-8 rounded-[32px] shadow-xl border border-gfa-border">
-                <h3 className="text-[10px] font-bold uppercase tracking-widest text-gfa-slate mb-4 border-b border-gfa-border pb-4">{/* [中文内容待填入] */} Document Sections </h3>
+                <h3 className="text-[10px] font-bold uppercase tracking-widest text-gfa-slate mb-4 border-b border-gfa-border pb-4"> Document Sections </h3>
                 <nav className="space-y-4">
                   <a href="#structure" className="flex items-center gap-3 text-sm font-bold text-gfa-slate hover:text-gfa-gold transition-all group">
-                    <div className="w-2 h-2 bg-gfa-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>{/* [中文内容待填入] */} Membership Structure </a>
+                    <div className="w-2 h-2 bg-gfa-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div> Membership Structure </a>
                   <a href="#benefits" className="flex items-center gap-3 text-sm font-bold text-gfa-slate hover:text-gfa-gold transition-all group">
-                    <div className="w-2 h-2 bg-gfa-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>{/* [中文内容待填入] */} Member Benefits </a>
+                    <div className="w-2 h-2 bg-gfa-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div> Member Benefits </a>
                 </nav>
               </div>
 
@@ -67,8 +67,8 @@ const Membership: React.FC = () => {
                 </div>
                 <div className="relative z-10">
                   <ShieldCheck className="w-10 h-10 text-gfa-gold mb-3" />
-                  <h4 className="text-xs font-bold uppercase tracking-widest mb-4">{/* [中文内容待填入] */} Institutional Note </h4>
-                  <p className="text-sm text-white/70 leading-relaxed italic font-serif">{/* [中文内容待填入] */} Membership in the GFA is a commitment to professional excellence and uncompromising industry integrity. </p>
+                  <h4 className="text-xs font-bold uppercase tracking-widest mb-4"> Institutional Note </h4>
+                  <p className="text-sm text-white/70 leading-relaxed italic font-serif"> Membership in the GFA is a commitment to professional excellence and uncompromising industry integrity. </p>
                 </div>
               </div>
             </div>
@@ -82,16 +82,16 @@ const Membership: React.FC = () => {
               <div className="bg-gfa-warmWhite border-b border-gfa-border px-10 py-3 flex flex-wrap gap-3 text-[10px] font-bold uppercase tracking-widest text-gfa-slate">
                 <div className="flex items-center gap-2">
                   <span className="opacity-50">Document Type:</span>
-                  <span className="text-gfa-inkBlack">{/* [中文内容待填入] */} Membership Framework </span>
+                  <span className="text-gfa-inkBlack"> Membership Framework </span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="opacity-50">Status:</span>
                   <span className="text-emerald-600 flex items-center gap-1">
-                    <CheckCircle className="w-3 h-3" />{/* [中文内容待填入] */} Active </span>
+                    <CheckCircle className="w-3 h-3" /> Active </span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="opacity-50">Access:</span>
-                  <span className="text-gfa-inkBlack">{/* [中文内容待填入] */} Public / Institutional </span>
+                  <span className="text-gfa-inkBlack"> Public / Institutional </span>
                 </div>
               </div>
 
@@ -135,7 +135,7 @@ const Membership: React.FC = () => {
                               <h3 className="text-3xl font-bold text-gfa-inkBlack font-serif leading-tight">{tier.name}</h3>
                               <div className="text-[10px] font-bold text-gfa-gold uppercase tracking-[0.3em] mt-2">Institutional Tier Level {i + 1}</div>
                             </div>
-                            <button className="btn-primary h-12 px-8 text-xs shrink-0">{/* [中文内容待填入] */} Apply for Tier </button>
+                            <button className="btn-primary h-12 px-8 text-xs shrink-0"> Apply for Tier </button>
                           </div>
                           
                           <p className="text-lg text-gfa-slate leading-relaxed font-light mb-5 opacity-90">
@@ -181,7 +181,7 @@ const Membership: React.FC = () => {
                           <CheckCircle className="w-6 h-6" />
                         </div>
                         <span className="text-lg font-bold text-gfa-inkBlack leading-tight font-serif italic">{item}</span>
-                        <p className="text-xs text-gfa-slate font-light leading-relaxed opacity-70">{/* [中文内容待填入] */} Standard institutional benefit included for all active GFA members in good standing. </p>
+                        <p className="text-xs text-gfa-slate font-light leading-relaxed opacity-70"> Standard institutional benefit included for all active GFA members in good standing. </p>
                       </div>
                     ))}
                   </div>
@@ -191,9 +191,9 @@ const Membership: React.FC = () => {
 
               {/* Document Footer */}
               <div className="bg-gfa-warmWhite border-t border-gfa-border p-16 text-center">
-                <p className="text-[10px] text-gfa-slate font-bold uppercase tracking-[0.4em] mb-5 opacity-50">{/* [中文内容待填入] */} Official GFA Membership Framework </p>
+                <p className="text-[10px] text-gfa-slate font-bold uppercase tracking-[0.4em] mb-5 opacity-50"> Official GFA Membership Framework </p>
                 <div className="flex justify-center gap-4">
-                  <button className="btn-primary h-16 px-16 text-lg">{/* [中文内容待填入] */} Apply for Membership </button>
+                  <button className="btn-primary h-16 px-16 text-lg"> Apply for Membership </button>
                 </div>
               </div>
             </div>

@@ -7,7 +7,7 @@ import { Trophy, Star, Medal, ArrowRight, Heart, Globe, Video, Handshake, Users,
 
 const Awards: React.FC = () => {
   const { locale } = useLocale();
-  const isEn = locale === Locale.EN;
+  const isEn = true;
 
   return (
     <div className="font-sans pb-3 bg-[#F5F2EE]">
@@ -16,7 +16,7 @@ const Awards: React.FC = () => {
       {/* Banner */}
       <section className="relative h-[70vh] min-h-[600px] flex items-center justify-center overflow-hidden bg-gfa-inkBlack pt-8 pb-5">
         <div className="absolute inset-0 z-0">
-          <img fetchpriority="high" 
+          <img fetchPriority="high" 
             src="https://wsrv.nl/?url=i.ibb.co%2FpjRZK2vm%2FGemini-Generated-Image-k7a54jk7a54jk7a5-1.png&w=1200&output=webp" 
             alt="Awards Ceremony" 
             className="w-full h-full object-cover object-[center_20%] opacity-90" 
@@ -26,10 +26,10 @@ const Awards: React.FC = () => {
 
         <div className="container-gfa relative z-10 text-center px-4 max-w-4xl mx-auto mt-5">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-serif text-white mb-3 leading-tight drop-shadow-2xl">
-            {isEn ? "The Golden Feather Awards" : "金羽奖电影颁奖礼"}
+            {"The Golden Feather Awards"}
           </h1>
           <h2 className="text-xl md:text-3xl font-light text-[#C9A84C] italic drop-shadow-lg mb-6">
-            {isEn ? "Hollywood's Premier Recognition for Emerging Filmmakers" : "好莱坞首屈一指的新生代电影人表彰盛典"}
+            {"Hollywood's Premier Recognition for Emerging Filmmakers"}
           </h2><h1 className="hidden">
           </h1>
         </div>
@@ -40,35 +40,25 @@ const Awards: React.FC = () => {
         <div className="container-gfa max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
           <div className="md:w-3/4">
             <p className="text-lg md:text-xl font-light text-gfa-inkBlack leading-[1.8] font-serif mb-6 text-center md:text-left">
-              {isEn 
-                ? "An annual Hollywood awards ceremony recognizing excellence in youth and independent cinema. It is one of Hollywood's most serious and prestigious professional recognition ceremonies — dedicated to honoring exceptional filmmakers." 
-                : "金羽奖不是一场才艺比赛。它是好莱坞最严肃、最负盛名的专业表彰盛典之一——致力于表彰杰出的电影人、优秀的影视作品，以及塑造电影未来的前瞻性声音。"}
+              {"An annual Hollywood awards ceremony recognizing excellence in youth and independent cinema. It is one of Hollywood's most serious and prestigious professional recognition ceremonies — dedicated to honoring exceptional filmmakers."}
             </p>
             <div className="w-16 h-px bg-[#C9A84C] mb-6 mx-auto md:mx-0"></div>
             <div className="text-gfa-slate font-light leading-[1.8] space-y-4 text-sm md:text-base text-left md:text-justify mb-8">
-               <p>{isEn 
-                 ? "Judged by active Hollywood industry professionals, and held at the heart of Hollywood in a formal, high-caliber ceremony, the Golden Feather Awards recognizes excellence across all levels of the craft — from established filmmakers to emerging directors, from seasoned creators to bold new voices entering the industry for the first time." 
-                 : "金羽奖由活跃的好莱坞工业专业人士组成评审团，在好莱坞核心地带以高规格的正式典礼呈现。我们表彰电影制作各个层面的卓越成就——从成熟的电影人到新秀导演，从经验丰富的创作者到首次步入行业的勇敢新声。"}</p>
+               <p>{"Judged by active Hollywood industry professionals, and held at the heart of Hollywood in a formal, high-caliber ceremony, the Golden Feather Awards recognizes excellence across all levels of the craft — from established filmmakers to emerging directors, from seasoned creators to bold new voices entering the industry for the first time."}</p>
                
-               <p>{isEn 
-                 ? "We believe that great cinema deserves to be seen. A great film should not remain unseen simply because its creator lacked a platform. Our mission is to build that platform." 
-                 : "我们坚信，伟大的电影理应被世界看到。一部好电影，绝不该因为创作者缺乏发声的平台而默默无闻。打造这样一个属于电影人的平台，正是我们的使命。"}</p>
+               <p>{"We believe that great cinema deserves to be seen. A great film should not remain unseen simply because its creator lacked a platform. Our mission is to build that platform."}</p>
                  
-               <p>{isEn 
-                 ? "Through our distribution network spanning Asia — including Mainland China, Hong Kong, and Taiwan — the Golden Feather Awards serves as a bridge, carrying outstanding works to audiences across the world. Every film recognized by our awards gains access to new markets, new audiences, and new opportunities for growth." 
-                 : "依托覆盖亚洲（包括中国大陆、香港及台湾地区）的发行网络，金羽奖犹如一座桥梁，将杰出作品推向全球观众。每一部获得我们奖项认可的影片，都将获得进入新市场、接触新受众和持续发展的新机遇。"}</p>
+               <p>{"Through our distribution network spanning Asia — including Mainland China, Hong Kong, and Taiwan — the Golden Feather Awards serves as a bridge, carrying outstanding works to audiences across the world. Every film recognized by our awards gains access to new markets, new audiences, and new opportunities for growth."}</p>
                  
-               <p>{isEn 
-                 ? "We are building our own streaming platform to ensure that awarded filmmakers receive the recognition, reach, and professional returns their work deserves — because great storytelling should never go unrewarded." 
-                 : "我们正在建立专属的流媒体平台，以确保获奖电影人能够获得与其作品价值相匹配的认可、影响力以及专业回报——因为，伟大的故事讲述永远不该被辜负。"}</p>
+               <p>{"We are building our own streaming platform to ensure that awarded filmmakers receive the recognition, reach, and professional returns their work deserves — because great storytelling should never go unrewarded."}</p>
             </div>
 
             <div className="text-center md:text-left mt-6">
               <h3 className="text-2xl md:text-3xl font-bold font-serif text-[#C9A84C] mb-2 tracking-wide">
-                {isEn ? "The Golden Feather Awards." : "金羽奖"}
+                {"The Golden Feather Awards."}
               </h3>
               <p className="text-lg md:text-xl font-light text-gfa-inkBlack italic font-serif">
-                {isEn ? "Where excellence is recognized. Where cinema travels further." : "卓越被看见的地方。让电影走得更远。"}
+                {"Where excellence is recognized. Where cinema travels further."}
               </p>
             </div>
           </div>
@@ -88,10 +78,10 @@ const Awards: React.FC = () => {
                <Globe className="w-8 h-8" />
             </div>
             <h2 className="text-4xl lg:text-5xl font-bold font-serif text-gfa-inkBlack mb-4">
-              {isEn ? "Opportunities & Industry Platform" : "机遇与产业平台整合"}
+              {"Opportunities & Industry Platform"}
             </h2>
             <p className="text-gfa-slate max-w-2xl mx-auto text-lg font-light leading-relaxed">
-               {isEn ? "Participants and winners access a comprehensive ecosystem designed to launch film careers." : "参赛者与获奖者将进入一个旨在正式开启其电影职业生涯的全面生态系统。"}
+               {"Participants and winners access a comprehensive ecosystem designed to launch film careers."}
             </p>
           </div>
 
@@ -100,9 +90,9 @@ const Awards: React.FC = () => {
                <div className="w-14 h-14 bg-[#C9A84C]/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-[#C9A84C] transition-colors">
                   <Globe className="w-7 h-7 text-[#C9A84C] group-hover:text-white transition-colors" />
                </div>
-               <h3 className="text-xl font-bold font-serif mb-3">{isEn ? "Asian & Global Distribution" : "中国及亚洲发行与平台播出"}</h3>
+               <h3 className="text-xl font-bold font-serif mb-3">{"Asian & Global Distribution"}</h3>
                <p className="text-gfa-slate font-light leading-relaxed">
-                 {isEn ? "Winning films will be heavily promoted and distributed across top streaming platforms and cinemas in China and the broader Asian market, as well as globally." : "获奖影片将获得强大发行支持，重点推送至中国及亚洲顶流宣发平台和院线播出，并同步进行全球多渠道发行。"}
+                 {"Winning films will be heavily promoted and distributed across top streaming platforms and cinemas in China and the broader Asian market, as well as globally."}
                </p>
             </div>
 
@@ -110,9 +100,9 @@ const Awards: React.FC = () => {
                <div className="w-14 h-14 bg-[#C9A84C]/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-[#C9A84C] transition-colors">
                   <Video className="w-7 h-7 text-[#C9A84C] group-hover:text-white transition-colors" />
                </div>
-               <h3 className="text-xl font-bold font-serif mb-3">{isEn ? "Premier Screening Opportunities" : "国际展映平台"}</h3>
+               <h3 className="text-xl font-bold font-serif mb-3">{"Premier Screening Opportunities"}</h3>
                <p className="text-gfa-slate font-light leading-relaxed">
-                 {isEn ? "Showcase your work live at top-tier film festivals and exclusive Hollywood screenings, gathering immediate feedback from industry veterans." : "在顶级电影节和好莱坞专属放映会上面向公众及业内人士展示您的作品，并获得行业资深人士的直接反馈。"}
+                 {"Showcase your work live at top-tier film festivals and exclusive Hollywood screenings, gathering immediate feedback from industry veterans."}
                </p>
             </div>
 
@@ -120,9 +110,9 @@ const Awards: React.FC = () => {
                <div className="w-14 h-14 bg-[#C9A84C]/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-[#C9A84C] transition-colors">
                   <Handshake className="w-7 h-7 text-[#C9A84C] group-hover:text-white transition-colors" />
                </div>
-               <h3 className="text-xl font-bold font-serif mb-3">{isEn ? "Asian Co-Production Opportunities" : "创建亚洲合作拍摄与更广阔平台"}</h3>
+               <h3 className="text-xl font-bold font-serif mb-3">{"Asian Co-Production Opportunities"}</h3>
                <p className="text-gfa-slate font-light leading-relaxed">
-                 {isEn ? "We facilitate direct collaboration platforms to launch Asian co-productions, securing joint funding and dedicated cross-cultural partnerships for future projects." : "我们建立了直接对接的合作平台，大力促成及帮助创作者与亚洲团队合作拍摄，为未来的国际合拍项目对接更多维度的合作平台和资源。"}
+                 {"We facilitate direct collaboration platforms to launch Asian co-productions, securing joint funding and dedicated cross-cultural partnerships for future projects."}
                </p>
             </div>
 
@@ -130,9 +120,9 @@ const Awards: React.FC = () => {
                <div className="w-14 h-14 bg-[#C9A84C]/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-[#C9A84C] transition-colors">
                   <span className="text-[#C9A84C] group-hover:text-white font-serif italic text-2xl">🎬</span>
                </div>
-               <h3 className="text-xl font-bold font-serif mb-3">{isEn ? "Film Creation Ecosystem" : "建立电影创作平台"}</h3>
+               <h3 className="text-xl font-bold font-serif mb-3">{"Film Creation Ecosystem"}</h3>
                <p className="text-gfa-slate font-light leading-relaxed">
-                 {isEn ? "Our platform provides comprehensive resources, from script development to post-production, streamlining the entire creative process for young filmmakers." : "平台整合了从剧本开发到后期制作的综合资源，不断搭建与完善影视孵化平台，为年轻电影人简化创作流程。"}
+                 {"Our platform provides comprehensive resources, from script development to post-production, streamlining the entire creative process for young filmmakers."}
                </p>
             </div>
 
@@ -140,9 +130,9 @@ const Awards: React.FC = () => {
                <div className="w-14 h-14 bg-[#C9A84C]/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-[#C9A84C] transition-colors">
                   <DollarSign className="w-7 h-7 text-[#C9A84C] group-hover:text-white transition-colors" />
                </div>
-               <h3 className="text-xl font-bold font-serif mb-3">{isEn ? "Lowering Production Costs" : "大幅降低拍摄成本"}</h3>
+               <h3 className="text-xl font-bold font-serif mb-3">{"Lowering Production Costs"}</h3>
                <p className="text-gfa-slate font-light leading-relaxed">
-                 {isEn ? "Through our vendor networks and equipment subsidies, we heavily reduce the financial burden of production, allowing talent to focus purely on storytelling." : "通过我们的设备补贴和供应商网络联盟，显著降低制作成本，让创作者可以全心投入讲好故事。"}
+                 {"Through our vendor networks and equipment subsidies, we heavily reduce the financial burden of production, allowing talent to focus purely on storytelling."}
                </p>
             </div>
 
@@ -150,9 +140,9 @@ const Awards: React.FC = () => {
                <div className="w-14 h-14 bg-[#C9A84C]/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-[#C9A84C] transition-colors">
                   <Users className="w-7 h-7 text-[#C9A84C] group-hover:text-white transition-colors" />
                </div>
-               <h3 className="text-xl font-bold font-serif mb-3">{isEn ? "Investor Matchmaking" : "绑定行业投资人"}</h3>
+               <h3 className="text-xl font-bold font-serif mb-3">{"Investor Matchmaking"}</h3>
                <p className="text-gfa-slate font-light leading-relaxed">
-                 {isEn ? "Dedicated pitch sessions and networking events tie promising projects to established film funds and independent investors ready to greenlight new visions." : "专设的项目路演场次与社交活动，将极具潜力的作品直接与成熟的电影基金及独立投资人绑定。"}
+                 {"Dedicated pitch sessions and networking events tie promising projects to established film funds and independent investors ready to greenlight new visions."}
                </p>
             </div>
           </div>
@@ -165,10 +155,10 @@ const Awards: React.FC = () => {
                 <Sparkles className="w-8 h-8" />
              </div>
              <h2 className="text-4xl lg:text-5xl font-bold font-serif text-gfa-inkBlack mb-4">
-                {isEn ? "Open to filmmakers worldwide" : "向全球创作者开放"}
+                {"Open to filmmakers worldwide"}
              </h2>
              <p className="text-gfa-slate max-w-2xl mx-auto text-lg font-light leading-relaxed">
-                {isEn ? "An unforgettable Hollywood experience connecting rising stars with industry legends." : "一次难忘的好莱坞盛典体验，将冉冉升起的新星与行业传奇紧密相连。"}
+                {"An unforgettable Hollywood experience connecting rising stars with industry legends."}
              </p>
            </div>
 
@@ -180,8 +170,8 @@ const Awards: React.FC = () => {
                  {/* Step 1 */}
                  <div className="flex flex-col md:flex-row items-center justify-between w-full">
                     <div className="md:w-5/12 mb-4 md:mb-0 text-center md:text-right">
-                       <h3 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-2">{isEn ? "The Red Carpet" : "星光红毯秀"}</h3>
-                       <p className="text-gfa-slate font-light">{isEn ? "Walk the exclusive Hollywood red carpet with media coverage and celebrity guests." : "走上好莱坞专属红毯，接受全球媒体采访，与顶级明星嘉宾共襄盛举。"}</p>
+                       <h3 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-2">{"The Red Carpet"}</h3>
+                       <p className="text-gfa-slate font-light">{"Walk the exclusive Hollywood red carpet with media coverage and celebrity guests."}</p>
                     </div>
                     <div className="md:w-2/12 flex justify-center relative z-10 mb-4 md:mb-0">
                        <div className="w-16 h-16 bg-[#C9A84C] rounded-full flex items-center justify-center text-white font-bold font-serif text-xl border-4 border-white shadow-lg">01</div>
@@ -194,8 +184,8 @@ const Awards: React.FC = () => {
                  {/* Step 2 */}
                  <div className="flex flex-col md:flex-row-reverse items-center justify-between w-full">
                     <div className="md:w-5/12 mb-4 md:mb-0 text-center md:text-left">
-                       <h3 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-2">{isEn ? "Nominee Showcase & Premiere" : "入围电影展映与首映礼"}</h3>
-                       <p className="text-gfa-slate font-light">{isEn ? "Exclusive theater screenings of nominated films for distributors and international buyers." : "为发行商和国际买家专门安排的入围影片顶级影院级展映。"}</p>
+                       <h3 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-2">{"Nominee Showcase & Premiere"}</h3>
+                       <p className="text-gfa-slate font-light">{"Exclusive theater screenings of nominated films for distributors and international buyers."}</p>
                     </div>
                     <div className="md:w-2/12 flex justify-center relative z-10 mb-4 md:mb-0">
                        <div className="w-16 h-16 bg-[#C9A84C] rounded-full flex items-center justify-center text-white font-bold font-serif text-xl border-4 border-white shadow-lg">02</div>
@@ -208,8 +198,8 @@ const Awards: React.FC = () => {
                  {/* Step 3 */}
                  <div className="flex flex-col md:flex-row items-center justify-between w-full">
                     <div className="md:w-5/12 mb-4 md:mb-0 text-center md:text-right">
-                       <h3 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-2">{isEn ? "Gala & Awards Presentation" : "颁奖盛典与文艺汇演"}</h3>
-                       <p className="text-gfa-slate font-light">{isEn ? "The grand ceremony featuring live performances, keynote speeches, and the Golden Feather presentations." : "隆重的盛典晚会，包括激燃的现场表演、行业领袖的主题演讲及金羽奖的正式颁发。"}</p>
+                       <h3 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-2">{"Gala & Awards Presentation"}</h3>
+                       <p className="text-gfa-slate font-light">{"The grand ceremony featuring live performances, keynote speeches, and the Golden Feather presentations."}</p>
                     </div>
                     <div className="md:w-2/12 flex justify-center relative z-10 mb-4 md:mb-0">
                        <div className="w-16 h-16 bg-[#C9A84C] rounded-full flex items-center justify-center text-white font-bold font-serif text-xl border-4 border-white shadow-lg">03</div>
@@ -222,8 +212,8 @@ const Awards: React.FC = () => {
                  {/* Step 4 */}
                  <div className="flex flex-col md:flex-row-reverse items-center justify-between w-full">
                     <div className="md:w-5/12 mb-4 md:mb-0 text-center md:text-left">
-                       <h3 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-2">{isEn ? "Industry After Party" : "行业交流晚宴"}</h3>
-                       <p className="text-gfa-slate font-light">{isEn ? "A dedicated networking event to connect winners with Hollywood producers and Asian market funds." : "颁奖礼后的专属晚宴，旨在将获奖者与好莱坞知名制片人及亚洲市场基金无缝对接。"}</p>
+                       <h3 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-2">{"Industry After Party"}</h3>
+                       <p className="text-gfa-slate font-light">{"A dedicated networking event to connect winners with Hollywood producers and Asian market funds."}</p>
                     </div>
                     <div className="md:w-2/12 flex justify-center relative z-10 mb-4 md:mb-0">
                        <div className="w-16 h-16 bg-[#C9A84C] rounded-full flex items-center justify-center text-white font-bold font-serif text-xl border-4 border-white shadow-lg">04</div>
@@ -243,10 +233,10 @@ const Awards: React.FC = () => {
                 <Trophy className="w-8 h-8" />
              </div>
              <h2 className="text-4xl lg:text-5xl font-bold font-serif mb-4">
-                {isEn ? "The Complete Golden Feather Awards System" : "GFA金羽奖完整奖项方案"}
+                {"The Complete Golden Feather Awards System"}
              </h2>
              <p className="text-white/70 max-w-2xl mx-auto text-lg font-light leading-relaxed">
-                {isEn ? "Recognizing excellence across all disciplines of filmmaking." : "表彰电影制作各个领域的卓越成就，涵盖长短片及各项核心技术。"}
+                {"Recognizing excellence across all disciplines of filmmaking."}
              </p>
            </div>
            
@@ -254,15 +244,15 @@ const Awards: React.FC = () => {
               {/* Grand Honors */}
               <div>
                  <h3 className="text-2xl font-bold font-serif mb-3 text-[#C9A84C] flex items-center gap-3 border-b border-white/10 pb-4">
-                    <Clapperboard className="w-6 h-6" /> {isEn ? "Grand Honors" : "最高荣誉"}
+                    <Clapperboard className="w-6 h-6" /> {"Grand Honors"}
                  </h3>
                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="bg-white/5 border border-white/10 rounded-2xl p-6 flex justify-between items-center group hover:bg-white/10 transition">
-                       <h4 className="font-bold text-lg">{isEn ? "Best Film" : "最佳影片 (Best Film)"}</h4>
+                       <h4 className="font-bold text-lg">{"Best Film"}</h4>
                        <span className="text-[#C9A84C] font-mono text-xl font-bold tracking-wider">$2,000</span>
                     </div>
                     <div className="bg-white/5 border border-white/10 rounded-2xl p-6 flex justify-between items-center group hover:bg-white/10 transition">
-                       <h4 className="font-bold text-lg">{isEn ? "Best Director" : "最佳导演"}</h4>
+                       <h4 className="font-bold text-lg">{"Best Director"}</h4>
                        <span className="text-[#C9A84C] font-mono text-xl font-bold tracking-wider">$1,000</span>
                     </div>
                  </div>
@@ -271,7 +261,7 @@ const Awards: React.FC = () => {
               {/* Acting Awards */}
               <div>
                  <h3 className="text-2xl font-bold font-serif mb-3 text-[#C9A84C] flex items-center gap-3 border-b border-white/10 pb-4">
-                    <Star className="w-6 h-6" /> {isEn ? "Acting Awards" : "表演奖项"}
+                    <Star className="w-6 h-6" /> {"Acting Awards"}
                  </h3>
                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                     {[
@@ -281,7 +271,7 @@ const Awards: React.FC = () => {
                       { en: "Best Supporting Actress", zh: "最佳女配角", prize: "$300" }
                     ].map((item, idx) => (
                       <div key={idx} className="bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col justify-between group hover:bg-white/10 transition text-center">
-                         <h4 className="font-bold text-lg mb-2">{isEn ? item.en : item.zh}</h4>
+                         <h4 className="font-bold text-lg mb-2">{item.en}</h4>
                          <span className="text-[#C9A84C] font-mono text-xl font-bold tracking-wider">{item.prize}</span>
                       </div>
                     ))}
@@ -291,7 +281,7 @@ const Awards: React.FC = () => {
               {/* Genre Awards */}
               <div>
                  <h3 className="text-2xl font-bold font-serif mb-3 text-[#C9A84C] flex items-center gap-3 border-b border-white/10 pb-4">
-                    <Film className="w-6 h-6" /> {isEn ? "Genre Awards" : "类型奖项"}
+                    <Film className="w-6 h-6" /> {"Genre Awards"}
                  </h3>
                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     {[
@@ -300,7 +290,7 @@ const Awards: React.FC = () => {
                       { en: "Best Animation", zh: "最佳动画片", prize: "$500" }
                     ].map((item, idx) => (
                       <div key={idx} className="bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col justify-between group hover:bg-white/10 transition text-center">
-                         <h4 className="font-bold text-lg mb-2">{isEn ? item.en : item.zh}</h4>
+                         <h4 className="font-bold text-lg mb-2">{item.en}</h4>
                          <span className="text-[#C9A84C] font-mono text-xl font-bold tracking-wider">{item.prize}</span>
                       </div>
                     ))}
@@ -310,7 +300,7 @@ const Awards: React.FC = () => {
               {/* Short Drama Awards */}
               <div>
                  <h3 className="text-2xl font-bold font-serif mb-3 text-[#C9A84C] flex items-center gap-3 border-b border-white/10 pb-4">
-                    <Video className="w-6 h-6" /> {isEn ? "Short Drama Awards (New)" : "短剧专项奖项（新增）"}
+                    <Video className="w-6 h-6" /> {"Short Drama Awards (New)"}
                  </h3>
                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {[
@@ -321,10 +311,10 @@ const Awards: React.FC = () => {
                     ].map((item, idx) => (
                       <div key={idx} className="bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col group hover:bg-white/10 transition">
                          <div className="flex justify-between items-start mb-2">
-                           <h4 className="font-bold text-lg text-white">{isEn ? item.en : item.zh}</h4>
+                           <h4 className="font-bold text-lg text-white">{item.en}</h4>
                            <span className="text-[#C9A84C] font-mono text-xl font-bold tracking-wider ml-4">{item.prize}</span>
                          </div>
-                         <p className="text-white/50 text-sm font-light mt-auto">{isEn ? item.descEn : item.descZh}</p>
+                         <p className="text-white/50 text-sm font-light mt-auto">{item.descEn}</p>
                       </div>
                     ))}
                  </div>
@@ -333,7 +323,7 @@ const Awards: React.FC = () => {
               {/* Youth / Newcomer Awards */}
               <div>
                  <h3 className="text-2xl font-bold font-serif mb-3 text-[#C9A84C] flex items-center gap-3 border-b border-white/10 pb-4">
-                    <Sparkles className="w-6 h-6" /> {isEn ? "Youth & Emerging Talent" : "青年/新人奖项"}
+                    <Sparkles className="w-6 h-6" /> {"Youth & Emerging Talent"}
                  </h3>
                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     {[
@@ -342,7 +332,7 @@ const Awards: React.FC = () => {
                       { en: "Best Student Film", zh: "最佳学生影片", prize: "$200" }
                     ].map((item, idx) => (
                       <div key={idx} className="bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col justify-between group hover:bg-white/10 transition text-center">
-                         <h4 className="font-bold text-lg mb-2">{isEn ? item.en : item.zh}</h4>
+                         <h4 className="font-bold text-lg mb-2">{item.en}</h4>
                          <span className="text-[#C9A84C] font-mono text-xl font-bold tracking-wider">{item.prize}</span>
                       </div>
                     ))}
@@ -352,7 +342,7 @@ const Awards: React.FC = () => {
               {/* Technical / Craft Awards */}
               <div>
                  <h3 className="text-2xl font-bold font-serif mb-3 text-[#C9A84C] flex items-center gap-3 border-b border-white/10 pb-4">
-                    <Scissors className="w-6 h-6" /> {isEn ? "Craft & Technical Awards (Certificate + Trophy)" : "技术奖项（证书+奖杯，无现金）"}
+                    <Scissors className="w-6 h-6" /> {"Craft & Technical Awards (Certificate + Trophy)"}
                  </h3>
                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                     {[
@@ -371,7 +361,7 @@ const Awards: React.FC = () => {
                       };
                       return (
                       <div key={idx} className="bg-white/5 border border-white/10 rounded-2xl p-4 flex flex-col items-center justify-center text-center group hover:bg-white/10 transition min-h-[100px]">
-                         <h4 className="font-bold text-base text-white/90">{isEn ? enObj[zhText] : zhText}</h4>
+                         <h4 className="font-bold text-base text-white/90">{enObj[zhText]}</h4>
                       </div>
                     )})}
                  </div>
@@ -380,25 +370,25 @@ const Awards: React.FC = () => {
               {/* Audience Choice */}
               <div>
                  <h3 className="text-2xl font-bold font-serif mb-3 text-[#C9A84C] flex items-center gap-3 border-b border-white/10 pb-4">
-                    <Users className="w-6 h-6" /> {isEn ? "Audience Awards" : "观众奖"}
+                    <Users className="w-6 h-6" /> {"Audience Awards"}
                  </h3>
                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col justify-between group hover:bg-white/10 transition">
                        <div className="flex justify-between items-start">
-                         <h4 className="font-bold text-lg">{isEn ? "Audience Choice Award" : "观众最喜爱奖"}</h4>
+                         <h4 className="font-bold text-lg">{"Audience Choice Award"}</h4>
                          <Heart className="w-5 h-5 text-red-400 opacity-60" />
                        </div>
                        <div className="mt-4 inline-block bg-[#C9A84C]/20 text-[#C9A84C] px-4 py-2 rounded-full font-bold text-sm w-fit">
-                          {isEn ? "100% of Audience Donations" : "观众捐款100%"}
+                          {"100% of Audience Donations"}
                        </div>
                     </div>
                     <div className="bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col justify-between group hover:bg-white/10 transition">
                        <div className="flex justify-between items-start">
-                         <h4 className="font-bold text-lg">{isEn ? "Audience Choice Short Drama" : "观众最喜爱短剧"}</h4>
+                         <h4 className="font-bold text-lg">{"Audience Choice Short Drama"}</h4>
                          <Heart className="w-5 h-5 text-red-400 opacity-60" />
                        </div>
                        <div className="mt-4 inline-block bg-[#C9A84C]/20 text-[#C9A84C] px-4 py-2 rounded-full font-bold text-sm w-fit">
-                          {isEn ? "100% of Audience Donations" : "观众捐款100%"}
+                          {"100% of Audience Donations"}
                        </div>
                     </div>
                  </div>
@@ -407,7 +397,7 @@ const Awards: React.FC = () => {
               {/* Perks / Benefits */}
               <div>
                  <h3 className="text-2xl font-bold font-serif mb-3 text-[#C9A84C] flex items-center gap-3 border-b border-white/10 pb-4">
-                    <Medal className="w-6 h-6" /> {isEn ? "Non-Cash Rewards (All Winners)" : "非现金奖励（所有获奖者）"}
+                    <Medal className="w-6 h-6" /> {"Non-Cash Rewards (All Winners)"}
                  </h3>
                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {[
@@ -417,8 +407,8 @@ const Awards: React.FC = () => {
                       { en: "Blackmagic Equipment Support", zh: "Blackmagic设备支持", descEn: "Available to select winners.", descZh: "部分获奖者" }
                     ].map((item, idx) => (
                       <div key={idx} className="bg-white/5 border border-white/10 rounded-3xl p-6 flex flex-col justify-center items-center text-center group hover:bg-white/10 transition">
-                         <h4 className="font-bold text-lg mb-2 text-[#C9A84C] group-hover:text-white transition-colors">{isEn ? item.en : item.zh}</h4>
-                         <p className="text-white/60 text-sm font-light">{isEn ? item.descEn : item.descZh}</p>
+                         <h4 className="font-bold text-lg mb-2 text-[#C9A84C] group-hover:text-white transition-colors">{item.en}</h4>
+                         <p className="text-white/60 text-sm font-light">{item.descEn}</p>
                       </div>
                     ))}
                  </div>
@@ -435,35 +425,35 @@ const Awards: React.FC = () => {
                     <CheckCircle className="w-8 h-8" />
                  </div>
                  <h2 className="text-4xl lg:text-5xl font-bold font-serif mb-4">
-                   {isEn ? "Evaluation Criteria & Selection Model" : "评奖标准与评选模式"}
+                   {"Evaluation Criteria & Selection Model"}
                  </h2>
               </div>
 
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
                  <div>
                     <h3 className="text-2xl font-bold mb-3 flex items-center gap-3 border-b border-gray-100 pb-3">
-                       {isEn ? "Evaluation Criteria" : "评奖标准"}
+                       {"Evaluation Criteria"}
                     </h3>
                     <ul className="space-y-3">
                        <li className="flex gap-4">
                           <div className="text-[#C9A84C] font-serif font-bold text-3xl">01</div>
                           <div>
-                             <h4 className="font-bold text-xl mb-2">{isEn ? "Originality & Vision" : "原创性与视野"}</h4>
-                             <p className="text-gfa-slate font-light">{isEn ? "Unique perspective, innovative storytelling, and bold artistic choices." : "独特的视角、创新的叙事方式及大胆的艺术选择。"}</p>
+                             <h4 className="font-bold text-xl mb-2">{"Originality & Vision"}</h4>
+                             <p className="text-gfa-slate font-light">{"Unique perspective, innovative storytelling, and bold artistic choices."}</p>
                           </div>
                        </li>
                        <li className="flex gap-4">
                           <div className="text-[#C9A84C] font-serif font-bold text-3xl">02</div>
                           <div>
-                             <h4 className="font-bold text-xl mb-2">{isEn ? "Technical Execution" : "技术执行力"}</h4>
-                             <p className="text-gfa-slate font-light">{isEn ? "Proficiency in cinematography, editing, sound design, and overall production value." : "在摄影、剪辑、声音设计及整体制作水准上的专业表现。"}</p>
+                             <h4 className="font-bold text-xl mb-2">{"Technical Execution"}</h4>
+                             <p className="text-gfa-slate font-light">{"Proficiency in cinematography, editing, sound design, and overall production value."}</p>
                           </div>
                        </li>
                        <li className="flex gap-4">
                           <div className="text-[#C9A84C] font-serif font-bold text-3xl">03</div>
                           <div>
-                             <h4 className="font-bold text-xl mb-2">{isEn ? "Emotional Impact" : "情感共鸣"}</h4>
-                             <p className="text-gfa-slate font-light">{isEn ? "The film's ability to engage audiences and evoke a meaningful emotional response." : "影片吸引观众并引发深层情感共鸣的能力。"}</p>
+                             <h4 className="font-bold text-xl mb-2">{"Emotional Impact"}</h4>
+                             <p className="text-gfa-slate font-light">{"The film's ability to engage audiences and evoke a meaningful emotional response."}</p>
                           </div>
                        </li>
                     </ul>
@@ -471,20 +461,20 @@ const Awards: React.FC = () => {
 
                  <div>
                     <h3 className="text-2xl font-bold mb-3 flex items-center gap-3 border-b border-gray-100 pb-3">
-                       {isEn ? "Selection Model" : "评选模式"}
+                       {"Selection Model"}
                     </h3>
                     <div className="space-y-4">
                        <div className="bg-[#F5F2EE] border border-[#C9A84C]/20 p-8 rounded-3xl">
-                          <h4 className="font-bold text-xl mb-3">{isEn ? "Preliminary Round" : "初审阶段"}</h4>
+                          <h4 className="font-bold text-xl mb-3">{"Preliminary Round"}</h4>
                           <p className="text-gfa-slate font-light">
-                             {isEn ? "Submissions are reviewed by an initial committee of festival programmers to ensure technical readiness and rule compliance. We utilize a blind-review system for initial technical categories to ensure absolute fairness, evaluating the raw emotional impact and technical competency of the art uninfluenced by background." : "所有提交作品将由电影节选片委员会进行初步审核，确保技术达标及符合参赛规则。我们对初审阶段的技术类奖项采用盲审制度以确保绝对的公正性，纯粹评估作品传达的原始情感冲击力与技术成熟度，不受背景因素干扰。"}
+                             {"Submissions are reviewed by an initial committee of festival programmers to ensure technical readiness and rule compliance. We utilize a blind-review system for initial technical categories to ensure absolute fairness, evaluating the raw emotional impact and technical competency of the art uninfluenced by background."}
                           </p>
                        </div>
                        <div className="bg-[#111111] text-white border border-[#C9A84C]/20 p-8 rounded-3xl relative overflow-hidden shadow-lg">
                           <div className="absolute top-0 right-0 w-2 h-full bg-[#C9A84C]"></div>
-                          <h4 className="font-bold text-xl mb-3">{isEn ? "Industry Jury Panel" : "行业专家评委团终审"}</h4>
+                          <h4 className="font-bold text-xl mb-3">{"Industry Jury Panel"}</h4>
                           <p className="text-white/80 font-light">
-                             {isEn ? "Shortlisted films are evaluated by a prestigious panel of active industry professionals: current DGA directors, PGA producers, festival programmers, and top-tier critics." : "为了保证金羽奖的权威性与荣誉感，入围影片将由一线活跃的行业专家进行终审：包括美国导演工会(DGA)导演、美国制片人工会(PGA)制片人、电影节选片人及顶级影评人。"}
+                             {"Shortlisted films are evaluated by a prestigious panel of active industry professionals: current DGA directors, PGA producers, festival programmers, and top-tier critics."}
                           </p>
                        </div>
                     </div>
@@ -504,12 +494,10 @@ const Awards: React.FC = () => {
                     <Send className="w-8 h-8 text-[#C9A84C] ml-1" />
                  </div>
                  <h2 className="text-4xl md:text-5xl font-bold font-serif text-gfa-inkBlack mb-4 leading-tight">
-                    {isEn ? "Submission & Eligibility" : "报名指南与获奖资格"}
+                    {"Submission & Eligibility"}
                  </h2>
                  <p className="text-gfa-slate text-lg font-light max-w-2xl mx-auto">
-                    {isEn 
-                      ? "Ready to present your work to exactly the audience you've been looking for?" 
-                      : "准备好向世界展现您的杰作了吗？请仔细阅读下方的赛事资格及报名要求。"}
+                    {"Ready to present your work to exactly the audience you've been looking for?"}
                  </p>
               </div>
 
@@ -517,28 +505,28 @@ const Awards: React.FC = () => {
                  <div className="bg-[#F5F2EE] p-10 rounded-3xl border border-[#C9A84C]/10">
                     <h3 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-3 flex items-center gap-3">
                        <CheckCircle className="w-7 h-7 text-[#C9A84C]" />
-                       {isEn ? "Eligibility Requirements" : "评选要求与获奖资格"}
+                       {"Eligibility Requirements"}
                     </h3>
                     <ul className="space-y-5 text-gfa-slate font-light text-lg">
                        <li className="flex items-start gap-4">
                           <div className="min-w-2 mt-2.5 w-2 h-2 rounded-full bg-[#C9A84C]"></div> 
-                          {isEn ? "The primary creator (Director/Writer/Lead Actor) must be under 30 years old for youth categories." : "青年单元：主创人员（导演/编剧/主演）报名时年龄需在30周岁以下。"}
+                          {"The primary creator (Director/Writer/Lead Actor) must be under 30 years old for youth categories."}
                        </li>
                        <li className="flex items-start gap-4">
                           <div className="min-w-2 mt-2.5 w-2 h-2 rounded-full bg-[#C9A84C]"></div> 
-                          {isEn ? "Films must have been completed on or after January 1, 2024." : "影片制作完成时间必须为2024年1月1日之后。"}
+                          {"Films must have been completed on or after January 1, 2024."}
                        </li>
                        <li className="flex items-start gap-4">
                           <div className="min-w-2 mt-2.5 w-2 h-2 rounded-full bg-[#C9A84C]"></div> 
-                          {isEn ? "All non-English films MUST contain burned-in English subtitles." : "所有非英语对白影片【必须】嵌有英文字幕。"}
+                          {"All non-English films MUST contain burned-in English subtitles."}
                        </li>
                        <li className="flex items-start gap-4">
                           <div className="min-w-2 mt-2.5 w-2 h-2 rounded-full bg-[#C9A84C]"></div> 
-                          {isEn ? "Applicant must hold full distribution rights and necessary copyright clearances." : "报名者必须拥有该影片的完整发行权及音视频版权许可。"}
+                          {"Applicant must hold full distribution rights and necessary copyright clearances."}
                        </li>
                        <li className="flex items-start gap-4">
                           <div className="min-w-2 mt-2.5 w-2 h-2 rounded-full bg-[#C9A84C]"></div> 
-                          {isEn ? "Length: Short Films (under 40 mins), Feature Films (60+ mins)." : "时长要求：短片单元限40分钟以内，长片单元需在60分钟以上。"}
+                          {"Length: Short Films (under 40 mins), Feature Films (60+ mins)."}
                        </li>
                     </ul>
                  </div>
@@ -546,28 +534,28 @@ const Awards: React.FC = () => {
                  <div className="bg-[#111111] text-white p-10 rounded-3xl border border-[#C9A84C]/20 shadow-lg">
                     <h3 className="text-2xl font-bold font-serif mb-3 flex items-center gap-3">
                        <CalendarDays className="w-7 h-7 text-[#C9A84C]" />
-                       {isEn ? "Application Timeline" : "赛事报名流程及时间表"}
+                       {"Application Timeline"}
                     </h3>
                     <div className="space-y-3">
                        <div className="relative pl-8 border-l border-[#C9A84C]/30 pb-3">
                           <div className="absolute w-4 h-4 bg-[#C9A84C] rounded-full -left-[8.5px] top-1"></div>
-                          <h4 className="font-bold text-xl">{isEn ? "Submissions Open" : "启动报名通道"}</h4>
-                          <p className="text-white/70 font-light mt-1">{isEn ? "May 25, 2026" : "2026年5月25日"}</p>
+                          <h4 className="font-bold text-xl">{"Submissions Open"}</h4>
+                          <p className="text-white/70 font-light mt-1">{"May 25, 2026"}</p>
                        </div>
                        <div className="relative pl-8 border-l border-[#C9A84C]/30 pb-3">
                           <div className="absolute w-4 h-4 bg-[#C9A84C] rounded-full -left-[8.5px] top-1"></div>
-                          <h4 className="font-bold text-xl">{isEn ? "Regular Deadline" : "常规报名截止"}</h4>
-                          <p className="text-white/70 font-light mt-1">{isEn ? "October 2026" : "2026年10月"}</p>
+                          <h4 className="font-bold text-xl">{"Regular Deadline"}</h4>
+                          <p className="text-white/70 font-light mt-1">{"October 2026"}</p>
                        </div>
                        <div className="relative pl-8 border-l border-[#C9A84C]/30 pb-3">
                           <div className="absolute w-4 h-4 bg-[#C9A84C] rounded-full -left-[8.5px] top-1"></div>
-                          <h4 className="font-bold text-xl">{isEn ? "Shortlist Announcement" : "公布入围与获奖名单"}</h4>
-                          <p className="text-white/70 font-light mt-1">{isEn ? "Early November 2026" : "2026年11月初"}</p>
+                          <h4 className="font-bold text-xl">{"Shortlist Announcement"}</h4>
+                          <p className="text-white/70 font-light mt-1">{"Early November 2026"}</p>
                        </div>
                        <div className="relative pl-8">
                           <div className="absolute w-4 h-4 bg-[#C9A84C] rounded-full -left-[8.5px] top-1 shadow-[0_0_15px_rgba(201,168,76,0.8)]"></div>
-                          <h4 className="font-bold text-xl text-[#C9A84C]">{isEn ? "Golden Feather Gala" : "金羽奖颁奖礼盛典开幕式"}</h4>
-                          <p className="text-white/70 font-light mt-1">{isEn ? "November 2026 (Hollywood, CA)" : "2026年11月（美国好莱坞）"}</p>
+                          <h4 className="font-bold text-xl text-[#C9A84C]">{"Golden Feather Gala"}</h4>
+                          <p className="text-white/70 font-light mt-1">{"November 2026 (Hollywood, CA)"}</p>
                        </div>
                     </div>
                  </div>
@@ -579,19 +567,17 @@ const Awards: React.FC = () => {
                  <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#C9A84C]/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
                  
                  <h4 className="font-bold text-2xl md:text-3xl font-serif mb-3 text-gfa-inkBlack relative z-10">
-                   {isEn ? "Step Into the Spotlight" : "闪耀好莱坞，成就电影梦"}
+                   {"Step Into the Spotlight"}
                  </h4>
                  <p className="text-gfa-slate text-lg mb-5 max-w-2xl mx-auto relative z-10 leading-relaxed font-light">
-                   {isEn 
-                     ? "Open to filmmakers worldwide. Submit your masterpiece to the Golden Feather Awards. Not only will you gain global exposure, industry connections, and prestigious recognition, but standout filmmakers are also eligible for robust project support and a Cash Prize of up to $2,000 USD to fuel your next cinematic journey!" 
-                     : "面向全球电影人开放。向金羽奖提交您的诚意之作，赢取高规格的项目扶持以及最高达2000美金的现金大奖！"}
+                   {"Open to filmmakers worldwide. Submit your masterpiece to the Golden Feather Awards. Not only will you gain global exposure, industry connections, and prestigious recognition, but standout filmmakers are also eligible for robust project support and a Cash Prize of up to $2,000 USD to fuel your next cinematic journey!"}
                  </p>
                  <Link to="/award-submission" className="inline-block relative z-10 bg-gradient-to-r from-[#C9A84C] to-[#E5C973] text-black px-12 py-5 rounded-full font-bold uppercase tracking-widest text-base hover:from-gfa-inkBlack hover:to-gfa-inkBlack hover:text-white transition-all shadow-[0_10px_30px_rgba(201,168,76,0.3)] hover:shadow-2xl hover:-translate-y-1 transform duration-300 mb-6">
-                    {isEn ? "Start Your Submission" : "即刻提交报名申请"}
+                    {"Start Your Submission"}
                  </Link>
                  <div className="relative z-10 border-t border-[#C9A84C]/20 pt-6">
                     <p className="text-sm text-gfa-slate uppercase tracking-widest font-bold">
-                       {isEn ? "Questions? Contact us:" : "有疑问？联系我们："} <a href="mailto:info@gfafilm.org" className="text-[#C9A84C] hover:underline">{/* [中文内容待填入] */} info@gfafilm.org </a>
+                       {"Questions? Contact us:"} <a href="mailto:info@gfafilm.org" className="text-[#C9A84C] hover:underline"> info@gfafilm.org </a>
                     </p>
                  </div>
               </div>
@@ -602,18 +588,18 @@ const Awards: React.FC = () => {
         <section className="text-center pt-4 pb-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
              <div className="bg-white border border-gray-100 shadow-sm p-12 rounded-3xl">
-               <h4 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-4">{isEn ? "Press & Media" : "媒体报道授权"}</h4>
-               <p className="text-gfa-slate font-light mb-4 max-w-sm mx-auto">{isEn ? "Cover the brightest young talents on their biggest night in Hollywood." : "为这些好莱坞之夜闪耀的电影青年进行报道与传播。"}</p>
+               <h4 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-4">{"Press & Media"}</h4>
+               <p className="text-gfa-slate font-light mb-4 max-w-sm mx-auto">{"Cover the brightest young talents on their biggest night in Hollywood."}</p>
                <Link to="/contact" className="border-2 border-gfa-inkBlack text-gfa-inkBlack font-bold uppercase tracking-widest text-xs px-8 py-4 rounded-full hover:bg-gfa-inkBlack hover:text-white transition-colors inline-block w-auto">
-                 {isEn ? "Request Press Pass" : "申请媒体证件"}
+                 {"Request Press Pass"}
                </Link>
              </div>
              
              <div className="bg-[#111111] text-white p-12 rounded-3xl border border-gray-800 shadow-lg">
-               <h4 className="text-2xl font-bold font-serif mb-4 text-[#C9A84C]">{isEn ? "Corporate Sponsors" : "品牌企业赞助"}</h4>
-               <p className="text-white/80 font-light mb-4 max-w-sm mx-auto">{isEn ? "Align your brand with the visionary stories and future stars of cinema." : "将您的品牌与好莱坞未来的璀璨新星联系在一起。"}</p>
+               <h4 className="text-2xl font-bold font-serif mb-4 text-[#C9A84C]">{"Corporate Sponsors"}</h4>
+               <p className="text-white/80 font-light mb-4 max-w-sm mx-auto">{"Align your brand with the visionary stories and future stars of cinema."}</p>
                <Link to="/contact" className="bg-[#C9A84C] text-black font-bold uppercase tracking-widest text-xs px-8 py-4 rounded-full hover:bg-white transition-colors inline-block w-auto">
-                 {isEn ? "Sponsorship Inquiry" : "颁奖礼赞助咨询"}
+                 {"Sponsorship Inquiry"}
                </Link>
              </div>
           </div>
@@ -621,15 +607,13 @@ const Awards: React.FC = () => {
           <div className="bg-gfa-inkBlack text-white p-12 md:p-16 rounded-[40px] relative overflow-hidden shadow-2xl">
              <Heart className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 text-white/5 pointer-events-none" />
              <h3 className="relative z-10 text-3xl md:text-5xl font-bold font-serif mb-3 drop-shadow-lg">
-               {isEn ? "Fund a Dream" : "资助一个梦想之夜"}
+               {"Fund a Dream"}
              </h3>
              <p className="relative z-10 text-white/80 text-lg md:text-xl font-light mb-4 max-w-3xl mx-auto leading-relaxed">
-               {isEn 
-                 ? "Our awards ceremony is entirely non-profit. Your donation ensures we can fly in low-income nominees and host an event they will remember for the rest of their lives." 
-                 : "金羽奖颁奖礼是完全非营利的。您的捐款将直接用于支持低收入家庭的提名者来到洛杉矶现场，为他们举办一场终生难忘的荣誉盛典。"}
+               {"Our awards ceremony is entirely non-profit. Your donation ensures we can fly in low-income nominees and host an event they will remember for the rest of their lives."}
              </p>
              <Link to="/donate" className="relative z-10 bg-[#C9A84C] hover:bg-white text-black font-bold uppercase tracking-widest text-base px-12 py-5 rounded-full transition-all flex items-center justify-center gap-3 mx-auto shadow-[0_0_20px_rgba(201,168,76,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.4)] hover:scale-105 inline-flex w-auto">
-               <Heart className="w-5 h-5 fill-current"/> {isEn ? "Donate to the Awards" : "为金羽奖捐款"}
+               <Heart className="w-5 h-5 fill-current"/> {"Donate to the Awards"}
              </Link>
           </div>
         </section>

@@ -25,7 +25,7 @@ const availableGearList = [
 
 const GearApplication: React.FC = () => {
   const { locale } = useLocale();
-  const isEn = locale === Locale.EN;
+  const isEn = true;
   const { user, setAuthModalOpen } = useAuth();
   const navigate = useNavigate();
 
@@ -115,7 +115,7 @@ const GearApplication: React.FC = () => {
       setSuccess(true);
     } catch (err: any) {
       handleFirestoreError(err, OperationType.CREATE, 'gear_applications');
-      setError(isEn ? "Failed to submit application. Please check your inputs and try again." : "提交申请失败，请检查输入并重试。");
+      setError("Failed to submit application. Please check your inputs and try again.");
     } finally {
       setSubmitting(false);
     }
@@ -124,22 +124,20 @@ const GearApplication: React.FC = () => {
   if (success) {
     return (
       <div className="min-h-screen bg-gfa-warmWhite py-4 flex justify-center items-center">
-        <SEO title={isEn ? "Application Submitted | GFA" : "申请已提交 | GFA"} />
+        <SEO title={"Application Submitted | GFA"} />
         <div className="container-gfa max-w-2xl mx-auto px-4 text-center">
           <div className="bg-white rounded-2xl shadow-sm border border-gfa-border p-12">
             <h1 className="text-3xl font-bold font-serif text-gfa-inkBlack mb-4">
-              {isEn ? "Application Submitted" : "申请已成功提交"}
+              {"Application Submitted"}
             </h1>
             <p className="text-gfa-slate mb-4">
-              {isEn 
-                ? "Thank you for applying. Our team will review your application and get back to you shortly." 
-                : "感谢您的申请。我们的团队将评估您的项目并尽快与您联系。"}
+              {"Thank you for applying. Our team will review your application and get back to you shortly."}
             </p>
             <button 
               onClick={() => navigate('/filmmaker-support')}
               className="bg-gfa-inkBlack hover:bg-black text-white px-8 py-3 rounded-full font-bold uppercase tracking-widest text-sm transition-colors"
             >
-              {isEn ? "Return to Programs" : "返回扶持计划"}
+              {"Return to Programs"}
             </button>
           </div>
         </div>
@@ -149,30 +147,28 @@ const GearApplication: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gfa-warmWhite py-4">
-      <SEO title={isEn ? "Pro Gear Access Application | GFA" : "摄影设备申请 | GFA"} />
+      <SEO title={"Pro Gear Access Application | GFA"} />
 
       <div className="container-gfa max-w-3xl mx-auto px-4">
         <div className="mb-3 text-center">
           <h1 className="text-4xl font-bold font-serif text-gfa-inkBlack mb-4">
-            {isEn ? "Pro Gear Access Application" : "公益影视设备借用申请"}
+            {"Pro Gear Access Application"}
           </h1>
           <p className="text-gfa-slate">
-            {isEn 
-              ? "Please provide detailed information about your project to help us evaluate your request for equipment support." 
-              : "请提供有关您项目的详细信息，以帮助我们评估您的设备支持请求。"}
+            {"Please provide detailed information about your project to help us evaluate your request for equipment support."}
           </p>
         </div>
 
         {!user && (
           <div className="bg-[#fcfaf5] p-6 rounded-xl mb-3 border border-[#C9A84C]/30 text-center">
              <p className="text-gfa-inkBlack mb-4">
-              {isEn ? "You must sign in or create an account to submit an application." : "您必须先登录或注册账号才能提交申请。"}
+              {"You must sign in or create an account to submit an application."}
             </p>
             <button
                onClick={() => setAuthModalOpen(true)}
                className="bg-[#C9A84C] text-white px-6 py-2 rounded-full font-bold text-sm tracking-widest uppercase hover:bg-[#b09241]"
             >
-              {isEn ? "Sign In / Sign Up" : "登录 / 注册"}
+              {"Sign In / Sign Up"}
             </button>
           </div>
         )}
@@ -188,12 +184,12 @@ const GearApplication: React.FC = () => {
             {/* Applicant Identity */}
             <div>
               <h3 className="text-lg font-bold font-serif border-b border-gfa-border pb-2 mb-4">
-                {isEn ? "Applicant Information" : "申请人信息"}
+                {"Applicant Information"}
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 <div>
                   <label className="block text-sm font-bold tracking-widest text-gfa-slate uppercase mb-2">
-                    {isEn ? "Full Name" : "姓名"} *
+                    {"Full Name"} *
                   </label>
                   <input
                     type="text"
@@ -207,7 +203,7 @@ const GearApplication: React.FC = () => {
                 </div>
                 <div>
                   <label className="block text-sm font-bold tracking-widest text-gfa-slate uppercase mb-2">
-                    {isEn ? "Email" : "电子邮件"} *
+                    {"Email"} *
                   </label>
                   <input
                     type="email"
@@ -221,7 +217,7 @@ const GearApplication: React.FC = () => {
                 </div>
                 <div className="md:col-span-2">
                     <label className="block text-sm font-bold tracking-widest text-gfa-slate uppercase mb-2">
-                      {isEn ? "Phone Number" : "联系电话"} *
+                      {"Phone Number"} *
                     </label>
                     <input
                       type="tel"
@@ -235,7 +231,7 @@ const GearApplication: React.FC = () => {
                   </div>
                   <div>
                     <label className="block text-sm font-bold tracking-widest text-gfa-slate uppercase mb-2">
-                      {isEn ? "Driver's License" : "驾照号码"} *
+                      {"Driver's License"} *
                     </label>
                     <input
                       type="text"
@@ -249,7 +245,7 @@ const GearApplication: React.FC = () => {
                   </div>
                   <div>
                     <label className="block text-sm font-bold tracking-widest text-gfa-slate uppercase mb-2">
-                      {isEn ? "SSN / ID Number" : "社保号 / 证件号"} *
+                      {"SSN / ID Number"} *
                     </label>
                     <input
                       type="text"
@@ -263,7 +259,7 @@ const GearApplication: React.FC = () => {
                   </div>
                   <div className="md:col-span-2">
                     <label className="block text-sm font-bold tracking-widest text-gfa-slate uppercase mb-2">
-                      {isEn ? "Current Address" : "当前住址"} *
+                      {"Current Address"} *
                     </label>
                     <input
                       type="text"
@@ -277,7 +273,7 @@ const GearApplication: React.FC = () => {
                   </div>
                   <div className="md:col-span-2">
                     <label className="block text-sm font-bold tracking-widest text-gfa-slate uppercase mb-2">
-                      {isEn ? "Home Address (Permanent)" : "家庭地址 (永久住址)"} *
+                      {"Home Address (Permanent)"} *
                     </label>
                     <input
                       type="text"
@@ -291,7 +287,7 @@ const GearApplication: React.FC = () => {
                   </div>
                   <div className="md:col-span-2">
                     <label className="block text-sm font-bold tracking-widest text-gfa-slate uppercase mb-2">
-                      {isEn ? "Graduated School" : "毕业学校"} *
+                      {"Graduated School"} *
                     </label>
                     <input
                       type="text"
@@ -305,7 +301,7 @@ const GearApplication: React.FC = () => {
                   </div>
                   <div>
                     <label className="block text-sm font-bold tracking-widest text-gfa-slate uppercase mb-2">
-                      {isEn ? "Graduation Project Submission (URL)" : "毕业作品提交 (链接)"} *
+                      {"Graduation Project Submission (URL)"} *
                     </label>
                     <input
                       type="url"
@@ -320,7 +316,7 @@ const GearApplication: React.FC = () => {
                   </div>
                   <div>
                     <label className="block text-sm font-bold tracking-widest text-gfa-slate uppercase mb-2">
-                      {isEn ? "School Mentor Contact" : "可联络的学校导师"} *
+                      {"School Mentor Contact"} *
                     </label>
                     <input
                       type="text"
@@ -329,7 +325,7 @@ const GearApplication: React.FC = () => {
                       maxLength={100}
                       value={formData.schoolMentorContact}
                       onChange={handleChange}
-                      placeholder={isEn ? "Name & Email/Phone" : "导师姓名及联系方式"}
+                      placeholder={"Name & Email/Phone"}
                       className="w-full bg-gfa-warmWhite border border-gfa-border rounded-lg px-4 py-3 focus:outline-none focus:border-[#C9A84C]"
                     />
                   </div>
@@ -339,12 +335,12 @@ const GearApplication: React.FC = () => {
             {/* Project Details */}
             <div>
               <h3 className="text-lg font-bold font-serif border-b border-gfa-border pb-2 mb-4">
-                {isEn ? "Project Information" : "项目信息"}
+                {"Project Information"}
               </h3>
               <div className="space-y-3">
                 <div>
                   <label className="block text-sm font-bold tracking-widest text-gfa-slate uppercase mb-2">
-                    {isEn ? "Project Title" : "项目名称"} *
+                    {"Project Title"} *
                   </label>
                   <input
                     type="text"
@@ -358,7 +354,7 @@ const GearApplication: React.FC = () => {
                 </div>
                 <div>
                   <label className="block text-sm font-bold tracking-widest text-gfa-slate uppercase mb-2">
-                    {isEn ? "Project Type" : "项目类型"} *
+                    {"Project Type"} *
                   </label>
                   <select
                     name="projectType"
@@ -367,15 +363,15 @@ const GearApplication: React.FC = () => {
                     onChange={handleChange}
                     className="w-full bg-gfa-warmWhite border border-gfa-border rounded-lg px-4 py-3 focus:outline-none focus:border-[#C9A84C]"
                   >
-                    <option value="Short Film">{isEn ? "Short Film" : "短片"}</option>
-                    <option value="Feature Film">{isEn ? "Feature Film" : "长片"}</option>
-                    <option value="Documentary">{isEn ? "Documentary" : "纪录片"}</option>
-                    <option value="Pilot">{isEn ? "Pilot / Series" : "剧集/试播集"}</option>
+                    <option value="Short Film">{"Short Film"}</option>
+                    <option value="Feature Film">{"Feature Film"}</option>
+                    <option value="Documentary">{"Documentary"}</option>
+                    <option value="Pilot">{"Pilot / Series"}</option>
                   </select>
                 </div>
                 <div>
                   <label className="block text-sm font-bold tracking-widest text-gfa-slate uppercase mb-2">
-                    {isEn ? "Logline" : "一句话故事大纲 (Logline)"} *
+                    {"Logline"} *
                   </label>
                   <textarea
                     name="logline"
@@ -389,7 +385,7 @@ const GearApplication: React.FC = () => {
                 </div>
                 <div>
                   <label className="block text-sm font-bold tracking-widest text-gfa-slate uppercase mb-2">
-                    {isEn ? "Shooting Plan" : "拍摄计划"} *
+                    {"Shooting Plan"} *
                   </label>
                   <textarea
                     name="shootingPlan"
@@ -398,14 +394,14 @@ const GearApplication: React.FC = () => {
                     rows={4}
                     value={formData.shootingPlan}
                     onChange={handleChange}
-                    placeholder={isEn ? "Describe your shooting plan." : "请简述您的拍摄计划。"}
+                    placeholder={"Describe your shooting plan."}
                     className="w-full bg-gfa-warmWhite border border-gfa-border rounded-lg px-4 py-3 focus:outline-none focus:border-[#C9A84C] resize-none"
                   />
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                   <div>
                     <label className="block text-sm font-bold tracking-widest text-gfa-slate uppercase mb-2">
-                      {isEn ? "Total Budget" : "总投资成本"} *
+                      {"Total Budget"} *
                     </label>
                     <input
                       type="text"
@@ -419,7 +415,7 @@ const GearApplication: React.FC = () => {
                   </div>
                   <div>
                     <label className="block text-sm font-bold tracking-widest text-gfa-slate uppercase mb-2">
-                      {isEn ? "Script URL (Google Drive / Dropbox link)" : "剧本链接 (请提供分享链接)"} *
+                      {"Script URL (Google Drive / Dropbox link)"} *
                     </label>
                     <input
                       type="url"
@@ -434,13 +430,13 @@ const GearApplication: React.FC = () => {
                   </div>
                   <div className="md:col-span-2">
                     <p className="text-xs text-gfa-slate font-light">
-                      {isEn ? "If you are submitting a feature length script and shooting plan, please also email it to " : "如果有长篇剧本提交和拍摄计划，请提交邮箱："} 
-                      <a href="mailto:jacky@gfafilm.org" className="text-[#C9A84C] hover:underline font-bold">{/* [中文内容待填入] */} jacky@gfafilm.org </a>
+                      {"If you are submitting a feature length script and shooting plan, please also email it to "} 
+                      <a href="mailto:jacky@gfafilm.org" className="text-[#C9A84C] hover:underline font-bold"> jacky@gfafilm.org </a>
                     </p>
                   </div>
                   <div className="md:col-span-2">
                     <label className="block text-sm font-bold tracking-widest text-gfa-slate uppercase mb-2">
-                      {isEn ? "Existing Crew Members" : "团队成员已有"} *
+                      {"Existing Crew Members"} *
                     </label>
                     <textarea
                       name="existingCrew"
@@ -449,13 +445,13 @@ const GearApplication: React.FC = () => {
                       rows={2}
                       value={formData.existingCrew}
                       onChange={handleChange}
-                      placeholder={isEn ? "List roles you have already filled." : "列出已有团队成员及职位。"}
+                      placeholder={"List roles you have already filled."}
                       className="w-full bg-gfa-warmWhite border border-gfa-border rounded-lg px-4 py-3 focus:outline-none focus:border-[#C9A84C] resize-none"
                     />
                   </div>
                   <div className="md:col-span-2">
                     <label className="block text-sm font-bold tracking-widest text-gfa-slate uppercase mb-2">
-                      {isEn ? "Needed Crew Members" : "你需要的团队成员列表"} *
+                      {"Needed Crew Members"} *
                     </label>
                     <textarea
                       name="neededCrew"
@@ -464,13 +460,13 @@ const GearApplication: React.FC = () => {
                       rows={2}
                       value={formData.neededCrew}
                       onChange={handleChange}
-                      placeholder={isEn ? "List roles you are looking to fill." : "列出仍需招募的职位。"}
+                      placeholder={"List roles you are looking to fill."}
                       className="w-full bg-gfa-warmWhite border border-gfa-border rounded-lg px-4 py-3 focus:outline-none focus:border-[#C9A84C] resize-none"
                     />
                   </div>
                   <div>
                     <label className="block text-sm font-bold tracking-widest text-gfa-slate uppercase mb-2">
-                      {isEn ? "Pitch Deck URL (Optional)" : "概念提案册链接 (选填)"}
+                      {"Pitch Deck URL (Optional)"}
                     </label>
                     <input
                       type="url"
@@ -485,7 +481,7 @@ const GearApplication: React.FC = () => {
                 </div>
                 <div>
                   <label className="block text-sm font-bold tracking-widest text-gfa-slate uppercase mb-2">
-                    {isEn ? "Future Direction / Festival Strategy" : "项目未来走向及电影节参赛规划"} *
+                    {"Future Direction / Festival Strategy"} *
                   </label>
                   <textarea
                     name="futureDirection"
@@ -494,7 +490,7 @@ const GearApplication: React.FC = () => {
                     rows={3}
                     value={formData.futureDirection}
                     onChange={handleChange}
-                    placeholder={isEn ? "Where will this project go once completed?" : "完成后的发行及电影节参赛计划是什么？"}
+                    placeholder={"Where will this project go once completed?"}
                     className="w-full bg-gfa-warmWhite border border-gfa-border rounded-lg px-4 py-3 focus:outline-none focus:border-[#C9A84C] resize-none"
                   />
                 </div>
@@ -504,21 +500,21 @@ const GearApplication: React.FC = () => {
             {/* Equipment Request */}
             <div>
               <h3 className="text-lg font-bold font-serif border-b border-gfa-border pb-2 mb-4">
-                {isEn ? "Equipment Details" : "设备需求与档期"}
+                {"Equipment Details"}
               </h3>
               <div className="space-y-3">
                 <div>
                   <label className="block text-sm font-bold tracking-widest text-gfa-slate uppercase mb-4">
-                    {isEn ? "Select Requested Gear" : "选择您需要的设备"}
+                    {"Select Requested Gear"}
                   </label>
                   <div className="overflow-x-auto mb-3">
                     <table className="w-full text-sm text-left border border-gfa-border rounded-lg bg-white">
                       <thead className="bg-[#fcfaf5] text-gfa-slate font-bold uppercase text-xs border-b border-gfa-border">
                         <tr>
-                          <th className="px-4 py-3 text-center">{isEn ? "Select" : "选择"}</th>
-                          <th className="px-4 py-3">{isEn ? "Equipment" : "设备名称"}</th>
-                          <th className="px-4 py-3">{isEn ? "Weight" : "重量"}</th>
-                          <th className="px-4 py-3">{isEn ? "Remarks" : "备注"}</th>
+                          <th className="px-4 py-3 text-center">{"Select"}</th>
+                          <th className="px-4 py-3">{"Equipment"}</th>
+                          <th className="px-4 py-3">{"Weight"}</th>
+                          <th className="px-4 py-3">{"Remarks"}</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -540,7 +536,7 @@ const GearApplication: React.FC = () => {
                             </td>
                             <td className="px-4 py-3 font-medium text-gfa-inkBlack">{gear.name}</td>
                             <td className="px-4 py-3 text-gfa-slate whitespace-nowrap">{gear.weight}</td>
-                            <td className="px-4 py-3 text-gfa-slate text-xs">{isEn ? gear.remarksEn : gear.remarksZh}</td>
+                            <td className="px-4 py-3 text-gfa-slate text-xs">{gear.remarksEn}</td>
                           </tr>
                         ))}
                       </tbody>
@@ -550,7 +546,7 @@ const GearApplication: React.FC = () => {
 
                 <div>
                   <label className="block text-sm font-bold tracking-widest text-gfa-slate uppercase mb-2">
-                    {isEn ? "Additional Gear Details" : "其他补充设备需求"}
+                    {"Additional Gear Details"}
                   </label>
                   <textarea
                     name="requestedGear"
@@ -558,14 +554,14 @@ const GearApplication: React.FC = () => {
                     rows={3}
                     value={formData.requestedGear}
                     onChange={handleChange}
-                    placeholder={isEn ? "Any other gear you need that is not listed above?" : "是否有上方未列出但您仍然需要的设备？"}
+                    placeholder={"Any other gear you need that is not listed above?"}
                     className="w-full bg-gfa-warmWhite border border-gfa-border rounded-lg px-4 py-3 focus:outline-none focus:border-[#C9A84C] resize-none"
                   />
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                   <div>
                     <label className="block text-sm font-bold tracking-widest text-gfa-slate uppercase mb-2">
-                      {isEn ? "Shoot Start Date" : "计划开机日期"} *
+                      {"Shoot Start Date"} *
                     </label>
                     <input
                       type="date"
@@ -578,7 +574,7 @@ const GearApplication: React.FC = () => {
                   </div>
                   <div>
                     <label className="block text-sm font-bold tracking-widest text-gfa-slate uppercase mb-2">
-                      {isEn ? "Shoot End Date" : "计划杀青日期"} *
+                      {"Shoot End Date"} *
                     </label>
                     <input
                       type="date"
@@ -600,8 +596,8 @@ const GearApplication: React.FC = () => {
                 className="w-full bg-[#C9A84C] hover:bg-[#a68636] text-white px-8 py-4 rounded-full font-bold uppercase tracking-widest transition-colors disabled:opacity-50"
               >
                 {submitting 
-                  ? (isEn ? "Submitting..." : "提交中...") 
-                  : (isEn ? "Submit Application" : "立即提交申请")}
+                  ? ("Submitting...") 
+                  : ("Submit Application")}
               </button>
             </div>
           </form>

@@ -64,7 +64,7 @@ const OrgDetailsDialog: React.FC<Props> = ({ org, onClose }) => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-5">
             {/* Left: Transparency Breakdown */}
             <div className="bg-white/5 p-12 border border-white/5 rounded-sm">
-              <h3 className="text-2xl font-black uppercase tracking-[0.3em] text-white mb-5 border-l-3 border-gfa-gold pl-6 font-montserrat">{/* [中文内容待填入] */} Transparency Audit </h3>
+              <h3 className="text-2xl font-black uppercase tracking-[0.3em] text-white mb-5 border-l-3 border-gfa-gold pl-6 font-montserrat"> Transparency Audit </h3>
               <div className="space-y-4">
                 {Object.entries(org.indicators).map(([key, val]) => (
                   <div key={key} className="flex justify-between items-center border-b border-white/5 pb-5">
@@ -82,7 +82,7 @@ const OrgDetailsDialog: React.FC<Props> = ({ org, onClose }) => {
             {/* Right: Confidence Index & Audit Period */}
             <div className="flex flex-col gap-3">
               <div className="bg-gfa-black/60 p-12 border border-white/10 rounded-sm">
-                <h3 className="text-2xl font-black uppercase tracking-[0.3em] text-gfa-gold mb-5 font-montserrat">{/* [中文内容待填入] */} Trust Confidence Index </h3>
+                <h3 className="text-2xl font-black uppercase tracking-[0.3em] text-gfa-gold mb-5 font-montserrat"> Trust Confidence Index </h3>
                 <div className="flex items-baseline gap-4 mb-4">
                    <div className="text-8xl font-black gold tracking-tighter font-cinzel leading-none">{org.trustScore}</div>
                    <div className="text-3xl font-serif text-white/20">/100</div>
@@ -91,22 +91,22 @@ const OrgDetailsDialog: React.FC<Props> = ({ org, onClose }) => {
               </div>
 
               <div className="bg-white/2 p-12 border border-white/5 rounded-sm">
-                <h3 className="text-[11px] font-black uppercase tracking-[0.5em] text-gfa-gold/60 mb-4 font-montserrat">{/* [中文内容待填入] */} Certification Period </h3>
+                <h3 className="text-[11px] font-black uppercase tracking-[0.5em] text-gfa-gold/60 mb-4 font-montserrat"> Certification Period </h3>
                 <div className="grid grid-cols-2 gap-5 text-[11px] font-black uppercase tracking-[0.2em] font-montserrat">
                   <div className="space-y-2">
-                    <span className="opacity-30 block">{/* [中文内容待填入] */} Valid From </span>
+                    <span className="opacity-30 block"> Valid From </span>
                     <span className="text-white">{org.certification.validFrom}</span>
                   </div>
                   <div className="space-y-2">
-                    <span className="opacity-30 block">{/* [中文内容待填入] */} Valid To </span>
+                    <span className="opacity-30 block"> Valid To </span>
                     <span className="text-white">{org.certification.validTo}</span>
                   </div>
                   <div className="space-y-2">
-                    <span className="opacity-30 block">{/* [中文内容待填入] */} Last Full Audit </span>
+                    <span className="opacity-30 block"> Last Full Audit </span>
                     <span className="text-white">{org.certification.lastReviewedAt}</span>
                   </div>
                   <div className="space-y-2">
-                    <span className="opacity-30 block text-gfa-gold/60">{/* [中文内容待填入] */} Next Scheduled </span>
+                    <span className="opacity-30 block text-gfa-gold/60"> Next Scheduled </span>
                     <span className="text-gfa-gold">{org.certification.nextReviewAt}</span>
                   </div>
                 </div>
@@ -116,7 +116,7 @@ const OrgDetailsDialog: React.FC<Props> = ({ org, onClose }) => {
 
           <div className="space-y-5">
             <div className="max-w-4xl">
-              <h3 className="text-2xl font-black uppercase tracking-[0.3em] text-white mb-4 font-montserrat">{/* [中文内容待填入] */} Institutional Profile </h3>
+              <h3 className="text-2xl font-black uppercase tracking-[0.3em] text-white mb-4 font-montserrat"> Institutional Profile </h3>
               <p className="text-gfa-gray text-lg leading-loose uppercase tracking-widest opacity-80 font-medium">
                 {org.description || "The full institutional description is currently being audited for international translation compliance."}
               </p>
@@ -124,7 +124,7 @@ const OrgDetailsDialog: React.FC<Props> = ({ org, onClose }) => {
             
             {org.disclosures && org.disclosures.length > 0 && (
               <div>
-                <h3 className="text-2xl font-black uppercase tracking-[0.3em] text-white mb-5 font-montserrat">{/* [中文内容待填入] */} Verified Disclosures </h3>
+                <h3 className="text-2xl font-black uppercase tracking-[0.3em] text-white mb-5 font-montserrat"> Verified Disclosures </h3>
                 <div className="flex flex-wrap gap-4">
                   {org.disclosures.map(d => (
                     <span key={d} className="bg-gfa-gold/5 px-6 py-3 border border-gfa-gold/20 text-[11px] font-black uppercase tracking-[0.3em] text-gfa-gold">
@@ -137,11 +137,11 @@ const OrgDetailsDialog: React.FC<Props> = ({ org, onClose }) => {
           </div>
           
           <div className="mt-4 pt-4 border-t border-white/10 text-center flex flex-col md:flex-row justify-center gap-4">
-            <button className="bg-white/5 border border-white/20 text-white px-16 py-5 text-[11px] font-black uppercase tracking-[0.4em] hover:bg-white hover:text-gfa-black transition-all duration-500 rounded-sm">{/* [中文内容待填入] */} Initiate Inquiry </button>
+            <button className="bg-white/5 border border-white/20 text-white px-16 py-5 text-[11px] font-black uppercase tracking-[0.4em] hover:bg-white hover:text-gfa-black transition-all duration-500 rounded-sm"> Initiate Inquiry </button>
             <button 
               onClick={onClose}
               className="btn-gold px-16 py-5 text-[11px]"
-            >{/* [中文内容待填入] */} Exit Institutional Profile </button>
+            > Exit Institutional Profile </button>
           </div>
           
           <div className="mt-5 text-center">

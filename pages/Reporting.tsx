@@ -9,7 +9,7 @@ const Reporting: React.FC = () => {
     <div className="bg-gfa-warmWhite pt-40 pb-4 px-6 min-h-screen">
       <div className="container-gfa">
         <header className="mb-3 text-center max-w-4xl mx-auto">
-          <span className="gold-badge mb-4">{/* [中文内容待填入] */} Statutory Ethics Channel </span>
+          <span className="gold-badge mb-4"> Statutory Ethics Channel </span>
           <h1 className="text-4xl md:text-5xl font-bold font-serif text-gfa-inkBlack mb-5 leading-tight">
             {r.title}
           </h1>
@@ -78,7 +78,7 @@ const Reporting: React.FC = () => {
             </div>
 
             <div className="p-10 bg-white border border-gfa-border rounded-card">
-              <h4 className="text-[12px] text-gfa-inkBlack font-bold uppercase tracking-widest mb-3 font-serif">{/* [中文内容待填入] */} Possible Administrative Actions </h4>
+              <h4 className="text-[12px] text-gfa-inkBlack font-bold uppercase tracking-widest mb-3 font-serif"> Possible Administrative Actions </h4>
               <ul className="text-[12px] text-gfa-slate font-bold space-y-4 uppercase tracking-widest opacity-70">
                 {r.outcomes.map((outcome: string) => (
                   <li key={outcome} className="flex items-center gap-3">
@@ -89,8 +89,8 @@ const Reporting: React.FC = () => {
             </div>
             
             <div className="p-8 bg-gfa-inkBlack text-white rounded-card">
-               <h4 className="text-[12px] text-gfa-gold font-bold uppercase tracking-widest mb-4">{/* [中文内容待填入] */} Official Protection </h4>
-               <p className="text-[11px] leading-relaxed italic opacity-60">{/* [中文内容待填入] */} GFA adheres to strict data protection and anonymity protocols. Your identification remains confidential unless explicit legal authorization is provided. </p>
+               <h4 className="text-[12px] text-gfa-gold font-bold uppercase tracking-widest mb-4"> Official Protection </h4>
+               <p className="text-[11px] leading-relaxed italic opacity-60"> GFA adheres to strict data protection and anonymity protocols. Your identification remains confidential unless explicit legal authorization is provided. </p>
             </div>
           </div>
         </div>

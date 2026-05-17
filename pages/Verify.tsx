@@ -24,7 +24,7 @@ const Verify: React.FC = () => {
   return (
     <div className="py-40 max-w-6xl mx-auto px-4 min-h-screen">
       <div className="max-w-3xl mx-auto text-center animate-fade-in">
-        <div className="inline-block px-4 py-1.5 border border-gfa-gold/30 text-gfa-gold text-[8px] font-black uppercase tracking-[0.5em] mb-4 bg-gfa-gold/5 font-montserrat">{/* [中文内容待填入] */} Supervisory Database Access </div>
+        <div className="inline-block px-4 py-1.5 border border-gfa-gold/30 text-gfa-gold text-[8px] font-black uppercase tracking-[0.5em] mb-4 bg-gfa-gold/5 font-montserrat"> Supervisory Database Access </div>
         <h1 className="text-3xl md:text-5xl font-black mb-3 gold uppercase tracking-tighter font-cinzel leading-none">
           {v.title}
         </h1>
@@ -48,15 +48,15 @@ const Verify: React.FC = () => {
 
         {result === 'valid' && (
           <div className="mt-5 p-8 bg-gfa-gold/10 border border-gfa-gold/20 animate-fade-up">
-            <div className="text-gfa-gold font-black text-[9px] uppercase tracking-[0.4em] mb-2">{/* [中文内容待填入] */} Statutory Status: Verified </div>
+            <div className="text-gfa-gold font-black text-[9px] uppercase tracking-[0.4em] mb-2"> Statutory Status: Verified </div>
             <div className="text-white text-base font-black uppercase tracking-widest leading-tight">Bond Active & Audited for 2024-2025</div>
           </div>
         )}
         
         {result === 'notFound' && (
           <div className="mt-5 p-8 bg-white/5 border border-white/10 animate-fade-up">
-            <div className="text-white font-black text-[9px] uppercase tracking-[0.4em] mb-2">{/* [中文内容待填入] */} Statutory Status: Not Found </div>
-            <div className="text-white text-base font-black uppercase tracking-widest leading-tight opacity-60">{/* [中文内容待填入] */} No Active Bond Record in GFA Database </div>
+            <div className="text-white font-black text-[9px] uppercase tracking-[0.4em] mb-2"> Statutory Status: Not Found </div>
+            <div className="text-white text-base font-black uppercase tracking-widest leading-tight opacity-60"> No Active Bond Record in GFA Database </div>
           </div>
         )}
       </div>

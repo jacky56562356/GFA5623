@@ -66,25 +66,23 @@ const mentors: Mentor[] = [
 
 export default function Mentors() {
   const { locale } = useLocale();
-  const isEn = locale === Locale.EN;
+  const isEn = true;
   const [selectedMentor, setSelectedMentor] = useState<Mentor | null>(null);
 
   return (
     <div className="font-sans pb-4 pt-3 bg-gray-50 min-h-screen">
       <SEO 
-        title={isEn ? "Our Mentors | Global Film Alliance" : "公益导师概览 | 环球青年电影联盟"} 
-        description={isEn ? "Meet the mentors supporting young filmmakers." : "了解支持青年电影人的公益导师阵容。"}
+        title={"Our Mentors | Global Film Alliance"} 
+        description={"Meet the mentors supporting young filmmakers."}
       />
       
       <div className="container-gfa max-w-6xl mx-auto px-4">
         <div className="text-center mb-4">
           <h1 className="text-4xl md:text-5xl font-bold font-serif mb-3 text-gfa-inkBlack">
-            {isEn ? "Meet Our Mentors" : "我们的公益导师"}
+            {"Meet Our Mentors"}
           </h1>
           <p className="text-xl text-gfa-slate max-w-3xl mx-auto font-light">
-            {isEn 
-              ? "Industry professionals dedicated to supporting and guiding the next generation of filmmakers." 
-              : "我们汇聚了行业内的专业人士，致力于支持和指导下一代青年电影人。"}
+            {"Industry professionals dedicated to supporting and guiding the next generation of filmmakers."}
           </p>
         </div>
 
@@ -92,21 +90,21 @@ export default function Mentors() {
           {mentors.map(mentor => (
             <div key={mentor.id} className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
               <div className="aspect-square bg-gray-200">
-                <img fetchpriority="high"  src={mentor.image} alt={mentor.name} className="w-full h-full object-cover"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                <img fetchPriority="high"  src={mentor.image} alt={mentor.name} className="w-full h-full object-cover"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold font-serif mb-1">{mentor.name}</h3>
                 <div className="text-sm text-[#C9A84C] font-bold uppercase tracking-widest mb-4">
-                  {isEn ? mentor.roleEn : mentor.roleZh}
+                  {mentor.roleEn}
                 </div>
                 <p className="text-gfa-slate text-sm leading-relaxed mb-4 line-clamp-3">
-                  {isEn ? mentor.bioEn : mentor.bioZh}
+                  {mentor.bioEn}
                 </p>
                 <button 
                   onClick={() => setSelectedMentor(mentor)}
                   className="text-sm font-bold text-[#C9A84C] hover:text-[#b09241] uppercase tracking-wider flex items-center transition-colors"
                 >
-                  {isEn ? "View Profile" : "查看简介"}
+                  {"View Profile"}
                 </button>
               </div>
             </div>
@@ -131,31 +129,31 @@ export default function Mentors() {
               <div className="flex flex-col md:flex-row">
                 <div className="md:w-1/3 shrink-0">
                   <div className="aspect-square md:aspect-auto md:h-full bg-gray-200">
-                    <img fetchpriority="high" src={selectedMentor.image} alt={selectedMentor.name} className="w-full h-full object-cover" />
+                    <img fetchPriority="high" src={selectedMentor.image} alt={selectedMentor.name} className="w-full h-full object-cover" />
                   </div>
                 </div>
                 <div className="p-6 md:p-8 md:w-2/3">
                   <h3 className="text-2xl font-bold font-serif mb-1">{selectedMentor.name}</h3>
                   <div className="text-sm text-[#C9A84C] font-bold uppercase tracking-widest mb-6">
-                    {isEn ? selectedMentor.roleEn : selectedMentor.roleZh}
+                    {selectedMentor.roleEn}
                   </div>
                   
                   <div className="block mb-6">
                     <h4 className="font-bold text-sm tracking-widest uppercase mb-2 text-gray-900 border-b pb-2">
-                       {isEn ? "Biography" : "详细介绍"}
+                       {"Biography"}
                     </h4>
                     <p className="text-gfa-slate text-base leading-relaxed">
-                      {isEn ? selectedMentor.bioEn : selectedMentor.bioZh}
+                      {selectedMentor.bioEn}
                     </p>
                   </div>
 
-                  {((isEn ? selectedMentor.expertiseEn : selectedMentor.expertiseZh)?.length ?? 0) > 0 && (
+                  {((selectedMentor.expertiseEn)?.length ?? 0) > 0 && (
                     <div className="block">
                       <h4 className="font-bold text-sm tracking-widest uppercase mb-3 text-gray-900 border-b pb-2">
-                         {isEn ? "Areas of Expertise" : "专业领域"}
+                         {"Areas of Expertise"}
                       </h4>
                       <ul className="flex flex-wrap gap-2 text-sm">
-                         {(isEn ? selectedMentor.expertiseEn : selectedMentor.expertiseZh)?.map((skill, idx) => (
+                         {(selectedMentor.expertiseEn)?.map((skill, idx) => (
                             <li key={idx} className="bg-gray-100 text-gray-700 px-3 py-1.5 rounded-full font-medium">
                                {skill}
                             </li>
@@ -171,18 +169,16 @@ export default function Mentors() {
 
         <div className="bg-gfa-inkBlack text-white rounded-3xl p-10 md:p-16 text-center mt-12">
           <h2 className="text-3xl font-bold font-serif mb-4">
-            {isEn ? "Ready to join the program?" : "准备好加入导师计划了吗？"}
+            {"Ready to join the program?"}
           </h2>
           <p className="text-white/80 max-w-2xl mx-auto mb-4 font-light">
-            {isEn 
-              ? "Apply now to connect with our mentors and get the guidance you need for your film career." 
-              : "立即申请，与我们的专业导师取得联系，获取电影职业发展所需的指导和支持。"}
+            {"Apply now to connect with our mentors and get the guidance you need for your film career."}
           </p>
           <Link 
             to="/mentorship-application" 
             className="inline-block bg-[#C9A84C] hover:bg-[#b09241] text-gfa-inkBlack px-10 py-4 rounded-full font-bold uppercase tracking-widest text-sm transition-colors shadow-lg"
           >
-            {isEn ? "Apply Now" : "立即申请"}
+            {"Apply Now"}
           </Link>
         </div>
       </div>

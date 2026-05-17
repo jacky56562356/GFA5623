@@ -7,43 +7,33 @@ import { ArrowRight } from 'lucide-react';
 
 const Programs: React.FC = () => {
   const { locale } = useLocale();
-  const isEn = locale === Locale.EN;
+  const isEn = true;
 
-  const title = isEn ? "Our Programs — Shaping Tomorrow's Storytellers" : "我们的项目 — 塑造未来的影像讲述者";
-  const desc = isEn 
-    ? "Empowering youth through professional training, real-world experience, and industry access." 
-    : "通过专业培训、真实制作经验和行业资源连接，赋能青少年。";
+  const title = "Our Programs — Shaping Tomorrow's Storytellers";
+  const desc = "Empowering youth through professional training, real-world experience, and industry access.";
 
   const programs = [
     {
-      title: isEn ? "Film Awards Ceremony" : "电影颁奖礼",
-      desc: isEn 
-        ? "Celebrating young creatives and emerging directors on Hollywood's biggest stages." 
-        : "在好莱坞最大的舞台上举办年度颁奖典礼，庆祝并表彰年轻的电影人才与新晋导演。",
+      title: "Film Awards Ceremony",
+      desc: "Celebrating young creatives and emerging directors on Hollywood's biggest stages.",
       link: "/programs/awards",
       image: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1974&auto=format&fit=crop"
     },
     {
-      title: isEn ? "Emerging Director Support" : "新晋导演扶持",
-      desc: isEn 
-        ? "Providing mentorship, grants, and practical set resources to guide new directors in bringing their vision to life." 
-        : "提供资金、导师指导和片场资源，帮助年轻的新晋导演完成他们的独立制片与长片及短片作品。",
+      title: "Emerging Director Support",
+      desc: "Providing mentorship, grants, and practical set resources to guide new directors in bringing their vision to life.",
       link: "/programs/emerging-director",
       image: "https://images.unsplash.com/photo-1544717305-2782549b5136?q=80&w=1974&auto=format&fit=crop"
     },
     {
-      title: isEn ? "Global Film Platform Alliance" : "全球电影平台联合",
-      desc: isEn 
-        ? "Partnering with major streaming networks, theaters, and global festivals to amplify young voices worldwide." 
-        : "与全球知名流媒体网络、院线和国际电影节合作，建立宣发联盟，提升青少年与青年导演电影作品的全球影响力。",
+      title: "Global Film Platform Alliance",
+      desc: "Partnering with major streaming networks, theaters, and global festivals to amplify young voices worldwide.",
       link: "/programs/platform-alliance",
       image: "https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?q=80&w=2070&auto=format&fit=crop"
     },
     {
-      title: isEn ? "Diverse Ethnicity Film Support" : "全球各族裔电影扶持",
-      desc: isEn 
-        ? "Funding and spotlighting underrepresented cultural stories globally, ensuring every ethnicity has a voice in cinema." 
-        : "注资并支持来自全球各族裔、多元文化背景的影视项目，确保少数族裔和代表性不足的文化能够在电影中发出他们的声音。",
+      title: "Diverse Ethnicity Film Support",
+      desc: "Funding and spotlighting underrepresented cultural stories globally, ensuring every ethnicity has a voice in cinema.",
       link: "/programs/diverse-ethnicity",
       image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=2069&auto=format&fit=crop"
     }
@@ -51,12 +41,12 @@ const Programs: React.FC = () => {
 
   return (
     <div className="bg-gfa-warmWhite pt-[80px] font-sans pb-3">
-      <SEO title={isEn ? "Programs | GFA" : "项目 | GFA"} description={desc} />
+      <SEO title={"Programs | GFA"} description={desc} />
 
       {/* Banner */}
       <div className="relative bg-[#1A2B4A] py-5 mb-3 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img fetchpriority="high" 
+          <img fetchPriority="high" 
             src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1604928141064-207cea6f5722%3Fq%3D80%26w%3D2070%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" 
             alt="Programs Background" 
             className="w-full h-full object-cover opacity-20 grayscale"
@@ -98,7 +88,7 @@ const Programs: React.FC = () => {
                  to={program.link} 
                  className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-[#C9A84C] hover:text-black transition-colors group/link w-fit"
                >
-                 {isEn ? 'Learn More' : '了解更多'}
+                 {'Learn More'}
                  <ArrowRight className="w-5 h-5 group-hover/link:translate-x-2 transition-transform" />
                </Link>
             </div>

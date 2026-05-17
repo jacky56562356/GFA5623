@@ -6,7 +6,7 @@ import { Locale } from '../types';
 export const AuthModal: React.FC = () => {
   const { isAuthModalOpen, setAuthModalOpen, signInWithGoogle, signInWithEmail, signUpWithEmail, resetPassword } = useAuth();
   const { locale } = useLocale();
-  const isEn = locale === Locale.EN;
+  const isEn = true;
 
   const [isLogin, setIsLogin] = useState(true);
   const [isResetPassword, setIsResetPassword] = useState(false);
@@ -53,9 +53,9 @@ export const AuthModal: React.FC = () => {
         setResetSent(true);
       } catch (err: any) {
         if (err.code === 'auth/user-not-found') {
-          setError(isEn ? 'No user found with this email.' : '未找到与此邮箱关联的账号。');
+          setError('No user found with this email.');
         } else {
-          setError(isEn ? 'Failed to send reset email. Please try again later.' : '发送重置邮件失败，请稍后再试。');
+          setError('Failed to send reset email. Please try again later.');
         }
       } finally {
         setLoading(false);
@@ -68,12 +68,12 @@ export const AuthModal: React.FC = () => {
         await signInWithEmail(email, password);
       } else {
         if (!acceptedTerms) {
-          setError(isEn ? 'Please accept the terms and conditions.' : '请同意服务条款。');
+          setError('Please accept the terms and conditions.');
           setLoading(false);
           return;
         }
         if (password !== confirmPassword) {
-          setError(isEn ? 'Passwords do not match.' : '两次输入的密码不一致。');
+          setError('Passwords do not match.');
           setLoading(false);
           return;
         }
@@ -81,13 +81,13 @@ export const AuthModal: React.FC = () => {
       }
     } catch (err: any) {
       if (err.code === 'auth/email-already-in-use') {
-        setError(isEn ? 'Email already in use.' : '该邮箱已被注册。');
+        setError('Email already in use.');
       } else if (err.code === 'auth/wrong-password' || err.code === 'auth/user-not-found' || err.code === 'auth/invalid-login-credentials') {
-         setError(isEn ? 'Invalid email or password.' : '邮箱或密码错误。');
+         setError('Invalid email or password.');
       } else if (err.code === 'auth/weak-password') {
-         setError(isEn ? 'Password should be at least 6 characters.' : '密码至少需要6个字符。');
+         setError('Password should be at least 6 characters.');
       } else {
-         setError(isEn ? 'An error occurred. Please configure Email/Password in Firebase Console.' : '发生错误，如果是刚配置，请确保Firebase中已开启Email/Password验证。');
+         setError('An error occurred. Please configure Email/Password in Firebase Console.');
       }
     } finally {
       setLoading(false);
@@ -98,7 +98,7 @@ export const AuthModal: React.FC = () => {
     try {
       await signInWithGoogle();
     } catch (err) {
-      setError(isEn ? 'Google sign in failed.' : 'Google登录失败。');
+      setError('Google sign in failed.');
     }
   };
 
@@ -121,14 +121,14 @@ export const AuthModal: React.FC = () => {
         <div className="p-8">
           <div className="text-center mb-4">
             <h2 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-2">
-              {isResetPassword ? (isEn ? 'Reset Password' : '重置密码') : (isLogin ? (isEn ? 'Welcome Back' : '欢迎回来') : (isEn ? 'Create Account' : '创建账号'))}
+              {isResetPassword ? ('Reset Password') : (isLogin ? ('Welcome Back') : ('Create Account'))}
             </h2>
             <p className="text-sm text-gfa-slate font-light">
               {isResetPassword
-                ? (isEn ? 'Enter your email to receive a password reset link.' : '请输入您的邮箱，我们将发送重置密码链接给您。')
+                ? ('Enter your email to receive a password reset link.')
                 : (isLogin 
-                  ? (isEn ? 'Sign in to access your dashboard and applications.' : '登录以查看您的主页和申请进度。')
-                  : (isEn ? 'Join GFA to apply for programs and support.' : '加入全球电影联盟，申请项目与扶持。'))}
+                  ? ('Sign in to access your dashboard and applications.')
+                  : ('Join GFA to apply for programs and support.'))}
             </p>
           </div>
 
@@ -137,9 +137,9 @@ export const AuthModal: React.FC = () => {
               <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
               </div>
-              <h3 className="text-xl font-bold font-serif text-gfa-inkBlack mb-2">{isEn ? 'Email Sent!' : '邮件已发送！'}</h3>
+              <h3 className="text-xl font-bold font-serif text-gfa-inkBlack mb-2">{'Email Sent!'}</h3>
               <p className="text-sm text-gfa-slate font-light mb-6">
-                {isEn ? 'Check your inbox for a link to reset your password.' : '请查收您的邮箱，点击链接重置密码。'}
+                {'Check your inbox for a link to reset your password.'}
               </p>
               <button
                 onClick={() => {
@@ -149,7 +149,7 @@ export const AuthModal: React.FC = () => {
                 }}
                 className="w-full bg-gfa-inkBlack text-white py-3 rounded-lg font-bold text-sm tracking-widest uppercase hover:bg-gfa-gold transition-colors"
               >
-                {isEn ? 'Return to Login' : '返回登录'}
+                {'Return to Login'}
               </button>
             </div>
           ) : (
@@ -165,7 +165,7 @@ export const AuthModal: React.FC = () => {
               <>
                 <div>
                   <label className="block text-xs font-bold uppercase tracking-widest text-gfa-slate mb-1">
-                    {isEn ? 'Name' : '姓名'}
+                    {'Name'}
                   </label>
                   <input
                     type="text"
@@ -173,12 +173,12 @@ export const AuthModal: React.FC = () => {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     className="w-full bg-gfa-warmWhite border border-gfa-border rounded-lg px-4 py-2.5 focus:outline-none focus:border-[#C9A84C]"
-                    placeholder={isEn ? "Your Full Name" : "您的全名"}
+                    placeholder={"Your Full Name"}
                   />
                 </div>
                 <div>
                   <label className="block text-xs font-bold uppercase tracking-widest text-gfa-slate mb-1">
-                    {isEn ? 'Phone Number' : '电话号码'}
+                    {'Phone Number'}
                   </label>
                   <input
                     type="tel"
@@ -186,7 +186,7 @@ export const AuthModal: React.FC = () => {
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     className="w-full bg-gfa-warmWhite border border-gfa-border rounded-lg px-4 py-2.5 focus:outline-none focus:border-[#C9A84C]"
-                    placeholder={isEn ? "Your Phone Number" : "您的电话号码"}
+                    placeholder={"Your Phone Number"}
                   />
                 </div>
               </>
@@ -194,7 +194,7 @@ export const AuthModal: React.FC = () => {
 
             <div>
               <label className="block text-xs font-bold uppercase tracking-widest text-gfa-slate mb-1">
-                {isEn ? 'Email' : '邮箱'}
+                {'Email'}
               </label>
               <input
                 type="email"
@@ -202,7 +202,7 @@ export const AuthModal: React.FC = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="w-full bg-gfa-warmWhite border border-gfa-border rounded-lg px-4 py-2.5 focus:outline-none focus:border-[#C9A84C]"
-                placeholder={isEn ? "your@email.com" : "您的邮箱地址"}
+                placeholder={"your@email.com"}
               />
             </div>
 
@@ -210,11 +210,11 @@ export const AuthModal: React.FC = () => {
               <div>
                 <div className="flex justify-between items-center mb-1">
                   <label className="block text-xs font-bold uppercase tracking-widest text-gfa-slate">
-                    {isEn ? 'Password' : '密码'}
+                    {'Password'}
                   </label>
                   {isLogin && (
                     <button type="button" onClick={() => setIsResetPassword(true)} className="text-xs text-[#C9A84C] hover:underline">
-                      {isEn ? 'Forgot?' : '忘记密码？'}
+                      {'Forgot?'}
                     </button>
                   )}
                 </div>
@@ -245,7 +245,7 @@ export const AuthModal: React.FC = () => {
             {!isLogin && !isResetPassword && (
               <div>
                 <label className="block text-xs font-bold uppercase tracking-widest text-gfa-slate mb-1">
-                  {isEn ? 'Confirm Password' : '确认密码'}
+                  {'Confirm Password'}
                 </label>
                 <div className="relative">
                   <input
@@ -281,11 +281,9 @@ export const AuthModal: React.FC = () => {
                   className="mt-1 w-4 h-4 text-[#C9A84C] bg-white border-gfa-border rounded focus:ring-[#C9A84C]"
                 />
                 <label htmlFor="terms" className="text-xs text-gfa-slate leading-tight">
-                  {isEn ? (
-                    <>I agree to the <a href="/policy" className="text-[#C9A84C] hover:underline" target="_blank">Terms of Service</a> and <a href="/privacy" className="text-[#C9A84C] hover:underline" target="_blank">Privacy Policy</a>.</>
-                  ) : (
-                    <>我同意 <a href="/policy" className="text-[#C9A84C] hover:underline" target="_blank">服务条款</a> 和 <a href="/privacy" className="text-[#C9A84C] hover:underline" target="_blank">隐私政策</a>。</>
-                  )}
+                  <>
+I agree to the <a href="/policy" className="text-[#C9A84C] hover:underline" target="_blank">Terms of Service</a> and <a href="/privacy" className="text-[#C9A84C] hover:underline" target="_blank">Privacy Policy</a>.
+</>
                 </label>
               </div>
             )}
@@ -296,8 +294,8 @@ export const AuthModal: React.FC = () => {
               className="w-full bg-gfa-inkBlack text-white py-3 rounded-lg font-bold text-sm tracking-widest uppercase hover:bg-gfa-gold transition-colors mt-2 disabled:opacity-50"
             >
               {loading 
-                ? (isEn ? 'Processing...' : '处理中...') 
-                : (isResetPassword ? (isEn ? 'Reset Password' : '重置密码') : (isLogin ? (isEn ? 'Sign In' : '登录') : (isEn ? 'Sign Up' : '注册')))}
+                ? ('Processing...') 
+                : (isResetPassword ? ('Reset Password') : (isLogin ? ('Sign In') : ('Sign Up')))}
             </button>
           </form>
 
@@ -305,7 +303,7 @@ export const AuthModal: React.FC = () => {
             <>
               <div className="mt-3 flex items-center justify-between">
                 <span className="w-1/5 border-b border-gfa-border"></span>
-                <span className="text-xs text-gfa-slate uppercase tracking-widest">{isEn ? 'Or continue with' : '或其他方式登录'}</span>
+                <span className="text-xs text-gfa-slate uppercase tracking-widest">{'Or continue with'}</span>
                 <span className="w-1/5 border-b border-gfa-border"></span>
               </div>
 
@@ -319,7 +317,7 @@ export const AuthModal: React.FC = () => {
                   <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05" />
                   <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335" />
                 </svg>
-                {isEn ? 'Google' : '谷歌账号'}
+                {'Google'}
               </button>
             </>
           ) : null}
@@ -328,21 +326,21 @@ export const AuthModal: React.FC = () => {
             {isResetPassword ? (
               <p>
                 <button onClick={() => { setIsResetPassword(false); setIsLogin(true); }} className="text-[#C9A84C] font-bold hover:underline">
-                  {isEn ? 'Back to Login' : '返回登录'}
+                  {'Back to Login'}
                 </button>
               </p>
             ) : isLogin ? (
               <p>
-                {isEn ? "Don't have an account? " : "还没有账号？"}
+                {"Don't have an account? "}
                 <button onClick={() => setIsLogin(false)} className="text-[#C9A84C] font-bold hover:underline">
-                  {isEn ? 'Sign Up' : '立即注册'}
+                  {'Sign Up'}
                 </button>
               </p>
             ) : (
               <p>
-                {isEn ? "Already have an account? " : "已经有账号？"}
+                {"Already have an account? "}
                 <button onClick={() => setIsLogin(true)} className="text-[#C9A84C] font-bold hover:underline">
-                  {isEn ? 'Sign In' : '立即登录'}
+                  {'Sign In'}
                 </button>
               </p>
             )}

@@ -20,7 +20,7 @@ const Events: React.FC = () => {
       
       <div className="container-gfa relative z-10">
         <header className="mb-3 text-center max-w-4xl mx-auto">
-          <span className="gold-badge mb-4 shadow-sm">{/* [中文内容待填入] */} Industry Calendar </span>
+          <span className="gold-badge mb-4 shadow-sm"> Industry Calendar </span>
           <h1 className="text-4xl md:text-5xl font-bold font-serif text-gfa-inkBlack mb-5 leading-tight">
             {t.events.title}
           </h1>
@@ -34,7 +34,7 @@ const Events: React.FC = () => {
             <div key={event.id} className="card-standard group cursor-pointer flex flex-col">
               <div className="relative overflow-hidden aspect-video mb-4 rounded-sm">
                  <div className="absolute inset-0 bg-gfa-gold/20 opacity-0 group-hover:opacity-100 transition-opacity z-10 mix-blend-overlay"></div>
-                 <img fetchpriority="high" 
+                 <img fetchPriority="high" 
                   src={event.image} 
                   alt={event.title} 
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" 

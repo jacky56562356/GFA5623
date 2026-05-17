@@ -5,7 +5,7 @@ import { Locale } from '../types.ts';
 
 const Footer: React.FC = () => {
   const { locale } = useLocale();
-  const isEn = locale === Locale.EN;
+  const isEn = true;
 
   return (
     <footer className="bg-gfa-inkBlack text-white pt-4 pb-4 px-6 border-t-[6px] border-t-[#C9A84C] relative overflow-hidden">
@@ -15,54 +15,52 @@ const Footer: React.FC = () => {
         {/* Brand & Mission */}
         <div className="space-y-3 lg:border-r lg:border-white/10 lg:pr-8">
           <div className="flex items-center gap-4">
-            <img fetchpriority="high"  src="https://wsrv.nl/?url=i.ibb.co%2FmFgDBtBp%2F1.png&w=1200&output=webp" alt="GFA Logo" className="h-20 w-auto object-contain"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+            <img fetchPriority="high"  src="https://wsrv.nl/?url=i.ibb.co%2FmFgDBtBp%2F1.png&w=1200&output=webp" alt="GFA Logo" className="h-20 w-auto object-contain"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
             <div className="flex flex-col">
-              <span className="text-3xl font-bold tracking-tighter font-serif leading-none">{/* [中文内容待填入] */} GFA </span>
-              <span className="text-[10px] uppercase tracking-[0.2em] text-[#C9A84C] font-bold mt-1">{/* [中文内容待填入] */} Global Film Alliance </span>
+              <span className="text-3xl font-bold tracking-tighter font-serif leading-none"> GFA </span>
+              <span className="text-[10px] uppercase tracking-[0.2em] text-[#C9A84C] font-bold mt-1"> Global Film Alliance </span>
             </div>
           </div>
           <p className="text-sm text-gray-300 leading-relaxed font-light">
-            {isEn 
-              ? "Opening Doors for Filmmakers." 
-              : "为每一位电影人打开那扇门。"}
+            {"Opening Doors for Filmmakers."}
           </p>
           <div className="flex gap-4">
             {/* Social Icons */}
-            <a href="#" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#C9A84C] hover:border-[#C9A84C] hover:text-white transition-all cursor-pointer font-bold text-xs" aria-label="Twitter">{/* [待补充真实的社交媒体链接] */}X<span className="sr-only">{/* [中文内容待填入] */} Twitter </span></a>
-            <a href="#" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#C9A84C] hover:border-[#C9A84C] hover:text-white transition-all cursor-pointer font-bold text-xs" aria-label="LinkedIn">{/* [待补充真实的社交媒体链接] */}In<span className="sr-only">{/* [中文内容待填入] */} LinkedIn </span></a>
-            <a href="#" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#C9A84C] hover:border-[#C9A84C] hover:text-white transition-all cursor-pointer font-bold text-xs" aria-label="Instagram">{/* [待补充真实的社交媒体链接] */}Ig<span className="sr-only">{/* [中文内容待填入] */} Instagram </span></a>
+            <a href="#" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#C9A84C] hover:border-[#C9A84C] hover:text-white transition-all cursor-pointer font-bold text-xs" aria-label="Twitter">{/* [待补充真实的社交媒体链接] */}X<span className="sr-only"> Twitter </span></a>
+            <a href="#" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#C9A84C] hover:border-[#C9A84C] hover:text-white transition-all cursor-pointer font-bold text-xs" aria-label="LinkedIn">{/* [待补充真实的社交媒体链接] */}In<span className="sr-only"> LinkedIn </span></a>
+            <a href="#" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#C9A84C] hover:border-[#C9A84C] hover:text-white transition-all cursor-pointer font-bold text-xs" aria-label="Instagram">{/* [待补充真实的社交媒体链接] */}Ig<span className="sr-only"> Instagram </span></a>
           </div>
         </div>
 
         {/* Footer Links replaced by Top Bar */}
         <div>
           <h3 className="text-[12px] font-bold uppercase tracking-widest text-[#C9A84C] mb-4 flex items-center gap-3">
-            <span className="w-1 h-1 bg-[#C9A84C] rounded-full"></span> {isEn ? "Platform" : "平台建设"}
+            <span className="w-1 h-1 bg-[#C9A84C] rounded-full"></span> {"Platform"}
           </h3>
           <div className="space-y-4 text-sm text-gray-300 font-light">
-            <Link to="/about" className="block hover:text-white transition-colors hover:translate-x-1 duration-300">{isEn ? 'About Us' : '关于我们'}</Link>
-            <Link to="/programs" className="block hover:text-white transition-colors hover:translate-x-1 duration-300">{isEn ? 'Programs & Initiatives' : '项目与倡议'}</Link>
-            <Link to="/membership" className="block hover:text-white transition-colors hover:translate-x-1 duration-300">{isEn ? 'Membership' : '平台与会员'}</Link>
-            <Link to="/governance" className="block hover:text-white transition-colors hover:translate-x-1 duration-300">{isEn ? 'Governance' : '治理架构'}</Link>
+            <Link to="/about" className="block hover:text-white transition-colors hover:translate-x-1 duration-300">{'About Us'}</Link>
+            <Link to="/programs" className="block hover:text-white transition-colors hover:translate-x-1 duration-300">{'Programs & Initiatives'}</Link>
+            <Link to="/membership" className="block hover:text-white transition-colors hover:translate-x-1 duration-300">{'Membership'}</Link>
+            <Link to="/governance" className="block hover:text-white transition-colors hover:translate-x-1 duration-300">{'Governance'}</Link>
           </div>
         </div>
 
         {/* Contact */}
         <div>
           <h3 className="text-[12px] font-bold uppercase tracking-widest text-[#C9A84C] mb-4 flex items-center gap-3">
-            <span className="w-1 h-1 bg-[#C9A84C] rounded-full"></span> {isEn ? "Contact" : "联系我们"}
+            <span className="w-1 h-1 bg-[#C9A84C] rounded-full"></span> {"Contact"}
           </h3>
           <div className="space-y-4 text-sm text-gray-300 font-light">
             <p className="flex flex-col gap-1">
-              <span className="text-gfa-gold text-xs font-bold uppercase tracking-wider">{/* [中文内容待填入] */} Email </span>
-              <a href="mailto:jacky@gfafilm.org" className="hover:text-white transition-colors">{/* [中文内容待填入] */} jacky@gfafilm.org </a>
+              <span className="text-gfa-gold text-xs font-bold uppercase tracking-wider"> Email </span>
+              <a href="mailto:jacky@gfafilm.org" className="hover:text-white transition-colors"> jacky@gfafilm.org </a>
             </p>
             <p className="flex flex-col gap-1">
-              <span className="text-gfa-gold text-xs font-bold uppercase tracking-wider">{/* [中文内容待填入] */} Phone </span>
+              <span className="text-gfa-gold text-xs font-bold uppercase tracking-wider"> Phone </span>
               <a href="tel:6266778017" className="hover:text-white transition-colors">626-677-8017</a>
             </p>
             <p className="flex flex-col gap-1">
-              <span className="text-gfa-gold text-xs font-bold uppercase tracking-wider">{/* [中文内容待填入] */} Address </span>
+              <span className="text-gfa-gold text-xs font-bold uppercase tracking-wider"> Address </span>
               <span>17800 Castleton St, Suite 173<br/>City of Industry, CA 91748</span>
             </p>
           </div>
@@ -71,8 +69,8 @@ const Footer: React.FC = () => {
         {/* Legal & Nonprofit Status */}
         <div className="bg-white/5 p-8 border border-white/10 rounded-3xl text-sm text-gray-300 font-light backdrop-blur-sm flex flex-col justify-center">
            <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co%2FmFgDBtBp%2F1.png&w=1200&output=webp" alt="Nonprofit" className="h-12 w-auto object-contain object-left mb-3 opacity-50 grayscale mix-blend-screen"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
-           <p className="mb-4 text-white/90 font-medium">{/* [中文内容待填入] */} Global Film Alliance, Inc. </p>
-           <p className="mb-2">{/* [中文内容待填入] */} A registered 501(c)(3) nonprofit organization in California. </p>
+           <p className="mb-4 text-white/90 font-medium"> Global Film Alliance, Inc. </p>
+           <p className="mb-2"> A registered 501(c)(3) nonprofit organization in California. </p>
            <p className="font-mono text-xs bg-black/30 p-2 rounded text-center mb-0 mt-4 border border-white/5">EIN: 33-4817276</p>
         </div>
       </div>
@@ -80,12 +78,12 @@ const Footer: React.FC = () => {
       <div className="container-gfa pt-4 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-white/40 font-light">
         <p>&copy; {new Date().getFullYear()} Global Film Alliance, Inc. All rights reserved.</p>
         <div className="flex flex-wrap justify-center gap-3 items-center">
-          <Link to="/youth-protection" className="hover:text-[#C9A84C] font-bold text-gray-300 transition-colors uppercase tracking-widest">{isEn ? 'Youth Protection' : '青少年安全与保护'}</Link>
-          <Link to="/policy/privacy" className="hover:text-white transition-colors">{isEn ? 'Privacy Policy' : '隐私政策'}</Link>
-          <Link to="/policy/terms" className="hover:text-white transition-colors">{isEn ? 'Terms of Service' : '服务条款'}</Link>
-          <Link to="/policy/consent" className="hover:text-white transition-colors">{isEn ? 'Cookie Policy' : 'Cookie政策'}</Link>
+          <Link to="/youth-protection" className="hover:text-[#C9A84C] font-bold text-gray-300 transition-colors uppercase tracking-widest">{'Youth Protection'}</Link>
+          <Link to="/policy/privacy" className="hover:text-white transition-colors">{'Privacy Policy'}</Link>
+          <Link to="/policy/terms" className="hover:text-white transition-colors">{'Terms of Service'}</Link>
+          <Link to="/policy/consent" className="hover:text-white transition-colors">{'Cookie Policy'}</Link>
           <span className="text-gray-400">|</span>
-          <Link to="/admin" className="hover:text-[#C9A84C] transition-colors">{isEn ? 'Admin' : '系统管理'}</Link>
+          <Link to="/admin" className="hover:text-[#C9A84C] transition-colors">{'Admin'}</Link>
         </div>
       </div>
     </footer>

@@ -70,7 +70,7 @@ const DomainVisuals: React.FC = () => {
               <div className="w-8 h-8 border-4 border-gfa-gold border-t-transparent rounded-full animate-spin"></div>
             </div>
           ) : images[domain.id] ? (
-            <img fetchpriority="high" 
+            <img fetchPriority="high" 
               src={images[domain.id]} 
               alt={domain.id} 
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"

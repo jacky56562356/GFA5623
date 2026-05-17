@@ -26,15 +26,15 @@ const Navbar: React.FC = () => {
   }, [location.pathname]);
 
   const navLinks = [
-    { name: locale === Locale.EN ? 'About' : '关于', path: '/about' },
-    { name: locale === Locale.EN ? 'Filmmakers' : '电影人', path: '/filmmaker-support' },
-    { name: locale === Locale.EN ? 'Youth' : '青少年', path: '/youth-programs' },
-    { name: locale === Locale.EN ? 'Awards' : '金羽奖', path: '/golden-feather-awards' },
-    { name: locale === Locale.EN ? 'Short Drama' : '短剧', path: '/short-drama' },
-    { name: locale === Locale.EN ? 'Competition' : '大赛', path: '/competition' },
+    { name: 'About', path: '/about' },
+    { name: 'Filmmakers', path: '/filmmaker-support' },
+    { name: 'Youth', path: '/youth-programs' },
+    { name: 'Awards', path: '/golden-feather-awards' },
+    { name: 'Short Drama', path: '/short-drama' },
+    { name: 'Competition', path: '/competition' },
     
     
-    { name: locale === Locale.EN ? 'Involve' : '参与', path: '/get-involved' }
+    { name: 'Involve', path: '/get-involved' }
   ];
 
   const textColor = "text-gfa-inkBlack";
@@ -44,10 +44,10 @@ const Navbar: React.FC = () => {
       <nav className={`fixed top-0 left-0 right-0 z-[100] h-[80px] md:h-[90px] flex items-center transition-all duration-300 border-t-4 border-t-gfa-gold lg:border-t-0 w-full ${scrolled ? "bg-white/95 backdrop-blur-md shadow-md border-b border-gfa-border/50" : "bg-white border-b border-gfa-border"}`}>
         <div className="container-gfa flex items-center justify-between w-full px-4 lg:px-8 mx-auto max-w-[1400px]">
           <Link to="/" className="flex items-center gap-3 shrink-0 hover:opacity-80 transition-opacity">
-            <img fetchpriority="high" src="https://wsrv.nl/?url=i.ibb.co%2FmFgDBtBp%2F1.png&w=1200&output=webp" alt="GFA" className="h-10 md:h-14 w-auto object-contain"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+            <img fetchPriority="high" src="https://wsrv.nl/?url=i.ibb.co%2FmFgDBtBp%2F1.png&w=1200&output=webp" alt="GFA" className="h-10 md:h-14 w-auto object-contain"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
             <div className="hidden lg:flex flex-col">
-              <span className={`text-2xl lg:text-3xl font-bold leading-none tracking-tighter font-serif ${textColor}`}>{/* [中文内容待填入] */} GFA </span>
-              <span className="text-[6px] tracking-[0.2em] font-black mt-1 text-gfa-gold whitespace-nowrap">{/* [中文内容待填入] */} Global Film Alliance </span>
+              <span className={`text-2xl lg:text-3xl font-bold leading-none tracking-tighter font-serif ${textColor}`}> GFA </span>
+              <span className="text-[6px] tracking-[0.2em] font-black mt-1 text-gfa-gold whitespace-nowrap"> Global Film Alliance </span>
             </div>
           </Link>
 
@@ -65,25 +65,9 @@ const Navbar: React.FC = () => {
           </div>
 
           <div className="hidden lg:flex items-center space-x-3 shrink-0 ml-2">
-            <div className="flex items-center space-x-2 text-[11px] xl:text-[12px] font-bold tracking-widest">
-              <button 
-                onClick={() => setLocale(Locale.EN)}
-                className={`transition-colors hover:text-gfa-gold ${locale === Locale.EN ? 'text-gfa-gold' : 'text-gfa-slate'}`}
-              >
-                EN
-              </button>
-              <span className="text-gfa-slate/30">|</span>
-              <button 
-                onClick={() => setLocale(Locale.ZH)}
-                className={`transition-colors hover:text-gfa-gold ${locale === Locale.ZH ? 'text-gfa-gold' : 'text-gfa-slate'}`}
-              >
-                {locale === Locale.EN ? 'ZH' : '中文'}
-              </button>
-            </div>
-            
             <Link to="/donate" className="inline-flex items-center justify-center gap-2 bg-[#C9A84C] text-white px-5 py-2 xl:px-6 xl:py-2.5 rounded-full font-bold text-xs xl:text-sm tracking-wide shadow hover:bg-[#b09241] hover:shadow-md transition-all duration-300 uppercase shrink-0">
               <Heart className="w-4 h-4 fill-current" />
-              {locale === Locale.EN ? 'Donate' : '捐款'}
+              {'Donate'}
             </Link>
 
             {user ? (
@@ -104,7 +88,7 @@ const Navbar: React.FC = () => {
                 onClick={() => setAuthModalOpen(true)}
                 className="text-gfa-inkBlack hover:text-gfa-gold font-bold uppercase tracking-wider text-[11px] xl:text-[12px] transition-colors border-l border-gfa-border pl-4 whitespace-nowrap"
               >
-                {locale === Locale.EN ? 'Sign In' : '登录'}
+                {'Sign In'}
               </button>
             )}
           </div>
@@ -120,22 +104,6 @@ const Navbar: React.FC = () => {
       <div className={`fixed inset-0 bg-white z-[105] transition-transform duration-500 lg:hidden ${mobileMenuOpen ? "translate-x-0" : "translate-x-full"}`}>
         <div className="flex flex-col h-full pt-4 px-10">
           <button onClick={() => setMobileMenuOpen(false)} className="text-gfa-inkBlack text-5xl font-light self-end mb-3 hover:text-gfa-gold transition-colors" aria-label="Close Menu">×</button>
-          
-          <div className="flex items-center space-x-4 mb-3 border-b border-gfa-border pb-3">
-             <button 
-                onClick={() => { setLocale(Locale.EN); setMobileMenuOpen(false); }}
-                className={`text-lg font-bold tracking-widest ${locale === Locale.EN ? 'text-gfa-gold' : 'text-gfa-slate'}`}
-              >
-                EN
-              </button>
-              <span className="text-gfa-slate/30">|</span>
-              <button 
-                onClick={() => { setLocale(Locale.ZH); setMobileMenuOpen(false); }}
-                className={`text-lg font-bold tracking-widest ${locale === Locale.ZH ? 'text-gfa-gold' : 'text-gfa-slate'}`}
-              >
-                {locale === Locale.EN ? 'ZH' : '中文'}
-              </button>
-          </div>
 
           {navLinks.map((link) => (
             <Link 
@@ -157,7 +125,7 @@ const Navbar: React.FC = () => {
                   className="flex items-center gap-3 text-xl font-bold uppercase tracking-tight text-gfa-inkBlack font-serif hover:text-gfa-gold transition-colors"
                 >
                   <UserCircle className="w-6 h-6" />
-                  {locale === Locale.EN ? 'Profile' : '个人资料'}
+                  {'Profile'}
                 </Link>
                 <button 
                   onClick={() => { logout(); setMobileMenuOpen(false); navigate('/'); }}
@@ -172,7 +140,7 @@ const Navbar: React.FC = () => {
                 onClick={() => { setAuthModalOpen(true); setMobileMenuOpen(false); }}
                 className="text-xl font-bold uppercase tracking-tight text-gfa-inkBlack font-serif hover:text-gfa-gold transition-colors"
               >
-                {locale === Locale.EN ? 'Sign In' : '登录'}
+                {'Sign In'}
               </button>
             )}
           </div>
@@ -180,7 +148,7 @@ const Navbar: React.FC = () => {
           <div className="mt-auto mb-4">
             <Link to="/donate" onClick={() => setMobileMenuOpen(false)} className="flex items-center justify-center gap-2 bg-[#C9A84C] text-white px-8 py-4 rounded-full font-bold text-sm tracking-widest shadow-lg uppercase w-full">
               <Heart className="w-5 h-5 fill-current" />
-              {locale === Locale.EN ? 'Donate' : '捐款'}
+              {'Donate'}
             </Link>
           </div>
         </div>

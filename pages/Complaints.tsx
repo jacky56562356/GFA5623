@@ -20,11 +20,11 @@ const Complaints = () => {
 
       <div className="container-gfa relative z-10">
         <header className="mb-5 text-center max-w-4xl mx-auto animate-fade-in">
-          <div className="gold-badge mb-5 bg-red-500/10 text-red-600 border-red-500/20 animate-fade-up">{/* [中文内容待填入] */} Official Reporting Channel </div>
+          <div className="gold-badge mb-5 bg-red-500/10 text-red-600 border-red-500/20 animate-fade-up"> Official Reporting Channel </div>
           <h1 className="text-5xl md:text-8xl font-bold font-serif text-gfa-inkBlack mb-3 leading-tight drop-shadow-sm">
             {comp.title}
           </h1>
-          <p className="text-xl md:text-2xl text-gfa-slate leading-relaxed font-light italic font-serif opacity-90 border-y border-gfa-border/50 py-4">{/* [中文内容待填入] */} GFA maintains a rigorous oversight mechanism. Use this portal to lodge formal complaints or provide critical feedback regarding the conduct of accredited institutions. </p>
+          <p className="text-xl md:text-2xl text-gfa-slate leading-relaxed font-light italic font-serif opacity-90 border-y border-gfa-border/50 py-4"> GFA maintains a rigorous oversight mechanism. Use this portal to lodge formal complaints or provide critical feedback regarding the conduct of accredited institutions. </p>
         </header>
 
         <div className="max-w-3xl mx-auto">
@@ -38,17 +38,17 @@ const Complaints = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <h2 className="text-3xl font-bold font-serif text-gfa-inkBlack mb-3">{/* [中文内容待填入] */} Report Received </h2>
-                <p className="text-lg text-gfa-slate font-light italic font-serif">{/* [中文内容待填入] */} Your submission has been logged with our Compliance Review Panel. We maintain strict confidentiality throughout the investigation process. </p>
+                <h2 className="text-3xl font-bold font-serif text-gfa-inkBlack mb-3"> Report Received </h2>
+                <p className="text-lg text-gfa-slate font-light italic font-serif"> Your submission has been logged with our Compliance Review Panel. We maintain strict confidentiality throughout the investigation process. </p>
                 <button 
                   onClick={() => setSubmitted(false)}
                   className="mt-3 text-sm font-bold uppercase tracking-widest text-gfa-gold border-b border-gfa-gold/30 hover:border-gfa-gold transition-all"
-                >{/* [中文内容待填入] */} Submit Another Report </button>
+                > Submit Another Report </button>
               </div>
             ) : (
               <form className="space-y-5" onSubmit={e => { e.preventDefault(); setSubmitted(true); }}>
                 <div className="space-y-4">
-                  <label className="block text-[10px] font-bold uppercase tracking-[0.3em] text-gfa-slate opacity-60">{/* [中文内容待填入] */} Organization Name / GFA-ID </label>
+                  <label className="block text-[10px] font-bold uppercase tracking-[0.3em] text-gfa-slate opacity-60"> Organization Name / GFA-ID </label>
                   <input 
                     type="text" 
                     required 
@@ -58,17 +58,17 @@ const Complaints = () => {
                 </div>
                 
                 <div className="space-y-4">
-                  <label className="block text-[10px] font-bold uppercase tracking-[0.3em] text-gfa-slate opacity-60">{/* [中文内容待填入] */} Nature of Concern </label>
+                  <label className="block text-[10px] font-bold uppercase tracking-[0.3em] text-gfa-slate opacity-60"> Nature of Concern </label>
                   <select className="w-full h-16 px-6 bg-gfa-warmWhite border border-gfa-border rounded-2xl text-sm font-bold appearance-none focus:border-red-600 transition-all outline-none">
-                    <option>{/* [中文内容待填入] */} Financial Transparency </option>
-                    <option>{/* [中文内容待填入] */} Youth Safeguarding Breach </option>
-                    <option>{/* [中文内容待填入] */} Professional Misconduct </option>
-                    <option>{/* [中文内容待填入] */} Other Institutional Concern </option>
+                    <option> Financial Transparency </option>
+                    <option> Youth Safeguarding Breach </option>
+                    <option> Professional Misconduct </option>
+                    <option> Other Institutional Concern </option>
                   </select>
                 </div>
 
                 <div className="space-y-4">
-                  <label className="block text-[10px] font-bold uppercase tracking-[0.3em] text-gfa-slate opacity-60">{/* [中文内容待填入] */} Detailed Description </label>
+                  <label className="block text-[10px] font-bold uppercase tracking-[0.3em] text-gfa-slate opacity-60"> Detailed Description </label>
                   <textarea 
                     required 
                     rows={6}
@@ -83,14 +83,14 @@ const Complaints = () => {
                   </button>
                 </div>
                 
-                <p className="text-[10px] text-gfa-slate text-center opacity-50 leading-relaxed">{/* [中文内容待填入] */} By submitting this form, you acknowledge that the information provided is accurate to the best of your knowledge. GFA reserves the right to request additional documentation. </p>
+                <p className="text-[10px] text-gfa-slate text-center opacity-50 leading-relaxed"> By submitting this form, you acknowledge that the information provided is accurate to the best of your knowledge. GFA reserves the right to request additional documentation. </p>
               </form>
             )}
           </div>
         </div>
 
         <footer className="mt-40 pt-5 border-t border-gfa-border text-center">
-          <p className="text-[10px] text-gfa-slate font-bold uppercase tracking-[0.6em] opacity-30 italic">{/* [中文内容待填入] */} Confidential Compliance Reporting Portal • Global Film Alliance </p>
+          <p className="text-[10px] text-gfa-slate font-bold uppercase tracking-[0.6em] opacity-30 italic"> Confidential Compliance Reporting Portal • Global Film Alliance </p>
         </footer>
       </div>
     </div>

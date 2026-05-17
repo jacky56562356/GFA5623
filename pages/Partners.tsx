@@ -41,7 +41,7 @@ const Partners: React.FC = () => {
       <div className="container-gfa relative z-10">
         {/* Header */}
         <header className="mb-5 text-center max-w-4xl mx-auto animate-fade-in">
-          <div className="gold-badge mb-5 animate-fade-up">{/* [中文内容待填入] */} Verified Service Providers </div>
+          <div className="gold-badge mb-5 animate-fade-up"> Verified Service Providers </div>
           <h1 className="text-5xl md:text-8xl font-bold font-serif text-gfa-inkBlack mb-3 leading-tight drop-shadow-sm">
             {p.title}
           </h1>
@@ -83,7 +83,7 @@ const Partners: React.FC = () => {
               
               <div className="flex justify-between items-start mb-3 relative z-10">
                 <div className="w-20 h-20 bg-gfa-warmWhite rounded-2xl flex items-center justify-center border border-gfa-border group-hover:border-gfa-gold/30 transition-all duration-500 shadow-inner">
-                  <img fetchpriority="high"  src={m.logo} alt={m.name} className="w-12 h-12 object-cover grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                  <img fetchPriority="high"  src={m.logo} alt={m.name} className="w-12 h-12 object-cover grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
                 </div>
                 <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-gfa-gold bg-gfa-gold/10 px-4 py-1.5 rounded-full border border-gfa-gold/20">
                    {m.category}

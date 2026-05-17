@@ -30,7 +30,7 @@ const GraduateSupport = () => {
 
       {/* Global Background Image */}
       <div className="fixed inset-0 z-0 opacity-[0.03] pointer-events-none">
-        <img fetchpriority="high" 
+        <img fetchPriority="high" 
           src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1485846234645-a62644f84728%3Fq%3D80%26w%3D2059%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" 
           alt="Film Background" 
           className="w-full h-full object-cover"
@@ -50,7 +50,7 @@ const GraduateSupport = () => {
         
         <div className="container-gfa relative z-10 text-center">
           <div className="max-w-4xl mx-auto animate-fade-in">
-            <div className="gold-badge mb-4 animate-fade-up">{/* [中文内容待填入] */} Professional Industry Program </div>
+            <div className="gold-badge mb-4 animate-fade-up"> Professional Industry Program </div>
             <h1 className="text-5xl md:text-8xl font-bold font-serif text-white mb-4 leading-tight drop-shadow-2xl">
               {cap.title}
             </h1>
@@ -114,7 +114,7 @@ const GraduateSupport = () => {
               <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gfa-gold/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
               <div className="relative z-10">
                 <h2 className="text-3xl font-bold font-serif mb-3 flex items-center gap-3">
-                  <span className="w-8 h-1 bg-gfa-gold rounded-full"></span>{/* [中文内容待填入] */} Supported Pathways </h2>
+                  <span className="w-8 h-1 bg-gfa-gold rounded-full"></span> Supported Pathways </h2>
                 <div className="space-y-5">
                   {pathways.map((item: any) => (
                     <div key={item.id} className="group pl-6 border-l border-white/10 hover:border-gfa-gold transition-colors">
@@ -134,27 +134,27 @@ const GraduateSupport = () => {
               </h3>
               <form className="space-y-3" onSubmit={e => { e.preventDefault(); alert("Inquiry Received. Our team will support your request within 48 hours."); }}>
                 <div className="space-y-2">
-                  <label className="text-xs font-bold uppercase tracking-widest text-gfa-slate block">{/* [中文内容待填入] */} Full Identity </label>
+                  <label className="text-xs font-bold uppercase tracking-widest text-gfa-slate block"> Full Identity </label>
                   <div className="relative">
                     <input type="text" required className="w-full bg-gfa-warmWhite border border-gfa-border p-4 pl-12 rounded-lg text-sm font-medium focus:border-gfa-gold focus:bg-white outline-none transition-all" placeholder="Legal Name" />
                     <Users className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gfa-slate/50" />
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <label className="text-xs font-bold uppercase tracking-widest text-gfa-slate block">{/* [中文内容待填入] */} Institution </label>
+                  <label className="text-xs font-bold uppercase tracking-widest text-gfa-slate block"> Institution </label>
                   <div className="relative">
                     <input type="text" required className="w-full bg-gfa-warmWhite border border-gfa-border p-4 pl-12 rounded-lg text-sm font-medium focus:border-gfa-gold focus:bg-white outline-none transition-all" placeholder="University or Organization" />
                     <Building className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gfa-slate/50" />
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <label className="text-xs font-bold uppercase tracking-widest text-gfa-slate block">{/* [中文内容待填入] */} Program Pathway </label>
+                  <label className="text-xs font-bold uppercase tracking-widest text-gfa-slate block"> Program Pathway </label>
                   <div className="relative">
                     <select className="w-full bg-gfa-warmWhite border border-gfa-border p-4 pl-12 rounded-lg text-sm font-medium focus:border-gfa-gold focus:bg-white outline-none transition-all cursor-pointer appearance-none">
-                      <option>{/* [中文内容待填入] */} Director Support Fund </option>
-                      <option>{/* [中文内容待填入] */} Project Matchmaking </option>
-                      <option>{/* [中文内容待填入] */} IMDb Verification </option>
-                      <option>{/* [中文内容待填入] */} Network Access </option>
+                      <option> Director Support Fund </option>
+                      <option> Project Matchmaking </option>
+                      <option> IMDb Verification </option>
+                      <option> Network Access </option>
                     </select>
                     <Network className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gfa-slate/50" />
                     <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
@@ -175,7 +175,7 @@ const GraduateSupport = () => {
         </section>
 
         <div className="mt-3 pt-3 border-t border-gfa-border text-center">
-           <p className="text-[10px] text-gfa-slate uppercase tracking-[0.3em] font-bold opacity-40">{/* [中文内容待填入] */} Non-Profit Industry Service • Est. 2024 • Supportive Excellence </p>
+           <p className="text-[10px] text-gfa-slate uppercase tracking-[0.3em] font-bold opacity-40"> Non-Profit Industry Service • Est. 2024 • Supportive Excellence </p>
         </div>
       </div>
     </div>

@@ -7,7 +7,7 @@ import SEO from '../components/SEO';
 
 export default function BecomeMentorApplication() {
   const { locale } = useLocale();
-  const isEn = locale === Locale.EN;
+  const isEn = true;
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -62,8 +62,8 @@ export default function BecomeMentorApplication() {
   return (
     <div className="font-sans pb-4 pt-3 bg-gray-50 min-h-screen">
       <SEO 
-        title={isEn ? "Apply to Become a Mentor | Global Film Alliance" : "申请成为公益导师 | 环球青年电影联盟"}
-        description={isEn ? "Apply to join the GFA mentorship program as an industry mentor." : "申请作为行业导师加入GFA公益导师扶持计划。"}
+        title={"Apply to Become a Mentor | Global Film Alliance"}
+        description={"Apply to join the GFA mentorship program as an industry mentor."}
       />
       
       <div className="container-gfa max-w-3xl mx-auto px-4">
@@ -71,30 +71,26 @@ export default function BecomeMentorApplication() {
           <div className="p-8 md:p-12">
             <div className="mb-5 text-center">
               <h1 className="text-3xl md:text-4xl font-bold font-serif mb-4 text-gfa-inkBlack">
-                {isEn ? "Become a Mentor" : "成为公益导师"}
+                {"Become a Mentor"}
               </h1>
               <p className="text-gfa-slate">
-                {isEn 
-                  ? "Help raise the next generation of filmmakers. Fill out the application below to join our mentor network." 
-                  : "助力培养下一代青年电影人。请填写下方表格，申请加入我们的公益导师网络。"}
+                {"Help raise the next generation of filmmakers. Fill out the application below to join our mentor network."}
               </p>
             </div>
 
             {submitStatus === 'success' ? (
               <div className="bg-green-50 text-green-800 p-6 rounded-xl border border-green-200 text-center">
                 <h3 className="font-bold text-lg mb-2">
-                  {isEn ? "Application Submitted Successfully!" : "申请提交成功！"}
+                  {"Application Submitted Successfully!"}
                 </h3>
                 <p>
-                  {isEn 
-                    ? "Thank you for your willingness to give back. Our team will review your application and contact you soon." 
-                    : "感谢您愿意回馈行业。我们的团队将评估您的申请，并尽快与您取得联系。"}
+                  {"Thank you for your willingness to give back. Our team will review your application and contact you soon."}
                 </p>
                 <button 
                   onClick={() => setSubmitStatus('idle')}
                   className="mt-3 font-bold uppercase tracking-widest text-xs bg-green-600 text-white px-6 py-2 rounded-full hover:bg-green-700 transition"
                 >
-                  {isEn ? "Submit Another Application" : "重新提交"}
+                  {"Submit Another Application"}
                 </button>
               </div>
             ) : (
@@ -102,7 +98,7 @@ export default function BecomeMentorApplication() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                   <div>
                     <label htmlFor="name" className="block text-sm font-bold text-gfa-inkBlack mb-1">
-                      {isEn ? "Full Name" : "姓名"} <span className="text-red-500">*</span>
+                      {"Full Name"} <span className="text-red-500">*</span>
                     </label>
                     <input
                       type="text"
@@ -116,7 +112,7 @@ export default function BecomeMentorApplication() {
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-sm font-bold text-gfa-inkBlack mb-1">
-                      {isEn ? "Email Address" : "电子邮箱"} <span className="text-red-500">*</span>
+                      {"Email Address"} <span className="text-red-500">*</span>
                     </label>
                     <input
                       type="email"
@@ -133,7 +129,7 @@ export default function BecomeMentorApplication() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                   <div>
                     <label htmlFor="phone" className="block text-sm font-bold text-gfa-inkBlack mb-1">
-                      {isEn ? "Phone Number" : "联系电话"}
+                      {"Phone Number"}
                     </label>
                     <input
                       type="tel"
@@ -146,14 +142,14 @@ export default function BecomeMentorApplication() {
                   </div>
                   <div>
                     <label htmlFor="industryRole" className="block text-sm font-bold text-gfa-inkBlack mb-1">
-                      {isEn ? "Industry Role" : "行业职位"} <span className="text-red-500">*</span>
+                      {"Industry Role"} <span className="text-red-500">*</span>
                     </label>
                     <input
                       type="text"
                       id="industryRole"
                       name="industryRole"
                       required
-                      placeholder={isEn ? "e.g. Director, Producer, Editor" : "例如：导演、制片人、剪辑指导"}
+                      placeholder={"e.g. Director, Producer, Editor"}
                       value={formData.industryRole}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#C9A84C] focus:border-transparent transition"
@@ -163,7 +159,7 @@ export default function BecomeMentorApplication() {
                 
                 <div>
                   <label htmlFor="company" className="block text-sm font-bold text-gfa-inkBlack mb-1">
-                    {isEn ? "Company / Affiliation (optional)" : "所属公司/机构（选填）"} 
+                    {"Company / Affiliation (optional)"} 
                   </label>
                   <input
                     type="text"
@@ -177,7 +173,7 @@ export default function BecomeMentorApplication() {
 
                 <div>
                   <label htmlFor="linkedInOrImdb" className="block text-sm font-bold text-gfa-inkBlack mb-1">
-                    {isEn ? "LinkedIn / IMDb Link" : "LinkedIn个人档案 或 IMDb链接"} <span className="text-red-500">*</span>
+                    {"LinkedIn / IMDb Link"} <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="url"
@@ -193,7 +189,7 @@ export default function BecomeMentorApplication() {
 
                 <div>
                   <label htmlFor="bio" className="block text-sm font-bold text-gfa-inkBlack mb-1">
-                    {isEn ? "Professional Biography" : "专业背景与简介"} <span className="text-red-500">*</span>
+                    {"Professional Biography"} <span className="text-red-500">*</span>
                   </label>
                   <textarea
                     id="bio"
@@ -203,13 +199,13 @@ export default function BecomeMentorApplication() {
                     value={formData.bio}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#C9A84C] focus:border-transparent transition resize-none"
-                    placeholder={isEn ? "Briefly outline your experience in the film industry..." : "请简要说明您在电影行业的经验背景..."}
+                    placeholder={"Briefly outline your experience in the film industry..."}
                   ></textarea>
                 </div>
 
                 <div>
                   <label htmlFor="motivation" className="block text-sm font-bold text-gfa-inkBlack mb-1">
-                    {isEn ? "Why do you want to be a GFA Mentor?" : "您为什么想成为GFA的导师？"} <span className="text-red-500">*</span>
+                    {"Why do you want to be a GFA Mentor?"} <span className="text-red-500">*</span>
                   </label>
                   <textarea
                     id="motivation"
@@ -224,9 +220,7 @@ export default function BecomeMentorApplication() {
 
                 {submitStatus === 'error' && (
                   <div className="text-red-500 text-sm">
-                    {isEn 
-                      ? "There was an error submitting your application. Please try again later." 
-                      : "提交申请时发生错误，请稍后再试。"}
+                    {"There was an error submitting your application. Please try again later."}
                   </div>
                 )}
 
@@ -237,8 +231,8 @@ export default function BecomeMentorApplication() {
                     className="w-full bg-gfa-inkBlack hover:bg-gfa-nkBlack/90 disabled:opacity-50 text-white px-8 py-4 rounded-full font-bold uppercase tracking-widest text-sm transition-colors shadow-lg"
                   >
                     {isSubmitting 
-                      ? (isEn ? "Submitting..." : "提交中...") 
-                      : (isEn ? "Submit Application" : "递交导师申请表")}
+                      ? ("Submitting...") 
+                      : ("Submit Application")}
                   </button>
                 </div>
               </form>
