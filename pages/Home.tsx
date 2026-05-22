@@ -651,8 +651,6 @@ const Home: React.FC = () => {
                  <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/XBZ4F7j/Alvantor-new-logo-2020-1.png&h=100&output=webp" alt="Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100"   />
                  <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/cSVbb7ZM/list-2.png&h=100&output=webp" alt="Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100"   />
                  <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/whJfbzKn/ALT-LOGO-2400x1800-2.jpg&h=100&output=webp" alt="Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100"   />
-                 <img loading="lazy" src="https://placehold.co/200x100/0D1B2A/C9A84C?text=GFA" alt="SCA Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100"   />
-                 <img loading="lazy" src="https://placehold.co/200x100/0D1B2A/C9A84C?text=GFA" alt="CSA Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100"   />
               </div>
               
               {/* Second Set of Logos */}
@@ -664,8 +662,6 @@ const Home: React.FC = () => {
                  <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/XBZ4F7j/Alvantor-new-logo-2020-1.png&h=100&output=webp" alt="Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100"   />
                  <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/cSVbb7ZM/list-2.png&h=100&output=webp" alt="Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100"   />
                  <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/whJfbzKn/ALT-LOGO-2400x1800-2.jpg&h=100&output=webp" alt="Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100"   />
-                 <img loading="lazy" src="https://placehold.co/200x100/0D1B2A/C9A84C?text=GFA" alt="SCA Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100"   />
-                 <img loading="lazy" src="https://placehold.co/200x100/0D1B2A/C9A84C?text=GFA" alt="CSA Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100"   />
               </div>
             </div>
          </div>

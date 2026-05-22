@@ -177,7 +177,7 @@ const Awards: React.FC = () => {
                        <div className="w-16 h-16 bg-[#C9A84C] rounded-full flex items-center justify-center text-white font-bold font-serif text-xl border-4 border-white shadow-lg">01</div>
                     </div>
                     <div className="md:w-5/12 text-center md:text-left">
-                       <img loading="lazy" src="https://images.unsplash.com/photo-1542204165-65bf26472b9b?q=80&w=1200&auto=format&fit=crop" className="rounded-3xl w-full h-48 object-cover shadow-md mx-auto" alt="Red Carpet"  width="1200" height="800"   />
+                       <img loading="lazy" src="https://i.ibb.co/LHxHQZp/Gemini-Generated-Image-1t721i1t721i1t72.png" className="rounded-3xl w-full h-48 object-cover shadow-md mx-auto" alt="Red Carpet"  width="1200" height="800"   />
                     </div>
                  </div>
 
