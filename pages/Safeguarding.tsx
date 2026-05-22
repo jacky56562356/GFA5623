@@ -22,7 +22,7 @@ const Safeguarding: React.FC = () => {
             src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1529390079861-591de354faf5%3Fq%3D80%26w%3D2070%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" 
             alt="Protecting Youth" 
             className="w-full h-full object-cover opacity-25 grayscale"
-           width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+           width="1200" height="800"   />
           <div className="absolute inset-0 bg-gradient-to-r from-[#1A2B4A] via-[#1A2B4A]/80 to-transparent"></div>
         </div>
         <div className="container-gfa relative z-10 text-center max-w-4xl mx-auto">
@@ -68,8 +68,8 @@ const Safeguarding: React.FC = () => {
              
              {/* Photo Collage */}
              <div className="grid grid-cols-2 gap-4">
-               <img loading="lazy"  src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1573164713988-8665fc963095%3Fq%3D80%26w%3D2069%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" alt="Youth reading" className="w-full h-64 object-cover rounded-[32px] shadow-lg"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
-               <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1488521787991-ed7bbaae773c%3Fq%3D80%26w%3D2070%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" alt="Youth smiling" className="w-full h-48 object-cover rounded-[32px] shadow-lg mt-4"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+               <img loading="lazy"  src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1573164713988-8665fc963095%3Fq%3D80%26w%3D2069%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" alt="Youth reading" className="w-full h-64 object-cover rounded-[32px] shadow-lg"  width="1200" height="800"   />
+               <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1488521787991-ed7bbaae773c%3Fq%3D80%26w%3D2070%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" alt="Youth smiling" className="w-full h-48 object-cover rounded-[32px] shadow-lg mt-4"  width="1200" height="800"   />
              </div>
           </div>
         </section>
@@ -115,13 +115,13 @@ const Safeguarding: React.FC = () => {
         {/* More Images */}
         <section className="grid grid-cols-1 md:grid-cols-3 gap-4">
            <div className="aspect-[4/3] rounded-[32px] overflow-hidden shadow-lg border border-gfa-border">
-              <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1516321497487-e288fb19713f%3Fq%3D80%26w%3D2070%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" alt="Mentorship" className="w-full h-full object-cover"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+              <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1516321497487-e288fb19713f%3Fq%3D80%26w%3D2070%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" alt="Mentorship" className="w-full h-full object-cover"  width="1200" height="800"   />
            </div>
            <div className="aspect-[4/3] rounded-[32px] overflow-hidden shadow-lg border border-gfa-border">
-              <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1604928141064-207cea6f5722%3Fq%3D80%26w%3D2070%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" alt="Mentorship 2" className="w-full h-full object-cover"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+              <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1604928141064-207cea6f5722%3Fq%3D80%26w%3D2070%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" alt="Mentorship 2" className="w-full h-full object-cover"  width="1200" height="800"   />
            </div>
            <div className="aspect-[4/3] rounded-[32px] overflow-hidden shadow-lg border border-gfa-border">
-              <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1503676260728-1c00da094a0b%3Fq%3D80%26w%3D2022%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" alt="Mentorship 3" className="w-full h-full object-cover"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+              <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1503676260728-1c00da094a0b%3Fq%3D80%26w%3D2022%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" alt="Mentorship 3" className="w-full h-full object-cover"  width="1200" height="800"   />
            </div>
         </section>
 

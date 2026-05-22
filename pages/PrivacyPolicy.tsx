@@ -34,7 +34,7 @@ const PrivacyPolicy: React.FC = () => {
                 <h2>2. Information We Collect</h2>
                 <p>We may collect information about you in a variety of ways. The information we may collect on the Site includes:</p>
                 <ul>
-                  <li><strong>Personal Data:</strong> Personally identifiable information, such as your name, shipping address, email address, and telephone number, and demographic information when you register with the Site, sign up for programs, or make a donation. </li>
+                  <li><strong>Personal Data:</strong> Personally identifiable information, such as your name, shipping address, email address, telephone number, and children's participation form information when you register with the Site, sign up for programs, or make a donation.</li>
                   <li><strong>Derivative Data:</strong> Information our servers automatically collect when you access the Site, such as your IP address, your browser type, your operating system, your access times, and the pages you have viewed directly before and after accessing the Site. </li>
                   <li><strong>Financial Data:</strong> Financial information, such as data related to your payment method (e.g. valid credit card number, card brand, expiration date) that we may collect when you purchase, order, return, exchange, or request information about our services from the Site. We store only very limited, if any, financial information that we collect. </li>
                 </ul>
@@ -42,7 +42,8 @@ const PrivacyPolicy: React.FC = () => {
                 <h2>3. Use of Your Information</h2>
                 <p>Having accurate information about you permits us to provide you with a smooth, efficient, and customized experience. We may use information collected about you to:</p>
                 <ul>
-                  <li> Administer sweepstakes, promotions, and contests (e.g. Global Youth Talent Competition). </li>
+                  <li> Facilitate contact, program registration confirmation, and direct communication with parents regarding participant logistics. </li>
+                  <li> Administer sweepstakes, promotions, and contests (e.g. Youth Talent Competition). </li>
                   <li> Process payments, donations, program registrations, and event ticketing. </li>
                   <li> Deliver targeted advertising, coupons, newsletters, and other information regarding promotions and the Site to you. </li>
                   <li> Monitor and analyze usage and trends to improve your experience with the Site. </li>
@@ -55,6 +56,7 @@ const PrivacyPolicy: React.FC = () => {
                 </p>
 
                 <h2>5. Disclosure of Your Information</h2>
+                <p><strong>We do not sell your personal data to third parties.</strong> We may share information we have collected about you in certain limited situations. Your information may be disclosed as follows:</p>
                 <p>We may share information we have collected about you in certain situations. Your information may be disclosed as follows:</p>
                 <ul>
                   <li><strong>By Law or to Protect Rights:</strong> If we believe the release of information about you is necessary to respond to legal process, to investigate or remedy potential violations of our policies, or to protect the rights, property, and safety of others. </li>

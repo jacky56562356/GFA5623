@@ -173,7 +173,7 @@ Attendees: ${formData.attendeeCount}
       <div className="max-w-4xl mx-auto px-4">
         {/* Header */}
         <div className="mb-3">
-          <Link to="/awards" className="inline-flex items-center text-gfa-slate hover:text-gfa-inkBlack text-sm font-bold uppercase tracking-widest mb-3">
+          <Link to="/golden-feather-awards" className="inline-flex items-center text-gfa-slate hover:text-gfa-inkBlack text-sm font-bold uppercase tracking-widest mb-3">
             <ArrowLeft className="w-4 h-4 mr-2" />
             {"Back to Awards Page"}
           </Link>

@@ -21,8 +21,10 @@ const Donate: React.FC = () => {
   const [customAmount, setCustomAmount] = useState<string>('');
   const [frequency, setFrequency] = useState<'one-time' | 'monthly'>('one-time');
 
+  const [donationInitiated, setDonationInitiated] = useState(false);
+
   const handleDonateSubmit = () => {
-    alert("Thank you for your support! Redirecting to secure payment...");
+    setDonationInitiated(true);
   };
 
   const amounts = [
@@ -108,19 +110,19 @@ const Donate: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-4">
             <div className="bg-[#0D1B2A] rounded-2xl p-8 transform transition-transform hover:-translate-y-2">
-               <div className="text-5xl font-bold font-serif text-[#C9A043] mb-4">42,000</div>
+               <div className="text-5xl font-bold font-serif text-[#C9A043] mb-4">17,000</div>
                <p className="text-white text-sm md:text-base font-light">
                  {"Film jobs lost in LA in 2 years"}
                </p>
             </div>
             <div className="bg-[#0D1B2A] rounded-2xl p-8 transform transition-transform hover:-translate-y-2">
-               <div className="text-5xl font-bold font-serif text-[#C9A043] mb-4">5,000+</div>
+               <div className="text-5xl font-bold font-serif text-[#C9A043] mb-4">3,300+</div>
                <p className="text-white text-sm md:text-base font-light">
                  {"CA film graduates entering market yearly"}
                </p>
             </div>
             <div className="bg-[#0D1B2A] rounded-2xl p-8 transform transition-transform hover:-translate-y-2">
-               <div className="text-5xl font-bold font-serif text-[#C9A043] mb-4">10.9%</div>
+               <div className="text-5xl font-bold font-serif text-[#C9A043] mb-4">12.5%</div>
                <p className="text-white text-sm md:text-base font-light">
                  {"Film industry unemployment rate"}
                </p>
@@ -218,15 +220,28 @@ const Donate: React.FC = () => {
             </div>
 
             {/* CTA Button */}
-            <button 
-              onClick={handleDonateSubmit}
-              className="w-full bg-[#C9A043] hover:bg-[#b58f3c] text-white py-3 rounded-2xl font-bold text-lg md:text-xl transform transition-transform hover:-translate-y-1 shadow-lg hover:shadow-xl flex flex-col items-center justify-center group"
-            >
-              <span className="uppercase tracking-widest mb-1">
-                {`Donate Now · Secure Payment`}
-                {amount !== 'custom' ? ` ($${amount})` : customAmount ? ` ($${customAmount})` : ''}
-              </span>
-            </button>
+            {donationInitiated ? (
+              <div className="bg-green-50 border border-green-200 text-green-800 p-6 rounded-2xl text-center">
+                <h3 className="text-xl font-bold font-serif mb-2">Thank you for your generosity!</h3>
+                <p className="text-sm mb-4">Our online payment gateway is currently undergoing an upgrade. Please send your tax-deductible donation via Check or Wire Transfer using the instructions below.</p>
+                <a href="#ways-to-give" onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('ways-to-give')?.scrollIntoView({ behavior: 'smooth' });
+                }} className="inline-block bg-[#0D1B2A] text-white px-6 py-2 rounded-full text-sm font-bold tracking-wider hover:bg-[#1a2d42] transition-colors">
+                  View Payment Instructions
+                </a>
+              </div>
+            ) : (
+              <button 
+                onClick={handleDonateSubmit}
+                className="w-full bg-[#C9A043] hover:bg-[#b58f3c] text-white py-3 rounded-2xl font-bold text-lg md:text-xl transform transition-transform hover:-translate-y-1 shadow-lg hover:shadow-xl flex flex-col items-center justify-center group"
+              >
+                <span className="uppercase tracking-widest mb-1">
+                  {`Donate Now · Secure Payment`}
+                  {amount !== 'custom' ? ` ($${amount})` : customAmount ? ` ($${customAmount})` : ''}
+                </span>
+              </button>
+            )}
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mt-3 text-xs text-gray-500 font-medium">
                <div className="flex items-center gap-1.5"><Lock className="w-4 h-4 text-[#C9A043]"/> {"Secure & Encrypted"}</div>
@@ -237,7 +252,7 @@ const Donate: React.FC = () => {
       </section>
 
       {/* 5. 捐款方式区 */}
-      <section className="py-5 bg-white">
+      <section className="py-5 bg-white" id="ways-to-give">
         <div className="container-gfa max-w-6xl mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold font-serif text-[#0D1B2A] text-center mb-4">
             {"Ways to Give"}

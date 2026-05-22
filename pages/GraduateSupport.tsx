@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { useLocale } from '../LocaleContext.tsx';
 import SEO from '../components/SEO.tsx';
 import { GraduationCap, Users, CheckCircle, Calendar, ArrowRight, Star, Briefcase, FileText, Network, Award } from 'lucide-react';
@@ -7,6 +7,7 @@ import { GraduationCap, Users, CheckCircle, Calendar, ArrowRight, Star, Briefcas
 const GraduateSupport = () => {
   const { t } = useLocale();
   const cap = t.careerAccess || {};
+  const [submitted, setSubmitted] = useState(false);
   // Fallback content if translation is missing
   const pathways = t.graduatePathways || [
     { id: "01", t: "Director Support Fund", d: "Financial grants for emerging directors working on their first feature film." },
@@ -34,7 +35,7 @@ const GraduateSupport = () => {
           src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1485846234645-a62644f84728%3Fq%3D80%26w%3D2059%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" 
           alt="Film Background" 
           className="w-full h-full object-cover"
-         width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+         width="1200" height="800"   />
       </div>
 
       {/* Document Header */}
@@ -44,7 +45,7 @@ const GraduateSupport = () => {
             src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1517604931442-7e0c8ed2963c%3Fq%3D80%26w%3D2070%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" 
             alt="Header Background" 
             className="w-full h-full object-cover"
-           width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+           width="1200" height="800"   />
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-gfa-inkBlack/60 via-gfa-inkBlack/80 to-gfa-inkBlack"></div>
         
@@ -89,7 +90,7 @@ const GraduateSupport = () => {
                     }
                     alt={pillar.title}
                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700"
-                   width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                   width="1200" height="800"   />
                   <div className="absolute inset-0 bg-gradient-to-t from-gfa-inkBlack via-gfa-inkBlack/80 to-gfa-inkBlack/40 group-hover:from-gfa-inkBlack group-hover:via-gfa-inkBlack/60 group-hover:to-transparent transition-all duration-500"></div>
                 </div>
                 
@@ -132,7 +133,14 @@ const GraduateSupport = () => {
               <h3 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-4">
                 {cap.inquiryTitle}
               </h3>
-              <form className="space-y-3" onSubmit={e => { e.preventDefault(); alert("Inquiry Received. Our team will support your request within 48 hours."); }}>
+              {submitted ? (
+                 <div className="bg-green-50 border border-green-200 text-green-800 p-8 rounded-2xl text-center">
+                    <CheckCircle className="w-12 h-12 mx-auto text-green-600 mb-4" />
+                    <h3 className="text-xl font-bold font-serif mb-2">Inquiry Received</h3>
+                    <p className="text-sm">Our team will support your request within 48 hours. Thank you.</p>
+                 </div>
+              ) : (
+              <form className="space-y-3" onSubmit={e => { e.preventDefault(); setSubmitted(true); }}>
                 <div className="space-y-2">
                   <label className="text-xs font-bold uppercase tracking-widest text-gfa-slate block"> Full Identity </label>
                   <div className="relative">
@@ -167,6 +175,7 @@ const GraduateSupport = () => {
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </button>
               </form>
+              )}
               <p className="mt-4 text-[10px] text-gfa-slate font-bold uppercase tracking-widest text-center opacity-50">
                 {cap.inquiryNote}
               </p>

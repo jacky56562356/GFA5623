@@ -47,10 +47,10 @@ const Programs: React.FC = () => {
       <div className="relative bg-[#1A2B4A] py-5 mb-3 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img fetchPriority="high" 
-            src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1604928141064-207cea6f5722%3Fq%3D80%26w%3D2070%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" 
+            src="https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=1200&auto=format&fit=crop" 
             alt="Programs Background" 
             className="w-full h-full object-cover opacity-20 grayscale"
-           width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+           width="1200" height="800"   />
           <div className="absolute inset-0 bg-gradient-to-r from-[#1A2B4A] via-[#1A2B4A]/80 to-transparent"></div>
         </div>
         <div className="container-gfa relative z-10">
@@ -74,7 +74,7 @@ const Programs: React.FC = () => {
                 src={program.image}
                 alt={program.title}
                 className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
-               width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+               width="1200" height="800"   />
             </div>
             
             {/* Content */}

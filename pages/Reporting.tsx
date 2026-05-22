@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLocale } from '../LocaleContext.tsx';
+import { CheckCircle } from 'lucide-react';
 
 const Reporting: React.FC = () => {
   const { t } = useLocale();
   const r = t.reporting;
+  const [submitted, setSubmitted] = useState(false);
 
   return (
     <div className="bg-gfa-warmWhite pt-40 pb-4 px-6 min-h-screen">
@@ -23,9 +25,16 @@ const Reporting: React.FC = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
           <div className="lg:col-span-2">
+            {submitted ? (
+               <div className="bg-white p-12 border border-gfa-border shadow-sm rounded-card text-center space-y-4">
+                  <CheckCircle className="w-12 h-12 mx-auto text-green-600 mb-4" />
+                  <h3 className="text-2xl font-bold mb-4 font-serif text-gfa-inkBlack">Report Received</h3>
+                  <p className="text-sm font-medium">An administrative case number has been assigned. Please check your email for our response.</p>
+               </div>
+            ) : (
             <form 
               className="bg-white p-12 border border-gfa-border shadow-sm rounded-card space-y-4" 
-              onSubmit={(e) => { e.preventDefault(); alert('Report received. Administrative case number assigned. Check email for response.'); }}
+              onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }}
               aria-labelledby="form-header"
             >
               <h3 id="form-header" className="text-2xl font-bold mb-4 font-serif text-gfa-inkBlack border-b border-gfa-border pb-3">{r.formTitle}</h3>
@@ -59,6 +68,7 @@ const Reporting: React.FC = () => {
                 {r.formLabels.submit}
               </button>
             </form>
+            )}
           </div>
 
           <div className="space-y-3">

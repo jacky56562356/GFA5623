@@ -61,7 +61,7 @@ const Certification: React.FC = () => {
           src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1485846234645-a62644f84728%3Fq%3D80%26w%3D2059%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" 
           alt="Film Background" 
           className="w-full h-full object-cover"
-         width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+         width="1200" height="800"   />
       </div>
 
       {/* Document Header */}
@@ -71,7 +71,7 @@ const Certification: React.FC = () => {
             src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1517604931442-7e0c8ed2963c%3Fq%3D80%26w%3D2070%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" 
             alt="Header Background" 
             className="w-full h-full object-cover"
-           width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+           width="1200" height="800"   />
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-gfa-inkBlack/60 via-gfa-inkBlack/80 to-gfa-inkBlack"></div>
         
@@ -110,7 +110,7 @@ const Certification: React.FC = () => {
 
               <div className="p-10 bg-gfa-inkBlack text-white rounded-[32px] shadow-2xl border border-white/5 relative overflow-hidden group">
                 <div className="absolute inset-0 opacity-20 group-hover:scale-110 transition-transform duration-1000">
-                  <img loading="lazy"  src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1450101499163-c8848c66ca85%3Fq%3D80%26w%3D2070%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" alt="Legal" className="w-full h-full object-cover grayscale"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                  <img loading="lazy"  src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1450101499163-c8848c66ca85%3Fq%3D80%26w%3D2070%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" alt="Legal" className="w-full h-full object-cover grayscale"  width="1200" height="800"   />
                 </div>
                 <div className="relative z-10">
                   <Shield className="w-10 h-10 text-gfa-gold mb-3" />
@@ -171,7 +171,7 @@ const Certification: React.FC = () => {
                             }
                             alt={cat.title}
                             className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700"
-                           width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                           width="1200" height="800"   />
                           <div className="absolute inset-0 bg-gradient-to-t from-gfa-inkBlack via-gfa-inkBlack/80 to-gfa-inkBlack/40 group-hover:from-gfa-inkBlack group-hover:via-gfa-inkBlack/60 group-hover:to-transparent transition-all duration-500"></div>
                         </div>
                         
@@ -229,7 +229,7 @@ const Certification: React.FC = () => {
 
                   <div className="p-8 md:p-12 bg-gfa-inkBlack text-white rounded-[48px] relative overflow-hidden group shadow-2xl">
                     <div className="absolute inset-0 opacity-10 group-hover:scale-110 transition-transform duration-1000">
-                      <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1508700115892-45ecd05ae2ad%3Fq%3D80%26w%3D2069%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" alt="Time" className="w-full h-full object-cover grayscale"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                      <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1508700115892-45ecd05ae2ad%3Fq%3D80%26w%3D2069%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" alt="Time" className="w-full h-full object-cover grayscale"  width="1200" height="800"   />
                     </div>
                     <div className="relative z-10 flex flex-col md:flex-row items-center gap-3">
                       <div className="w-24 h-24 bg-gfa-gold rounded-3xl flex items-center justify-center text-gfa-inkBlack shadow-2xl shrink-0 animate-float">

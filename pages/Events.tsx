@@ -38,7 +38,7 @@ const Events: React.FC = () => {
                   src={event.image} 
                   alt={event.title} 
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" 
-                 width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                 width="1200" height="800"   />
                 <div className="absolute top-3 left-3 bg-gfa-gold text-gfa-black px-3 py-1 text-[9px] font-black uppercase tracking-[0.2em] rounded-sm shadow-md z-20">
                   {event.type}
                 </div>

@@ -23,7 +23,7 @@ const FilmmakerSupport: React.FC = () => {
             src="https://wsrv.nl/?url=i.ibb.co%2Fsp4fWHq3%2FChat-GPT-Image-2026-3-23-12-23-22.png&w=1200&output=webp" 
             alt="Filmmaker on set" 
             className="w-full h-full object-cover opacity-40 mix-blend-luminosity" 
-           width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+           width="1200" height="800"   />
           <div className="absolute inset-0 bg-gradient-to-t from-gfa-inkBlack via-gfa-inkBlack/50 to-transparent"></div>
         </div>
 
@@ -62,7 +62,7 @@ const FilmmakerSupport: React.FC = () => {
                 </div>
                 <h3 className="text-2xl font-bold font-serif mb-4">{"Free Pro Gear Access"}</h3>
                 <div className="w-full aspect-[4/3] rounded-xl overflow-hidden border border-gray-100 shadow-sm mt-auto mb-4 md:mb-0">
-                  <img loading="lazy" src="https://i.ibb.co/jZs4rXHp/Gemini-Generated-Image-coqxqkcoqxqkcoqx-1.png" alt="Pro Gear Access" className="w-full h-full object-cover" width="600" height="400" onError={(e) => { e.currentTarget.src = "https://placehold.co/600x400/eeeeee/999999?text=Image+Not+Found"; }} />
+                  <img loading="lazy" src="https://i.ibb.co/jZs4rXHp/Gemini-Generated-Image-coqxqkcoqxqkcoqx-1.png" alt="Pro Gear Access" className="w-full h-full object-cover" width="600" height="400"  />
                 </div>
               </div>
               <div className="md:w-2/3 flex flex-col justify-center space-y-4">
@@ -94,10 +94,10 @@ const FilmmakerSupport: React.FC = () => {
                   <h3 className="text-2xl font-bold font-serif mb-4">{"Nonprofit Mentorship"}</h3>
                 </div>
                 <div className="w-full aspect-[4/3] rounded-xl overflow-hidden border border-gray-100 shadow-sm">
-                  <img loading="lazy" src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&h=400&fit=crop&q=80" alt="Mentorship" className="w-full h-full object-cover" width="600" height="400" onError={(e) => { e.currentTarget.src = "https://placehold.co/600x400/eeeeee/999999?text=Image+Not+Found"; }} />
+                  <img loading="lazy" src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&h=400&fit=crop&q=80" alt="Mentorship" className="w-full h-full object-cover" width="600" height="400"  />
                 </div>
                 <div className="w-full aspect-[4/3] rounded-xl overflow-hidden border border-gray-100 shadow-sm">
-                  <img loading="lazy" src="https://i.ibb.co/C54fvP0D/Gemini-Generated-Image-d4y2gqd4y2gqd4y2.png" alt="Mentorship 2" className="w-full h-full object-cover" width="600" height="400" onError={(e) => { e.currentTarget.src = "https://placehold.co/600x400/eeeeee/999999?text=Image+Not+Found"; }} />
+                  <img loading="lazy" src="https://i.ibb.co/C54fvP0D/Gemini-Generated-Image-d4y2gqd4y2gqd4y2.png" alt="Mentorship 2" className="w-full h-full object-cover" width="600" height="400"  />
                 </div>
               </div>
               <div className="md:w-2/3 flex flex-col justify-center space-y-4">
@@ -119,7 +119,7 @@ const FilmmakerSupport: React.FC = () => {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="flex gap-3 items-center bg-gray-50 p-3 rounded-xl border border-gray-100">
                       <div className="w-12 h-12 rounded-full overflow-hidden shrink-0 bg-gray-200">
-                        <img loading="lazy"  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&q=80" alt="Mentor" className="w-full h-full object-cover"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                        <img loading="lazy"  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&q=80" alt="Mentor" className="w-full h-full object-cover"  width="1200" height="800"   />
                       </div>
                       <div>
                         <div className="font-bold text-sm"> Robert M. </div>
@@ -128,7 +128,7 @@ const FilmmakerSupport: React.FC = () => {
                     </div>
                     <div className="flex gap-3 items-center bg-gray-50 p-3 rounded-xl border border-gray-100">
                       <div className="w-12 h-12 rounded-full overflow-hidden shrink-0 bg-gray-200">
-                        <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1573496359142-b8d87734a5a2%3Fw%3D150%26h%3D150%26fit%3Dcrop%26q%3D80&w=1200&output=webp" alt="Mentor" className="w-full h-full object-cover"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                        <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1573496359142-b8d87734a5a2%3Fw%3D150%26h%3D150%26fit%3Dcrop%26q%3D80&w=1200&output=webp" alt="Mentor" className="w-full h-full object-cover"  width="1200" height="800"   />
                       </div>
                       <div>
                         <div className="font-bold text-sm"> Sarah W. </div>
@@ -143,19 +143,19 @@ const FilmmakerSupport: React.FC = () => {
                   <h4 className="text-sm font-bold mb-3">{"Supported Works Showcase"}</h4>
                   <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                     <div className="aspect-video bg-gray-200 rounded-lg overflow-hidden relative group">
-                      <img loading="lazy" src="https://images.unsplash.com/photo-1542204165-65bf26472b9b?w=600&h=400&fit=crop&q=80" alt="Work" className="w-full h-full object-cover"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                      <img loading="lazy" src="https://images.unsplash.com/photo-1542204165-65bf26472b9b?w=600&h=400&fit=crop&q=80" alt="Work" className="w-full h-full object-cover"  width="1200" height="800"   />
                       <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                         <span className="text-white text-[10px] sm:text-xs font-bold px-2 py-1 bg-[#C9A84C]/90 rounded">{"Watch Trailer"}</span>
                       </div>
                     </div>
                     <div className="aspect-video bg-gray-200 rounded-lg overflow-hidden relative group">
-                      <img loading="lazy" src="https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=600&h=400&fit=crop&q=80" alt="Work" className="w-full h-full object-cover"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                      <img loading="lazy" src="https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=600&h=400&fit=crop&q=80" alt="Work" className="w-full h-full object-cover"  width="1200" height="800"   />
                       <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                         <span className="text-white text-[10px] sm:text-xs font-bold px-2 py-1 bg-[#C9A84C]/90 rounded">{"Watch Trailer"}</span>
                       </div>
                     </div>
                     <div className="aspect-video bg-gray-200 rounded-lg overflow-hidden relative group hidden sm:block">
-                      <img loading="lazy" src="https://images.unsplash.com/photo-1518676590629-3dcbd9c5a5c9?w=600&h=400&fit=crop&q=80" alt="Work" className="w-full h-full object-cover"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                      <img loading="lazy" src="https://images.unsplash.com/photo-1518676590629-3dcbd9c5a5c9?w=600&h=400&fit=crop&q=80" alt="Work" className="w-full h-full object-cover"  width="1200" height="800"   />
                       <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                         <span className="text-white text-[10px] sm:text-xs font-bold px-2 py-1 bg-[#C9A84C]/90 rounded">{"Watch Trailer"}</span>
                       </div>
@@ -178,7 +178,7 @@ const FilmmakerSupport: React.FC = () => {
                 </div>
                 <h3 className="text-2xl font-bold font-serif mb-4">{"Festival Strategy Support"}</h3>
                 <div className="w-full aspect-[4/3] rounded-xl overflow-hidden border border-gray-100 shadow-sm mt-auto mb-4 md:mb-0">
-                  <img loading="lazy" src="https://images.unsplash.com/photo-1585699324551-f6c309eedeca?w=600&h=400&fit=crop&q=80" alt="Festival Support" className="w-full h-full object-cover" width="600" height="400" onError={(e) => { e.currentTarget.src = "https://placehold.co/600x400/eeeeee/999999?text=Image+Not+Found"; }} />
+                  <img loading="lazy" src="https://images.unsplash.com/photo-1585699324551-f6c309eedeca?w=600&h=400&fit=crop&q=80" alt="Festival Support" className="w-full h-full object-cover" width="600" height="400"  />
                 </div>
               </div>
               <div className="md:w-2/3 flex flex-col justify-center space-y-4">
@@ -207,7 +207,7 @@ const FilmmakerSupport: React.FC = () => {
                 </div>
                 <h3 className="text-2xl font-bold font-serif mb-4">{"Public Grant Coaching"}</h3>
                 <div className="w-full aspect-[4/3] rounded-xl overflow-hidden border border-gray-100 shadow-sm mt-auto mb-4 md:mb-0">
-                  <img loading="lazy" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop&q=80" alt="Grant Coaching" className="w-full h-full object-cover" width="600" height="400" onError={(e) => { e.currentTarget.src = "https://placehold.co/600x400/eeeeee/999999?text=Image+Not+Found"; }} />
+                  <img loading="lazy" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop&q=80" alt="Grant Coaching" className="w-full h-full object-cover" width="600" height="400"  />
                 </div>
               </div>
               <div className="md:w-2/3 flex flex-col justify-center space-y-4">
@@ -236,7 +236,7 @@ const FilmmakerSupport: React.FC = () => {
                 </div>
                 <h3 className="text-2xl font-bold font-serif mb-4">{"Educational On-Set Experience"}</h3>
                 <div className="w-full aspect-[4/3] rounded-xl overflow-hidden border border-gray-100 shadow-sm mt-auto mb-4 md:mb-0">
-                  <img loading="lazy" src="https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?w=600&h=400&fit=crop&q=80" alt="On-Set Experience" className="w-full h-full object-cover" width="600" height="400" onError={(e) => { e.currentTarget.src = "https://placehold.co/600x400/eeeeee/999999?text=Image+Not+Found"; }} />
+                  <img loading="lazy" src="https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?w=600&h=400&fit=crop&q=80" alt="On-Set Experience" className="w-full h-full object-cover" width="600" height="400"  />
                 </div>
               </div>
               <div className="md:w-2/3 flex flex-col justify-center space-y-4">

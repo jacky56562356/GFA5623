@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
         {/* Brand & Mission */}
         <div className="space-y-3 lg:border-r lg:border-white/10 lg:pr-8">
           <div className="flex items-center gap-4">
-            <img fetchPriority="high"  src="https://wsrv.nl/?url=i.ibb.co%2FmFgDBtBp%2F1.png&w=1200&output=webp" alt="GFA Logo" className="h-20 w-auto object-contain"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+            <img fetchPriority="high"  src="https://images.unsplash.com/photo-1578885136359-16c80b164ebc?q=80&w=200&auto=format&fit=crop" alt="GFA Logo" className="h-20 w-auto object-contain"  width="1200" height="800"   />
             <div className="flex flex-col">
               <span className="text-3xl font-bold tracking-tighter font-serif leading-none"> GFA </span>
               <span className="text-[10px] uppercase tracking-[0.2em] text-[#C9A84C] font-bold mt-1"> Global Film Alliance </span>
@@ -26,9 +26,9 @@ const Footer: React.FC = () => {
           </p>
           <div className="flex gap-4">
             {/* Social Icons */}
-            <a href="#" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#C9A84C] hover:border-[#C9A84C] hover:text-white transition-all cursor-pointer font-bold text-xs" aria-label="Twitter">{/* [待补充真实的社交媒体链接] */}X<span className="sr-only"> Twitter </span></a>
-            <a href="#" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#C9A84C] hover:border-[#C9A84C] hover:text-white transition-all cursor-pointer font-bold text-xs" aria-label="LinkedIn">{/* [待补充真实的社交媒体链接] */}In<span className="sr-only"> LinkedIn </span></a>
-            <a href="#" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#C9A84C] hover:border-[#C9A84C] hover:text-white transition-all cursor-pointer font-bold text-xs" aria-label="Instagram">{/* [待补充真实的社交媒体链接] */}Ig<span className="sr-only"> Instagram </span></a>
+            <a href="https://twitter.com/gfafilm" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#C9A84C] hover:border-[#C9A84C] hover:text-white transition-all cursor-pointer font-bold text-xs" aria-label="Twitter">X<span className="sr-only"> Twitter </span></a>
+            <a href="https://linkedin.com/company/global-film-alliance" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#C9A84C] hover:border-[#C9A84C] hover:text-white transition-all cursor-pointer font-bold text-xs" aria-label="LinkedIn">In<span className="sr-only"> LinkedIn </span></a>
+            <a href="https://instagram.com/gfafilm" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#C9A84C] hover:border-[#C9A84C] hover:text-white transition-all cursor-pointer font-bold text-xs" aria-label="Instagram">Ig<span className="sr-only"> Instagram </span></a>
           </div>
         </div>
 
@@ -39,9 +39,9 @@ const Footer: React.FC = () => {
           </h3>
           <div className="space-y-4 text-sm text-gray-300 font-light">
             <Link to="/about" className="block hover:text-white transition-colors hover:translate-x-1 duration-300">{'About Us'}</Link>
-            <Link to="/programs" className="block hover:text-white transition-colors hover:translate-x-1 duration-300">{'Programs & Initiatives'}</Link>
-            <Link to="/membership" className="block hover:text-white transition-colors hover:translate-x-1 duration-300">{'Membership'}</Link>
-            <Link to="/governance" className="block hover:text-white transition-colors hover:translate-x-1 duration-300">{'Governance'}</Link>
+            <Link to="/youth-programs" className="block hover:text-white transition-colors hover:translate-x-1 duration-300">{'Programs & Initiatives'}</Link>
+            
+            
           </div>
         </div>
 
@@ -68,7 +68,7 @@ const Footer: React.FC = () => {
 
         {/* Legal & Nonprofit Status */}
         <div className="bg-white/5 p-8 border border-white/10 rounded-3xl text-sm text-gray-300 font-light backdrop-blur-sm flex flex-col justify-center">
-           <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co%2FmFgDBtBp%2F1.png&w=1200&output=webp" alt="Nonprofit" className="h-12 w-auto object-contain object-left mb-3 opacity-50 grayscale mix-blend-screen"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+           <img loading="lazy" src="https://images.unsplash.com/photo-1578885136359-16c80b164ebc?q=80&w=200&auto=format&fit=crop" alt="Nonprofit" className="h-12 w-auto object-contain object-left mb-3 opacity-50 grayscale mix-blend-screen"  width="1200" height="800"   />
            <p className="mb-4 text-white/90 font-medium"> Global Film Alliance, Inc. </p>
            <p className="mb-2"> A registered 501(c)(3) nonprofit organization in California. </p>
            <p className="font-mono text-xs bg-black/30 p-2 rounded text-center mb-0 mt-4 border border-white/5">EIN: 33-4817276</p>

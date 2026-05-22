@@ -36,7 +36,7 @@ const Competition: React.FC = () => {
             src="https://wsrv.nl/?url=i.ibb.co%2FS4Mb6TcN%2F24480b00-65a2-4468-8dc6-50aae205d0fa.png&w=1200&output=webp" 
             alt="Hollywood style stage" 
             className="w-full h-auto object-contain" 
-           width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+           width="1200" height="800"   />
         </div>
       </section>
 

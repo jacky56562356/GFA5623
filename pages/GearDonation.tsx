@@ -487,7 +487,7 @@ const GearDonation: React.FC = () => {
                       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 mt-4">
                         {previewUrls.map((url, i) => (
                           <div key={i} className="relative aspect-square rounded-lg overflow-hidden border border-gfa-border bg-gray-100">
-                            <img fetchPriority="high"  src={url} alt={`Preview ${i}`} className="w-full h-full object-cover"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                            <img fetchPriority="high"  src={url} alt={`Preview ${i}`} className="w-full h-full object-cover"  width="1200" height="800"   />
                             <button
                               type="button"
                               onClick={() => removeFile(i)}

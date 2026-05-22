@@ -20,7 +20,7 @@ const ProgramEmergingDirector: React.FC = () => {
             src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1517604931442-7e0c8ed2963c%3Fq%3D80%26w%3D2070%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" 
             alt="Dream Film Project" 
             className="w-full h-full object-cover opacity-30 grayscale"
-           width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+           width="1200" height="800"   />
           <div className="absolute inset-0 bg-gradient-to-r from-[#1A2B4A] via-[#1A2B4A]/80 to-transparent"></div>
         </div>
         <div className="container-gfa relative z-10 text-center max-w-4xl mx-auto">
@@ -45,7 +45,7 @@ const ProgramEmergingDirector: React.FC = () => {
             
             <div className="flex flex-col md:flex-row gap-5 bg-white p-6 md:p-10 rounded-[32px] border border-gfa-border shadow-lg items-center">
               <div className="md:w-1/3 shrink-0">
-                <img loading="lazy"  src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1440404653325-ab127d49abc1%3Fq%3D80%26w%3D2070%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" alt="Garden Film Poster" className="w-full aspect-[2/3] object-cover rounded-2xl shadow-md"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                <img loading="lazy"  src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1440404653325-ab127d49abc1%3Fq%3D80%26w%3D2070%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" alt="Garden Film Poster" className="w-full aspect-[2/3] object-cover rounded-2xl shadow-md"  width="1200" height="800"   />
               </div>
               <div className="md:w-2/3">
                 <h3 className="text-3xl font-bold font-serif text-gfa-inkBlack mb-2">《花园 Garden》</h3>
@@ -64,7 +64,7 @@ const ProgramEmergingDirector: React.FC = () => {
 
             <div className="flex flex-col md:flex-row gap-5 bg-white p-6 md:p-10 rounded-[32px] border border-gfa-border shadow-lg items-center">
               <div className="md:w-1/3 shrink-0">
-                <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1536440136628-849c177e76a1%3Fq%3D80%26w%3D2025%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" alt="Film 2 Poster" className="w-full aspect-[2/3] object-cover rounded-2xl shadow-md"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1536440136628-849c177e76a1%3Fq%3D80%26w%3D2025%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" alt="Film 2 Poster" className="w-full aspect-[2/3] object-cover rounded-2xl shadow-md"  width="1200" height="800"   />
               </div>
               <div className="md:w-2/3">
                  <h3 className="text-3xl font-bold font-serif text-gfa-inkBlack mb-2"> Echoes </h3>

@@ -35,7 +35,7 @@ const FamilyGuide: React.FC = () => {
             src="https://wsrv.nl/?url=i.ibb.co%2FF4jckgZp%2FChat-GPT-Image-2026-1-25-15-29-13.png&w=1200&output=webp" 
             alt="Family reviewing a script" 
             className="w-full h-full object-cover opacity-30 mix-blend-luminosity" 
-           width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+           width="1200" height="800"   />
           <div className="absolute inset-0 bg-gradient-to-t from-gfa-inkBlack via-gfa-inkBlack/50 to-transparent"></div>
         </div>
 

@@ -17,7 +17,7 @@ const ProgramPlatformAlliance: React.FC = () => {
             src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1485846234645-a62644f84728%3Fq%3D80%26w%3D2059%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" 
             alt="Hollywood Career" 
             className="w-full h-full object-cover opacity-30 grayscale"
-           width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+           width="1200" height="800"   />
           <div className="absolute inset-0 bg-gradient-to-r from-[#1A2B4A] via-[#1A2B4A]/80 to-transparent"></div>
         </div>
         <div className="container-gfa relative z-10 text-center max-w-4xl mx-auto">
@@ -38,7 +38,7 @@ const ProgramPlatformAlliance: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             <div className="bg-white rounded-[32px] overflow-hidden shadow-md border border-gfa-border group">
                <div className="h-48 overflow-hidden">
-                 <img loading="lazy"  src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1516321497487-e288fb19713f%3Fq%3D80%26w%3D2070%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" alt="Mentorship" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                 <img loading="lazy"  src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1516321497487-e288fb19713f%3Fq%3D80%26w%3D2070%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" alt="Mentorship" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"  width="1200" height="800"   />
                </div>
                <div className="p-8">
                  <h3 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-3">
@@ -52,7 +52,7 @@ const ProgramPlatformAlliance: React.FC = () => {
 
             <div className="bg-white rounded-[32px] overflow-hidden shadow-md border border-gfa-border group">
                <div className="h-48 overflow-hidden">
-                 <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1542204165-65bf26472b9b%3Fq%3D80%26w%3D1974%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" alt="On set" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                 <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1542204165-65bf26472b9b%3Fq%3D80%26w%3D1974%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" alt="On set" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"  width="1200" height="800"   />
                </div>
                <div className="p-8">
                  <h3 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-3">
@@ -66,7 +66,7 @@ const ProgramPlatformAlliance: React.FC = () => {
 
             <div className="bg-white rounded-[32px] overflow-hidden shadow-md border border-gfa-border group">
                <div className="h-48 overflow-hidden">
-                 <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1536440136628-849c177e76a1%3Fq%3D80%26w%3D2025%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" alt="Portfolio" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                 <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1536440136628-849c177e76a1%3Fq%3D80%26w%3D2025%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" alt="Portfolio" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"  width="1200" height="800"   />
                </div>
                <div className="p-8">
                  <h3 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-3">
@@ -80,7 +80,7 @@ const ProgramPlatformAlliance: React.FC = () => {
 
             <div className="bg-white rounded-[32px] overflow-hidden shadow-md border border-gfa-border group">
                <div className="h-48 overflow-hidden">
-                 <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1503676260728-1c00da094a0b%3Fq%3D80%26w%3D2022%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" alt="Festivals" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                 <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1503676260728-1c00da094a0b%3Fq%3D80%26w%3D2022%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" alt="Festivals" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"  width="1200" height="800"   />
                </div>
                <div className="p-8">
                  <h3 className="text-2xl font-bold font-serif text-gfa-inkBlack mb-3">

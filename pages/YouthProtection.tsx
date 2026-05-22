@@ -19,7 +19,7 @@ const YouthProtection: React.FC = () => {
             src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1544717305-2782549b5136%3Fq%3D80%26w%3D1974%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" 
             alt="Youth Protection" 
             className="w-full h-full object-cover opacity-30 mix-blend-luminosity transform group-hover:scale-105 transition-transform duration-[20s]" 
-           width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+           width="1200" height="800"   />
           <div className="absolute inset-0 bg-gradient-to-t from-gfa-inkBlack via-gfa-inkBlack/50 to-transparent"></div>
         </div>
 
@@ -48,9 +48,9 @@ const YouthProtection: React.FC = () => {
             </p>
 
             <div className="flex flex-wrap justify-center gap-4 opacity-80">
-               <img loading="lazy"  src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1573164713988-8665fc963095%3Fauto%3Dformat%26fit%3Dcrop%26w%3D400%26q%3D80&w=1200&output=webp" alt="Safe Set" className="w-48 h-48 rounded-full object-cover shadow-xl border-4 border-gfa-warmWhite"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
-               <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1522071820081-009f0129c71c%3Fauto%3Dformat%26fit%3Dcrop%26w%3D400%26q%3D80&w=1200&output=webp" alt="Mentoring" className="w-56 h-56 rounded-full object-cover shadow-2xl border-4 border-white -mt-8 relative z-10"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
-               <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1514525253161-7a46d19cd819%3Fauto%3Dformat%26fit%3Dcrop%26w%3D400%26q%3D80&w=1200&output=webp" alt="Event Safety" className="w-48 h-48 rounded-full object-cover shadow-xl border-4 border-gfa-warmWhite"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+               <img loading="lazy"  src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1573164713988-8665fc963095%3Fauto%3Dformat%26fit%3Dcrop%26w%3D400%26q%3D80&w=1200&output=webp" alt="Safe Set" className="w-48 h-48 rounded-full object-cover shadow-xl border-4 border-gfa-warmWhite"  width="1200" height="800"   />
+               <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1522071820081-009f0129c71c%3Fauto%3Dformat%26fit%3Dcrop%26w%3D400%26q%3D80&w=1200&output=webp" alt="Mentoring" className="w-56 h-56 rounded-full object-cover shadow-2xl border-4 border-white -mt-8 relative z-10"  width="1200" height="800"   />
+               <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1514525253161-7a46d19cd819%3Fauto%3Dformat%26fit%3Dcrop%26w%3D400%26q%3D80&w=1200&output=webp" alt="Event Safety" className="w-48 h-48 rounded-full object-cover shadow-xl border-4 border-gfa-warmWhite"  width="1200" height="800"   />
             </div>
         </div>
       </section>
@@ -122,7 +122,7 @@ const YouthProtection: React.FC = () => {
                      src="https://wsrv.nl/?url=i.ibb.co%2Fsp4fWHq3%2FChat-GPT-Image-2026-3-23-12-23-22.png&w=1200&output=webp" 
                      alt="Advancing Industry Integrity" 
                      className="w-full h-auto rounded-[24px]"
-                    width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                    width="1200" height="800"   />
                 </div>
               </div>
               <div className="md:w-1/2">

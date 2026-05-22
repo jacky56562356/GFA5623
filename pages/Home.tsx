@@ -74,7 +74,7 @@ const Home: React.FC = () => {
             src="https://wsrv.nl/?url=i.ibb.co%2FbgKF8pwy%2FGemini-Generated-Image-jtsengjtsengjtse.png&w=1200&output=webp" 
             alt="Film reel background" 
             className="w-full h-full object-cover opacity-10 mix-blend-luminosity" 
-           width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+           width="1200" height="800"   />
           <div className="absolute inset-0 bg-gradient-to-b from-gfa-inkBlack/50 via-gfa-inkBlack to-gfa-inkBlack"></div>
         </div>
 
@@ -92,28 +92,28 @@ const Home: React.FC = () => {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-4">
             <div className="bg-white/5 backdrop-blur-md p-8 rounded-3xl border border-white/10 text-center hover:bg-white/10 transition-colors">
               <div className="text-4xl md:text-5xl font-bold font-serif text-gfa-gold mb-3">
-                <NumberCounter end={42} duration={2000} suffix="K" />
+                <NumberCounter end={17} duration={2000} suffix="K" />
               </div>
               <p className="text-xs font-bold text-white uppercase tracking-widest mb-1">{"Lost Jobs in LA"}</p>
               <p className="text-[10px] font-bold text-gray-300 uppercase tracking-[0.2em]">2022 - 2024</p>
             </div>
             <div className="bg-white/5 backdrop-blur-md p-8 rounded-3xl border border-white/10 text-center hover:bg-white/10 transition-colors">
               <div className="text-4xl md:text-5xl font-bold font-serif text-gfa-gold mb-3">
-                <NumberCounter end={10.9} duration={2000} decimals={1} suffix="%" />
+                <NumberCounter end={12.5} duration={2000} decimals={1} suffix="%" />
               </div>
               <p className="text-xs font-bold text-white uppercase tracking-widest mb-1">{"Unemployment Rate"}</p>
               <p className="text-[10px] font-bold text-gray-300 uppercase tracking-[0.2em]">{"2.5x National Avg"}</p>
             </div>
             <div className="bg-white/5 backdrop-blur-md p-8 rounded-3xl border border-white/10 text-center hover:bg-white/10 transition-colors">
               <div className="text-4xl md:text-5xl font-bold font-serif text-gfa-gold mb-3">
-                <NumberCounter end={-22} duration={2000} suffix="%" />
+                <NumberCounter end={-58} duration={2000} suffix="%" />
               </div>
               <p className="text-xs font-bold text-white uppercase tracking-widest mb-1">{"On-Location Shoots"}</p>
               <p className="text-[10px] font-bold text-gray-300 uppercase tracking-[0.2em]">{"Q1 2025"}</p>
             </div>
             <div className="bg-white/5 backdrop-blur-md p-8 rounded-3xl border border-white/10 text-center hover:bg-white/10 transition-colors">
               <div className="text-4xl md:text-5xl font-bold font-serif text-gfa-gold mb-3">
-                <NumberCounter end={-25} duration={2000} suffix="%" />
+                <NumberCounter end={-30} duration={2000} suffix="%" />
               </div>
               <p className="text-xs font-bold text-white uppercase tracking-widest mb-1">{"Industry Emp Rate"}</p>
               <p className="text-[10px] font-bold text-gray-300 uppercase tracking-[0.2em]">{"Below 2022 Peak"}</p>
@@ -135,7 +135,7 @@ const Home: React.FC = () => {
                        <p className="text-xs text-white/60 font-light">{"Global Top Film School"}</p>
                      </div>
                      <div className="text-xl font-serif text-gfa-gold font-bold">
-                       <NumberCounter end={426} duration={2000} prefix="~" />
+                       <NumberCounter end={500} duration={2000} prefix="~" />
                      </div>
                   </div>
                   
@@ -145,7 +145,7 @@ const Home: React.FC = () => {
                        <p className="text-xs text-white/60 font-light">{"Top Public Institution"}</p>
                      </div>
                      <div className="text-xl font-serif text-gfa-gold font-bold">
-                       <NumberCounter end={200} duration={2000} prefix="~" suffix="+" />
+                       <NumberCounter end={400} duration={2000} prefix="~" suffix="+" />
                      </div>
                   </div>
 
@@ -155,7 +155,7 @@ const Home: React.FC = () => {
                        <p className="text-xs text-white/60 font-light">{"LA Region Programs"}</p>
                      </div>
                      <div className="text-xl font-serif text-gfa-gold font-bold">
-                       <NumberCounter end={300} duration={2000} prefix="~" suffix="+" />
+                       <NumberCounter end={600} duration={2000} prefix="~" suffix="+" />
                      </div>
                   </div>
 
@@ -165,7 +165,7 @@ const Home: React.FC = () => {
                        <p className="text-xs text-white/60 font-light">{"All CSU Film Programs"}</p>
                      </div>
                      <div className="text-xl font-serif text-gfa-gold font-bold">
-                       <NumberCounter end={1000} duration={2000} prefix="~" suffix="+" useCommas={true} />
+                       <NumberCounter end={800} duration={2000} prefix="~" suffix="+" />
                      </div>
                   </div>
 
@@ -175,7 +175,7 @@ const Home: React.FC = () => {
                        <p className="text-xs text-white/60 font-light">{"Mt.SAC & other film grads"}</p>
                      </div>
                      <div className="text-xl font-serif text-gfa-gold font-bold">
-                       <NumberCounter end={2000} duration={2000} prefix="~" suffix="+" useCommas={true} />
+                       <NumberCounter end={1000} duration={2000} prefix="~" suffix="+" useCommas={true} />
                      </div>
                   </div>
                 </div>
@@ -184,7 +184,7 @@ const Home: React.FC = () => {
               <div className="mt-4 bg-gradient-to-r from-black to-[#0D1B2A] p-6 rounded-2xl flex justify-between items-center border border-gfa-gold/30 shadow-[0_0_30px_rgba(201,168,76,0.1)]">
                 <p className="text-xs font-bold uppercase tracking-[0.3em] text-gfa-gold leading-loose max-w-[60%]">{"California Annual Total"}</p>
                 <div className="text-4xl md:text-5xl font-bold font-serif text-white">
-                  <NumberCounter end={5000} duration={2500} useCommas={true} />
+                  <NumberCounter end={3300} duration={2500} useCommas={true} />
                   <span className="text-gfa-gold">+</span>
                 </div>
               </div>
@@ -247,7 +247,7 @@ const Home: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             <div className="relative overflow-hidden border border-gfa-border/20 rounded-3xl p-8 shadow-sm hover:shadow-lg hover:border-gfa-gold/50 transition-all group">
                <div className="absolute inset-0 z-0 bg-blue-950">
-                 <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1540614099511-9a7dc92323f4%3Fw%3D800%26auto%3Dformat%26fit%3Dcrop%26q%3D60&w=1200&output=webp" alt="" className="w-full h-full object-cover opacity-20 mix-blend-overlay group-hover:scale-105 transition-transform duration-700"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                 <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1540614099511-9a7dc92323f4%3Fw%3D800%26auto%3Dformat%26fit%3Dcrop%26q%3D60&w=1200&output=webp" alt="" className="w-full h-full object-cover opacity-20 mix-blend-overlay group-hover:scale-105 transition-transform duration-700"  width="1200" height="800"   />
                  <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 to-blue-950/95"></div>
                </div>
                <div className="relative z-10">
@@ -263,7 +263,7 @@ const Home: React.FC = () => {
 
             <div className="relative overflow-hidden border border-gfa-border/20 rounded-3xl p-8 shadow-sm hover:shadow-lg hover:border-gfa-gold/50 transition-all group">
                <div className="absolute inset-0 z-0 bg-amber-950">
-                 <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1515162816999-a0c47dc192f7%3Fw%3D800%26auto%3Dformat%26fit%3Dcrop%26q%3D60&w=1200&output=webp" alt="" className="w-full h-full object-cover opacity-20 mix-blend-overlay group-hover:scale-105 transition-transform duration-700"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                 <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1515162816999-a0c47dc192f7%3Fw%3D800%26auto%3Dformat%26fit%3Dcrop%26q%3D60&w=1200&output=webp" alt="" className="w-full h-full object-cover opacity-20 mix-blend-overlay group-hover:scale-105 transition-transform duration-700"  width="1200" height="800"   />
                  <div className="absolute inset-0 bg-gradient-to-br from-amber-900/90 to-amber-950/95"></div>
                </div>
                <div className="relative z-10">
@@ -279,7 +279,7 @@ const Home: React.FC = () => {
 
             <div className="relative overflow-hidden border border-gfa-border/20 rounded-3xl p-8 shadow-sm hover:shadow-lg hover:border-gfa-gold/50 transition-all group">
                <div className="absolute inset-0 z-0 bg-emerald-950">
-                 <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1489599849927-2ee91cede3ba%3Fw%3D800%26auto%3Dformat%26fit%3Dcrop%26q%3D60&w=1200&output=webp" alt="" className="w-full h-full object-cover opacity-20 mix-blend-overlay group-hover:scale-105 transition-transform duration-700"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                 <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1489599849927-2ee91cede3ba%3Fw%3D800%26auto%3Dformat%26fit%3Dcrop%26q%3D60&w=1200&output=webp" alt="" className="w-full h-full object-cover opacity-20 mix-blend-overlay group-hover:scale-105 transition-transform duration-700"  width="1200" height="800"   />
                  <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/90 to-emerald-950/95"></div>
                </div>
                <div className="relative z-10">
@@ -295,7 +295,7 @@ const Home: React.FC = () => {
 
             <div className="relative overflow-hidden border border-gfa-border/20 rounded-3xl p-8 shadow-sm hover:shadow-lg hover:border-gfa-gold/50 transition-all group">
                <div className="absolute inset-0 z-0 bg-purple-950">
-                 <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1553729459-efe14ef6055d%3Fw%3D800%26auto%3Dformat%26fit%3Dcrop%26q%3D60&w=1200&output=webp" alt="" className="w-full h-full object-cover opacity-20 mix-blend-overlay group-hover:scale-105 transition-transform duration-700"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                 <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1553729459-efe14ef6055d%3Fw%3D800%26auto%3Dformat%26fit%3Dcrop%26q%3D60&w=1200&output=webp" alt="" className="w-full h-full object-cover opacity-20 mix-blend-overlay group-hover:scale-105 transition-transform duration-700"  width="1200" height="800"   />
                  <div className="absolute inset-0 bg-gradient-to-br from-purple-900/90 to-purple-950/95"></div>
                </div>
                <div className="relative z-10">
@@ -328,28 +328,28 @@ const Home: React.FC = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-4 text-center">
             <div className="p-6">
               <div className="text-5xl md:text-6xl font-bold font-serif text-gfa-gold mb-2 drop-shadow-lg">
-                <NumberCounter end={25} duration={2500} suffix="+" />
+                <NumberCounter end={5} duration={2500} suffix="+" />
               </div>
               <p className="text-sm font-bold text-white uppercase tracking-wider">{"Partner Talent Agencies"}</p>
             </div>
             
             <div className="p-6">
               <div className="text-5xl md:text-6xl font-bold font-serif text-gfa-gold mb-2 drop-shadow-lg">
-                <NumberCounter end={120} duration={3000} suffix="+" />
+                <NumberCounter end={8} duration={3000} suffix="+" />
               </div>
               <p className="text-sm font-bold text-white uppercase tracking-wider">{"Films Produced & Supported"}</p>
             </div>
             
             <div className="p-6">
               <div className="text-5xl md:text-6xl font-bold font-serif text-gfa-gold mb-2 drop-shadow-lg">
-                <NumberCounter end={50} duration={2000} prefix="$" suffix="M" decimals={1} />
+                <NumberCounter end={0.5} duration={2000} prefix="$" suffix="M" decimals={1} />
               </div>
               <p className="text-sm font-bold text-white uppercase tracking-wider">{"Funding Facilitated"}</p>
             </div>
             
             <div className="p-6">
               <div className="text-5xl md:text-6xl font-bold font-serif text-gfa-gold mb-2 drop-shadow-lg">
-                <NumberCounter end={15} duration={1500} useCommas={true} />
+                <NumberCounter end={3} duration={1500} />
               </div>
               <p className="text-sm font-bold text-white uppercase tracking-wider">{"Global Film Festivals"}</p>
             </div>
@@ -373,7 +373,7 @@ const Home: React.FC = () => {
             <div className="bg-white rounded-[2rem] overflow-hidden shadow-xl border-2 border-gfa-gold relative group flex flex-col transform md:-translate-y-4 transition-transform hover:-translate-y-6 duration-300 h-full">
               <div className="absolute top-4 right-4 bg-gfa-gold text-black text-[10px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-full z-10 shadow-md"> CORE PROGRAM </div>
               <div className="h-64 overflow-hidden relative">
-                <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co%2FqLynYLfw%2FChat-GPT-Image-2026-5-6-18-06-52.png&w=1200&output=webp" alt="Youth collaborating" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co%2FqLynYLfw%2FChat-GPT-Image-2026-5-6-18-06-52.png&w=1200&output=webp" alt="Youth collaborating" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"  width="1200" height="800"   />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 <div className="absolute bottom-4 left-6">
                    <div className="w-12 h-12 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center text-white">
@@ -397,7 +397,7 @@ const Home: React.FC = () => {
             {/* Card 2 */}
             <div className="bg-white rounded-[2rem] overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl hover:border-gfa-gold/50 transition-all duration-300 flex flex-col group h-full">
               <div className="h-64 overflow-hidden relative">
-                <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co%2FxSc1fNkg%2FChat-GPT-Image-2026-5-6-18-06-00.png&w=1200&output=webp" alt="Youth filming outdoors" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co%2FxSc1fNkg%2FChat-GPT-Image-2026-5-6-18-06-00.png&w=1200&output=webp" alt="Youth filming outdoors" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"  width="1200" height="800"   />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 <div className="absolute bottom-4 left-6">
                    <div className="w-12 h-12 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center text-white">
@@ -421,7 +421,7 @@ const Home: React.FC = () => {
             {/* Card 3 */}
             <div className="bg-white rounded-[2rem] overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl hover:border-gfa-gold/50 transition-all duration-300 flex flex-col group h-full">
               <div className="h-64 overflow-hidden relative">
-                <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co%2FgZ1HJdtB%2FChat-GPT-Image-2026-5-6-18-08-23.png&w=1200&output=webp" alt="Kids looking into camera lens" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co%2FgZ1HJdtB%2FChat-GPT-Image-2026-5-6-18-08-23.png&w=1200&output=webp" alt="Kids looking into camera lens" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"  width="1200" height="800"   />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 <div className="absolute bottom-4 left-6">
                    <div className="w-12 h-12 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center text-white">
@@ -528,7 +528,7 @@ const Home: React.FC = () => {
             {/* Awards */}
             <div className="bg-white rounded-3xl overflow-hidden shadow-xl group border border-gray-100 flex flex-col h-full">
               <div className="h-72 overflow-hidden relative">
-                <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co%2F1Gj2K8CX%2Fd92babf9ca9b15b9fe754beaa383a6cf.jpg&w=1200&output=webp" alt="Golden Feather Awards" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                <img loading="lazy" src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?q=80&w=1200&auto=format&fit=crop" alt="Golden Feather Awards" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"  width="1200" height="800"   />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                 <div className="absolute bottom-6 left-6 right-6">
                   <h3 className="text-3xl font-bold font-serif text-white mb-2">{"Golden Feather Awards"}</h3>
@@ -539,7 +539,7 @@ const Home: React.FC = () => {
                 <p className="text-gfa-slate font-light leading-relaxed mb-4 flex-grow">
                   {"Hosted annually in Hollywood, honoring young creators showing exceptional cinematic talent. In 2025, 18 remarkable youths received awards."}
                 </p>
-                <Link to="/awards" className="inline-flex items-center justify-center gap-2 border-2 border-gfa-inkBlack text-gfa-inkBlack hover:bg-gfa-inkBlack hover:text-white font-bold uppercase tracking-widest text-xs px-6 py-3 rounded-full transition-colors w-full">
+                <Link to="/golden-feather-awards" className="inline-flex items-center justify-center gap-2 border-2 border-gfa-inkBlack text-gfa-inkBlack hover:bg-gfa-inkBlack hover:text-white font-bold uppercase tracking-widest text-xs px-6 py-3 rounded-full transition-colors w-full">
                   {"About the Awards"}
                 </Link>
               </div>
@@ -548,7 +548,7 @@ const Home: React.FC = () => {
             {/* Competition */}
             <div className="bg-white rounded-3xl overflow-hidden shadow-xl group border border-gray-100 flex flex-col h-full">
               <div className="h-72 overflow-hidden relative">
-                <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co%2FS4Mb6TcN%2F24480b00-65a2-4468-8dc6-50aae205d0fa.png&w=1200&output=webp" alt="Golden Feather Awards Stage" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                <img loading="lazy" src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?q=80&w=1200&auto=format&fit=crop" alt="Golden Feather Awards Stage" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"  width="1200" height="800"   />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
                 <div className="absolute bottom-6 left-6 right-6">
                   <h3 className="text-3xl font-bold font-serif text-white mb-2">{"Global Youth Talent Competition"}</h3>
@@ -579,7 +579,7 @@ const Home: React.FC = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 items-center">
               {/* Image Side */}
               <div className="relative h-full min-h-[400px] lg:min-h-[500px] w-full rounded-[2rem] overflow-hidden shadow-2xl">
-                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co%2FVYRv0gbg%2FChat-GPT-Image-2026-5-6-18-12-27.png&w=1200&output=webp" alt="Children with a camera" className="absolute inset-0 w-full h-full object-cover"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co%2FVYRv0gbg%2FChat-GPT-Image-2026-5-6-18-12-27.png&w=1200&output=webp" alt="Children with a camera" className="absolute inset-0 w-full h-full object-cover"  width="1200" height="800"   />
                  <div className="absolute inset-0 bg-gradient-to-t from-[#0D1B2A]/80 via-transparent to-transparent"></div>
                  <div className="absolute bottom-8 left-8 text-white">
                     <p className="font-bold text-lg">{"Empowering the Next Generation"}</p>
@@ -646,26 +646,26 @@ const Home: React.FC = () => {
               <div className="flex items-center justify-around min-w-[100vw] shrink-0 gap-12 px-8">
                  <div className="text-xl md:text-2xl font-bold italic tracking-tighter shrink-0 text-gray-800 opacity-60 hover:opacity-100 transition-all duration-300"> Blackmagic Design </div>
                  <div className="text-lg font-bold uppercase tracking-widest text-center shrink-0 text-gray-800 opacity-60 hover:opacity-100 transition-all duration-300"> City of <br/> Pomona </div>
-                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/4RNsSNYg/AI-8707697f3ab3980df8ccc03824c49fc3-3804x2800.png&h=100&output=webp" alt="Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
-                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/Ldwg7vRN/4a2ec28a2689027a04641d8a150fda3f.png&h=100&output=webp" alt="Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
-                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/XBZ4F7j/Alvantor-new-logo-2020-1.png&h=100&output=webp" alt="Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
-                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/cSVbb7ZM/list-2.png&h=100&output=webp" alt="Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
-                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/whJfbzKn/ALT-LOGO-2400x1800-2.jpg&h=100&output=webp" alt="Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
-                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/6P6X52H/usc.png&h=100&output=webp" alt="SCA Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
-                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/k2c5N2F4/csa-logo.png&h=100&output=webp" alt="CSA Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/4RNsSNYg/AI-8707697f3ab3980df8ccc03824c49fc3-3804x2800.png&h=100&output=webp" alt="Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100"   />
+                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/Ldwg7vRN/4a2ec28a2689027a04641d8a150fda3f.png&h=100&output=webp" alt="Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100"   />
+                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/XBZ4F7j/Alvantor-new-logo-2020-1.png&h=100&output=webp" alt="Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100"   />
+                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/cSVbb7ZM/list-2.png&h=100&output=webp" alt="Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100"   />
+                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/whJfbzKn/ALT-LOGO-2400x1800-2.jpg&h=100&output=webp" alt="Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100"   />
+                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/6P6X52H/usc.png&h=100&output=webp" alt="SCA Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100"   />
+                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/k2c5N2F4/csa-logo.png&h=100&output=webp" alt="CSA Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100"   />
               </div>
               
               {/* Second Set of Logos */}
               <div className="flex items-center justify-around min-w-[100vw] shrink-0 gap-12 px-8">
                  <div className="text-xl md:text-2xl font-bold italic tracking-tighter shrink-0 text-gray-800 opacity-60 hover:opacity-100 transition-all duration-300"> Blackmagic Design </div>
                  <div className="text-lg font-bold uppercase tracking-widest text-center shrink-0 text-gray-800 opacity-60 hover:opacity-100 transition-all duration-300"> City of <br/> Pomona </div>
-                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/4RNsSNYg/AI-8707697f3ab3980df8ccc03824c49fc3-3804x2800.png&h=100&output=webp" alt="Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
-                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/Ldwg7vRN/4a2ec28a2689027a04641d8a150fda3f.png&h=100&output=webp" alt="Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
-                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/XBZ4F7j/Alvantor-new-logo-2020-1.png&h=100&output=webp" alt="Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
-                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/cSVbb7ZM/list-2.png&h=100&output=webp" alt="Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
-                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/whJfbzKn/ALT-LOGO-2400x1800-2.jpg&h=100&output=webp" alt="Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
-                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/6P6X52H/usc.png&h=100&output=webp" alt="SCA Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
-                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/k2c5N2F4/csa-logo.png&h=100&output=webp" alt="CSA Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/4RNsSNYg/AI-8707697f3ab3980df8ccc03824c49fc3-3804x2800.png&h=100&output=webp" alt="Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100"   />
+                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/Ldwg7vRN/4a2ec28a2689027a04641d8a150fda3f.png&h=100&output=webp" alt="Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100"   />
+                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/XBZ4F7j/Alvantor-new-logo-2020-1.png&h=100&output=webp" alt="Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100"   />
+                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/cSVbb7ZM/list-2.png&h=100&output=webp" alt="Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100"   />
+                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/whJfbzKn/ALT-LOGO-2400x1800-2.jpg&h=100&output=webp" alt="Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100"   />
+                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/6P6X52H/usc.png&h=100&output=webp" alt="SCA Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100"   />
+                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co/k2c5N2F4/csa-logo.png&h=100&output=webp" alt="CSA Sponsor" className="h-12 md:h-16 object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0" width="200" height="100"   />
               </div>
             </div>
          </div>

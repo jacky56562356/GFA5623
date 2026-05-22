@@ -101,6 +101,8 @@ export default function ShortDrama() {
   const [deadline, setDeadline] = useState('regular');
   const [cart, setCart] = useState<Record<string, number>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [checkoutSuccess, setCheckoutSuccess] = useState(false);
+  const [checkoutError, setCheckoutError] = useState('');
   const [posterName, setPosterName] = useState('');
   const [brandName, setBrandName] = useState('');
   
@@ -251,7 +253,7 @@ export default function ShortDrama() {
       {/* Hero Section */}
       <section className="relative pt-16 pb-8 lg:pt-24 lg:pb-12 border-b border-[#252525] bg-gradient-to-b from-[#0A0A0A] via-[#1A1208] to-[#0A0A0A] overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-50">
-           <img fetchPriority="high"  src="https://wsrv.nl/?url=i.ibb.co%2FfdnnyXHm%2FGemini-Generated-Image-vzmo29vzmo29vzmo-1.png&w=1200&output=webp" referrerPolicy="no-referrer" className="w-full h-full object-cover mix-blend-screen" alt="Hero background"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+           <img fetchPriority="high"  src="https://wsrv.nl/?url=i.ibb.co%2FfdnnyXHm%2FGemini-Generated-Image-vzmo29vzmo29vzmo-1.png&w=1200&output=webp" referrerPolicy="no-referrer" className="w-full h-full object-cover mix-blend-screen" alt="Hero background"  width="1200" height="800"   />
            <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-[#0A0A0A]"></div>
         </div>
         
@@ -326,7 +328,7 @@ export default function ShortDrama() {
                </div>
                <div className="relative">
                   <div className="absolute inset-0 bg-[#C9A84C]/10 rounded-[20px] transform translate-x-3 translate-y-3 md:translate-x-6 md:translate-y-6"></div>
-                  <img loading="lazy" src="https://i.ibb.co/sp0vpNVK/Gemini-Generated-Image-nztl68nztl68nztl.png" referrerPolicy="no-referrer" alt="Partnership" className="relative rounded-[20px] shadow-2xl w-full h-[350px] md:h-[450px] object-cover border border-[#333] z-10" width="1200" height="800" onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                  <img loading="lazy" src="https://i.ibb.co/sp0vpNVK/Gemini-Generated-Image-nztl68nztl68nztl.png" referrerPolicy="no-referrer" alt="Partnership" className="relative rounded-[20px] shadow-2xl w-full h-[350px] md:h-[450px] object-cover border border-[#333] z-10" width="1200" height="800"  />
                </div>
             </div>
 
@@ -431,14 +433,15 @@ export default function ShortDrama() {
              if (result.url) {
                 window.location.href = result.url;
              } else if (result.error === "missing_stripe_key") {
-                alert('Stripe Checkout Demo Mode: Success! (Add STRIPE_SECRET_KEY to test payments)');
+                // Mock success for demo
+                setCheckoutSuccess(true);
                 setCart({});
              } else {
                 throw new Error(result.message || 'Error redirecting to checkout');
              }
           } catch (e: any) {
              console.error(e);
-             alert(e.message || "Failed to go to checkout");
+             setCheckoutError(e.message || "Failed to go to checkout");
           } finally {
              setIsSubmitting(false);
           }
@@ -456,7 +459,7 @@ export default function ShortDrama() {
             <section id="step1">
                <SectionTitle step="1" en="Category Submissions" zh="选择参赛类别" />
                <div className="mb-4 overflow-hidden rounded-[20px]">
-                  <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1485846234645-a62644f84728%3Fq%3D80%26w%3D2670%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" referrerPolicy="no-referrer" alt="Filmmaking" className="w-full h-48 object-cover opacity-60 border border-[#252525] rounded-[20px]"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                  <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1485846234645-a62644f84728%3Fq%3D80%26w%3D2670%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" referrerPolicy="no-referrer" alt="Filmmaking" className="w-full h-48 object-cover opacity-60 border border-[#252525] rounded-[20px]"  width="1200" height="800"   />
                </div>
 
                {/* Registration Details */}
@@ -641,7 +644,7 @@ export default function ShortDrama() {
                </div>
 
                <div className="mb-6 overflow-hidden rounded-[20px]">
-                  <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1540575467063-178a50c2df87%3Fq%3D80%26w%3D2670%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" referrerPolicy="no-referrer" alt="Exhibition Area" className="w-full h-48 object-cover opacity-60 border border-[#252525] rounded-[20px]"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                  <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1540575467063-178a50c2df87%3Fq%3D80%26w%3D2670%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" referrerPolicy="no-referrer" alt="Exhibition Area" className="w-full h-48 object-cover opacity-60 border border-[#252525] rounded-[20px]"  width="1200" height="800"   />
                </div>
 
                <div className="grid grid-cols-1 gap-6">
@@ -715,7 +718,7 @@ export default function ShortDrama() {
                   <div>
                     <h3 className="text-base font-serif text-[#C9A84C] mb-3 border-b border-[#252525] pb-1">{'Digital & Website'}</h3>
                     <div className="mb-4 overflow-hidden rounded-[16px]">
-                      <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1551288049-bebda4e38f71%3Fq%3D80%26w%3D2670%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" referrerPolicy="no-referrer" alt="Digital Display" className="w-full h-32 object-cover opacity-60 border border-[#252525] rounded-[16px]"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                      <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1551288049-bebda4e38f71%3Fq%3D80%26w%3D2670%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" referrerPolicy="no-referrer" alt="Digital Display" className="w-full h-32 object-cover opacity-60 border border-[#252525] rounded-[16px]"  width="1200" height="800"   />
                     </div>
                     <div className="grid grid-cols-1 gap-3 mb-2">
                       {ITEM_CATALOG.ads_web.map((item: any) => (
@@ -755,7 +758,7 @@ export default function ShortDrama() {
                     <h3 className="text-base font-serif text-[#C9A84C] mb-3 border-b border-[#252525] pb-1">{'Ceremony Onsite'}</h3>
                     
                     <div className="mb-4 overflow-hidden rounded-[16px] relative">
-                      <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1517604931442-7e0c8ed2963c%3Fq%3D80%26w%3D2670%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" referrerPolicy="no-referrer" alt="Onsite Billboard" className="w-full h-32 object-cover opacity-60 border border-[#252525] rounded-[16px]"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                      <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1517604931442-7e0c8ed2963c%3Fq%3D80%26w%3D2670%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" referrerPolicy="no-referrer" alt="Onsite Billboard" className="w-full h-32 object-cover opacity-60 border border-[#252525] rounded-[16px]"  width="1200" height="800"   />
                       <div className="absolute inset-0 flex items-center justify-center">
                          <div className="font-serif text-[#C9A84C] uppercase font-bold tracking-widest px-3 py-1.5 bg-black/60 backdrop-blur-sm border border-[#C9A84C]/30 rounded text-xs">{"Premium Placements"}</div>
                       </div>
@@ -818,7 +821,7 @@ export default function ShortDrama() {
                   <div>
                     <h3 className="text-base font-serif text-[#C9A84C] mb-3 border-b border-[#252525] pb-1">{'Official Program Book'}</h3>
                     <div className="mb-4 overflow-hidden rounded-[16px]">
-                      <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1552596205-db43df024090%3Fq%3D80%26w%3D2670%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" referrerPolicy="no-referrer" alt="Program Book" className="w-full h-32 object-cover opacity-60 border border-[#252525] rounded-[16px]"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                      <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1552596205-db43df024090%3Fq%3D80%26w%3D2670%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" referrerPolicy="no-referrer" alt="Program Book" className="w-full h-32 object-cover opacity-60 border border-[#252525] rounded-[16px]"  width="1200" height="800"   />
                     </div>
                     <div className="grid grid-cols-1 gap-3">
                       {ITEM_CATALOG.ads_book.map((item: any) => (
@@ -855,7 +858,7 @@ export default function ShortDrama() {
             <section id="step4">
                <SectionTitle step="4" en="Poster & Brand Exhibitions" zh="海报与专区展示" />
                <div className="mb-4 overflow-hidden rounded-[16px]">
-                  <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1531259683007-016a7b628fc3%3Fq%3D80%26w%3D2670%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" referrerPolicy="no-referrer" alt="Gallery" className="w-full h-32 object-cover opacity-60 border border-[#252525] rounded-[16px]"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                  <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1531259683007-016a7b628fc3%3Fq%3D80%26w%3D2670%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" referrerPolicy="no-referrer" alt="Gallery" className="w-full h-32 object-cover opacity-60 border border-[#252525] rounded-[16px]"  width="1200" height="800"   />
                </div>
                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                  {ITEM_CATALOG.posters.map((item: any) => (
@@ -887,7 +890,7 @@ export default function ShortDrama() {
             <section id="step5">
                <SectionTitle step="5" en="Production Team Pitch" zh="制作团队展示与路演(8分钟)" />
                <div className="mb-6 overflow-hidden rounded-[20px]">
-                  <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1559532297-c6a6f6fcd1bb%3Fq%3D80%26w%3D2670%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" referrerPolicy="no-referrer" alt="Pitch" className="w-full h-48 object-cover opacity-60 border border-[#252525] rounded-[20px]"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                  <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1559532297-c6a6f6fcd1bb%3Fq%3D80%26w%3D2670%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" referrerPolicy="no-referrer" alt="Pitch" className="w-full h-48 object-cover opacity-60 border border-[#252525] rounded-[20px]"  width="1200" height="800"   />
                </div>
                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                  {ITEM_CATALOG.pitch.map(item => <CardItem key={item.id} item={item} />)}
@@ -956,7 +959,7 @@ export default function ShortDrama() {
             <section id="step6">
                <SectionTitle step="6" en="Sponsorship Packages" zh="官方赞助组合套餐" />
                <div className="mb-6 overflow-hidden rounded-[20px]">
-                  <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1561489422-45de3d015e3e%3Fq%3D80%26w%3D2670%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" referrerPolicy="no-referrer" alt="Event Package" className="w-full h-48 object-cover opacity-60 border border-[#252525] rounded-[20px]"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                  <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1561489422-45de3d015e3e%3Fq%3D80%26w%3D2670%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" referrerPolicy="no-referrer" alt="Event Package" className="w-full h-48 object-cover opacity-60 border border-[#252525] rounded-[20px]"  width="1200" height="800"   />
                </div>
                <div className="mb-6 pl-4 border-l-2 border-[#C9A84C] bg-[#1A1A1A] p-4 text-sm text-gray-300 leading-relaxed rounded-r">
                   {"Maximum value. Select one of our curated packages. (Selecting a package will clear other package selections)."}

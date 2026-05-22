@@ -74,7 +74,7 @@ const DomainVisuals: React.FC = () => {
               src={images[domain.id]} 
               alt={domain.id} 
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-             width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+             width="1200" height="800"   />
           ) : (
             <div className="absolute inset-0 flex items-center justify-center text-white/40 text-sm italic">
               Visual for {domain.id}

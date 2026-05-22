@@ -23,7 +23,7 @@ const About: React.FC = () => {
             src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1522071820081-009f0129c71c%3Fauto%3Dformat%26fit%3Dcrop%26w%3D2670%26q%3D80&w=1200&output=webp" 
             alt="Diverse team of young filmmakers" 
             className="w-full h-full object-cover opacity-50 mix-blend-luminosity" 
-           width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+           width="1200" height="800"   />
           <div className="absolute inset-0 bg-gradient-to-t from-gfa-inkBlack via-gfa-inkBlack/50 to-transparent"></div>
         </div>
 
@@ -54,7 +54,7 @@ const About: React.FC = () => {
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-100 h-80">
-               <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1600880292203-757bb62b4baf%3Fauto%3Dformat%26fit%3Dcrop%26w%3D1000%26q%3D80&w=1200&output=webp" alt="Film Team Working" className="w-full h-full object-cover"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+               <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1600880292203-757bb62b4baf%3Fauto%3Dformat%26fit%3Dcrop%26w%3D1000%26q%3D80&w=1200&output=webp" alt="Film Team Working" className="w-full h-full object-cover"  width="1200" height="800"   />
             </div>
           </div>
 
@@ -146,7 +146,7 @@ const About: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
              <div className="bg-[#F5F2EE] rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
                <div className="h-56 overflow-hidden relative">
-                 <img loading="lazy" src="https://i.ibb.co/TxbFZqLB/Gemini-Generated-Image-v3wfmxv3wfmxv3wf.png" alt="Filmmaker Action" className="w-full h-full object-cover"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                 <img loading="lazy" src="https://i.ibb.co/TxbFZqLB/Gemini-Generated-Image-v3wfmxv3wfmxv3wf.png" alt="Filmmaker Action" className="w-full h-full object-cover"  width="1200" height="800"   />
                </div>
                <div className="p-8">
                  <div className="text-xs font-bold text-[#C9A84C] uppercase tracking-widest mb-3">{"Career Support"}</div>
@@ -159,7 +159,7 @@ const About: React.FC = () => {
 
              <div className="bg-[#F5F2EE] rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
                <div className="h-56 overflow-hidden relative">
-                 <img loading="lazy" src="https://i.ibb.co/93ZJzvsG/Gemini-Generated-Image-98n2ne98n2ne98n2.png" alt="Summer Camp" className="w-full h-full object-cover"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                 <img loading="lazy" src="https://i.ibb.co/93ZJzvsG/Gemini-Generated-Image-98n2ne98n2ne98n2.png" alt="Summer Camp" className="w-full h-full object-cover"  width="1200" height="800"   />
                </div>
                <div className="p-8">
                  <div className="text-xs font-bold text-[#C9A84C] uppercase tracking-widest mb-3">{"Youth Camp"}</div>
@@ -172,7 +172,7 @@ const About: React.FC = () => {
 
              <div className="bg-[#F5F2EE] rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
                <div className="h-56 overflow-hidden relative flex justify-center p-4">
-                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co%2F8gHZ9bxG%2FChat-GPT-Image-2026-3-8-11-02-27.png&w=1200&output=webp" alt="Awards Night" className="h-full object-contain drop-shadow-xl"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                 <img loading="lazy" src="https://wsrv.nl/?url=i.ibb.co%2F8gHZ9bxG%2FChat-GPT-Image-2026-3-8-11-02-27.png&w=1200&output=webp" alt="Awards Night" className="h-full object-contain drop-shadow-xl"  width="1200" height="800"   />
                </div>
                <div className="p-8">
                  <div className="text-xs font-bold text-[#C9A84C] uppercase tracking-widest mb-3">{"Golden Feather"}</div>
@@ -199,7 +199,7 @@ const About: React.FC = () => {
               <div className="bg-white p-6 md:p-8 rounded-3xl border border-gray-100 flex flex-col md:flex-row gap-6 hover:shadow-lg transition-shadow group">
                  <div className="md:w-1/3 shrink-0">
                     <div className="h-56 md:h-full bg-gray-200 rounded-2xl overflow-hidden relative">
-                       <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1478720568477-152d9b164e26%3Fq%3D80%26w%3D2000%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" alt="News Image 1" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                       <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1478720568477-152d9b164e26%3Fq%3D80%26w%3D2000%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" alt="News Image 1" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"  width="1200" height="800"   />
                     </div>
                  </div>
                  <div className="md:w-2/3 flex flex-col justify-center">
@@ -220,7 +220,7 @@ const About: React.FC = () => {
               <div className="bg-white p-6 md:p-8 rounded-3xl border border-gray-100 flex flex-col md:flex-row gap-6 hover:shadow-lg transition-shadow group">
                  <div className="md:w-1/3 shrink-0">
                     <div className="h-56 md:h-full bg-gray-200 rounded-2xl overflow-hidden relative">
-                       <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1485846234645-a62644f84728%3Fq%3D80%26w%3D2000%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" alt="News Image 2" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"  width="1200" height="800"  onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/eeeeee/999999?text=Image+Not+Found"; }} />
+                       <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1485846234645-a62644f84728%3Fq%3D80%26w%3D2000%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" alt="News Image 2" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"  width="1200" height="800"   />
                     </div>
                  </div>
                  <div className="md:w-2/3 flex flex-col justify-center">
