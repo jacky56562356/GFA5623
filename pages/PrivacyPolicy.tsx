@@ -29,7 +29,7 @@ const PrivacyPolicy: React.FC = () => {
           <div className="prose prose-lg prose-slate max-w-none prose-h2:font-serif prose-h2:text-gfa-inkBlack prose-a:text-[#C9A84C]">
             <>
 <h2>1. Introduction</h2>
-                <p> Global Film Alliance, Inc. ("GFA," "we," "us," or "our") respects your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website (gfafilm.org) and register for our programs. Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site. </p>
+                <p> Global Film Alliance, Inc. ("GFA," "we," "us," or "our") respects your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website (gfaalliance.org) and register for our programs. Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site. </p>
 
                 <h2>2. Information We Collect</h2>
                 <p>We may collect information about you in a variety of ways. The information we may collect on the Site includes:</p>
