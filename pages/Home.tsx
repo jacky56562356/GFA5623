@@ -70,7 +70,7 @@ const Home: React.FC = () => {
       {/* Crisis Data Section */}
       <section className="py-4 md:py-3 relative overflow-hidden bg-gfa-inkBlack border-b border-white/10">
         <div className="absolute inset-0 z-0">
-          <img fetchPriority="high" 
+          <img fetchpriority="high" 
             src="https://wsrv.nl/?url=i.ibb.co%2FbgKF8pwy%2FGemini-Generated-Image-jtsengjtsengjtse.png&w=1200&output=webp" 
             alt="Film reel background" 
             className="w-full h-full object-cover opacity-10 mix-blend-luminosity" 

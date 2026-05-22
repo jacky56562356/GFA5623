@@ -57,7 +57,7 @@ const Certification: React.FC = () => {
 
       {/* Global Background Image */}
       <div className="fixed inset-0 z-0 opacity-[0.03] pointer-events-none">
-        <img fetchPriority="high" 
+        <img fetchpriority="high" 
           src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1485846234645-a62644f84728%3Fq%3D80%26w%3D2059%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" 
           alt="Film Background" 
           className="w-full h-full object-cover"

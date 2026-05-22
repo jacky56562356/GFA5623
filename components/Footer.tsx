@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
         {/* Brand & Mission */}
         <div className="space-y-3 lg:border-r lg:border-white/10 lg:pr-8">
           <div className="flex items-center gap-4">
-            <img fetchPriority="high"  src="https://images.unsplash.com/photo-1578885136359-16c80b164ebc?q=80&w=200&auto=format&fit=crop" alt="GFA Logo" className="h-20 w-auto object-contain"  width="1200" height="800"   />
+            <img fetchpriority="high"  src="https://images.unsplash.com/photo-1578885136359-16c80b164ebc?q=80&w=200&auto=format&fit=crop" alt="GFA Logo" className="h-20 w-auto object-contain"  width="1200" height="800"   />
             <div className="flex flex-col">
               <span className="text-3xl font-bold tracking-tighter font-serif leading-none"> GFA </span>
               <span className="text-[10px] uppercase tracking-[0.2em] text-[#C9A84C] font-bold mt-1"> Global Film Alliance </span>
