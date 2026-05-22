@@ -17,7 +17,7 @@ const ProgramAwards: React.FC = () => {
       <div className="relative bg-gfa-inkBlack h-[70vh] min-h-[600px] flex flex-col justify-end pb-4 mb-4 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img fetchpriority="high" 
-            src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?q=80&w=1200&auto=format&fit=crop" 
+            src="https://wsrv.nl/?url=i.ibb.co/pjRZK2vm/Gemini-Generated-Image-k7a54jk7a54jk7a5-1.png&w=1200&output=webp" 
             alt="Golden Feather Awards" 
             className="w-full h-full object-cover object-[center_20%] opacity-90"
            width="1200" height="800"   />
@@ -66,8 +66,8 @@ const ProgramAwards: React.FC = () => {
                </div>
             </div>
             <div className="md:w-[40%] grid grid-cols-2 gap-4">
-                <img loading="lazy"  src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?q=80&w=1200&auto=format&fit=crop" className="rounded-3xl w-full h-auto object-cover shadow-md aspect-square" alt="Ceremony"  width="1200" height="800"   />
-                <img loading="lazy" src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?q=80&w=1200&auto=format&fit=crop" className="rounded-3xl w-full h-auto object-cover shadow-md aspect-square mt-3" alt="Trophy"  width="1200" height="800"   />
+                <img loading="lazy" src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1200&auto=format&fit=crop" className="rounded-3xl w-full h-auto object-cover shadow-md aspect-square" alt="Ceremony"  width="1200" height="800"   />
+                <img loading="lazy" src="https://i.ibb.co/8gHZ9bxG/Chat-GPT-Image-2026-3-8-11-02-27.png" className="rounded-3xl w-full h-auto object-cover shadow-md aspect-square mt-3" alt="Awards Recognition"  width="1200" height="800"   />
             </div>
          </section>
 
@@ -205,7 +205,7 @@ const ProgramAwards: React.FC = () => {
                        <div className="w-16 h-16 bg-[#C9A84C] rounded-full flex items-center justify-center text-white font-bold font-serif text-xl border-4 border-white shadow-lg">01</div>
                     </div>
                     <div className="md:w-5/12 text-center md:text-left">
-                       <img loading="lazy" src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?q=80&w=1200&auto=format&fit=crop" className="rounded-3xl w-full h-48 object-cover shadow-md mx-auto" alt="Red Carpet"  width="1200" height="800"   />
+                       <img loading="lazy" src="https://images.unsplash.com/photo-1542204165-65bf26472b9b?q=80&w=1200&auto=format&fit=crop" className="rounded-3xl w-full h-48 object-cover shadow-md mx-auto" alt="Red Carpet"  width="1200" height="800"   />
                     </div>
                  </div>
 
@@ -219,7 +219,7 @@ const ProgramAwards: React.FC = () => {
                        <div className="w-16 h-16 bg-[#C9A84C] rounded-full flex items-center justify-center text-white font-bold font-serif text-xl border-4 border-white shadow-lg">02</div>
                     </div>
                     <div className="md:w-5/12 text-center md:text-right">
-                       <img loading="lazy" src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?q=80&w=1200&auto=format&fit=crop" className="rounded-3xl w-full h-48 object-cover shadow-md mx-auto" alt="Premiere"  width="1200" height="800"   />
+                       <img loading="lazy" src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1200&auto=format&fit=crop" className="rounded-3xl w-full h-48 object-cover shadow-md mx-auto" alt="Premiere"  width="1200" height="800"   />
                     </div>
                  </div>
 
@@ -233,7 +233,7 @@ const ProgramAwards: React.FC = () => {
                        <div className="w-16 h-16 bg-[#C9A84C] rounded-full flex items-center justify-center text-white font-bold font-serif text-xl border-4 border-white shadow-lg">03</div>
                     </div>
                     <div className="md:w-5/12 text-center md:text-left">
-                       <img loading="lazy" src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?q=80&w=1200&auto=format&fit=crop" className="rounded-3xl w-full h-48 object-cover shadow-md mx-auto" alt="Presentation"  width="1200" height="800"   />
+                       <img loading="lazy" src="https://images.unsplash.com/photo-1540829016269-e05670f88adb?q=80&w=1200&auto=format&fit=crop" className="rounded-3xl w-full h-48 object-cover shadow-md mx-auto" alt="Presentation"  width="1200" height="800"   />
                     </div>
                  </div>
 
@@ -247,7 +247,7 @@ const ProgramAwards: React.FC = () => {
                        <div className="w-16 h-16 bg-[#C9A84C] rounded-full flex items-center justify-center text-white font-bold font-serif text-xl border-4 border-white shadow-lg">04</div>
                     </div>
                     <div className="md:w-5/12 text-center md:text-right">
-                       <img loading="lazy" src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?q=80&w=1200&auto=format&fit=crop" className="rounded-3xl w-full h-48 object-cover shadow-md mx-auto" alt="Networking"  width="1200" height="800"   />
+                       <img loading="lazy" src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=1200&auto=format&fit=crop" className="rounded-3xl w-full h-48 object-cover shadow-md mx-auto" alt="Networking"  width="1200" height="800"   />
                     </div>
                  </div>
               </div>
