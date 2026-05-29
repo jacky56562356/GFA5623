@@ -10,7 +10,8 @@ import {
   FileText, 
   Check, 
   Lock,
-  ChevronDown
+  ChevronDown,
+  Landmark
 } from 'lucide-react';
 
 const Donate: React.FC = () => {
@@ -275,23 +276,31 @@ const Donate: React.FC = () => {
                </p>
             </div>
 
-            <div className="border border-gray-100 rounded-3xl p-8 bg-gray-50">
-               <div className="bg-[#0D1B2A] text-white w-14 h-14 rounded-2xl flex items-center justify-center mb-3 shadow-md">
-                 <Mail className="w-7 h-7" />
+            <div className="border border-gray-100 rounded-3xl p-5 md:p-8 bg-gray-50 flex flex-col h-full">
+               <div className="bg-[#0D1B2A] text-white w-14 h-14 rounded-2xl flex items-center justify-center mb-3 shadow-md shrink-0">
+                 <Landmark className="w-7 h-7" />
                </div>
-               <h3 className="text-xl font-bold text-[#0D1B2A] mb-4">
-                 {"Check"}
+               <h3 className="text-xl font-bold text-[#0D1B2A] mb-4 shrink-0">
+                 {"Bank Transfer & Check"}
                </h3>
-               <div className="text-gray-600 text-sm leading-relaxed">
-                 <p className="mb-2 font-bold">{"Payable to:"}</p>
+               <div className="text-gray-600 text-sm leading-relaxed flex-grow">
+                 <p className="mb-2 font-bold">{"Bank Transfer:"}</p>
+                 <div className="mb-4 bg-white px-3 py-2 border rounded-lg break-all">
+                   <p className="font-semibold text-[#0D1B2A] mb-1">Bank of America</p>
+                   <p>Account Name: Global Film Alliance Inc</p>
+                   <p>Account: 325298651143</p>
+                   <p>Routing: 026009593</p>
+                 </div>
+                 
+                 <p className="mb-2 font-bold">{"Check Payable to:"}</p>
                  <p className="mb-4 bg-white px-3 py-2 border rounded-lg"> Global Film Alliance, Inc. </p>
                  
                  <p className="mb-2 font-bold">{"Mailing Address:"}</p>
-                 <p className="mb-4 bg-white px-3 py-2 border rounded-lg whitespace-pre-wrap">
+                 <p className="mb-2 bg-white px-3 py-2 border rounded-lg whitespace-pre-wrap">
                    17800 Castleton St, Suite 173{"\n"}City of Industry, CA 91748
                  </p>
                  
-                 <p className="italic text-xs mt-4">
+                 <p className="italic text-xs mt-2">
                    {"Memo: Donation for [Program]"}
                  </p>
                </div>
