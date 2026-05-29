@@ -80,6 +80,45 @@ async function startServer() {
     }
   });
 
+  app.post("/api/create-donation-session", async (req, res) => {
+    try {
+      const { amount, frequency } = req.body;
+      
+      const stripe = getStripe();
+      const origin = req.headers.origin || `http://localhost:${PORT}`;
+
+      const session = await stripe.checkout.sessions.create({
+        payment_method_types: ['card'],
+        line_items: [
+          {
+            price_data: {
+              currency: 'usd',
+              product_data: {
+                name: 'Donation to Global Film Alliance',
+                description: frequency === 'monthly' ? 'Monthly Donation' : 'One-time Donation'
+              },
+              unit_amount: Math.round(Number(amount) * 100),
+              recurring: frequency === 'monthly' ? { interval: 'month' } : undefined,
+            },
+            quantity: 1,
+          }
+        ],
+        mode: frequency === 'monthly' ? 'subscription' : 'payment',
+        success_url: `${origin}/donate`,
+        cancel_url: `${origin}/donate`,
+      });
+
+      res.json({ url: session.url });
+    } catch (e: any) {
+       console.error('Donation checkout error:', e);
+       if (e.message.includes('STRIPE_SECRET_KEY')) {
+           res.status(500).json({ error: "missing_stripe_key", message: "Stripe API Key is missing." });
+       } else {
+           res.status(500).json({ error: "stripe_error", message: e.message || 'Internal Server Error' });
+       }
+    }
+  });
+
   // Vite middleware for development
   if (process.env.NODE_ENV !== "production") {
     const vite = await createViteServer({

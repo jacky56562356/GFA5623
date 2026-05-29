@@ -23,9 +23,44 @@ const Donate: React.FC = () => {
   const [frequency, setFrequency] = useState<'one-time' | 'monthly'>('one-time');
 
   const [donationInitiated, setDonationInitiated] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleDonateSubmit = () => {
-    setDonationInitiated(true);
+  const handleDonateSubmit = async () => {
+    const finalAmount = amount === 'custom' ? customAmount : amount;
+    if (!finalAmount || isNaN(Number(finalAmount)) || Number(finalAmount) <= 0) {
+      alert(isEn ? 'Please select or enter a valid amount.' : '请输入有效的捐款金额。');
+      return;
+    }
+
+    setIsSubmitting(true);
+    try {
+      const response = await fetch('/api/create-donation-session', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          amount: finalAmount,
+          frequency,
+        }),
+      });
+
+      const result = await response.json();
+      
+      if (!response.ok) {
+        if (result.error === "missing_stripe_key") {
+          alert('Stripe Checkout Demo Mode: Success! (Add STRIPE_SECRET_KEY to environment variables to test real payments)');
+          setDonationInitiated(true);
+        } else {
+          alert("Error: " + (result.message || "Failed to initialize payment."));
+        }
+      } else if (result.url) {
+        window.location.href = result.url;
+      }
+    } catch (e) {
+      console.error(e);
+      alert("Network error, please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const amounts = [
@@ -235,11 +270,12 @@ const Donate: React.FC = () => {
             ) : (
               <button 
                 onClick={handleDonateSubmit}
-                className="w-full bg-[#C9A043] hover:bg-[#b58f3c] text-white py-3 rounded-2xl font-bold text-lg md:text-xl transform transition-transform hover:-translate-y-1 shadow-lg hover:shadow-xl flex flex-col items-center justify-center group"
+                disabled={isSubmitting}
+                className={`w-full bg-[#C9A043] ${isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:bg-[#b58f3c] hover:-translate-y-1 hover:shadow-xl'} text-white py-3 rounded-2xl font-bold text-lg md:text-xl transform transition-all shadow-lg flex flex-col items-center justify-center group`}
               >
                 <span className="uppercase tracking-widest mb-1">
-                  {`Donate Now · Secure Payment`}
-                  {amount !== 'custom' ? ` ($${amount})` : customAmount ? ` ($${customAmount})` : ''}
+                  {isSubmitting ? 'Processing Stripe Gateway...' : `Donate Now · Secure Payment`}
+                  {!isSubmitting && (amount !== 'custom' ? ` ($${amount})` : customAmount ? ` ($${customAmount})` : '')}
                 </span>
               </button>
             )}
