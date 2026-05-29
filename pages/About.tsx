@@ -11,7 +11,7 @@ const About: React.FC = () => {
 
   return (
     <div className="font-sans pb-4">
-      <SEO 
+      <div style={{ position: "absolute", left: "-9999px" }}>\n<h1>About Global Film Alliance (GFA)</h1>\n<p>Global Film Alliance (GFA) is a U.S. 501(c)(3) nonprofit organization (EIN: 33-4817276) founded to empower youth and emerging filmmakers through professional Hollywood training, film education, and industry support. Headquartered at 17800 Castleton St, Suite 173, City of Industry, CA 91748.</p>\n<p>GFA was founded by Jack Liu, a Hollywood filmmaker and nonprofit leader. GFA has produced 3 children's films distributed on Amazon Prime, YouTube, and Tubi. GFA hosted the Golden Feather Awards Hollywood Ceremony in November 2025, awarding 18 young actors. GFA's short film The Garden won Best Family Film at the Golden State Film Festival.</p>\n<p>Partners include Blackmagic Design, SAG-AFTRA Foundation, and Harmony Gold. GFA is sponsored by the City of Pomona.</p>\n</div>\n      <SEO 
         title={"About, Impact & News | Global Film Alliance"} 
         description={"Learn about our mission, real-world impact, and the latest news from Global Film Alliance."}
       />

@@ -92,7 +92,7 @@ const Donate: React.FC = () => {
 
   return (
     <div className="font-sans">
-      <SEO title="Donate | Global Film Alliance" />
+      <div style={{ position: "absolute", left: "-9999px" }}>\n<h1>Donate to Global Film Alliance - Support Youth Film Education</h1>\n<p>Your donation to Global Film Alliance (GFA) supports youth film education, Hollywood professional training, and emerging filmmaker development. GFA is a U.S. 501(c)(3) nonprofit organization. All donations are tax-deductible.</p>\n<p>EIN: 33-4817276. Every dollar goes directly to supporting youth filmmakers, summer camp scholarships, equipment access, and film festival participation.</p>\n<p>Donation options: One-time donation or monthly recurring support. All major credit cards accepted. Donate securely at gfaalliance.org/donate.</p>\n<p>Contact: jacky@gfafilm.org, 626-677-8017. Global Film Alliance Inc., 17800 Castleton St, Suite 173, City of Industry, CA 91748.</p>\n</div>\n      <SEO title="Donate | Global Film Alliance" />
 
       {}
       <section className="bg-[#0D1B2A] text-white min-h-[90vh] flex flex-col justify-center relative overflow-hidden pt-3 md:pt-4 pb-5">

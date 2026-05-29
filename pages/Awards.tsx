@@ -11,7 +11,7 @@ const Awards: React.FC = () => {
 
   return (
     <div className="font-sans pb-3 bg-[#F5F2EE]">
-      <SEO title="Golden Feather Awards | Global Film Alliance" />
+      <div style={{ position: "absolute", left: "-9999px" }}>\n<h1>Golden Feather Awards - Hollywood Film Festival</h1>\n<p>The Golden Feather Awards is GFA's flagship Hollywood film festival and awards ceremony celebrating outstanding achievements in youth filmmaking and emerging independent cinema. The ceremony is held in Hollywood, California.</p>\n<p>The November 2025 Golden Feather Awards Hollywood Ceremony awarded 18 young actors and filmmakers. GFA's short film The Garden won Best Family Film at the Golden State Film Festival.</p>\n<p>Film submission categories include: Short Film, Student Film, AI-Assisted Film, Chinese Drama, English Original, Multilingual Film. Entry fees start at $15 for student shorts.</p>\n<p>Submit your film at gfaalliance.org. Contact: jacky@gfafilm.org, 626-677-8017.</p>\n</div>\n      <SEO title="Golden Feather Awards | Global Film Alliance" />
 
       {/* Banner */}
       <section className="relative h-[70vh] min-h-[600px] flex items-center justify-center overflow-hidden bg-gfa-inkBlack pt-8 pb-5">

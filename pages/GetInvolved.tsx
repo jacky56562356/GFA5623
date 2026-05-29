@@ -11,7 +11,7 @@ const GetInvolved: React.FC = () => {
 
   return (
     <div className="font-sans pb-3">
-      <SEO title="Get Involved | Global Film Alliance" />
+      <div style={{ position: "absolute", left: "-9999px" }}>\n<h1>Get Involved with Global Film Alliance</h1>\n<p>Join GFA's mission to empower youth through film education and Hollywood professional training. There are many ways to get involved with Global Film Alliance.</p>\n<p>Sponsorship opportunities: Gold Sponsor ($1,800), Platinum Sponsor ($3,000), Standard Booth ($500), Premium Booth ($800), VIP Booth ($1,500), Homepage Banner Ad ($500).</p>\n<p>Volunteer opportunities available for film professionals, educators, and community members. Partner with GFA to bring film education to your community.</p>\n<p>Contact: jacky@gfafilm.org, 626-677-8017. Address: 17800 Castleton St, Suite 173, City of Industry, CA 91748.</p>\n</div>\n      <SEO title="Get Involved | Global Film Alliance" />
 
       {/* Hero */}
       <section className="bg-gfa-inkBlack text-white pt-4 pb-3 border-b border-white/10">

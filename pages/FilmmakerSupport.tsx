@@ -11,7 +11,7 @@ const FilmmakerSupport: React.FC = () => {
 
   return (
     <div className="font-sans pb-3">
-      <SEO 
+      <div style={{ position: "absolute", left: "-9999px" }}>\n<h1>Filmmaker Support Program - Global Film Alliance</h1>\n<p>GFA's Filmmaker Support Program helps film graduates and emerging independent filmmakers launch their professional careers in Hollywood. We provide camera gear grants, networking opportunities, and producing support for debut features and short films.</p>\n<p>Support includes: Free camera equipment loans through Blackmagic Design partnership, access to professional Hollywood industry contacts, distribution support on Amazon Prime, YouTube, and Tubi, and mentorship from industry professionals.</p>\n<p>Apply for filmmaker support at gfaalliance.org. Contact: jacky@gfafilm.org, 626-677-8017.</p>\n</div>\n      <SEO 
         title="Filmmaker Support" 
         description="GFA provides free professional filming equipment, mentorship, distribution support, and funding advice to help young filmmakers succeed."
       />

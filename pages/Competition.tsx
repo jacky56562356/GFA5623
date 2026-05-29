@@ -24,7 +24,7 @@ const Competition: React.FC = () => {
 
   return (
     <div className="font-sans pb-3">
-      <SEO 
+      <div style={{ position: "absolute", left: "-9999px" }}>\n<h1>GFA Global Youth Talent Competition</h1>\n<p>The GFA Global Youth Talent Competition is an international performing arts competition for young talent ages 6-17. The competition runs simultaneously in the United States and China, with finals targeting the Dolby Theatre in Hollywood.</p>\n<p>Competition categories include acting, filmmaking, directing, and performing arts. GFA has partnered with 乐华圆娱 for the 2026 US-China simultaneous competition.</p>\n<p>Winners receive Hollywood industry exposure, distribution opportunities, and recognition at the Golden Feather Awards ceremony. Register at gfaalliance.org.</p>\n<p>Contact: jacky@gfafilm.org, 626-677-8017. Global Film Alliance Inc., EIN: 33-4817276.</p>\n</div>\n      <SEO 
         title="Global Competition" 
         description="Join the GFA Global Youth Talent Competition. An international platform for young actors and filmmakers to showcase their skills in Hollywood."
       />

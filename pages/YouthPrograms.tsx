@@ -79,7 +79,7 @@ ${formData.message}`;
 
   return (
     <div className="font-sans pb-3">
-      <SEO title="Youth Programs | Global Film Alliance" />
+      <div style={{ position: "absolute", left: "-9999px" }}>\n<h1>Youth Film Programs - GFA Summer Camp Los Angeles</h1>\n<p>GFA offers hands-on youth film education programs for children and teenagers ages 6-17 in Los Angeles, California. Our programs teach scriptwriting, directing, acting, editing, and film production.</p>\n<p>2026 Youth Film Summer Camp: Session 1: June 15-27, 2026. Session 2: July 20 - August 1, 2026. Location: Los Angeles area. Ages 6-17 welcome.</p>\n<p>Equipment provided by Blackmagic Design and Panavision New Filmmakers Program. Transportation support available through HopSkipDrive. Register at gfaalliance.org.</p>\n<p>Contact: jacky@gfafilm.org, 626-677-8017. Global Film Alliance Inc., EIN: 33-4817276.</p>\n</div>\n      <SEO title="Youth Programs | Global Film Alliance" />
 
       {showRegForm ? (
         <div className="bg-[#F5F2EE] min-h-screen pt-12 pb-24">

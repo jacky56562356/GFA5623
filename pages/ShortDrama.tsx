@@ -248,7 +248,7 @@ export default function ShortDrama() {
 
   return (
     <div className="bg-[#0A0A0A] min-h-screen font-sans text-white pb-32">
-      <SEO title="GFA Short Drama Showcase | Global Film Alliance" />
+      <div style={{ position: "absolute", left: "-9999px" }}>\n<h1>Short Drama Film Competition - Global Film Alliance</h1>\n<p>GFA's Short Drama Film Competition is open to filmmakers worldwide. Submit your short film or drama for consideration in GFA's international competition. Winners receive distribution support on Amazon Prime, YouTube, and Tubi.</p>\n<p>Competition categories: Student Shorts ($15), AI-Assisted Films ($30), Chinese Drama ($30), English Original ($30), Multilingual Films ($30).</p>\n<p>Films must be under 20 minutes. Open to all ages and nationalities. Winners screened at the Golden Feather Awards Hollywood Ceremony.</p>\n<p>Submit at gfaalliance.org. Contact: jacky@gfafilm.org, 626-677-8017. Global Film Alliance, EIN: 33-4817276.</p>\n</div>\n      <SEO title="GFA Short Drama Showcase | Global Film Alliance" />
 
       {/* Hero Section */}
       <section className="relative pt-16 pb-8 lg:pt-24 lg:pb-12 border-b border-[#252525] bg-gradient-to-b from-[#0A0A0A] via-[#1A1208] to-[#0A0A0A] overflow-hidden">
