@@ -9,8 +9,8 @@ const Transparency: React.FC = () => {
   const tr = t.transparency;
 
   const tableData = [
-    { type: t.locale === 'zh' ? '会员注册' : 'Member Registration', fee: '$0.00 / ¥0', req: t.common.required, note: t.locale === 'zh' ? '基础身份核验' : 'Baseline identity verification.', ref: 'No' },
-    { type: t.locale === 'zh' ? '试镜授权费' : 'Authorized Audition Fee', fee: 'Capped / 受限', req: t.common.optional, note: t.locale === 'zh' ? '受 GFA 标准约束' : 'Capped by GFA Standards.', ref: 'Yes' }
+    { type: 'Member Registration', fee: '$0.00 / ¥0', req: t.common.required, note: 'Baseline identity verification.', ref: 'No' },
+    { type: 'Authorized Audition Fee', fee: 'Capped', req: t.common.optional, note: 'Capped by GFA Standards.', ref: 'Yes' }
   ];
 
   return (

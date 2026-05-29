@@ -28,7 +28,7 @@ const Donate: React.FC = () => {
   const handleDonateSubmit = async () => {
     const finalAmount = amount === 'custom' ? customAmount : amount;
     if (!finalAmount || isNaN(Number(finalAmount)) || Number(finalAmount) <= 0) {
-      alert(isEn ? 'Please select or enter a valid amount.' : '请输入有效的捐款金额。');
+      alert('Please select or enter a valid amount.');
       return;
     }
 
@@ -66,33 +66,27 @@ const Donate: React.FC = () => {
   const amounts = [
     {
       value: '25',
-      enDesc: 'One day of camp for a youth filmmaker',
-      zhDesc: '为一位孩子提供一天的营地体验'
+      enDesc: 'One day of camp for a youth filmmaker'
     },
     {
       value: '50',
-      enDesc: 'One mentorship session for a film graduate',
-      zhDesc: '支付一位毕业生一次导师指导课'
+      enDesc: 'One mentorship session for a film graduate'
     },
     {
       value: '100',
-      enDesc: 'Equipment rental for one day of production',
-      zhDesc: '为一部短片支付一天的设备租金'
+      enDesc: 'Equipment rental for one day of production'
     },
     {
       value: '250',
-      enDesc: 'Full camp scholarship for a low-income youth',
-      zhDesc: '资助一位低收入学生参加完整影视夏令营'
+      enDesc: 'Full camp scholarship for a low-income youth'
     },
     {
       value: '500',
-      enDesc: 'One month mentorship for an emerging director',
-      zhDesc: '为一位新晋导演提供一个月的导师计划'
+      enDesc: 'One month mentorship for an emerging director'
     },
     {
       value: '1000',
-      enDesc: 'Name an annual scholarship in your honor',
-      zhDesc: '以你的名字命名一个年度奖学金名额'
+      enDesc: 'Name an annual scholarship in your honor'
     }
   ];
 
@@ -100,7 +94,7 @@ const Donate: React.FC = () => {
     <div className="font-sans">
       <SEO title="Donate | Global Film Alliance" />
 
-      {/* 2. Hero情感区 */}
+      {}
       <section className="bg-[#0D1B2A] text-white min-h-[90vh] flex flex-col justify-center relative overflow-hidden pt-3 md:pt-4 pb-5">
         <div className="container-gfa max-w-4xl mx-auto px-4 text-center relative z-10">
           <div className="inline-block bg-[#C9A043]/10 border border-[#C9A043]/30 px-6 py-2 rounded-full mb-4">
@@ -133,7 +127,7 @@ const Donate: React.FC = () => {
         </div>
       </section>
 
-      {/* 3. 捐款理由区 */}
+      {}
       <section className="py-5 md:py-28 bg-white">
         <div className="container-gfa max-w-6xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold font-serif text-[#0D1B2A] mb-3">
@@ -171,7 +165,7 @@ const Donate: React.FC = () => {
         </div>
       </section>
 
-      {/* 4. 捐款金额选择区（核心） */}
+      {}
       <section className="py-5 md:py-28 bg-[#F5F2EE]" id="donate-action">
         <div className="container-gfa max-w-4xl mx-auto px-4">
           <div className="text-center mb-3">
@@ -184,7 +178,7 @@ const Donate: React.FC = () => {
           </div>
 
           <div className="bg-white rounded-[2.5rem] p-6 md:p-12 shadow-xl border border-gray-100">
-            {/* Frequency Toggle */}
+            {}
             <div className="flex flex-col items-center mb-5">
               <div className="bg-gray-100 p-1 rounded-full inline-flex mb-4 relative">
                 <button 
@@ -213,7 +207,7 @@ const Donate: React.FC = () => {
               )}
             </div>
 
-            {/* Amounts Grid */}
+            {}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
               {amounts.map((item) => (
                 <button
@@ -233,7 +227,7 @@ const Donate: React.FC = () => {
               ))}
             </div>
 
-            {/* Custom Amount */}
+            {}
             <div className="mb-3">
               <label className="block text-sm font-bold text-[#0D1B2A] mb-2 pl-2">
                 {"Other Amount"}
@@ -255,7 +249,7 @@ const Donate: React.FC = () => {
               </div>
             </div>
 
-            {/* CTA Button */}
+            {}
             {donationInitiated ? (
               <div className="bg-green-50 border border-green-200 text-green-800 p-6 rounded-2xl text-center">
                 <h3 className="text-xl font-bold font-serif mb-2">Thank you for your generosity!</h3>
@@ -288,7 +282,7 @@ const Donate: React.FC = () => {
         </div>
       </section>
 
-      {/* 5. 捐款方式区 */}
+      {}
       <section className="py-5 bg-white" id="ways-to-give">
         <div className="container-gfa max-w-6xl mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold font-serif text-[#0D1B2A] text-center mb-4">
@@ -365,7 +359,7 @@ const Donate: React.FC = () => {
         </div>
       </section>
 
-      {/* 6. 企业赞助区 */}
+      {}
       <section className="py-5 md:py-28 bg-[#0D1B2A] text-white">
         <div className="container-gfa max-w-6xl mx-auto px-4">
           <div className="text-center mb-4">
@@ -378,7 +372,7 @@ const Donate: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center mb-4">
-            {/* Community Partner */}
+            {}
             <div className="border border-white/10 rounded-3xl p-8 bg-white/5 hover:border-[#C9A043]/50 hover:-translate-y-2 transition-all duration-300">
               <div className="bg-white/10 text-white font-bold text-xs uppercase tracking-widest px-4 py-1.5 rounded-full inline-block mb-3"> Community Partner </div>
               <div className="text-4xl font-serif font-bold text-[#C9A043] mb-4 border-b border-white/10 pb-3">$1,000+</div>
@@ -394,7 +388,7 @@ const Donate: React.FC = () => {
               </button>
             </div>
 
-            {/* Silver Partner (Highlighted) */}
+            {}
             <div className="border-2 border-gray-400 rounded-3xl p-10 bg-white/10 transform md:scale-105 hover:border-gray-300 hover:-translate-y-2 transition-all duration-300 relative z-10 shadow-2xl">
               <div className="bg-gradient-to-r from-gray-300 to-gray-500 text-[#0D1B2A] font-bold text-xs uppercase tracking-widest px-4 py-1.5 rounded-full inline-block mb-3"> Silver Partner </div>
               <div className="text-5xl font-serif font-bold text-white mb-4 border-b border-white/20 pb-3">$5,000+</div>
@@ -411,7 +405,7 @@ const Donate: React.FC = () => {
               </button>
             </div>
 
-            {/* Gold Partner */}
+            {}
             <div className="border border-[#C9A043]/50 rounded-3xl p-8 bg-[#C9A043]/5 hover:border-[#C9A043] hover:-translate-y-2 transition-all duration-300">
               <div className="bg-[#C9A043] text-[#0D1B2A] font-bold text-xs uppercase tracking-widest px-4 py-1.5 rounded-full inline-block mb-3"> Gold Partner </div>
               <div className="text-4xl font-serif font-bold text-[#C9A043] mb-4 border-b border-[#C9A043]/20 pb-3">$10,000+</div>
@@ -439,7 +433,7 @@ const Donate: React.FC = () => {
         </div>
       </section>
 
-      {/* 7. 税务声明区 */}
+      {}
       <section className="py-5 bg-[#F5F2EE]">
         <div className="container-gfa max-w-4xl mx-auto px-4">
           <div className="bg-white border-2 border-gray-200 rounded-3xl p-8 md:p-12 text-center shadow-sm">
@@ -476,7 +470,7 @@ const Donate: React.FC = () => {
         </div>
       </section>
 
-      {/* 8. 捐款人感谢区 */}
+      {}
       <section className="py-5 md:py-28 bg-white overflow-hidden">
         <div className="container-gfa max-w-5xl mx-auto px-4">
           <div className="text-center mb-4">
@@ -517,7 +511,7 @@ const Donate: React.FC = () => {
         </div>
       </section>
 
-      {/* 9. 最终CTA区 */}
+      {}
       <section className="py-3 bg-[#0D1B2A] text-center border-t border-white/10">
         <div className="container-gfa max-w-4xl mx-auto px-4">
           <blockquote className="text-2xl md:text-4xl font-serif text-white leading-relaxed max-w-3xl mx-auto mb-3 italic">

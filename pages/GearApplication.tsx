@@ -9,18 +9,18 @@ import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { handleFirestoreError, OperationType } from '../lib/errorHandlers';
 
 const availableGearList = [
-  { id: 'cam_bmpc_6k', name: 'Blackmagic Pocket Cinema Camera 6K Pro', weight: '1.24 kg', remarksEn: 'Includes cage, 5" monitor, and 4x batteries', remarksZh: '包含兔笼、5寸监视器及4块电池' },
-  { id: 'cam_ursa_mini', name: 'Blackmagic URSA Mini Pro 4.6K G2', weight: '2.31 kg', remarksEn: 'V-Mount plate, shoulder rig, requires heavy tripod', remarksZh: 'V口电池板、肩托套件，需配备重型脚架' },
-  { id: 'cam_red_komodo', name: 'RED Komodo 6K', weight: '0.95 kg', remarksEn: 'Compact cine camera, RF to EF adapter included', remarksZh: '轻量首选，包含 RF 转 EF 转接环' },
-  { id: 'lens_zeiss_cp3', name: 'Zeiss CP.3 Prime Lens Kit (21, 35, 50, 85mm)', weight: '4.5 kg (Total)', remarksEn: 'EF / PL Mount available, T2.1', remarksZh: '提供 EF 或 PL 卡口，T2.1光圈' },
-  { id: 'lens_sigma_art', name: 'Sigma Art Cine Zoom Kit (18-35, 50-100)', weight: '3.0 kg (Total)', remarksEn: 'Super35 format, EF Mount, T2.0', remarksZh: 'Super35画幅，EF 卡口变焦组' },
-  { id: 'grip_ronin2', name: 'DJI Ronin 2 Gimbal', weight: '5.5 kg', remarksEn: 'Max payload 13.6 kg', remarksZh: '最大承重13.6kg，推荐双人操作' },
-  { id: 'grip_easyrig', name: 'Easyrig Vario 5', weight: '4.7 kg', remarksEn: 'Supports 5 - 17 kg payloads', remarksZh: '减重背心，支持 5-17 kg 承重' },
-  { id: 'light_arri_s60', name: 'ARRI SkyPanel S60-C', weight: '12 kg', remarksEn: 'RGBW panel, requires Combo Stand', remarksZh: '重型灯具，需二人搬运及配套重型灯架' },
-  { id: 'light_astera_titan', name: 'Astera Titan Tube Kit (8 tubes)', weight: '1.35 kg/tube', remarksEn: 'Wireless RGB tube lights with charging case', remarksZh: '全彩管灯8只装，连充电箱偏重' },
-  { id: 'light_aputure_600d', name: 'Aputure LS 600d Pro', weight: '5.8 kg', remarksEn: 'High output daylight LED', remarksZh: '单头高亮白光，含柔光箱' },
-  { id: 'audio_sennheiser', name: 'Sennheiser MKH 416 Shotgun Mic Kit', weight: '1.2 kg', remarksEn: 'Includes boom pole, shock mount, blimp', remarksZh: '含挑杆、防震架和防风罩' },
-  { id: 'audio_zoom_f8', name: 'Zoom F8n Pro Field Recorder', weight: '1.0 kg', remarksEn: '8-channel/10-track audio recorder', remarksZh: '8通道/10轨专业录音机' }
+  { id: 'cam_bmpc_6k', name: 'Blackmagic Pocket Cinema Camera 6K Pro', weight: '1.24 kg', remarksEn: 'Includes cage, 5" monitor, and 4x batteries' },
+  { id: 'cam_ursa_mini', name: 'Blackmagic URSA Mini Pro 4.6K G2', weight: '2.31 kg', remarksEn: 'V-Mount plate, shoulder rig, requires heavy tripod' },
+  { id: 'cam_red_komodo', name: 'RED Komodo 6K', weight: '0.95 kg', remarksEn: 'Compact cine camera, RF to EF adapter included' },
+  { id: 'lens_zeiss_cp3', name: 'Zeiss CP.3 Prime Lens Kit (21, 35, 50, 85mm)', weight: '4.5 kg (Total)', remarksEn: 'EF / PL Mount available, T2.1' },
+  { id: 'lens_sigma_art', name: 'Sigma Art Cine Zoom Kit (18-35, 50-100)', weight: '3.0 kg (Total)', remarksEn: 'Super35 format, EF Mount, T2.0' },
+  { id: 'grip_ronin2', name: 'DJI Ronin 2 Gimbal', weight: '5.5 kg', remarksEn: 'Max payload 13.6 kg' },
+  { id: 'grip_easyrig', name: 'Easyrig Vario 5', weight: '4.7 kg', remarksEn: 'Supports 5 - 17 kg payloads' },
+  { id: 'light_arri_s60', name: 'ARRI SkyPanel S60-C', weight: '12 kg', remarksEn: 'RGBW panel, requires Combo Stand' },
+  { id: 'light_astera_titan', name: 'Astera Titan Tube Kit (8 tubes)', weight: '1.35 kg/tube', remarksEn: 'Wireless RGB tube lights with charging case' },
+  { id: 'light_aputure_600d', name: 'Aputure LS 600d Pro', weight: '5.8 kg', remarksEn: 'High output daylight LED' },
+  { id: 'audio_sennheiser', name: 'Sennheiser MKH 416 Shotgun Mic Kit', weight: '1.2 kg', remarksEn: 'Includes boom pole, shock mount, blimp' },
+  { id: 'audio_zoom_f8', name: 'Zoom F8n Pro Field Recorder', weight: '1.0 kg', remarksEn: '8-channel/10-track audio recorder' }
 ];
 
 const GearApplication: React.FC = () => {

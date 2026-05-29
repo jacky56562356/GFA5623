@@ -177,10 +177,10 @@ const Competition: React.FC = () => {
              <div className="hidden md:block absolute top-[24px] left-8 right-8 h-0.5 bg-gradient-to-r from-[#C9A84C] to-gray-200"></div>
 
              {[
-               { n: 1, zh: "在线报名", zhd: "填写基本信息和参赛类别", en: "Register Online", end: "Fill out info & categories" },
-               { n: 2, zh: "提交作品", zhd: "上传视频或作品文件", en: "Submit Work", end: "Upload video or file" },
-               { n: 3, zh: "评审入围", zhd: "专业评审委员会审核", en: "Jury Selection", end: "Industry panel review" },
-               { n: 4, zh: "决赛舞台", zhd: "顶级舞台，好莱坞", en: "Grand Finale", end: "Hollywood, LA" },
+               { n: 1, en: "Register Online", end: "Fill out info & categories" },
+               { n: 2, en: "Submit Work", end: "Upload video or file" },
+               { n: 3, en: "Jury Selection", end: "Industry panel review" },
+               { n: 4, en: "Grand Finale", end: "Hollywood, LA" },
              ].map((step) => (
                <div key={step.n} className="relative z-10 pl-10 md:pl-0 md:text-center md:w-1/4">
                  <div className="absolute left-[-20px] top-0 md:relative md:left-auto flex items-center justify-center w-12 h-12 rounded-full border-4 border-white bg-[#C9A84C] text-white font-bold mx-auto mb-4 shadow-sm">

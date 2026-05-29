@@ -22,64 +22,64 @@ import {
 
 // Pricing Data definition
 const DEADLINES = [
-  { id: 'early', nameEn: 'Early Bird', nameZh: '早鸟期', desc: 'Ends Sep 15' },
-  { id: 'regular', nameEn: 'Regular', nameZh: '正常期', desc: 'Ends Oct 30' },
-  { id: 'late', nameEn: 'Late', nameZh: '晚期', desc: 'Ends Nov 30' }
+  { id: 'early', nameEn: 'Early Bird', desc: 'Ends Sep 15' },
+  { id: 'regular', nameEn: 'Regular', desc: 'Ends Oct 30' },
+  { id: 'late', nameEn: 'Late', desc: 'Ends Nov 30' }
 ];
 
 const ITEM_CATALOG = {
   submission: [
-    { id: 'sub-en', nameEn: 'English Original', nameZh: '英文原创短剧', descEn: 'For international markets', descZh: '面向国际市场' },
-    { id: 'sub-zh', nameEn: 'Chinese Drama', nameZh: '中文短剧', descEn: 'With English subtitles', descZh: '附英文字幕' },
-    { id: 'sub-multi', nameEn: 'Multilingual', nameZh: '多语种短剧', descEn: 'Produced in other languages', descZh: '其他语言制作' },
-    { id: 'sub-ai', nameEn: 'AI-Assisted', nameZh: 'AI辅助短剧', descEn: 'Using AI tech', descZh: '使用AI技术制作' }
+    { id: 'sub-en', nameEn: 'English Original', descEn: 'For international markets' },
+    { id: 'sub-zh', nameEn: 'Chinese Drama', descEn: 'With English subtitles' },
+    { id: 'sub-multi', nameEn: 'Multilingual', descEn: 'Produced in other languages' },
+    { id: 'sub-ai', nameEn: 'AI-Assisted', descEn: 'Using AI tech' }
   ],
   student: [
-    { id: 'sub-student', nameEn: 'Student Shorts', nameZh: '学生短剧', descEn: 'Original student productions', descZh: '在校学生原创作品' }
+    { id: 'sub-student', nameEn: 'Student Shorts', descEn: 'Original student productions' }
   ],
   booths: [
-    { id: 'booth-std', nameEn: 'Standard Booth', nameZh: '标准展位', price: 500, descEn: '6x6 ft Space', descZh: '6x6 英尺' },
-    { id: 'booth-pre', nameEn: 'Premium Booth', nameZh: '高级展位', price: 800, descEn: '10x10 ft Space', descZh: '10x10 英尺' },
-    { id: 'booth-vip', nameEn: 'VIP Booth', nameZh: 'VIP展位', price: 1500, descEn: '10x20 ft Space', descZh: '10x20 英尺' }
+    { id: 'booth-std', nameEn: 'Standard Booth', price: 500, descEn: '6x6 ft Space' },
+    { id: 'booth-pre', nameEn: 'Premium Booth', price: 800, descEn: '10x10 ft Space' },
+    { id: 'booth-vip', nameEn: 'VIP Booth', price: 1500, descEn: '10x20 ft Space' }
   ],
   ads_web: [
-    { id: 'ad-home', nameEn: 'Homepage Banner Ad', nameZh: '首页Banner广告', price: 500, descEn: 'Full width, 120px height', descZh: '全宽 · 高度120px' },
-    { id: 'ad-drama', nameEn: 'Drama Page Banner', nameZh: '短剧页Banner', price: 400, descEn: 'Full width, 100px height', descZh: '全宽 · 高度100px' },
-    { id: 'ad-sidebar', nameEn: 'Sidebar Ad', nameZh: '侧边栏广告', price: 200, descEn: '300x250px', descZh: '300x250px' },
-    { id: 'ad-email', nameEn: 'Email Newsletter Logo', nameZh: '邮件Logo', price: 150, descEn: 'Placement in global newsletter', descZh: '全球通讯邮件展示' },
+    { id: 'ad-home', nameEn: 'Homepage Banner Ad', price: 500, descEn: 'Full width, 120px height' },
+    { id: 'ad-drama', nameEn: 'Drama Page Banner', price: 400, descEn: 'Full width, 100px height' },
+    { id: 'ad-sidebar', nameEn: 'Sidebar Ad', price: 200, descEn: '300x250px' },
+    { id: 'ad-email', nameEn: 'Email Newsletter Logo', price: 150, descEn: 'Placement in global newsletter' },
   ],
   ads_onsite: [
-    { id: 'ad-main', nameEn: 'Main Stage Backdrop Logo', nameZh: '主舞台背景板Logo', price: 600, descEn: 'Visible throughout ceremony', descZh: '颁奖典礼全程展示' },
-    { id: 'ad-entrance', nameEn: 'Entrance Banner', nameZh: '入场处横幅', price: 400, descEn: 'Must-pass entry way', descZh: '所有来宾必经之路' },
-    { id: 'ad-redcarpet', nameEn: 'Red Carpet Logo', nameZh: '红毯背景板Logo', price: 300, descEn: 'Step & Repeat backdrop', descZh: '所有红毯照片永久出现' },
-    { id: 'ad-screen', nameEn: 'Big Screen Rolling Ad', nameZh: '大屏滚动广告', price: 300, descEn: 'Between major segments', descZh: '各环节间歇滚动播放' },
+    { id: 'ad-main', nameEn: 'Main Stage Backdrop Logo', price: 600, descEn: 'Visible throughout ceremony' },
+    { id: 'ad-entrance', nameEn: 'Entrance Banner', price: 400, descEn: 'Must-pass entry way' },
+    { id: 'ad-redcarpet', nameEn: 'Red Carpet Logo', price: 300, descEn: 'Step & Repeat backdrop' },
+    { id: 'ad-screen', nameEn: 'Big Screen Rolling Ad', price: 300, descEn: 'Between major segments' },
   ],
   ads_book: [
-    { id: 'book-cover', nameEn: 'Program Book Cover', nameZh: '节目册封面', price: 500, descEn: 'Full color, premium spot', descZh: '全彩整版 最高曝光位置' },
-    { id: 'book-full', nameEn: 'Full Page Ad', nameZh: '内页整版', price: 300, descEn: 'Full color page', descZh: '全彩印刷 内页整版' },
-    { id: 'book-half', nameEn: 'Half Page Ad', nameZh: '内页半版', price: 180, descEn: 'Half page horizontal/vertical', descZh: '上半版或下半版' },
+    { id: 'book-cover', nameEn: 'Program Book Cover', price: 500, descEn: 'Full color, premium spot' },
+    { id: 'book-full', nameEn: 'Full Page Ad', price: 300, descEn: 'Full color page' },
+    { id: 'book-half', nameEn: 'Half Page Ad', price: 180, descEn: 'Half page horizontal/vertical' },
   ],
   posters: [
-    { id: 'poster-film', nameEn: 'Film Poster', nameZh: '影片海报', price: 50, descEn: 'A2 Size Display', descZh: 'A2尺寸 (420x594mm)' },
-    { id: 'poster-synopsis', nameEn: 'Poster + Synopsis Board', nameZh: '海报+简介展板', price: 80, descEn: 'Include text details', descZh: '包含影片剧情信息与导演简介' },
-    { id: 'poster-company', nameEn: 'Company Poster', nameZh: '公司海报', price: 100, descEn: 'Corporate presentation', descZh: '企业介绍单独展示' },
-    { id: 'poster-wall', nameEn: 'Brand Wall Logo', nameZh: '品牌展示墙Logo', price: 200, descEn: 'Dedicated high-exposure wall', descZh: '平台品牌展示墙 专属位置' },
+    { id: 'poster-film', nameEn: 'Film Poster', price: 50, descEn: 'A2 Size Display' },
+    { id: 'poster-synopsis', nameEn: 'Poster + Synopsis Board', price: 80, descEn: 'Include text details' },
+    { id: 'poster-company', nameEn: 'Company Poster', price: 100, descEn: 'Corporate presentation' },
+    { id: 'poster-wall', nameEn: 'Brand Wall Logo', price: 200, descEn: 'Dedicated high-exposure wall' },
   ],
   pitch: [
-    { id: 'pitch-compete', nameEn: 'Pitch: Competing Team', nameZh: '参赛团队路演', price: 200, descEn: '8-min pitch for submitted films', descZh: '针对已投递参赛团队（8分钟）' },
-    { id: 'pitch-noncompete', nameEn: 'Pitch: Non-competing', nameZh: '非参赛团队路演', price: 350, descEn: '8-min pitch for external teams', descZh: '外部团队/公司专场展示（8分钟）' },
+    { id: 'pitch-compete', nameEn: 'Pitch: Competing Team', price: 200, descEn: '8-min pitch for submitted films' },
+    { id: 'pitch-noncompete', nameEn: 'Pitch: Non-competing', price: 350, descEn: '8-min pitch for external teams' },
   ],
   packages: [
-    { id: 'pkg-platinum', nameEn: 'PLATINUM', nameZh: '白金平台套餐', price: 3000, valueEn: 'Save ~$1,600', valueZh: '节省约$1,600', isBestValue: true, features: [
+    { id: 'pkg-platinum', nameEn: 'PLATINUM', price: 3000, valueEn: 'Save ~$1,600', isBestValue: true, features: [
       'VIP Exhibition Booth (10×20ft)', 'Red Carpet Backdrop Logo', 'Main Stage Backdrop Logo', 'Program Book Cover Ad', 'Homepage Banner Ad', 'Jury Representative Seat', '8 VIP Ceremony Tickets', 'Platform Brand Display Wall'
     ]},
-    { id: 'pkg-gold', nameEn: 'GOLD', nameZh: '金牌企业套餐', price: 1800, valueEn: 'Save ~$800', valueZh: '节省约$800', features: [
+    { id: 'pkg-gold', nameEn: 'GOLD', price: 1800, valueEn: 'Save ~$800', features: [
       'Premium Exhibition Booth (10×10ft)', 'Red Carpet Backdrop Logo', 'Program Book Full Page Ad', 'Drama Page Banner Ad', 'Jury Representative Seat', '4 VIP Ceremony Tickets', 'Brand Wall Logo'
     ]},
-    { id: 'pkg-silver', nameEn: 'SILVER', nameZh: '银牌展示套餐', price: 800, valueEn: 'Save ~$300', valueZh: '节省约$300', features: [
+    { id: 'pkg-silver', nameEn: 'SILVER', price: 800, valueEn: 'Save ~$300', features: [
       'Standard Exhibition Booth (6×6ft)', 'Program Book Half Page Ad', '2 Ceremony Tickets', 'Brand Wall Logo', 'Email Newsletter Mention'
     ]},
-    { id: 'pkg-production', nameEn: 'PRODUCTION', nameZh: '制作公司套餐', price: 500, valueEn: 'Save ~$200', valueZh: '节省约$200', features: [
+    { id: 'pkg-production', nameEn: 'PRODUCTION', price: 500, valueEn: 'Save ~$200', features: [
       '1 Free Short Drama Submission', 'Pitch Session Slot (8 min)', 'Poster + Synopsis Board', '2 Ceremony Tickets', 'Direct Platform Matching'
     ]},
   ]
@@ -239,7 +239,7 @@ export default function ShortDrama() {
 
   const SectionTitle = ({ step, en, zh }: { step?: string, en: string, zh: string }) => (
     <div className="mb-3 relative mt-8 pt-8 border-t border-[#252525]">
-      {step && <div className="text-[10px] text-[#C9A84C] uppercase tracking-[0.2em] font-bold mb-1">STEP {step} · 第{step}步</div>}
+      {step && <div className="text-[10px] text-[#C9A84C] uppercase tracking-[0.2em] font-bold mb-1">STEP {step}</div>}
       <h2 className="text-xl md:text-2xl font-serif font-bold text-white mb-1">{en}</h2>
       
       <div className="w-8 h-0.5 bg-[#C9A84C]"></div>
@@ -311,13 +311,13 @@ export default function ShortDrama() {
                   
                   <ul className="space-y-4">
                     {[
-                      { en: "First-look Access & Priority Distribution Rights: Exclusive early contact for distribution of nominated and winning short dramas.", zh: "内容优先对接权 — 所有入围及获奖短剧，优先向合作平台提交发行洽谈，公开发布前独家接触" },
-                      { en: "Complete Content Database: Get all screening links, team information, and synopsis for all submissions.", zh: "完整内容数据库 — 获取所有参赛短剧资料，包括剧情简介、制作团队、样片链接、演员阵容及技术规格" },
-                      { en: "Official Judging Seat: Your representative joins the showcase jury to evaluate premium content first.", zh: "评审委员会席位 — 您的代表担任短剧单元评审，第一时间接触并筛选最优质内容" },
-                      { en: "Hollywood Onsite Booth: Dedicated physical booth at the awards to connect directly with creators and investors.", zh: "好莱坞现场展台 — 颁奖典礼现场专属展台，与制作公司、创作者、投资人直接面对面对接" },
-                      { en: "Production Team Pitch: Dedicated sessions to scout for cooperative production companies and creators.", zh: "制作团队Pitch会 — 专场制作团队展示环节，直接发掘合作制作公司及创作团队" },
-                      { en: "Asian Distribution Pipeline: Access our distribution network covering Mainland China, Hong Kong, and Taiwan.", zh: "亚洲发行通道 — GFA覆盖中国大陆、香港及台湾的发行网络，为平台提供亚洲市场直接通道" },
-                      { en: "Hollywood Brand Endorsement: Official joint branding across the website, media, and ceremony.", zh: "好莱坞品牌背书 — 官方联合品牌认证，出现在网站、颁奖典礼及所有GFA媒体渠道" }
+                      { en: "First-look Access & Priority Distribution Rights: Exclusive early contact for distribution of nominated and winning short dramas." },
+                      { en: "Complete Content Database: Get all screening links, team information, and synopsis for all submissions." },
+                      { en: "Official Judging Seat: Your representative joins the showcase jury to evaluate premium content first." },
+                      { en: "Hollywood Onsite Booth: Dedicated physical booth at the awards to connect directly with creators and investors." },
+                      { en: "Production Team Pitch: Dedicated sessions to scout for cooperative production companies and creators." },
+                      { en: "Asian Distribution Pipeline: Access our distribution network covering Mainland China, Hong Kong, and Taiwan." },
+                      { en: "Hollywood Brand Endorsement: Official joint branding across the website, media, and ceremony." }
                     ].map((item, idx) => (
                        <li key={idx} className="flex items-start gap-3">
                           <div className="w-5 h-5 flex items-center justify-center bg-[#C9A84C]/20 border border-[#C9A84C]/50 rounded text-xs mt-0.5 shrink-0 select-none">✓</div>
@@ -341,11 +341,11 @@ export default function ShortDrama() {
                   </h3>
                   <div className="space-y-3">
                      {[
-                       { icon: "🇺🇸", titleEn: "English Original", titleZh: "英文原创短剧", descEn: "English production for international markets.", descZh: "英语制作，面向国际市场" },
-                       { icon: "🇨🇳", titleEn: "Chinese Drama", titleZh: "中文短剧", descEn: "Mandarin production with English subtitles.", descZh: "普通话制作，附英文字幕" },
-                       { icon: "🌐", titleEn: "Multilingual", titleZh: "多语种短剧", descEn: "Produced in other languages.", descZh: "其他语言制作" },
-                       { icon: "🤖", titleEn: "AI-Assisted", titleZh: "AI辅助短剧", descEn: "Innovative content using AI tech.", descZh: "使用AI技术制作的创新内容" },
-                       { icon: "🎓", titleEn: "Student Shorts", titleZh: "学生短剧", descEn: "Original student productions.", descZh: "在校学生原创作品" },
+                       { icon: "🇺🇸", titleEn: "English Original", descEn: "English production for international markets." },
+                       { icon: "🇨🇳", titleEn: "Chinese Drama", descEn: "Mandarin production with English subtitles." },
+                       { icon: "🌐", titleEn: "Multilingual", descEn: "Produced in other languages." },
+                       { icon: "🤖", titleEn: "AI-Assisted", descEn: "Innovative content using AI tech." },
+                       { icon: "🎓", titleEn: "Student Shorts", descEn: "Original student productions." },
                      ].map((item, idx) => (
                         <div key={idx} className="bg-[#1A1A1A] border border-[#252525] p-5 rounded-xl flex items-start gap-4">
                            <div className="text-2xl grayscale">{item.icon}</div>
@@ -366,11 +366,11 @@ export default function ShortDrama() {
                   </h3>
                   <div className="space-y-3">
                      {[
-                       { titleEn: "Best Short Drama Production", titleZh: "最佳短剧制作奖", descEn: "Recognizes overall production quality, visuals, and tech.", descZh: "表彰整体制作质量、视觉呈现与技术水准" },
-                       { titleEn: "Best Short Drama Story", titleZh: "最佳短剧故事奖", descEn: "Recognizes narrative creativity and originality.", descZh: "表彰剧情创意、叙事结构与原创性" },
-                       { titleEn: "Best Short Drama Actor / Actress", titleZh: "最佳短剧男女主角", descEn: "Best performances in the shorts category.", descZh: "短剧类最佳演出表演奖项" },
-                       { titleEn: "Platform Favorite Award", titleZh: "平台最受欢迎奖", descEn: "Voted by partner platform representatives.", descZh: "由合作平台代表官方投票决定" },
-                       { titleEn: "Audience Choice Award", titleZh: "观众最喜爱短剧", descEn: "Voted by audience; 100% of proceeds go to creators.", descZh: "观众直接投票支持，100%资金归创作者" },
+                       { titleEn: "Best Short Drama Production", descEn: "Recognizes overall production quality, visuals, and tech." },
+                       { titleEn: "Best Short Drama Story", descEn: "Recognizes narrative creativity and originality." },
+                       { titleEn: "Best Short Drama Actor / Actress", descEn: "Best performances in the shorts category." },
+                       { titleEn: "Platform Favorite Award", descEn: "Voted by partner platform representatives." },
+                       { titleEn: "Audience Choice Award", descEn: "Voted by audience; 100% of proceeds go to creators." },
                      ].map((item, idx) => (
                         <div key={idx} className="bg-gradient-to-r from-[#1A1A1A] to-transparent p-5 rounded-xl border-l-2 border-[#C9A84C]">
                            <h4 className="font-bold text-sm text-[#E8C97A] mb-1">{item.titleEn}</h4>
@@ -457,14 +457,14 @@ export default function ShortDrama() {
             
             {/* Step 1: Submission Fees */}
             <section id="step1">
-               <SectionTitle step="1" en="Category Submissions" zh="选择参赛类别" />
+               <SectionTitle step="1" en="Category Submissions" zh="" />
                <div className="mb-4 overflow-hidden rounded-[20px]">
                   <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1485846234645-a62644f84728%3Fq%3D80%26w%3D2670%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" referrerPolicy="no-referrer" alt="Filmmaking" className="w-full h-48 object-cover opacity-60 border border-[#252525] rounded-[20px]"  width="1200" height="800"   />
                </div>
 
                {/* Registration Details */}
                <section id="registration-details" className="mt-8 mb-12">
-                  <SectionTitle en="Applicant & Film Information" zh="报名与影片信息填写" />
+                  <SectionTitle en="Applicant & Film Information" zh="" />
                   <div className="bg-[#111] border border-[#252525] rounded-xl p-6 md:p-8 shadow-inner space-y-6">
                      {/* Submission Form Fields */}
                    <div className="space-y-4">
@@ -638,7 +638,7 @@ export default function ShortDrama() {
          
             {/* Step 2: Booths */}
             <section id="step2">
-               <SectionTitle step="2" en="Exhibition Booths" zh="现场实体展位" />
+               <SectionTitle step="2" en="Exhibition Booths" zh="" />
                <div className="mb-6 pl-4 border-l-2 border-[#C9A84C] bg-[#1A1A1A] p-4 text-sm text-gray-300 leading-relaxed rounded-r">
                   {"Engage attendees directly. Booths are strategically located in the main networking hall."}
                </div>
@@ -708,7 +708,7 @@ export default function ShortDrama() {
 
             {/* Step 3: Advertising Slots */}
             <section id="step3">
-               <SectionTitle step="3" en="Global & Onsite Advertising" zh="全球宣发与会场广告位" />
+               <SectionTitle step="3" en="Global & Onsite Advertising" zh="" />
                <div className="mb-4 pl-4 border-l-2 border-[#C9A84C] bg-[#1A1A1A] p-3 text-xs text-gray-300 leading-relaxed rounded-r">
                   {"Maximize your brand exposure through digital spaces and high-traffic physical locations."}
                </div>
@@ -856,7 +856,7 @@ export default function ShortDrama() {
 
             {/* Step 4: Poster Display */}
             <section id="step4">
-               <SectionTitle step="4" en="Poster & Brand Exhibitions" zh="海报与专区展示" />
+               <SectionTitle step="4" en="Poster & Brand Exhibitions" zh="" />
                <div className="mb-4 overflow-hidden rounded-[16px]">
                   <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1531259683007-016a7b628fc3%3Fq%3D80%26w%3D2670%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" referrerPolicy="no-referrer" alt="Gallery" className="w-full h-32 object-cover opacity-60 border border-[#252525] rounded-[16px]"  width="1200" height="800"   />
                </div>
@@ -888,7 +888,7 @@ export default function ShortDrama() {
 
             {/* Step 5: Pitching */}
             <section id="step5">
-               <SectionTitle step="5" en="Production Team Pitch" zh="制作团队展示与路演(8分钟)" />
+               <SectionTitle step="5" en="Production Team Pitch" zh="" />
                <div className="mb-6 overflow-hidden rounded-[20px]">
                   <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1559532297-c6a6f6fcd1bb%3Fq%3D80%26w%3D2670%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" referrerPolicy="no-referrer" alt="Pitch" className="w-full h-48 object-cover opacity-60 border border-[#252525] rounded-[20px]"  width="1200" height="800"   />
                </div>
@@ -927,7 +927,7 @@ export default function ShortDrama() {
             
             {/* Event Schedule section added */}
             <section className="mb-4">
-              <SectionTitle step="日程" en="Event Schedule" zh="当天活动日程" />
+              <SectionTitle  en="Event Schedule" zh="" />
               <div className="bg-[#1A1A1A] border border-[#252525] rounded-xl overflow-hidden shadow-2xl">
                 <table className="w-full text-left text-sm text-gray-300">
                   <thead className="bg-[#0A0A0A] border-b border-[#333] text-[#C9A84C] font-serif uppercase tracking-widest text-[10px]">
@@ -938,12 +938,12 @@ export default function ShortDrama() {
                   </thead>
                   <tbody className="divide-y divide-[#252525] text-xs">
                     {[
-                      { time: '2:00 PM', timeZh: '下午 2:00', segmentEn: 'Short Drama Screening Begins', segmentZh: '短剧展映开始' },
-                      { time: '4:00 PM', timeZh: '下午 4:00', segmentEn: 'Production Team Showcase', segmentZh: '制作团队展示会' },
-                      { time: '5:30 PM', timeZh: '下午 5:30', segmentEn: 'Open Networking', segmentZh: '平台与创作者自由对接' },
-                      { time: '7:00 PM', timeZh: '晚上 7:00', segmentEn: 'Opening & Red Carpet', segmentZh: '颁奖典礼开幕·红毯' },
-                      { time: '9:00 PM', timeZh: '晚上 9:00', segmentEn: 'Short Drama Awards Ceremony', segmentZh: '短剧单元颁奖' },
-                      { time: '9:30 PM', timeZh: '晚上 9:30', segmentEn: 'Awards Reception & Deep Networking', segmentZh: '颁奖酒会·深度对接' },
+                      { time: '2:00 PM', segmentEn: 'Short Drama Screening Begins' },
+                      { time: '4:00 PM', segmentEn: 'Production Team Showcase' },
+                      { time: '5:30 PM', segmentEn: 'Open Networking' },
+                      { time: '7:00 PM', segmentEn: 'Opening & Red Carpet' },
+                      { time: '9:00 PM', segmentEn: 'Short Drama Awards Ceremony' },
+                      { time: '9:30 PM', segmentEn: 'Awards Reception & Deep Networking' },
                     ].map((item, idx) => (
                       <tr key={idx} className="hover:bg-[#111] transition-colors">
                         <td className="px-5 py-3 font-mono font-bold text-white">{item.time}</td>
@@ -957,7 +957,7 @@ export default function ShortDrama() {
 
             {/* Step 6: Packages */}
             <section id="step6">
-               <SectionTitle step="6" en="Sponsorship Packages" zh="官方赞助组合套餐" />
+               <SectionTitle step="6" en="Sponsorship Packages" zh="" />
                <div className="mb-6 overflow-hidden rounded-[20px]">
                   <img loading="lazy" src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1561489422-45de3d015e3e%3Fq%3D80%26w%3D2670%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" referrerPolicy="no-referrer" alt="Event Package" className="w-full h-48 object-cover opacity-60 border border-[#252525] rounded-[20px]"  width="1200" height="800"   />
                </div>

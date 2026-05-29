@@ -159,14 +159,14 @@ const ProgramAwards: React.FC = () => {
            
            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
               {[
-                  { icon: Clapperboard, en: "Best Picture", zh: "最佳影片大奖" },
-                  { icon: Sparkles, en: "Best Director", zh: "最佳新晋导演" },
-                  { icon: Star, en: "Best Youth Actor", zh: "最佳青年演员" },
-                  { icon: Lightbulb, en: "Best Screenplay", zh: "最佳原创剧本" },
-                  { icon: Camera, en: "Best Cinematography", zh: "最佳摄影指导" },
-                  { icon: Mic, en: "Best Sound Design", zh: "最佳声音设计" },
-                  { icon: Video, en: "Best Short Film", zh: "最佳单元短片" },
-                  { icon: Globe, en: "Global Cultural Impact", zh: "全球文化影响力奖" },
+                  { icon: Clapperboard, en: "Best Picture" },
+                  { icon: Sparkles, en: "Best Director" },
+                  { icon: Star, en: "Best Youth Actor" },
+                  { icon: Lightbulb, en: "Best Screenplay" },
+                  { icon: Camera, en: "Best Cinematography" },
+                  { icon: Mic, en: "Best Sound Design" },
+                  { icon: Video, en: "Best Short Film" },
+                  { icon: Globe, en: "Global Cultural Impact" },
               ].map((category, idx) => (
                  <div key={idx} className="bg-white/5 border border-white/10 rounded-3xl p-6 text-center hover:bg-white/10 transition-colors group">
                     <div className="w-12 h-12 bg-[#C9A84C]/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-[#C9A84C] transition-colors">

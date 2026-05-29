@@ -22,45 +22,33 @@ const mentors: Mentor[] = [
     id: 1,
     name: "Robert M.",
     roleEn: "Executive Producer",
-    roleZh: "执行制片人",
     image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&q=80",
     bioEn: "Veteran producer with a track record of supporting breakthrough independent films and emerging talents.",
-    bioZh: "资深制片人，在支持突破性独立电影和新兴电影人才方面拥有丰富经验。",
-    expertiseEn: ["Film Production", "Project Financing", "Talent Development"],
-    expertiseZh: ["电影制作", "项目融资", "人才培养"]
+    expertiseEn: ["Film Production", "Project Financing", "Talent Development"]
   },
   {
     id: 2,
     name: "Sarah W.",
     roleEn: "Indie Film Director",
-    roleZh: "国际独立电影导演",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&q=80",
     bioEn: "Award-winning director with a passion for storytelling. Specializes in character-driven narratives.",
-    bioZh: "屡获殊荣的导演，对故事讲述充满热情。专长于人物驱动的叙事电影。",
-    expertiseEn: ["Directing", "Storytelling", "Character Development"],
-    expertiseZh: ["导演", "故事叙述", "角色发展"]
+    expertiseEn: ["Directing", "Storytelling", "Character Development"]
   },
   {
     id: 3,
     name: "David C.",
     roleEn: "Cinematographer",
-    roleZh: "资深摄影指导",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&q=80",
     bioEn: "Worked on numerous commercial and independent projects. Provides guidance on visual storytelling.",
-    bioZh: "曾参与众多商业和独立电影项目。能够提供关于视觉叙事和摄影技术的专业指导。",
-    expertiseEn: ["Cinematography", "Visual Storytelling", "Lighting"],
-    expertiseZh: ["摄影指导", "视觉叙事", "灯光"]
+    expertiseEn: ["Cinematography", "Visual Storytelling", "Lighting"]
   },
   {
     id: 4,
     name: "Emily T.",
     roleEn: "Screenwriter",
-    roleZh: "专业编剧",
     image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop&q=80",
     bioEn: "Focuses on script development and narrative structure. Helps emerging writers find their voice.",
-    bioZh: "专注剧本开发和叙事结构。帮助新兴编剧找到自己的声音，完善故事。",
-    expertiseEn: ["Screenwriting", "Script Development", "Narrative Structure"],
-    expertiseZh: ["编剧", "剧本开发", "叙事结构"]
+    expertiseEn: ["Screenwriting", "Script Development", "Narrative Structure"]
   }
 ];
 

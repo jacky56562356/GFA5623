@@ -48,7 +48,7 @@ const ProgramEmergingDirector: React.FC = () => {
                 <img loading="lazy"  src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1440404653325-ab127d49abc1%3Fq%3D80%26w%3D2070%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" alt="Garden Film Poster" className="w-full aspect-[2/3] object-cover rounded-2xl shadow-md"  width="1200" height="800"   />
               </div>
               <div className="md:w-2/3">
-                <h3 className="text-3xl font-bold font-serif text-gfa-inkBlack mb-2">《花园 Garden》</h3>
+                <h3 className="text-3xl font-bold font-serif text-gfa-inkBlack mb-2">"Garden"</h3>
                 <p className="text-[#C9A84C] font-bold text-sm tracking-widest uppercase mb-3"> Best Family Film - Golden State Film Festival </p>
                 <p className="text-gfa-slate font-light mb-4 max-w-xl">
                   {"An enchanting story exploring childhood imagination and family bonds, produced entirely by our 2024 youth cohort."}

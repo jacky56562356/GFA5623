@@ -265,10 +265,10 @@ const Awards: React.FC = () => {
                  </h3>
                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                     {[
-                      { en: "Best Actor", zh: "最佳男主角", prize: "$500" },
-                      { en: "Best Actress", zh: "最佳女主角", prize: "$500" },
-                      { en: "Best Supporting Actor", zh: "最佳男配角", prize: "$300" },
-                      { en: "Best Supporting Actress", zh: "最佳女配角", prize: "$300" }
+                      { en: "Best Actor", prize: "$500" },
+                      { en: "Best Actress", prize: "$500" },
+                      { en: "Best Supporting Actor", prize: "$300" },
+                      { en: "Best Supporting Actress", prize: "$300" }
                     ].map((item, idx) => (
                       <div key={idx} className="bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col justify-between group hover:bg-white/10 transition text-center">
                          <h4 className="font-bold text-lg mb-2">{item.en}</h4>
@@ -285,9 +285,9 @@ const Awards: React.FC = () => {
                  </h3>
                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     {[
-                      { en: "Best Short Film", zh: "最佳短片", prize: "$800" },
-                      { en: "Best Documentary", zh: "最佳纪录片", prize: "$800" },
-                      { en: "Best Animation", zh: "最佳动画片", prize: "$500" }
+                      { en: "Best Short Film", prize: "$800" },
+                      { en: "Best Documentary", prize: "$800" },
+                      { en: "Best Animation", prize: "$500" }
                     ].map((item, idx) => (
                       <div key={idx} className="bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col justify-between group hover:bg-white/10 transition text-center">
                          <h4 className="font-bold text-lg mb-2">{item.en}</h4>
@@ -304,10 +304,10 @@ const Awards: React.FC = () => {
                  </h3>
                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {[
-                      { en: "Best Short Drama Production", zh: "最佳短剧制作奖", prize: "$800", descEn: "Recognizes overall production quality, visuals, and technical standards.", descZh: "表彰整体制作质量、视觉呈现、技术水准" },
-                      { en: "Best Short Drama Story", zh: "最佳短剧故事奖", prize: "$600", descEn: "Recognizes narrative creativity, story structure, and originality.", descZh: "表彰剧情创意、叙事结构、原创性" },
-                      { en: "Best Short Drama Actor", zh: "最佳短剧男主角", prize: "$300", descEn: "Acting in the short drama category.", descZh: "短剧类表演" },
-                      { en: "Best Short Drama Actress", zh: "最佳短剧女主角", prize: "$300", descEn: "Acting in the short drama category.", descZh: "短剧类表演" }
+                      { en: "Best Short Drama Production", prize: "$800", descEn: "Recognizes overall production quality, visuals, and technical standards." },
+                      { en: "Best Short Drama Story", prize: "$600", descEn: "Recognizes narrative creativity, story structure, and originality." },
+                      { en: "Best Short Drama Actor", prize: "$300", descEn: "Acting in the short drama category." },
+                      { en: "Best Short Drama Actress", prize: "$300", descEn: "Acting in the short drama category." }
                     ].map((item, idx) => (
                       <div key={idx} className="bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col group hover:bg-white/10 transition">
                          <div className="flex justify-between items-start mb-2">
@@ -327,9 +327,9 @@ const Awards: React.FC = () => {
                  </h3>
                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     {[
-                      { en: "Best Young Director", zh: "最佳青年导演", prize: "$500" },
-                      { en: "Best Emerging Actor", zh: "最佳新人演员", prize: "$300" },
-                      { en: "Best Student Film", zh: "最佳学生影片", prize: "$200" }
+                      { en: "Best Young Director", prize: "$500" },
+                      { en: "Best Emerging Actor", prize: "$300" },
+                      { en: "Best Student Film", prize: "$200" }
                     ].map((item, idx) => (
                       <div key={idx} className="bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col justify-between group hover:bg-white/10 transition text-center">
                          <h4 className="font-bold text-lg mb-2">{item.en}</h4>
@@ -346,18 +346,14 @@ const Awards: React.FC = () => {
                  </h3>
                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                     {[
-                      "最佳剧本", "最佳摄影", "最佳剪辑", "最佳原创音乐", 
-                      "最佳视觉效果", "最佳服装造型", "最佳短剧剧本", "评审特别奖"
+                      
                     ].map((zhText, idx) => {
                       const enObj: Record<string, string> = {
-                        "最佳剧本": "Best Screenplay",
-                        "最佳摄影": "Best Cinematography",
-                        "最佳剪辑": "Best Editing", 
-                        "最佳原创音乐": "Best Original Score",
-                        "最佳视觉效果": "Best Visual Effects",
-                        "最佳服装造型": "Best Costume Design",
-                        "最佳短剧剧本": "Best Short Drama Script",
-                        "评审特别奖": "Special Jury Prize"
+                        
+                        
+                        
+                        
+                        
                       };
                       return (
                       <div key={idx} className="bg-white/5 border border-white/10 rounded-2xl p-4 flex flex-col items-center justify-center text-center group hover:bg-white/10 transition min-h-[100px]">
@@ -401,10 +397,10 @@ const Awards: React.FC = () => {
                  </h3>
                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {[
-                      { en: "Asian Distribution Pipeline", zh: "亚洲发行通道", descEn: "Entry into Mainland China, Hong Kong, and Taiwan.", descZh: "进入中国大陆、香港、台湾" },
-                      { en: "Official Trophy & Certificate", zh: "官方奖杯+证书", descEn: "Awarded live at the Hollywood ceremony.", descZh: "好莱坞颁奖典礼颁发" },
-                      { en: "Permanent GFA Website Showcase", zh: "GFA官网永久展示", descEn: "Dedicated showcase page for the winning film.", descZh: "获奖影片介绍页面" },
-                      { en: "Blackmagic Equipment Support", zh: "Blackmagic设备支持", descEn: "Available to select winners.", descZh: "部分获奖者" }
+                      { en: "Asian Distribution Pipeline", descEn: "Entry into Mainland China, Hong Kong, and Taiwan." },
+                      { en: "Official Trophy & Certificate", descEn: "Awarded live at the Hollywood ceremony." },
+                      { en: "Permanent GFA Website Showcase", descEn: "Dedicated showcase page for the winning film." },
+                      { en: "Blackmagic Equipment Support", descEn: "Available to select winners." }
                     ].map((item, idx) => (
                       <div key={idx} className="bg-white/5 border border-white/10 rounded-3xl p-6 flex flex-col justify-center items-center text-center group hover:bg-white/10 transition">
                          <h4 className="font-bold text-lg mb-2 text-[#C9A84C] group-hover:text-white transition-colors">{item.en}</h4>
