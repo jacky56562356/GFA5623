@@ -25,6 +25,51 @@
     <noscript>
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     </noscript>
+    <script>
+    (function() {
+      var path = window.location.pathname;
+      var metas = {
+        '/about': {
+          title: 'About GFA - Global Film Alliance | 501(c)(3) Nonprofit',
+          desc: 'Learn about Global Film Alliance (GFA), a U.S. 501(c)(3) nonprofit (EIN: 33-4817276) empowering youth through Hollywood film education. Founded by Jack Liu. Partners: Blackmagic Design, SAG-AFTRA Foundation.'
+        },
+        '/filmmaker-support': {
+          title: 'Filmmaker Support - Free Camera Grants | Global Film Alliance',
+          desc: 'GFA provides free camera gear grants, Hollywood networking, and distribution support on Amazon Prime, YouTube, and Tubi for emerging filmmakers.'
+        },
+        '/youth-programs': {
+          title: 'Youth Film Summer Camp 2026 Los Angeles | Global Film Alliance',
+          desc: '2026 Youth Film Summer Camp for ages 6-17 in Los Angeles. Session 1: June 15-27. Session 2: July 20-August 1. Learn filmmaking, directing, acting, editing.'
+        },
+        '/golden-feather-awards': {
+          title: 'Golden Feather Awards - Hollywood Film Festival | GFA',
+          desc: 'Submit your film to GFA Golden Feather Awards Hollywood ceremony. Categories from $15. Student, AI-Assisted, Chinese Drama, English Original, Multilingual films welcome.'
+        },
+        '/short-drama': {
+          title: 'Short Drama Film Competition | Global Film Alliance',
+          desc: 'International short film competition open worldwide. Student Shorts $15, AI-Assisted $30, Chinese Drama $30. Winners distributed on Amazon Prime, YouTube, Tubi.'
+        },
+        '/competition': {
+          title: 'GFA Global Youth Talent Competition | Hollywood Dolby Theatre',
+          desc: 'International performing arts competition for ages 6-17. US-China simultaneous competition, finals at Dolby Theatre Hollywood. Partner: 乐华圆娱.'
+        },
+        '/get-involved': {
+          title: 'Sponsor & Partner with GFA | Global Film Alliance',
+          desc: 'Sponsorship opportunities: Gold $1,800, Platinum $3,000, Standard Booth $500, VIP Booth $1,500. Volunteer and partnership opportunities available.'
+        },
+        '/donate': {
+          title: 'Donate to GFA | Tax-Deductible | EIN 33-4817276',
+          desc: 'Support youth film education. GFA is a U.S. 501(c)(3) nonprofit, all donations tax-deductible. EIN: 33-4817276. One-time or monthly donations accepted.'
+        }
+      };
+      var meta = metas[path];
+      if (meta) {
+        document.title = meta.title;
+        var el = document.querySelector('meta[name="description"]');
+        if (el) el.setAttribute('content', meta.desc);
+      }
+    })();
+    </script>
 </head>
 <body>
     <noscript>
