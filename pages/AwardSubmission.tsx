@@ -10,6 +10,12 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
+declare global {
+  interface Window {
+    gtag?: (...args: any[]) => void;
+  }
+}
+
 export default function AwardSubmission() {
   const { locale } = useLocale();
   const isEn = true;
@@ -122,6 +128,14 @@ Attendees: ${formData.attendeeCount}
             publicKey: '-nL93F_Lv6Wgc1JSc'
           }
         );
+
+        if (window.gtag) {
+          window.gtag('event', 'conversion', {
+            'send_to': 'AW-17628558148/zZWHCP_AjrccEMTm-dVB',
+            'value': 1.0,
+            'currency': 'USD'
+          });
+        }
       } catch (emailErr) {
         console.error("EmailJS error:", emailErr);
         // Continue to success screen even if email fails, because the firebase doc was created.

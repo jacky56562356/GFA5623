@@ -93,7 +93,7 @@ const Contact: React.FC = () => {
             <form action="https://formsubmit.co/jacky@gfafilm.org" method="POST" className="space-y-5 relative z-10">
               {/* Optional: Add hidden fields for formsubmit.co configuration */}
               <input type="hidden" name="_subject" value="New Contact Form Request from GFA Website!" />
-              <input type="hidden" name="_next" value="https://gfaalliance.org/contact" />
+              <input type="hidden" name="_next" value="https://gfaalliance.org/contact-thank-you" />
               <input type="hidden" name="FormType" value={formType} />
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">

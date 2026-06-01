@@ -19,6 +19,7 @@ const Competition = React.lazy(() => import('./pages/Competition'));
 const GetInvolved = React.lazy(() => import('./pages/GetInvolved'));
 const Donate = React.lazy(() => import('./pages/Donate'));
 const Contact = React.lazy(() => import('./pages/Contact'));
+const ContactThankYou = React.lazy(() => import('./pages/ContactThankYou'));
 const YouthProtection = React.lazy(() => import('./pages/YouthProtection'));
 const PrivacyPolicy = React.lazy(() => import('./pages/PrivacyPolicy'));
 const Profile = React.lazy(() => import('./pages/Profile'));
@@ -52,6 +53,7 @@ function App() {
                                     <Route path="/get-involved" element={<GetInvolved />} />
             <Route path="/donate" element={<Donate />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/contact-thank-you" element={<ContactThankYou />} />
             <Route path="/youth-protection" element={<YouthProtection />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/gear-application" element={<GearApplication />} />
