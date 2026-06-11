@@ -175,6 +175,14 @@ const YouthPrograms: React.FC = () => {
           <p className="text-sm md:text-base text-gray-300 font-light max-w-2xl mx-auto leading-relaxed">
             {content.hero.desc}
           </p>
+          <div className="mt-8 flex justify-center gap-4">
+            <button 
+              onClick={() => handleStartRegistration("Youth Film Summer Camp")} 
+              className="bg-[#C9A84C] hover:bg-[#b09241] text-black font-bold uppercase tracking-widest text-[11px] sm:text-xs px-8 py-3.5 rounded-full transition-all shadow-lg flex items-center gap-2"
+            >
+              {isEn ? "Apply & Register Online" : "立即在线报名登记"} <ArrowRight className="w-4 h-4" />
+            </button>
+          </div>
         </div>
       </section>
 
@@ -533,13 +541,7 @@ const YouthPrograms: React.FC = () => {
                       </div>
                     </div>
 
-                    <div className="p-8 pt-0 border-t border-gray-100 mt-4 bg-slate-50/40 rounded-b-3xl">
-                      <div className="flex justify-between items-center py-4">
-                        <span className="text-xs font-semibold text-gfa-slate uppercase tracking-wider">{content.campsSection.tuitionLabel}</span>
-                        <span className="text-xs font-extrabold text-green-700 bg-green-50 px-2.5 py-1 rounded border border-green-100 uppercase tracking-wide">
-                          {isEn ? "100% Scholarship Covered" : "100% 助学金全额资助"}
-                        </span>
-                      </div>
+                    <div className="p-8 pt-4 border-t border-gray-100 mt-2 bg-slate-50/40 rounded-b-3xl">
                       <button 
                         onClick={() => handleStartRegistration(camp.title)}
                         className="w-full bg-[#C9A84C] hover:bg-[#b09241] text-black font-bold uppercase tracking-wider text-xs py-4 rounded-xl transition-all shadow-sm flex items-center justify-center gap-2"
