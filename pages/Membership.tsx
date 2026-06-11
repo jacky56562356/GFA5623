@@ -14,7 +14,7 @@ const Membership: React.FC = () => {
 
       {/* Global Background Image */}
       <div className="fixed inset-0 z-0 opacity-[0.05] pointer-events-none">
-        <img fetchpriority="high" 
+        <img fetchPriority="high" 
           src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1451187580459-43490279c0fa%3Fq%3D80%26w%3D2072%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" 
           alt="Global Cinematic Background" 
           className="w-full h-full object-cover"

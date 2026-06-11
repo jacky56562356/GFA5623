@@ -15,7 +15,7 @@ const YouthProtection: React.FC = () => {
       {/* Hero Section */}
       <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden bg-gfa-inkBlack group">
         <div className="absolute inset-0 z-0">
-          <img fetchpriority="high" 
+          <img fetchPriority="high" 
             src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1544717305-2782549b5136%3Fq%3D80%26w%3D1974%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" 
             alt="Youth Protection" 
             className="w-full h-full object-cover opacity-30 mix-blend-luminosity transform group-hover:scale-105 transition-transform duration-[20s]" 

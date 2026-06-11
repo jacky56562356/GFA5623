@@ -162,17 +162,17 @@ export default function ShortDrama() {
         let nameEn = "", nameZh = "", price = 0;
         
         let found = ITEM_CATALOG.submission.find(i => i.id === id);
-        if (found) { nameEn = found.nameEn; nameZh = found.nameZh; price = getSubmissionPrice(deadline, false); }
+        if (found) { nameEn = found.nameEn; nameZh = (found as any).nameZh || found.nameEn; price = getSubmissionPrice(deadline, false); }
         
         if (!found) {
           found = ITEM_CATALOG.student.find(i => i.id === id);
-          if (found) { nameEn = found.nameEn; nameZh = found.nameZh; price = getSubmissionPrice(deadline, true); }
+          if (found) { nameEn = found.nameEn; nameZh = (found as any).nameZh || found.nameEn; price = getSubmissionPrice(deadline, true); }
         }
 
         ['booths', 'ads_web', 'ads_onsite', 'ads_book', 'posters', 'pitch', 'packages'].forEach(cat => {
           // @ts-ignore
           const item = ITEM_CATALOG[cat].find(i => i.id === id);
-          if (item) { nameEn = item.nameEn; nameZh = item.nameZh; price = item.price; }
+          if (item) { nameEn = item.nameEn; nameZh = (item as any).nameZh || item.nameEn; price = item.price; }
         });
 
         items.push({ id, nameEn, nameZh, price, qty: cart[id] });
@@ -253,7 +253,7 @@ export default function ShortDrama() {
       {/* Hero Section */}
       <section className="relative pt-16 pb-8 lg:pt-24 lg:pb-12 border-b border-[#252525] bg-gradient-to-b from-[#0A0A0A] via-[#1A1208] to-[#0A0A0A] overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-50">
-           <img fetchpriority="high"  src="https://wsrv.nl/?url=i.ibb.co%2FfdnnyXHm%2FGemini-Generated-Image-vzmo29vzmo29vzmo-1.png&w=1200&output=webp" referrerPolicy="no-referrer" className="w-full h-full object-cover mix-blend-screen" alt="Hero background"  width="1200" height="800"   />
+           <img fetchPriority="high"  src="https://wsrv.nl/?url=i.ibb.co%2FfdnnyXHm%2FGemini-Generated-Image-vzmo29vzmo29vzmo-1.png&w=1200&output=webp" referrerPolicy="no-referrer" className="w-full h-full object-cover mix-blend-screen" alt="Hero background"  width="1200" height="800"   />
            <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-[#0A0A0A]"></div>
         </div>
         
@@ -986,7 +986,7 @@ export default function ShortDrama() {
                               </div>
                             )}
                             <h4 className={`text-[13px] font-bold font-sans tracking-widest mb-1 ${isSelected ? 'ml-8 text-white' : 'text-gray-300'}`}>{pkg.nameEn}</h4>
-                            <div className={`text-[11px] font-serif mb-6 ${isSelected ? 'ml-8 text-[#E8C97A]' : 'text-[#C9A84C]'}`}>{pkg.nameZh}</div>
+                            <div className={`text-[11px] font-serif mb-6 ${isSelected ? 'ml-8 text-[#E8C97A]' : 'text-[#C9A84C]'}`}>{(pkg as any).nameZh || ""}</div>
                             
                             <div className="font-serif text-3xl font-bold text-[#C9A84C] mb-2">${pkg.price}</div>
                             <div className="text-[10px] text-green-500 font-bold mb-6 flex items-center gap-1.5"><Info className="w-3 h-3"/> {pkg.valueEn}</div>

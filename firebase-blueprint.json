@@ -146,6 +146,35 @@
         }
       },
       "required": ["userId", "donorName", "email", "phone", "shippingMethod", "shippingAddress", "needsTaxDeduction", "status", "createdAt"]
+    },
+    "YouthCampRegistration": {
+      "title": "Youth Camp Registration",
+      "description": "Registration details for GFA Youth Summer Camp.",
+      "type": "object",
+      "properties": {
+        "parentName": { "type": "string" },
+        "childName": { "type": "string" },
+        "childAge": { "type": "string" },
+        "email": { "type": "string" },
+        "phone": { "type": "string" },
+        "program": { "type": "string" },
+        "emergencyContact": { "type": "string" },
+        "emergencyPhone": { "type": "string" },
+        "dietary": { "type": "string" },
+        "medical": { "type": "string" },
+        "filmmakingExperience": { "type": "string" },
+        "tshirtSize": { "type": "string" },
+        "message": { "type": "string" },
+        "status": {
+            "type": "string",
+            "enum": ["pending", "approved", "rejected"]
+        },
+        "createdAt": {
+            "type": "string",
+            "format": "datetime"
+        }
+      },
+      "required": ["parentName", "childName", "childAge", "email", "phone", "program", "emergencyContact", "emergencyPhone", "status", "createdAt"]
     }
   },
   "firestore": {
@@ -166,6 +195,12 @@
         "$ref": "#/entities/GearDonation"
       },
       "description": "Gear donations for employment support. Random ID."
+    },
+    "/youth_camp_registrations/{registrationId}": {
+      "schema": {
+        "$ref": "#/entities/YouthCampRegistration"
+      },
+      "description": "Youth Summer Camp registrations. Random ID."
     }
   }
 }

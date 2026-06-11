@@ -35,7 +35,7 @@ const Contact: React.FC = () => {
       {/* Cinematic Header Background */}
       <div className="absolute top-0 left-0 w-full h-[500px] z-0 overflow-hidden">
         <div className="absolute inset-0 bg-gfa-inkBlack/90 z-10"></div>
-        <img fetchpriority="high" 
+        <img fetchPriority="high" 
           src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1497366216548-37526070297c%3Fq%3D80%26w%3D2069%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" 
           alt="Office Background" 
           className="w-full h-full object-cover grayscale opacity-30"

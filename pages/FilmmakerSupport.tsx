@@ -19,7 +19,7 @@ const FilmmakerSupport: React.FC = () => {
       {/* Banner */}
       <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden bg-gfa-inkBlack pt-5">
         <div className="absolute inset-0 z-0">
-          <img fetchpriority="high" 
+          <img fetchPriority="high" 
             src="https://wsrv.nl/?url=i.ibb.co%2Fsp4fWHq3%2FChat-GPT-Image-2026-3-23-12-23-22.png&w=1200&output=webp" 
             alt="Filmmaker on set" 
             className="w-full h-full object-cover opacity-40 mix-blend-luminosity" 

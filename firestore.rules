@@ -99,6 +99,24 @@ service cloud.firestore {
         && ( !('posterFileBase64' in data) || (data.posterFileBase64 is string) );
     }
 
+    function isValidYouthCampRegistration(data) {
+      return data.keys().hasAll(['parentName', 'childName', 'childAge', 'email', 'phone', 'program', 'emergencyContact', 'emergencyPhone', 'createdAt', 'status'])
+        && data.parentName is string && data.parentName.size() > 0 && data.parentName.size() <= 100
+        && data.childName is string && data.childName.size() > 0 && data.childName.size() <= 100
+        && data.childAge is string && data.childAge.size() > 0 && data.childAge.size() <= 10
+        && data.email is string && data.email.size() > 0 && data.email.size() <= 100
+        && data.phone is string && data.phone.size() > 0 && data.phone.size() <= 20
+        && data.program is string && data.program.size() > 0 && data.program.size() <= 100
+        && data.emergencyContact is string && data.emergencyContact.size() > 0 && data.emergencyContact.size() <= 100
+        && data.emergencyPhone is string && data.emergencyPhone.size() > 0 && data.emergencyPhone.size() <= 20
+        && ( !('dietary' in data) || (data.dietary is string && data.dietary.size() <= 500) )
+        && ( !('medical' in data) || (data.medical is string && data.medical.size() <= 500) )
+        && ( !('filmmakingExperience' in data) || (data.filmmakingExperience is string && data.filmmakingExperience.size() <= 50) )
+        && ( !('tshirtSize' in data) || (data.tshirtSize is string && data.tshirtSize.size() <= 10) )
+        && ( !('message' in data) || (data.message is string && data.message.size() <= 2000) )
+        && data.status in ['pending', 'approved', 'rejected'];
+    }
+
     match /users/{userId} {
       // 3. Path Variable Hardening
       allow get: if isSignedIn() && isValidId(userId);
@@ -159,6 +177,17 @@ service cloud.firestore {
         && incoming().createdAt == request.time
         && incoming().status == 'pending';
         
+      allow update: if false;
+      allow delete: if false;
+    }
+    match /youth_camp_registrations/{registrationId} {
+      allow get: if isSignedIn();
+      allow list: if isSignedIn();
+
+      allow create: if isValidYouthCampRegistration(incoming())
+        && incoming().createdAt == request.time
+        && incoming().status == 'pending';
+
       allow update: if false;
       allow delete: if false;
     }

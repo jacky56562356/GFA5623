@@ -76,8 +76,15 @@ const Footer: React.FC = () => {
         </div>
       </div>
 
-      <div className="container-gfa pt-4 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-white/40 font-light">
-        <p>&copy; {new Date().getFullYear()} Global Film Alliance, Inc. All rights reserved.</p>
+      <div className="container-gfa pt-4 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/50 font-light font-sans">
+        <div className="text-center md:text-left space-y-1">
+          <p>&copy; {new Date().getFullYear()} Global Film Alliance, Inc. All rights reserved.</p>
+          <p className="text-[10px] text-white/30 max-w-xl">
+            {isEn 
+              ? "All our instructors and staff members have passed background checks and sex offender screenings to ensure a safe learning environment."
+              : "我们所有的导师和员工均已通过背景调查和性犯罪者筛查，以确保安全的学习环境。"}
+          </p>
+        </div>
         <div className="flex flex-wrap justify-center gap-3 items-center">
           <Link to="/youth-protection" className="hover:text-[#C9A84C] font-bold text-gray-300 transition-colors uppercase tracking-widest">{'Youth Protection'}</Link>
           <Link to="/policy/privacy" className="hover:text-white transition-colors">{'Privacy Policy'}</Link>

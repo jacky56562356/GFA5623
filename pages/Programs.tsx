@@ -46,7 +46,7 @@ const Programs: React.FC = () => {
       {/* Banner */}
       <div className="relative bg-[#1A2B4A] py-5 mb-3 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img fetchpriority="high" 
+          <img fetchPriority="high" 
             src="https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=1200&auto=format&fit=crop" 
             alt="Programs Background" 
             className="w-full h-full object-cover opacity-20 grayscale"

@@ -9,10 +9,10 @@ type Mentor = {
   id: number;
   name: string;
   roleEn: string;
-  roleZh: string;
+  roleZh?: string;
   image: string;
   bioEn: string;
-  bioZh: string;
+  bioZh?: string;
   expertiseEn?: string[];
   expertiseZh?: string[];
 };
@@ -78,7 +78,7 @@ export default function Mentors() {
           {mentors.map(mentor => (
             <div key={mentor.id} className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
               <div className="aspect-square bg-gray-200">
-                <img fetchpriority="high"  src={mentor.image} alt={mentor.name} className="w-full h-full object-cover"  width="1200" height="800"   />
+                <img fetchPriority="high"  src={mentor.image} alt={mentor.name} className="w-full h-full object-cover"  width="1200" height="800"   />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold font-serif mb-1">{mentor.name}</h3>
@@ -117,7 +117,7 @@ export default function Mentors() {
               <div className="flex flex-col md:flex-row">
                 <div className="md:w-1/3 shrink-0">
                   <div className="aspect-square md:aspect-auto md:h-full bg-gray-200">
-                    <img fetchpriority="high" src={selectedMentor.image} alt={selectedMentor.name} className="w-full h-full object-cover" />
+                    <img fetchPriority="high" src={selectedMentor.image} alt={selectedMentor.name} className="w-full h-full object-cover" />
                   </div>
                 </div>
                 <div className="p-6 md:p-8 md:w-2/3">

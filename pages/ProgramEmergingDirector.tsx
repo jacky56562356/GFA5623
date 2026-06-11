@@ -16,7 +16,7 @@ const ProgramEmergingDirector: React.FC = () => {
 
       <div className="relative bg-[#1A2B4A] py-5 mb-3 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img fetchpriority="high" 
+          <img fetchPriority="high" 
             src="https://wsrv.nl/?url=images.unsplash.com%2Fphoto-1517604931442-7e0c8ed2963c%3Fq%3D80%26w%3D2070%26auto%3Dformat%26fit%3Dcrop&w=1200&output=webp" 
             alt="Dream Film Project" 
             className="w-full h-full object-cover opacity-30 grayscale"
